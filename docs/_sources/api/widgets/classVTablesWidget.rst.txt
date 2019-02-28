@@ -1,0 +1,4 @@
+VTablesWidget
+=============
+
+.. doxygenclass:: VTablesWidget

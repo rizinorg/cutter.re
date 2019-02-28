@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ColorThemeWorker &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Common" href="../commonlist.html"/>
+        <link rel="next" title="Colors" href="classColors.html"/>
+        <link rel="prev" title="CachedFontMetrics" href="classCachedFontMetrics.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../commonlist.html">Common</a> &raquo;</li>
+        
+      <li>ColorThemeWorker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/common/classColorThemeWorker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="colorthemeworker">
+<h1>ColorThemeWorker<a class="headerlink" href="#colorthemeworker" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv216ColorThemeWorker">
+<span id="ColorThemeWorker"></span><span class="target" id="classColorThemeWorker"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ColorThemeWorker</code><a class="headerlink" href="#_CPPv216ColorThemeWorker" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classColorThemeWorker"><span class="std std-ref">ColorThemeWorker</span></a> class is a singletone that provides API for working with color themes. </p>
+<p>Inherits from QObject</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16ColorThemeWorkerD0Ev">
+<span id="ColorThemeWorker::~ColorThemeWorker"></span><span class="target" id="classColorThemeWorker_1a2bf39ece201ab47f62dc4557d7bf5758"></span><em class="property">virtual</em> <code class="descname">~ColorThemeWorker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16ColorThemeWorkerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker4copyERK7QStringRK7QString">
+<span id="ColorThemeWorker::copy__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a12323c343cf3010702fede46260814d4"></span>QString <code class="descname">copy</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>srcThemeName</em>, <em class="property">const</em> QString &amp;<em>copyThemeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker4copyERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copies <em>srcThemeName</em> with name <em>copyThemeName</em>. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”” on success or error message. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">srcThemeName</span></code>: Name of theme to be copied. </li>
+<li><code class="docutils literal"><span class="pre">copyThemeName</span></code>: Name of copy. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString">
+<span id="ColorThemeWorker::save__QJsonDocumentCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1aed2d772e27752d80adbf121d382138bc"></span>QString <code class="descname">save</code><span class="sig-paren">(</span><em class="property">const</em> QJsonDocument &amp;<em>theme</em>, <em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Saves <em>theme</em> as <em>themeName</em> theme. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”” on success or error message. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">theme</span></code>: Theme to be saved. </li>
+<li><code class="docutils literal"><span class="pre">themeName</span></code>: Name of theme to save. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker13isCustomThemeERK7QString">
+<span id="ColorThemeWorker::isCustomTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ad489ecafe474d39bd7c6f28e82393861"></span>bool <code class="descname">isCustomTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker13isCustomThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns whether or not <em>themeName</em> theme is custom (created by user or imported) or not. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">themeName</span></code>: Name of theme to check. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker12isThemeExistERK7QString">
+<span id="ColorThemeWorker::isThemeExist__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aee3987ac188b5bbef54be0811619e01a"></span>bool <code class="descname">isThemeExist</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker12isThemeExistERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns whether or not <em>name</em> theme already exists. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if theme exists, false - if not. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker8getThemeERK7QString">
+<span id="ColorThemeWorker::getTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1a17b540b9e6b9c2de3d2a30b66d122604"></span>QJsonDocument <code class="descname">getTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker8getThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns theme as Json where key is option name and value is array of 3 Ints (Red, Green, Blue). </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">themeName</span></code>: Theme to get. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker11deleteThemeERK7QString">
+<span id="ColorThemeWorker::deleteTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ab33bba9d1b45c9a9a57be9c339d08c30"></span>QString <code class="descname">deleteTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker11deleteThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deletes theme named <em>themeName</em>. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”” on success or error message. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">themeName</span></code>: Name of theme to be removed. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker11importThemeERK7QString">
+<span id="ColorThemeWorker::importTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aa3e3e0d79b706e9d57b08a837c4f266a"></span>QString <code class="descname">importTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>file</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker11importThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Imports theme from <em>file</em>. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”” on success or error message. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker11renameThemeERK7QStringRK7QString">
+<span id="ColorThemeWorker::renameTheme__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a243c35e165fbd7a60b5fd18378e0e26d"></span>QString <code class="descname">renameTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker11renameThemeERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Renames theme from <em>themeName</em> to <em>newName</em>. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>”” on success or error message. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker11isFileThemeERK7QStringPb">
+<span id="ColorThemeWorker::isFileTheme__QStringCR.bPC"></span><span class="target" id="classColorThemeWorker_1af7614224ba6391d5d38e7ca24478a8a1"></span>bool <code class="descname">isFileTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>filePath</em>, bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker11isFileThemeERK7QStringPb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns whether or not file at <em>filePath</em> is a color theme. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if given file is color theme and ok == true, otherwise returns false. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">filePath</span></code>: Path to file to check. </li>
+<li><code class="docutils literal"><span class="pre">ok</span></code>: Output parameter. Indicates wheter or not check was successfull. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK16ColorThemeWorker12customThemesEv">
+<span id="ColorThemeWorker::customThemesC"></span><span class="target" id="classColorThemeWorker_1a1ef98222da3ebd891297a5959bea5dfd"></span>QStringList <code class="descname">customThemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16ColorThemeWorker12customThemesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns list of all custom themes. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N16ColorThemeWorker22radare2SpecificOptionsE">
+<span id="ColorThemeWorker::radare2SpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a90c4bb013a10d5440d2618434bf0c981"></span><em class="property">const</em> QStringList <code class="descname">radare2SpecificOptions</code> = Core()-&gt;cmdj(&quot;ecj&quot;).object().keys()<a class="headerlink" href="#_CPPv2N16ColorThemeWorker22radare2SpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>radare2SpecificOptions is list of all available radare2-only color options. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16ColorThemeWorker8instanceEv">
+<span id="ColorThemeWorker::instance"></span><span class="target" id="classColorThemeWorker_1aa9ed845cdd9e8e3deab9d7fb63f5d3b4"></span><em class="property">static</em> <a class="reference internal" href="#_CPPv216ColorThemeWorker" title="ColorThemeWorker">ColorThemeWorker</a> &amp;<code class="descname">instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16ColorThemeWorker8instanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N16ColorThemeWorker21cutterSpecificOptionsE">
+<span id="ColorThemeWorker::cutterSpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a3c9e5ee1717735703a2ee329ab46ec7a"></span><em class="property">const</em> QStringList <code class="descname">cutterSpecificOptions</code> = {
+    &quot;wordHighlight&quot;,
+    &quot;lineHighlight&quot;,
+    &quot;gui.main&quot;,
+    &quot;gui.imports&quot;,
+    &quot;highlightPC&quot;,
+    &quot;gui.navbar.err&quot;,
+    &quot;gui.navbar.seek&quot;,
+    &quot;gui.navbar.pc&quot;,
+    &quot;gui.navbar.sym&quot;,
+    &quot;gui.dataoffset&quot;,
+    &quot;gui.navbar.code&quot;,
+    &quot;gui.navbar.empty&quot;,
+    &quot;angui.navbar.str&quot;,
+    &quot;gui.disass_selected&quot;,
+    &quot;gui.breakpoint_background&quot;,
+    &quot;gui.overview.node&quot;,
+    &quot;gui.overview.fill&quot;,
+    &quot;gui.overview.border&quot;,
+    &quot;gui.border&quot;,
+    &quot;gui.background&quot;,
+    &quot;gui.alt_background&quot;,
+    &quot;gui.disass_selected&quot;
+}<a class="headerlink" href="#_CPPv2N16ColorThemeWorker21cutterSpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>cutterSpecificOptions is list of all available Cutter-only color options. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N16ColorThemeWorker20radare2UnusedOptionsE">
+<span id="ColorThemeWorker::radare2UnusedOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1aa22c80b0dc021110dc4df5dd5d7f7bc0"></span><em class="property">const</em> QStringList <code class="descname">radare2UnusedOptions</code> = {
+    &quot;linehl&quot;,
+    &quot;wordhl&quot;,
+    &quot;graph.box&quot;,
+    &quot;graph.box2&quot;,
+    &quot;graph.box3&quot;,
+    &quot;graph.box4&quot;,
+    &quot;graph.current&quot;,
+    &quot;graph.box2&quot;,
+    &quot;widget_sel&quot;,
+    &quot;widget_bg&quot;,
+    &quot;label&quot;,
+    &quot;ai.write&quot;,
+    &quot;invalid&quot;,
+    &quot;ai.seq&quot;,
+    &quot;args&quot;,
+    &quot;ai.read&quot;,
+    &quot;ai.exec&quot;,
+    &quot;ai.ascii&quot;,
+    &quot;prompt&quot;,
+    &quot;graph.traced&quot;
+}<a class="headerlink" href="#_CPPv2N16ColorThemeWorker20radare2UnusedOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>radare2UnusedOptions is a list of all radare2 options that Cutter does not use. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classColors.html" class="btn btn-neutral float-right" title="Colors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classCachedFontMetrics.html" class="btn btn-neutral" title="CachedFontMetrics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

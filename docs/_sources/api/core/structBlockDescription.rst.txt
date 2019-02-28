@@ -1,0 +1,4 @@
+BlockDescription
+================
+
+.. doxygenstruct:: BlockDescription

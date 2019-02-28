@@ -1,0 +1,4 @@
+ColorOptionDelegate
+===================
+
+.. doxygenclass:: ColorOptionDelegate

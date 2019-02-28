@@ -1,0 +1,27 @@
+<!-- ==================== Start Blog Area  ========================= -->
+<section class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="container">
+<div class="blog-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+        <a href="/blog" class="all-view-btn">See All Posts</a>
+        <div class="col-md-6">
+            <div class="section-title m-b-60">
+                <h2 class="big-font2">Have a look what is going on.</h2>
+                <p>Check out our recent blog-posts or visit our <a href="/blog" target="_blanl">blog</a> to view all the posts. We will update Cutter's blog from time to time.</p>
+                <p>Want your article to be published here? Send us a <a href="#community">message</a>.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for post in site.posts limit:"2" %}
+        <div class="col-md-6">
+          {% include post_content.html %}
+        </div>
+        {% endfor %}
+    </div>
+   </div>
+ </div>
+</section>
+<!-- ==================== End Blog Area  ========================= -->

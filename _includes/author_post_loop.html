@@ -1,0 +1,15 @@
+<div class="blog-area bg-color1 p-t-130 p-b-130">
+<div class="container">
+    <div class="blog-wrapper">
+    <div class="row">
+        {% for post in site.posts limit:"80" %}
+          {% if post.author contains page.author %}
+            <div class="col-md-6">
+            {% include post_content.html %}
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+        </div>
+    </div>
+</div>

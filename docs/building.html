@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Cutter  documentation" href="index.html"/>
+        <link rel="next" title="Common errors" href="common-errors.html"/>
+        <link rel="prev" title="Shortcuts" href="shortcuts.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-options">Building options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preparing-breakpad">Preparing Breakpad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compiling-on-linux-macos">Compiling on Linux / macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional steps for macOS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-with-cmake">Building with Cmake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-with-meson-windows">Building with Meson (Windows)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Building</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/building.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building">
+<h1>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h1>
+<p>First you must get the source of Cutter by cloning the repository:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">recurse</span><span class="o">-</span><span class="n">submodules</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">radareorg</span><span class="o">/</span><span class="n">cutter</span>
+</pre></div>
+</div>
+<p>The “official” way to build Cutter is by using qmake, but there are two
+alternatives – cmake and meson.</p>
+<p>In any case, there are obviously some requirements:</p>
+<ul class="simple">
+<li>Radare2 installed from submodule</li>
+<li>Qt 5.9 or above</li>
+<li>Python3.6</li>
+<li>Breakpad installed using script (optional, disabled by default)</li>
+</ul>
+<p>Before compiling, note that we also provide binaries available for
+windows/linux/MacOS <a class="reference external" href="https://github.com/radareorg/cutter/releases">here</a>.</p>
+<hr class="docutils" />
+<div class="section" id="building-options">
+<h2>Building options<a class="headerlink" href="#building-options" title="Permalink to this headline">¶</a></h2>
+<p>Note that there are three major building options available:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad)</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="preparing-breakpad">
+<h2>Preparing Breakpad<a class="headerlink" href="#preparing-breakpad" title="Permalink to this headline">¶</a></h2>
+<p>If you want to build Cutter with crash handling system, you want prepare Breakpad before.
+For this simply run one of the scripts (according to your OS) from root Cutter directory:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_linux</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># Linux</span>
+<span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_macos</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># MacOS</span>
+<span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad</span><span class="o">.</span><span class="n">bat</span> <span class="c1"># Windows</span>
+</pre></div>
+</div>
+<p>Then if you are building on Linux you want to change <code class="docutils literal"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable
+so it contains <code class="docutils literal"><span class="pre">$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig</span></code>. For this simply run</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH&quot;</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="building-with-qmake">
+<h2>Building with Qmake<a class="headerlink" href="#building-with-qmake" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="compiling-on-linux-macos">
+<h3>Compiling on Linux / macOS<a class="headerlink" href="#compiling-on-linux-macos" title="Permalink to this headline">¶</a></h3>
+<p>The easy way is to simply run <code class="docutils literal"><span class="pre">./build.sh</span></code> from the root directory,
+and let the magic happen. The script will use qmake to build Cutter.</p>
+<p>If you want to manually use qmake, follow this steps:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span><span class="p">;</span> <span class="n">cd</span> <span class="n">build</span>
+<span class="n">qmake</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span><span class="n">Cutter</span><span class="o">.</span><span class="n">pro</span>
+<span class="n">make</span>
+<span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="additional-steps-for-macos">
+<h3>Additional steps for macOS<a class="headerlink" href="#additional-steps-for-macos" title="Permalink to this headline">¶</a></h3>
+<p>On macOS you will also have to copy the launcher bash script:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">Cutter</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">Cutter</span> <span class="n">Cutter</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">Cutter</span><span class="o">.</span><span class="n">bin</span>
+<span class="n">cp</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span><span class="n">macos</span><span class="o">/</span><span class="n">Cutter</span> <span class="n">Cutter</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">Cutter</span> <span class="o">&amp;&amp;</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Cutter</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">Cutter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="building-with-cmake">
+<h2>Building with Cmake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>CMake &gt;= 3.1</li>
+</ul>
+<p>The root for CMake is in src/. In-source builds are <strong>not allowed</strong>, so
+you <strong>must</strong> run CMake from a separate directory:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">src</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="c1"># Don&#39;t forget to provide build options</span>
+</pre></div>
+</div>
+<p>If all went well, you should now have a working Makefile in your build
+directory:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="building-on-windows">
+<h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>Alternatively, on Windows you can run something like this (depending on
+your Cmake installation)</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">CMAKE_PREFIX_PATH</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">Qt</span>\<span class="n">qt</span><span class="o">-</span><span class="mf">5.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">msvc2013</span><span class="o">-</span><span class="n">x86</span>\<span class="mf">5.6</span>\<span class="n">msvc2013</span>\<span class="n">lib</span>\<span class="n">cmake</span>
+<span class="n">cd</span> <span class="n">src</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span><span class="o">-</span><span class="n">gui</span> <span class="o">..</span>
+</pre></div>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Configure</span></code> and select <code class="docutils literal"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14</span> <span class="pre">2015</span></code> from the list.
+After configuration is done, click <code class="docutils literal"><span class="pre">Generate</span></code> and you can open
+<code class="docutils literal"><span class="pre">Cutter.sln</span></code> to compile the code as usual.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Cmake: qt development package not found</div></blockquote>
+<p>Depending on how Qt installed (Distribution packages or using the Qt
+installer application), CMake may not be able to find it by itself if it
+is not in a common place. If that is the case, double check that the
+correct Qt version is installed. Locate its prefix (a directory
+containing bin/, lib/, include/, etc.) and specify it to CMake using
+<code class="docutils literal"><span class="pre">CMAKE_PREFIX_PATH</span></code> in the above process, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span> <span class="c1"># the cache may be polluted with unwanted libraries found before</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=/</span><span class="n">opt</span><span class="o">/</span><span class="n">Qt</span><span class="o">/</span><span class="mf">5.9</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">gcc_64</span> <span class="o">..</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-with-meson-windows">
+<h2>Building with Meson (Windows)<a class="headerlink" href="#building-with-meson-windows" title="Permalink to this headline">¶</a></h2>
+<p>Additional requirements:</p>
+<ul class="simple">
+<li>Visual Studio 2015 or Visual Studio 2017</li>
+<li>Ninja build system</li>
+<li>Meson build system</li>
+</ul>
+<p>Download and unpack
+<a class="reference external" href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
+source root directory.</p>
+<p>Environment settings (example for x64 version):</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span> <span class="n">Export</span> <span class="n">MSVC</span> <span class="n">variables</span>
+<span class="n">CALL</span> <span class="s2">&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC</span><span class="se">\v</span><span class="s2">cvarsall.bat&quot;</span> <span class="n">x64</span>
+<span class="p">::</span> <span class="n">Add</span> <span class="n">qmake</span> <span class="n">to</span> <span class="n">PATH</span>
+<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Qt</span><span class="se">\5</span><span class="s2">.10.1\msvc2015_64</span><span class="se">\b</span><span class="s2">in;%PATH%&quot;</span>
+<span class="p">::</span> <span class="n">Add</span> <span class="n">Python</span> <span class="n">to</span> <span class="n">PATH</span>
+<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Program Files\Python36;%PATH%&quot;</span>
+</pre></div>
+</div>
+<p>Install Meson:</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">meson</span>
+</pre></div>
+</div>
+<p>To compile Cutter run:</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">CALL</span> <span class="n">prepare_r2</span><span class="o">.</span><span class="n">bat</span>
+<span class="n">CALL</span> <span class="n">build</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="common-errors.html" class="btn btn-neutral float-right" title="Common errors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shortcuts.html" class="btn btn-neutral" title="Shortcuts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

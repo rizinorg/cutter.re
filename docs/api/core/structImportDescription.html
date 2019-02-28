@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ImportDescription &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Core" href="../corelist.html"/>
+        <link rel="next" title="MemoryMapDescription" href="structMemoryMapDescription.html"/>
+        <link rel="prev" title="HeaderDescription" href="structHeaderDescription.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../corelist.html">Core</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classCutterCore.html">CutterCore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMainWindow.html">MainWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRCoreLocked.html">RCoreLocked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalBaseClassDescription.html">AnalBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalMethodDescription.html">AnalMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalVTableDescription.html">AnalVTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassBaseClassDescription.html">BinClassBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassDescription.html">BinClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassFieldDescription.html">BinClassFieldDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassMethodDescription.html">BinClassMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockDescription.html">BlockDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockStatistics.html">BlockStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBreakpointDescription.html">BreakpointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentDescription.html">CommentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLine.html">DisassemblyLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structEntrypointDescription.html">EntrypointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structExportDescription.html">ExportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagDescription.html">FlagDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagspaceDescription.html">FlagspaceDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFunctionDescription.html">FunctionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHeaderDescription.html">HeaderDescription</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ImportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMemoryMapDescription.html">MemoryMapDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structProcessDescription.html">ProcessDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRAsmPluginDescription.html">RAsmPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRBinPluginDescription.html">RBinPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRCorePluginDescription.html">RCorePluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRIOPluginDescription.html">RIOPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRelocDescription.html">RelocDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structResourcesDescription.html">ResourcesDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSearchDescription.html">SearchDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSectionDescription.html">SectionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSegmentDescription.html">SegmentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structStringDescription.html">StringDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSymbolDescription.html">SymbolDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structTypeDescription.html">TypeDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVTableDescription.html">VTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVariableDescription.html">VariableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structXrefDescription.html">XrefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structZignatureDescription.html">ZignatureDescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../corelist.html">Core</a> &raquo;</li>
+        
+      <li>ImportDescription</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/core/structImportDescription.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="importdescription">
+<h1>ImportDescription<a class="headerlink" href="#importdescription" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv217ImportDescription">
+<span id="ImportDescription"></span><span class="target" id="structImportDescription"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">ImportDescription</code><a class="headerlink" href="#_CPPv217ImportDescription" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N17ImportDescription3pltE">
+<span id="ImportDescription::plt__RVA"></span><span class="target" id="structImportDescription_1a391198ba408713da6e14bb08927cc0e2"></span>RVA <code class="descname">plt</code><a class="headerlink" href="#_CPPv2N17ImportDescription3pltE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N17ImportDescription7ordinalE">
+<span id="ImportDescription::ordinal__i"></span><span class="target" id="structImportDescription_1a97c8a7ebe3a30c655b3af793f6dbf86d"></span>int <code class="descname">ordinal</code><a class="headerlink" href="#_CPPv2N17ImportDescription7ordinalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N17ImportDescription4bindE">
+<span id="ImportDescription::bind__QString"></span><span class="target" id="structImportDescription_1a8f26ecd2b755af0a3ca806971c688cae"></span>QString <code class="descname">bind</code><a class="headerlink" href="#_CPPv2N17ImportDescription4bindE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N17ImportDescription4typeE">
+<span id="ImportDescription::type__QString"></span><span class="target" id="structImportDescription_1a29d25861fdfdd181e1c5c82c58b20ac9"></span>QString <code class="descname">type</code><a class="headerlink" href="#_CPPv2N17ImportDescription4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N17ImportDescription4nameE">
+<span id="ImportDescription::name__QString"></span><span class="target" id="structImportDescription_1a9e0e7e74149299a8edccc17cc5a73710"></span>QString <code class="descname">name</code><a class="headerlink" href="#_CPPv2N17ImportDescription4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structMemoryMapDescription.html" class="btn btn-neutral float-right" title="MemoryMapDescription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structHeaderDescription.html" class="btn btn-neutral" title="HeaderDescription" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

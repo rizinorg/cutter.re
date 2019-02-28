@@ -1,0 +1,33 @@
+
+<section class="feature-area bg-color1 p-b-100" id="feature">
+<div class="container">
+    <div class="feature-wrapper">
+        <div class="row">
+            <div class="col-md-7">
+            <div class="section-title m-b-70" data-aos="fade-up">
+                <h2 class="big-font2">We built a powerful multi-platform reverse engineering tool.</h2>
+                <p>Cutter goal is to be an advanced FREE and open-source reverse-engineering platform while keeping the user experience at mind. Cutter is created by reverse engineers for reverse engineers.</p>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <div class="row">
+              {% for highlight in site.data.highlights %}  
+                    <div class="col-md-6">
+                    <div class="feature-box" data-aos="fade-right">
+                        <div class="feature-logo"><img src="{{highlight.image}}" alt="{{highlight.title}}"/></div>
+                        <div class="feature-content">
+                        <h4 class="heading-4">{{highlight.title}}</h4>
+                        <p>{{highlight.description}}</p>
+                        </div>
+                    </div>
+                </div>
+               {% endfor %}
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>

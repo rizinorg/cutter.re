@@ -1,0 +1,4 @@
+HexHighlighter::HighlightingRule
+================================
+
+.. doxygenstruct:: HexHighlighter::HighlightingRule

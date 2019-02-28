@@ -1,0 +1,4 @@
+HexCursor
+=========
+
+.. doxygenstruct:: HexCursor

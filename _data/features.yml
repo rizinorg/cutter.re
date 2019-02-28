@@ -1,0 +1,60 @@
+- title: Open Source
+  description: Completely FREE and licensed under GPLv3
+  image: assets/images/service-icon.png
+  icon: code
+  
+- title: Modern UI
+  description: Built using Qt C++ and design best practices
+  image: assets/images/service-icon3.png
+  icon: desktop
+
+- title: Graph View
+  description: Fully featured graph view as well as mini-graph for fast navigation
+  image: assets/images/service-icon3.png
+  icon: sitemap
+
+- title: Disassembly
+  description: Linear disassembly view
+  image: assets/images/service-icon.png
+  icon: stream
+
+- title: Hex Editor
+  description: View and modify any file with a rich and powerful Hex View
+  image: assets/images/service-icon3.png
+  icon: columns
+
+- title: Python Scripting Engine
+  description: Quickly write python scripts to automate tasks
+  image: assets/images/service-icon3.png
+  icon: terminal
+
+- title: Plugins
+  description: Use Native or Python plugins to extend Cutter's core functionality
+  image: assets/images/service-icon3.png
+  icon: puzzle-piece
+
+
+- title: Binary Patching
+  description: Add, remove and modify bytes and instructions
+  image: assets/images/service-icon3.png
+  icon: pencil-alt
+
+- title: Emulation
+  description: Great for automation, crypto algorithms and malware analysis
+  image: assets/images/service-icon3.png
+  icon: play
+
+- title: Theme Editor
+  description: Fully featured theme editor for easy and user-friednly customization of Cutter
+  image: assets/images/service-icon2.png
+  icon: palette
+
+- title: Customizable Layout
+  description: Move different views and windows around to get your most efficient layout
+  image: assets/images/service-icon2.png
+  icon: th
+
+- title: Multi Language
+  description: Cutter interface was translated by our community to many different languages
+  image: assets/images/service-icon2.png
+  icon: language

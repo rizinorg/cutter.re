@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FunctionModel &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Widgets" href="../widgetslist.html"/>
+        <link rel="next" title="FunctionSortFilterProxyModel" href="classFunctionSortFilterProxyModel.html"/>
+        <link rel="prev" title="FlagsWidget" href="classFlagsWidget.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointModel.html">BreakpointModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointProxyModel.html">BreakpointProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointWidget.html">BreakpointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBufferData.html">BufferData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesModel.html">ClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesSortFilterProxyModel.html">ClassesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesWidget.html">ClassesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorOptionDelegate.html">ColorOptionDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPicker.html">ColorPicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1AlphaChannelBar.html">ColorPickerHelpers::AlphaChannelBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickArea.html">ColorPickerHelpers::ColorPickArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickWidgetAbstract.html">ColorPickerHelpers::ColorPickWidgetAbstract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickerWidget.html">ColorPickerHelpers::ColorPickerWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorShowWidget.html">ColorPickerHelpers::ColorShowWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorValueBar.html">ColorPickerHelpers::ColorValueBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorSettingsModel.html">ColorSettingsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeComboBox.html">ColorThemeComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeListView.html">ColorThemeListView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classComboQuickFilterView.html">ComboQuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsModel.html">CommentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsProxyModel.html">CommentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsWidget.html">CommentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConsoleWidget.html">ConsoleWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterDockWidget.html">CutterDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeView.html">CutterTreeView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblerGraphView.html">DisassemblerGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextBlockUserData.html">DisassemblyTextBlockUserData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextEdit.html">DisassemblyTextEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyWidget.html">DisassemblyWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEntrypointWidget.html">EntrypointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsModel.html">ExportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsProxyModel.html">ExportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsWidget.html">ExportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsModel.html">FlagsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsSortFilterProxyModel.html">FlagsSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsWidget.html">FlagsWidget</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">FunctionModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphView.html">GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphWidget.html">GraphWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphvizLayout.html">GraphvizLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersModel.html">HeadersModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersProxyModel.html">HeadersProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersWidget.html">HeadersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexSelection.html">HexSelection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexWidget.html">HexWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpWidget.html">HexdumpWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapWidget.html">MemoryMapWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryProxyModel.html">MemoryProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPseudocodeWidget.html">PseudocodeWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefsWidget.html">RegisterRefsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegistersWidget.html">RegistersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsModel.html">RelocsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsProxyModel.html">RelocsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchWidget.html">SearchWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsModel.html">SectionsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsProxyModel.html">SectionsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsWidget.html">SectionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsModel.html">SegmentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsProxyModel.html">SegmentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsWidget.html">SegmentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStackWidget.html">StackWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsModel.html">StringsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsProxyModel.html">StringsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsWidget.html">StringsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsModel.html">SymbolsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsProxyModel.html">SymbolsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsWidget.html">SymbolsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classThis.html">This</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesModel.html">TypesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesSortFilterProxyModel.html">TypesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesWidget.html">TypesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableModel.html">VTableModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableSortFilterProxyModel.html">VTableSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTablesWidget.html">VTablesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVirtualAddrDock.html">VirtualAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVisualNavbar.html">VisualNavbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesModel.html">ZignaturesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesProxyModel.html">ZignaturesProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesWidget.html">ZignaturesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Token.html">DisassemblerGraphView::Token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridBlock.html">GraphGridLayout::GridBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridEdge.html">GraphGridLayout::GridEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1LayoutState.html">GraphGridLayout::LayoutState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1Point.html">GraphGridLayout::Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphBlock.html">GraphLayout::GraphBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphEdge.html">GraphLayout::GraphEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1LayoutConfig.html">GraphLayout::LayoutConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphView_1_1EdgeConfiguration.html">GraphView::EdgeConfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexCursor.html">HexCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRange.html">Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVisualNavbar_1_1XToAddress.html">VisualNavbar::XToAddress</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
+        
+      <li>FunctionModel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/widgets/classFunctionModel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="functionmodel">
+<h1>FunctionModel<a class="headerlink" href="#functionmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv213FunctionModel">
+<span id="FunctionModel"></span><span class="target" id="classFunctionModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">FunctionModel</code><a class="headerlink" href="#_CPPv213FunctionModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QAbstractItemModel</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N13FunctionModel6ColumnE">
+<span id="FunctionModel::Column"></span><span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238e"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N13FunctionModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel10NameColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238eaa196ac4c291fed307eb39f0cbbd12211"></span><code class="descname">NameColumn</code> = 0<a class="headerlink" href="#_CPPv2N13FunctionModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel10SizeColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea7ecb2b693a0001638e73be2f3c1a282a"></span><code class="descname">SizeColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel10SizeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel12ImportColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea3ee38f60d59b45329808017d654d7e76"></span><code class="descname">ImportColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel12ImportColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel12OffsetColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea4121b27039f2118a0f39f78370e6a609"></span><code class="descname">OffsetColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel11NargsColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea91fc66d6962c2dfafe182b68389fedae"></span><code class="descname">NargsColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel11NargsColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel13NlocalsColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238eae1f201998cb8b36027ca4da074d32bf5"></span><code class="descname">NlocalsColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel13NlocalsColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel10NbbsColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238eac3103ba2fa484fec9ac3b19cc979ada8"></span><code class="descname">NbbsColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel10NbbsColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel14CalltypeColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea5e40709edb3ec32753bf2c28f0657c94"></span><code class="descname">CalltypeColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel14CalltypeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel11EdgesColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ead1b8c354871a7761f4ccbe7184cb3a07"></span><code class="descname">EdgesColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel11EdgesColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel11FrameColumnE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238ea338365c89be90047b8eb7daedb81e330"></span><code class="descname">FrameColumn</code><a class="headerlink" href="#_CPPv2N13FunctionModel11FrameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N13FunctionModel11ColumnCountE">
+<span class="target" id="classFunctionModel_1a3e157deb00c7b2b08d131b8a94f9238eabb5a71022d0f83ceffb6e503280f230a"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N13FunctionModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N13FunctionModel13FunctionModelEP5QListI19FunctionDescriptionEP4QSetI3RVAEP4ut64b5QFont5QFontP7QObject">
+<span id="FunctionModel::FunctionModel__QList:FunctionDescription:P.QSet:RVA:P.ut64P.b.QFont.QFont.QObjectP"></span><span class="target" id="classFunctionModel_1aff3e2ef1d57a62e7ea283a3237eda036"></span><code class="descname">FunctionModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structFunctionDescription.html#_CPPv219FunctionDescription" title="FunctionDescription">FunctionDescription</a>&gt; *<em>functions</em>, QSet&lt;RVA&gt; *<em>importAddresses</em>, ut64 *<em>mainAdress</em>, bool <em>nested</em>, QFont <em>defaultFont</em>, QFont <em>highlightFont</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13FunctionModel13FunctionModelEP5QListI19FunctionDescriptionEP4QSetI3RVAEP4ut64b5QFont5QFontP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel5indexEiiRK11QModelIndex">
+<span id="FunctionModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a8238bc05c0c356f978d543c9027c73b4"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel6parentERK11QModelIndex">
+<span id="FunctionModel::parent__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1af32b92bade79fa717059f4ab2c51100a"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel8rowCountERK11QModelIndex">
+<span id="FunctionModel::rowCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1ab75b9175ea696c71d54705cae46c4376"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel11columnCountERK11QModelIndex">
+<span id="FunctionModel::columnCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a9562393cfa4ec2c59cbfb45560c10bbe"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel4dataERK11QModelIndexi">
+<span id="FunctionModel::data__QModelIndexCR.iC"></span><span class="target" id="classFunctionModel_1a95d205b3f732f7733f8172e8e22f80b5"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel10headerDataEiN2Qt11OrientationEi">
+<span id="FunctionModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classFunctionModel_1a6570164927b5ab4c7325bbd9cd2b2685"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N13FunctionModel18updateCurrentIndexEv">
+<span id="FunctionModel::updateCurrentIndex"></span><span class="target" id="classFunctionModel_1adaab105c6edee7fb9eaf8a9444d3c004"></span>bool <code class="descname">updateCurrentIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13FunctionModel18updateCurrentIndexEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the index changed </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N13FunctionModel9setNestedEb">
+<span id="FunctionModel::setNested__b"></span><span class="target" id="classFunctionModel_1a1f093817da35474fbadfbb9f90d9deee"></span>void <code class="descname">setNested</code><span class="sig-paren">(</span>bool <em>nested</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13FunctionModel9setNestedEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N13FunctionModel8isNestedEv">
+<span id="FunctionModel::isNested"></span><span class="target" id="classFunctionModel_1ae5e06eeb1aa72df50fdc892f9af5e04a"></span>bool <code class="descname">isNested</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13FunctionModel8isNestedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N13FunctionModel23FunctionDescriptionRoleE">
+<span id="FunctionModel::FunctionDescriptionRole__iC"></span><span class="target" id="classFunctionModel_1af56eba1db47c3cc1339d2cf5b9db72e3"></span><em class="property">const</em> int <code class="descname">FunctionDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N13FunctionModel23FunctionDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N13FunctionModel12IsImportRoleE">
+<span id="FunctionModel::IsImportRole__iC"></span><span class="target" id="classFunctionModel_1a3faa21a838c09480ffe7b85d45049c34"></span><em class="property">const</em> int <code class="descname">IsImportRole</code> = Qt::UserRole + 1<a class="headerlink" href="#_CPPv2N13FunctionModel12IsImportRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classFunctionSortFilterProxyModel.html" class="btn btn-neutral float-right" title="FunctionSortFilterProxyModel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classFlagsWidget.html" class="btn btn-neutral" title="FlagsWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

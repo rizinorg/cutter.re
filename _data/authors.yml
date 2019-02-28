@@ -1,0 +1,15 @@
+itay_cohen:
+    name: Itay Cohen
+    twitter: https://twitter.com/megabeets
+    github: https://github.com/itayc0hen
+    website: https://www.megabeets.net
+    bio: Itay Cohen (aka Megabeets) is a security researcher and a reverse engineer. He is a maintainer of Cutter and a core member of radare2.
+    image: /assets/images/blog/authors/megabeets.png
+  
+cutter:
+    name: Cutter Team
+    twitter: https://twitter.com/r2gui
+    github: https://github.com/radareorg/cutter
+    website: https://cutter.re
+    bio: This is a generic author for Cutter posts.
+    image: /assets/images/blog/authors/cutter.png

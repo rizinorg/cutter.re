@@ -1,0 +1,4 @@
+R2PluginsDialog
+===============
+
+.. doxygenclass:: R2PluginsDialog

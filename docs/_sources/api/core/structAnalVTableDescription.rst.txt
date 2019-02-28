@@ -1,0 +1,4 @@
+AnalVTableDescription
+=====================
+
+.. doxygenstruct:: AnalVTableDescription

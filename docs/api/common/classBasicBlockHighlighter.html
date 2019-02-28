@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BasicBlockHighlighter &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Common" href="../commonlist.html"/>
+        <link rel="next" title="CachedFontMetrics" href="classCachedFontMetrics.html"/>
+        <link rel="prev" title="AsyncTaskManager" href="classAsyncTaskManager.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../commonlist.html">Common</a> &raquo;</li>
+        
+      <li>BasicBlockHighlighter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/common/classBasicBlockHighlighter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basicblockhighlighter">
+<h1>BasicBlockHighlighter<a class="headerlink" href="#basicblockhighlighter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv221BasicBlockHighlighter">
+<span id="BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">BasicBlockHighlighter</code><a class="headerlink" href="#_CPPv221BasicBlockHighlighter" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N21BasicBlockHighlighter21BasicBlockHighlighterEv">
+<span id="BasicBlockHighlighter::BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter_1a644b878af980da17aa441faec48da43e"></span><code class="descname">BasicBlockHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter21BasicBlockHighlighterEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21BasicBlockHighlighterD0Ev">
+<span id="BasicBlockHighlighter::~BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter_1a2628fd6df6891a640c8dcf948bda5f48"></span><code class="descname">~BasicBlockHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighterD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21BasicBlockHighlighter9highlightE3RVARK6QColor">
+<span id="BasicBlockHighlighter::highlight__RVA.QColorCR"></span><span class="target" id="classBasicBlockHighlighter_1a86144ff3384ef2ba8f71aeb94a7da8f9"></span>void <code class="descname">highlight</code><span class="sig-paren">(</span>RVA <em>address</em>, <em class="property">const</em> QColor &amp;<em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter9highlightE3RVARK6QColor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Highlight the basic block at address. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21BasicBlockHighlighter5clearE3RVA">
+<span id="BasicBlockHighlighter::clear__RVA"></span><span class="target" id="classBasicBlockHighlighter_1a0c9d268e6eba3e73e6e8fd77d2ee2588"></span>void <code class="descname">clear</code><span class="sig-paren">(</span>RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter5clearE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear the basic block highlighting. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21BasicBlockHighlighter13getBasicBlockE3RVA">
+<span id="BasicBlockHighlighter::getBasicBlock__RVA"></span><span class="target" id="classBasicBlockHighlighter_1a1026b1f2bf8ff28a7a7cafa077257e22"></span><a class="reference internal" href="structBasicBlock.html#_CPPv210BasicBlock" title="BasicBlock">BasicBlock</a> *<code class="descname">getBasicBlock</code><span class="sig-paren">(</span>RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter13getBasicBlockE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return a highlighted basic block. </p>
+<p>If there is nothing to highlight at specified address, returns nullptr </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classCachedFontMetrics.html" class="btn btn-neutral float-right" title="CachedFontMetrics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classAsyncTaskManager.html" class="btn btn-neutral" title="AsyncTaskManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

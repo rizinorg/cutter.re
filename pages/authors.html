@@ -1,0 +1,26 @@
+---
+layout: page
+title: Authors Page
+all_authors: ['itay_cohen','cutter','waltor_gottera','ecuelass_chapman','aaron_potts']
+---
+         
+<div class="blog-area bg-color1 p-t-130 p-b-130">
+   <div class="container">
+      <div class="blog-wrapper">
+         <div class="row">
+          {% for page_author in page.all_authors %}
+            {% assign author = site.data.authors %}
+             <div class="col-sm-6  col-md-4">
+               <article class="author-post"  data-aos="fade-up">
+                  <div class="author-img"><a href="/authors/{{page_author}}"><img src="{{author[page_author].image}}" alt="{{author[page_author].name}}"/></a></div>
+                  <div class="author-content">
+                     <h6 class="heading-6"><a href="/authors/{{page_author}}">{{author[page_author].name}}</a></h6>
+                     <span>{{author[page_author].bio}}</span>
+                  </div>
+               </article>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>

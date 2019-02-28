@@ -1,0 +1,4 @@
+AsciiHighlighter::HighlightingRule
+==================================
+
+.. doxygenstruct:: AsciiHighlighter::HighlightingRule

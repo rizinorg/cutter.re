@@ -1,0 +1,4 @@
+DecompiledCodeTextLine
+======================
+
+.. doxygenstruct:: DecompiledCodeTextLine

@@ -1,0 +1,4 @@
+ZignaturesWidget
+================
+
+.. doxygenclass:: ZignaturesWidget

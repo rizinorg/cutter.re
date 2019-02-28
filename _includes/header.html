@@ -1,0 +1,102 @@
+{% if page.layout == "page" or page.layout == "post" %}
+
+{% assign is_page_layout = true %}
+
+{% endif %}
+
+<header class="{% unless is_page_layout %}header-area {% endunless %} bg-color2">
+<div class="container">
+    <div class="header-nav">
+        <div class="row">
+            <div class="col-lg-2">
+             {% include header_logo.html %}
+            </div>
+            <div class="col-lg-10">
+              {% include navigation.html %}
+            </div>
+        </div>
+    </div>
+     {% if page.url == "/" %}
+    <div class="header-banner">
+        <div class="row">
+            <div class="col-md-6">
+            <div class="banner-content">
+                <h1 class="big-font1 white-text m-b-50" style="display: inline">{{ site.title }}</h1>
+                <h5 class="white-text m-b-50">Free and Open Source RE Platform powered by radare2
+                </h5>
+                <ul class="banner-btn m-0 list-inline">
+                    <li class="list-inline-item"><a href="#" id="downloadBtn" class="dwn-btn1 btn btn-primary"><span>Download</span></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/radareorg/cutter" id="downloadSource" class="dwn-btn2 btn btn-primary"><i class="fab fa-github"></i><span id="sourceBtn">Source</span></a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="banner-mockup"><img src="{{site.baseurl}}/assets/images/cutter_head_light_theme.png" alt="banner image" /></div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if page.layout == "post" %}
+    <div class="header-page-title">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="page-title text-left white-all">
+                <h1 class="big-font1 m-b-30">{{page.title}}</h1>
+                {% assign authors = site.data.authors[page.author] %}
+                <ul class="page-post-date list-inline">
+                    <li class="list-inline-item"><img src="{{site.baseurl}}/assets/images/page-avatar-icon.png" alt="icon"/><a href="/authors/{{page.author}}">{{authors.name}}</a></li>
+                    <li class="list-inline-item"><img src="{{site.baseurl}}/assets/images/page-clock-icon.png" alt="icon"/>{{page.date | date_to_long_string}}</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if page.layout == "author" %}
+    <div class="header-page-title">
+            <div class="row">
+                <div class="col-md-12">
+                    {% assign authors = site.data.authors[page.author] %}
+                    {% if authors %}
+                <div class="page-title text-center white-all">
+                    <div class="author-name">
+                        <img src="{{authors.image}}" alt="{{authors.name}}"/>
+                        <h1 class="big-font1">{{authors.name}}</h1>
+                        <p>{{authors.bio}}</p>
+                        <ul class="social-link list-inline">
+                            {% if authors.facebook %}
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            {% endif %}
+                            {% if authors.twitter %}
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            {% endif %}
+                            {% if authors.reddit %}
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-reddit-alien"></i></a></li>
+                            {% endif %}
+                            {% if authors.instagram %}
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if page.layout == "page" %}
+    <div class="header-page-title">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="page-title text-center white-all">
+                <h1 class="big-font1">{{page.title}}</h1>
+            </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% unless is_page_layout %}
+        {% include header_shape.html %}
+    {% endunless %}
+</div>
+</header>

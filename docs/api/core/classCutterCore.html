@@ -1,0 +1,1806 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CutterCore &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Core" href="../corelist.html"/>
+        <link rel="next" title="MainWindow" href="classMainWindow.html"/>
+        <link rel="prev" title="Core" href="../corelist.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../corelist.html">Core</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CutterCore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMainWindow.html">MainWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRCoreLocked.html">RCoreLocked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalBaseClassDescription.html">AnalBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalMethodDescription.html">AnalMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalVTableDescription.html">AnalVTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassBaseClassDescription.html">BinClassBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassDescription.html">BinClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassFieldDescription.html">BinClassFieldDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassMethodDescription.html">BinClassMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockDescription.html">BlockDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockStatistics.html">BlockStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBreakpointDescription.html">BreakpointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentDescription.html">CommentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLine.html">DisassemblyLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structEntrypointDescription.html">EntrypointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structExportDescription.html">ExportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagDescription.html">FlagDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagspaceDescription.html">FlagspaceDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFunctionDescription.html">FunctionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHeaderDescription.html">HeaderDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structImportDescription.html">ImportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMemoryMapDescription.html">MemoryMapDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structProcessDescription.html">ProcessDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRAsmPluginDescription.html">RAsmPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRBinPluginDescription.html">RBinPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRCorePluginDescription.html">RCorePluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRIOPluginDescription.html">RIOPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRelocDescription.html">RelocDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structResourcesDescription.html">ResourcesDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSearchDescription.html">SearchDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSectionDescription.html">SectionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSegmentDescription.html">SegmentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structStringDescription.html">StringDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSymbolDescription.html">SymbolDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structTypeDescription.html">TypeDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVTableDescription.html">VTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVariableDescription.html">VariableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structXrefDescription.html">XrefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structZignatureDescription.html">ZignatureDescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../corelist.html">Core</a> &raquo;</li>
+        
+      <li>CutterCore</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/core/classCutterCore.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cuttercore">
+<h1>CutterCore<a class="headerlink" href="#cuttercore" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv210CutterCore">
+<span id="CutterCore"></span><span class="target" id="classCutterCore"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">CutterCore</code><a class="headerlink" href="#_CPPv210CutterCore" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QObject</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N10CutterCore14HexdumpFormatsE">
+<span id="CutterCore::HexdumpFormats"></span><span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088"></span><em class="property">enum </em><code class="descname">HexdumpFormats</code><a class="headerlink" href="#_CPPv2N10CutterCore14HexdumpFormatsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore6NormalE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088a960b44c579bc2f6818d2daaf9e4c16f0"></span><code class="descname">Normal</code><a class="headerlink" href="#_CPPv2N10CutterCore6NormalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore4HalfE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088ac48615a1bc4197056d522af276aa5a85"></span><code class="descname">Half</code><a class="headerlink" href="#_CPPv2N10CutterCore4HalfE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore4WordE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088a07a094a210794e74a0e5e1a1457a92ee"></span><code class="descname">Word</code><a class="headerlink" href="#_CPPv2N10CutterCore4WordE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore4QuadE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088ae9017664588010860a92ceb5f8fcb824"></span><code class="descname">Quad</code><a class="headerlink" href="#_CPPv2N10CutterCore4QuadE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore6SignedE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088a71fed0c3428bf1a2e19af257c4bac379"></span><code class="descname">Signed</code><a class="headerlink" href="#_CPPv2N10CutterCore6SignedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore5OctalE">
+<span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088a919c181a7c4ea1da2e77d49e3c02d531"></span><code class="descname">Octal</code><a class="headerlink" href="#_CPPv2N10CutterCore5OctalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10CutterCoreEP7QObject">
+<span id="CutterCore::CutterCore__QObjectP"></span><span class="target" id="classCutterCore_1ae35cfc117df2d308ce9fb3061eee91f3"></span><code class="descname">CutterCore</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10CutterCoreEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCoreD0Ev">
+<span id="CutterCore::~CutterCore"></span><span class="target" id="classCutterCore_1a290fb7bbf7493d95c82d6b3878f05532"></span><code class="descname">~CutterCore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCoreD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10initializeEv">
+<span id="CutterCore::initialize"></span><span class="target" id="classCutterCore_1ab3dc2d6646c5c8d9d8b31235a21dd411"></span>void <code class="descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10initializeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12loadCutterRCEv">
+<span id="CutterCore::loadCutterRC"></span><span class="target" id="classCutterCore_1a9d070e072017a062176081289ce86c5b"></span>void <code class="descname">loadCutterRC</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12loadCutterRCEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore19getAsyncTaskManagerEv">
+<span id="CutterCore::getAsyncTaskManager"></span><span class="target" id="classCutterCore_1a5d1bc1e27e4b174962ed7c2fac117a5a"></span><a class="reference internal" href="../common/classAsyncTaskManager.html#_CPPv216AsyncTaskManager" title="AsyncTaskManager">AsyncTaskManager</a> *<code class="descname">getAsyncTaskManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore19getAsyncTaskManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10CutterCore9getOffsetEv">
+<span id="CutterCore::getOffsetC"></span><span class="target" id="classCutterCore_1afaa54b6eee233bdefb9762a15224d1a3"></span>RVA <code class="descname">getOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10CutterCore9getOffsetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore3cmdEPKc">
+<span id="CutterCore::cmd__cCP"></span><span class="target" id="classCutterCore_1a24cec0edd17b78a132e0f20bef8f6c1d"></span>QString <code class="descname">cmd</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore3cmdEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classCutterCore_1a24cec0edd17b78a132e0f20bef8f6c1d"><span class="std std-ref">CutterCore::cmd</span></a> send a command to radare2. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>command output </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">str</span></code>: the command you want to execute Note that if you want to seek to an address, you should use CutterCore::seek </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore3cmdERK7QString">
+<span id="CutterCore::cmd__QStringCR"></span><span class="target" id="classCutterCore_1ae4d76cdc9d1989dae5f9d538eb0b7370"></span>QString <code class="descname">cmd</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore3cmdERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore6cmdRawERK7QString">
+<span id="CutterCore::cmdRaw__QStringCR"></span><span class="target" id="classCutterCore_1aebd17361c88012e68d36b217f3ae0284"></span>QString <code class="descname">cmdRaw</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore6cmdRawERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4cmdjEPKc">
+<span id="CutterCore::cmdj__cCP"></span><span class="target" id="classCutterCore_1a8556dee0b8bef4578fcd33251e0cc30e"></span>QJsonDocument <code class="descname">cmdj</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4cmdjEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4cmdjERK7QString">
+<span id="CutterCore::cmdj__QStringCR"></span><span class="target" id="classCutterCore_1ab2ba0b2574393910ce29c0b21a61c10b"></span>QJsonDocument <code class="descname">cmdj</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4cmdjERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7cmdListEPKc">
+<span id="CutterCore::cmdList__cCP"></span><span class="target" id="classCutterCore_1a5bea0d7ba43a2de827e5610261f476e3"></span>QStringList <code class="descname">cmdList</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdListEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7cmdListERK7QString">
+<span id="CutterCore::cmdList__QStringCR"></span><span class="target" id="classCutterCore_1ae4e03fb42e9e96cc446cb7c9e9db8ecb"></span>QStringList <code class="descname">cmdList</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdListERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7cmdTaskERK7QString">
+<span id="CutterCore::cmdTask__QStringCR"></span><span class="target" id="classCutterCore_1a03a67fc071cb84fe4b68a0da1d7a4277"></span>QString <code class="descname">cmdTask</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdTaskERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8cmdjTaskERK7QString">
+<span id="CutterCore::cmdjTask__QStringCR"></span><span class="target" id="classCutterCore_1a2ae192830f3039f91f18afa83995d76b"></span>QJsonDocument <code class="descname">cmdjTask</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8cmdjTaskERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7cmdEsilEPKc">
+<span id="CutterCore::cmdEsil__cCP"></span><span class="target" id="classCutterCore_1a55e35bd6c0120ebf6665430de2a78fc4"></span>void <code class="descname">cmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdEsilEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7cmdEsilERK7QString">
+<span id="CutterCore::cmdEsil__QStringCR"></span><span class="target" id="classCutterCore_1a0bafabd626c668019f1a877ece3569bc"></span>void <code class="descname">cmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdEsilERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore21getVersionInformationEv">
+<span id="CutterCore::getVersionInformation"></span><span class="target" id="classCutterCore_1abd20fbb5928e54c1b5783c5909021dbb"></span>QString <code class="descname">getVersionInformation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore21getVersionInformationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9parseJsonEPKcPKc">
+<span id="CutterCore::parseJson__cCP.cCP"></span><span class="target" id="classCutterCore_1a9771eb617a182e600ce0d52975cf17f7"></span>QJsonDocument <code class="descname">parseJson</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>res</em>, <em class="property">const</em> char *<em>cmd</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9parseJsonEPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9parseJsonEPKcRK7QString">
+<span id="CutterCore::parseJson__cCP.QStringCR"></span><span class="target" id="classCutterCore_1aa8bc74838a57aff07304ff9efcd71269"></span>QJsonDocument <code class="descname">parseJson</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>res</em>, <em class="property">const</em> QString &amp;<em>cmd</em> = QString()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9parseJsonEPKcRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12autocompleteERK7QString15RLinePromptType6size_t">
+<span id="CutterCore::autocomplete__QStringCR.RLinePromptType.s"></span><span class="target" id="classCutterCore_1a2a01382581017138795ae1d49d33db1a"></span>QStringList <code class="descname">autocomplete</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cmd</em>, RLinePromptType <em>promptType</em>, size_t <em>limit</em> = 4096<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12autocompleteERK7QString15RLinePromptType6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14renameFunctionERK7QStringRK7QString">
+<span id="CutterCore::renameFunction__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a34e6348207f42f2bb661a536e36fff0d"></span>void <code class="descname">renameFunction</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>oldName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14renameFunctionERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11delFunctionE3RVA">
+<span id="CutterCore::delFunction__RVA"></span><span class="target" id="classCutterCore_1a21ee7c8ab5c4f01f6c8d5b4c86bf58a7"></span>void <code class="descname">delFunction</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11delFunctionE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10renameFlagE7QString7QString">
+<span id="CutterCore::renameFlag__QString.QString"></span><span class="target" id="classCutterCore_1aa22fa48fa6fadab039b6fdf48aa2b694"></span>void <code class="descname">renameFlag</code><span class="sig-paren">(</span>QString <em>old_name</em>, QString <em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10renameFlagE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10functionAtE4ut64">
+<span id="CutterCore::functionAt__ut64"></span><span class="target" id="classCutterCore_1aacf858c92ddaa3e2338a7fed7e2cfd48"></span>RAnalFunction *<code class="descname">functionAt</code><span class="sig-paren">(</span>ut64 <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10functionAtE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getFunctionStartE3RVA">
+<span id="CutterCore::getFunctionStart__RVA"></span><span class="target" id="classCutterCore_1af981a13d78e467f65f5d1472538eeb63"></span>RVA <code class="descname">getFunctionStart</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getFunctionStartE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>finds the start address of a function in a given address </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>if function exists, return its start address. Otherwise return RVA_INVALID </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: - an address which belongs to a function </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getFunctionEndE3RVA">
+<span id="CutterCore::getFunctionEnd__RVA"></span><span class="target" id="classCutterCore_1a75bbfa6aced7e109b85435c6d7b7c499"></span>RVA <code class="descname">getFunctionEnd</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getFunctionEndE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>finds the end address of a function in a given address </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>if function exists, return its end address. Otherwise return RVA_INVALID </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: - an address which belongs to a function </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore26getLastFunctionInstructionE3RVA">
+<span id="CutterCore::getLastFunctionInstruction__RVA"></span><span class="target" id="classCutterCore_1ae5c1fdbd259fe7ce45f6974ecfcb2702"></span>RVA <code class="descname">getLastFunctionInstruction</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore26getLastFunctionInstructionE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>finds the last instruction of a function in a given address </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>if function exists, return the address of its last instruction. Otherwise return RVA_INVALID </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: - an address which belongs to a function </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13cmdFunctionAtE7QString">
+<span id="CutterCore::cmdFunctionAt__QString"></span><span class="target" id="classCutterCore_1a6775f9868720086c43f363c733f7af84"></span>QString <code class="descname">cmdFunctionAt</code><span class="sig-paren">(</span>QString <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13cmdFunctionAtE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13cmdFunctionAtE3RVA">
+<span id="CutterCore::cmdFunctionAt__RVA"></span><span class="target" id="classCutterCore_1a593c1f24a893985a7661b9d6c9373a71"></span>QString <code class="descname">cmdFunctionAt</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13cmdFunctionAtE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16createFunctionAtE3RVA7QString">
+<span id="CutterCore::createFunctionAt__RVA.QString"></span><span class="target" id="classCutterCore_1ab14960ec95c068883844fa9e33e95809"></span>QString <code class="descname">createFunctionAt</code><span class="sig-paren">(</span>RVA <em>addr</em>, QString <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16createFunctionAtE3RVA7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore21getDisassemblyPreviewE3RVAi">
+<span id="CutterCore::getDisassemblyPreview__RVA.i"></span><span class="target" id="classCutterCore_1a1b997efb990c6f8423f7ec8f21b463ed"></span>QStringList <code class="descname">getDisassemblyPreview</code><span class="sig-paren">(</span>RVA <em>address</em>, int <em>num_of_lines</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore21getDisassemblyPreviewE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get a compact disassembly preview for tooltips </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">address</span></code>: - the address from which to print the disassembly </li>
+<li><code class="docutils literal"><span class="pre">num_of_lines</span></code>: - number of instructions to print </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7delFlagE3RVA">
+<span id="CutterCore::delFlag__RVA"></span><span class="target" id="classCutterCore_1a1cdc35af03e072461873e4c56fa40f57"></span>void <code class="descname">delFlag</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7delFlagE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7delFlagERK7QString">
+<span id="CutterCore::delFlag__QStringCR"></span><span class="target" id="classCutterCore_1a2011957108dccd9f4fe28ab670f90e08"></span>void <code class="descname">delFlag</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7delFlagERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7addFlagE3RVA7QString3RVA">
+<span id="CutterCore::addFlag__RVA.QString.RVA"></span><span class="target" id="classCutterCore_1a33907d34093925700b5ceb6f2d3481e1"></span>void <code class="descname">addFlag</code><span class="sig-paren">(</span>RVA <em>offset</em>, QString <em>name</em>, RVA <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7addFlagE3RVA7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore19triggerFlagsChangedEv">
+<span id="CutterCore::triggerFlagsChanged"></span><span class="target" id="classCutterCore_1a92dbbac0e4bc04225aa103a10b13cd2b"></span>void <code class="descname">triggerFlagsChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore19triggerFlagsChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore19getInstructionBytesE3RVA">
+<span id="CutterCore::getInstructionBytes__RVA"></span><span class="target" id="classCutterCore_1aa09deb47eeb54d688d62574137313a96"></span>QString <code class="descname">getInstructionBytes</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore19getInstructionBytesE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20getInstructionOpcodeE3RVA">
+<span id="CutterCore::getInstructionOpcode__RVA"></span><span class="target" id="classCutterCore_1a6a801c2403c415788182f4e63eb9c254"></span>QString <code class="descname">getInstructionOpcode</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20getInstructionOpcodeE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15editInstructionE3RVARK7QString">
+<span id="CutterCore::editInstruction__RVA.QStringCR"></span><span class="target" id="classCutterCore_1ad63b5c73d8db99cbaa29db96cd064e99"></span>void <code class="descname">editInstruction</code><span class="sig-paren">(</span>RVA <em>addr</em>, <em class="property">const</em> QString &amp;<em>inst</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15editInstructionE3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14nopInstructionE3RVA">
+<span id="CutterCore::nopInstruction__RVA"></span><span class="target" id="classCutterCore_1adeeafb64108b142e1c53bb010f4e1eb5"></span>void <code class="descname">nopInstruction</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14nopInstructionE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10jmpReverseE3RVA">
+<span id="CutterCore::jmpReverse__RVA"></span><span class="target" id="classCutterCore_1a956268d4fbc77eeebaee52019ab5bdb9"></span>void <code class="descname">jmpReverse</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10jmpReverseE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9editBytesE3RVARK7QString">
+<span id="CutterCore::editBytes__RVA.QStringCR"></span><span class="target" id="classCutterCore_1abfb6f6c991d45b08eee994e6112e5e86"></span>void <code class="descname">editBytes</code><span class="sig-paren">(</span>RVA <em>addr</em>, <em class="property">const</em> QString &amp;<em>inst</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9editBytesE3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15editBytesEndianE3RVARK7QString">
+<span id="CutterCore::editBytesEndian__RVA.QStringCR"></span><span class="target" id="classCutterCore_1a6542a7f4fe283c43069d1eb4e1187819"></span>void <code class="descname">editBytesEndian</code><span class="sig-paren">(</span>RVA <em>addr</em>, <em class="property">const</em> QString &amp;<em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15editBytesEndianE3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setToCodeE3RVA">
+<span id="CutterCore::setToCode__RVA"></span><span class="target" id="classCutterCore_1a6d7cf1cd2d56dd8f5a754760d26a489a"></span>void <code class="descname">setToCode</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setToCodeE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11setAsStringE3RVA">
+<span id="CutterCore::setAsString__RVA"></span><span class="target" id="classCutterCore_1a1991151e5b4ae4383bdb6ed8a1a6c8c7"></span>void <code class="descname">setAsString</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11setAsStringE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setToDataE3RVAii">
+<span id="CutterCore::setToData__RVA.i.i"></span><span class="target" id="classCutterCore_1af56feaa2ccfbdd457c4b9602d169968b"></span>void <code class="descname">setToData</code><span class="sig-paren">(</span>RVA <em>addr</em>, int <em>size</em>, int <em>repeat</em> = 1<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setToDataE3RVAii" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14sizeofDataMetaE3RVA">
+<span id="CutterCore::sizeofDataMeta__RVA"></span><span class="target" id="classCutterCore_1a893214e0f1b270dd33d669a4e4c92af0"></span>int <code class="descname">sizeofDataMeta</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14sizeofDataMetaE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10setCommentE3RVARK7QString">
+<span id="CutterCore::setComment__RVA.QStringCR"></span><span class="target" id="classCutterCore_1a3d92914944342cf9641d1dffa6f5c757"></span>void <code class="descname">setComment</code><span class="sig-paren">(</span>RVA <em>addr</em>, <em class="property">const</em> QString &amp;<em>cmt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10setCommentE3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10delCommentE3RVA">
+<span id="CutterCore::delComment__RVA"></span><span class="target" id="classCutterCore_1a819601e453d9d42c860fc532cdb9b31d"></span>void <code class="descname">delComment</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10delCommentE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16setImmediateBaseERK7QString3RVA">
+<span id="CutterCore::setImmediateBase__QStringCR.RVA"></span><span class="target" id="classCutterCore_1a6782ecaf60d6e5e6d42c817c7beb2963"></span>void <code class="descname">setImmediateBase</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>r2BaseName</em>, RVA <em>offset</em> = RVA_INVALID<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16setImmediateBaseERK7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14setCurrentBitsEi3RVA">
+<span id="CutterCore::setCurrentBits__i.RVA"></span><span class="target" id="classCutterCore_1ae6f3152e46fb4fab55950dba9078a048"></span>void <code class="descname">setCurrentBits</code><span class="sig-paren">(</span>int <em>bits</em>, RVA <em>offset</em> = RVA_INVALID<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14setCurrentBitsEi3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20applyStructureOffsetERK7QString3RVA">
+<span id="CutterCore::applyStructureOffset__QStringCR.RVA"></span><span class="target" id="classCutterCore_1a482cc22a49a272428d92616971b4f25c"></span>void <code class="descname">applyStructureOffset</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>structureOffset</em>, RVA <em>offset</em> = RVA_INVALID<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20applyStructureOffsetERK7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Changes immediate displacement to structure offset <a class="reference internal" href="../widgets/classThis.html#classThis"><span class="std std-ref">This</span></a> function makes use of the “ta” command of r2 to apply structure offset to the immediate displacement used in the given instruction. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">structureOffset</span></code>: The name of struct which will be applied </li>
+<li><code class="docutils literal"><span class="pre">offset</span></code>: The address of the instruction where the struct will be applied </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getAllAnalClassesEb">
+<span id="CutterCore::getAllAnalClasses__b"></span><span class="target" id="classCutterCore_1a6574ee0ca23c64f3404f53470da0fe8b"></span>QList&lt;QString&gt; <code class="descname">getAllAnalClasses</code><span class="sig-paren">(</span>bool <em>sorted</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getAllAnalClassesEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore19getAnalClassMethodsERK7QString">
+<span id="CutterCore::getAnalClassMethods__QStringCR"></span><span class="target" id="classCutterCore_1a63a60c0b1c4e658fc1cb8fc8db691463"></span>QList&lt;<a class="reference internal" href="structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a>&gt; <code class="descname">getAnalClassMethods</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore19getAnalClassMethodsERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore23getAnalClassBaseClassesERK7QString">
+<span id="CutterCore::getAnalClassBaseClasses__QStringCR"></span><span class="target" id="classCutterCore_1aac48dda9caa6d5faefb7655c7e7318ae"></span>QList&lt;<a class="reference internal" href="structAnalBaseClassDescription.html#_CPPv224AnalBaseClassDescription" title="AnalBaseClassDescription">AnalBaseClassDescription</a>&gt; <code class="descname">getAnalClassBaseClasses</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore23getAnalClassBaseClassesERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore19getAnalClassVTablesERK7QString">
+<span id="CutterCore::getAnalClassVTables__QStringCR"></span><span class="target" id="classCutterCore_1a37cbc653f118a3d9af870753f17cee3f"></span>QList&lt;<a class="reference internal" href="structAnalVTableDescription.html#_CPPv221AnalVTableDescription" title="AnalVTableDescription">AnalVTableDescription</a>&gt; <code class="descname">getAnalClassVTables</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore19getAnalClassVTablesERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14createNewClassERK7QString">
+<span id="CutterCore::createNewClass__QStringCR"></span><span class="target" id="classCutterCore_1a5b13d753104f27e9fd2ec46f749d8b80"></span>void <code class="descname">createNewClass</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14createNewClassERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11renameClassERK7QStringRK7QString">
+<span id="CutterCore::renameClass__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a41955be341b0fafa3584bda8c7d17b3a"></span>void <code class="descname">renameClass</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>oldName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11renameClassERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11deleteClassERK7QString">
+<span id="CutterCore::deleteClass__QStringCR"></span><span class="target" id="classCutterCore_1a4165e0c1655fe07728f212273c68b544"></span>void <code class="descname">deleteClass</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11deleteClassERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAnalMethodERK7QStringRK7QStringP21AnalMethodDescription">
+<span id="CutterCore::getAnalMethod__QStringCR.QStringCR.AnalMethodDescriptionP"></span><span class="target" id="classCutterCore_1a1dc74cf03b35111dae21f449698ef4a3"></span>bool <code class="descname">getAnalMethod</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em>, <em class="property">const</em> QString &amp;<em>meth</em>, <a class="reference internal" href="structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a> *<em>desc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAnalMethodERK7QStringRK7QStringP21AnalMethodDescription" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16renameAnalMethodERK7QStringRK7QStringRK7QString">
+<span id="CutterCore::renameAnalMethod__QStringCR.QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a23f6f1da8dc2dbd95d49f1c4908cd789"></span>void <code class="descname">renameAnalMethod</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>className</em>, <em class="property">const</em> QString &amp;<em>oldMethodName</em>, <em class="property">const</em> QString &amp;<em>newMethodName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16renameAnalMethodERK7QStringRK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13setAnalMethodERK7QStringRK21AnalMethodDescription">
+<span id="CutterCore::setAnalMethod__QStringCR.AnalMethodDescriptionCR"></span><span class="target" id="classCutterCore_1abcbc26109eb56f6dd1d6e8cba3aa9d14"></span>void <code class="descname">setAnalMethod</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cls</em>, <em class="property">const</em> <a class="reference internal" href="structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a> &amp;<em>meth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13setAnalMethodERK7QStringRK21AnalMethodDescription" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8loadFileE7QString4ut644ut64iibRK7QString">
+<span id="CutterCore::loadFile__QString.ut64.ut64.i.i.b.QStringCR"></span><span class="target" id="classCutterCore_1a41213cb201b06f2a6fcda48cbc6a3df7"></span>bool <code class="descname">loadFile</code><span class="sig-paren">(</span>QString <em>path</em>, ut64 <em>baddr</em> = 0LL, ut64 <em>mapaddr</em> = 0LL, int <em>perms</em> = R_PERM_R, int <em>va</em> = 0, bool <em>loadbin</em> = false, <em class="property">const</em> QString &amp;<em>forceBinPlugin</em> = QString()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8loadFileE7QString4ut644ut64iibRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classCutterCore_1a41213cb201b06f2a6fcda48cbc6a3df7"><span class="std std-ref">CutterCore::loadFile</span></a> Load initial file. TODO Maybe use the “o” commands? </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd></dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">path</span></code>: File path </li>
+<li><code class="docutils literal"><span class="pre">baddr</span></code>: Base (RBin) address </li>
+<li><code class="docutils literal"><span class="pre">mapaddr</span></code>: Map address </li>
+<li><code class="docutils literal"><span class="pre">perms</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">va</span></code>: </li>
+<li><code class="docutils literal"><span class="pre">loadbin</span></code>: Load RBin information </li>
+<li><code class="docutils literal"><span class="pre">forceBinPlugin</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7tryFileE7QStringb">
+<span id="CutterCore::tryFile__QString.b"></span><span class="target" id="classCutterCore_1aef0763543d0844e3d6e43fbd6857f030"></span>bool <code class="descname">tryFile</code><span class="sig-paren">(</span>QString <em>path</em>, bool <em>rw</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7tryFileE7QStringb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8openFileE7QString3RVA">
+<span id="CutterCore::openFile__QString.RVA"></span><span class="target" id="classCutterCore_1a79cead25143a267209852c170e003737"></span>bool <code class="descname">openFile</code><span class="sig-paren">(</span>QString <em>path</em>, RVA <em>mapaddr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8openFileE7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Opens a file using r2 API. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>bool </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">path</span></code>: Path to file </li>
+<li><code class="docutils literal"><span class="pre">mapaddr</span></code>: Map Address </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10loadScriptERK7QString">
+<span id="CutterCore::loadScript__QStringCR"></span><span class="target" id="classCutterCore_1ac75624a8956f043ecc20096ec90e1a5a"></span>void <code class="descname">loadScript</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>scriptname</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10loadScriptERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getOpenedFilesEv">
+<span id="CutterCore::getOpenedFiles"></span><span class="target" id="classCutterCore_1aa0d50ca3f234a992db40a603fd1bff13"></span>QJsonArray <code class="descname">getOpenedFiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getOpenedFilesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4seekE7QString">
+<span id="CutterCore::seek__QString"></span><span class="target" id="classCutterCore_1af9d87ee250b3dfde5caaa1ab971e9e47"></span>void <code class="descname">seek</code><span class="sig-paren">(</span>QString <em>thing</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4seekE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4seekE4ut64">
+<span id="CutterCore::seek__ut64"></span><span class="target" id="classCutterCore_1aebbbb25a92df180d9134faf1670d9557"></span>void <code class="descname">seek</code><span class="sig-paren">(</span>ut64 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4seekE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8seekPrevEv">
+<span id="CutterCore::seekPrev"></span><span class="target" id="classCutterCore_1abb9cb7c010b8f1671c048627ad909aa6"></span>void <code class="descname">seekPrev</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8seekPrevEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8seekNextEv">
+<span id="CutterCore::seekNext"></span><span class="target" id="classCutterCore_1a3294f1f039b182dcc1c34fa65b7b08d3"></span>void <code class="descname">seekNext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8seekNextEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10updateSeekEv">
+<span id="CutterCore::updateSeek"></span><span class="target" id="classCutterCore_1ae1cbc1daf5f1a84fafc9ffa5d1134401"></span>void <code class="descname">updateSeek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10updateSeekEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16showMemoryWidgetEv">
+<span id="CutterCore::showMemoryWidget"></span><span class="target" id="classCutterCore_1a711fcb91afde5d48d99deb17a6c3c461"></span>void <code class="descname">showMemoryWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16showMemoryWidgetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Raise a memory widget showing current offset, prefer last active memory widget. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11seekAndShowE4ut64">
+<span id="CutterCore::seekAndShow__ut64"></span><span class="target" id="classCutterCore_1a2ab2c0dc3115b3d1ff36c8916689289e"></span>void <code class="descname">seekAndShow</code><span class="sig-paren">(</span>ut64 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11seekAndShowE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Seek to <code class="docutils literal"><span class="pre">offset</span></code> and raise a memory widget showing it. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">offset</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11seekAndShowE7QString">
+<span id="CutterCore::seekAndShow__QString"></span><span class="target" id="classCutterCore_1a4a632168c6467fa0d0678ba7d0c22bbc"></span>void <code class="descname">seekAndShow</code><span class="sig-paren">(</span>QString <em>thing</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11seekAndShowE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>See</strong></dt>
+<dd>CutterCore::show(ut64) </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">thing</span></code>: - addressable expression </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9getOffsetEv">
+<span id="CutterCore::getOffset"></span><span class="target" id="classCutterCore_1a11b2217e8c88bb69b3b1c131517a0411"></span>RVA <code class="descname">getOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9getOffsetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10prevOpAddrE3RVAi">
+<span id="CutterCore::prevOpAddr__RVA.i"></span><span class="target" id="classCutterCore_1a98f66338d388bb1e542bea980d0a3cb6"></span>RVA <code class="descname">prevOpAddr</code><span class="sig-paren">(</span>RVA <em>startAddr</em>, int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10prevOpAddrE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10nextOpAddrE3RVAi">
+<span id="CutterCore::nextOpAddr__RVA.i"></span><span class="target" id="classCutterCore_1ab93cbbc5c6248203cdaf3083080ab0d4"></span>RVA <code class="descname">nextOpAddr</code><span class="sig-paren">(</span>RVA <em>startAddr</em>, int <em>count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10nextOpAddrE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4mathERK7QString">
+<span id="CutterCore::math__QStringCR"></span><span class="target" id="classCutterCore_1a6102cf8642631dad20ebe7506a015f97"></span>ut64 <code class="descname">math</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4mathERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore3numERK7QString">
+<span id="CutterCore::num__QStringCR"></span><span class="target" id="classCutterCore_1aded85a08ed0081fe91213a314ad6500c"></span>ut64 <code class="descname">num</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore3numERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore4itoaE4ut64i">
+<span id="CutterCore::itoa__ut64.i"></span><span class="target" id="classCutterCore_1ab73d391b69205d5ac9f79f65238a6ec1"></span>QString <code class="descname">itoa</code><span class="sig-paren">(</span>ut64 <em>num</em>, int <em>rdx</em> = 16<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore4itoaE4ut64i" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigEPKcRK7QString">
+<span id="CutterCore::setConfig__cCP.QStringCR"></span><span class="target" id="classCutterCore_1a5a0b3aa6cb328f53b0dc6ca8f004d84e"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em>, <em class="property">const</em> QString &amp;<em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigEPKcRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigERK7QStringRK7QString">
+<span id="CutterCore::setConfig__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a17ec7164e96aeb7d283c2d93227257c7"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em>, <em class="property">const</em> QString &amp;<em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigEPKci">
+<span id="CutterCore::setConfig__cCP.i"></span><span class="target" id="classCutterCore_1a850ef4bd3180b3c0ba3a86b4026eaf2e"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em>, int <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigEPKci" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigERK7QStringi">
+<span id="CutterCore::setConfig__QStringCR.i"></span><span class="target" id="classCutterCore_1a5baedb5a9398712762aa57fcc8423bf5"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em>, int <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigERK7QStringi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigEPKcb">
+<span id="CutterCore::setConfig__cCP.b"></span><span class="target" id="classCutterCore_1a7023a048404f3298954fd14e9bad8491"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em>, bool <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigEPKcb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigERK7QStringb">
+<span id="CutterCore::setConfig__QStringCR.b"></span><span class="target" id="classCutterCore_1ab060f649c121e381dfa0e675a747332b"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em>, bool <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigERK7QStringb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigEPKcRK8QVariant">
+<span id="CutterCore::setConfig__cCP.QVariantCR"></span><span class="target" id="classCutterCore_1acbddacbcb357c4b2af651bc7d2f3dd8c"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em>, <em class="property">const</em> QVariant &amp;<em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigEPKcRK8QVariant" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9setConfigERK7QStringRK8QVariant">
+<span id="CutterCore::setConfig__QStringCR.QVariantCR"></span><span class="target" id="classCutterCore_1a0ea908037e0b06324792b186b90ad060"></span>void <code class="descname">setConfig</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em>, <em class="property">const</em> QVariant &amp;<em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9setConfigERK7QStringRK8QVariant" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getConfigiEPKc">
+<span id="CutterCore::getConfigi__cCP"></span><span class="target" id="classCutterCore_1a793b3e0a69b1ddfc814085dadd179299"></span>int <code class="descname">getConfigi</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getConfigiEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getConfigiERK7QString">
+<span id="CutterCore::getConfigi__QStringCR"></span><span class="target" id="classCutterCore_1aad6f01bb3e5334eb8d99f6e0920b8564"></span>int <code class="descname">getConfigi</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getConfigiERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getConfigut64EPKc">
+<span id="CutterCore::getConfigut64__cCP"></span><span class="target" id="classCutterCore_1a087ca2bfc65a469c20d9bb1a3d1a1bf5"></span>ut64 <code class="descname">getConfigut64</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getConfigut64EPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getConfigut64ERK7QString">
+<span id="CutterCore::getConfigut64__QStringCR"></span><span class="target" id="classCutterCore_1a27f4a865e30e4ec66af7582eeed655cb"></span>ut64 <code class="descname">getConfigut64</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getConfigut64ERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getConfigbEPKc">
+<span id="CutterCore::getConfigb__cCP"></span><span class="target" id="classCutterCore_1a58868f65abb5aa590fbb3e8400c9ac94"></span>bool <code class="descname">getConfigb</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getConfigbEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getConfigbERK7QString">
+<span id="CutterCore::getConfigb__QStringCR"></span><span class="target" id="classCutterCore_1a3b66ff26f014803bf97e982f1206fc94"></span>bool <code class="descname">getConfigb</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getConfigbERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9getConfigEPKc">
+<span id="CutterCore::getConfig__cCP"></span><span class="target" id="classCutterCore_1a05a4bac5ac4344f554458828f335c491"></span>QString <code class="descname">getConfig</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9getConfigEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9getConfigERK7QString">
+<span id="CutterCore::getConfig__QStringCR"></span><span class="target" id="classCutterCore_1a0f6695f5d7c6b28a97905cdd0113d111"></span>QString <code class="descname">getConfig</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9getConfigERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getColorThemesEv">
+<span id="CutterCore::getColorThemes"></span><span class="target" id="classCutterCore_1a24ef41dab1fd413ed4f4f348bdc9ecef"></span>QList&lt;QString&gt; <code class="descname">getColorThemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getColorThemesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8assembleERK7QString">
+<span id="CutterCore::assemble__QStringCR"></span><span class="target" id="classCutterCore_1a906f10b45679bc5455f870419beb576d"></span>QByteArray <code class="descname">assemble</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8assembleERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11disassembleERK10QByteArray">
+<span id="CutterCore::disassemble__QByteArrayCR"></span><span class="target" id="classCutterCore_1a26741a51b01c7a9193ff9300bd0b1ddb"></span>QString <code class="descname">disassemble</code><span class="sig-paren">(</span><em class="property">const</em> QByteArray &amp;<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11disassembleERK10QByteArray" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore28disassembleSingleInstructionE3RVA">
+<span id="CutterCore::disassembleSingleInstruction__RVA"></span><span class="target" id="classCutterCore_1a8e9e7575709ae9af67ce54ad6590d16b"></span>QString <code class="descname">disassembleSingleInstruction</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore28disassembleSingleInstructionE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16disassembleLinesE3RVAi">
+<span id="CutterCore::disassembleLines__RVA.i"></span><span class="target" id="classCutterCore_1a8f822097005e74324a525aaf430cf8bc"></span>QList&lt;<a class="reference internal" href="structDisassemblyLine.html#_CPPv215DisassemblyLine" title="DisassemblyLine">DisassemblyLine</a>&gt; <code class="descname">disassembleLines</code><span class="sig-paren">(</span>RVA <em>offset</em>, int <em>lines</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16disassembleLinesE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7hexdumpE3RVAi14HexdumpFormats">
+<span id="CutterCore::hexdump__RVA.i.HexdumpFormats"></span><span class="target" id="classCutterCore_1ab6fde320e322342282d392e4f7408016"></span>QString <code class="descname">hexdump</code><span class="sig-paren">(</span>RVA <em>offset</em>, int <em>size</em>, <a class="reference internal" href="#_CPPv2N10CutterCore14HexdumpFormatsE" title="CutterCore::HexdumpFormats">HexdumpFormats</a> <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7hexdumpE3RVAi14HexdumpFormats" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return hexdump of &lt;size&gt; from an &lt;offset&gt; by a given formats </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">address</span></code>: - the address from which to print the hexdump </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: - number of bytes to print </li>
+<li><code class="docutils literal"><span class="pre">format</span></code>: - the type of hexdump (qwords, words. decimal, etc) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getHexdumpPreviewE3RVAi">
+<span id="CutterCore::getHexdumpPreview__RVA.i"></span><span class="target" id="classCutterCore_1a17d1b25078d60e53ecde3124042ffc1e"></span>QString <code class="descname">getHexdumpPreview</code><span class="sig-paren">(</span>RVA <em>offset</em>, int <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getHexdumpPreviewE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get a compact hexdump preview for tooltips </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">address</span></code>: - the address from which to print the hexdump </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: - number of bytes to print </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore6setCPUE7QString7QStringi">
+<span id="CutterCore::setCPU__QString.QString.i"></span><span class="target" id="classCutterCore_1ab1e1ec252e1e0025e91e061b1df6c1eb"></span>void <code class="descname">setCPU</code><span class="sig-paren">(</span>QString <em>arch</em>, QString <em>cpu</em>, int <em>bits</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore6setCPUE7QString7QStringi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13setEndiannessEb">
+<span id="CutterCore::setEndianness__b"></span><span class="target" id="classCutterCore_1a1e1b696c6db9e77f50131960f7e62438"></span>void <code class="descname">setEndianness</code><span class="sig-paren">(</span>bool <em>big</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13setEndiannessEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7sdbListE7QString">
+<span id="CutterCore::sdbList__QString"></span><span class="target" id="classCutterCore_1af04d55350b9913562b84e97065d5e89a"></span>QList&lt;QString&gt; <code class="descname">sdbList</code><span class="sig-paren">(</span>QString <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7sdbListE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11sdbListKeysE7QString">
+<span id="CutterCore::sdbListKeys__QString"></span><span class="target" id="classCutterCore_1a3e27371bcedc9f08cec0c62f214ce3ae"></span>QList&lt;QString&gt; <code class="descname">sdbListKeys</code><span class="sig-paren">(</span>QString <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11sdbListKeysE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore6sdbGetE7QString7QString">
+<span id="CutterCore::sdbGet__QString.QString"></span><span class="target" id="classCutterCore_1a1562a88c9fdd4cc03277510827570554"></span>QString <code class="descname">sdbGet</code><span class="sig-paren">(</span>QString <em>path</em>, QString <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore6sdbGetE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore6sdbSetE7QString7QString7QString">
+<span id="CutterCore::sdbSet__QString.QString.QString"></span><span class="target" id="classCutterCore_1aa5f66b81799843daa86165dfaf22ec35"></span>bool <code class="descname">sdbSet</code><span class="sig-paren">(</span>QString <em>path</em>, QString <em>key</em>, QString <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore6sdbSetE7QString7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getRegistersInfoEv">
+<span id="CutterCore::getRegistersInfo"></span><span class="target" id="classCutterCore_1ac96010b5949c7950d952827f01630131"></span>QJsonDocument <code class="descname">getRegistersInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getRegistersInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getRegisterValuesEv">
+<span id="CutterCore::getRegisterValues"></span><span class="target" id="classCutterCore_1a53a04d565d7cc2bf029fc96b919197eb"></span>QJsonDocument <code class="descname">getRegisterValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getRegisterValuesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getRegisterNameE7QString">
+<span id="CutterCore::getRegisterName__QString"></span><span class="target" id="classCutterCore_1a4a517f64c7a7cec8e2c81d042b442289"></span>QString <code class="descname">getRegisterName</code><span class="sig-paren">(</span>QString <em>registerRole</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getRegisterNameE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore22getProgramCounterValueEv">
+<span id="CutterCore::getProgramCounterValue"></span><span class="target" id="classCutterCore_1abccdf60bbdbacf15db8cef2ec312d4b6"></span>RVA <code class="descname">getProgramCounterValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore22getProgramCounterValueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11setRegisterE7QString7QString">
+<span id="CutterCore::setRegister__QString.QString"></span><span class="target" id="classCutterCore_1a5b598bb7f8d92782c8b994b487e778d4"></span>void <code class="descname">setRegister</code><span class="sig-paren">(</span>QString <em>regName</em>, QString <em>regValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11setRegisterE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8getStackEi">
+<span id="CutterCore::getStack__i"></span><span class="target" id="classCutterCore_1aa59a7f045b73982c89009d5ae3bdcb01"></span>QJsonDocument <code class="descname">getStack</code><span class="sig-paren">(</span>int <em>size</em> = 0x100<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getStackEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getBacktraceEv">
+<span id="CutterCore::getBacktrace"></span><span class="target" id="classCutterCore_1a1db3216847427ef1c68addda0e548909"></span>QJsonDocument <code class="descname">getBacktrace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getBacktraceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10startDebugEv">
+<span id="CutterCore::startDebug"></span><span class="target" id="classCutterCore_1a98982b2031e1bb6dc13ce0cbe2c83d94"></span>void <code class="descname">startDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10startDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14startEmulationEv">
+<span id="CutterCore::startEmulation"></span><span class="target" id="classCutterCore_1a5da4e00b8a7c6f4cafead99cfbadb6d3"></span>void <code class="descname">startEmulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14startEmulationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11attachDebugEi">
+<span id="CutterCore::attachDebug__i"></span><span class="target" id="classCutterCore_1a30cf30b2f99dad8dc41b4ec44afbb5d6"></span>void <code class="descname">attachDebug</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11attachDebugEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9stopDebugEv">
+<span id="CutterCore::stopDebug"></span><span class="target" id="classCutterCore_1a492d22a0681a2fad4cf6388bc3319643"></span>void <code class="descname">stopDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9stopDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13continueDebugEv">
+<span id="CutterCore::continueDebug"></span><span class="target" id="classCutterCore_1a014e0ee2ff38f9509f9ec7a732c93489"></span>void <code class="descname">continueDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13continueDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17continueUntilCallEv">
+<span id="CutterCore::continueUntilCall"></span><span class="target" id="classCutterCore_1ac35405476118700b616f41971d0a3eae"></span>void <code class="descname">continueUntilCall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17continueUntilCallEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20continueUntilSyscallEv">
+<span id="CutterCore::continueUntilSyscall"></span><span class="target" id="classCutterCore_1a3a8a0fa7638a4caa2c2a39e81024741d"></span>void <code class="descname">continueUntilSyscall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20continueUntilSyscallEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18continueUntilDebugE7QString">
+<span id="CutterCore::continueUntilDebug__QString"></span><span class="target" id="classCutterCore_1ae0f85c17bbd1e579f5c6e3ac76447cfb"></span>void <code class="descname">continueUntilDebug</code><span class="sig-paren">(</span>QString <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18continueUntilDebugE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9stepDebugEv">
+<span id="CutterCore::stepDebug"></span><span class="target" id="classCutterCore_1a07b7921fb64a78d6d1f8d9d77c4d1bb7"></span>void <code class="descname">stepDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9stepDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13stepOverDebugEv">
+<span id="CutterCore::stepOverDebug"></span><span class="target" id="classCutterCore_1aea361ba429912e5dcc5607c1f5a053bf"></span>void <code class="descname">stepOverDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13stepOverDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12stepOutDebugEv">
+<span id="CutterCore::stepOutDebug"></span><span class="target" id="classCutterCore_1a19f940b2bf12b02555e9d7293405c19f"></span>void <code class="descname">stepOutDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12stepOutDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16toggleBreakpointE3RVA">
+<span id="CutterCore::toggleBreakpoint__RVA"></span><span class="target" id="classCutterCore_1ab2626e967ae07bda2ddb8fcbcb43f828"></span>void <code class="descname">toggleBreakpoint</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16toggleBreakpointE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16toggleBreakpointE7QString">
+<span id="CutterCore::toggleBreakpoint__QString"></span><span class="target" id="classCutterCore_1a32587c352db46579e0c5670d51c4318c"></span>void <code class="descname">toggleBreakpoint</code><span class="sig-paren">(</span>QString <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16toggleBreakpointE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13delBreakpointE3RVA">
+<span id="CutterCore::delBreakpoint__RVA"></span><span class="target" id="classCutterCore_1a40a73a7229105ebb7636db11ca304273"></span>void <code class="descname">delBreakpoint</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13delBreakpointE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17delAllBreakpointsEv">
+<span id="CutterCore::delAllBreakpoints"></span><span class="target" id="classCutterCore_1ade61a70704b4634a7a7c5d279503683a"></span>void <code class="descname">delAllBreakpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17delAllBreakpointsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16enableBreakpointE3RVA">
+<span id="CutterCore::enableBreakpoint__RVA"></span><span class="target" id="classCutterCore_1a13e30a88ff943838c86ac148c0867065"></span>void <code class="descname">enableBreakpoint</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16enableBreakpointE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17disableBreakpointE3RVA">
+<span id="CutterCore::disableBreakpoint__RVA"></span><span class="target" id="classCutterCore_1a297792d1392a6459469ecbebf41500de"></span>void <code class="descname">disableBreakpoint</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17disableBreakpointE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12isBreakpointERK5QListI3RVAE3RVA">
+<span id="CutterCore::isBreakpoint__QList:RVA:CR.RVA"></span><span class="target" id="classCutterCore_1ae20428c2ee0841b381be3c426aabd743"></span>bool <code class="descname">isBreakpoint</code><span class="sig-paren">(</span><em class="property">const</em> QList&lt;RVA&gt; &amp;<em>breakpoints</em>, RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12isBreakpointERK5QListI3RVAE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore23getBreakpointsAddressesEv">
+<span id="CutterCore::getBreakpointsAddresses"></span><span class="target" id="classCutterCore_1af02f7096a52a9eb1ef2a9f351e671fe2"></span>QList&lt;RVA&gt; <code class="descname">getBreakpointsAddresses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore23getBreakpointsAddressesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20getActiveDebugPluginEv">
+<span id="CutterCore::getActiveDebugPlugin"></span><span class="target" id="classCutterCore_1acdc65d5802713e9dcd5ae942bb67ab9d"></span>QString <code class="descname">getActiveDebugPlugin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20getActiveDebugPluginEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getDebugPluginsEv">
+<span id="CutterCore::getDebugPlugins"></span><span class="target" id="classCutterCore_1ac71550e142a41433dd88850d9bbec462"></span>QStringList <code class="descname">getDebugPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getDebugPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14setDebugPluginE7QString">
+<span id="CutterCore::setDebugPlugin__QString"></span><span class="target" id="classCutterCore_1a3570a86093d8e9b5bc2d93369682dabd"></span>void <code class="descname">setDebugPlugin</code><span class="sig-paren">(</span>QString <em>plugin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14setDebugPluginE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getDecompilersEv">
+<span id="CutterCore::getDecompilers"></span><span class="target" id="classCutterCore_1a3a95c90c932811486422dab80de0017c"></span>QList&lt;<a class="reference internal" href="../common/classDecompiler.html#_CPPv210Decompiler" title="Decompiler">Decompiler</a> *&gt; <code class="descname">getDecompilers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getDecompilersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getDecompilerByIdERK7QString">
+<span id="CutterCore::getDecompilerById__QStringCR"></span><span class="target" id="classCutterCore_1ac95971479e53cdc40f0c049cdc9097f0"></span><a class="reference internal" href="../common/classDecompiler.html#_CPPv210Decompiler" title="Decompiler">Decompiler</a> *<code class="descname">getDecompilerById</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getDecompilerByIdERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18registerDecompilerEP10Decompiler">
+<span id="CutterCore::registerDecompiler__DecompilerP"></span><span class="target" id="classCutterCore_1af4694a6596ec87518ddc2fcbe404ddc7"></span>bool <code class="descname">registerDecompiler</code><span class="sig-paren">(</span><a class="reference internal" href="../common/classDecompiler.html#_CPPv210Decompiler" title="Decompiler">Decompiler</a> *<em>decompiler</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18registerDecompilerEP10Decompiler" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register a new decompiler</p>
+<p>The decompiler must have a unique id, otherwise this method will fail. The decompiler’s parent will be set to this <a class="reference internal" href="#classCutterCore"><span class="std std-ref">CutterCore</span></a> instance, so it will automatically be freed later.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>whether the decompiler was registered successfully </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getOffsetJumpE3RVA">
+<span id="CutterCore::getOffsetJump__RVA"></span><span class="target" id="classCutterCore_1ac67f98b9643e1d6b6f8d3b579ba37581"></span>RVA <code class="descname">getOffsetJump</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getOffsetJumpE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11getFileInfoEv">
+<span id="CutterCore::getFileInfo"></span><span class="target" id="classCutterCore_1ace15903ca3e163c341f1b6392ffb17dd"></span>QJsonDocument <code class="descname">getFileInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11getFileInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getSignatureInfoEv">
+<span id="CutterCore::getSignatureInfo"></span><span class="target" id="classCutterCore_1af043ad9dbe427a569a5a8e532e97face"></span>QJsonDocument <code class="descname">getSignatureInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getSignatureInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18getFileVersionInfoEv">
+<span id="CutterCore::getFileVersionInfo"></span><span class="target" id="classCutterCore_1a55cf0bcdac37922109910d8f70a4d62c"></span>QJsonDocument <code class="descname">getFileVersionInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18getFileVersionInfoEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8getStatsEv">
+<span id="CutterCore::getStats"></span><span class="target" id="classCutterCore_1aeed9d7a40682a0894745f32fb51c73a7"></span>QStringList <code class="descname">getStats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getStatsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13setGraphEmptyEb">
+<span id="CutterCore::setGraphEmpty__b"></span><span class="target" id="classCutterCore_1a3122f94b89b43d70697b50bf532b4613"></span>void <code class="descname">setGraphEmpty</code><span class="sig-paren">(</span>bool <em>empty</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13setGraphEmptyEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12isGraphEmptyEv">
+<span id="CutterCore::isGraphEmpty"></span><span class="target" id="classCutterCore_1aeeb01ad914e1dd6214e7ca7f5577ba82"></span>bool <code class="descname">isGraphEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12isGraphEmptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getOpcodesEv">
+<span id="CutterCore::getOpcodes"></span><span class="target" id="classCutterCore_1ae21a582bf3f3c5f63b9e9c477f49655f"></span>void <code class="descname">getOpcodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getOpcodesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11setSettingsEv">
+<span id="CutterCore::setSettings"></span><span class="target" id="classCutterCore_1aa5a70f1e4a8abf98f96824b1915cdaf4"></span>void <code class="descname">setSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11setSettingsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7loadPDBERK7QString">
+<span id="CutterCore::loadPDB__QStringCR"></span><span class="target" id="classCutterCore_1ad6c3c68ddaf4356b5346da427c8aff59"></span>void <code class="descname">loadPDB</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7loadPDBERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore6ioReadE3RVAi">
+<span id="CutterCore::ioRead__RVA.i"></span><span class="target" id="classCutterCore_1aaec60eba59cca49df050e7562bed8e28"></span>QByteArray <code class="descname">ioRead</code><span class="sig-paren">(</span>RVA <em>addr</em>, int <em>len</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore6ioReadE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getSeekHistoryEv">
+<span id="CutterCore::getSeekHistory"></span><span class="target" id="classCutterCore_1a329cb020284c62114721bc9c2d33e71a"></span>QList&lt;RVA&gt; <code class="descname">getSeekHistory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getSeekHistoryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getAsmPluginNamesEv">
+<span id="CutterCore::getAsmPluginNames"></span><span class="target" id="classCutterCore_1adc66d1ca7df40cd914075197efbd78e7"></span>QStringList <code class="descname">getAsmPluginNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getAsmPluginNamesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18getAnalPluginNamesEv">
+<span id="CutterCore::getAnalPluginNames"></span><span class="target" id="classCutterCore_1a1c1bc42c22e608eda37366746b7134b3"></span>QStringList <code class="descname">getAnalPluginNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18getAnalPluginNamesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getProjectNamesEv">
+<span id="CutterCore::getProjectNames"></span><span class="target" id="classCutterCore_1a9ddd1ebeeff71e919b466f923eb8382c"></span>QStringList <code class="descname">getProjectNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getProjectNamesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11openProjectERK7QString">
+<span id="CutterCore::openProject__QStringCR"></span><span class="target" id="classCutterCore_1a2af329e83508d476085300e770eef510"></span>void <code class="descname">openProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11openProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11saveProjectERK7QString">
+<span id="CutterCore::saveProject__QStringCR"></span><span class="target" id="classCutterCore_1a231c5a931b75f90e7577468fc5043f85"></span>void <code class="descname">saveProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11saveProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13deleteProjectERK7QString">
+<span id="CutterCore::deleteProject__QStringCR"></span><span class="target" id="classCutterCore_1ad3dd670fbfadd8a3e7edf28916751b86"></span>void <code class="descname">deleteProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13deleteProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore25getRBinPluginDescriptionsERK7QString">
+<span id="CutterCore::getRBinPluginDescriptions__QStringCR"></span><span class="target" id="classCutterCore_1a758797e5111cfe1be253c1b31c0ebe2d"></span>QList&lt;<a class="reference internal" href="structRBinPluginDescription.html#_CPPv221RBinPluginDescription" title="RBinPluginDescription">RBinPluginDescription</a>&gt; <code class="descname">getRBinPluginDescriptions</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>type</em> = QString()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore25getRBinPluginDescriptionsERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore24getRIOPluginDescriptionsEv">
+<span id="CutterCore::getRIOPluginDescriptions"></span><span class="target" id="classCutterCore_1a208089ddf65519934aec1c9a708e2f30"></span>QList&lt;<a class="reference internal" href="structRIOPluginDescription.html#_CPPv220RIOPluginDescription" title="RIOPluginDescription">RIOPluginDescription</a>&gt; <code class="descname">getRIOPluginDescriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore24getRIOPluginDescriptionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore26getRCorePluginDescriptionsEv">
+<span id="CutterCore::getRCorePluginDescriptions"></span><span class="target" id="classCutterCore_1a9f6ad9c01a68cf7f5fb2f2551f9b6d93"></span>QList&lt;<a class="reference internal" href="structRCorePluginDescription.html#_CPPv222RCorePluginDescription" title="RCorePluginDescription">RCorePluginDescription</a>&gt; <code class="descname">getRCorePluginDescriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore26getRCorePluginDescriptionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore25getRAsmPluginDescriptionsEv">
+<span id="CutterCore::getRAsmPluginDescriptions"></span><span class="target" id="classCutterCore_1a1c1edb42581f97232cd537326db8c6a6"></span>QList&lt;<a class="reference internal" href="structRAsmPluginDescription.html#_CPPv221RAsmPluginDescription" title="RAsmPluginDescription">RAsmPluginDescription</a>&gt; <code class="descname">getRAsmPluginDescriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore25getRAsmPluginDescriptionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getAllFunctionsEv">
+<span id="CutterCore::getAllFunctions"></span><span class="target" id="classCutterCore_1a96bf05e49b795b2705bccd2ba1e032e8"></span>QList&lt;<a class="reference internal" href="structFunctionDescription.html#_CPPv219FunctionDescription" title="FunctionDescription">FunctionDescription</a>&gt; <code class="descname">getAllFunctions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getAllFunctionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllImportsEv">
+<span id="CutterCore::getAllImports"></span><span class="target" id="classCutterCore_1a957b9783dec3e7ab66d772255d648a34"></span>QList&lt;<a class="reference internal" href="structImportDescription.html#_CPPv217ImportDescription" title="ImportDescription">ImportDescription</a>&gt; <code class="descname">getAllImports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllImportsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllExportsEv">
+<span id="CutterCore::getAllExports"></span><span class="target" id="classCutterCore_1a066e9b68443ebdd53f068501f25d2588"></span>QList&lt;<a class="reference internal" href="structExportDescription.html#_CPPv217ExportDescription" title="ExportDescription">ExportDescription</a>&gt; <code class="descname">getAllExports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllExportsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllSymbolsEv">
+<span id="CutterCore::getAllSymbols"></span><span class="target" id="classCutterCore_1a7f295341ed79d598fb6c50c254c1ea8d"></span>QList&lt;<a class="reference internal" href="structSymbolDescription.html#_CPPv217SymbolDescription" title="SymbolDescription">SymbolDescription</a>&gt; <code class="descname">getAllSymbols</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllSymbolsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllHeadersEv">
+<span id="CutterCore::getAllHeaders"></span><span class="target" id="classCutterCore_1a8a396f04fd932e79574398e1a9361c2d"></span>QList&lt;<a class="reference internal" href="structHeaderDescription.html#_CPPv217HeaderDescription" title="HeaderDescription">HeaderDescription</a>&gt; <code class="descname">getAllHeaders</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllHeadersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getAllZignaturesEv">
+<span id="CutterCore::getAllZignatures"></span><span class="target" id="classCutterCore_1a75450e74488cf69090dcbac9d1ed6535"></span>QList&lt;<a class="reference internal" href="structZignatureDescription.html#_CPPv220ZignatureDescription" title="ZignatureDescription">ZignatureDescription</a>&gt; <code class="descname">getAllZignatures</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getAllZignaturesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getAllCommentsERK7QString">
+<span id="CutterCore::getAllComments__QStringCR"></span><span class="target" id="classCutterCore_1a70ea385d53e2822dac96efb734dab671"></span>QList&lt;<a class="reference internal" href="structCommentDescription.html#_CPPv218CommentDescription" title="CommentDescription">CommentDescription</a>&gt; <code class="descname">getAllComments</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>filterType</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getAllCommentsERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getAllRelocsEv">
+<span id="CutterCore::getAllRelocs"></span><span class="target" id="classCutterCore_1ae454ab977d1cd225ccc151f7d56bf6dd"></span>QList&lt;<a class="reference internal" href="structRelocDescription.html#_CPPv216RelocDescription" title="RelocDescription">RelocDescription</a>&gt; <code class="descname">getAllRelocs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getAllRelocsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllStringsEv">
+<span id="CutterCore::getAllStrings"></span><span class="target" id="classCutterCore_1a4738fcb8aa996693fc02a5ccd22a780b"></span>QList&lt;<a class="reference internal" href="structStringDescription.html#_CPPv217StringDescription" title="StringDescription">StringDescription</a>&gt; <code class="descname">getAllStrings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllStringsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getAllFlagspacesEv">
+<span id="CutterCore::getAllFlagspaces"></span><span class="target" id="classCutterCore_1a101b40938e2cc619f4b5477b31f2773f"></span>QList&lt;<a class="reference internal" href="structFlagspaceDescription.html#_CPPv220FlagspaceDescription" title="FlagspaceDescription">FlagspaceDescription</a>&gt; <code class="descname">getAllFlagspaces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getAllFlagspacesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11getAllFlagsE7QString">
+<span id="CutterCore::getAllFlags__QString"></span><span class="target" id="classCutterCore_1adb7735bef0de86f85a9551ee0d55d93d"></span>QList&lt;<a class="reference internal" href="structFlagDescription.html#_CPPv215FlagDescription" title="FlagDescription">FlagDescription</a>&gt; <code class="descname">getAllFlags</code><span class="sig-paren">(</span>QString <em>flagspace</em> = QString()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11getAllFlagsE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getAllSectionsEv">
+<span id="CutterCore::getAllSections"></span><span class="target" id="classCutterCore_1a28c38fbc0ba963314964f0bdcfa8fd35"></span>QList&lt;<a class="reference internal" href="structSectionDescription.html#_CPPv218SectionDescription" title="SectionDescription">SectionDescription</a>&gt; <code class="descname">getAllSections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getAllSectionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getAllSegmentsEv">
+<span id="CutterCore::getAllSegments"></span><span class="target" id="classCutterCore_1a879d1613b1311db114c025e93eb0b8c9"></span>QList&lt;<a class="reference internal" href="structSegmentDescription.html#_CPPv218SegmentDescription" title="SegmentDescription">SegmentDescription</a>&gt; <code class="descname">getAllSegments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getAllSegmentsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getAllEntrypointEv">
+<span id="CutterCore::getAllEntrypoint"></span><span class="target" id="classCutterCore_1aaa8e39f584d3cb108c87ca3d8bd9401f"></span>QList&lt;<a class="reference internal" href="structEntrypointDescription.html#_CPPv221EntrypointDescription" title="EntrypointDescription">EntrypointDescription</a>&gt; <code class="descname">getAllEntrypoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getAllEntrypointEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20getAllClassesFromBinEv">
+<span id="CutterCore::getAllClassesFromBin"></span><span class="target" id="classCutterCore_1affa5290a2f75aff25f096eb9d2ccb0ed"></span>QList&lt;<a class="reference internal" href="structBinClassDescription.html#_CPPv219BinClassDescription" title="BinClassDescription">BinClassDescription</a>&gt; <code class="descname">getAllClassesFromBin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20getAllClassesFromBinEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore22getAllClassesFromFlagsEv">
+<span id="CutterCore::getAllClassesFromFlags"></span><span class="target" id="classCutterCore_1aec5db5f0e723554dfec1401e14dcd0e5"></span>QList&lt;<a class="reference internal" href="structBinClassDescription.html#_CPPv219BinClassDescription" title="BinClassDescription">BinClassDescription</a>&gt; <code class="descname">getAllClassesFromFlags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore22getAllClassesFromFlagsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getAllResourcesEv">
+<span id="CutterCore::getAllResources"></span><span class="target" id="classCutterCore_1abbf0f67dcf8dc194f0c31f1c09046ccb"></span>QList&lt;<a class="reference internal" href="structResourcesDescription.html#_CPPv220ResourcesDescription" title="ResourcesDescription">ResourcesDescription</a>&gt; <code class="descname">getAllResources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getAllResourcesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllVTablesEv">
+<span id="CutterCore::getAllVTables"></span><span class="target" id="classCutterCore_1a6dfcb6dd920343ce980f521aa80c56ec"></span>QList&lt;<a class="reference internal" href="structVTableDescription.html#_CPPv217VTableDescription" title="VTableDescription">VTableDescription</a>&gt; <code class="descname">getAllVTables</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllVTablesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11getAllTypesEv">
+<span id="CutterCore::getAllTypes"></span><span class="target" id="classCutterCore_1ad1e02c88b1b30c9132e291eefc82cb2a"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11getAllTypesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded types </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore20getAllPrimitiveTypesEv">
+<span id="CutterCore::getAllPrimitiveTypes"></span><span class="target" id="classCutterCore_1a00378406c8bd9060634056ae6ae35863"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllPrimitiveTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore20getAllPrimitiveTypesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded primitive types </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getAllUnionsEv">
+<span id="CutterCore::getAllUnions"></span><span class="target" id="classCutterCore_1a2c033859e4d77075076d4bb1b5557550"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllUnions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getAllUnionsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded unions </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore13getAllStructsEv">
+<span id="CutterCore::getAllStructs"></span><span class="target" id="classCutterCore_1a1833cea601d6cf76f5b58d640864565b"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllStructs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13getAllStructsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded structs </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11getAllEnumsEv">
+<span id="CutterCore::getAllEnums"></span><span class="target" id="classCutterCore_1add772306a73d92df58381ee54d9c0a8a"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllEnums</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11getAllEnumsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded enums </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getAllTypedefsEv">
+<span id="CutterCore::getAllTypedefs"></span><span class="target" id="classCutterCore_1a6fb7c1566370f4700ecaa0be7c409f21"></span>QList&lt;<a class="reference internal" href="structTypeDescription.html#_CPPv215TypeDescription" title="TypeDescription">TypeDescription</a>&gt; <code class="descname">getAllTypedefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getAllTypedefsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all loaded typedefs </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore10getTypeAsCE7QString7QString">
+<span id="CutterCore::getTypeAsC__QString.QString"></span><span class="target" id="classCutterCore_1a87761af8a4c92f415bac742933e50cb4"></span>QString <code class="descname">getTypeAsC</code><span class="sig-paren">(</span>QString <em>name</em>, QString <em>category</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore10getTypeAsCE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fetching the C representation of a given Type. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The type decleration as C output </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">name</span></code>: - the name or the type of the given Type / Struct </li>
+<li><code class="docutils literal"><span class="pre">category</span></code>: - the category of the given Type (Struct, Union, Enum, …) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8addTypesEPKc">
+<span id="CutterCore::addTypes__cCP"></span><span class="target" id="classCutterCore_1a0fb4a0de7478f79f5bd087b6de4bdbfb"></span>QString <code class="descname">addTypes</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8addTypesEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds new types It first uses the r_parse_c_string() function from radare2 API to parse the supplied C file (in the form of a string). If there were errors, they are displayed. If there were no errors, it uses sdb_query_lines() function from radare2 API to save the parsed types returned by r_parse_c_string() </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>returns an empty QString if there was no error, else returns the error </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">str</span></code>: Contains the definition of the data types </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8addTypesERK7QString">
+<span id="CutterCore::addTypes__QStringCR"></span><span class="target" id="classCutterCore_1a599b53d5474d2ec18b2370c5e84b6e4c"></span>QString <code class="descname">addTypes</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8addTypesERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15isAddressMappedE3RVA">
+<span id="CutterCore::isAddressMapped__RVA"></span><span class="target" id="classCutterCore_1a634f352cbd4ce8e9e03f9fe0117aa58d"></span>bool <code class="descname">isAddressMapped</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15isAddressMappedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Checks if the given address is mapped to a region. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if addr is mapped, false otherwise </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: The address to be checked </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getMemoryMapEv">
+<span id="CutterCore::getMemoryMap"></span><span class="target" id="classCutterCore_1afdab69bebbcafa06f185b82bdc8ea244"></span>QList&lt;<a class="reference internal" href="structMemoryMapDescription.html#_CPPv220MemoryMapDescription" title="MemoryMapDescription">MemoryMapDescription</a>&gt; <code class="descname">getMemoryMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getMemoryMapEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getAllSearchE7QString7QString">
+<span id="CutterCore::getAllSearch__QString.QString"></span><span class="target" id="classCutterCore_1a0df85debf3c1ae8d2a45933fe6ca49f6"></span>QList&lt;<a class="reference internal" href="structSearchDescription.html#_CPPv217SearchDescription" title="SearchDescription">SearchDescription</a>&gt; <code class="descname">getAllSearch</code><span class="sig-paren">(</span>QString <em>search_for</em>, QString <em>space</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getAllSearchE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18getBlockStatisticsEj">
+<span id="CutterCore::getBlockStatistics__unsigned-i"></span><span class="target" id="classCutterCore_1a49ad25cbe1531fdb636fbc2e672e75fc"></span><a class="reference internal" href="structBlockStatistics.html#_CPPv215BlockStatistics" title="BlockStatistics">BlockStatistics</a> <code class="descname">getBlockStatistics</code><span class="sig-paren">(</span>unsigned int <em>blocksCount</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18getBlockStatisticsEj" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getBreakpointsEv">
+<span id="CutterCore::getBreakpoints"></span><span class="target" id="classCutterCore_1a983f9086e2efe1b5332e8f4e0a14230f"></span>QList&lt;<a class="reference internal" href="structBreakpointDescription.html#_CPPv221BreakpointDescription" title="BreakpointDescription">BreakpointDescription</a>&gt; <code class="descname">getBreakpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getBreakpointsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getAllProcessesEv">
+<span id="CutterCore::getAllProcesses"></span><span class="target" id="classCutterCore_1ab0805a564ac987514b53042993534d63"></span>QList&lt;<a class="reference internal" href="structProcessDescription.html#_CPPv218ProcessDescription" title="ProcessDescription">ProcessDescription</a>&gt; <code class="descname">getAllProcesses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getAllProcessesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getRegisterRefsEv">
+<span id="CutterCore::getRegisterRefs"></span><span class="target" id="classCutterCore_1a4af2ac72fcbcb1d0ccf524af9a4cd00c"></span>QList&lt;<a class="reference internal" href="structRegisterRefDescription.html#_CPPv222RegisterRefDescription" title="RegisterRefDescription">RegisterRefDescription</a>&gt; <code class="descname">getRegisterRefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getRegisterRefsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore15getRegisterJsonEv">
+<span id="CutterCore::getRegisterJson"></span><span class="target" id="classCutterCore_1ac5261c913b97a3a6eb8cd7342254933d"></span>QJsonObject <code class="descname">getRegisterJson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getRegisterJsonEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12getVariablesE3RVA">
+<span id="CutterCore::getVariables__RVA"></span><span class="target" id="classCutterCore_1a51e9829e845674d356fce9aae5b111c6"></span>QList&lt;<a class="reference internal" href="structVariableDescription.html#_CPPv219VariableDescription" title="VariableDescription">VariableDescription</a>&gt; <code class="descname">getVariables</code><span class="sig-paren">(</span>RVA <em>at</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12getVariablesE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8getXRefsE3RVAbbRK7QString">
+<span id="CutterCore::getXRefs__RVA.b.b.QStringCR"></span><span class="target" id="classCutterCore_1a99bb908655dbf38d6a0906402b5c3f23"></span>QList&lt;<a class="reference internal" href="structXrefDescription.html#_CPPv215XrefDescription" title="XrefDescription">XrefDescription</a>&gt; <code class="descname">getXRefs</code><span class="sig-paren">(</span>RVA <em>addr</em>, bool <em>to</em>, bool <em>whole_function</em>, <em class="property">const</em> QString &amp;<em>filterType</em> = QString()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getXRefsE3RVAbbRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16parseStringsJsonERK13QJsonDocument">
+<span id="CutterCore::parseStringsJson__QJsonDocumentCR"></span><span class="target" id="classCutterCore_1a47ad77dc20fad14a11d9d484d1fc8605"></span>QList&lt;<a class="reference internal" href="structStringDescription.html#_CPPv217StringDescription" title="StringDescription">StringDescription</a>&gt; <code class="descname">parseStringsJson</code><span class="sig-paren">(</span><em class="property">const</em> QJsonDocument &amp;<em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16parseStringsJsonERK13QJsonDocument" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12handleREventEiPv">
+<span id="CutterCore::handleREvent__i.voidP"></span><span class="target" id="classCutterCore_1a0819ac5dbc165aa460fcf9430c30fd1b"></span>void <code class="descname">handleREvent</code><span class="sig-paren">(</span>int <em>type</em>, void *<em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12handleREventEiPv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18triggerVarsChangedEv">
+<span id="CutterCore::triggerVarsChanged"></span><span class="target" id="classCutterCore_1a8086bca702fe743de684d0478aed4b4f"></span>void <code class="descname">triggerVarsChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18triggerVarsChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString">
+<span id="CutterCore::triggerFunctionRenamed__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a19705a3a660bbf5107055bef400ee1e4"></span>void <code class="descname">triggerFunctionRenamed</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>prevName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17triggerRefreshAllEv">
+<span id="CutterCore::triggerRefreshAll"></span><span class="target" id="classCutterCore_1a3c439871e53b3f8370af03c0045ee381"></span>void <code class="descname">triggerRefreshAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17triggerRefreshAllEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore24triggerAsmOptionsChangedEv">
+<span id="CutterCore::triggerAsmOptionsChanged"></span><span class="target" id="classCutterCore_1ad8bdfefa43056e9388db54acf065d185"></span>void <code class="descname">triggerAsmOptionsChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore24triggerAsmOptionsChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore26triggerGraphOptionsChangedEv">
+<span id="CutterCore::triggerGraphOptionsChanged"></span><span class="target" id="classCutterCore_1afbb8ba5b0a20863b766794de41055213"></span>void <code class="descname">triggerGraphOptionsChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore26triggerGraphOptionsChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore7messageERK7QStringb">
+<span id="CutterCore::message__QStringCR.b"></span><span class="target" id="classCutterCore_1a27f6d66a815ff17de83527d8ac52f3b0"></span>void <code class="descname">message</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>msg</em>, bool <em>debug</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7messageERK7QStringb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore14getSectionListEv">
+<span id="CutterCore::getSectionList"></span><span class="target" id="classCutterCore_1a413a08d06b4362fc5cac037c77d67f1d"></span>QStringList <code class="descname">getSectionList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14getSectionListEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10CutterCore4coreEv">
+<span id="CutterCore::coreC"></span><span class="target" id="classCutterCore_1aed8b03f38104e0d29a1df46eaf84406a"></span><a class="reference internal" href="classRCoreLocked.html#_CPPv211RCoreLocked" title="RCoreLocked">RCoreLocked</a> <code class="descname">core</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10CutterCore4coreEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16getBBHighlighterEv">
+<span id="CutterCore::getBBHighlighter"></span><span class="target" id="classCutterCore_1ac42df8c19bd459e504eb763f49e6ad12"></span><a class="reference internal" href="../common/classBasicBlockHighlighter.html#_CPPv221BasicBlockHighlighter" title="BasicBlockHighlighter">BasicBlockHighlighter</a> *<code class="descname">getBBHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16getBBHighlighterEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10CutterCore18currentlyDebuggingE">
+<span id="CutterCore::currentlyDebugging__b"></span><span class="target" id="classCutterCore_1abaddd4475f951e250f393b0888e6a899"></span>bool <code class="descname">currentlyDebugging</code> = false<a class="headerlink" href="#_CPPv2N10CutterCore18currentlyDebuggingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10CutterCore18currentlyEmulatingE">
+<span id="CutterCore::currentlyEmulating__b"></span><span class="target" id="classCutterCore_1a5e6f944293b9b825fb41a2edaff34374"></span>bool <code class="descname">currentlyEmulating</code> = false<a class="headerlink" href="#_CPPv2N10CutterCore18currentlyEmulatingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10CutterCore22currentlyAttachedToPIDE">
+<span id="CutterCore::currentlyAttachedToPID__i"></span><span class="target" id="classCutterCore_1aac35b9962ee324308a5fa70c2ac76210"></span>int <code class="descname">currentlyAttachedToPID</code> = -1<a class="headerlink" href="#_CPPv2N10CutterCore22currentlyAttachedToPIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10CutterCore17currentlyOpenFileE">
+<span id="CutterCore::currentlyOpenFile__QString"></span><span class="target" id="classCutterCore_1aacf000b939e439f1f8800a480cd2a6f8"></span>QString <code class="descname">currentlyOpenFile</code><a class="headerlink" href="#_CPPv2N10CutterCore17currentlyOpenFileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10CutterCore7opcodesE">
+<span id="CutterCore::opcodes__QList:QString:"></span><span class="target" id="classCutterCore_1a69d170221542208df6ace76ec54f9251"></span>QList&lt;QString&gt; <code class="descname">opcodes</code><a class="headerlink" href="#_CPPv2N10CutterCore7opcodesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10CutterCore4regsE">
+<span id="CutterCore::regs__QList:QString:"></span><span class="target" id="classCutterCore_1a6fa7f216e5e7fc36806b76cfc34f5e02"></span>QList&lt;QString&gt; <code class="descname">regs</code><a class="headerlink" href="#_CPPv2N10CutterCore4regsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Signal</p>
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a9fbc117a8485ba6b5e03fefd9a748bca"></span><em class="property">signal </em><code class="descname">CutterCore::refreshAll</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1af6f9f37358f15f6ee9dde5a58315c121"></span><em class="property">signal </em><code class="descname">CutterCore::functionRenamed</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1ae66d3c8b82ab5ef7dccfdc26d4cae635"></span><em class="property">signal </em><code class="descname">CutterCore::varsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a6d9184847568925d1a0b7fe45cf453ed"></span><em class="property">signal </em><code class="descname">CutterCore::functionsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1abc19d15e89963b64677127ae2607d83c"></span><em class="property">signal </em><code class="descname">CutterCore::flagsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1aca275e0baf01b195bad49e16d38855a5"></span><em class="property">signal </em><code class="descname">CutterCore::commentsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a4eca1d941b79ddabaa098cf0703fb7c9"></span><em class="property">signal </em><code class="descname">CutterCore::registersChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a0c6a69d3b001639b19203dd749793413"></span><em class="property">signal </em><code class="descname">CutterCore::instructionChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1ae2b1e4b9742718a7ee4e69bc4d6df2c6"></span><em class="property">signal </em><code class="descname">CutterCore::breakpointsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1afb90cd6b0ebf01e58d1ec38ad0288330"></span><em class="property">signal </em><code class="descname">CutterCore::refreshCodeViews</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a11f21b236075cb8134fe073849bf988e"></span><em class="property">signal </em><code class="descname">CutterCore::stackChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1aa503a831a82549ac1274104262b4f9da"></span><em class="property">signal </em><code class="descname">CutterCore::classNew</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a1b9ca8f63811d1cb5ff26e1665182110"></span><em class="property">signal </em><code class="descname">CutterCore::classDeleted</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1aafefd2741dfee722afa86b48b51382e9"></span><em class="property">signal </em><code class="descname">CutterCore::classRenamed</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a84494d29f96363a132751aba807486fd"></span><em class="property">signal </em><code class="descname">CutterCore::classAttrsChanged</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a28a27b9e2da990afbe19abb73db893aa"></span><em class="property">signal </em><code class="descname">CutterCore::projectSaved</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a25c33e9136e91328ac771cc4adc91372"></span><em class="property">signal </em><code class="descname">CutterCore::asmOptionsChanged</code></dt>
+<dd><p>emitted when config regarding disassembly display changes </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a4a93f1897a1dc1c029214aeb4b9b55a8"></span><em class="property">signal </em><code class="descname">CutterCore::graphOptionsChanged</code></dt>
+<dd><p>emitted when config regarding graph display changes </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a410eb12ecd85b1190abe5d806ab9affb"></span><em class="property">signal </em><code class="descname">CutterCore::seekChanged</code></dt>
+<dd><p>seekChanged is emitted each time radare2 seek value is modified </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">offset</span></code>: </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1ad1ca7d72ec7fea5f4e327dc048ca50a3"></span><em class="property">signal </em><code class="descname">CutterCore::changeDefinedView</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a425fcfbb5c27a5e16a5d4327df29742c"></span><em class="property">signal </em><code class="descname">CutterCore::changeDebugView</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a4ff501f005aab6d4c1f084b8604529a1"></span><em class="property">signal </em><code class="descname">CutterCore::newMessage</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a3920ee9f6f8728296e9f08fb0dc7af7a"></span><em class="property">signal </em><code class="descname">CutterCore::newDebugMessage</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a884a31fe900c42ad07d8774dee584e49"></span><em class="property">signal </em><code class="descname">CutterCore::showMemoryWidgetRequested</code></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8instanceEv">
+<span id="CutterCore::instance"></span><span class="target" id="classCutterCore_1a480169ace82b2e505ae4f3a033cb7b02"></span><a class="reference internal" href="#_CPPv210CutterCore" title="CutterCore">CutterCore</a> *<code class="descname">instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8instanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore24sanitizeStringForCommandE7QString">
+<span id="CutterCore::sanitizeStringForCommand__QString"></span><span class="target" id="classCutterCore_1afc193106d7d5a249b60f12405d5f66e4"></span>QString <code class="descname">sanitizeStringForCommand</code><span class="sig-paren">(</span>QString <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore24sanitizeStringForCommandE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16hexStringToBytesERK7QString">
+<span id="CutterCore::hexStringToBytes__QStringCR"></span><span class="target" id="classCutterCore_1aea3ae54a97da7bfd7813527b08addca3"></span>QByteArray <code class="descname">hexStringToBytes</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>hex</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16hexStringToBytesERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16bytesToHexStringERK10QByteArray">
+<span id="CutterCore::bytesToHexString__QByteArrayCR"></span><span class="target" id="classCutterCore_1a46158a8b74ccb32e0aef17069ddbf6cc"></span>QString <code class="descname">bytesToHexString</code><span class="sig-paren">(</span><em class="property">const</em> QByteArray &amp;<em>bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16bytesToHexStringERK10QByteArray" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore18isProjectNameValidERK7QString">
+<span id="CutterCore::isProjectNameValid__QStringCR"></span><span class="target" id="classCutterCore_1abe2d6f7e2f97454dac67a810f00d7136"></span>bool <code class="descname">isProjectNameValid</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore18isProjectNameValidERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore16ansiEscapeToHtmlERK7QString">
+<span id="CutterCore::ansiEscapeToHtml__QStringCR"></span><span class="target" id="classCutterCore_1a4dcba1b91fb53d5287c4d4fe652483f3"></span>QString <code class="descname">ansiEscapeToHtml</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore16ansiEscapeToHtmlERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classMainWindow.html" class="btn btn-neutral float-right" title="MainWindow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../corelist.html" class="btn btn-neutral" title="Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

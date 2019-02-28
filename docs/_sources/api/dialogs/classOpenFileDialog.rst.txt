@@ -1,0 +1,4 @@
+OpenFileDialog
+==============
+
+.. doxygenclass:: OpenFileDialog

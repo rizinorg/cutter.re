@@ -1,0 +1,4 @@
+AnalBaseClassDescription
+========================
+
+.. doxygenstruct:: AnalBaseClassDescription

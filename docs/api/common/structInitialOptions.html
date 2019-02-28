@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>InitialOptions &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Common" href="../commonlist.html"/>
+        <link rel="next" title="MdHighlighter::HighlightingRule" href="structMdHighlighter_1_1HighlightingRule.html"/>
+        <link rel="prev" title="Highlighter::HighlightingRule" href="structHighlighter_1_1HighlightingRule.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../commonlist.html">Common</a> &raquo;</li>
+        
+      <li>InitialOptions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/common/structInitialOptions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="initialoptions">
+<h1>InitialOptions<a class="headerlink" href="#initialoptions" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv214InitialOptions">
+<span id="InitialOptions"></span><span class="target" id="structInitialOptions"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">InitialOptions</code><a class="headerlink" href="#_CPPv214InitialOptions" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N14InitialOptions10EndiannessE">
+<span id="InitialOptions::Endianness"></span><span class="target" id="structInitialOptions_1a492ba472d08889bbd97e814edb1208c2"></span><em class="property">enum </em><code class="descname">Endianness</code><a class="headerlink" href="#_CPPv2N14InitialOptions10EndiannessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14InitialOptions4AutoE">
+<span class="target" id="structInitialOptions_1a492ba472d08889bbd97e814edb1208c2a06b9281e396db002010bde1de57262eb"></span><code class="descname">Auto</code><a class="headerlink" href="#_CPPv2N14InitialOptions4AutoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14InitialOptions6LittleE">
+<span class="target" id="structInitialOptions_1a492ba472d08889bbd97e814edb1208c2a0f9197b3e286a7522984831949087332"></span><code class="descname">Little</code><a class="headerlink" href="#_CPPv2N14InitialOptions6LittleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14InitialOptions3BigE">
+<span class="target" id="structInitialOptions_1a492ba472d08889bbd97e814edb1208c2ad491538da818a2ba11a3195ba035cfd3"></span><code class="descname">Big</code><a class="headerlink" href="#_CPPv2N14InitialOptions3BigE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions8filenameE">
+<span id="InitialOptions::filename__QString"></span><span class="target" id="structInitialOptions_1ae8464fc9bfb25e399b3065a0296e4209"></span>QString <code class="descname">filename</code><a class="headerlink" href="#_CPPv2N14InitialOptions8filenameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions5useVAE">
+<span id="InitialOptions::useVA__b"></span><span class="target" id="structInitialOptions_1ad3a77838a75f91a285f9aafe42af05f2"></span>bool <code class="descname">useVA</code> = true<a class="headerlink" href="#_CPPv2N14InitialOptions5useVAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions11binLoadAddrE">
+<span id="InitialOptions::binLoadAddr__RVA"></span><span class="target" id="structInitialOptions_1aee2a89d3a6bbab1027728419bf3b0b76"></span>RVA <code class="descname">binLoadAddr</code> = RVA_INVALID<a class="headerlink" href="#_CPPv2N14InitialOptions11binLoadAddrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions7mapAddrE">
+<span id="InitialOptions::mapAddr__RVA"></span><span class="target" id="structInitialOptions_1a709ed990bb937cdb8a4d9f4e6ff6a557"></span>RVA <code class="descname">mapAddr</code> = RVA_INVALID<a class="headerlink" href="#_CPPv2N14InitialOptions7mapAddrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions4archE">
+<span id="InitialOptions::arch__QString"></span><span class="target" id="structInitialOptions_1a860cba92835ff67ac5c3f81da65ad4d0"></span>QString <code class="descname">arch</code><a class="headerlink" href="#_CPPv2N14InitialOptions4archE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions3cpuE">
+<span id="InitialOptions::cpu__QString"></span><span class="target" id="structInitialOptions_1a62b37370337513856a859d34436bfb9f"></span>QString <code class="descname">cpu</code><a class="headerlink" href="#_CPPv2N14InitialOptions3cpuE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions4bitsE">
+<span id="InitialOptions::bits__i"></span><span class="target" id="structInitialOptions_1a4228d1028881128064df2a2bda6a6485"></span>int <code class="descname">bits</code> = 0<a class="headerlink" href="#_CPPv2N14InitialOptions4bitsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions2osE">
+<span id="InitialOptions::os__QString"></span><span class="target" id="structInitialOptions_1a8a555c43feda2ae3bd0a1d6d5f187307"></span>QString <code class="descname">os</code><a class="headerlink" href="#_CPPv2N14InitialOptions2osE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions6endianE">
+<span id="InitialOptions::endian__Endianness"></span><span class="target" id="structInitialOptions_1aa7ce9b7df75fd8be1c3f33e3dc2c2333"></span><a class="reference internal" href="#_CPPv2N14InitialOptions10EndiannessE" title="InitialOptions::Endianness">Endianness</a> <code class="descname">endian</code><a class="headerlink" href="#_CPPv2N14InitialOptions6endianE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions12writeEnabledE">
+<span id="InitialOptions::writeEnabled__b"></span><span class="target" id="structInitialOptions_1a4e77258f581ccbafc793af8fde0b4fbe"></span>bool <code class="descname">writeEnabled</code> = false<a class="headerlink" href="#_CPPv2N14InitialOptions12writeEnabledE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions11loadBinInfoE">
+<span id="InitialOptions::loadBinInfo__b"></span><span class="target" id="structInitialOptions_1af0231af423a0afefc567fad07dad1fb5"></span>bool <code class="descname">loadBinInfo</code> = true<a class="headerlink" href="#_CPPv2N14InitialOptions11loadBinInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions14forceBinPluginE">
+<span id="InitialOptions::forceBinPlugin__QString"></span><span class="target" id="structInitialOptions_1a4907a9e5b7e43d50ebe6fc6fef857b1f"></span>QString <code class="descname">forceBinPlugin</code><a class="headerlink" href="#_CPPv2N14InitialOptions14forceBinPluginE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions8demangleE">
+<span id="InitialOptions::demangle__b"></span><span class="target" id="structInitialOptions_1acaa675dc27357abaefbfa547772f185d"></span>bool <code class="descname">demangle</code> = true<a class="headerlink" href="#_CPPv2N14InitialOptions8demangleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions7pdbFileE">
+<span id="InitialOptions::pdbFile__QString"></span><span class="target" id="structInitialOptions_1ad623d52d524968ec682ecbab08ea226c"></span>QString <code class="descname">pdbFile</code><a class="headerlink" href="#_CPPv2N14InitialOptions7pdbFileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions6scriptE">
+<span id="InitialOptions::script__QString"></span><span class="target" id="structInitialOptions_1acbdf9b779f719b0fa2802760ed57c683"></span>QString <code class="descname">script</code><a class="headerlink" href="#_CPPv2N14InitialOptions6scriptE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions7analCmdE">
+<span id="InitialOptions::analCmd__QList:CommandDescription:"></span><span class="target" id="structInitialOptions_1aa6d3018f05ae106a1a62f31d52e5e5ae"></span>QList&lt;<a class="reference internal" href="structCommandDescription.html#_CPPv218CommandDescription" title="CommandDescription">CommandDescription</a>&gt; <code class="descname">analCmd</code> = { {&quot;aaa&quot;, &quot;Auto analysis&quot;} }<a class="headerlink" href="#_CPPv2N14InitialOptions7analCmdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14InitialOptions9shellcodeE">
+<span id="InitialOptions::shellcode__QString"></span><span class="target" id="structInitialOptions_1a567d7e4282a7bc54c7f27e42c45df88e"></span>QString <code class="descname">shellcode</code><a class="headerlink" href="#_CPPv2N14InitialOptions9shellcodeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="structMdHighlighter_1_1HighlightingRule.html" class="btn btn-neutral float-right" title="MdHighlighter::HighlightingRule" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="structHighlighter_1_1HighlightingRule.html" class="btn btn-neutral" title="Highlighter::HighlightingRule" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

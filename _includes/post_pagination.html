@@ -1,0 +1,10 @@
+<nav class="page-pagination d-flex cutter blog-spacing">
+    <ul class="pagination justify-content-between">
+    {% if page.previous.url %}
+    <li class=" page-item cutter"><a class="page-link prev" href="{{ page.previous.url }}">Prev</a></li>
+    {% endif %}
+    {% if page.next.url %}
+    <li class=" page-item cutter"><a class="page-link next" href="{{ page.next.url }}">Next</a></li>
+    {% endif %}
+    </ul>
+</nav>

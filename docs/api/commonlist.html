@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../index.html"/>
+        <link rel="up" title="API Reference" href="../api.html"/>
+        <link rel="next" title="AnalTask" href="common/classAnalTask.html"/>
+        <link rel="prev" title="API Reference" href="../api.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Common</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="common/classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="common/structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Reference</a> &raquo;</li>
+        
+      <li>Common</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/commonlist.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common">
+<h1>Common<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common/classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classColors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classConfiguration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classR2Task.html">R2Task</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structMetrics.html">Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common/structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="common/classAnalTask.html" class="btn btn-neutral float-right" title="AnalTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.html" class="btn btn-neutral" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

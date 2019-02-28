@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contributing &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Cutter  documentation" href="index.html"/>
+        <link rel="next" title="Plugins" href="plugins.html"/>
+        <link rel="prev" title="Common errors" href="common-errors.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#coding-advices">Coding advices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cuttercore-class">CutterCore class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calling-a-radare2-command">Calling a radare2 command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seek-the-current-file">Seek the current file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-widget">Creating a widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#general-coding-guidelines">General coding guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding style</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#includes">Includes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docstrings">Docstrings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loops">Loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nullptr">nullptr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-signals">Connecting signals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions-documentation">Functions documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Contributing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/code.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>This page shows some hints about the coding conventions.</p>
+<div class="section" id="coding-advices">
+<h2>Coding advices<a class="headerlink" href="#coding-advices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cuttercore-class">
+<h3>CutterCore class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
+<p>This is the main class where every link with r2 is made. It is <em>unique</em>
+accross the whole process. To access it, simply call <code class="docutils literal"><span class="pre">Core()</span></code>.</p>
+<p>Example:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calling-a-radare2-command">
+<h3>Calling a radare2 command<a class="headerlink" href="#calling-a-radare2-command" title="Permalink to this headline">¶</a></h3>
+<p>There are two ways to do it: * <code class="docutils literal"><span class="pre">CutterCore::cmd()</span></code> <em>(Discouraged)</em>
+Only use it for commands which yells no output * <code class="docutils literal"><span class="pre">CutterCore::cmdj()</span></code>
+To be used with json commands like <code class="docutils literal"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
+It is way easier to parse a json output.</p>
+<p>Example:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">QJsonArray</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s2">&quot;pdj 1 @ main&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">array</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="seek-the-current-file">
+<h3>Seek the current file<a class="headerlink" href="#seek-the-current-file" title="Permalink to this headline">¶</a></h3>
+<p>To modify radare2 seek use <code class="docutils literal"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
+is important because it will emit a
+<code class="docutils literal"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
+<code class="docutils literal"><span class="pre">cmd(&quot;s</span> <span class="pre">offset&quot;)</span></code>;</p>
+<p>Example:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x00C0FFEE</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-a-widget">
+<h3>Creating a widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h3>
+<p>Make sure to connect the <code class="docutils literal"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal
+so your widget refreshes its output when radare2 seek is modified
+(switching to another function, etc.).</p>
+</div>
+</div>
+<div class="section" id="general-coding-guidelines">
+<h2>General coding guidelines<a class="headerlink" href="#general-coding-guidelines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coding-style">
+<h3>Coding style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h3>
+<p>In general, we follow <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a> to
+format the code. If in doubt, you can use <a class="reference external" href="https://sourceforge.net/projects/astyle/files/astyle/astyle%202.06/">AStyle
+2.06</a>
+to format the code. The command line for formatting the code according
+to the style is:</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">astyle</span> <span class="o">--</span><span class="n">project</span><span class="o">=</span><span class="n">src</span><span class="o">/</span><span class="n">Cutter</span><span class="o">.</span><span class="n">astylerc</span> <span class="n">src</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+<p>In contrast to the official guidelines of Qt, in Cutter we always use curly braces in conditional statements, even if the body of a conditional statement contains only one line.</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Wrong</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">address</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">())</span>
+   <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Correct</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">address</span><span class="o">.</span><span class="n">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">Wrong</span>
+<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+   <span class="n">qDebug</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Correct</span>
+<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">qDebug</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="includes">
+<h4>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h4>
+<p>Always try to include only the <strong>needed</strong> definitions inside any header file.
+The less include in a header file, the better. That is that a header file is
+meant to be included elsewhere, and we want to avoid to trigger every file
+compilation when developping because of a single change in a header file.</p>
+<p>If you only need to know that a class exists but don’t need the prototype,
+you can declare the class like this:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyClassThatExists</span><span class="p">;</span>
+
+<span class="o">/**</span> <span class="o">...</span> <span class="o">**/</span>
+
+<span class="n">private</span><span class="p">:</span>
+    <span class="n">MyClassThatExists</span> <span class="o">*</span><span class="n">classInstance</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>And then include the class header inside your .cpp so you can use that class.</p>
+<p>If you need something in the source file (.cpp) that is not a class member,
+then add the include in the source file.</p>
+<p>The includes must be ordered from local to global. That is you will first include
+any local header file (with doublequotes like <cite>#include “common/Helpers.h”</cite>.
+Then after an empty newline you can include Qt definitions like
+<cite>#include &lt;QShortcut&gt;</cite>.
+And then after when needed, include the standard C++ headers you need.</p>
+<p>Includes must be sorted by alphabetical order.</p>
+</div>
+<div class="section" id="docstrings">
+<h4>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h4>
+<p>Our API reference is generated using Doxygen, so when it comes to
+function documentation, please use the following format:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="o">/**</span>
+ <span class="o">*</span> <span class="nd">@brief</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">new</span> <span class="n">param</span> <span class="n">to</span> <span class="n">the</span> <span class="n">accumulator</span>
+ <span class="o">*/</span>
+<span class="n">virtual</span> <span class="n">void</span> <span class="n">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span> <span class="n">params</span><span class="p">)</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loops">
+<h4>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h4>
+<p>We use C++11 foreach loop style which means any “foreach” loop should
+look like:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">QJsonValue</span> <span class="n">value</span> <span class="p">:</span> <span class="n">importsArray</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">doSomething</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nullptr">
+<h4>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this headline">¶</a></h4>
+<p>Please do not use <code class="docutils literal"><span class="pre">0</span></code> nor <code class="docutils literal"><span class="pre">Q_NULLPTR</span></code>, only use <code class="docutils literal"><span class="pre">nullptr</span></code>.</p>
+<p>Example:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">QObject</span> <span class="o">*</span><span class="nb">object</span> <span class="o">=</span> <span class="n">nullptr</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connecting-signals">
+<h4>Connecting signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h4>
+<p>To connect a signal to a slot, this is the preferred way to do it:</p>
+<div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QObject</span><span class="p">::</span><span class="n">destroyed</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyObject</span><span class="p">::</span><span class="n">objectDestroyed</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The main reason is that this syntax allows the use of lambda functions.</p>
+</div>
+</div>
+<div class="section" id="functions-documentation">
+<h3>Functions documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
+<p>You can find the classes documentation in the API Reference menu item.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugins.html" class="btn btn-neutral float-right" title="Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="common-errors.html" class="btn btn-neutral" title="Common errors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

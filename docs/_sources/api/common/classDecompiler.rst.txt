@@ -1,0 +1,4 @@
+Decompiler
+==========
+
+.. doxygenclass:: Decompiler

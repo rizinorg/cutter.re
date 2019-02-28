@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="container">
+    <div class="blog-wrapper">   
+        <div class="row">
+            <div class="col-md-10 m-auto">
+            {% if page.post_image %}
+            <div class="blog-media m-b-30">
+                <img src="{{page.post_image}}" alt="{{page.title}}" />
+            </div>
+            {% endif %}
+            <div class="entry-content blog-spacing">
+             {{page.content}}
+            </div>
+            <div class="blog-share-tags blog-spacing">
+                <div class="blog-author-tags">
+                    <div class="list-inline">
+                        <div class="list-inline-item">Tags:</div> {{page | tags}}
+                    </div>
+                </div>
+                <div class="blog-author-share">
+                  {% include social_share.html %}
+                </div>
+            </div>
+            {% include author_info.html %}
+            {% include post_pagination.html %}
+            {% include latest_posts.html %}
+            <div class="comment-wrapper blog-spacing">
+                <!-- comments -->
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>

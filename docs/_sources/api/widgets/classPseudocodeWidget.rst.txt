@@ -1,0 +1,4 @@
+PseudocodeWidget
+================
+
+.. doxygenclass:: PseudocodeWidget

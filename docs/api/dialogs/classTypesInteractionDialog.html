@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TypesInteractionDialog &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Dialogs" href="../dialogslist.html"/>
+        <link rel="next" title="VersionInfoDialog" href="classVersionInfoDialog.html"/>
+        <link rel="prev" title="SetToDataDialog" href="classSetToDataDialog.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dialogslist.html">Dialogs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAboutDialog.html">AboutDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskDialog.html">AsyncTaskDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAttachProcDialog.html">AttachProcDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointsDialog.html">BreakpointsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsDialog.html">CommentsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditFunctionDialog.html">EditFunctionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditInstructionDialog.html">EditInstructionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditMethodDialog.html">EditMethodDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditVariablesDialog.html">EditVariablesDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagDialog.html">FlagDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpRangeDialog.html">HexdumpRangeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classInitialOptionsDialog.html">InitialOptionsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkTypeDialog.html">LinkTypeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classNewFileDialog.html">NewFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOpenFileDialog.html">OpenFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessBeingAnalysedProxyModel.html">ProcessBeingAnalysedProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessModel.html">ProcessModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessProxyModel.html">ProcessProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2PluginsDialog.html">R2PluginsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRenameDialog.html">RenameDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSaveProjectDialog.html">SaveProjectDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSetToDataDialog.html">SetToDataDialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TypesInteractionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVersionInfoDialog.html">VersionInfoDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classWelcomeDialog.html">WelcomeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classXrefsDialog.html">XrefsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptionsDialog_1_1AnalysisCommands.html">InitialOptionsDialog::AnalysisCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../dialogslist.html">Dialogs</a> &raquo;</li>
+        
+      <li>TypesInteractionDialog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/dialogs/classTypesInteractionDialog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="typesinteractiondialog">
+<h1>TypesInteractionDialog<a class="headerlink" href="#typesinteractiondialog" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv222TypesInteractionDialog">
+<span id="TypesInteractionDialog"></span><span class="target" id="classTypesInteractionDialog"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">TypesInteractionDialog</code><a class="headerlink" href="#_CPPv222TypesInteractionDialog" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QDialog</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N22TypesInteractionDialog22TypesInteractionDialogEP7QWidgetb">
+<span id="TypesInteractionDialog::TypesInteractionDialog__QWidgetP.b"></span><span class="target" id="classTypesInteractionDialog_1acf060e7476644dc2fb52498e7ed5c121"></span><code class="descname">TypesInteractionDialog</code><span class="sig-paren">(</span>QWidget *<em>parent</em> = nullptr, bool <em>readOnly</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N22TypesInteractionDialog22TypesInteractionDialogEP7QWidgetb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N22TypesInteractionDialogD0Ev">
+<span id="TypesInteractionDialog::~TypesInteractionDialog"></span><span class="target" id="classTypesInteractionDialog_1a307280752a73b74414a7a4b3210cd892"></span><code class="descname">~TypesInteractionDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N22TypesInteractionDialogD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N22TypesInteractionDialog12fillTextAreaE7QString">
+<span id="TypesInteractionDialog::fillTextArea__QString"></span><span class="target" id="classTypesInteractionDialog_1a7b9a6f54911e9a83ffbc2d11065b0f5a"></span>void <code class="descname">fillTextArea</code><span class="sig-paren">(</span>QString <em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N22TypesInteractionDialog12fillTextAreaE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fill the Dialog’s TextEdit object with the content passed to the function. The content will most likely be a C representation of a Type. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">content</span></code>: - The content which should be in the TextEdit object. most likely will be a C representation of a Type. </li>
+<li><code class="docutils literal"><span class="pre">readonly</span></code>: - Will be set as “true” for viewing mode </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Signal</p>
+<dl class="member">
+<dt>
+<span class="target" id="classTypesInteractionDialog_1af0bfdf1456cb50a7a1cb2615408d02bd"></span><em class="property">signal </em><code class="descname">TypesInteractionDialog::newTypesLoaded</code></dt>
+<dd><p>Emitted when new types are loaded. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classVersionInfoDialog.html" class="btn btn-neutral float-right" title="VersionInfoDialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classSetToDataDialog.html" class="btn btn-neutral" title="SetToDataDialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

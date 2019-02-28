@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DisassemblerGraphView &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Widgets" href="../widgetslist.html"/>
+        <link rel="next" title="DisassemblyLeftPanel" href="classDisassemblyLeftPanel.html"/>
+        <link rel="prev" title="DebugActions" href="classDebugActions.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointModel.html">BreakpointModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointProxyModel.html">BreakpointProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointWidget.html">BreakpointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBufferData.html">BufferData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesModel.html">ClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesSortFilterProxyModel.html">ClassesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesWidget.html">ClassesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorOptionDelegate.html">ColorOptionDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPicker.html">ColorPicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1AlphaChannelBar.html">ColorPickerHelpers::AlphaChannelBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickArea.html">ColorPickerHelpers::ColorPickArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickWidgetAbstract.html">ColorPickerHelpers::ColorPickWidgetAbstract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickerWidget.html">ColorPickerHelpers::ColorPickerWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorShowWidget.html">ColorPickerHelpers::ColorShowWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorValueBar.html">ColorPickerHelpers::ColorValueBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorSettingsModel.html">ColorSettingsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeComboBox.html">ColorThemeComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeListView.html">ColorThemeListView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classComboQuickFilterView.html">ComboQuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsModel.html">CommentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsProxyModel.html">CommentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsWidget.html">CommentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConsoleWidget.html">ConsoleWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterDockWidget.html">CutterDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeView.html">CutterTreeView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DisassemblerGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextBlockUserData.html">DisassemblyTextBlockUserData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextEdit.html">DisassemblyTextEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyWidget.html">DisassemblyWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEntrypointWidget.html">EntrypointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsModel.html">ExportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsProxyModel.html">ExportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsWidget.html">ExportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsModel.html">FlagsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsSortFilterProxyModel.html">FlagsSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsWidget.html">FlagsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphView.html">GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphWidget.html">GraphWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphvizLayout.html">GraphvizLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersModel.html">HeadersModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersProxyModel.html">HeadersProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersWidget.html">HeadersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexSelection.html">HexSelection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexWidget.html">HexWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpWidget.html">HexdumpWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapWidget.html">MemoryMapWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryProxyModel.html">MemoryProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPseudocodeWidget.html">PseudocodeWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefsWidget.html">RegisterRefsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegistersWidget.html">RegistersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsModel.html">RelocsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsProxyModel.html">RelocsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchWidget.html">SearchWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsModel.html">SectionsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsProxyModel.html">SectionsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsWidget.html">SectionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsModel.html">SegmentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsProxyModel.html">SegmentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsWidget.html">SegmentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStackWidget.html">StackWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsModel.html">StringsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsProxyModel.html">StringsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsWidget.html">StringsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsModel.html">SymbolsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsProxyModel.html">SymbolsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsWidget.html">SymbolsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classThis.html">This</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesModel.html">TypesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesSortFilterProxyModel.html">TypesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesWidget.html">TypesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableModel.html">VTableModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableSortFilterProxyModel.html">VTableSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTablesWidget.html">VTablesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVirtualAddrDock.html">VirtualAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVisualNavbar.html">VisualNavbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesModel.html">ZignaturesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesProxyModel.html">ZignaturesProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesWidget.html">ZignaturesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Token.html">DisassemblerGraphView::Token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridBlock.html">GraphGridLayout::GridBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridEdge.html">GraphGridLayout::GridEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1LayoutState.html">GraphGridLayout::LayoutState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1Point.html">GraphGridLayout::Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphBlock.html">GraphLayout::GraphBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphEdge.html">GraphLayout::GraphEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1LayoutConfig.html">GraphLayout::LayoutConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphView_1_1EdgeConfiguration.html">GraphView::EdgeConfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexCursor.html">HexCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRange.html">Range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVisualNavbar_1_1XToAddress.html">VisualNavbar::XToAddress</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
+        
+      <li>DisassemblerGraphView</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/widgets/classDisassemblerGraphView.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="disassemblergraphview">
+<h1>DisassemblerGraphView<a class="headerlink" href="#disassemblergraphview" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv221DisassemblerGraphView">
+<span id="DisassemblerGraphView"></span><span class="target" id="classDisassemblerGraphView"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">DisassemblerGraphView</code><a class="headerlink" href="#_CPPv221DisassemblerGraphView" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="classGraphView.html#classGraphView"><span class="std std-ref">GraphView</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N21DisassemblerGraphView24EdgeConfigurationMappingE">
+<span class="target" id="classDisassemblerGraphView_1a0cf9a427013377c1195f744c702d9ab9"></span><em class="property">using </em><code class="descname">EdgeConfigurationMapping</code> = std::map&lt;std::pair&lt;ut64, ut64&gt;, EdgeConfiguration&gt;<a class="headerlink" href="#_CPPv2N21DisassemblerGraphView24EdgeConfigurationMappingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView21DisassemblerGraphViewEP7QWidgetP14CutterSeekableP10MainWindow">
+<span id="DisassemblerGraphView::DisassemblerGraphView__QWidgetP.CutterSeekableP.MainWindowP"></span><span class="target" id="classDisassemblerGraphView_1afe2e380d97a939d6612a16cd734d9752"></span><code class="descname">DisassemblerGraphView</code><span class="sig-paren">(</span>QWidget *<em>parent</em>, <a class="reference internal" href="../common/classCutterSeekable.html#_CPPv214CutterSeekable" title="CutterSeekable">CutterSeekable</a> *<em>seekable</em>, <a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>mainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView21DisassemblerGraphViewEP7QWidgetP14CutterSeekableP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphViewD0Ev">
+<span id="DisassemblerGraphView::~DisassemblerGraphView"></span><span class="target" id="classDisassemblerGraphView_1a727a6a00fb88b3a207edc6fdc98b9200"></span><code class="descname">~DisassemblerGraphView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphViewD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9drawBlockER8QPainterRN9GraphView10GraphBlockE">
+<span id="DisassemblerGraphView::drawBlock__QPainterR.GraphView::GraphBlockR"></span><span class="target" id="classDisassemblerGraphView_1a88ac9c77039e3e8bbdc809caf1bb5948"></span>void <code class="descname">drawBlock</code><span class="sig-paren">(</span>QPainter &amp;<em>p</em>, <a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9drawBlockER8QPainterRN9GraphView10GraphBlockE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView12blockClickedERN9GraphView10GraphBlockEP11QMouseEvent6QPoint">
+<span id="DisassemblerGraphView::blockClicked__GraphView::GraphBlockR.QMouseEventP.QPoint"></span><span class="target" id="classDisassemblerGraphView_1a2ddf1d2a12df792d3cef14d879e386f2"></span>void <code class="descname">blockClicked</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>block</em>, QMouseEvent *<em>event</em>, QPoint <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView12blockClickedERN9GraphView10GraphBlockEP11QMouseEvent6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView18blockDoubleClickedERN9GraphView10GraphBlockEP11QMouseEvent6QPoint">
+<span id="DisassemblerGraphView::blockDoubleClicked__GraphView::GraphBlockR.QMouseEventP.QPoint"></span><span class="target" id="classDisassemblerGraphView_1a193b6f7498f30b50e70982f02ca8418d"></span>void <code class="descname">blockDoubleClicked</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>block</em>, QMouseEvent *<em>event</em>, QPoint <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView18blockDoubleClickedERN9GraphView10GraphBlockEP11QMouseEvent6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9helpEventEP10QHelpEvent">
+<span id="DisassemblerGraphView::helpEvent__QHelpEventP"></span><span class="target" id="classDisassemblerGraphView_1a7c9232c9e959c35a27bf577625c181d9"></span>bool <code class="descname">helpEvent</code><span class="sig-paren">(</span>QHelpEvent *<em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9helpEventEP10QHelpEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView14blockHelpEventERN9GraphView10GraphBlockEP10QHelpEvent6QPoint">
+<span id="DisassemblerGraphView::blockHelpEvent__GraphView::GraphBlockR.QHelpEventP.QPoint"></span><span class="target" id="classDisassemblerGraphView_1a24058440a804562f88f01f2558d277b9"></span>void <code class="descname">blockHelpEvent</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>block</em>, QHelpEvent *<em>event</em>, QPoint <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView14blockHelpEventERN9GraphView10GraphBlockEP10QHelpEvent6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView17edgeConfigurationERN9GraphView10GraphBlockEPN9GraphView10GraphBlockE">
+<span id="DisassemblerGraphView::edgeConfiguration__GraphView::GraphBlockR.GraphView::GraphBlockP"></span><span class="target" id="classDisassemblerGraphView_1ac3bb60f65b65f4ceefad38e723e9e331"></span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView17EdgeConfigurationE" title="GraphView::EdgeConfiguration">EdgeConfiguration</a> <code class="descname">edgeConfiguration</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>from</em>, <a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> *<em>to</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView17edgeConfigurationERN9GraphView10GraphBlockEPN9GraphView10GraphBlockE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView19blockTransitionedToEPN9GraphView10GraphBlockE">
+<span id="DisassemblerGraphView::blockTransitionedTo__GraphView::GraphBlockP"></span><span class="target" id="classDisassemblerGraphView_1abc364f9c08e8151f7984dd5b4e66e728"></span>void <code class="descname">blockTransitionedTo</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphView.html#_CPPv29GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="classGraphView.html#_CPPv2N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> *<em>to</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView19blockTransitionedToEPN9GraphView10GraphBlockE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView16loadCurrentGraphEv">
+<span id="DisassemblerGraphView::loadCurrentGraph"></span><span class="target" id="classDisassemblerGraphView_1ac25dd596b44245244a9bc1ca38c72ba9"></span>void <code class="descname">loadCurrentGraph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView16loadCurrentGraphEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView8getWidthEv">
+<span id="DisassemblerGraphView::getWidth"></span><span class="target" id="classDisassemblerGraphView_1aad26ca46726c52b48724777ab0c70feb"></span>int <code class="descname">getWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView8getWidthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9getHeightEv">
+<span id="DisassemblerGraphView::getHeight"></span><span class="target" id="classDisassemblerGraphView_1adfc7619fca5feb97890039ed2bf98102"></span>int <code class="descname">getHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9getHeightEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9getBlocksEv">
+<span id="DisassemblerGraphView::getBlocks"></span><span class="target" id="classDisassemblerGraphView_1aae1d8e5c582a3668574135bc519d06c6"></span>std::unordered_map&lt;ut64, GraphBlock&gt; <code class="descname">getBlocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9getBlocksEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView21getEdgeConfigurationsEv">
+<span id="DisassemblerGraphView::getEdgeConfigurations"></span><span class="target" id="classDisassemblerGraphView_1a54c5d871d10659b12ebb963c1a0d3a33"></span><a class="reference internal" href="#_CPPv221DisassemblerGraphView" title="DisassemblerGraphView">DisassemblerGraphView</a>::<a class="reference internal" href="#_CPPv2N21DisassemblerGraphView24EdgeConfigurationMappingE" title="DisassemblerGraphView::EdgeConfigurationMapping">EdgeConfigurationMapping</a> <code class="descname">getEdgeConfigurations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView21getEdgeConfigurationsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView12isGraphEmptyEv">
+<span id="DisassemblerGraphView::isGraphEmpty"></span><span class="target" id="classDisassemblerGraphView_1aed16b1961c082e1fbc96c2f24e1b2274"></span>bool <code class="descname">isGraphEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView12isGraphEmptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N21DisassemblerGraphView18disassembly_blocksE">
+<span id="DisassemblerGraphView::disassembly_blocks__std::unordered_map:ut64.DisassemblyBlock:"></span><span class="target" id="classDisassemblerGraphView_1a9db54db685b44ace8660ae36722cb9cc"></span>std::unordered_map&lt;ut64, <a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html#_CPPv2N21DisassemblerGraphView16DisassemblyBlockE" title="DisassemblerGraphView::DisassemblyBlock">DisassemblyBlock</a>&gt; <code class="descname">disassembly_blocks</code><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView18disassembly_blocksE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N21DisassemblerGraphView11windowTitleE">
+<span id="DisassemblerGraphView::windowTitle__QString"></span><span class="target" id="classDisassemblerGraphView_1a43582e027df83b38d4e1360eb69834d9"></span>QString <code class="descname">windowTitle</code><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView11windowTitleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Slots</p>
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView11refreshViewEv">
+<span id="DisassemblerGraphView::refreshView"></span><span class="target" id="classDisassemblerGraphView_1ae21edaa5dfc82a6ed6e8e000da60de89"></span>void <code class="descname">refreshView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView11refreshViewEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView17colorsUpdatedSlotEv">
+<span id="DisassemblerGraphView::colorsUpdatedSlot"></span><span class="target" id="classDisassemblerGraphView_1ad31e915087f3b05516ef7c005c364e2c"></span>void <code class="descname">colorsUpdatedSlot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView17colorsUpdatedSlotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView16fontsUpdatedSlotEv">
+<span id="DisassemblerGraphView::fontsUpdatedSlot"></span><span class="target" id="classDisassemblerGraphView_1a591d3c56d81d9f77051b230b3e075982"></span>void <code class="descname">fontsUpdatedSlot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView16fontsUpdatedSlotEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView13onSeekChangedE3RVA">
+<span id="DisassemblerGraphView::onSeekChanged__RVA"></span><span class="target" id="classDisassemblerGraphView_1a9cbe921afd79618599a290cde0792d68"></span>void <code class="descname">onSeekChanged</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView13onSeekChangedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView4zoomE7QPointFd">
+<span id="DisassemblerGraphView::zoom__QPointF.double"></span><span class="target" id="classDisassemblerGraphView_1ab9a46a9ef25852942c463928f6d32cf6"></span>void <code class="descname">zoom</code><span class="sig-paren">(</span>QPointF <em>mouseRelativePos</em>, double <em>velocity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView4zoomE7QPointFd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9zoomResetEv">
+<span id="DisassemblerGraphView::zoomReset"></span><span class="target" id="classDisassemblerGraphView_1ac54c74534e23822426ab9683ecbbc17d"></span>void <code class="descname">zoomReset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9zoomResetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView8takeTrueEv">
+<span id="DisassemblerGraphView::takeTrue"></span><span class="target" id="classDisassemblerGraphView_1ad17aca72b9938eb9005b65defdc508f4"></span>void <code class="descname">takeTrue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView8takeTrueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9takeFalseEv">
+<span id="DisassemblerGraphView::takeFalse"></span><span class="target" id="classDisassemblerGraphView_1ab0f28effd842fea6ae6f985703983eb0"></span>void <code class="descname">takeFalse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9takeFalseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9nextInstrEv">
+<span id="DisassemblerGraphView::nextInstr"></span><span class="target" id="classDisassemblerGraphView_1acb5355b3a608f40f80bab3b19557802d"></span>void <code class="descname">nextInstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9nextInstrEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView9prevInstrEv">
+<span id="DisassemblerGraphView::prevInstr"></span><span class="target" id="classDisassemblerGraphView_1a892d4d005a018fe7883e55bb36204c66"></span>void <code class="descname">prevInstr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView9prevInstrEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21DisassemblerGraphView13copySelectionEv">
+<span id="DisassemblerGraphView::copySelection"></span><span class="target" id="classDisassemblerGraphView_1ac3f43f27369d9e6dd6b0d1d3a9416475"></span>void <code class="descname">copySelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21DisassemblerGraphView13copySelectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Signal</p>
+<dl class="member">
+<dt>
+<span class="target" id="classDisassemblerGraphView_1aaf70783d7def5ec31db7247c3143e36b"></span><em class="property">signal </em><code class="descname">DisassemblerGraphView::viewRefreshed</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classDisassemblerGraphView_1a2574000207225b3edc1906fbd48a21bc"></span><em class="property">signal </em><code class="descname">DisassemblerGraphView::viewZoomed</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classDisassemblerGraphView_1ac85f6f5b4d43296b7c2c91be6f8f4878"></span><em class="property">signal </em><code class="descname">DisassemblerGraphView::graphMoved</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classDisassemblerGraphView_1acf054ae6732fe4c3e257f78241143ec0"></span><em class="property">signal </em><code class="descname">DisassemblerGraphView::resized</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classDisassemblerGraphView_1a7f89d46ac2cb8d53294fd6a062656573"></span><em class="property">signal </em><code class="descname">DisassemblerGraphView::nameChanged</code></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classDisassemblyLeftPanel.html" class="btn btn-neutral float-right" title="DisassemblyLeftPanel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classDebugActions.html" class="btn btn-neutral" title="DebugActions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

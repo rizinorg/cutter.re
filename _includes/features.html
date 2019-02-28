@@ -1,0 +1,27 @@
+<section class="service-area p-b-100 p-t-100 bg-color2 white-text" id="features">
+<div class="cutter-ani">
+    <img src="{{site.baseurl}}/assets/images/cutter-ani1.png" alt="animated shape" class="shape-one" />
+    <img src="{{site.baseurl}}/assets/images/cutter-ani2.png" alt="animated shape" class="shape-two" />
+    <img src="{{site.baseurl}}/assets/images/cutter-ani3.png" alt="animated shape" class="shape-tree" />
+</div>
+<div class="container">
+    <div class="service-wrapper">
+        <div class="row">
+          {% for feature in site.data.features %}
+            <div class="col-md-4">
+            <div class="service-box" data-aos="fade-up">
+                <div class="service-logo"><i class="fas fa-5x fa-{{feature.icon}} icon-glow"></i></div>
+                <div class="service-content">
+                    <h4 class="heading-4 white-text">{{feature.title}}</h4>
+                    <p class="font-color5">{{feature.description}}</p>
+                    {% assign even = forloop.index | modulo: 2 %}
+                    {% assign odd = forloop.index | modulo: 3 %}
+                    <div class="service-line {% if forloop.first %} line-color1 {% elsif odd == 0 %} line-color2 {% elsif even == 0 %} line-color3 {% else %} line-color1 {% endif %}"></div>
+                </div>
+            </div>
+            </div>
+           {% endfor %}
+        </div>
+    </div>
+</div>
+</section>

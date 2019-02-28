@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RichTextPainter &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Common" href="../commonlist.html"/>
+        <link rel="next" title="RunScriptTask" href="classRunScriptTask.html"/>
+        <link rel="prev" title="ReplacingRefreshDeferrerAccumulator" href="classReplacingRefreshDeferrerAccumulator.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode.html">DecompiledCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../commonlist.html">Common</a> &raquo;</li>
+        
+      <li>RichTextPainter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/common/classRichTextPainter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="richtextpainter">
+<h1>RichTextPainter<a class="headerlink" href="#richtextpainter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv215RichTextPainter">
+<span id="RichTextPainter"></span><span class="target" id="classRichTextPainter"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">RichTextPainter</code><a class="headerlink" href="#_CPPv215RichTextPainter" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N15RichTextPainter19CustomRichTextFlagsE">
+<span id="RichTextPainter::CustomRichTextFlags"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4"></span><em class="property">enum </em><code class="descname">CustomRichTextFlags</code><a class="headerlink" href="#_CPPv2N15RichTextPainter19CustomRichTextFlagsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N15RichTextPainter8FlagNoneE">
+<span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4a0da65c6df0a9af219b7522bb599613cc"></span><code class="descname">FlagNone</code><a class="headerlink" href="#_CPPv2N15RichTextPainter8FlagNoneE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15RichTextPainter9FlagColorE">
+<span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4a2e014095b0c433524d2aaef5c83ddc8d"></span><code class="descname">FlagColor</code><a class="headerlink" href="#_CPPv2N15RichTextPainter9FlagColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15RichTextPainter14FlagBackgroundE">
+<span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4aaeface535b7bd29e2c337ed766afa1f0"></span><code class="descname">FlagBackground</code><a class="headerlink" href="#_CPPv2N15RichTextPainter14FlagBackgroundE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N15RichTextPainter7FlagAllE">
+<span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4ac5b466d6c2df6b775a4c2019be72be86"></span><code class="descname">FlagAll</code><a class="headerlink" href="#_CPPv2N15RichTextPainter7FlagAllE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N15RichTextPainter4ListE">
+<span id="RichTextPainter::List"></span><span class="target" id="classRichTextPainter_1aacdbc30e914b6f1e5899f2bf37807780"></span><em class="property">typedef </em>std::vector&lt;<a class="reference internal" href="#_CPPv2N15RichTextPainter16CustomRichText_tE" title="RichTextPainter::CustomRichText_t">CustomRichText_t</a>&gt; <code class="descname">List</code><a class="headerlink" href="#_CPPv2N15RichTextPainter4ListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt>
+<em class="property">template </em>&lt;<em class="property">typename</em> T = qreal&gt;</dt>
+<dt>
+<span class="target" id="classRichTextPainter_1aa04cb98d8ed97c03a49671ed2ea302b7"></span><code class="descname">template void RichTextPainter::paintRichText&lt; qreal &gt;(QPainter * painter, T x, T y, T w, T h, T xinc, const List &amp; richText, CachedFontMetrics &lt; T &gt; * fontMetrics)</code></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString">
+<span id="RichTextPainter::htmlRichText__ListCR.QStringR.QStringR"></span><span class="target" id="classRichTextPainter_1a11f65e54efbd6680042591cb7310879e"></span>void <code class="descname">htmlRichText</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N15RichTextPainter4ListE" title="RichTextPainter::List">List</a> &amp;<em>richText</em>, QString &amp;<em>textHtml</em>, QString &amp;<em>textPlain</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classRichTextPainter_1a11f65e54efbd6680042591cb7310879e"><span class="std std-ref">RichTextPainter::htmlRichText</span></a> Convert rich text in x64dbg to HTML, for use by other applications. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">richText</span></code>: The rich text to be converted to HTML format </li>
+<li><code class="docutils literal"><span class="pre">textHtml</span></code>: The HTML source. Any previous content will be preserved and new content will be appended at the end. </li>
+<li><code class="docutils literal"><span class="pre">textPlain</span></code>: The plain text. Any previous content will be preserved and new content will be appended at the end. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N15RichTextPainter16fromTextDocumentERK13QTextDocument">
+<span id="RichTextPainter::fromTextDocument__QTextDocumentCR"></span><span class="target" id="classRichTextPainter_1ab4926da36627e1e1930d6d03b831e356"></span><a class="reference internal" href="#_CPPv215RichTextPainter" title="RichTextPainter">RichTextPainter</a>::<a class="reference internal" href="#_CPPv2N15RichTextPainter4ListE" title="RichTextPainter::List">List</a> <code class="descname">fromTextDocument</code><span class="sig-paren">(</span><em class="property">const</em> QTextDocument &amp;<em>doc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RichTextPainter16fromTextDocumentERK13QTextDocument" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N15RichTextPainter7croppedERK4ListiRK7QStringPb">
+<span id="RichTextPainter::cropped__ListCR.i.QStringCR.bP"></span><span class="target" id="classRichTextPainter_1ab4fa0138057dd51df041ddde3f46e4ed"></span><a class="reference internal" href="#_CPPv215RichTextPainter" title="RichTextPainter">RichTextPainter</a>::<a class="reference internal" href="#_CPPv2N15RichTextPainter4ListE" title="RichTextPainter::List">List</a> <code class="descname">cropped</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N15RichTextPainter4ListE" title="RichTextPainter::List">List</a> &amp;<em>richText</em>, int <em>maxCols</em>, <em class="property">const</em> QString &amp;<em>indicator</em> = nullptr, bool *<em>croppedOut</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RichTextPainter7croppedERK4ListiRK7QStringPb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="class">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_tE">
+<span id="RichTextPainter::CustomRichText_t"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t"></span><em class="property">struct </em><code class="descname">CustomRichText_t</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_tE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t4textE">
+<span id="RichTextPainter::CustomRichText_t::text__QString"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1ad8a5d961c173fb278ed8463f18230b9a"></span>QString <code class="descname">text</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t4textE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t9textColorE">
+<span id="RichTextPainter::CustomRichText_t::textColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a9d59424038d8b6e7cabcaad8c72a9366"></span>QColor <code class="descname">textColor</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t9textColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t14textBackgroundE">
+<span id="RichTextPainter::CustomRichText_t::textBackground__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeb28dcca29bdc1f5112de8bc7aabbc1d"></span>QColor <code class="descname">textBackground</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t14textBackgroundE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t5flagsE">
+<span id="RichTextPainter::CustomRichText_t::flags__CustomRichTextFlags"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2d036e2b389b75eb7ecd5644b2d98c71"></span><a class="reference internal" href="#_CPPv2N15RichTextPainter19CustomRichTextFlagsE" title="RichTextPainter::CustomRichTextFlags">CustomRichTextFlags</a> <code class="descname">flags</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t5flagsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t9highlightE">
+<span id="RichTextPainter::CustomRichText_t::highlight__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1afb1630c4e9dc43f266868b4c6f5e6f13"></span>bool <code class="descname">highlight</code> = false<a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t9highlightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightColorE">
+<span id="RichTextPainter::CustomRichText_t::highlightColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeec225f7a072912301ca40f9fd66e3bb"></span>QColor <code class="descname">highlightColor</code><a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t14highlightColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightWidthE">
+<span id="RichTextPainter::CustomRichText_t::highlightWidth__i"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1adf4e0dc2c577ba662eb809f480c71449"></span>int <code class="descname">highlightWidth</code> = 2<a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t14highlightWidthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N15RichTextPainter16CustomRichText_t20highlightConnectPrevE">
+<span id="RichTextPainter::CustomRichText_t::highlightConnectPrev__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2921628474cb99a5755c23fc46d47ae1"></span>bool <code class="descname">highlightConnectPrev</code> = false<a class="headerlink" href="#_CPPv2N15RichTextPainter16CustomRichText_t20highlightConnectPrevE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classRunScriptTask.html" class="btn btn-neutral float-right" title="RunScriptTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classReplacingRefreshDeferrerAccumulator.html" class="btn btn-neutral" title="ReplacingRefreshDeferrerAccumulator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="blog-area bg-color1 p-t-130 p-b-130">
+<div class="container">
+  <div class="blog-wrapper">
+    <div class="row">
+        {% for post in page.posts limit:"40" %}
+            <div class="col-md-6">
+            {% include post_content.html %}
+            </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>

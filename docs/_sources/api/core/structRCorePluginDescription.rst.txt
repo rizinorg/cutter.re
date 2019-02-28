@@ -1,0 +1,4 @@
+RCorePluginDescription
+======================
+
+.. doxygenstruct:: RCorePluginDescription
