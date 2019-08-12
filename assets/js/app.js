@@ -167,10 +167,8 @@ function getOS() {
 const getRelaseVersion = async () => {
     var url = "https://api.github.com/repos/radareorg/cutter/releases/latest";
     var urlData = await fetch(url);
-    console.log(urlData);
     var jsonData = await urlData.json();
     var tag = jsonData.tag_name;
-    console.log(tag);
     return tag;
 }
 
@@ -208,7 +206,6 @@ const setDownloadLinksForAllPlatforms = async () => {
 
 const fillCutterVersion = async() => {
     var tag = await getRelaseVersion();
-    console.log(tag);
     document.getElementById("cutterVersion").innerHTML = tag;
 }
 
