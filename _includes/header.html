@@ -1,4 +1,4 @@
-{% if page.layout == "page" or page.layout == "post" %}
+{% if page.layout == "page" or page.layout == "post" or page.layout == "page-md"%}
 
 {% assign is_page_layout = true %}
 
@@ -84,7 +84,7 @@
             </div>
         </div>
     {% endif %}
-    {% if page.layout == "page" %}
+    {% if page.layout == "page" or page.layout == "page-md"%}
     <div class="header-page-title">
       <div class="row">
         <div class="col-md-12">
