@@ -4,9 +4,10 @@
             <div class="footer-widget-wrraper">
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
-                        <a href="#" class="footer-logo"><img src="{{site.logo}}" alt="{{site.title}}" /></a>
+                        <a href="#" class="footer-logo"><img src="{{site.small_logo}}" alt="{{site.title}}" /></a>
                         <div class="footer-widget">
-                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by reverse
+                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by
+                                reverse
                                 engineers for reverse engineers </p>
                             <ul class="social-link list-inline">
                                 <li class="list-inline-item"><a href="https://www.github.com/radareorg/cutter"><i
@@ -36,15 +37,17 @@
                                         Contribute
                                     </a>
                                 </li>
-                                <li><a href="https://github.com/radareorg/cutter/issues" target="_blank"> 
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/issues" target="_blank">
                                         Report an issue
                                     </a>
                                 </li>
-                                <li><a href="https://github.com/radareorg/cutter/blob/master/COPYING" target="_blank">
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/blob/master/COPYING" target="_blank">
                                         License
                                     </a>
                                 </li>
-    
+
                             </ul>
                         </div>
                     </div>
@@ -55,17 +58,20 @@
                             </div>
                             <ul class="widget-list list-inline">
                                 <li><a href="https://cutter.re/docs/" target="_blank">Documentation</a></li>
-                                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a></li>
+                                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a>
+                                </li>
                                 <li><a href="https://radare.org" target="_blank">radare2</a></li>
                                 <li><a href="#">Help</a></li>
                             </ul>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
             <div class="footer-copyright-wrapper text-center">
-                <p>© 2019 Cutter - a <a href="https://radare.org/r/">radare.org</a> project</p>
+                <p>© {{ site.time | date: "%Y" }} Cutter - a <a href="https://radare.org/r/"
+                        target="_blank"><b>radare.org</b></a> project • Website by <a href="https://www.megabeets.net"
+                        target="_blank"><b>Megabeets</b></a> </p>
             </div>
             <a href="#" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
         </div>

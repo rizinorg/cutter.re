@@ -186,10 +186,11 @@ const getRelaseURLForPlatform = async (platform) => {
 }
 
 const setReleaseDownloadLinkForOS = async (os) => {
-
-    var downloadButton = document.getElementById("downloadBtn");
-    downloadButton.insertAdjacentHTML('afterbegin','<i class="fab fa-' + os.icon + '"></i>');
-    downloadButton.href = await getRelaseURLForPlatform(os.name);
+    if (os.icon) {
+        var downloadButton = document.getElementById("downloadBtn");
+        downloadButton.insertAdjacentHTML('afterbegin','<i class="fab fa-' + os.icon + '"></i>');
+        downloadButton.href = await getRelaseURLForPlatform(os.name);
+    }
 }
 
 const setDownloadLinksForAllPlatforms = async () => {
@@ -209,6 +210,9 @@ const fillCutterVersion = async() => {
     document.getElementById("cutterVersion").innerHTML = tag;
 }
 
-fillCutterVersion();
-setReleaseDownloadLinkForOS(getOS());
-setDownloadLinksForAllPlatforms();
+// run only on main page
+if (document.location.pathname.length < 2) {
+    fillCutterVersion();
+    setReleaseDownloadLinkForOS(getOS());
+    setDownloadLinksForAllPlatforms();
+}
