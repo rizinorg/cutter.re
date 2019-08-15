@@ -873,8 +873,10 @@ input[type='submit'] {
 		margin:auto auto $inner-30;
 		padding:21px 5px;
 		transition:$transition-base;
+		height: 250px;
 		img {
 			width: 90%;
+			max-height: 100%;
 		}
 	}
 	&:after{
