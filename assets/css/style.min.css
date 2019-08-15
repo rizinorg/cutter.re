@@ -28,7 +28,7 @@ TABLE INDEX
 13. Price Plan  Area
 14. Blog Area
 15. Sidebar Area
-16. Newsletter Area
+16. community Area
 17. Footer Area
 ===========================
 */
@@ -2486,35 +2486,35 @@ input[type='submit'] {
 
 /* ==============================================
 
-16. Newsletter Area
+16. community Area
 
 ============================================== */
-.newsletter-form {
+.community-form {
   -webkit-box-shadow: 0 0 10px 0 rgba(25, 100, 227, 0.1);
           box-shadow: 0 0 10px 0 rgba(25, 100, 227, 0.1);
   padding: 40px;
   background-color: #ffffff;
   border-radius: 5px; }
   @media (min-width: 768px) and (max-width: 992px) {
-    .newsletter-form {
+    .community-form {
       padding: 30px; } }
   @media (max-width: 768px) {
-    .newsletter-form {
+    .community-form {
       padding: 30px; } }
 
-.newsletter-img img {
+.community-img img {
   max-width: 600px; }
   @media (min-width: 768px) and (max-width: 992px) {
-    .newsletter-img img {
+    .community-img img {
       max-width: 400px; } }
   @media (min-width: 992px) and (max-width: 1200px) {
-    .newsletter-img img {
+    .community-img img {
       max-width: 500px; } }
   @media (min-width: 768px) and (max-width: 992px) {
-    .newsletter-img img {
+    .community-img img {
       max-width: 400px; } }
   @media (max-width: 768px) {
-    .newsletter-img img {
+    .community-img img {
       max-width: 100%;
       margin-bottom: 30px; } }
 

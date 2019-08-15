@@ -34,7 +34,7 @@ TABLE INDEX
 13. Price Plan  Area
 14. Blog Area
 15. Sidebar Area
-16. Newsletter Area
+16. community Area
 17. Footer Area
 18. Text Generic
 ===========================
@@ -2221,10 +2221,10 @@ button{
 }
 /* ==============================================
 
-16. Newsletter Area
+16. community Area
 
 ============================================== */
-.newsletter-form{
+.community-form{
 	box-shadow:$box-shadow-deep;
 	padding:$inner-40;
 	background-color:$bg-color1;
@@ -2236,7 +2236,7 @@ button{
 	    padding:$inner-30;
 	}
 }
-.newsletter-img{
+.community-img{
    img{
 	   max-width:600px;
       @include laptop{
