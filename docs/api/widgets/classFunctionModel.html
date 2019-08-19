@@ -166,6 +166,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -218,6 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
@@ -312,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv213FunctionModel">
 <span id="FunctionModel"></span><span class="target" id="classFunctionModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">FunctionModel</code><a class="headerlink" href="#_CPPv213FunctionModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractItemModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt;&gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -386,32 +388,32 @@
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel5indexEiiRK11QModelIndex">
-<span id="FunctionModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a8238bc05c0c356f978d543c9027c73b4"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classFunctionModel_1aaa715e9b94c5020fe25a2da7bd1ee268"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel6parentERK11QModelIndex">
-<span id="FunctionModel::parent__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1af32b92bade79fa717059f4ab2c51100a"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::parent__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a54f487e7e358358eb3b9cb98329ecea3"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel8rowCountERK11QModelIndex">
-<span id="FunctionModel::rowCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1ab75b9175ea696c71d54705cae46c4376"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::rowCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a3a3aba5bd85749e13c11569a34d9f469"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel11columnCountERK11QModelIndex">
-<span id="FunctionModel::columnCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a9562393cfa4ec2c59cbfb45560c10bbe"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::columnCount__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a80e3e076e586b4c21d0ec4c0d9f5a206"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel4dataERK11QModelIndexi">
-<span id="FunctionModel::data__QModelIndexCR.iC"></span><span class="target" id="classFunctionModel_1a95d205b3f732f7733f8172e8e22f80b5"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::data__QModelIndexCR.iC"></span><span class="target" id="classFunctionModel_1aa55cd8cd1cc8a6440af2c6b5f6293e5a"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13FunctionModel10headerDataEiN2Qt11OrientationEi">
-<span id="FunctionModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classFunctionModel_1a6570164927b5ab4c7325bbd9cd2b2685"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="FunctionModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classFunctionModel_1aed06c29a5737974a3fd4bf1782daeb79"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -433,6 +435,27 @@
 <dt id="_CPPv2N13FunctionModel8isNestedEv">
 <span id="FunctionModel::isNested"></span><span class="target" id="classFunctionModel_1ae5e06eeb1aa72df50fdc892f9af5e04a"></span>bool <code class="descname">isNested</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13FunctionModel8isNestedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel7addressERK11QModelIndex">
+<span id="FunctionModel::address__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1a86088f0ccc120b1930ef580bea4affc2"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13FunctionModel4nameERK11QModelIndex">
+<span id="FunctionModel::name__QModelIndexCRC"></span><span class="target" id="classFunctionModel_1ac27be29f5b2fcefa729896c3d3cc97a0"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13FunctionModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name for item, optional. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">

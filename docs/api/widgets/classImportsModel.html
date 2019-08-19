@@ -166,6 +166,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -218,6 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
@@ -312,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv212ImportsModel">
 <span id="ImportsModel"></span><span class="target" id="classImportsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ImportsModel</code><a class="headerlink" href="#_CPPv212ImportsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractTableModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractTableModel &gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -372,23 +374,44 @@
 
 <dl class="function">
 <dt id="_CPPv2NK12ImportsModel8rowCountERK11QModelIndex">
-<span id="ImportsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1a1a8cc254b1adec981eebd028bc4638d4"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="ImportsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1a703ccb7339881f99647454dfcda00d4d"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12ImportsModel11columnCountERK11QModelIndex">
-<span id="ImportsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1a995422da2d0a8cf77d56a000d659a3e3"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="ImportsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classImportsModel_1acec9b896a636ecfce2e6e276b31da8bd"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12ImportsModel4dataERK11QModelIndexi">
-<span id="ImportsModel::data__QModelIndexCR.iC"></span><span class="target" id="classImportsModel_1ae2dda9e6e87d404c6d8e34b1a6e90525"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="ImportsModel::data__QModelIndexCR.iC"></span><span class="target" id="classImportsModel_1a0e8c5ac5852a7102695a053f73921e73"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12ImportsModel10headerDataEiN2Qt11OrientationEi">
-<span id="ImportsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classImportsModel_1ae532ca6cdab12f99d5425e12f5295b9b"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="ImportsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classImportsModel_1a7f11ef8d68fa614a4f28f1d01d64920e"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel7addressERK11QModelIndex">
+<span id="ImportsModel::address__QModelIndexCRC"></span><span class="target" id="classImportsModel_1aa444c6982a07e8a44e6d921d817db746"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12ImportsModel4nameERK11QModelIndex">
+<span id="ImportsModel::name__QModelIndexCRC"></span><span class="target" id="classImportsModel_1ab8a4a0c30cd4ba7b28ce0ea34bed5c7c"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12ImportsModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name for item, optional. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </dd></dl>

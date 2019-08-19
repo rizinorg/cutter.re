@@ -166,6 +166,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -218,6 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
@@ -312,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv213SegmentsModel">
 <span id="SegmentsModel"></span><span class="target" id="classSegmentsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">SegmentsModel</code><a class="headerlink" href="#_CPPv213SegmentsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractListModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -372,23 +374,44 @@
 
 <dl class="function">
 <dt id="_CPPv2NK13SegmentsModel8rowCountERK11QModelIndex">
-<span id="SegmentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1af821d75fcc1bc64591ccfdf3fb45e08b"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="SegmentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1adf6352d20a99861d013e98c141c7af08"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13SegmentsModel11columnCountERK11QModelIndex">
-<span id="SegmentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1abed3715b864ddbe98aba632d03c14c5e"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="SegmentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1a6a70e5f8e1ab94848b2fec72218c518e"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13SegmentsModel4dataERK11QModelIndexi">
-<span id="SegmentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classSegmentsModel_1a42615b10a8a1d25929bbc4758e96dafe"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="SegmentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classSegmentsModel_1a6267e6e6959b2044286e4754232fb185"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13SegmentsModel10headerDataEiN2Qt11OrientationEi">
-<span id="SegmentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classSegmentsModel_1add9a33e21086fee2f463cdda1c10bfc3"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>segment</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="SegmentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classSegmentsModel_1adb3f6b9320451a41482b5048f96baaa6"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>segment</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13SegmentsModel7addressERK11QModelIndex">
+<span id="SegmentsModel::address__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1ab3bb69a6d6bf6d9c7839f1817dcf60d5"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13SegmentsModel4nameERK11QModelIndex">
+<span id="SegmentsModel::name__QModelIndexCRC"></span><span class="target" id="classSegmentsModel_1ab16e67c61e4e0e3c4a3d567ab2fdde75"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13SegmentsModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name for item, optional. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 </dd></dl>

@@ -166,6 +166,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -218,6 +219,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
@@ -312,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv213CommentsModel">
 <span id="CommentsModel"></span><span class="target" id="classCommentsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">CommentsModel</code><a class="headerlink" href="#_CPPv213CommentsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractItemModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt;&gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -382,38 +384,38 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP4QMapI7QString5QListI18CommentDescriptionEEP7QObject">
-<span id="CommentsModel::CommentsModel__QList:CommentDescription:P.QMap:QString.QList:CommentDescription::P.QObjectP"></span><span class="target" id="classCommentsModel_1a1c840adeabb21c0860da453942c71a15"></span><code class="descname">CommentsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structCommentDescription.html#_CPPv218CommentDescription" title="CommentDescription">CommentDescription</a>&gt; *<em>comments</em>, QMap&lt;QString, QList&lt;<a class="reference internal" href="../core/structCommentDescription.html#_CPPv218CommentDescription" title="CommentDescription">CommentDescription</a>&gt;&gt; *<em>nestedComments</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP4QMapI7QString5QListI18CommentDescriptionEEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject">
+<span id="CommentsModel::CommentsModel__QList:CommentDescription:P.QList:CommentGroup:P.QObjectP"></span><span class="target" id="classCommentsModel_1a3ee03f01b7e1772db1574f4eafcbf7bf"></span><code class="descname">CommentsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structCommentDescription.html#_CPPv218CommentDescription" title="CommentDescription">CommentDescription</a>&gt; *<em>comments</em>, QList&lt;<a class="reference internal" href="structCommentGroup.html#_CPPv212CommentGroup" title="CommentGroup">CommentGroup</a>&gt; *<em>nestedComments</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex">
-<span id="CommentsModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a7acce3ea8f39b46856c10729c94d8965"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a04095afe801b96cc17c2c55da75278f5"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel6parentERK11QModelIndex">
-<span id="CommentsModel::parent__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a2750a04d78bd53326185e2235ee26fd3"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::parent__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a963097e780e6ceba0f92e0763f2100e4"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel8rowCountERK11QModelIndex">
-<span id="CommentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a9a39f96197f574be4873ca9f8cb8e369"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1af3ca43ba03725d0a58047980c37c1910"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel11columnCountERK11QModelIndex">
-<span id="CommentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1aac98a5c7ec17a34d5c65f621f9ec7090"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a392cdadeee400a52881edacfd108a5aa"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel4dataERK11QModelIndexi">
-<span id="CommentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classCommentsModel_1a5c95e2ce409dd3956bb33b00f0f00325"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classCommentsModel_1a8a22723ce93563ae02a6c0f841f827a1"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi">
-<span id="CommentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classCommentsModel_1ae402276af8996219dfc505665eb84258"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="CommentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classCommentsModel_1aa278dd2d43973c9fd42d21c1ce583040"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -424,6 +426,11 @@
 <dl class="function">
 <dt id="_CPPv2N13CommentsModel9setNestedEb">
 <span id="CommentsModel::setNested__b"></span><span class="target" id="classCommentsModel_1a8a43c36c7d09c4ad781c819d55105a14"></span>void <code class="descname">setNested</code><span class="sig-paren">(</span>bool <em>nested</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13CommentsModel9setNestedEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK13CommentsModel7addressERK11QModelIndex">
+<span id="CommentsModel::address__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a07fa1d7996f4d7109ac21fd91812665e"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
