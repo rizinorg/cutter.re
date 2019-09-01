@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>EditMethodDialog &mdash; Cutter  documentation</title>
+  <title>XrefModel &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Dialogs" href="../dialogslist.html"/>
-        <link rel="next" title="EditVariablesDialog" href="classEditVariablesDialog.html"/>
-        <link rel="prev" title="EditInstructionDialog" href="classEditInstructionDialog.html"/> 
+        <link rel="next" title="XrefsDialog" href="classXrefsDialog.html"/>
+        <link rel="prev" title="WelcomeDialog" href="classWelcomeDialog.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -105,7 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classCommentsDialog.html">CommentsDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditFunctionDialog.html">EditFunctionDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditInstructionDialog.html">EditInstructionDialog</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">EditMethodDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditMethodDialog.html">EditMethodDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditVariablesDialog.html">EditVariablesDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFlagDialog.html">FlagDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHexdumpRangeDialog.html">HexdumpRangeDialog</a></li>
@@ -123,7 +123,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classTypesInteractionDialog.html">TypesInteractionDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVersionInfoDialog.html">VersionInfoDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classWelcomeDialog.html">WelcomeDialog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classXrefModel.html">XrefModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">XrefModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classXrefsDialog.html">XrefsDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptionsDialog_1_1AnalysisCommands.html">InitialOptionsDialog::AnalysisCommands</a></li>
 </ul>
@@ -182,13 +182,13 @@
         
           <li><a href="../dialogslist.html">Dialogs</a> &raquo;</li>
         
-      <li>EditMethodDialog</li>
+      <li>XrefModel</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/dialogs/classEditMethodDialog.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/dialogs/classXrefModel.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -201,85 +201,93 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="editmethoddialog">
-<h1>EditMethodDialog<a class="headerlink" href="#editmethoddialog" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="xrefmodel">
+<h1>XrefModel<a class="headerlink" href="#xrefmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv216EditMethodDialog">
-<span id="EditMethodDialog"></span><span class="target" id="classEditMethodDialog"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">EditMethodDialog</code><a class="headerlink" href="#_CPPv216EditMethodDialog" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QDialog</p>
+<dt id="_CPPv29XrefModel">
+<span id="XrefModel"></span><span class="target" id="classXrefModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">XrefModel</code><a class="headerlink" href="#_CPPv29XrefModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N9XrefModel7ColumnsE">
+<span id="XrefModel::Columns"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91d"></span><em class="property">enum </em><code class="descname">Columns</code><a class="headerlink" href="#_CPPv2N9XrefModel7ColumnsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel6OFFSETE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da379afa0499991a057938e929891c8a8f"></span><code class="descname">OFFSET</code> = 0<a class="headerlink" href="#_CPPv2N9XrefModel6OFFSETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel4CODEE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da25f57c5842c3242fe47e83593545e0e4"></span><code class="descname">CODE</code><a class="headerlink" href="#_CPPv2N9XrefModel4CODEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel4TYPEE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da62faf75979a32ace242a7a09dfae6849"></span><code class="descname">TYPE</code><a class="headerlink" href="#_CPPv2N9XrefModel4TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel5COUNTE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91dae42d4fcf982a6b16568d178d4d5c5c95"></span><code class="descname">COUNT</code><a class="headerlink" href="#_CPPv2N9XrefModel5COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N16EditMethodDialog16EditMethodDialogEbP7QWidget">
-<span id="EditMethodDialog::EditMethodDialog__b.QWidgetP"></span><span class="target" id="classEditMethodDialog_1a5a66681b79af14e734aa9e7fa874df6b"></span><code class="descname">EditMethodDialog</code><span class="sig-paren">(</span>bool <em>classFixed</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog16EditMethodDialogEbP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">classFixed</span></code>: whether the user should be able to change the class. If false, a QComboBox will be shown, otherwise a plain QLabel. </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N16EditMethodDialogD0Ev">
-<span id="EditMethodDialog::~EditMethodDialog"></span><span class="target" id="classEditMethodDialog_1a79c629071194737766c2f5ac53cb96c1"></span><code class="descname">~EditMethodDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialogD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N9XrefModel9XrefModelEP7QObject">
+<span id="XrefModel::XrefModel__QObjectP"></span><span class="target" id="classXrefModel_1abec40b42a86079aaee329a74f5081ecc"></span><code class="descname">XrefModel</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel9XrefModelEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N16EditMethodDialog8setClassERK7QString">
-<span id="EditMethodDialog::setClass__QStringCR"></span><span class="target" id="classEditMethodDialog_1ac25321c33ca7d7b5a98260ab77d292ef"></span>void <code class="descname">setClass</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>className</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog8setClassERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N9XrefModel13readForOffsetE3RVAbb">
+<span id="XrefModel::readForOffset__RVA.b.b"></span><span class="target" id="classXrefModel_1af579da88550ad9465ba74e25a9909c19"></span>void <code class="descname">readForOffset</code><span class="sig-paren">(</span>RVA <em>offset</em>, bool <em>to</em>, bool <em>whole_function</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel13readForOffsetE3RVAbb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N16EditMethodDialog9setMethodERK21AnalMethodDescription">
-<span id="EditMethodDialog::setMethod__AnalMethodDescriptionCR"></span><span class="target" id="classEditMethodDialog_1a2629954ca0c417fd266c832e6b728da8"></span>void <code class="descname">setMethod</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a> &amp;<em>desc</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog9setMethodERK21AnalMethodDescription" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK9XrefModel8rowCountERK11QModelIndex">
+<span id="XrefModel::rowCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a1b187b4697cd7b623e213548683876e3"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK16EditMethodDialog8getClassEv">
-<span id="EditMethodDialog::getClassC"></span><span class="target" id="classEditMethodDialog_1a077e65a93f7463af283cada2eb2ce210"></span>QString <code class="descname">getClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16EditMethodDialog8getClassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK9XrefModel11columnCountERK11QModelIndex">
+<span id="XrefModel::columnCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1af7bc9bd57cabca6e4a7cffe4b8d56dba"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK16EditMethodDialog9getMethodEv">
-<span id="EditMethodDialog::getMethodC"></span><span class="target" id="classEditMethodDialog_1a077bd77a80c7d34e1fd28a3db1521d00"></span><a class="reference internal" href="../core/structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a> <code class="descname">getMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK16EditMethodDialog9getMethodEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK9XrefModel4dataERK11QModelIndexi">
+<span id="XrefModel::data__QModelIndexCR.iC"></span><span class="target" id="classXrefModel_1a93033a9e6b9d169bb905469192f0ea87"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi">
+<span id="XrefModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classXrefModel_1a7e74e9b891df25b4eaeb8f17b518b4c2"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel7addressERK11QModelIndex">
+<span id="XrefModel::address__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a9f1abeb571285cddf91d2c04300fe184"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="function">
-<dt id="_CPPv2N16EditMethodDialog10showDialogERK7QStringbP7QStringP21AnalMethodDescriptionP7QWidget">
-<span id="EditMethodDialog::showDialog__QStringCR.b.QStringP.AnalMethodDescriptionP.QWidgetP"></span><span class="target" id="classEditMethodDialog_1aa653febeb7fa32b82351378e3d15ad30"></span>bool <code class="descname">showDialog</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>title</em>, bool <em>classFixed</em>, QString *<em>className</em>, <a class="reference internal" href="../core/structAnalMethodDescription.html#_CPPv221AnalMethodDescription" title="AnalMethodDescription">AnalMethodDescription</a> *<em>desc</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog10showDialogERK7QStringbP7QStringP21AnalMethodDescriptionP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Helper function to display the dialog. </p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>whether the dialog was accepted by the user </dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">title</span></code>: title of the dialog </li>
-<li><code class="docutils literal"><span class="pre">classFixed</span></code>: whether the user should be able to change the class </li>
-<li><code class="docutils literal"><span class="pre">className</span></code>: initial class name, will be overwritten if the user changed the class </li>
-<li><code class="docutils literal"><span class="pre">desc</span></code>: initial data for the method information </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
+<dt id="_CPPv2N9XrefModel14xrefTypeStringERK7QString">
+<span id="XrefModel::xrefTypeString__QStringCR"></span><span class="target" id="classXrefModel_1acd4490d7a3714ced26c2739463e02300"></span>QString <code class="descname">xrefTypeString</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel14xrefTypeStringERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N16EditMethodDialog9newMethodE7QStringRK7QStringP7QWidget">
-<span id="EditMethodDialog::newMethod__QString.QStringCR.QWidgetP"></span><span class="target" id="classEditMethodDialog_1ab298af7cc902d602fe6f0f7f39dac6a5"></span>void <code class="descname">newMethod</code><span class="sig-paren">(</span>QString <em>className</em> = nullptr, <em class="property">const</em> QString &amp;<em>meth</em> = QString(), QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog9newMethodE7QStringRK7QStringP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Show the dialog to add a new method a given class. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N16EditMethodDialog10editMethodERK7QStringRK7QStringP7QWidget">
-<span id="EditMethodDialog::editMethod__QStringCR.QStringCR.QWidgetP"></span><span class="target" id="classEditMethodDialog_1a700efc84f6d2e147ecdfaf4bec146d19"></span>void <code class="descname">editMethod</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>className</em>, <em class="property">const</em> QString &amp;<em>meth</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16EditMethodDialog10editMethodERK7QStringRK7QStringP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Show the dialog to edit a given method of a given class. </p>
-</dd></dl>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N9XrefModel19FlagDescriptionRoleE">
+<span id="XrefModel::FlagDescriptionRole__iC"></span><span class="target" id="classXrefModel_1af694cc0bacea6458936b0578d29b7b25"></span><em class="property">const</em> int <code class="descname">FlagDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N9XrefModel19FlagDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
@@ -296,10 +304,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="classEditVariablesDialog.html" class="btn btn-neutral float-right" title="EditVariablesDialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="classXrefsDialog.html" class="btn btn-neutral float-right" title="XrefsDialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="classEditInstructionDialog.html" class="btn btn-neutral" title="EditInstructionDialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="classWelcomeDialog.html" class="btn btn-neutral" title="WelcomeDialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

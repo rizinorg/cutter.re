@@ -105,6 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
@@ -313,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv214MemoryMapModel">
 <span id="MemoryMapModel"></span><span class="target" id="classMemoryMapModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">MemoryMapModel</code><a class="headerlink" href="#_CPPv214MemoryMapModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractListModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -363,27 +364,32 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N14MemoryMapModel14MemoryMapModelEP5QListI20MemoryMapDescriptionEP7QObject">
-<span id="MemoryMapModel::MemoryMapModel__QList:MemoryMapDescription:P.QObjectP"></span><span class="target" id="classMemoryMapModel_1a936f73441e3846357301b904a50d6c78"></span><code class="descname">MemoryMapModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structMemoryMapDescription.html#_CPPv220MemoryMapDescription" title="MemoryMapDescription">MemoryMapDescription</a>&gt; *<em>memoryMaps</em>, QObject *<em>parent</em> = 0<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14MemoryMapModel14MemoryMapModelEP5QListI20MemoryMapDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<span id="MemoryMapModel::MemoryMapModel__QList:MemoryMapDescription:P.QObjectP"></span><span class="target" id="classMemoryMapModel_1af1d97b55a32083aa6314a16c379bd264"></span><code class="descname">MemoryMapModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structMemoryMapDescription.html#_CPPv220MemoryMapDescription" title="MemoryMapDescription">MemoryMapDescription</a>&gt; *<em>memoryMaps</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14MemoryMapModel14MemoryMapModelEP5QListI20MemoryMapDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK14MemoryMapModel8rowCountERK11QModelIndex">
-<span id="MemoryMapModel::rowCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1a01bf2ac6a90ab7274259a3d9a0b39fd7"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="MemoryMapModel::rowCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1a2e3b141c704f73245471baaa783ec603"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK14MemoryMapModel11columnCountERK11QModelIndex">
-<span id="MemoryMapModel::columnCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1a828450164306ca8e5555e6235b986a91"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="MemoryMapModel::columnCount__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1aa0ecc32e306e841617f71a3b16d57146"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK14MemoryMapModel4dataERK11QModelIndexi">
-<span id="MemoryMapModel::data__QModelIndexCR.iC"></span><span class="target" id="classMemoryMapModel_1aec6275fa5af28212b7753940fec231dd"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="MemoryMapModel::data__QModelIndexCR.iC"></span><span class="target" id="classMemoryMapModel_1a6717f62a1ac74fdf894de81371d16b93"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK14MemoryMapModel10headerDataEiN2Qt11OrientationEi">
-<span id="MemoryMapModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classMemoryMapModel_1a5633aa0f20d25414bc75fd8ac9b43fed"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="MemoryMapModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classMemoryMapModel_1af0c42bdc33677bf1d189922c739937bb"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK14MemoryMapModel7addressERK11QModelIndex">
+<span id="MemoryMapModel::address__QModelIndexCRC"></span><span class="target" id="classMemoryMapModel_1adcd14eedb8ff501a719f01fc10845386"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14MemoryMapModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
