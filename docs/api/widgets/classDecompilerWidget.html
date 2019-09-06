@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PseudocodeWidget &mdash; Cutter  documentation</title>
+  <title>DecompilerWidget &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Widgets" href="../widgetslist.html"/>
-        <link rel="next" title="QuickFilterView" href="classQuickFilterView.html"/>
-        <link rel="prev" title="OverviewWidget" href="classOverviewWidget.html"/> 
+        <link rel="next" title="DisassemblerGraphView" href="classDisassemblerGraphView.html"/>
+        <link rel="prev" title="DebugActions" href="classDebugActions.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -137,6 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DecompilerWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblerGraphView.html">DisassemblerGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
@@ -176,7 +177,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">PseudocodeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
@@ -290,13 +290,13 @@
         
           <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
         
-      <li>PseudocodeWidget</li>
+      <li>DecompilerWidget</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/widgets/classPseudocodeWidget.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/widgets/classDecompilerWidget.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -309,30 +309,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pseudocodewidget">
-<h1>PseudocodeWidget<a class="headerlink" href="#pseudocodewidget" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="decompilerwidget">
+<h1>DecompilerWidget<a class="headerlink" href="#decompilerwidget" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv216PseudocodeWidget">
-<span id="PseudocodeWidget"></span><span class="target" id="classPseudocodeWidget"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">PseudocodeWidget</code><a class="headerlink" href="#_CPPv216PseudocodeWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv216DecompilerWidget">
+<span id="DecompilerWidget"></span><span class="target" id="classDecompilerWidget"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">DecompilerWidget</code><a class="headerlink" href="#_CPPv216DecompilerWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Inherits from <a class="reference internal" href="classMemoryDockWidget.html#classMemoryDockWidget"><span class="std std-ref">MemoryDockWidget</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N16PseudocodeWidget16PseudocodeWidgetEP10MainWindowP7QAction">
-<span id="PseudocodeWidget::PseudocodeWidget__MainWindowP.QActionP"></span><span class="target" id="classPseudocodeWidget_1a92ae97aa678678d75f0b0d2857b61b4b"></span><code class="descname">PseudocodeWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>main</em>, QAction *<em>action</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16PseudocodeWidget16PseudocodeWidgetEP10MainWindowP7QAction" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N16DecompilerWidget16DecompilerWidgetEP10MainWindowP7QAction">
+<span id="DecompilerWidget::DecompilerWidget__MainWindowP.QActionP"></span><span class="target" id="classDecompilerWidget_1afa3dc85c35a5e46e02a47245ce8ae130"></span><code class="descname">DecompilerWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>main</em>, QAction *<em>action</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16DecompilerWidget16DecompilerWidgetEP10MainWindowP7QAction" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N16PseudocodeWidgetD0Ev">
-<span id="PseudocodeWidget::~PseudocodeWidget"></span><span class="target" id="classPseudocodeWidget_1a733a2cd21146af3ac2484846e60b561d"></span><code class="descname">~PseudocodeWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16PseudocodeWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N16DecompilerWidgetD0Ev">
+<span id="DecompilerWidget::~DecompilerWidget"></span><span class="target" id="classDecompilerWidget_1a425e9a42b110294e78658deb33f79525"></span><code class="descname">~DecompilerWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16DecompilerWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Slots</p>
 <dl class="function">
-<dt id="_CPPv2N16PseudocodeWidget20showDisasContextMenuERK6QPoint">
-<span id="PseudocodeWidget::showDisasContextMenu__QPointCR"></span><span class="target" id="classPseudocodeWidget_1a65d9785fa89332063507c06f0b872138"></span>void <code class="descname">showDisasContextMenu</code><span class="sig-paren">(</span><em class="property">const</em> QPoint &amp;<em>pt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16PseudocodeWidget20showDisasContextMenuERK6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N16DecompilerWidget20showDisasContextMenuERK6QPoint">
+<span id="DecompilerWidget::showDisasContextMenu__QPointCR"></span><span class="target" id="classDecompilerWidget_1a4322e9ab5c0d96a1bf24f7de7952818e"></span>void <code class="descname">showDisasContextMenu</code><span class="sig-paren">(</span><em class="property">const</em> QPoint &amp;<em>pt</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16DecompilerWidget20showDisasContextMenuERK6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -350,10 +350,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="classQuickFilterView.html" class="btn btn-neutral float-right" title="QuickFilterView" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="classDisassemblerGraphView.html" class="btn btn-neutral float-right" title="DisassemblerGraphView" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="classOverviewWidget.html" class="btn btn-neutral" title="OverviewWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="classDebugActions.html" class="btn btn-neutral" title="DebugActions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
