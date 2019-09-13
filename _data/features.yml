@@ -1,12 +1,11 @@
 - title: Open Source
   description: Completely FREE and licensed under GPLv3
   image: assets/images/service-icon.png
-  icon: code
+  icon: laptop-code
   
-- title: Modern UI
-  description: Built using Qt C++ and design best practices
-  image: assets/images/service-icon3.png
-  icon: desktop
+- title: Decompiler
+  description: Native integration of Ghidra's decompiler in Cutter releases
+  icon: code
 
 - title: Graph View
   description: Fully featured graph view as well as mini-graph for fast navigation
@@ -49,10 +48,10 @@
   image: assets/images/service-icon2.png
   icon: palette
 
-- title: Customizable Layout
-  description: Move different views and windows around to get your most efficient layout
-  image: assets/images/service-icon2.png
-  icon: th
+- title: Modern & Customizable UI
+  description: Built using Qt C++ and design best practices
+  image: assets/images/service-icon3.png
+  icon: desktop
 
 - title: Multi Language
   description: Cutter interface was translated by our community to many different languages
