@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DecompiledCode &mdash; Cutter  documentation</title>
+  <title>CodeAnnotation &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Common" href="../commonlist.html"/>
-        <link rel="next" title="DecompiledCode::Line" href="structDecompiledCode_1_1Line.html"/>
-        <link rel="prev" title="CutterInterfaceTheme" href="structCutterInterfaceTheme.html"/> 
+        <link rel="next" title="CommandDescription" href="structCommandDescription.html"/>
+        <link rel="prev" title="BasicBlock" href="structBasicBlock.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -96,6 +96,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAddressableFilterProxyModel.html">AddressableFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModel.html">AddressableItemModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModelI.html">AddressableItemModelI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
@@ -128,12 +131,12 @@
 <li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnnotatedCode.html">AnnotatedCode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CodeAnnotation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">DecompiledCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structDecompiledCode_1_1Line.html">DecompiledCode::Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
@@ -202,13 +205,13 @@
         
           <li><a href="../commonlist.html">Common</a> &raquo;</li>
         
-      <li>DecompiledCode</li>
+      <li>CodeAnnotation</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/common/structDecompiledCode.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/common/structCodeAnnotation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -221,53 +224,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="decompiledcode">
-<h1>DecompiledCode<a class="headerlink" href="#decompiledcode" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="codeannotation">
+<h1>CodeAnnotation<a class="headerlink" href="#codeannotation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv214DecompiledCode">
-<span id="DecompiledCode"></span><span class="target" id="structDecompiledCode"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">DecompiledCode</code><a class="headerlink" href="#_CPPv214DecompiledCode" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Describes the result of a Decompilation Process with optional metadata </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv2N14DecompiledCode5linesE">
-<span id="DecompiledCode::lines__QList:Line:"></span><span class="target" id="structDecompiledCode_1aa29168fd91bb064e713ed4d69662afcc"></span>QList&lt;<a class="reference internal" href="#_CPPv2N14DecompiledCode4LineE" title="DecompiledCode::Line">Line</a>&gt; <code class="descname">lines</code> = {}<a class="headerlink" href="#_CPPv2N14DecompiledCode5linesE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv214CodeAnnotation">
+<span id="CodeAnnotation"></span><span class="target" id="structCodeAnnotation"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">CodeAnnotation</code><a class="headerlink" href="#_CPPv214CodeAnnotation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N14CodeAnnotation4TypeE">
+<span id="CodeAnnotation::Type"></span><span class="target" id="structCodeAnnotation_1a89c6ce01ecbe609abc2cfa47a5eeac34"></span><em class="property">enum </em><code class="descname">Type</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation4TypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14CodeAnnotation6OffsetE">
+<span class="target" id="structCodeAnnotation_1a89c6ce01ecbe609abc2cfa47a5eeac34adfd0a82c4bf37b1e90b690a22a20692e"></span><code class="descname">Offset</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation6OffsetE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-</div>
-<dl class="class">
-<dt id="_CPPv2N14DecompiledCode4LineE">
-<span id="DecompiledCode::Line"></span><span class="target" id="structDecompiledCode_1_1Line"></span><em class="property">struct </em><code class="descname">Line</code><a class="headerlink" href="#_CPPv2N14DecompiledCode4LineE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A single line of decompiled code </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv2N14DecompiledCode4Line4LineEv">
-<span id="DecompiledCode::Line::Line"></span><span class="target" id="structDecompiledCode_1_1Line_1aa62de8d703a78f7873c83e7e3d93eb66"></span><code class="descname">Line</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14DecompiledCode4Line4LineEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N14DecompiledCode4Line4LineERK7QString3RVA">
-<span id="DecompiledCode::Line::Line__QStringCR.RVA"></span><span class="target" id="structDecompiledCode_1_1Line_1a015f4a19f7a06dd8d2d3453d9891d5e9"></span><code class="descname">Line</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em>, RVA <em>addr</em> = RVA_INVALID<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14DecompiledCode4Line4LineERK7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
-<dt id="_CPPv2N14DecompiledCode4Line3strE">
-<span id="DecompiledCode::Line::str__QString"></span><span class="target" id="structDecompiledCode_1_1Line_1a4484dc2eca1b460d6a997c0620b6345e"></span>QString <code class="descname">str</code><a class="headerlink" href="#_CPPv2N14DecompiledCode4Line3strE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N14CodeAnnotation5startE">
+<span id="CodeAnnotation::start__s"></span><span class="target" id="structCodeAnnotation_1ac65d4dd0e86b5168b921157cc02ddec2"></span>size_t <code class="descname">start</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation5startE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N14DecompiledCode4Line4addrE">
-<span id="DecompiledCode::Line::addr__RVA"></span><span class="target" id="structDecompiledCode_1_1Line_1ae6e7c7f54bca4acbc13a1b01e5988a69"></span>RVA <code class="descname">addr</code><a class="headerlink" href="#_CPPv2N14DecompiledCode4Line4addrE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Offset of the original instruction </p>
-</dd></dl>
+<dt id="_CPPv2N14CodeAnnotation3endE">
+<span id="CodeAnnotation::end__s"></span><span class="target" id="structCodeAnnotation_1afeac9cb968aa1cccc9cf133f1aa5a069"></span>size_t <code class="descname">end</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation3endE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14CodeAnnotation4typeE">
+<span id="CodeAnnotation::type__Type"></span><span class="target" id="structCodeAnnotation_1a8e38072edf64bb4f6c069375f08c5393"></span><a class="reference internal" href="#_CPPv2N14CodeAnnotation4TypeE" title="CodeAnnotation::Type">Type</a> <code class="descname">type</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N14CodeAnnotation6offsetE">
+<span id="CodeAnnotation::offset__ut64"></span><span class="target" id="structCodeAnnotation_1a5a737bb4b83d3f3227444f1cfc4d4a75"></span>ut64 <code class="descname">offset</code><a class="headerlink" href="#_CPPv2N14CodeAnnotation6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structCodeAnnotation_1a15f9e8923197edc56379a52004d805c3"></span><code class="descname">struct CodeAnnotation::&#64;0::&#64;2  CodeAnnotation::offset</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="structCodeAnnotation_1ab4fc1e4f19a1e23f4a05e857a902c7ee"></span><code class="descname">union CodeAnnotation::&#64;0 CodeAnnotation::&#64;1</code></dt>
+<dd></dd></dl>
 
 </div>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -282,10 +290,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structDecompiledCode_1_1Line.html" class="btn btn-neutral float-right" title="DecompiledCode::Line" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="structCommandDescription.html" class="btn btn-neutral float-right" title="CommandDescription" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="structCutterInterfaceTheme.html" class="btn btn-neutral" title="CutterInterfaceTheme" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="structBasicBlock.html" class="btn btn-neutral" title="BasicBlock" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

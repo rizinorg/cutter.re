@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AddressableItemModelI &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Common" href="../commonlist.html"/>
+        <link rel="next" title="AnalTask" href="classAnalTask.html"/>
+        <link rel="prev" title="AddressableItemModel" href="classAddressableItemModel.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAddressableFilterProxyModel.html">AddressableFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModel.html">AddressableItemModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AddressableItemModelI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsciiHighlighter.html">AsciiHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexHighlighter.html">HexHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnnotatedCode.html">AnnotatedCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAsciiHighlighter_1_1HighlightingRule.html">AsciiHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCodeAnnotation.html">CodeAnnotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexHighlighter_1_1HighlightingRule.html">HexHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../commonlist.html">Common</a> &raquo;</li>
+        
+      <li>AddressableItemModelI</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/common/classAddressableItemModelI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="addressableitemmodeli">
+<h1>AddressableItemModelI<a class="headerlink" href="#addressableitemmodeli" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv221AddressableItemModelI">
+<span id="AddressableItemModelI"></span><span class="target" id="classAddressableItemModelI"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">AddressableItemModelI</code><a class="headerlink" href="#_CPPv221AddressableItemModelI" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; ParentModel &gt;</span></a>, <a class="reference internal" href="classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a>, <a class="reference internal" href="classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractTableModel &gt;</span></a>, <a class="reference internal" href="classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QSortFilterProxyModel &gt;</span></a>, <a class="reference internal" href="classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt;&gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2NK21AddressableItemModelI7addressERK11QModelIndex">
+<span id="AddressableItemModelI::address__QModelIndexCRC"></span><span class="target" id="classAddressableItemModelI_1a03ee015e62e1c1bf9f96e18ec678e076"></span><em class="property">virtual</em> RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv2NK21AddressableItemModelI7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK21AddressableItemModelI4nameERK11QModelIndex">
+<span id="AddressableItemModelI::name__QModelIndexCRC"></span><span class="target" id="classAddressableItemModelI_1ae29219b5ee52e90e2752dda2e426ea60"></span><em class="property">virtual</em> QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK21AddressableItemModelI4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get name for item, optional. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N21AddressableItemModelI11asItemModelEv">
+<span id="AddressableItemModelI::asItemModel"></span><span class="target" id="classAddressableItemModelI_1a60e96a23e170c2f71d5aa7641b8eb642"></span><em class="property">virtual</em> QAbstractItemModel *<code class="descname">asItemModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv2N21AddressableItemModelI11asItemModelEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classAnalTask.html" class="btn btn-neutral float-right" title="AnalTask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classAddressableItemModel.html" class="btn btn-neutral" title="AddressableItemModel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

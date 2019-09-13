@@ -1,4 +1,0 @@
-DecompiledCode
-==============
-
-.. doxygenstruct:: DecompiledCode

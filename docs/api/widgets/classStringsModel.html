@@ -105,6 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
@@ -136,6 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerWidget.html">DecompilerWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblerGraphView.html">DisassemblerGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
@@ -166,6 +168,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -174,7 +177,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classPseudocodeWidget.html">PseudocodeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
@@ -218,7 +220,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structDecompiledCodeTextLine.html">DecompiledCodeTextLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
@@ -312,7 +314,7 @@
 <dl class="class">
 <dt id="_CPPv212StringsModel">
 <span id="StringsModel"></span><span class="target" id="classStringsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">StringsModel</code><a class="headerlink" href="#_CPPv212StringsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QAbstractListModel</p>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
@@ -366,22 +368,27 @@
 
 <dl class="function">
 <dt id="_CPPv2NK12StringsModel8rowCountERK11QModelIndex">
-<span id="StringsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classStringsModel_1a3c39c075f7d61fc8023e71acb713e990"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="StringsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classStringsModel_1ae12a93f2fe11ec1a64f6dcfafb99b207"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12StringsModel11columnCountERK11QModelIndex">
-<span id="StringsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classStringsModel_1ae9b6b67640131d398cdcd1dadac07022"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<span id="StringsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classStringsModel_1aa9f5913557220c7b88fbbf2274d1ed68"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12StringsModel4dataERK11QModelIndexi">
-<span id="StringsModel::data__QModelIndexCR.iC"></span><span class="target" id="classStringsModel_1aa5080eebb3d0879ca0d300ff89c4f38d"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="StringsModel::data__QModelIndexCR.iC"></span><span class="target" id="classStringsModel_1a33526cfcab9868339047c44f6af81b6d"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2NK12StringsModel10headerDataEiN2Qt11OrientationEi">
-<span id="StringsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classStringsModel_1a3c5935426afbd799d8baab2875cbc281"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="StringsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classStringsModel_1ad8f5e3b74ce5d2e6c14d2fee4d62f082"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK12StringsModel7addressERK11QModelIndex">
+<span id="StringsModel::address__QModelIndexCRC"></span><span class="target" id="classStringsModel_1a0c7f52cc8b1edcda493e663637e81ec5"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12StringsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

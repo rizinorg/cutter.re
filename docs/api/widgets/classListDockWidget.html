@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DecompiledCodeTextLine &mdash; Cutter  documentation</title>
+  <title>ListDockWidget &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Widgets" href="../widgetslist.html"/>
-        <link rel="next" title="DisassemblerGraphView::DisassemblyBlock" href="structDisassemblerGraphView_1_1DisassemblyBlock.html"/>
-        <link rel="prev" title="ColorOption" href="structColorOption.html"/> 
+        <link rel="next" title="MemoryData" href="classMemoryData.html"/>
+        <link rel="prev" title="ImportsWidget" href="classImportsWidget.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -105,6 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
@@ -136,6 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerWidget.html">DecompilerWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblerGraphView.html">DisassemblerGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
@@ -166,6 +168,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ListDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
@@ -174,7 +177,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classPseudocodeWidget.html">PseudocodeWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
@@ -218,7 +220,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">DecompiledCodeTextLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
@@ -288,13 +290,13 @@
         
           <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
         
-      <li>DecompiledCodeTextLine</li>
+      <li>ListDockWidget</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/widgets/structDecompiledCodeTextLine.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/widgets/classListDockWidget.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -307,31 +309,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="decompiledcodetextline">
-<h1>DecompiledCodeTextLine<a class="headerlink" href="#decompiledcodetextline" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="listdockwidget">
+<h1>ListDockWidget<a class="headerlink" href="#listdockwidget" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv222DecompiledCodeTextLine">
-<span id="DecompiledCodeTextLine"></span><span class="target" id="structDecompiledCodeTextLine"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">DecompiledCodeTextLine</code><a class="headerlink" href="#_CPPv222DecompiledCodeTextLine" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Represents a single line of decompiled code as part of the displayed text, including the position inside the QTextDocument </p>
+<dt id="_CPPv214ListDockWidget">
+<span id="ListDockWidget"></span><span class="target" id="classListDockWidget"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ListDockWidget</code><a class="headerlink" href="#_CPPv214ListDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget"><span class="std std-ref">CutterDockWidget</span></a></p>
+<p>Subclassed by <a class="reference internal" href="classCommentsWidget.html#classCommentsWidget"><span class="std std-ref">CommentsWidget</span></a>, <a class="reference internal" href="classExportsWidget.html#classExportsWidget"><span class="std std-ref">ExportsWidget</span></a>, <a class="reference internal" href="classFunctionsWidget.html#classFunctionsWidget"><span class="std std-ref">FunctionsWidget</span></a>, <a class="reference internal" href="classHeadersWidget.html#classHeadersWidget"><span class="std std-ref">HeadersWidget</span></a>, <a class="reference internal" href="classImportsWidget.html#classImportsWidget"><span class="std std-ref">ImportsWidget</span></a>, <a class="reference internal" href="classMemoryMapWidget.html#classMemoryMapWidget"><span class="std std-ref">MemoryMapWidget</span></a>, <a class="reference internal" href="classRelocsWidget.html#classRelocsWidget"><span class="std std-ref">RelocsWidget</span></a>, <a class="reference internal" href="classResourcesWidget.html#classResourcesWidget"><span class="std std-ref">ResourcesWidget</span></a>, <a class="reference internal" href="classSectionsWidget.html#classSectionsWidget"><span class="std std-ref">SectionsWidget</span></a>, <a class="reference internal" href="classSegmentsWidget.html#classSegmentsWidget"><span class="std std-ref">SegmentsWidget</span></a>, <a class="reference internal" href="classSymbolsWidget.html#classSymbolsWidget"><span class="std std-ref">SymbolsWidget</span></a></p>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv2N22DecompiledCodeTextLine22DecompiledCodeTextLineEiRKN14DecompiledCode4LineE">
-<span id="DecompiledCodeTextLine::DecompiledCodeTextLine__i.DecompiledCode::LineCR"></span><span class="target" id="structDecompiledCodeTextLine_1a4b3ba640dd48829536268e6c80547add"></span><code class="descname">DecompiledCodeTextLine</code><span class="sig-paren">(</span>int <em>position</em>, <em class="property">const</em> <a class="reference internal" href="../common/structDecompiledCode.html#_CPPv214DecompiledCode" title="DecompiledCode">DecompiledCode</a>::<a class="reference internal" href="../common/structDecompiledCode.html#_CPPv2N14DecompiledCode4LineE" title="DecompiledCode::Line">Line</a> &amp;<em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N22DecompiledCodeTextLine22DecompiledCodeTextLineEiRKN14DecompiledCode4LineE" title="Permalink to this definition">¶</a><br /></dt>
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N14ListDockWidget15SearchBarPolicyE">
+<span id="ListDockWidget::SearchBarPolicy"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fc"></span><em class="property">enum </em><code class="descname">SearchBarPolicy</code><a class="headerlink" href="#_CPPv2N14ListDockWidget15SearchBarPolicyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N14ListDockWidget13ShowByDefaultE">
+<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fcac4d0a0e7293283f880ad2daaf8e7312f"></span><code class="descname">ShowByDefault</code><a class="headerlink" href="#_CPPv2N14ListDockWidget13ShowByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14ListDockWidget13HideByDefaultE">
+<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca569b0af6aafc8fb9669ce8adcd1544c7"></span><code class="descname">HideByDefault</code><a class="headerlink" href="#_CPPv2N14ListDockWidget13HideByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N14ListDockWidget4HideE">
+<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca62a5e490880a92eef74f167d9dc6dca0"></span><code class="descname">Hide</code><a class="headerlink" href="#_CPPv2N14ListDockWidget4HideE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv2N22DecompiledCodeTextLine8positionE">
-<span id="DecompiledCodeTextLine::position__i"></span><span class="target" id="structDecompiledCodeTextLine_1a87240535377a9b3162e5cf46b5b431cc"></span>int <code class="descname">position</code><a class="headerlink" href="#_CPPv2N22DecompiledCodeTextLine8positionE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>position inside the QTextDocument </p>
-</dd></dl>
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy">
+<span id="ListDockWidget::ListDockWidget__MainWindowP.QActionP.SearchBarPolicy"></span><span class="target" id="classListDockWidget_1a178296cac0200517d761c1f29b29dabc"></span><code class="descname">ListDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>main</em>, QAction *<em>action</em> = nullptr, <a class="reference internal" href="#_CPPv2N14ListDockWidget15SearchBarPolicyE" title="ListDockWidget::SearchBarPolicy">SearchBarPolicy</a> <em>searchBarPolicy</em> = SearchBarPolicy::ShowByDefault<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
-<dl class="member">
-<dt id="_CPPv2N22DecompiledCodeTextLine4lineE">
-<span id="DecompiledCodeTextLine::line__DecompiledCode::Line"></span><span class="target" id="structDecompiledCodeTextLine_1a52a6b81184c3d31fc631d16f46bb0be9"></span><a class="reference internal" href="../common/structDecompiledCode.html#_CPPv214DecompiledCode" title="DecompiledCode">DecompiledCode</a>::<a class="reference internal" href="../common/structDecompiledCode.html#_CPPv2N14DecompiledCode4LineE" title="DecompiledCode::Line">Line</a> <code class="descname">line</code><a class="headerlink" href="#_CPPv2N22DecompiledCodeTextLine4lineE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="function">
+<dt id="_CPPv2N14ListDockWidgetD0Ev">
+<span id="ListDockWidget::~ListDockWidget"></span><span class="target" id="classListDockWidget_1af25cd271d38720162d9de84f76ab672a"></span><code class="descname">~ListDockWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N14ListDockWidget9showCountEb">
+<span id="ListDockWidget::showCount__b"></span><span class="target" id="classListDockWidget_1a5f0a2267b42a6ab4b735842888848c67"></span>void <code class="descname">showCount</code><span class="sig-paren">(</span>bool <em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidget9showCountEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -349,10 +372,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="structDisassemblerGraphView_1_1DisassemblyBlock.html" class="btn btn-neutral float-right" title="DisassemblerGraphView::DisassemblyBlock" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="classMemoryData.html" class="btn btn-neutral float-right" title="MemoryData" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="structColorOption.html" class="btn btn-neutral" title="ColorOption" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="classImportsWidget.html" class="btn btn-neutral" title="ImportsWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

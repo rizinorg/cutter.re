@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>XrefModel &mdash; Cutter  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Cutter  documentation" href="../../index.html"/>
+        <link rel="up" title="Dialogs" href="../dialogslist.html"/>
+        <link rel="next" title="XrefsDialog" href="classXrefsDialog.html"/>
+        <link rel="prev" title="WelcomeDialog" href="classWelcomeDialog.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cutter
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dialogslist.html">Dialogs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAboutDialog.html">AboutDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskDialog.html">AsyncTaskDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAttachProcDialog.html">AttachProcDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointsDialog.html">BreakpointsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsDialog.html">CommentsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditFunctionDialog.html">EditFunctionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditInstructionDialog.html">EditInstructionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditMethodDialog.html">EditMethodDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditVariablesDialog.html">EditVariablesDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagDialog.html">FlagDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpRangeDialog.html">HexdumpRangeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classInitialOptionsDialog.html">InitialOptionsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkTypeDialog.html">LinkTypeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classNewFileDialog.html">NewFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOpenFileDialog.html">OpenFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessBeingAnalysedProxyModel.html">ProcessBeingAnalysedProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessModel.html">ProcessModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessProxyModel.html">ProcessProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2PluginsDialog.html">R2PluginsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRenameDialog.html">RenameDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSaveProjectDialog.html">SaveProjectDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSetToDataDialog.html">SetToDataDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesInteractionDialog.html">TypesInteractionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVersionInfoDialog.html">VersionInfoDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classWelcomeDialog.html">WelcomeDialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">XrefModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classXrefsDialog.html">XrefsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptionsDialog_1_1AnalysisCommands.html">InitialOptionsDialog::AnalysisCommands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Cutter</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../api.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="../dialogslist.html">Dialogs</a> &raquo;</li>
+        
+      <li>XrefModel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/dialogs/classXrefModel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="xrefmodel">
+<h1>XrefModel<a class="headerlink" href="#xrefmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv29XrefModel">
+<span id="XrefModel"></span><span class="target" id="classXrefModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">XrefModel</code><a class="headerlink" href="#_CPPv29XrefModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N9XrefModel7ColumnsE">
+<span id="XrefModel::Columns"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91d"></span><em class="property">enum </em><code class="descname">Columns</code><a class="headerlink" href="#_CPPv2N9XrefModel7ColumnsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel6OFFSETE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da379afa0499991a057938e929891c8a8f"></span><code class="descname">OFFSET</code> = 0<a class="headerlink" href="#_CPPv2N9XrefModel6OFFSETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel4CODEE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da25f57c5842c3242fe47e83593545e0e4"></span><code class="descname">CODE</code><a class="headerlink" href="#_CPPv2N9XrefModel4CODEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel4TYPEE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da62faf75979a32ace242a7a09dfae6849"></span><code class="descname">TYPE</code><a class="headerlink" href="#_CPPv2N9XrefModel4TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N9XrefModel5COUNTE">
+<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91dae42d4fcf982a6b16568d178d4d5c5c95"></span><code class="descname">COUNT</code><a class="headerlink" href="#_CPPv2N9XrefModel5COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N9XrefModel9XrefModelEP7QObject">
+<span id="XrefModel::XrefModel__QObjectP"></span><span class="target" id="classXrefModel_1abec40b42a86079aaee329a74f5081ecc"></span><code class="descname">XrefModel</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel9XrefModelEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N9XrefModel13readForOffsetE3RVAbb">
+<span id="XrefModel::readForOffset__RVA.b.b"></span><span class="target" id="classXrefModel_1af579da88550ad9465ba74e25a9909c19"></span>void <code class="descname">readForOffset</code><span class="sig-paren">(</span>RVA <em>offset</em>, bool <em>to</em>, bool <em>whole_function</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel13readForOffsetE3RVAbb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel8rowCountERK11QModelIndex">
+<span id="XrefModel::rowCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a1b187b4697cd7b623e213548683876e3"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel11columnCountERK11QModelIndex">
+<span id="XrefModel::columnCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1af7bc9bd57cabca6e4a7cffe4b8d56dba"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel4dataERK11QModelIndexi">
+<span id="XrefModel::data__QModelIndexCR.iC"></span><span class="target" id="classXrefModel_1a93033a9e6b9d169bb905469192f0ea87"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi">
+<span id="XrefModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classXrefModel_1a7e74e9b891df25b4eaeb8f17b518b4c2"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK9XrefModel7addressERK11QModelIndex">
+<span id="XrefModel::address__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a9f1abeb571285cddf91d2c04300fe184"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N9XrefModel14xrefTypeStringERK7QString">
+<span id="XrefModel::xrefTypeString__QStringCR"></span><span class="target" id="classXrefModel_1acd4490d7a3714ced26c2739463e02300"></span>QString <code class="descname">xrefTypeString</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel14xrefTypeStringERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
+<dl class="member">
+<dt id="_CPPv2N9XrefModel19FlagDescriptionRoleE">
+<span id="XrefModel::FlagDescriptionRole__iC"></span><span class="target" id="classXrefModel_1af694cc0bacea6458936b0578d29b7b25"></span><em class="property">const</em> int <code class="descname">FlagDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N9XrefModel19FlagDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="classXrefsDialog.html" class="btn btn-neutral float-right" title="XrefsDialog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="classWelcomeDialog.html" class="btn btn-neutral" title="WelcomeDialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, The Cutter Developers.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
