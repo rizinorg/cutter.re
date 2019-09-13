@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Defating a Ransomware using Cutter's Emulation"
+title: "Defeating a Ransomware using Cutter's Emulation"
 date: 2019-09-13 
 tags: ["Guest article"]
 categories: []
