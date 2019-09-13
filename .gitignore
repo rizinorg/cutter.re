@@ -1,5 +1,6 @@
 _site/
+docs/_site
 .sass-cache/
 .jekyll-cache/
-docs/_site
+.vscode/
 Gemfile.lock
