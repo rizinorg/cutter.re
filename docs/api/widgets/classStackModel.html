@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>VirtualAddrDock &mdash; Cutter  documentation</title>
+  <title>StackModel &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Widgets" href="../widgetslist.html"/>
-        <link rel="next" title="VisualNavbar" href="classVisualNavbar.html"/>
-        <link rel="prev" title="VTablesWidget" href="classVTablesWidget.html"/> 
+        <link rel="next" title="StackWidget" href="classStackWidget.html"/>
+        <link rel="prev" title="SegmentsWidget" href="classSegmentsWidget.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -198,7 +198,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classSegmentsModel.html">SegmentsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSegmentsProxyModel.html">SegmentsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSegmentsWidget.html">SegmentsWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classStackModel.html">StackModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">StackModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classStackWidget.html">StackWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classStringsModel.html">StringsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classStringsProxyModel.html">StringsProxyModel</a></li>
@@ -213,7 +213,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classVTableModel.html">VTableModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVTableSortFilterProxyModel.html">VTableSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVTablesWidget.html">VTablesWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">VirtualAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVirtualAddrDock.html">VirtualAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVisualNavbar.html">VisualNavbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classZignaturesModel.html">ZignaturesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classZignaturesProxyModel.html">ZignaturesProxyModel</a></li>
@@ -292,13 +292,13 @@
         
           <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
         
-      <li>VirtualAddrDock</li>
+      <li>StackModel</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/widgets/classVirtualAddrDock.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/widgets/classStackModel.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -311,30 +311,123 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="virtualaddrdock">
-<h1>VirtualAddrDock<a class="headerlink" href="#virtualaddrdock" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="stackmodel">
+<h1>StackModel<a class="headerlink" href="#stackmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv215VirtualAddrDock">
-<span id="VirtualAddrDock"></span><span class="target" id="classVirtualAddrDock"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">VirtualAddrDock</code><a class="headerlink" href="#_CPPv215VirtualAddrDock" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="classAbstractAddrDock.html#classAbstractAddrDock"><span class="std std-ref">AbstractAddrDock</span></a></p>
+<dt id="_CPPv210StackModel">
+<span id="StackModel"></span><span class="target" id="classStackModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">StackModel</code><a class="headerlink" href="#_CPPv210StackModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Inherits from QAbstractTableModel</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N10StackModel6ColumnE">
+<span id="StackModel::Column"></span><span class="target" id="classStackModel_1afc328a955bcad06fa26b17e4f425b7ba"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N10StackModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10StackModel12OffsetColumnE">
+<span class="target" id="classStackModel_1afc328a955bcad06fa26b17e4f425b7baa93ea87e60c09fcdaef032c8d0c92815d"></span><code class="descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv2N10StackModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10StackModel11ValueColumnE">
+<span class="target" id="classStackModel_1afc328a955bcad06fa26b17e4f425b7baaed808b05c02628222c17b99c09d44586"></span><code class="descname">ValueColumn</code><a class="headerlink" href="#_CPPv2N10StackModel11ValueColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10StackModel17DescriptionColumnE">
+<span class="target" id="classStackModel_1afc328a955bcad06fa26b17e4f425b7baa2364169687c1a35b6c09772602bee5c1"></span><code class="descname">DescriptionColumn</code><a class="headerlink" href="#_CPPv2N10StackModel17DescriptionColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10StackModel11ColumnCountE">
+<span class="target" id="classStackModel_1afc328a955bcad06fa26b17e4f425b7baa10f5f000fefa4833eb79dd119554beab"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N10StackModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N10StackModel4RoleE">
+<span id="StackModel::Role"></span><span class="target" id="classStackModel_1aeafd4d2e78b0654639a9a8c9262f0443"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N10StackModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10StackModel20StackDescriptionRoleE">
+<span class="target" id="classStackModel_1aeafd4d2e78b0654639a9a8c9262f0443a5e46d36cee3be64f5ec2c1c6fa87dc1d"></span><code class="descname">StackDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N10StackModel20StackDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N15VirtualAddrDock15VirtualAddrDockEP13SectionsModelP7QWidget">
-<span id="VirtualAddrDock::VirtualAddrDock__SectionsModelP.QWidgetP"></span><span class="target" id="classVirtualAddrDock_1a654ba332c0ccdb8a365b0bade8bdeb08"></span><code class="descname">VirtualAddrDock</code><span class="sig-paren">(</span><a class="reference internal" href="classSectionsModel.html#_CPPv213SectionsModel" title="SectionsModel">SectionsModel</a> *<em>model</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDock15VirtualAddrDockEP13SectionsModelP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10StackModel10StackModelEP7QObject">
+<span id="StackModel::StackModel__QObjectP"></span><span class="target" id="classStackModel_1ad67d0c36499ee4c1c5457ab8de88e645"></span><code class="descname">StackModel</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10StackModel10StackModelEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N15VirtualAddrDockD0Ev">
-<span id="VirtualAddrDock::~VirtualAddrDock"></span><span class="target" id="classVirtualAddrDock_1a157053251e3832ba651438a3c172ee77"></span><code class="descname">~VirtualAddrDock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDockD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10StackModel6reloadEv">
+<span id="StackModel::reload"></span><span class="target" id="classStackModel_1a9a40f7b0ed940c3e70772ab0997305cb"></span>void <code class="descname">reload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10StackModel6reloadEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N15VirtualAddrDock10updateDockEv">
-<span id="VirtualAddrDock::updateDock"></span><span class="target" id="classVirtualAddrDock_1acd54c04c692640b4bb1892230ffe3964"></span>void <code class="descname">updateDock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDock10updateDockEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2NK10StackModel8rowCountERK11QModelIndex">
+<span id="StackModel::rowCount__QModelIndexCRC"></span><span class="target" id="classStackModel_1ac90625b2b1e176d961cc2932b0b7d8f2"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10StackModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10StackModel11columnCountERK11QModelIndex">
+<span id="StackModel::columnCount__QModelIndexCRC"></span><span class="target" id="classStackModel_1a22bd988692d80b974d35a749521cbc80"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10StackModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10StackModel4dataERK11QModelIndexi">
+<span id="StackModel::data__QModelIndexCR.iC"></span><span class="target" id="classStackModel_1aa61521de0e4a0ea5f1cf1aa441b481fa"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10StackModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10StackModel10headerDataEiN2Qt11OrientationEi">
+<span id="StackModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classStackModel_1a1afc2e7c53f5fea21db33916d44d1669"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10StackModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10StackModel7setDataERK11QModelIndexRK8QVarianti">
+<span id="StackModel::setData__QModelIndexCR.QVariantCR.i"></span><span class="target" id="classStackModel_1a97bc592f86e63095dcf3b546c40c5b87"></span>bool <code class="descname">setData</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, <em class="property">const</em> QVariant &amp;<em>value</em>, int <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10StackModel7setDataERK11QModelIndexRK8QVarianti" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2NK10StackModel5flagsERK11QModelIndex">
+<span id="StackModel::flags__QModelIndexCRC"></span><span class="target" id="classStackModel_1ade5743b39d24d7c2d36979c8321989af"></span>Qt::ItemFlags <code class="descname">flags</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK10StackModel5flagsERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
+<dl class="class">
+<dt id="_CPPv2N10StackModel4ItemE">
+<span id="StackModel::Item"></span><span class="target" id="structStackModel_1_1Item"></span><em class="property">struct </em><code class="descname">Item</code><a class="headerlink" href="#_CPPv2N10StackModel4ItemE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item6offsetE">
+<span id="StackModel::Item::offset__RVA"></span><span class="target" id="structStackModel_1_1Item_1a803610756b88ad35f21ce3bb16947da9"></span>RVA <code class="descname">offset</code><a class="headerlink" href="#_CPPv2N10StackModel4Item6offsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item5valueE">
+<span id="StackModel::Item::value__QString"></span><span class="target" id="structStackModel_1_1Item_1a077af189acdb392afc0dd624736997a7"></span>QString <code class="descname">value</code><a class="headerlink" href="#_CPPv2N10StackModel4Item5valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item11descriptionE">
+<span id="StackModel::Item::description__QString"></span><span class="target" id="structStackModel_1_1Item_1a200eacb80ce086a51125e4b90bfa3cec"></span>QString <code class="descname">description</code><a class="headerlink" href="#_CPPv2N10StackModel4Item11descriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item16descriptionColorE">
+<span id="StackModel::Item::descriptionColor__QVariant"></span><span class="target" id="structStackModel_1_1Item_1a010c270ba637a079cdd5f5e3fea68cb5"></span>QVariant <code class="descname">descriptionColor</code><a class="headerlink" href="#_CPPv2N10StackModel4Item16descriptionColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -349,10 +442,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="classVisualNavbar.html" class="btn btn-neutral float-right" title="VisualNavbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="classStackWidget.html" class="btn btn-neutral float-right" title="StackWidget" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="classVTablesWidget.html" class="btn btn-neutral" title="VTablesWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="classSegmentsWidget.html" class="btn btn-neutral" title="SegmentsWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

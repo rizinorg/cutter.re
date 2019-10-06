@@ -181,7 +181,7 @@ alternatives – cmake and meson.</p>
 <p>In any case, there are obviously some requirements:</p>
 <ul class="simple">
 <li>Radare2 installed from submodule</li>
-<li>Qt 5.9 or above</li>
+<li>Qt 5.9 or above (can compile using 5.5 with some limitations)</li>
 <li>Python3.6</li>
 <li>Breakpad installed using script (optional, disabled by default)</li>
 </ul>
@@ -195,6 +195,7 @@ windows/linux/MacOS <a class="reference external" href="https://github.com/radar
 <li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support</li>
 <li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</li>
 <li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad)</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> CMake only, automatically compile Radare2 from submodule.</li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -241,7 +242,7 @@ and let the magic happen. The script will use qmake to build Cutter.</p>
 <div class="section" id="building-with-cmake">
 <h2>Building with Cmake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>CMake &gt;= 3.1</li>
+<li>CMake &gt;= 3.5 (recommended &gt;= 3.6)</li>
 </ul>
 <p>The root for CMake is in src/. In-source builds are <strong>not allowed</strong>, so
 you <strong>must</strong> run CMake from a separate directory:</p>

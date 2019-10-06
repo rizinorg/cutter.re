@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>VirtualAddrDock &mdash; Cutter  documentation</title>
+  <title>StackModel::Item &mdash; Cutter  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Cutter  documentation" href="../../index.html"/>
         <link rel="up" title="Widgets" href="../widgetslist.html"/>
-        <link rel="next" title="VisualNavbar" href="classVisualNavbar.html"/>
-        <link rel="prev" title="VTablesWidget" href="classVTablesWidget.html"/> 
+        <link rel="next" title="VisualNavbar::XToAddress" href="structVisualNavbar_1_1XToAddress.html"/>
+        <link rel="prev" title="Range" href="structRange.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -213,7 +213,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classVTableModel.html">VTableModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVTableSortFilterProxyModel.html">VTableSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVTablesWidget.html">VTablesWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">VirtualAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVirtualAddrDock.html">VirtualAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classVisualNavbar.html">VisualNavbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classZignaturesModel.html">ZignaturesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classZignaturesProxyModel.html">ZignaturesProxyModel</a></li>
@@ -238,7 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRange.html">Range</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structStackModel_1_1Item.html">StackModel::Item</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">StackModel::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structVisualNavbar_1_1XToAddress.html">VisualNavbar::XToAddress</a></li>
 </ul>
 </li>
@@ -292,13 +292,13 @@
         
           <li><a href="../widgetslist.html">Widgets</a> &raquo;</li>
         
-      <li>VirtualAddrDock</li>
+      <li>StackModel::Item</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/widgets/classVirtualAddrDock.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/widgets/structStackModel_1_1Item.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -311,27 +311,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="virtualaddrdock">
-<h1>VirtualAddrDock<a class="headerlink" href="#virtualaddrdock" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="stackmodel-item">
+<h1>StackModel::Item<a class="headerlink" href="#stackmodel-item" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv215VirtualAddrDock">
-<span id="VirtualAddrDock"></span><span class="target" id="classVirtualAddrDock"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">VirtualAddrDock</code><a class="headerlink" href="#_CPPv215VirtualAddrDock" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="classAbstractAddrDock.html#classAbstractAddrDock"><span class="std std-ref">AbstractAddrDock</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv2N15VirtualAddrDock15VirtualAddrDockEP13SectionsModelP7QWidget">
-<span id="VirtualAddrDock::VirtualAddrDock__SectionsModelP.QWidgetP"></span><span class="target" id="classVirtualAddrDock_1a654ba332c0ccdb8a365b0bade8bdeb08"></span><code class="descname">VirtualAddrDock</code><span class="sig-paren">(</span><a class="reference internal" href="classSectionsModel.html#_CPPv213SectionsModel" title="SectionsModel">SectionsModel</a> *<em>model</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDock15VirtualAddrDockEP13SectionsModelP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N10StackModel4ItemE">
+<span id="StackModel::Item"></span><span class="target" id="structStackModel_1_1Item"></span><em class="property">struct </em><code class="descclassname">StackModel::</code><code class="descname">Item</code><a class="headerlink" href="#_CPPv2N10StackModel4ItemE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item6offsetE">
+<span id="StackModel::Item::offset__RVA"></span><span class="target" id="structStackModel_1_1Item_1a803610756b88ad35f21ce3bb16947da9"></span>RVA <code class="descname">offset</code><a class="headerlink" href="#_CPPv2N10StackModel4Item6offsetE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N15VirtualAddrDockD0Ev">
-<span id="VirtualAddrDock::~VirtualAddrDock"></span><span class="target" id="classVirtualAddrDock_1a157053251e3832ba651438a3c172ee77"></span><code class="descname">~VirtualAddrDock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDockD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item5valueE">
+<span id="StackModel::Item::value__QString"></span><span class="target" id="structStackModel_1_1Item_1a077af189acdb392afc0dd624736997a7"></span>QString <code class="descname">value</code><a class="headerlink" href="#_CPPv2N10StackModel4Item5valueE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N15VirtualAddrDock10updateDockEv">
-<span id="VirtualAddrDock::updateDock"></span><span class="target" id="classVirtualAddrDock_1acd54c04c692640b4bb1892230ffe3964"></span>void <code class="descname">updateDock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15VirtualAddrDock10updateDockEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item11descriptionE">
+<span id="StackModel::Item::description__QString"></span><span class="target" id="structStackModel_1_1Item_1a200eacb80ce086a51125e4b90bfa3cec"></span>QString <code class="descname">description</code><a class="headerlink" href="#_CPPv2N10StackModel4Item11descriptionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N10StackModel4Item16descriptionColorE">
+<span id="StackModel::Item::descriptionColor__QVariant"></span><span class="target" id="structStackModel_1_1Item_1a010c270ba637a079cdd5f5e3fea68cb5"></span>QVariant <code class="descname">descriptionColor</code><a class="headerlink" href="#_CPPv2N10StackModel4Item16descriptionColorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -349,10 +353,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="classVisualNavbar.html" class="btn btn-neutral float-right" title="VisualNavbar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="structVisualNavbar_1_1XToAddress.html" class="btn btn-neutral float-right" title="VisualNavbar::XToAddress" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="classVTablesWidget.html" class="btn btn-neutral" title="VTablesWidget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="structRange.html" class="btn btn-neutral" title="Range" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
