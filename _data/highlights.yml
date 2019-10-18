@@ -7,6 +7,6 @@
 - title: Multiple Themes
   description: "By default, Cutter is coming with multiple modern themes -- Light, Native and Dark."
   image: assets/images/cutter_screenshots.png
-- title: Integrated Decompiler Themes
+- title: Integrated Decompiler
   description: "Cutter releases are fully integrated with native Ghidra decompiler. No Java involved."
   image: assets/images/cutter_decompiler.png
