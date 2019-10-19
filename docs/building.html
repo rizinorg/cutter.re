@@ -90,17 +90,26 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#building-options">Building options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#preparing-breakpad">Preparing Breakpad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-steps">Building steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-way">Default way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-with-meson">Building with Meson</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-qtcreator">Using QtCreator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#compiling-on-linux-macos">Compiling on Linux / macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional steps for macOS</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#building-with-cmake">Building with Cmake</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cmake-building-options">CMake Building Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-cutter-with-breakpad-support">Compiling Cutter with Breakpad support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#building-with-meson-windows">Building with Meson (Windows)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
@@ -172,56 +181,136 @@
             
   <div class="section" id="building">
 <h1>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h1>
-<p>First you must get the source of Cutter by cloning the repository:</p>
+<p>Below you will find the instructions for building Cutter.</p>
+<div class="section" id="building-on-linux">
+<h2>Building on Linux<a class="headerlink" href="#building-on-linux" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>On Linux, you will need:</p>
+<ul class="simple">
+<li>build-essential</li>
+<li>git</li>
+<li>cmake</li>
+<li>meson</li>
+<li>libzip-dev</li>
+<li>libzlib-dev</li>
+<li>qt5</li>
+<li>qt5-svg</li>
+<li>pkgconf</li>
+</ul>
+<p>On some Linux distributions, all of those packages can be installed with this single command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">git</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-steps">
+<h3>Building steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
+<p>The official way to build Cutter on Linux is by using CMake.
+First clone the repository with its dependencies:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">recurse</span><span class="o">-</span><span class="n">submodules</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">radareorg</span><span class="o">/</span><span class="n">cutter</span>
 </pre></div>
 </div>
-<p>The “official” way to build Cutter is by using qmake, but there are two
-alternatives – cmake and meson.</p>
-<p>In any case, there are obviously some requirements:</p>
-<ul class="simple">
-<li>Radare2 installed from submodule</li>
-<li>Qt 5.9 or above (can compile using 5.5 with some limitations)</li>
-<li>Python3.6</li>
-<li>Breakpad installed using script (optional, disabled by default)</li>
-</ul>
-<p>Before compiling, note that we also provide binaries available for
-windows/linux/MacOS <a class="reference external" href="https://github.com/radareorg/cutter/releases">here</a>.</p>
-<hr class="docutils" />
-<div class="section" id="building-options">
-<h2>Building options<a class="headerlink" href="#building-options" title="Permalink to this headline">¶</a></h2>
-<p>Note that there are three major building options available:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support</li>
-<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</li>
-<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad)</li>
-<li><code class="docutils literal"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> CMake only, automatically compile Radare2 from submodule.</li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="preparing-breakpad">
-<h2>Preparing Breakpad<a class="headerlink" href="#preparing-breakpad" title="Permalink to this headline">¶</a></h2>
-<p>If you want to build Cutter with crash handling system, you want prepare Breakpad before.
-For this simply run one of the scripts (according to your OS) from root Cutter directory:</p>
-<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_linux</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># Linux</span>
-<span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_macos</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># MacOS</span>
-<span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad</span><span class="o">.</span><span class="n">bat</span> <span class="c1"># Windows</span>
+<p>Then just use CMake to build Cutter and its dependency radare2.</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">cutter</span><span class="o">/</span><span class="n">src</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_USE_BUNDLED_RADARE2</span><span class="o">=</span><span class="n">ON</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="n">build</span>
 </pre></div>
 </div>
-<p>Then if you are building on Linux you want to change <code class="docutils literal"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable
-so it contains <code class="docutils literal"><span class="pre">$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig</span></code>. For this simply run</p>
-<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH&quot;</span>
+<p>If you are interested in building Cutter with support for Python plugins,
+Syntax Highlighting, Crash Reporting and more,
+please look at the full list of <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
+<p>After the build process is complete, you should be provided with Cutter executable
+that you can start like this:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">build</span><span class="o">/</span><span class="n">Cutter</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="building-on-windows">
+<h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Requirements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Cutter works on Windows starting from Windows 7 up to Windows 10.
+To compile Cutter it is necessary to have installed:</p>
+<ul class="simple">
+<li>A version of Visual Studio (2015, 2017 and 2019 are supported)</li>
+<li>CMake</li>
+<li>Qt</li>
+</ul>
+</div>
+<div class="section" id="default-way">
+<h3>Default way<a class="headerlink" href="#default-way" title="Permalink to this headline">¶</a></h3>
+<p>To build Cutter on Windows machines using CMake,
+you will have to make sure that the executables are available
+in your <cite>%PATH%</cite> environment variable.</p>
+<p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">CMAKE_PREFIX_PATH</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">Qt</span>\<span class="n">qt</span><span class="o">-</span><span class="mf">5.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">msvc2013</span><span class="o">-</span><span class="n">x86</span>\<span class="mf">5.6</span>\<span class="n">msvc2013</span>\<span class="n">lib</span>\<span class="n">cmake</span>
+<span class="n">cd</span> <span class="n">src</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span><span class="o">-</span><span class="n">gui</span> <span class="o">..</span>
+</pre></div>
+</div>
+<p>Click <code class="docutils literal"><span class="pre">Configure</span></code> and select your version of Visual Studio from the list,
+for example <code class="docutils literal"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14</span> <span class="pre">2015</span></code>.
+After configuration is done, click <code class="docutils literal"><span class="pre">Generate</span></code> and you can open
+<code class="docutils literal"><span class="pre">Cutter.sln</span></code> to compile the code as usual.</p>
+</div>
+<div class="section" id="building-with-meson">
+<h3>Building with Meson<a class="headerlink" href="#building-with-meson" title="Permalink to this headline">¶</a></h3>
+<p>There is another way to compile Cutter on Windows, if the one above does
+not work or does not suit your needs.</p>
+<p>Additional requirements:</p>
+<ul class="simple">
+<li>Ninja build system</li>
+<li>Meson build system</li>
+</ul>
+<p>Download and unpack
+<a class="reference external" href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
+source root directory.</p>
+<p>Note that in the below steps, the paths may vary depending on your version of Qt and Visual Studio.</p>
+<p>Environment settings (example for x64 version):</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span> <span class="n">Export</span> <span class="n">MSVC</span> <span class="n">variables</span>
+<span class="n">CALL</span> <span class="s2">&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC</span><span class="se">\v</span><span class="s2">cvarsall.bat&quot;</span> <span class="n">x64</span>
+<span class="p">::</span> <span class="n">Add</span> <span class="n">qmake</span> <span class="n">to</span> <span class="n">PATH</span>
+<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Qt</span><span class="se">\5</span><span class="s2">.10.1\msvc2015_64</span><span class="se">\b</span><span class="s2">in;%PATH%&quot;</span>
+<span class="p">::</span> <span class="n">Add</span> <span class="n">Python</span> <span class="n">to</span> <span class="n">PATH</span>
+<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Program Files\Python36;%PATH%&quot;</span>
+</pre></div>
+</div>
+<p>Install Meson:</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">meson</span>
+</pre></div>
+</div>
+<p>To compile Cutter run:</p>
+<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">CALL</span> <span class="n">prepare_r2</span><span class="o">.</span><span class="n">bat</span>
+<span class="n">CALL</span> <span class="n">build</span><span class="o">.</span><span class="n">bat</span>
+</pre></div>
+</div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="building-with-qmake">
 <h2>Building with Qmake<a class="headerlink" href="#building-with-qmake" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-qtcreator">
+<h3>Using QtCreator<a class="headerlink" href="#using-qtcreator" title="Permalink to this headline">¶</a></h3>
+<p>One standard way is to simply load the project inside QtCreator.
+To do so, open QtCreator and on the welcome screen click on “Open Project”,
+and finally select the <code class="docutils literal"><span class="pre">cutter/src/Cutter.pro</span></code> file.
+QtCreator will then allow you to directly edit the source code and build the project.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For the <cite>.pro</cite> file to be compiled successfully, it is required
+to run <cite>prepare_r2.bat</cite> beforehand.</p>
+</div>
+</div>
 <div class="section" id="compiling-on-linux-macos">
 <h3>Compiling on Linux / macOS<a class="headerlink" href="#compiling-on-linux-macos" title="Permalink to this headline">¶</a></h3>
-<p>The easy way is to simply run <code class="docutils literal"><span class="pre">./build.sh</span></code> from the root directory,
-and let the magic happen. The script will use qmake to build Cutter.</p>
-<p>If you want to manually use qmake, follow this steps:</p>
+<p>The easiest way, but not the one we recommend, is to simply run <code class="docutils literal"><span class="pre">./build.sh</span></code> from the root directory,
+and let the magic happen. The script will use qmake to build Cutter.
+The <code class="docutils literal"><span class="pre">build.sh</span></code> script is meant to be deprecated and will be deleted in the future.</p>
+<p>If you want to manually use qmake, follow these steps:</p>
 <div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span><span class="p">;</span> <span class="n">cd</span> <span class="n">build</span>
 <span class="n">qmake</span> <span class="o">../</span><span class="n">src</span><span class="o">/</span><span class="n">Cutter</span><span class="o">.</span><span class="n">pro</span>
 <span class="n">make</span>
@@ -239,41 +328,44 @@ and let the magic happen. The script will use qmake to build Cutter.</p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="building-with-cmake">
-<h2>Building with Cmake<a class="headerlink" href="#building-with-cmake" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cmake-building-options">
+<h2>CMake Building Options<a class="headerlink" href="#cmake-building-options" title="Permalink to this headline">¶</a></h2>
+<p>Note that there are some major building options available:</p>
 <ul class="simple">
-<li>CMake &gt;= 3.5 (recommended &gt;= 3.6)</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> automatically compile Radare2 from submodule.</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support.</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> enable Graphviz for graph layouts.</li>
+<li><code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad).</li>
 </ul>
-<p>The root for CMake is in src/. In-source builds are <strong>not allowed</strong>, so
-you <strong>must</strong> run CMake from a separate directory:</p>
-<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">src</span>
-<span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span> <span class="o">..</span> <span class="c1"># Don&#39;t forget to provide build options</span>
+<p>These options can be enabled or disabled from the command line arguments passed to CMake.
+For example, in order to build Cutter with support for Python plugins, you can run this command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON_BINDINGS</span><span class="o">=</span><span class="n">ON</span>
 </pre></div>
 </div>
-<p>If all went well, you should now have a working Makefile in your build
-directory:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span>
+<p>Or if one wants to explicitely disable an option:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">OFF</span>
 </pre></div>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="building-on-windows">
-<h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Permalink to this headline">¶</a></h2>
-<p>Alternatively, on Windows you can run something like this (depending on
-your Cmake installation)</p>
-<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">CMAKE_PREFIX_PATH</span><span class="o">=</span><span class="n">c</span><span class="p">:</span>\<span class="n">Qt</span>\<span class="n">qt</span><span class="o">-</span><span class="mf">5.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">msvc2013</span><span class="o">-</span><span class="n">x86</span>\<span class="mf">5.6</span>\<span class="n">msvc2013</span>\<span class="n">lib</span>\<span class="n">cmake</span>
-<span class="n">cd</span> <span class="n">src</span>
-<span class="n">mkdir</span> <span class="n">build</span>
-<span class="n">cd</span> <span class="n">build</span>
-<span class="n">cmake</span><span class="o">-</span><span class="n">gui</span> <span class="o">..</span>
+<div class="section" id="compiling-cutter-with-breakpad-support">
+<h2>Compiling Cutter with Breakpad support<a class="headerlink" href="#compiling-cutter-with-breakpad-support" title="Permalink to this headline">¶</a></h2>
+<p>If you want to build Cutter with crash handling system, you want prepare Breakpad before.
+For this simply run one of the scripts (according to your OS) from root Cutter directory:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_linux</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># Linux</span>
+<span class="n">source</span> <span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad_macos</span><span class="o">.</span><span class="n">sh</span> <span class="c1"># MacOS</span>
+<span class="n">scripts</span><span class="o">/</span><span class="n">prepare_breakpad</span><span class="o">.</span><span class="n">bat</span> <span class="c1"># Windows</span>
 </pre></div>
 </div>
-<p>Click <code class="docutils literal"><span class="pre">Configure</span></code> and select <code class="docutils literal"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14</span> <span class="pre">2015</span></code> from the list.
-After configuration is done, click <code class="docutils literal"><span class="pre">Generate</span></code> and you can open
-<code class="docutils literal"><span class="pre">Cutter.sln</span></code> to compile the code as usual.</p>
+<p>Then if you are building on Linux you want to change <code class="docutils literal"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable
+so it contains <code class="docutils literal"><span class="pre">$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig</span></code>. For this simply run</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH&quot;</span>
+</pre></div>
 </div>
+</div>
+<hr class="docutils" />
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <blockquote>
@@ -286,36 +378,6 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 <code class="docutils literal"><span class="pre">CMAKE_PREFIX_PATH</span></code> in the above process, e.g.:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span> <span class="c1"># the cache may be polluted with unwanted libraries found before</span>
 <span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=/</span><span class="n">opt</span><span class="o">/</span><span class="n">Qt</span><span class="o">/</span><span class="mf">5.9</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">gcc_64</span> <span class="o">..</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="building-with-meson-windows">
-<h2>Building with Meson (Windows)<a class="headerlink" href="#building-with-meson-windows" title="Permalink to this headline">¶</a></h2>
-<p>Additional requirements:</p>
-<ul class="simple">
-<li>Visual Studio 2015 or Visual Studio 2017</li>
-<li>Ninja build system</li>
-<li>Meson build system</li>
-</ul>
-<p>Download and unpack
-<a class="reference external" href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
-source root directory.</p>
-<p>Environment settings (example for x64 version):</p>
-<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="p">::</span> <span class="n">Export</span> <span class="n">MSVC</span> <span class="n">variables</span>
-<span class="n">CALL</span> <span class="s2">&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC</span><span class="se">\v</span><span class="s2">cvarsall.bat&quot;</span> <span class="n">x64</span>
-<span class="p">::</span> <span class="n">Add</span> <span class="n">qmake</span> <span class="n">to</span> <span class="n">PATH</span>
-<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Qt</span><span class="se">\5</span><span class="s2">.10.1\msvc2015_64</span><span class="se">\b</span><span class="s2">in;%PATH%&quot;</span>
-<span class="p">::</span> <span class="n">Add</span> <span class="n">Python</span> <span class="n">to</span> <span class="n">PATH</span>
-<span class="n">SET</span> <span class="s2">&quot;PATH=C:\Program Files\Python36;%PATH%&quot;</span>
-</pre></div>
-</div>
-<p>Install Meson:</p>
-<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">meson</span>
-</pre></div>
-</div>
-<p>To compile Cutter run:</p>
-<div class="code batch highlight-default"><div class="highlight"><pre><span></span><span class="n">CALL</span> <span class="n">prepare_r2</span><span class="o">.</span><span class="n">bat</span>
-<span class="n">CALL</span> <span class="n">build</span><span class="o">.</span><span class="n">bat</span>
 </pre></div>
 </div>
 </div>
