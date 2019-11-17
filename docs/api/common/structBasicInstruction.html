@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>BasicBlockHighlighter &#8212; Cutter 1.9.0 documentation</title>
+    <title>BasicInstruction &#8212; Cutter 1.9.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BasicInstructionHighlighter" href="classBasicInstructionHighlighter.html" />
-    <link rel="prev" title="AsyncTaskManager" href="classAsyncTaskManager.html" />
+    <link rel="next" title="CodeAnnotation" href="structCodeAnnotation.html" />
+    <link rel="prev" title="BasicBlock" href="structBasicBlock.html" />
 
   </head>
   <body>
@@ -37,10 +37,10 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classBasicInstructionHighlighter.html" title="BasicInstructionHighlighter"
+          <a href="structCodeAnnotation.html" title="CodeAnnotation"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classAsyncTaskManager.html" title="AsyncTaskManager"
+          <a href="structBasicBlock.html" title="BasicBlock"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
@@ -54,41 +54,27 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="basicblockhighlighter">
-<h1>BasicBlockHighlighter<a class="headerlink" href="#basicblockhighlighter" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="basicinstruction">
+<h1>BasicInstruction<a class="headerlink" href="#basicinstruction" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv221BasicBlockHighlighter">
-<span id="BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">BasicBlockHighlighter</code><a class="headerlink" href="#_CPPv221BasicBlockHighlighter" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv216BasicInstruction">
+<span id="BasicInstruction"></span><span class="target" id="structBasicInstruction"></span><em class="property">struct </em><code class="descclassname"></code><code class="descname">BasicInstruction</code><a class="headerlink" href="#_CPPv216BasicInstruction" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt id="_CPPv2N21BasicBlockHighlighter21BasicBlockHighlighterEv">
-<span id="BasicBlockHighlighter::BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter_1a644b878af980da17aa441faec48da43e"></span><code class="descname">BasicBlockHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter21BasicBlockHighlighterEv" title="Permalink to this definition">¶</a><br /></dt>
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N16BasicInstruction7addressE">
+<span id="BasicInstruction::address__RVA"></span><span class="target" id="structBasicInstruction_1ae694e61f3b53f6519ae1ff320ea53e01"></span>RVA <code class="descname">address</code><a class="headerlink" href="#_CPPv2N16BasicInstruction7addressE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N21BasicBlockHighlighterD0Ev">
-<span id="BasicBlockHighlighter::~BasicBlockHighlighter"></span><span class="target" id="classBasicBlockHighlighter_1a2628fd6df6891a640c8dcf948bda5f48"></span><code class="descname">~BasicBlockHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighterD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="member">
+<dt id="_CPPv2N16BasicInstruction4sizeE">
+<span id="BasicInstruction::size__RVA"></span><span class="target" id="structBasicInstruction_1a2f7ac022a50fe1da4eb2cadd270dcb91"></span>RVA <code class="descname">size</code><a class="headerlink" href="#_CPPv2N16BasicInstruction4sizeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N21BasicBlockHighlighter9highlightE3RVARK6QColor">
-<span id="BasicBlockHighlighter::highlight__RVA.QColorCR"></span><span class="target" id="classBasicBlockHighlighter_1a86144ff3384ef2ba8f71aeb94a7da8f9"></span>void <code class="descname">highlight</code><span class="sig-paren">(</span>RVA <em>address</em>, <em class="property">const</em> QColor &amp;<em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter9highlightE3RVARK6QColor" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Highlight the basic block at address. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N21BasicBlockHighlighter5clearE3RVA">
-<span id="BasicBlockHighlighter::clear__RVA"></span><span class="target" id="classBasicBlockHighlighter_1a0c9d268e6eba3e73e6e8fd77d2ee2588"></span>void <code class="descname">clear</code><span class="sig-paren">(</span>RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter5clearE3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Clear the basic block highlighting. </p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N21BasicBlockHighlighter13getBasicBlockE3RVA">
-<span id="BasicBlockHighlighter::getBasicBlock__RVA"></span><span class="target" id="classBasicBlockHighlighter_1a1026b1f2bf8ff28a7a7cafa077257e22"></span><a class="reference internal" href="structBasicBlock.html#_CPPv210BasicBlock" title="BasicBlock">BasicBlock</a> *<code class="descname">getBasicBlock</code><span class="sig-paren">(</span>RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N21BasicBlockHighlighter13getBasicBlockE3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return a highlighted basic block. </p>
-<p>If there is nothing to highlight at specified address, returns nullptr </p>
-</dd></dl>
+<dl class="member">
+<dt id="_CPPv2N16BasicInstruction5colorE">
+<span id="BasicInstruction::color__QColor"></span><span class="target" id="structBasicInstruction_1a62554ff747d88d3c1e3b87d107274a92"></span>QColor <code class="descname">color</code><a class="headerlink" href="#_CPPv2N16BasicInstruction5colorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
