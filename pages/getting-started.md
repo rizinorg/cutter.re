@@ -21,7 +21,7 @@ download the latest release from our [release page](https://github.com/radareorg
 
 ### Building from sources
 
-To build the latest version of Cutter on your local machine, please follow the instructions on our [build page](/build).
+To build the latest version of Cutter on your local machine, please follow the instructions on our [build page](/docs/building.html).
 
 ----
 

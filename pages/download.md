@@ -29,7 +29,7 @@ permalink: /download/
                      </li>
                   </ul>
                   <div class="m-t-30">
-                  <p>If you want to build Cutter from source, check out the <a href="/build" target="_blank">build page.</a></p>
+                  <p>If you want to build Cutter from source, check out the <a href="/docs/building.html" target="_blank">build page.</a></p>
                   </div>
                </div>
             </div>
