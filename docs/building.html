@@ -246,8 +246,13 @@ so it contains <code class="docutils literal"><span class="pre">$CUSTOM_BREAKPAD
 <hr class="docutils" />
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Cmake can’t find Qt</p>
 <blockquote>
-<div>Cmake: qt development package not found</div></blockquote>
+<div><p>Cmake: qt development package not found</p>
+</div></blockquote>
+</li>
+</ul>
 <p>Depending on how Qt installed (Distribution packages or using the Qt
 installer application), CMake may not be able to find it by itself if it
 is not in a common place. If that is the case, double check that the
@@ -256,6 +261,18 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 <code class="docutils literal"><span class="pre">CMAKE_PREFIX_PATH</span></code> in the above process, e.g.:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span> <span class="c1"># the cache may be polluted with unwanted libraries found before</span>
 <span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=/</span><span class="n">opt</span><span class="o">/</span><span class="n">Qt</span><span class="o">/</span><span class="mf">5.9</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">gcc_64</span> <span class="o">..</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">R2 libr_***.so cannot be found when running Cutter</p>
+<blockquote>
+<div><p>./Cutter: error while loading shared libraries: libr_lang.so: cannot open shared object file: No such file or directory</p>
+</div></blockquote>
+</li>
+</ul>
+<p>The exact r2 .so file that cannot be found may vary. On some systems linker by default uses RUNPATH instead of RPATH which is incompatible with the way r2 is currently compiled. It results in some of the r2 libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./Cutter</cite>. If all the r2 libraries are missing you have a different problem.
+Workaround is to either add <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add r2 installation path to LD_LIBRARY_PATH environment variable.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_EXE_LINKER_FLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,--disable-new-dtags&quot;</span>  <span class="o">..</span>
 </pre></div>
 </div>
 </div>
