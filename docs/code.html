@@ -68,10 +68,13 @@ accross the whole process. To access it, simply call <code class="docutils liter
 </div>
 <div class="section" id="calling-a-radare2-command">
 <h3>Calling a radare2 command<a class="headerlink" href="#calling-a-radare2-command" title="Permalink to this headline">¶</a></h3>
-<p>There are two ways to do it: * <code class="docutils literal"><span class="pre">CutterCore::cmd()</span></code> <em>(Discouraged)</em>
-Only use it for commands which yells no output * <code class="docutils literal"><span class="pre">CutterCore::cmdj()</span></code>
-To be used with json commands like <code class="docutils literal"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
-It is way easier to parse a json output.</p>
+<p>There are two ways to do it:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">CutterCore::cmd()</span></code> <em>(Discouraged)</em> Only use it for commands which yells no output</li>
+<li><code class="docutils literal"><span class="pre">CutterCore::cmdj()</span></code> To be used with json commands like <code class="docutils literal"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.</li>
+</ul>
+<p>Generally, if one needs to retrieve information from a radare2 command, it
+is preferred to use the json API.</p>
 <p>Example:</p>
 <div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">QJsonArray</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s2">&quot;pdj 1 @ main&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">array</span><span class="p">();</span>
 </pre></div>
