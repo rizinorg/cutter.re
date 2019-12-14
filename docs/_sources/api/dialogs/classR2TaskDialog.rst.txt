@@ -1,0 +1,4 @@
+R2TaskDialog
+============
+
+.. doxygenclass:: R2TaskDialog

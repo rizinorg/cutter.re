@@ -134,13 +134,15 @@
 <dl class="function">
 <dt id="_CPPv2N10CutterCore3cmdEPKc">
 <span id="CutterCore::cmd__cCP"></span><span class="target" id="classCutterCore_1a24cec0edd17b78a132e0f20bef8f6c1d"></span>QString <code class="descname">cmd</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore3cmdEPKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><a class="reference internal" href="#classCutterCore_1a24cec0edd17b78a132e0f20bef8f6c1d"><span class="std std-ref">CutterCore::cmd</span></a> send a command to radare2. </p>
+<dd><p>send a command to radare2 </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>command output </dd>
+<dt><strong>Note</strong></dt>
+<dd>if you want to seek to an address, you should use CutterCore::seek. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">str</span></code>: the command you want to execute Note that if you want to seek to an address, you should use CutterCore::seek </li>
+<li><code class="docutils literal"><span class="pre">str</span></code>: the command you want to execute </li>
 </ul>
 </dd>
 </dl>
@@ -150,6 +152,28 @@
 <dl class="function">
 <dt id="_CPPv2N10CutterCore3cmdERK7QString">
 <span id="CutterCore::cmd__QStringCR"></span><span class="target" id="classCutterCore_1ae4d76cdc9d1989dae5f9d538eb0b7370"></span>QString <code class="descname">cmd</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore3cmdERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8asyncCmdEPKcR14QSharedPointerI6R2TaskE">
+<span id="CutterCore::asyncCmd__cCP.QSharedPointer:R2Task:R"></span><span class="target" id="classCutterCore_1a4ed6d83c39f2891c884e6223d7098fc8"></span>bool <code class="descname">asyncCmd</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em>, QSharedPointer&lt;<a class="reference internal" href="../common/classR2Task.html#_CPPv26R2Task" title="R2Task">R2Task</a>&gt; &amp;<em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8asyncCmdEPKcR14QSharedPointerI6R2TaskE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>send a command to radare2 asynchronously </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>connect to the &amp;R2Task::finished signal to add your own logic once the command is finished. Use task-&gt;getResult()/getResultJson() for the return value. Once you have setup connections you can start the task with task-&gt;startTask() If you want to seek to an address, you should use CutterCore::seek. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">str</span></code>: the command you want to execute </li>
+<li><code class="docutils literal"><span class="pre">task</span></code>: a shared pointer that will be returned with the R2 command task </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI6R2TaskE">
+<span id="CutterCore::asyncCmd__QStringCR.QSharedPointer:R2Task:R"></span><span class="target" id="classCutterCore_1a2a365f9ce7aebd5d095f2ba32f484a92"></span>bool <code class="descname">asyncCmd</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em>, QSharedPointer&lt;<a class="reference internal" href="../common/classR2Task.html#_CPPv26R2Task" title="R2Task">R2Task</a>&gt; &amp;<em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI6R2TaskE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -190,11 +214,44 @@
 <dl class="function">
 <dt id="_CPPv2N10CutterCore7cmdEsilEPKc">
 <span id="CutterCore::cmdEsil__cCP"></span><span class="target" id="classCutterCore_1a55e35bd6c0120ebf6665430de2a78fc4"></span>void <code class="descname">cmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdEsilEPKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>send a command to radare2 and check for ESIL errors </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>If you want to seek to an address, you should use CutterCore::seek. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">command</span></code>: the command you want to execute </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore7cmdEsilERK7QString">
 <span id="CutterCore::cmdEsil__QStringCR"></span><span class="target" id="classCutterCore_1a0bafabd626c668019f1a877ece3569bc"></span>void <code class="descname">cmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore7cmdEsilERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI6R2TaskE">
+<span id="CutterCore::asyncCmdEsil__cCP.QSharedPointer:R2Task:R"></span><span class="target" id="classCutterCore_1ab1f985726863582e6a715da1c077e48d"></span>bool <code class="descname">asyncCmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>command</em>, QSharedPointer&lt;<a class="reference internal" href="../common/classR2Task.html#_CPPv26R2Task" title="R2Task">R2Task</a>&gt; &amp;<em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI6R2TaskE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>send a command to radare2 and check for ESIL errors </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>connect to the &amp;R2Task::finished signal to add your own logic once the command is finished. Use task-&gt;getResult()/getResultJson() for the return value. Once you have setup connections you can start the task with task-&gt;startTask() If you want to seek to an address, you should use CutterCore::seek. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">command</span></code>: the command you want to execute </li>
+<li><code class="docutils literal"><span class="pre">task</span></code>: a shared pointer that will be returned with the R2 command task </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI6R2TaskE">
+<span id="CutterCore::asyncCmdEsil__QStringCR.QSharedPointer:R2Task:R"></span><span class="target" id="classCutterCore_1a52c8bf9a6376f2107080d8996d57d055"></span>bool <code class="descname">asyncCmdEsil</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>command</em>, QSharedPointer&lt;<a class="reference internal" href="../common/classR2Task.html#_CPPv26R2Task" title="R2Task">R2Task</a>&gt; &amp;<em>task</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI6R2TaskE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -833,9 +890,52 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N10CutterCore21setCurrentDebugThreadEi">
+<span id="CutterCore::setCurrentDebugThread__i"></span><span class="target" id="classCutterCore_1a726bd18bcf6a2594d91ab12210435810"></span>void <code class="descname">setCurrentDebugThread</code><span class="sig-paren">(</span>int <em>tid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore21setCurrentDebugThreadEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore22setCurrentDebugProcessEi">
+<span id="CutterCore::setCurrentDebugProcess__i"></span><span class="target" id="classCutterCore_1a971a81d23d22866ebc7826fd9971d421"></span>void <code class="descname">setCurrentDebugProcess</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore22setCurrentDebugProcessEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Attach to a given pid from a debug session. </p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N10CutterCore8getStackEi">
 <span id="CutterCore::getStack__i"></span><span class="target" id="classCutterCore_1aa59a7f045b73982c89009d5ae3bdcb01"></span>QJsonDocument <code class="descname">getStack</code><span class="sig-paren">(</span>int <em>size</em> = 0x100<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getStackEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getProcessThreadsEi">
+<span id="CutterCore::getProcessThreads__i"></span><span class="target" id="classCutterCore_1a2795876fc5cb83493b89e9f69f019224"></span>QJsonDocument <code class="descname">getProcessThreads</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getProcessThreadsEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a list of a given process’s threads. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>JSON object result of dptj </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pid</span></code>: The pid of the process, -1 for the currently debugged process </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore17getChildProcessesEi">
+<span id="CutterCore::getChildProcesses__i"></span><span class="target" id="classCutterCore_1a1b203f92cf8f66e9252f725b7c29f353"></span>QJsonDocument <code class="descname">getChildProcesses</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getChildProcessesEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a list of a given process’s child processes. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>JSON object result of dptj </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">pid</span></code>: The pid of the process, -1 for the currently debugged process </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore12getBacktraceEv">
@@ -853,6 +953,22 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N10CutterCore12attachRemoteERK7QString">
+<span id="CutterCore::attachRemote__QStringCR"></span><span class="target" id="classCutterCore_1aa78b5e621d7ce75fb655591a19bbe39a"></span>void <code class="descname">attachRemote</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>uri</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12attachRemoteERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>attach to a remote debugger </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>attachedRemote(bool) signals the result </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">uri</span></code>: remote debugger uri </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N10CutterCore11attachDebugEi">
 <span id="CutterCore::attachDebug__i"></span><span class="target" id="classCutterCore_1a30cf30b2f99dad8dc41b4ec44afbb5d6"></span>void <code class="descname">attachDebug</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11attachDebugEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -860,6 +976,16 @@
 <dl class="function">
 <dt id="_CPPv2N10CutterCore9stopDebugEv">
 <span id="CutterCore::stopDebug"></span><span class="target" id="classCutterCore_1a492d22a0681a2fad4cf6388bc3319643"></span>void <code class="descname">stopDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9stopDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12suspendDebugEv">
+<span id="CutterCore::suspendDebug"></span><span class="target" id="classCutterCore_1a5a74cffdaea782f054e96411806f8a7f"></span>void <code class="descname">suspendDebug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12suspendDebugEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore25syncAndSeekProgramCounterEv">
+<span id="CutterCore::syncAndSeekProgramCounter"></span><span class="target" id="classCutterCore_1a6f43ce01583903c62cd26f83d4d60518"></span>void <code class="descname">syncAndSeekProgramCounter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore25syncAndSeekProgramCounterEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -951,6 +1077,17 @@
 <dt id="_CPPv2N10CutterCore14setDebugPluginE7QString">
 <span id="CutterCore::setDebugPlugin__QString"></span><span class="target" id="classCutterCore_1a3570a86093d8e9b5bc2d93369682dabd"></span>void <code class="descname">setDebugPlugin</code><span class="sig-paren">(</span>QString <em>plugin</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore14setDebugPluginE7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore21isDebugTaskInProgressEv">
+<span id="CutterCore::isDebugTaskInProgress"></span><span class="target" id="classCutterCore_1a9be1996c5a73ecfc09a3fe65cfb30675"></span>bool <code class="descname">isDebugTaskInProgress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore21isDebugTaskInProgressEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore21isRedirectableDebugeeEv">
+<span id="CutterCore::isRedirectableDebugee"></span><span class="target" id="classCutterCore_1aba047f549e106c58a2f6102086a45491"></span>bool <code class="descname">isRedirectableDebugee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore21isRedirectableDebugeeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if we can use output/input redirection with the currently debugged process. </p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore14getDecompilersEv">
@@ -1486,6 +1623,22 @@
 
 <dl class="member">
 <dt>
+<span class="target" id="classCutterCore_1a6ff5cbe421c96949f21fbfa6703d0756"></span><em class="property">signal </em><code class="descname">CutterCore::codeRebased</code></dt>
+<dd><p>update all the widgets that are affected by rebasing in debug mode </p>
+</dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a7c472bbf4ee38e7736b141b3d41eac2c"></span><em class="property">signal </em><code class="descname">CutterCore::switchedThread</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1a4249664b4ca9f68acc5c990f92ce68c0"></span><em class="property">signal </em><code class="descname">CutterCore::switchedProcess</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
 <span class="target" id="classCutterCore_1aa503a831a82549ac1274104262b4f9da"></span><em class="property">signal </em><code class="descname">CutterCore::classNew</code></dt>
 <dd></dd></dl>
 
@@ -1506,8 +1659,19 @@
 
 <dl class="member">
 <dt>
+<span class="target" id="classCutterCore_1a94efd4feeab99a07e12f560912c58c01"></span><em class="property">signal </em><code class="descname">CutterCore::attachedRemote</code></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt>
 <span class="target" id="classCutterCore_1a28a27b9e2da990afbe19abb73db893aa"></span><em class="property">signal </em><code class="descname">CutterCore::projectSaved</code></dt>
 <dd></dd></dl>
+
+<dl class="member">
+<dt>
+<span class="target" id="classCutterCore_1ae2a31bb9c5b90c41b24e8af194a52621"></span><em class="property">signal </em><code class="descname">CutterCore::debugTaskStateChanged</code></dt>
+<dd><p>emitted when debugTask started or finished running </p>
+</dd></dl>
 
 <dl class="member">
 <dt>
@@ -1537,12 +1701,7 @@
 
 <dl class="member">
 <dt>
-<span class="target" id="classCutterCore_1ad1ca7d72ec7fea5f4e327dc048ca50a3"></span><em class="property">signal </em><code class="descname">CutterCore::changeDefinedView</code></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt>
-<span class="target" id="classCutterCore_1a425fcfbb5c27a5e16a5d4327df29742c"></span><em class="property">signal </em><code class="descname">CutterCore::changeDebugView</code></dt>
+<span class="target" id="classCutterCore_1add6bcd66f1fb072f233690d275980744"></span><em class="property">signal </em><code class="descname">CutterCore::toggleDebugView</code></dt>
 <dd></dd></dl>
 
 <dl class="member">

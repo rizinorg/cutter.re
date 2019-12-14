@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>NewFileDialog &#8212; Cutter 1.9.0 documentation</title>
+    <title>DirectionalComboBox &#8212; Cutter 1.9.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OpenFileDialog" href="classOpenFileDialog.html" />
-    <link rel="prev" title="NativeDebugDialog" href="classNativeDebugDialog.html" />
+    <link rel="next" title="FallbackSyntaxHighlighter" href="classFallbackSyntaxHighlighter.html" />
+    <link rel="prev" title="Decompiler" href="classDecompiler.html" />
 
   </head>
   <body>
@@ -37,14 +37,14 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classOpenFileDialog.html" title="OpenFileDialog"
+          <a href="classFallbackSyntaxHighlighter.html" title="FallbackSyntaxHighlighter"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classNativeDebugDialog.html" title="NativeDebugDialog"
+          <a href="classDecompiler.html" title="Decompiler"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.9.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../dialogslist.html" accesskey="U">Dialogs</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li> 
       </ul>
     </div>
 
@@ -54,22 +54,23 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="newfiledialog">
-<h1>NewFileDialog<a class="headerlink" href="#newfiledialog" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="directionalcombobox">
+<h1>DirectionalComboBox<a class="headerlink" href="#directionalcombobox" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv213NewFileDialog">
-<span id="NewFileDialog"></span><span class="target" id="classNewFileDialog"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">NewFileDialog</code><a class="headerlink" href="#_CPPv213NewFileDialog" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from QDialog</p>
+<dt id="_CPPv219DirectionalComboBox">
+<span id="DirectionalComboBox"></span><span class="target" id="classDirectionalComboBox"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">DirectionalComboBox</code><a class="headerlink" href="#_CPPv219DirectionalComboBox" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Custom QComboBox created to prevent the menu popup from opening up at different offsets for different items, which may result in list items being rendered outside of the screen/containing widget. </p>
+<p>Inherits from QComboBox</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N13NewFileDialog13NewFileDialogEP10MainWindow">
-<span id="NewFileDialog::NewFileDialog__MainWindowP"></span><span class="target" id="classNewFileDialog_1a002bc6c0fafbeca4a13d83ba1811b5e5"></span><code class="descname">NewFileDialog</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>main</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13NewFileDialog13NewFileDialogEP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N19DirectionalComboBox19DirectionalComboBoxEP7QWidgetb">
+<span id="DirectionalComboBox::DirectionalComboBox__QWidgetP.b"></span><span class="target" id="classDirectionalComboBox_1ae17eb5d0d4c0d3621eee71d850e60d52"></span><code class="descname">DirectionalComboBox</code><span class="sig-paren">(</span>QWidget *<em>parent</em> = nullptr, bool <em>upwards</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N19DirectionalComboBox19DirectionalComboBoxEP7QWidgetb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N13NewFileDialogD0Ev">
-<span id="NewFileDialog::~NewFileDialog"></span><span class="target" id="classNewFileDialog_1a2cf7564e0a0e5da4bb826037745cc4ca"></span><code class="descname">~NewFileDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13NewFileDialogD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N19DirectionalComboBox17setPopupDirectionEb">
+<span id="DirectionalComboBox::setPopupDirection__b"></span><span class="target" id="classDirectionalComboBox_1afefd38042fea8e0bce6f052005327e2e"></span>void <code class="descname">setPopupDirection</code><span class="sig-paren">(</span>bool <em>upwards</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N19DirectionalComboBox17setPopupDirectionEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -96,9 +97,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../code.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
