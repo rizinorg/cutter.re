@@ -63,6 +63,27 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="type">
+<dt id="_CPPv2N10CutterCore17StringTypeFormatsE">
+<span id="CutterCore::StringTypeFormats"></span><span class="target" id="classCutterCore_1ae4b52e99e3c6e33470a92768684be349"></span><em class="property">enum </em><code class="descname">StringTypeFormats</code><a class="headerlink" href="#_CPPv2N10CutterCore17StringTypeFormatsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore4NoneE">
+<span class="target" id="classCutterCore_1ae4b52e99e3c6e33470a92768684be349a6adf97f83acf6453d4a6a4b1070f3754"></span><code class="descname">None</code><a class="headerlink" href="#_CPPv2N10CutterCore4NoneE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore12ASCII_LATIN1E">
+<span class="target" id="classCutterCore_1ae4b52e99e3c6e33470a92768684be349acc9098075beb227e3c8c5d2a81700b9c"></span><code class="descname">ASCII_LATIN1</code><a class="headerlink" href="#_CPPv2N10CutterCore12ASCII_LATIN1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10CutterCore4UTF8E">
+<span class="target" id="classCutterCore_1ae4b52e99e3c6e33470a92768684be349aeb7ee0fb585e2ac64fdc086466c474b1"></span><code class="descname">UTF8</code><a class="headerlink" href="#_CPPv2N10CutterCore4UTF8E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
 <dt id="_CPPv2N10CutterCore14HexdumpFormatsE">
 <span id="CutterCore::HexdumpFormats"></span><span class="target" id="classCutterCore_1a7915fe2e3da9bc3cb7149d169acec088"></span><em class="property">enum </em><code class="descname">HexdumpFormats</code><a class="headerlink" href="#_CPPv2N10CutterCore14HexdumpFormatsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
@@ -455,9 +476,50 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10CutterCore11setAsStringE3RVA">
-<span id="CutterCore::setAsString__RVA"></span><span class="target" id="classCutterCore_1a1991151e5b4ae4383bdb6ed8a1a6c8c7"></span>void <code class="descname">setAsString</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11setAsStringE3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt id="_CPPv2N10CutterCore11setAsStringE3RVAi17StringTypeFormats">
+<span id="CutterCore::setAsString__RVA.i.StringTypeFormats"></span><span class="target" id="classCutterCore_1a917661f4294b63ba3453753f3c24c598"></span>void <code class="descname">setAsString</code><span class="sig-paren">(</span>RVA <em>addr</em>, int <em>size</em> = 0, <a class="reference internal" href="#_CPPv2N10CutterCore17StringTypeFormatsE" title="CutterCore::StringTypeFormats">StringTypeFormats</a> <em>type</em> = StringTypeFormats::None<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11setAsStringE3RVAi17StringTypeFormats" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds string at address That function calls the ‘Cs’ command. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: The address of the array where the string will be applied </li>
+<li><code class="docutils literal"><span class="pre">size</span></code>: The size of string </li>
+<li><code class="docutils literal"><span class="pre">type</span></code>: The type of string </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore12removeStringE3RVA">
+<span id="CutterCore::removeString__RVA"></span><span class="target" id="classCutterCore_1a27deb7cc0cce48adf4b81cd1928f9288"></span>void <code class="descname">removeString</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore12removeStringE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Removes string at address That function calls the ‘Cs-‘ command. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: The address of the array where the string will be applied </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore9getStringE3RVA">
+<span id="CutterCore::getString__RVA"></span><span class="target" id="classCutterCore_1ab75a2353743bb1bea7c9b58503b38fd3"></span>QString <code class="descname">getString</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore9getStringE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets string at address That function calls the ‘ps’ command. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>string at requested address </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: The address of the first byte of the array </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore9setToDataE3RVAii">
