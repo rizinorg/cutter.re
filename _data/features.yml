@@ -12,6 +12,11 @@
   image: assets/images/service-icon3.png
   icon: sitemap
 
+- title: Debugger (beta)
+  description: Multiplatform native and remote debugger for dynamic analysis
+  image: assets/images/service-icon2.png
+  icon: bug
+
 - title: Disassembly
   description: Linear disassembly view
   image: assets/images/service-icon.png
@@ -52,8 +57,3 @@
   description: Built using Qt C++ and design best practices
   image: assets/images/service-icon3.png
   icon: desktop
-
-- title: Multi Language
-  description: Cutter interface was translated by our community to many different languages
-  image: assets/images/service-icon2.png
-  icon: language
