@@ -54,7 +54,7 @@
             
   <div class="section" id="common-errors">
 <h1>Common errors<a class="headerlink" href="#common-errors" title="Permalink to this headline">¶</a></h1>
-<p>This page lists common issues met by our users.</p>
+<p>This page lists common issues encountered by users.</p>
 <div class="section" id="appimage-crashes">
 <h2>AppImage crashes<a class="headerlink" href="#appimage-crashes" title="Permalink to this headline">¶</a></h2>
 <p>If the linux AppImage binary crashes upon startup, make sure your
@@ -66,14 +66,14 @@
 <h2>Compilation error<a class="headerlink" href="#compilation-error" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="r-core-development-package-not-found">
 <h3>r_core development package not found<a class="headerlink" href="#r-core-development-package-not-found" title="Permalink to this headline">¶</a></h3>
-<p>If you installed radare2 and still encounter this error, could be your
+<p>If you installed radare2 and still encounter this error, it could be that your
 <code class="docutils literal"><span class="pre">PATH</span></code> environment variable is set improperly (doesn’t contain
 <code class="docutils literal"><span class="pre">/usr/local/bin</span></code>). That can be, for example, due to <code class="docutils literal"><span class="pre">Qt</span> <span class="pre">Creator.app</span></code>
 being copied over to <code class="docutils literal"><span class="pre">/Applications</span></code>. To fix this, append
 <code class="docutils literal"><span class="pre">:/usr/local/bin</span></code> to the <code class="docutils literal"><span class="pre">PATH</span></code> variable within the <em>Build
 Environment</em> section in Qt Creator. See the screenshot below should you
 encounter any problems.</p>
-<p>On OS X you can also try:</p>
+<p>On macOS, you can also try:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/radare2/lib/pkgconfig</span> <span class="pre">qmake</span></code></li>
 <li><code class="docutils literal"><span class="pre">PKG_CONFIG_PATH=$HOME/cutter/radare2/pkgcfg</span> <span class="pre">qmake</span></code> (for modern
@@ -86,8 +86,8 @@ can add variable <code class="docutils literal"><span class="pre">PKG_CONFIG_PAT
 <hr class="docutils" />
 <div class="section" id="os-x-libjpeg-error">
 <h3>OS X libjpeg error<a class="headerlink" href="#os-x-libjpeg-error" title="Permalink to this headline">¶</a></h3>
-<p>On Mac, QT5 apps fail to build on QtCreator if you have the libjpeg lib
-installed with brew. Run this command to workaround the issue:</p>
+<p>On macOS, QT5 apps fail to build on QtCreator if you have the libjpeg lib
+installed with brew. Run this command to work around the issue:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span><span class="o">.</span><span class="ow">not</span><span class="o">-</span><span class="n">found</span>
 </pre></div>
 </div>
@@ -98,7 +98,7 @@ installed with brew. Run this command to workaround the issue:</p>
 <p>Some people report that they have keyboard issues. Usually it is because
 the Xorg layout is wrong. You can check it with: <code class="docutils literal"><span class="pre">setxkbmap</span> <span class="pre">-query</span></code>
 Most of the time using <code class="docutils literal"><span class="pre">setxkbmap</span> <span class="pre">us</span></code> solves the issue, but it might
-not be enough and require some more advanced Xorg configuration.</p>
+not be enough and require a more advanced Xorg configuration.</p>
 </div>
 </div>
 

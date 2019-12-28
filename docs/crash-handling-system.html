@@ -46,10 +46,10 @@
             
   <div class="section" id="crash-handling-system">
 <h1>Crash Handling System<a class="headerlink" href="#crash-handling-system" title="Permalink to this headline">¶</a></h1>
-<p>Cutter uses <a class="reference external" href="https://github.com/google/breakpad">Breakpad</a> as backend
+<p>Cutter uses <a class="reference external" href="https://github.com/google/breakpad">Breakpad</a> as a backend
 for crash handling.</p>
-<p>Crash Handling System is disabled by default to do not interfere developers from debugging.
-To enable this system there is building option <code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code>.</p>
+<p>Crash Handling System is disabled by default to not interfere with developers while debugging.
+To enable this system, set the <code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> build option.</p>
 <div class="section" id="solution-description">
 <h2>Solution description<a class="headerlink" href="#solution-description" title="Permalink to this headline">¶</a></h2>
 <p>There are only 2 source files:</p>
@@ -57,15 +57,15 @@ To enable this system there is building option <code class="docutils literal"><s
 <li><code class="docutils literal"><span class="pre">CrashHandler.h</span></code></li>
 <li><code class="docutils literal"><span class="pre">CrashHandler.cpp</span></code></li>
 </ul>
-<p>And API is very simple: only one function - <code class="docutils literal"><span class="pre">initCrashHandler()</span></code> that enables Crash Handling System if
-<code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is true, otherwise does nothing.</p>
-<p>As soon as signal is raised <code class="docutils literal"><span class="pre">crashHandler(int</span> <span class="pre">signum)</span></code> is called with signal’s code as argument.
-This function first of all writes crash dump to OS’s Temp directory to catch core and memory state
-as it was at the crash moment.</p>
-<p>Then crash dialog is shown:</p>
+<p>And the API is very simple: One function, <code class="docutils literal"><span class="pre">initCrashHandler()</span></code>, enables the Crash Handling System if
+<code class="docutils literal"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is true, otherwise it does nothing.</p>
+<p>As soon as a signal is raised, <code class="docutils literal"><span class="pre">crashHandler(int</span> <span class="pre">signum)</span></code> is called with the signal’s code as argument.
+This function first writes a crash dump to the operating system’s temporary directory to catch core and
+memory state as it was at the moment of the crash.</p>
+<p>Then the crash dialog is shown:</p>
 <img alt="_images/crash-dialog.png" src="_images/crash-dialog.png" />
-<p>If user chose to create crash dump, prepared dump is moved to directory specified by user.
-And then success dialog is shown:</p>
+<p>If the user chooses to create a crash dump, the prepared dump is moved to the directory specified by user.
+And then the success dialog is shown:</p>
 <img alt="_images/success-dump-dialog.png" src="_images/success-dump-dialog.png" />
 </div>
 </div>
