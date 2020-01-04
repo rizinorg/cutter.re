@@ -63,8 +63,18 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N17BreakpointsDialog17BreakpointsDialogEP7QWidget">
-<span id="BreakpointsDialog::BreakpointsDialog__QWidgetP"></span><span class="target" id="classBreakpointsDialog_1aff73ddabe8324257c08b5cca9d3fecbc"></span><code class="descname">BreakpointsDialog</code><span class="sig-paren">(</span>QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog17BreakpointsDialogEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N17BreakpointsDialog17BreakpointsDialogEbP7QWidget">
+<span id="BreakpointsDialog::BreakpointsDialog__b.QWidgetP"></span><span class="target" id="classBreakpointsDialog_1a76aa1e7d73f98959a158d7f7596e7c55"></span><code class="descname">BreakpointsDialog</code><span class="sig-paren">(</span>bool <em>editMode</em> = false, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog17BreakpointsDialogEbP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N17BreakpointsDialog17BreakpointsDialogERK21BreakpointDescriptionP7QWidget">
+<span id="BreakpointsDialog::BreakpointsDialog__BreakpointDescriptionCR.QWidgetP"></span><span class="target" id="classBreakpointsDialog_1a49acd1094d42447095734b5c50223486"></span><code class="descname">BreakpointsDialog</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/structBreakpointDescription.html#_CPPv221BreakpointDescription" title="BreakpointDescription">BreakpointDescription</a> &amp;<em>editableBreakpoint</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog17BreakpointsDialogERK21BreakpointDescriptionP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N17BreakpointsDialog17BreakpointsDialogE3RVAP7QWidget">
+<span id="BreakpointsDialog::BreakpointsDialog__RVA.QWidgetP"></span><span class="target" id="classBreakpointsDialog_1a1bcb47d5101bb107c46686aacf912755"></span><code class="descname">BreakpointsDialog</code><span class="sig-paren">(</span>RVA <em>address</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog17BreakpointsDialogE3RVAP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -73,8 +83,21 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N17BreakpointsDialog14getBreakpointsEv">
-<span id="BreakpointsDialog::getBreakpoints"></span><span class="target" id="classBreakpointsDialog_1ae22353f78882b25eb276c9711b69347e"></span>QString <code class="descname">getBreakpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog14getBreakpointsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv2N17BreakpointsDialog14getDescriptionEv">
+<span id="BreakpointsDialog::getDescription"></span><span class="target" id="classBreakpointsDialog_1ab918bebcacc9978ef39fe45316cf600d"></span><a class="reference internal" href="../core/structBreakpointDescription.html#_CPPv221BreakpointDescription" title="BreakpointDescription">BreakpointDescription</a> <code class="descname">getDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog14getDescriptionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="function">
+<dt id="_CPPv2N17BreakpointsDialog19createNewBreakpointE3RVAP7QWidget">
+<span id="BreakpointsDialog::createNewBreakpoint__RVA.QWidgetP"></span><span class="target" id="classBreakpointsDialog_1aa67e989cb7b1aa576f43b6cc0747d537"></span>void <code class="descname">createNewBreakpoint</code><span class="sig-paren">(</span>RVA <em>address</em> = RVA_INVALID, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog19createNewBreakpointE3RVAP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N17BreakpointsDialog14editBreakpointERK21BreakpointDescriptionP7QWidget">
+<span id="BreakpointsDialog::editBreakpoint__BreakpointDescriptionCR.QWidgetP"></span><span class="target" id="classBreakpointsDialog_1a4d3e036bcd651ed187c095dc10b06269"></span>void <code class="descname">editBreakpoint</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../core/structBreakpointDescription.html#_CPPv221BreakpointDescription" title="BreakpointDescription">BreakpointDescription</a> &amp;<em>breakpoint</em>, QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N17BreakpointsDialog14editBreakpointERK21BreakpointDescriptionP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
