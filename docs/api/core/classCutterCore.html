@@ -963,9 +963,34 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10CutterCore8getStackEi">
-<span id="CutterCore::getStack__i"></span><span class="target" id="classCutterCore_1aa59a7f045b73982c89009d5ae3bdcb01"></span>QJsonDocument <code class="descname">getStack</code><span class="sig-paren">(</span>int <em>size</em> = 0x100<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getStackEi" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt id="_CPPv2N10CutterCore8getStackEii">
+<span id="CutterCore::getStack__i.i"></span><span class="target" id="classCutterCore_1a8caaf2fb353f6e5970419207047033bc"></span>QList&lt;QJsonObject&gt; <code class="descname">getStack</code><span class="sig-paren">(</span>int <em>size</em> = 0x100, int <em>depth</em> = 6<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore8getStackEii" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns a list of stack address and their telescoped references. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">size</span></code>: number of bytes to scan </li>
+<li><code class="docutils literal"><span class="pre">depth</span></code>: telescoping depth </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10CutterCore11getAddrRefsE3RVAi">
+<span id="CutterCore::getAddrRefs__RVA.i"></span><span class="target" id="classCutterCore_1a32b5295468691c8406f874a371b77e3e"></span>QJsonObject <code class="descname">getAddrRefs</code><span class="sig-paren">(</span>RVA <em>addr</em>, int <em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore11getAddrRefsE3RVAi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Recursively dereferences pointers starting at the specified address up to a given depth. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">addr</span></code>: telescoping addr </li>
+<li><code class="docutils literal"><span class="pre">depth</span></code>: telescoping depth </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore17getProcessThreadsEi">
