@@ -76,8 +76,12 @@ our <a class="reference external" href="https://github.com/radareorg/cutter/rele
 <li>qt5-svg</li>
 <li>pkgconf</li>
 </ul>
-<p>On some Linux distributions, all of these packages can be installed with this single command:</p>
+<p>On Debian-based Linux distributions, all of these packages can be installed with this single command:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">git</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>On Arch-based Linux distributions, build-essential should be replaced by base-devel:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="n">git</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span>
 </pre></div>
 </div>
 </div>
