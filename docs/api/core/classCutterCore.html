@@ -1034,6 +1034,20 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N10CutterCore13formatRefDescE11QJsonObject">
+<span id="CutterCore::formatRefDesc__QJsonObject"></span><span class="target" id="classCutterCore_1ad9f89b5fbbef142efbdc94814909cec3"></span><a class="reference internal" href="structRefDescription.html#_CPPv214RefDescription" title="RefDescription">RefDescription</a> <code class="descname">formatRefDesc</code><span class="sig-paren">(</span>QJsonObject <em>ref</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore13formatRefDescE11QJsonObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>return a <a class="reference internal" href="structRefDescription.html#structRefDescription"><span class="std std-ref">RefDescription</span></a> with a formatted ref string and configured colors </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">ref</span></code>: the “ref” JSON node from getAddrRefs </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N10CutterCore17getProcessThreadsEi">
 <span id="CutterCore::getProcessThreads__i"></span><span class="target" id="classCutterCore_1a2795876fc5cb83493b89e9f69f019224"></span>QJsonDocument <code class="descname">getProcessThreads</code><span class="sig-paren">(</span>int <em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore17getProcessThreadsEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a list of a given process’s threads. </p>
@@ -1651,9 +1665,18 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N10CutterCore15getRegisterRefsEv">
-<span id="CutterCore::getRegisterRefs"></span><span class="target" id="classCutterCore_1a4af2ac72fcbcb1d0ccf524af9a4cd00c"></span>QList&lt;<a class="reference internal" href="structRegisterRefDescription.html#_CPPv222RegisterRefDescription" title="RegisterRefDescription">RegisterRefDescription</a>&gt; <code class="descname">getRegisterRefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getRegisterRefsEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt id="_CPPv2N10CutterCore15getRegisterRefsEi">
+<span id="CutterCore::getRegisterRefs__i"></span><span class="target" id="classCutterCore_1a64f2982eb80c3831b35e936d3bdf53ca"></span>QList&lt;QJsonObject&gt; <code class="descname">getRegisterRefs</code><span class="sig-paren">(</span>int <em>depth</em> = 6<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10CutterCore15getRegisterRefsEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>returns a list of reg values and their telescoped references </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">depth</span></code>: telescoping depth </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N10CutterCore15getRegisterJsonEv">
