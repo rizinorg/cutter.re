@@ -5,7 +5,7 @@
   description: Cutter provides enormous amount of different widgets and features to make your Reverse Engineering experience as comfortable  as possible.
   image: assets/images/hexdump1.gif
 - title: Multiple Themes
-  description: "By default, Cutter is coming with multiple modern themes -- Light, Native and Dark."
+  description: "By default, Cutter is coming with multiple modern themes -- Light, Native, Dark and Midnight."
   image: assets/images/cutter_screenshots.png
 - title: Integrated Decompiler
   description: "Cutter releases are fully integrated with native Ghidra decompiler. No Java involved."
