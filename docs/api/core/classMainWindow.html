@@ -103,6 +103,22 @@
 
 </dd></dl>
 
+<dl class="type">
+<dt id="_CPPv2N10MainWindow15ContextMenuTypeE">
+<span id="MainWindow::ContextMenuType"></span><span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9"></span><em class="property">enum </em><code class="descname">ContextMenuType</code><a class="headerlink" href="#_CPPv2N10MainWindow15ContextMenuTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv2N10MainWindow11DisassemblyE">
+<span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9a342ba4d490d032b03c101873e0ef611f"></span><code class="descname">Disassembly</code><a class="headerlink" href="#_CPPv2N10MainWindow11DisassemblyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv2N10MainWindow11AddressableE">
+<span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9a97f96169d37359de49c980ebecb8cc8f"></span><code class="descname">Addressable</code><a class="headerlink" href="#_CPPv2N10MainWindow11AddressableE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
@@ -310,6 +326,22 @@
 <dt id="_CPPv2N10MainWindow19getLastMemoryWidgetEv">
 <span id="MainWindow::getLastMemoryWidget"></span><span class="target" id="classMainWindow_1a587b2002d98bde0f2c83e62f105fa4c1"></span><a class="reference internal" href="../widgets/classMemoryDockWidget.html#_CPPv216MemoryDockWidget" title="MemoryDockWidget">MemoryDockWidget</a> *<code class="descname">getLastMemoryWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10MainWindow19getLastMemoryWidgetEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N10MainWindow24getContextMenuExtensionsE15ContextMenuType">
+<span id="MainWindow::getContextMenuExtensions__ContextMenuType"></span><span class="target" id="classMainWindow_1a3499e4170ca105fce83b5600d568a99c"></span>QMenu *<code class="descname">getContextMenuExtensions</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N10MainWindow15ContextMenuTypeE" title="MainWindow::ContextMenuType">ContextMenuType</a> <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N10MainWindow24getContextMenuExtensionsE15ContextMenuType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fetches the pointer to a context menu extension of type. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>plugins submenu of the selected context menu </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">type</span></code>: - the type of the context menu </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">

@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Src" href="../srclist.html" />
+    <link rel="next" title="PluginManager::PluginTerminator" href="classPluginManager_1_1PluginTerminator.html" />
     <link rel="prev" title="CutterPlugin" href="classCutterPlugin.html" />
 
   </head>
@@ -37,7 +37,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../srclist.html" title="Src"
+          <a href="classPluginManager_1_1PluginTerminator.html" title="PluginManager::PluginTerminator"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="classCutterPlugin.html" title="CutterPlugin"
@@ -60,6 +60,14 @@
 <dt id="_CPPv213PluginManager">
 <span id="PluginManager"></span><span class="target" id="classPluginManager"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">PluginManager</code><a class="headerlink" href="#_CPPv213PluginManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Inherits from QObject</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="type">
+<dt id="_CPPv2N13PluginManager9PluginPtrE">
+<span class="target" id="classPluginManager_1ae4c37bb8a825910ded345667060d94a7"></span><em class="property">using </em><code class="descname">PluginPtr</code> = std::unique_ptr&lt;<a class="reference internal" href="classCutterPlugin.html#_CPPv212CutterPlugin" title="CutterPlugin">CutterPlugin</a>, <a class="reference internal" href="#_CPPv2N13PluginManager16PluginTerminatorE" title="PluginManager::PluginTerminator">PluginTerminator</a>&gt;<a class="headerlink" href="#_CPPv2N13PluginManager9PluginPtrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -86,7 +94,7 @@
 
 <dl class="function">
 <dt id="_CPPv2N13PluginManager10getPluginsEv">
-<span id="PluginManager::getPlugins"></span><span class="target" id="classPluginManager_1a42b8756d7be52e90689316ff02b1f478"></span><em class="property">const</em> QList&lt;<a class="reference internal" href="classCutterPlugin.html#_CPPv212CutterPlugin" title="CutterPlugin">CutterPlugin</a> *&gt; &amp;<code class="descname">getPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13PluginManager10getPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="PluginManager::getPlugins"></span><span class="target" id="classPluginManager_1a31b4693d81f34b89be911539983e8473"></span><em class="property">const</em> std::vector&lt;<a class="reference internal" href="#_CPPv2N13PluginManager9PluginPtrE" title="PluginManager::PluginPtr">PluginPtr</a>&gt; &amp;<code class="descname">getPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13PluginManager10getPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -108,6 +116,19 @@
 <dd></dd></dl>
 
 </div>
+<dl class="class">
+<dt id="_CPPv2N13PluginManager16PluginTerminatorE">
+<span id="PluginManager::PluginTerminator"></span><span class="target" id="classPluginManager_1_1PluginTerminator"></span><em class="property">class </em><code class="descname">PluginTerminator</code><a class="headerlink" href="#_CPPv2N13PluginManager16PluginTerminatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2NK13PluginManager16PluginTerminatorclEP12CutterPlugin">
+<span id="PluginManager::PluginTerminator::call-operator__CutterPluginPC"></span><span class="target" id="classPluginManager_1_1PluginTerminator_1ab328b47200a378dc99bbcd065e255a30"></span>void <code class="descname">operator()</code><span class="sig-paren">(</span><a class="reference internal" href="classCutterPlugin.html#_CPPv212CutterPlugin" title="CutterPlugin">CutterPlugin</a> *<em>plugin</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13PluginManager16PluginTerminatorclEP12CutterPlugin" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 </dd></dl>
 
 </div>
