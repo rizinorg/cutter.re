@@ -196,6 +196,35 @@ look like:</p>
 <h3>Functions documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
 <p>You can find the classes documentation in the API Reference menu item.</p>
 </div>
+<div class="section" id="updating-the-submodules">
+<h3>Updating the submodules<a class="headerlink" href="#updating-the-submodules" title="Permalink to this headline">¶</a></h3>
+<p>Git submodules play a major part in Cutter. This, because Cutter is powered
+by radare2, its parent project, and it tries to stay up-to-date with its
+recent version, which allows us to implement new features, and enjoy bug
+fixes and performance improvements on radare2. Often, we need to update
+the radare2 submodule or others, in order to push the most recent
+version of them to Cutter.</p>
+<p>You can view the list of all the submodules from the cutter root folder with:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">file</span> <span class="o">.</span><span class="n">gitmodules</span> <span class="o">--</span><span class="n">get</span><span class="o">-</span><span class="n">regexp</span> <span class="n">path</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">&#39;{ print $2 }&#39;</span>
+</pre></div>
+</div>
+<p>To update all the submodules at once, run these commands from the
+cutter root folder:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">foreach</span> <span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">submodule_name_1</span> <span class="n">submodule_name_2</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Update submodules&quot;</span>
+</pre></div>
+</div>
+<p>More likely, you’ll only need to update the radare2 submodule.
+In order to update one submodule individually, use the following code:</p>
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">radare2</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">pull</span>
+<span class="n">cd</span> <span class="o">..</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">radare2</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Update radare2 submodule&quot;</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
