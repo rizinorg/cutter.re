@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Contributing &#8212; Cutter 1.10.1 documentation</title>
+    <title>Developer documentation &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Plugins" href="plugins.html" />
+    <link rel="next" title="First time contributing" href="dev-doc/first-time.html" />
     <link rel="prev" title="Common errors" href="common-errors.html" />
 
   </head>
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="plugins.html" title="Plugins"
+          <a href="dev-doc/first-time.html" title="First time contributing"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="common-errors.html" title="Common errors"
@@ -52,11 +52,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="contributing">
-<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="developer-documentation">
+<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline">¶</a></h1>
 <p>This page shows some hints about the coding conventions.</p>
-<div class="section" id="coding-advices">
-<h2>Coding advices<a class="headerlink" href="#coding-advices" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dev-doc/first-time.html">First time contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+</ul>
+</div>
+<div class="section" id="cutter-coding-advices">
+<h2>Cutter coding advices<a class="headerlink" href="#cutter-coding-advices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cuttercore-class">
 <h3>CutterCore class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
 <p>This is the main class where every link with r2 is made. It is <em>unique</em>
@@ -98,10 +104,8 @@ so your widget refreshes its output when radare2 seek is modified
 (switching to another function, etc.).</p>
 </div>
 </div>
-<div class="section" id="general-coding-guidelines">
-<h2>General coding guidelines<a class="headerlink" href="#general-coding-guidelines" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="coding-style">
-<h3>Coding style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h3>
+<h2>Coding style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
 <p>In general, we follow <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a> to
 format the code. If in doubt, you can use <a class="reference external" href="https://sourceforge.net/projects/astyle/files/astyle/astyle%202.06/">AStyle
 2.06</a>
@@ -131,7 +135,7 @@ to the style is:</p>
 </pre></div>
 </div>
 <div class="section" id="includes">
-<h4>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h4>
+<h3>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h3>
 <p>Strive to include only <strong>required</strong> definitions inside header files.
 This will avoid triggering additional unnecessary compilations.</p>
 <p>If you only need to know that a class exists but don’t need the prototype,
@@ -155,7 +159,7 @@ Finally, include the standard C++ headers you need.</p>
 <p>Includes must be sorted by alphabetical order.</p>
 </div>
 <div class="section" id="docstrings">
-<h4>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h4>
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h3>
 <p>Our API reference is generated using Doxygen, so when it comes to
 function documentation, please use the following format:</p>
 <div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="o">/**</span>
@@ -166,7 +170,7 @@ function documentation, please use the following format:</p>
 </div>
 </div>
 <div class="section" id="loops">
-<h4>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h4>
+<h3>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
 <p>We use the C++11 foreach loop style, which means any “foreach” loop should
 look like:</p>
 <div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">QJsonValue</span> <span class="n">value</span> <span class="p">:</span> <span class="n">importsArray</span><span class="p">)</span> <span class="p">{</span>
@@ -176,7 +180,7 @@ look like:</p>
 </div>
 </div>
 <div class="section" id="nullptr">
-<h4>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this headline">¶</a></h4>
+<h3>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this headline">¶</a></h3>
 <p>Please do not use <code class="docutils literal"><span class="pre">0</span></code> nor <code class="docutils literal"><span class="pre">Q_NULLPTR</span></code>, only use <code class="docutils literal"><span class="pre">nullptr</span></code>.</p>
 <p>Example:</p>
 <div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">QObject</span> <span class="o">*</span><span class="nb">object</span> <span class="o">=</span> <span class="n">nullptr</span><span class="p">;</span>
@@ -184,14 +188,17 @@ look like:</p>
 </div>
 </div>
 <div class="section" id="connecting-signals">
-<h4>Connecting signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h4>
+<h3>Connecting signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h3>
 <p>To connect a signal to a slot, this is the preferred syntax:</p>
 <div class="code cpp highlight-default"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QObject</span><span class="p">::</span><span class="n">destroyed</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyObject</span><span class="p">::</span><span class="n">objectDestroyed</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>The main reason is that this syntax allows the use of lambda functions.</p>
+<p>This syntax performs compile-time type checks and allows the use of lambda
+functions. Other approaches for connecting signals silently break at runtime.</p>
 </div>
 </div>
+<div class="section" id="general-coding-advices">
+<h2>General coding advices<a class="headerlink" href="#general-coding-advices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="functions-documentation">
 <h3>Functions documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
 <p>You can find the classes documentation in the API Reference menu item.</p>
@@ -225,6 +232,14 @@ In order to update one submodule individually, use the following code:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="useful-resources-to-learn-more-about-qt-development">
+<h3>Useful resources to learn more about Qt development<a class="headerlink" href="#useful-resources-to-learn-more-about-qt-development" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">Signals &amp; Slots</a></li>
+<li><a class="reference external" href="https://doc.qt.io/qt-5/model-view-programming.html">Model/View Programming</a> - read this if you are going to work with list or table-like widgets</li>
+<li><a class="reference external" href="https://doc.qt.io/qt-5/qaction.html#details">QAction</a></li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -244,9 +259,12 @@ In order to update one submodule individually, use the following code:</p>
 <li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="building.html">Building</a></li>
 <li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#coding-advices">Coding advices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#general-coding-guidelines">General coding guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev-doc/first-time.html">First time contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cutter-coding-advices">Cutter coding advices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-style">Coding style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-coding-advices">General coding advices</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
