@@ -1,0 +1,158 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>File Menu &#8212; Cutter 1.10.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.10.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Graph Widget Context Menu" href="graph-widget-context-menu.html" />
+    <link rel="prev" title="Edit Menu" href="edit-menu.html" />
+
+  </head>
+  <body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="graph-widget-context-menu.html" title="Graph Widget Context Menu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="edit-menu.html" title="Edit Menu"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.10.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../user-docs.html" >User documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../menus.html" accesskey="U">Menus</a> &#187;</li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="file-menu">
+<h1>File Menu<a class="headerlink" href="#file-menu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="new-instance-of-cutter">
+<h2>New Instance of Cutter<a class="headerlink" href="#new-instance-of-cutter" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Open a new instance of Cutter to start a new session. This option will open a new window of Cutter without exiting the current session.</p>
+<p><strong>Steps:</strong> File -&gt; New</p>
+<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> + <code class="kbd docutils literal"><span class="pre">N</span></code></p>
+</div>
+<div class="section" id="map-a-new-file">
+<h2>Map a new file<a class="headerlink" href="#map-a-new-file" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to map the contents of other files into the same I/O space used to contain the loaded binary. The new contents can be placed at random or specific offsets.
+Specifically, Cutter is able to open files and map portions of them at random or specific places in memory. It is the perfect basic tooling to reproduce an environment like a core file, a debug session, or a framework by also loading and mapping all the libraries and files the binary depends on.</p>
+<p><strong>Steps:</strong> File -&gt; Open</p>
+<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> + <code class="kbd docutils literal"><span class="pre">O</span></code></p>
+</div>
+<div class="section" id="import-a-pdb-file">
+<h2>Import a PDB file<a class="headerlink" href="#import-a-pdb-file" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to load additional debugging information by loading external PDB files. Unlike other platforms, Cutter does not rely on Windows API to parse a PDB files, thus they can be loaded on any other supported platform like Linux or macOS.</p>
+<p><strong>Steps:</strong> File -&gt; Import PDB</p>
+</div>
+<div class="section" id="save-project">
+<h2>Save project<a class="headerlink" href="#save-project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Save your session to a project. If no project file assigned to your session, the “Save as…” dialog will open.</p>
+<p><strong>Steps:</strong> File -&gt; Save</p>
+<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> + <code class="kbd docutils literal"><span class="pre">S</span></code></p>
+</div>
+<div class="section" id="save-project-as">
+<h2>Save project as…<a class="headerlink" href="#save-project-as" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Save the current state of your session, including function names, comments, and more.
+On the saving dialog, choose the project type that fits your needs.
+<strong>*Note:</strong> This feature is currently unstable and under constructions.*</p>
+<p><strong>Steps:</strong> File -&gt; Save As…</p>
+</div>
+<div class="section" id="export-to-code">
+<h2>Export to code<a class="headerlink" href="#export-to-code" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Export the entire binary in different formats that later can be used in your favorite programming language. The feature supports many formats such as Python arrays, java, several C array formats, javascript, and more.
+<strong>*Note:</strong> This isn’t a decompilation feature.*</p>
+<p><strong>Steps:</strong> File -&gt; Export as code</p>
+</div>
+<div class="section" id="run-a-radare2-script">
+<h2>Run a radare2 script<a class="headerlink" href="#run-a-radare2-script" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to execute radare2 scripts to automate task or transfer information.</p>
+<p><strong>Steps:</strong> File -&gt; Run Script</p>
+</div>
+<div class="section" id="quit-cutter">
+<h2>Quit Cutter<a class="headerlink" href="#quit-cutter" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Quit and exit your current session of Cutter. On exit, you’ll be asked whether you want to save your session in order to avoid losing data.</p>
+<p><strong>Steps:</strong> File -&gt; Quit</p>
+<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">Ctrl</span></code> + <code class="kbd docutils literal"><span class="pre">Q</span></code></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers-docs.html">Developer documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../menus.html">Menus</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, The Cutter Developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+    </div>
+    
+
+  </body>
+</html>
