@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>GraphvizLayout &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="HeadersModel" href="classHeadersModel.html" />
     <link rel="prev" title="GraphWidget" href="classGraphWidget.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,39 +47,38 @@
   <div class="section" id="graphvizlayout">
 <h1>GraphvizLayout<a class="headerlink" href="#graphvizlayout" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv214GraphvizLayout">
-<span id="GraphvizLayout"></span><span class="target" id="classGraphvizLayout"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">GraphvizLayout</code><a class="headerlink" href="#_CPPv214GraphvizLayout" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="classGraphLayout.html#classGraphLayout"><span class="std std-ref">GraphLayout</span></a></p>
-<div class="breathe-sectiondef docutils container">
+<dt id="_CPPv414GraphvizLayout">
+<span id="_CPPv314GraphvizLayout"></span><span id="_CPPv214GraphvizLayout"></span><span id="GraphvizLayout"></span><span class="target" id="classGraphvizLayout"></span><em class="property">class </em><code class="sig-name descname">GraphvizLayout</code> : <em class="property">public</em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a><a class="headerlink" href="#_CPPv414GraphvizLayout" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N14GraphvizLayout8LineTypeE">
-<span id="GraphvizLayout::LineType"></span><span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700f"></span><em class="property">enum </em><code class="descname">LineType</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout8LineTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N14GraphvizLayout8LineTypeE">
+<span id="_CPPv3N14GraphvizLayout8LineTypeE"></span><span id="_CPPv2N14GraphvizLayout8LineTypeE"></span><span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700f"></span><em class="property">enum </em><code class="sig-name descname">LineType</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout8LineTypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N14GraphvizLayout5OrthoE">
-<span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700fa170d5dfdfd387d456a0749b4a8e1524f"></span><code class="descname">Ortho</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout5OrthoE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14GraphvizLayout5OrthoE">
+<span id="_CPPv3N14GraphvizLayout5OrthoE"></span><span id="_CPPv2N14GraphvizLayout5OrthoE"></span><span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700fa170d5dfdfd387d456a0749b4a8e1524f"></span><code class="sig-name descname">Ortho</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout5OrthoE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N14GraphvizLayout8PolylineE">
-<span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700faf8fb02b84176d0b0f0007abfd9264fb9"></span><code class="descname">Polyline</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout8PolylineE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14GraphvizLayout8PolylineE">
+<span id="_CPPv3N14GraphvizLayout8PolylineE"></span><span id="_CPPv2N14GraphvizLayout8PolylineE"></span><span class="target" id="classGraphvizLayout_1adbcfc2c91e6f41eb227905130c16700faf8fb02b84176d0b0f0007abfd9264fb9"></span><code class="sig-name descname">Polyline</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout8PolylineE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="_CPPv2N14GraphvizLayout9DirectionE">
-<span id="GraphvizLayout::Direction"></span><span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebee"></span><em class="property">enum </em><code class="descname">Direction</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout9DirectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N14GraphvizLayout9DirectionE">
+<span id="_CPPv3N14GraphvizLayout9DirectionE"></span><span id="_CPPv2N14GraphvizLayout9DirectionE"></span><span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebee"></span><em class="property">enum </em><code class="sig-name descname">Direction</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout9DirectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N14GraphvizLayout2TBE">
-<span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeeaff88442a425c06d961f97bccb11ddf5d"></span><code class="descname">TB</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout2TBE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14GraphvizLayout2TBE">
+<span id="_CPPv3N14GraphvizLayout2TBE"></span><span id="_CPPv2N14GraphvizLayout2TBE"></span><span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeeaff88442a425c06d961f97bccb11ddf5d"></span><code class="sig-name descname">TB</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout2TBE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N14GraphvizLayout2LRE">
-<span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeea90a7c45eaffbd575ca6fb361e6d170a4"></span><code class="descname">LR</code><a class="headerlink" href="#_CPPv2N14GraphvizLayout2LRE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14GraphvizLayout2LRE">
+<span id="_CPPv3N14GraphvizLayout2LRE"></span><span id="_CPPv2N14GraphvizLayout2LRE"></span><span class="target" id="classGraphvizLayout_1ac84b7908b643696c3fd481131e30ebeea90a7c45eaffbd575ca6fb361e6d170a4"></span><code class="sig-name descname">LR</code><a class="headerlink" href="#_CPPv4N14GraphvizLayout2LRE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -98,13 +87,13 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N14GraphvizLayout14GraphvizLayoutE8LineType9Direction">
-<span id="GraphvizLayout::GraphvizLayout__LineType.Direction"></span><span class="target" id="classGraphvizLayout_1a239439ee46de956c805766f45573d035"></span><code class="descname">GraphvizLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N14GraphvizLayout8LineTypeE" title="GraphvizLayout::LineType">LineType</a> <em>lineType</em>, <a class="reference internal" href="#_CPPv2N14GraphvizLayout9DirectionE" title="GraphvizLayout::Direction">Direction</a> <em>direction</em> = Direction::TB<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14GraphvizLayout14GraphvizLayoutE8LineType9Direction" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14GraphvizLayout14GraphvizLayoutE8LineType9Direction">
+<span id="_CPPv3N14GraphvizLayout14GraphvizLayoutE8LineType9Direction"></span><span id="_CPPv2N14GraphvizLayout14GraphvizLayoutE8LineType9Direction"></span><span id="GraphvizLayout::GraphvizLayout__LineType.Direction"></span><span class="target" id="classGraphvizLayout_1a239439ee46de956c805766f45573d035"></span><code class="sig-name descname">GraphvizLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N14GraphvizLayout8LineTypeE" title="GraphvizLayout::LineType">LineType</a> <em>lineType</em>, <a class="reference internal" href="#_CPPv4N14GraphvizLayout9DirectionE" title="GraphvizLayout::Direction">Direction</a> <em>direction</em> = <a class="reference internal" href="#_CPPv4N14GraphvizLayout9DirectionE" title="GraphvizLayout::Direction">Direction</a>::TB<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14GraphvizLayout14GraphvizLayoutE8LineType9Direction" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi">
-<span id="GraphvizLayout::CalculateLayout__std::unordered_map:ut64.GraphBlock:R.ut64.iR.iRC"></span><span class="target" id="classGraphvizLayout_1a8d5f5de58e692df377b0627ff4367c5d"></span>void <code class="descname">CalculateLayout</code><span class="sig-paren">(</span>std::unordered_map&lt;ut64, GraphBlock&gt; &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi">
+<span id="_CPPv3NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi"></span><span id="_CPPv2NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi"></span><span id="GraphvizLayout::CalculateLayout__std::unordered_map:ut64.GraphBlock:R.ut64.iR.iRC"></span><span class="target" id="classGraphvizLayout_1a8d5f5de58e692df377b0627ff4367c5d"></span>void <code class="sig-name descname">CalculateLayout</code><span class="sig-paren">(</span>std::unordered_map&lt;ut64, GraphBlock&gt; &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14GraphvizLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -122,7 +111,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -144,15 +133,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -162,7 +151,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>XrefModel &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="XrefsDialog" href="classXrefsDialog.html" />
     <link rel="prev" title="WelcomeDialog" href="classWelcomeDialog.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,33 +47,32 @@
   <div class="section" id="xrefmodel">
 <h1>XrefModel<a class="headerlink" href="#xrefmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv29XrefModel">
-<span id="XrefModel"></span><span class="target" id="classXrefModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">XrefModel</code><a class="headerlink" href="#_CPPv29XrefModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
-<div class="breathe-sectiondef docutils container">
+<dt id="_CPPv49XrefModel">
+<span id="_CPPv39XrefModel"></span><span id="_CPPv29XrefModel"></span><span id="XrefModel"></span><span class="target" id="classXrefModel"></span><em class="property">class </em><code class="sig-name descname">XrefModel</code> : <em class="property">public</em> AddressableItemModel&lt;QAbstractListModel&gt;<a class="headerlink" href="#_CPPv49XrefModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N9XrefModel7ColumnsE">
-<span id="XrefModel::Columns"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91d"></span><em class="property">enum </em><code class="descname">Columns</code><a class="headerlink" href="#_CPPv2N9XrefModel7ColumnsE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N9XrefModel7ColumnsE">
+<span id="_CPPv3N9XrefModel7ColumnsE"></span><span id="_CPPv2N9XrefModel7ColumnsE"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91d"></span><em class="property">enum </em><code class="sig-name descname">Columns</code><a class="headerlink" href="#_CPPv4N9XrefModel7ColumnsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N9XrefModel6OFFSETE">
-<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da379afa0499991a057938e929891c8a8f"></span><code class="descname">OFFSET</code> = 0<a class="headerlink" href="#_CPPv2N9XrefModel6OFFSETE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel6OFFSETE">
+<span id="_CPPv3N9XrefModel6OFFSETE"></span><span id="_CPPv2N9XrefModel6OFFSETE"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da379afa0499991a057938e929891c8a8f"></span><code class="sig-name descname">OFFSET</code> = 0<a class="headerlink" href="#_CPPv4N9XrefModel6OFFSETE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N9XrefModel4TYPEE">
-<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da62faf75979a32ace242a7a09dfae6849"></span><code class="descname">TYPE</code><a class="headerlink" href="#_CPPv2N9XrefModel4TYPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel4TYPEE">
+<span id="_CPPv3N9XrefModel4TYPEE"></span><span id="_CPPv2N9XrefModel4TYPEE"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da62faf75979a32ace242a7a09dfae6849"></span><code class="sig-name descname">TYPE</code><a class="headerlink" href="#_CPPv4N9XrefModel4TYPEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N9XrefModel4CODEE">
-<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da25f57c5842c3242fe47e83593545e0e4"></span><code class="descname">CODE</code><a class="headerlink" href="#_CPPv2N9XrefModel4CODEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel4CODEE">
+<span id="_CPPv3N9XrefModel4CODEE"></span><span id="_CPPv2N9XrefModel4CODEE"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91da25f57c5842c3242fe47e83593545e0e4"></span><code class="sig-name descname">CODE</code><a class="headerlink" href="#_CPPv4N9XrefModel4CODEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N9XrefModel5COUNTE">
-<span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91dae42d4fcf982a6b16568d178d4d5c5c95"></span><code class="descname">COUNT</code><a class="headerlink" href="#_CPPv2N9XrefModel5COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel5COUNTE">
+<span id="_CPPv3N9XrefModel5COUNTE"></span><span id="_CPPv2N9XrefModel5COUNTE"></span><span class="target" id="classXrefModel_1aed877ce910ee4d04d3c732562e46d91dae42d4fcf982a6b16568d178d4d5c5c95"></span><code class="sig-name descname">COUNT</code><a class="headerlink" href="#_CPPv4N9XrefModel5COUNTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -92,54 +81,54 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N9XrefModel9XrefModelEP7QObject">
-<span id="XrefModel::XrefModel__QObjectP"></span><span class="target" id="classXrefModel_1abec40b42a86079aaee329a74f5081ecc"></span><code class="descname">XrefModel</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel9XrefModelEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel9XrefModelEP7QObject">
+<span id="_CPPv3N9XrefModel9XrefModelEP7QObject"></span><span id="_CPPv2N9XrefModel9XrefModelEP7QObject"></span><span id="XrefModel::XrefModel__QObjectP"></span><span class="target" id="classXrefModel_1abec40b42a86079aaee329a74f5081ecc"></span><code class="sig-name descname">XrefModel</code><span class="sig-paren">(</span>QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9XrefModel9XrefModelEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N9XrefModel13readForOffsetE3RVAbb">
-<span id="XrefModel::readForOffset__RVA.b.b"></span><span class="target" id="classXrefModel_1af579da88550ad9465ba74e25a9909c19"></span>void <code class="descname">readForOffset</code><span class="sig-paren">(</span>RVA <em>offset</em>, bool <em>to</em>, bool <em>whole_function</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel13readForOffsetE3RVAbb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel13readForOffsetE3RVAbb">
+<span id="_CPPv3N9XrefModel13readForOffsetE3RVAbb"></span><span id="_CPPv2N9XrefModel13readForOffsetE3RVAbb"></span><span id="XrefModel::readForOffset__RVA.b.b"></span><span class="target" id="classXrefModel_1af579da88550ad9465ba74e25a9909c19"></span>void <code class="sig-name descname">readForOffset</code><span class="sig-paren">(</span>RVA <em>offset</em>, bool <em>to</em>, bool <em>whole_function</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9XrefModel13readForOffsetE3RVAbb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK9XrefModel8rowCountERK11QModelIndex">
-<span id="XrefModel::rowCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a1b187b4697cd7b623e213548683876e3"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK9XrefModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK9XrefModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK9XrefModel8rowCountERK11QModelIndex"></span><span id="XrefModel::rowCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a1b187b4697cd7b623e213548683876e3"></span>int <code class="sig-name descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9XrefModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK9XrefModel11columnCountERK11QModelIndex">
-<span id="XrefModel::columnCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1af7bc9bd57cabca6e4a7cffe4b8d56dba"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK9XrefModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK9XrefModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK9XrefModel11columnCountERK11QModelIndex"></span><span id="XrefModel::columnCount__QModelIndexCRC"></span><span class="target" id="classXrefModel_1af7bc9bd57cabca6e4a7cffe4b8d56dba"></span>int <code class="sig-name descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9XrefModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK9XrefModel4dataERK11QModelIndexi">
-<span id="XrefModel::data__QModelIndexCR.iC"></span><span class="target" id="classXrefModel_1a93033a9e6b9d169bb905469192f0ea87"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK9XrefModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK9XrefModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK9XrefModel4dataERK11QModelIndexi"></span><span id="XrefModel::data__QModelIndexCR.iC"></span><span class="target" id="classXrefModel_1a93033a9e6b9d169bb905469192f0ea87"></span>QVariant <code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9XrefModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi">
-<span id="XrefModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classXrefModel_1a7e74e9b891df25b4eaeb8f17b518b4c2"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK9XrefModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK9XrefModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK9XrefModel10headerDataEiN2Qt11OrientationEi"></span><span id="XrefModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classXrefModel_1a7e74e9b891df25b4eaeb8f17b518b4c2"></span>QVariant <code class="sig-name descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9XrefModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK9XrefModel7addressERK11QModelIndex">
-<span id="XrefModel::address__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a9f1abeb571285cddf91d2c04300fe184"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK9XrefModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK9XrefModel7addressERK11QModelIndex">
+<span id="_CPPv3NK9XrefModel7addressERK11QModelIndex"></span><span id="_CPPv2NK9XrefModel7addressERK11QModelIndex"></span><span id="XrefModel::address__QModelIndexCRC"></span><span class="target" id="classXrefModel_1a9f1abeb571285cddf91d2c04300fe184"></span>RVA <code class="sig-name descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9XrefModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="function">
-<dt id="_CPPv2N9XrefModel14xrefTypeStringERK7QString">
-<span id="XrefModel::xrefTypeString__QStringCR"></span><span class="target" id="classXrefModel_1acd4490d7a3714ced26c2739463e02300"></span>QString <code class="descname">xrefTypeString</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N9XrefModel14xrefTypeStringERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel14xrefTypeStringERK7QString">
+<span id="_CPPv3N9XrefModel14xrefTypeStringERK7QString"></span><span id="_CPPv2N9XrefModel14xrefTypeStringERK7QString"></span><span id="XrefModel::xrefTypeString__QStringCR"></span><span class="target" id="classXrefModel_1acd4490d7a3714ced26c2739463e02300"></span>QString <code class="sig-name descname">xrefTypeString</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9XrefModel14xrefTypeStringERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
 <dl class="member">
-<dt id="_CPPv2N9XrefModel19FlagDescriptionRoleE">
-<span id="XrefModel::FlagDescriptionRole__iC"></span><span class="target" id="classXrefModel_1af694cc0bacea6458936b0578d29b7b25"></span><em class="property">const</em> int <code class="descname">FlagDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N9XrefModel19FlagDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N9XrefModel19FlagDescriptionRoleE">
+<span id="_CPPv3N9XrefModel19FlagDescriptionRoleE"></span><span id="_CPPv2N9XrefModel19FlagDescriptionRoleE"></span><span id="XrefModel::FlagDescriptionRole__iC"></span><span class="target" id="classXrefModel_1af694cc0bacea6458936b0578d29b7b25"></span><em class="property">const</em> int <code class="sig-name descname">FlagDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv4N9XrefModel19FlagDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -157,7 +146,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -179,15 +168,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -197,7 +186,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

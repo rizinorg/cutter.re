@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>RefreshDeferrer &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="RefreshDeferrerAccumulator" href="classRefreshDeferrerAccumulator.html" />
     <link rel="prev" title="R2Task" href="classR2Task.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,11 +47,11 @@
   <div class="section" id="refreshdeferrer">
 <h1>RefreshDeferrer<a class="headerlink" href="#refreshdeferrer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv215RefreshDeferrer">
-<span id="RefreshDeferrer"></span><span class="target" id="classRefreshDeferrer"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">RefreshDeferrer</code><a class="headerlink" href="#_CPPv215RefreshDeferrer" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv415RefreshDeferrer">
+<span id="_CPPv315RefreshDeferrer"></span><span id="_CPPv215RefreshDeferrer"></span><span id="RefreshDeferrer"></span><span class="target" id="classRefreshDeferrer"></span><em class="property">class </em><code class="sig-name descname">RefreshDeferrer</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv415RefreshDeferrer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Helper class for deferred refreshing in Widgets. </p>
 <p><a class="reference internal" href="../widgets/classThis.html#classThis"><span class="std std-ref">This</span></a> class can handle the logic necessary to defer the refreshing of widgets when they are not visible. It contains an optional <a class="reference internal" href="classRefreshDeferrerAccumulator.html#classRefreshDeferrerAccumulator"><span class="std std-ref">RefreshDeferrerAccumulator</span></a>, which can be used to accumulate incoming events while refreshing is deferred.</p>
-<p>Example (don’t write it like this in practice, use the convenience methods in <a class="reference internal" href="../widgets/classCutterDockWidget.html#classCutterDockWidget"><span class="std std-ref">CutterDockWidget</span></a>): <div class="highlight-default"><div class="highlight"><pre><span></span>// in the constructor of a widget
+<p>Example (don’t write it like this in practice, use the convenience methods in <a class="reference internal" href="../widgets/classCutterDockWidget.html#classCutterDockWidget"><span class="std std-ref">CutterDockWidget</span></a>): <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// in the constructor of a widget
 this-&gt;refreshDeferrer = new RefreshDeferrer(new ReplacingRefreshDeferrerAccumulator(false), this);
 this-&gt;refreshDeferrer-&gt;registerFor(this);
 connect(this-&gt;refreshDeferrer, &amp;RefreshDeferrer::refreshNow, this, [this](MyParam *param) {
@@ -85,16 +75,14 @@ void MyWidget::doRefresh(MyParam param)
 </pre></div>
 </div>
  </p>
-<p>Inherits from QObject</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject">
-<span id="RefreshDeferrer::RefreshDeferrer__RefreshDeferrerAccumulatorP.QObjectP"></span><span class="target" id="classRefreshDeferrer_1a803a73cb8a879b6d643fbead2e062aa2"></span><code class="descname">RefreshDeferrer</code><span class="sig-paren">(</span><a class="reference internal" href="classRefreshDeferrerAccumulator.html#_CPPv226RefreshDeferrerAccumulator" title="RefreshDeferrerAccumulator">RefreshDeferrerAccumulator</a> *<em>acc</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">acc</span></code>: The accumulator (can be nullptr). The <a class="reference internal" href="#classRefreshDeferrer"><span class="std std-ref">RefreshDeferrer</span></a> takes the ownership! </li>
+<dt id="_CPPv4N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject">
+<span id="_CPPv3N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject"></span><span id="_CPPv2N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject"></span><span id="RefreshDeferrer::RefreshDeferrer__RefreshDeferrerAccumulatorP.QObjectP"></span><span class="target" id="classRefreshDeferrer_1a803a73cb8a879b6d643fbead2e062aa2"></span><code class="sig-name descname">RefreshDeferrer</code><span class="sig-paren">(</span><a class="reference internal" href="classRefreshDeferrerAccumulator.html#_CPPv426RefreshDeferrerAccumulator" title="RefreshDeferrerAccumulator">RefreshDeferrerAccumulator</a> *<em>acc</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RefreshDeferrer15RefreshDeferrerEP26RefreshDeferrerAccumulatorP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">acc</span></code>: The accumulator (can be nullptr). The <a class="reference internal" href="#classRefreshDeferrer"><span class="std std-ref">RefreshDeferrer</span></a> takes the ownership! </p></li>
 </ul>
 </dd>
 </dl>
@@ -102,26 +90,26 @@ void MyWidget::doRefresh(MyParam param)
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N15RefreshDeferrerD0Ev">
-<span id="RefreshDeferrer::~RefreshDeferrer"></span><span class="target" id="classRefreshDeferrer_1a3e621c5c50ffd3968da944fd1b20dbf4"></span><code class="descname">~RefreshDeferrer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RefreshDeferrerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N15RefreshDeferrerD0Ev">
+<span id="_CPPv3N15RefreshDeferrerD0Ev"></span><span id="_CPPv2N15RefreshDeferrerD0Ev"></span><span id="RefreshDeferrer::~RefreshDeferrer"></span><span class="target" id="classRefreshDeferrer_1a3e621c5c50ffd3968da944fd1b20dbf4"></span><code class="sig-name descname">~RefreshDeferrer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RefreshDeferrerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams">
-<span id="RefreshDeferrer::attemptRefresh__RefreshDeferrerParams"></span><span class="target" id="classRefreshDeferrer_1a1b0b0736d97538be3661f799bcd862ac"></span>bool <code class="descname">attemptRefresh</code><span class="sig-paren">(</span>RefreshDeferrerParams <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams">
+<span id="_CPPv3N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams"></span><span id="_CPPv2N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams"></span><span id="RefreshDeferrer::attemptRefresh__RefreshDeferrerParams"></span><span class="target" id="classRefreshDeferrer_1a1b0b0736d97538be3661f799bcd862ac"></span>bool <code class="sig-name descname">attemptRefresh</code><span class="sig-paren">(</span>RefreshDeferrerParams <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RefreshDeferrer14attemptRefreshE21RefreshDeferrerParams" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N15RefreshDeferrer11registerForEP16CutterDockWidget">
-<span id="RefreshDeferrer::registerFor__CutterDockWidgetP"></span><span class="target" id="classRefreshDeferrer_1a4b694f6a19001bd14f2500945124f805"></span>void <code class="descname">registerFor</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv216CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>dockWidget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N15RefreshDeferrer11registerForEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N15RefreshDeferrer11registerForEP16CutterDockWidget">
+<span id="_CPPv3N15RefreshDeferrer11registerForEP16CutterDockWidget"></span><span id="_CPPv2N15RefreshDeferrer11registerForEP16CutterDockWidget"></span><span id="RefreshDeferrer::registerFor__CutterDockWidgetP"></span><span class="target" id="classRefreshDeferrer_1a4b694f6a19001bd14f2500945124f805"></span>void <code class="sig-name descname">registerFor</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>dockWidget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RefreshDeferrer11registerForEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Signal</p>
-<dl class="member">
-<dt>
-<span class="target" id="classRefreshDeferrer_1ae11468303169fdcefe96419aea5d0565"></span><em class="property">signal </em><code class="descname">RefreshDeferrer::refreshNow</code></dt>
+<p class="breathe-sectiondef-title rubric">Signals</p>
+<dl class="function">
+<dt id="_CPPv4N15RefreshDeferrer10refreshNowEK27RefreshDeferrerParamsResult">
+<span id="_CPPv3N15RefreshDeferrer10refreshNowEK27RefreshDeferrerParamsResult"></span><span id="_CPPv2N15RefreshDeferrer10refreshNowEK27RefreshDeferrerParamsResult"></span><span id="RefreshDeferrer::refreshNow__RefreshDeferrerParamsResultC"></span><span class="target" id="classRefreshDeferrer_1ae11468303169fdcefe96419aea5d0565"></span>void <code class="sig-name descname">refreshNow</code><span class="sig-paren">(</span><em class="property">const</em> RefreshDeferrerParamsResult <em>paramsResult</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RefreshDeferrer10refreshNowEK27RefreshDeferrerParamsResult" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -139,7 +127,7 @@ void MyWidget::doRefresh(MyParam param)
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -161,15 +149,15 @@ void MyWidget::doRefresh(MyParam param)
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -179,7 +167,7 @@ void MyWidget::doRefresh(MyParam param)
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

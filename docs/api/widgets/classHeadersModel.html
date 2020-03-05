@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>HeadersModel &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="HeadersProxyModel" href="classHeadersProxyModel.html" />
     <link rel="prev" title="GraphvizLayout" href="classGraphvizLayout.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,44 +47,43 @@
   <div class="section" id="headersmodel">
 <h1>HeadersModel<a class="headerlink" href="#headersmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv212HeadersModel">
-<span id="HeadersModel"></span><span class="target" id="classHeadersModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">HeadersModel</code><a class="headerlink" href="#_CPPv212HeadersModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
-<div class="breathe-sectiondef docutils container">
+<dt id="_CPPv412HeadersModel">
+<span id="_CPPv312HeadersModel"></span><span id="_CPPv212HeadersModel"></span><span id="HeadersModel"></span><span class="target" id="classHeadersModel"></span><em class="property">class </em><code class="sig-name descname">HeadersModel</code> : <em class="property">public</em> AddressableItemModel&lt;QAbstractListModel&gt;<a class="headerlink" href="#_CPPv412HeadersModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N12HeadersModel6ColumnE">
-<span id="HeadersModel::Column"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N12HeadersModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N12HeadersModel6ColumnE">
+<span id="_CPPv3N12HeadersModel6ColumnE"></span><span id="_CPPv2N12HeadersModel6ColumnE"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6"></span><em class="property">enum </em><code class="sig-name descname">Column</code><a class="headerlink" href="#_CPPv4N12HeadersModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N12HeadersModel12OffsetColumnE">
-<span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6a218e01cb538baa1613e36f57b8da232e"></span><code class="descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv2N12HeadersModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel12OffsetColumnE">
+<span id="_CPPv3N12HeadersModel12OffsetColumnE"></span><span id="_CPPv2N12HeadersModel12OffsetColumnE"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6a218e01cb538baa1613e36f57b8da232e"></span><code class="sig-name descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv4N12HeadersModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12HeadersModel10NameColumnE">
-<span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6aec7539b9748e85b859a28ba1ba12f04e"></span><code class="descname">NameColumn</code><a class="headerlink" href="#_CPPv2N12HeadersModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel10NameColumnE">
+<span id="_CPPv3N12HeadersModel10NameColumnE"></span><span id="_CPPv2N12HeadersModel10NameColumnE"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6aec7539b9748e85b859a28ba1ba12f04e"></span><code class="sig-name descname">NameColumn</code><a class="headerlink" href="#_CPPv4N12HeadersModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12HeadersModel11ValueColumnE">
-<span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6a9d189d8f3395c51c05fd86a5698bb61a"></span><code class="descname">ValueColumn</code><a class="headerlink" href="#_CPPv2N12HeadersModel11ValueColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel11ValueColumnE">
+<span id="_CPPv3N12HeadersModel11ValueColumnE"></span><span id="_CPPv2N12HeadersModel11ValueColumnE"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6a9d189d8f3395c51c05fd86a5698bb61a"></span><code class="sig-name descname">ValueColumn</code><a class="headerlink" href="#_CPPv4N12HeadersModel11ValueColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12HeadersModel11ColumnCountE">
-<span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6afa79a20bdcc150b393cbffdaaaa5a37d"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N12HeadersModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel11ColumnCountE">
+<span id="_CPPv3N12HeadersModel11ColumnCountE"></span><span id="_CPPv2N12HeadersModel11ColumnCountE"></span><span class="target" id="classHeadersModel_1a05c8a357cf6d510d11dee9ed2fb50eb6afa79a20bdcc150b393cbffdaaaa5a37d"></span><code class="sig-name descname">ColumnCount</code><a class="headerlink" href="#_CPPv4N12HeadersModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="_CPPv2N12HeadersModel4RoleE">
-<span id="HeadersModel::Role"></span><span class="target" id="classHeadersModel_1a648b0807810710d7a29a63b6f8fa28e4"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N12HeadersModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N12HeadersModel4RoleE">
+<span id="_CPPv3N12HeadersModel4RoleE"></span><span id="_CPPv2N12HeadersModel4RoleE"></span><span class="target" id="classHeadersModel_1a648b0807810710d7a29a63b6f8fa28e4"></span><em class="property">enum </em><code class="sig-name descname">Role</code><a class="headerlink" href="#_CPPv4N12HeadersModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N12HeadersModel21HeaderDescriptionRoleE">
-<span class="target" id="classHeadersModel_1a648b0807810710d7a29a63b6f8fa28e4ab16cf05cb50a514439cffaa8b4efbdfa"></span><code class="descname">HeaderDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N12HeadersModel21HeaderDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel21HeaderDescriptionRoleE">
+<span id="_CPPv3N12HeadersModel21HeaderDescriptionRoleE"></span><span id="_CPPv2N12HeadersModel21HeaderDescriptionRoleE"></span><span class="target" id="classHeadersModel_1a648b0807810710d7a29a63b6f8fa28e4ab16cf05cb50a514439cffaa8b4efbdfa"></span><code class="sig-name descname">HeaderDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv4N12HeadersModel21HeaderDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -103,45 +92,44 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject">
-<span id="HeadersModel::HeadersModel__QList:HeaderDescription:P.QObjectP"></span><span class="target" id="classHeadersModel_1abd21dbc159d33af694d6a2f112fbe7b7"></span><code class="descname">HeadersModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structHeaderDescription.html#_CPPv217HeaderDescription" title="HeaderDescription">HeaderDescription</a>&gt; *<em>headers</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject">
+<span id="_CPPv3N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject"></span><span id="_CPPv2N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject"></span><span id="HeadersModel::HeadersModel__QList:HeaderDescription:P.QObjectP"></span><span class="target" id="classHeadersModel_1abd21dbc159d33af694d6a2f112fbe7b7"></span><code class="sig-name descname">HeadersModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structHeaderDescription.html#_CPPv417HeaderDescription" title="HeaderDescription">HeaderDescription</a>&gt; *<em>headers</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HeadersModel12HeadersModelEP5QListI17HeaderDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel8rowCountERK11QModelIndex">
-<span id="HeadersModel::rowCount__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a7d332ad466f56e5ae51e1aa7c93dfabf"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK12HeadersModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK12HeadersModel8rowCountERK11QModelIndex"></span><span id="HeadersModel::rowCount__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a7d332ad466f56e5ae51e1aa7c93dfabf"></span>int <code class="sig-name descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel11columnCountERK11QModelIndex">
-<span id="HeadersModel::columnCount__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a069e658cae13cd7c9163c8a4743a5988"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK12HeadersModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK12HeadersModel11columnCountERK11QModelIndex"></span><span id="HeadersModel::columnCount__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a069e658cae13cd7c9163c8a4743a5988"></span>int <code class="sig-name descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel4dataERK11QModelIndexi">
-<span id="HeadersModel::data__QModelIndexCR.iC"></span><span class="target" id="classHeadersModel_1a698547741aaabeb563dc5b4cbb2934d1"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK12HeadersModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK12HeadersModel4dataERK11QModelIndexi"></span><span id="HeadersModel::data__QModelIndexCR.iC"></span><span class="target" id="classHeadersModel_1a698547741aaabeb563dc5b4cbb2934d1"></span>QVariant <code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel10headerDataEiN2Qt11OrientationEi">
-<span id="HeadersModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classHeadersModel_1ae832a73a188d11f622ffcbca208f7d89"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK12HeadersModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK12HeadersModel10headerDataEiN2Qt11OrientationEi"></span><span id="HeadersModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classHeadersModel_1ae832a73a188d11f622ffcbca208f7d89"></span>QVariant <code class="sig-name descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel7addressERK11QModelIndex">
-<span id="HeadersModel::address__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a4300f78a9f76258ec9a5b57623f5b960"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel7addressERK11QModelIndex">
+<span id="_CPPv3NK12HeadersModel7addressERK11QModelIndex"></span><span id="_CPPv2NK12HeadersModel7addressERK11QModelIndex"></span><span id="HeadersModel::address__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a4300f78a9f76258ec9a5b57623f5b960"></span>RVA <code class="sig-name descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12HeadersModel4nameERK11QModelIndex">
-<span id="HeadersModel::name__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a3af357ccc2e8e587618528da45d00f95"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12HeadersModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12HeadersModel4nameERK11QModelIndex">
+<span id="_CPPv3NK12HeadersModel4nameERK11QModelIndex"></span><span id="_CPPv2NK12HeadersModel4nameERK11QModelIndex"></span><span id="HeadersModel::name__QModelIndexCRC"></span><span class="target" id="classHeadersModel_1a3af357ccc2e8e587618528da45d00f95"></span>QString <code class="sig-name descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12HeadersModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get name for item, optional. </p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Item name or empty QString if item doesn’t have short descriptive name. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code>: item intex </p></li>
 </ul>
 </dd>
 </dl>
@@ -163,7 +151,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -185,15 +173,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -203,7 +191,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

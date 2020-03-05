@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>CommentsModel &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="CommentsProxyModel" href="classCommentsProxyModel.html" />
     <link rel="prev" title="ComboQuickFilterView" href="classComboQuickFilterView.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,70 +47,69 @@
   <div class="section" id="commentsmodel">
 <h1>CommentsModel<a class="headerlink" href="#commentsmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv213CommentsModel">
-<span id="CommentsModel"></span><span class="target" id="classCommentsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">CommentsModel</code><a class="headerlink" href="#_CPPv213CommentsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt;&gt;</span></a></p>
-<div class="breathe-sectiondef docutils container">
+<dt id="_CPPv413CommentsModel">
+<span id="_CPPv313CommentsModel"></span><span id="_CPPv213CommentsModel"></span><span id="CommentsModel"></span><span class="target" id="classCommentsModel"></span><em class="property">class </em><code class="sig-name descname">CommentsModel</code> : <em class="property">public</em> AddressableItemModel&lt;&gt;<a class="headerlink" href="#_CPPv413CommentsModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N13CommentsModel6ColumnE">
-<span id="CommentsModel::Column"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4b"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N13CommentsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N13CommentsModel6ColumnE">
+<span id="_CPPv3N13CommentsModel6ColumnE"></span><span id="_CPPv2N13CommentsModel6ColumnE"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4b"></span><em class="property">enum </em><code class="sig-name descname">Column</code><a class="headerlink" href="#_CPPv4N13CommentsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel12OffsetColumnE">
-<span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4baccee79b5175d53dbfe7f77d6c694f3df"></span><code class="descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv2N13CommentsModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel12OffsetColumnE">
+<span id="_CPPv3N13CommentsModel12OffsetColumnE"></span><span id="_CPPv2N13CommentsModel12OffsetColumnE"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4baccee79b5175d53dbfe7f77d6c694f3df"></span><code class="sig-name descname">OffsetColumn</code> = 0<a class="headerlink" href="#_CPPv4N13CommentsModel12OffsetColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel14FunctionColumnE">
-<span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4ba791e64f62ceda8672330bb20d5b60d9c"></span><code class="descname">FunctionColumn</code><a class="headerlink" href="#_CPPv2N13CommentsModel14FunctionColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel14FunctionColumnE">
+<span id="_CPPv3N13CommentsModel14FunctionColumnE"></span><span id="_CPPv2N13CommentsModel14FunctionColumnE"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4ba791e64f62ceda8672330bb20d5b60d9c"></span><code class="sig-name descname">FunctionColumn</code><a class="headerlink" href="#_CPPv4N13CommentsModel14FunctionColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel13CommentColumnE">
-<span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4ba59ba6928c99318156ac2163c98f54d7d"></span><code class="descname">CommentColumn</code><a class="headerlink" href="#_CPPv2N13CommentsModel13CommentColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel13CommentColumnE">
+<span id="_CPPv3N13CommentsModel13CommentColumnE"></span><span id="_CPPv2N13CommentsModel13CommentColumnE"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4ba59ba6928c99318156ac2163c98f54d7d"></span><code class="sig-name descname">CommentColumn</code><a class="headerlink" href="#_CPPv4N13CommentsModel13CommentColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel11ColumnCountE">
-<span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4baf9311d1fd5c79cbfd8d5c2e357a612e4"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N13CommentsModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel11ColumnCountE">
+<span id="_CPPv3N13CommentsModel11ColumnCountE"></span><span id="_CPPv2N13CommentsModel11ColumnCountE"></span><span class="target" id="classCommentsModel_1a8991739229a9e340f6d1571dc8852a4baf9311d1fd5c79cbfd8d5c2e357a612e4"></span><code class="sig-name descname">ColumnCount</code><a class="headerlink" href="#_CPPv4N13CommentsModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="_CPPv2N13CommentsModel12NestedColumnE">
-<span id="CommentsModel::NestedColumn"></span><span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454"></span><em class="property">enum </em><code class="descname">NestedColumn</code><a class="headerlink" href="#_CPPv2N13CommentsModel12NestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N13CommentsModel12NestedColumnE">
+<span id="_CPPv3N13CommentsModel12NestedColumnE"></span><span id="_CPPv2N13CommentsModel12NestedColumnE"></span><span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454"></span><em class="property">enum </em><code class="sig-name descname">NestedColumn</code><a class="headerlink" href="#_CPPv4N13CommentsModel12NestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel18OffsetNestedColumnE">
-<span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454a970ed45db8dc43e8c1f31c4148b93749"></span><code class="descname">OffsetNestedColumn</code> = 0<a class="headerlink" href="#_CPPv2N13CommentsModel18OffsetNestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel18OffsetNestedColumnE">
+<span id="_CPPv3N13CommentsModel18OffsetNestedColumnE"></span><span id="_CPPv2N13CommentsModel18OffsetNestedColumnE"></span><span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454a970ed45db8dc43e8c1f31c4148b93749"></span><code class="sig-name descname">OffsetNestedColumn</code> = 0<a class="headerlink" href="#_CPPv4N13CommentsModel18OffsetNestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel19CommentNestedColumnE">
-<span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454a8e2398f11aabc7e10091e341f7945fd2"></span><code class="descname">CommentNestedColumn</code><a class="headerlink" href="#_CPPv2N13CommentsModel19CommentNestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel19CommentNestedColumnE">
+<span id="_CPPv3N13CommentsModel19CommentNestedColumnE"></span><span id="_CPPv2N13CommentsModel19CommentNestedColumnE"></span><span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454a8e2398f11aabc7e10091e341f7945fd2"></span><code class="sig-name descname">CommentNestedColumn</code><a class="headerlink" href="#_CPPv4N13CommentsModel19CommentNestedColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel17NestedColumnCountE">
-<span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454ac40e051588ae5b000748b7fa6a858e8c"></span><code class="descname">NestedColumnCount</code><a class="headerlink" href="#_CPPv2N13CommentsModel17NestedColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel17NestedColumnCountE">
+<span id="_CPPv3N13CommentsModel17NestedColumnCountE"></span><span id="_CPPv2N13CommentsModel17NestedColumnCountE"></span><span class="target" id="classCommentsModel_1a97178e6512321413656aeafefa54e454ac40e051588ae5b000748b7fa6a858e8c"></span><code class="sig-name descname">NestedColumnCount</code><a class="headerlink" href="#_CPPv4N13CommentsModel17NestedColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="_CPPv2N13CommentsModel4RoleE">
-<span id="CommentsModel::Role"></span><span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N13CommentsModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N13CommentsModel4RoleE">
+<span id="_CPPv3N13CommentsModel4RoleE"></span><span id="_CPPv2N13CommentsModel4RoleE"></span><span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212"></span><em class="property">enum </em><code class="sig-name descname">Role</code><a class="headerlink" href="#_CPPv4N13CommentsModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel22CommentDescriptionRoleE">
-<span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212ae4fb8153fb8b871b9a0b3c8bf0ff5fa7"></span><code class="descname">CommentDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N13CommentsModel22CommentDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel22CommentDescriptionRoleE">
+<span id="_CPPv3N13CommentsModel22CommentDescriptionRoleE"></span><span id="_CPPv2N13CommentsModel22CommentDescriptionRoleE"></span><span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212ae4fb8153fb8b871b9a0b3c8bf0ff5fa7"></span><code class="sig-name descname">CommentDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv4N13CommentsModel22CommentDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N13CommentsModel12FunctionRoleE">
-<span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212a65d9a9848cb207374ef8b01ebebf70dc"></span><code class="descname">FunctionRole</code><a class="headerlink" href="#_CPPv2N13CommentsModel12FunctionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel12FunctionRoleE">
+<span id="_CPPv3N13CommentsModel12FunctionRoleE"></span><span id="_CPPv2N13CommentsModel12FunctionRoleE"></span><span class="target" id="classCommentsModel_1aa4fee87d5d2616969054915f78c6e212a65d9a9848cb207374ef8b01ebebf70dc"></span><code class="sig-name descname">FunctionRole</code><a class="headerlink" href="#_CPPv4N13CommentsModel12FunctionRoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -129,53 +118,53 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject">
-<span id="CommentsModel::CommentsModel__QList:CommentDescription:P.QList:CommentGroup:P.QObjectP"></span><span class="target" id="classCommentsModel_1a3ee03f01b7e1772db1574f4eafcbf7bf"></span><code class="descname">CommentsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structCommentDescription.html#_CPPv218CommentDescription" title="CommentDescription">CommentDescription</a>&gt; *<em>comments</em>, QList&lt;<a class="reference internal" href="structCommentGroup.html#_CPPv212CommentGroup" title="CommentGroup">CommentGroup</a>&gt; *<em>nestedComments</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject">
+<span id="_CPPv3N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject"></span><span id="_CPPv2N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject"></span><span id="CommentsModel::CommentsModel__QList:CommentDescription:P.QList:CommentGroup:P.QObjectP"></span><span class="target" id="classCommentsModel_1a3ee03f01b7e1772db1574f4eafcbf7bf"></span><code class="sig-name descname">CommentsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structCommentDescription.html#_CPPv418CommentDescription" title="CommentDescription">CommentDescription</a>&gt; *<em>comments</em>, QList&lt;<a class="reference internal" href="structCommentGroup.html#_CPPv412CommentGroup" title="CommentGroup">CommentGroup</a>&gt; *<em>nestedComments</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13CommentsModel13CommentsModelEP5QListI18CommentDescriptionEP5QListI12CommentGroupEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex">
-<span id="CommentsModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a04095afe801b96cc17c2c55da75278f5"></span>QModelIndex <code class="descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel5indexEiiRK11QModelIndex">
+<span id="_CPPv3NK13CommentsModel5indexEiiRK11QModelIndex"></span><span id="_CPPv2NK13CommentsModel5indexEiiRK11QModelIndex"></span><span id="CommentsModel::index__i.i.QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a04095afe801b96cc17c2c55da75278f5"></span>QModelIndex <code class="sig-name descname">index</code><span class="sig-paren">(</span>int <em>row</em>, int <em>column</em>, <em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel5indexEiiRK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel6parentERK11QModelIndex">
-<span id="CommentsModel::parent__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a963097e780e6ceba0f92e0763f2100e4"></span>QModelIndex <code class="descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel6parentERK11QModelIndex">
+<span id="_CPPv3NK13CommentsModel6parentERK11QModelIndex"></span><span id="_CPPv2NK13CommentsModel6parentERK11QModelIndex"></span><span id="CommentsModel::parent__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a963097e780e6ceba0f92e0763f2100e4"></span>QModelIndex <code class="sig-name descname">parent</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel6parentERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel8rowCountERK11QModelIndex">
-<span id="CommentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1af3ca43ba03725d0a58047980c37c1910"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK13CommentsModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK13CommentsModel8rowCountERK11QModelIndex"></span><span id="CommentsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1af3ca43ba03725d0a58047980c37c1910"></span>int <code class="sig-name descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel11columnCountERK11QModelIndex">
-<span id="CommentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a392cdadeee400a52881edacfd108a5aa"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK13CommentsModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK13CommentsModel11columnCountERK11QModelIndex"></span><span id="CommentsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a392cdadeee400a52881edacfd108a5aa"></span>int <code class="sig-name descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel4dataERK11QModelIndexi">
-<span id="CommentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classCommentsModel_1a8a22723ce93563ae02a6c0f841f827a1"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK13CommentsModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK13CommentsModel4dataERK11QModelIndexi"></span><span id="CommentsModel::data__QModelIndexCR.iC"></span><span class="target" id="classCommentsModel_1a8a22723ce93563ae02a6c0f841f827a1"></span>QVariant <code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi">
-<span id="CommentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classCommentsModel_1aa278dd2d43973c9fd42d21c1ce583040"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK13CommentsModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK13CommentsModel10headerDataEiN2Qt11OrientationEi"></span><span id="CommentsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classCommentsModel_1aa278dd2d43973c9fd42d21c1ce583040"></span>QVariant <code class="sig-name descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel8isNestedEv">
-<span id="CommentsModel::isNestedC"></span><span class="target" id="classCommentsModel_1a94f0a7e9334208af8b77fc9987e0af02"></span>bool <code class="descname">isNested</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel8isNestedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel8isNestedEv">
+<span id="_CPPv3NK13CommentsModel8isNestedEv"></span><span id="_CPPv2NK13CommentsModel8isNestedEv"></span><span id="CommentsModel::isNestedC"></span><span class="target" id="classCommentsModel_1a94f0a7e9334208af8b77fc9987e0af02"></span>bool <code class="sig-name descname">isNested</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel8isNestedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N13CommentsModel9setNestedEb">
-<span id="CommentsModel::setNested__b"></span><span class="target" id="classCommentsModel_1a8a43c36c7d09c4ad781c819d55105a14"></span>void <code class="descname">setNested</code><span class="sig-paren">(</span>bool <em>nested</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N13CommentsModel9setNestedEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13CommentsModel9setNestedEb">
+<span id="_CPPv3N13CommentsModel9setNestedEb"></span><span id="_CPPv2N13CommentsModel9setNestedEb"></span><span id="CommentsModel::setNested__b"></span><span class="target" id="classCommentsModel_1a8a43c36c7d09c4ad781c819d55105a14"></span>void <code class="sig-name descname">setNested</code><span class="sig-paren">(</span>bool <em>nested</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13CommentsModel9setNestedEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK13CommentsModel7addressERK11QModelIndex">
-<span id="CommentsModel::address__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a07fa1d7996f4d7109ac21fd91812665e"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK13CommentsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK13CommentsModel7addressERK11QModelIndex">
+<span id="_CPPv3NK13CommentsModel7addressERK11QModelIndex"></span><span id="_CPPv2NK13CommentsModel7addressERK11QModelIndex"></span><span id="CommentsModel::address__QModelIndexCRC"></span><span class="target" id="classCommentsModel_1a07fa1d7996f4d7109ac21fd91812665e"></span>RVA <code class="sig-name descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13CommentsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -193,7 +182,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -215,15 +204,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -233,7 +222,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

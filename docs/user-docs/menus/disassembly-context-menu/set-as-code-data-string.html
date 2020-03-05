@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Set as CodeDataString &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Set Current Bits" href="set-current-bits.html" />
     <link rel="prev" title="Patching" href="patching.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -61,49 +51,49 @@
 <h2>Set as Code<a class="headerlink" href="#set-as-code" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Set the current instruction to Code. This will force Cutter to display the current instruction as Code.</p>
 <p><strong>Steps:</strong> Set as… -&gt; Code</p>
-<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">C</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">C</kbd></p>
 </div>
 <div class="section" id="set-as-string-auto-detect-length">
 <h2>Set as String (auto-detect length)<a class="headerlink" href="#set-as-string-auto-detect-length" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Set the current location to String. This will tell Cutter to treat the current address as a string and will auto-detect the length (e.g by looking for a string null-terminator).</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Auto-detect</span></code></p>
-<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">A</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Auto-detect</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">A</kbd></p>
 </div>
 <div class="section" id="remove-string-definition">
 <h2>Remove string definition<a class="headerlink" href="#remove-string-definition" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Remove a defined string in this address. Cutter will then treat this location as a code.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Remove</span></code>.</p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Remove</span></code>.</p>
 </div>
 <div class="section" id="set-as-string-advance-dialog">
 <h2>Set as String (Advance dialog)<a class="headerlink" href="#set-as-string-advance-dialog" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Set the current location to String. This will open a String definition dialog in which the user will supply the length and the type (ASCII, UTF8, …) of the string. Cutter will then treat the current address as the defined string.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Advanced</span></code>.</p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">String...</span> <span class="pre">-&gt;</span> <span class="pre">Advanced</span></code>.</p>
 </div>
 <div class="section" id="set-as-data-bytes">
 <h2>Set as data (bytes)<a class="headerlink" href="#set-as-data-bytes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Convert the instruction to data of Bytes.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Byte</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Byte</span></code></p>
 </div>
 <div class="section" id="set-as-data-word">
 <h2>Set as data (Word)<a class="headerlink" href="#set-as-data-word" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Convert the instruction to data of Words.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Word</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Word</span></code></p>
 </div>
 <div class="section" id="set-as-data-dword">
 <h2>Set as data (Dword)<a class="headerlink" href="#set-as-data-dword" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Convert the instruction to data of Dwords.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Dword</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Dword</span></code></p>
 </div>
 <div class="section" id="set-as-data-qword">
 <h2>Set as data (Qword)<a class="headerlink" href="#set-as-data-qword" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Convert the instruction to data of Qwords.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Qword</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">Qword</span></code></p>
 </div>
 <div class="section" id="set-as-data-advanced">
 <h2>Set as data (Advanced)<a class="headerlink" href="#set-as-data-advanced" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Open an advanced dialog to define the custom data type of the current instruction.</p>
-<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">...</span></code></p>
-<p><strong>Shortcut:</strong> <code class="kbd docutils literal"><span class="pre">*</span></code></p>
+<p><strong>Steps:</strong> Right click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">as...</span> <span class="pre">-&gt;</span> <span class="pre">Data...</span> <span class="pre">-&gt;</span> <span class="pre">...</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">*</kbd></p>
 </div>
 </div>
 
@@ -117,7 +107,7 @@
           <img class="logo" src="../../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../../index.html">Cutter documentation</a>
-<h3><a href="../../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../shortcuts.html">Shortcuts</a></li>
@@ -133,15 +123,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -151,7 +141,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

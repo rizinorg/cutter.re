@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>SymbolsModel &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="SymbolsProxyModel" href="classSymbolsProxyModel.html" />
     <link rel="prev" title="StringsWidget" href="classStringsWidget.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,44 +47,43 @@
   <div class="section" id="symbolsmodel">
 <h1>SymbolsModel<a class="headerlink" href="#symbolsmodel" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv212SymbolsModel">
-<span id="SymbolsModel"></span><span class="target" id="classSymbolsModel"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">SymbolsModel</code><a class="headerlink" href="#_CPPv212SymbolsModel" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="../common/classAddressableItemModel.html#classAddressableItemModel"><span class="std std-ref">AddressableItemModel&lt; QAbstractListModel &gt;</span></a></p>
-<div class="breathe-sectiondef docutils container">
+<dt id="_CPPv412SymbolsModel">
+<span id="_CPPv312SymbolsModel"></span><span id="_CPPv212SymbolsModel"></span><span id="SymbolsModel"></span><span class="target" id="classSymbolsModel"></span><em class="property">class </em><code class="sig-name descname">SymbolsModel</code> : <em class="property">public</em> AddressableItemModel&lt;QAbstractListModel&gt;<a class="headerlink" href="#_CPPv412SymbolsModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N12SymbolsModel6ColumnE">
-<span id="SymbolsModel::Column"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531"></span><em class="property">enum </em><code class="descname">Column</code><a class="headerlink" href="#_CPPv2N12SymbolsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N12SymbolsModel6ColumnE">
+<span id="_CPPv3N12SymbolsModel6ColumnE"></span><span id="_CPPv2N12SymbolsModel6ColumnE"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531"></span><em class="property">enum </em><code class="sig-name descname">Column</code><a class="headerlink" href="#_CPPv4N12SymbolsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N12SymbolsModel13AddressColumnE">
-<span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a5050fd126db4efea5d6ffc31c859d0d0"></span><code class="descname">AddressColumn</code> = 0<a class="headerlink" href="#_CPPv2N12SymbolsModel13AddressColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel13AddressColumnE">
+<span id="_CPPv3N12SymbolsModel13AddressColumnE"></span><span id="_CPPv2N12SymbolsModel13AddressColumnE"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a5050fd126db4efea5d6ffc31c859d0d0"></span><code class="sig-name descname">AddressColumn</code> = 0<a class="headerlink" href="#_CPPv4N12SymbolsModel13AddressColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12SymbolsModel10TypeColumnE">
-<span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a8df9f8114a96a4c2b7915535dc32f60d"></span><code class="descname">TypeColumn</code><a class="headerlink" href="#_CPPv2N12SymbolsModel10TypeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel10TypeColumnE">
+<span id="_CPPv3N12SymbolsModel10TypeColumnE"></span><span id="_CPPv2N12SymbolsModel10TypeColumnE"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a8df9f8114a96a4c2b7915535dc32f60d"></span><code class="sig-name descname">TypeColumn</code><a class="headerlink" href="#_CPPv4N12SymbolsModel10TypeColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12SymbolsModel10NameColumnE">
-<span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531adf58ce6d308b5df9d9870068059208b7"></span><code class="descname">NameColumn</code><a class="headerlink" href="#_CPPv2N12SymbolsModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel10NameColumnE">
+<span id="_CPPv3N12SymbolsModel10NameColumnE"></span><span id="_CPPv2N12SymbolsModel10NameColumnE"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531adf58ce6d308b5df9d9870068059208b7"></span><code class="sig-name descname">NameColumn</code><a class="headerlink" href="#_CPPv4N12SymbolsModel10NameColumnE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N12SymbolsModel11ColumnCountE">
-<span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a781588a29d5e6d4c8c9f27746028f1e0"></span><code class="descname">ColumnCount</code><a class="headerlink" href="#_CPPv2N12SymbolsModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel11ColumnCountE">
+<span id="_CPPv3N12SymbolsModel11ColumnCountE"></span><span id="_CPPv2N12SymbolsModel11ColumnCountE"></span><span class="target" id="classSymbolsModel_1ac950cc73ec969dd869bd8ff9b0a74531a781588a29d5e6d4c8c9f27746028f1e0"></span><code class="sig-name descname">ColumnCount</code><a class="headerlink" href="#_CPPv4N12SymbolsModel11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="type">
-<dt id="_CPPv2N12SymbolsModel4RoleE">
-<span id="SymbolsModel::Role"></span><span class="target" id="classSymbolsModel_1aaa7200b66c30aa5f23dea81b08ffeb6c"></span><em class="property">enum </em><code class="descname">Role</code><a class="headerlink" href="#_CPPv2N12SymbolsModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N12SymbolsModel4RoleE">
+<span id="_CPPv3N12SymbolsModel4RoleE"></span><span id="_CPPv2N12SymbolsModel4RoleE"></span><span class="target" id="classSymbolsModel_1aaa7200b66c30aa5f23dea81b08ffeb6c"></span><em class="property">enum </em><code class="sig-name descname">Role</code><a class="headerlink" href="#_CPPv4N12SymbolsModel4RoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N12SymbolsModel21SymbolDescriptionRoleE">
-<span class="target" id="classSymbolsModel_1aaa7200b66c30aa5f23dea81b08ffeb6cafebb814725deb55197a1ce5a59d613ed"></span><code class="descname">SymbolDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv2N12SymbolsModel21SymbolDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel21SymbolDescriptionRoleE">
+<span id="_CPPv3N12SymbolsModel21SymbolDescriptionRoleE"></span><span id="_CPPv2N12SymbolsModel21SymbolDescriptionRoleE"></span><span class="target" id="classSymbolsModel_1aaa7200b66c30aa5f23dea81b08ffeb6cafebb814725deb55197a1ce5a59d613ed"></span><code class="sig-name descname">SymbolDescriptionRole</code> = Qt::UserRole<a class="headerlink" href="#_CPPv4N12SymbolsModel21SymbolDescriptionRoleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -103,45 +92,44 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject">
-<span id="SymbolsModel::SymbolsModel__QList:SymbolDescription:P.QObjectP"></span><span class="target" id="classSymbolsModel_1a4416444b6186ee221b54b64b7787a8cf"></span><code class="descname">SymbolsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structSymbolDescription.html#_CPPv217SymbolDescription" title="SymbolDescription">SymbolDescription</a>&gt; *<em>exports</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject">
+<span id="_CPPv3N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject"></span><span id="_CPPv2N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject"></span><span id="SymbolsModel::SymbolsModel__QList:SymbolDescription:P.QObjectP"></span><span class="target" id="classSymbolsModel_1a4416444b6186ee221b54b64b7787a8cf"></span><code class="sig-name descname">SymbolsModel</code><span class="sig-paren">(</span>QList&lt;<a class="reference internal" href="../core/structSymbolDescription.html#_CPPv417SymbolDescription" title="SymbolDescription">SymbolDescription</a>&gt; *<em>exports</em>, QObject *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12SymbolsModel12SymbolsModelEP5QListI17SymbolDescriptionEP7QObject" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel8rowCountERK11QModelIndex">
-<span id="SymbolsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1ab653d9081b603cacad8890c0733a4903"></span>int <code class="descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK12SymbolsModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK12SymbolsModel8rowCountERK11QModelIndex"></span><span id="SymbolsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1ab653d9081b603cacad8890c0733a4903"></span>int <code class="sig-name descname">rowCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel11columnCountERK11QModelIndex">
-<span id="SymbolsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1aa0b97271c0bb18ef0db719ac8bfc032c"></span>int <code class="descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK12SymbolsModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK12SymbolsModel11columnCountERK11QModelIndex"></span><span id="SymbolsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1aa0b97271c0bb18ef0db719ac8bfc032c"></span>int <code class="sig-name descname">columnCount</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>parent</em> = QModelIndex()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel4dataERK11QModelIndexi">
-<span id="SymbolsModel::data__QModelIndexCR.iC"></span><span class="target" id="classSymbolsModel_1a7fcc774cb6baf744b576b38e72c7679c"></span>QVariant <code class="descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK12SymbolsModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK12SymbolsModel4dataERK11QModelIndexi"></span><span id="SymbolsModel::data__QModelIndexCR.iC"></span><span class="target" id="classSymbolsModel_1a7fcc774cb6baf744b576b38e72c7679c"></span>QVariant <code class="sig-name descname">data</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em>, int <em>role</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel10headerDataEiN2Qt11OrientationEi">
-<span id="SymbolsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classSymbolsModel_1ad0ebb7daf26706197e50f7f5fa847ba7"></span>QVariant <code class="descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK12SymbolsModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK12SymbolsModel10headerDataEiN2Qt11OrientationEi"></span><span id="SymbolsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classSymbolsModel_1ad0ebb7daf26706197e50f7f5fa847ba7"></span>QVariant <code class="sig-name descname">headerData</code><span class="sig-paren">(</span>int <em>section</em>, Qt::Orientation <em>orientation</em>, int <em>role</em> = Qt::DisplayRole<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel7addressERK11QModelIndex">
-<span id="SymbolsModel::address__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1a4b2907c4b7a6af8b0b257cb0d43899bf"></span>RVA <code class="descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel7addressERK11QModelIndex">
+<span id="_CPPv3NK12SymbolsModel7addressERK11QModelIndex"></span><span id="_CPPv2NK12SymbolsModel7addressERK11QModelIndex"></span><span id="SymbolsModel::address__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1a4b2907c4b7a6af8b0b257cb0d43899bf"></span>RVA <code class="sig-name descname">address</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel7addressERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2NK12SymbolsModel4nameERK11QModelIndex">
-<span id="SymbolsModel::name__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1a5c14a2728554f1da96d39efac9b16e5d"></span>QString <code class="descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK12SymbolsModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK12SymbolsModel4nameERK11QModelIndex">
+<span id="_CPPv3NK12SymbolsModel4nameERK11QModelIndex"></span><span id="_CPPv2NK12SymbolsModel4nameERK11QModelIndex"></span><span id="SymbolsModel::name__QModelIndexCRC"></span><span class="target" id="classSymbolsModel_1a5c14a2728554f1da96d39efac9b16e5d"></span>QString <code class="sig-name descname">name</code><span class="sig-paren">(</span><em class="property">const</em> QModelIndex &amp;<em>index</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK12SymbolsModel4nameERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get name for item, optional. </p>
-<p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>Item name or empty QString if item doesn’t have short descriptive name. </dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal"><span class="pre">index</span></code>: item intex </li>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Item name or empty QString if item doesn’t have short descriptive name. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code>: item intex </p></li>
 </ul>
 </dd>
 </dl>
@@ -163,7 +151,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -185,15 +173,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -203,7 +191,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 

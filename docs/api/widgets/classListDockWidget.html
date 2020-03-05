@@ -1,33 +1,23 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>ListDockWidget &#8212; Cutter 1.10.1 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '1.10.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="MemoryData" href="classMemoryData.html" />
     <link rel="prev" title="ImportsWidget" href="classImportsWidget.html" />
 
-  </head>
-  <body>
+  </head><body>
     
 
     <div class="related" role="navigation" aria-label="related navigation">
@@ -57,29 +47,28 @@
   <div class="section" id="listdockwidget">
 <h1>ListDockWidget<a class="headerlink" href="#listdockwidget" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="_CPPv214ListDockWidget">
-<span id="ListDockWidget"></span><span class="target" id="classListDockWidget"></span><em class="property">class </em><code class="descclassname"></code><code class="descname">ListDockWidget</code><a class="headerlink" href="#_CPPv214ListDockWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Inherits from <a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget"><span class="std std-ref">CutterDockWidget</span></a></p>
-<p>Subclassed by <a class="reference internal" href="classCommentsWidget.html#classCommentsWidget"><span class="std std-ref">CommentsWidget</span></a>, <a class="reference internal" href="classExportsWidget.html#classExportsWidget"><span class="std std-ref">ExportsWidget</span></a>, <a class="reference internal" href="classFunctionsWidget.html#classFunctionsWidget"><span class="std std-ref">FunctionsWidget</span></a>, <a class="reference internal" href="classHeadersWidget.html#classHeadersWidget"><span class="std std-ref">HeadersWidget</span></a>, <a class="reference internal" href="classImportsWidget.html#classImportsWidget"><span class="std std-ref">ImportsWidget</span></a>, <a class="reference internal" href="classMemoryMapWidget.html#classMemoryMapWidget"><span class="std std-ref">MemoryMapWidget</span></a>, <a class="reference internal" href="classRelocsWidget.html#classRelocsWidget"><span class="std std-ref">RelocsWidget</span></a>, <a class="reference internal" href="classResourcesWidget.html#classResourcesWidget"><span class="std std-ref">ResourcesWidget</span></a>, <a class="reference internal" href="classSectionsWidget.html#classSectionsWidget"><span class="std std-ref">SectionsWidget</span></a>, <a class="reference internal" href="classSegmentsWidget.html#classSegmentsWidget"><span class="std std-ref">SegmentsWidget</span></a>, <a class="reference internal" href="classSymbolsWidget.html#classSymbolsWidget"><span class="std std-ref">SymbolsWidget</span></a></p>
+<dt id="_CPPv414ListDockWidget">
+<span id="_CPPv314ListDockWidget"></span><span id="_CPPv214ListDockWidget"></span><span id="ListDockWidget"></span><span class="target" id="classListDockWidget"></span><em class="property">class </em><code class="sig-name descname">ListDockWidget</code> : <em class="property">public</em> <a class="reference internal" href="classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a><a class="headerlink" href="#_CPPv414ListDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classCommentsWidget.html#classCommentsWidget"><span class="std std-ref">CommentsWidget</span></a>, <a class="reference internal" href="classExportsWidget.html#classExportsWidget"><span class="std std-ref">ExportsWidget</span></a>, <a class="reference internal" href="classFunctionsWidget.html#classFunctionsWidget"><span class="std std-ref">FunctionsWidget</span></a>, <a class="reference internal" href="classHeadersWidget.html#classHeadersWidget"><span class="std std-ref">HeadersWidget</span></a>, <a class="reference internal" href="classImportsWidget.html#classImportsWidget"><span class="std std-ref">ImportsWidget</span></a>, <a class="reference internal" href="classMemoryMapWidget.html#classMemoryMapWidget"><span class="std std-ref">MemoryMapWidget</span></a>, <a class="reference internal" href="classRelocsWidget.html#classRelocsWidget"><span class="std std-ref">RelocsWidget</span></a>, <a class="reference internal" href="classResourcesWidget.html#classResourcesWidget"><span class="std std-ref">ResourcesWidget</span></a>, <a class="reference internal" href="classSectionsWidget.html#classSectionsWidget"><span class="std std-ref">SectionsWidget</span></a>, <a class="reference internal" href="classSegmentsWidget.html#classSegmentsWidget"><span class="std std-ref">SegmentsWidget</span></a>, <a class="reference internal" href="classSymbolsWidget.html#classSymbolsWidget"><span class="std std-ref">SymbolsWidget</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
-<dt id="_CPPv2N14ListDockWidget15SearchBarPolicyE">
-<span id="ListDockWidget::SearchBarPolicy"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fc"></span><em class="property">enum </em><code class="descname">SearchBarPolicy</code><a class="headerlink" href="#_CPPv2N14ListDockWidget15SearchBarPolicyE" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="enum">
+<dt id="_CPPv4N14ListDockWidget15SearchBarPolicyE">
+<span id="_CPPv3N14ListDockWidget15SearchBarPolicyE"></span><span id="_CPPv2N14ListDockWidget15SearchBarPolicyE"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fc"></span><em class="property">enum </em><code class="sig-name descname">SearchBarPolicy</code><a class="headerlink" href="#_CPPv4N14ListDockWidget15SearchBarPolicyE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv2N14ListDockWidget13ShowByDefaultE">
-<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fcac4d0a0e7293283f880ad2daaf8e7312f"></span><code class="descname">ShowByDefault</code><a class="headerlink" href="#_CPPv2N14ListDockWidget13ShowByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidget13ShowByDefaultE">
+<span id="_CPPv3N14ListDockWidget13ShowByDefaultE"></span><span id="_CPPv2N14ListDockWidget13ShowByDefaultE"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fcac4d0a0e7293283f880ad2daaf8e7312f"></span><code class="sig-name descname">ShowByDefault</code><a class="headerlink" href="#_CPPv4N14ListDockWidget13ShowByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N14ListDockWidget13HideByDefaultE">
-<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca569b0af6aafc8fb9669ce8adcd1544c7"></span><code class="descname">HideByDefault</code><a class="headerlink" href="#_CPPv2N14ListDockWidget13HideByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidget13HideByDefaultE">
+<span id="_CPPv3N14ListDockWidget13HideByDefaultE"></span><span id="_CPPv2N14ListDockWidget13HideByDefaultE"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca569b0af6aafc8fb9669ce8adcd1544c7"></span><code class="sig-name descname">HideByDefault</code><a class="headerlink" href="#_CPPv4N14ListDockWidget13HideByDefaultE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv2N14ListDockWidget4HideE">
-<span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca62a5e490880a92eef74f167d9dc6dca0"></span><code class="descname">Hide</code><a class="headerlink" href="#_CPPv2N14ListDockWidget4HideE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidget4HideE">
+<span id="_CPPv3N14ListDockWidget4HideE"></span><span id="_CPPv2N14ListDockWidget4HideE"></span><span class="target" id="classListDockWidget_1a478e5d13fa849ed41710c597911a05fca62a5e490880a92eef74f167d9dc6dca0"></span><code class="sig-name descname">Hide</code><a class="headerlink" href="#_CPPv4N14ListDockWidget4HideE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -88,18 +77,18 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
-<dt id="_CPPv2N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy">
-<span id="ListDockWidget::ListDockWidget__MainWindowP.QActionP.SearchBarPolicy"></span><span class="target" id="classListDockWidget_1a178296cac0200517d761c1f29b29dabc"></span><code class="descname">ListDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv210MainWindow" title="MainWindow">MainWindow</a> *<em>main</em>, QAction *<em>action</em> = nullptr, <a class="reference internal" href="#_CPPv2N14ListDockWidget15SearchBarPolicyE" title="ListDockWidget::SearchBarPolicy">SearchBarPolicy</a> <em>searchBarPolicy</em> = SearchBarPolicy::ShowByDefault<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy">
+<span id="_CPPv3N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy"></span><span id="_CPPv2N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy"></span><span id="ListDockWidget::ListDockWidget__MainWindowP.QActionP.SearchBarPolicy"></span><span class="target" id="classListDockWidget_1a178296cac0200517d761c1f29b29dabc"></span><code class="sig-name descname">ListDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>main</em>, QAction *<em>action</em> = nullptr, <a class="reference internal" href="#_CPPv4N14ListDockWidget15SearchBarPolicyE" title="ListDockWidget::SearchBarPolicy">SearchBarPolicy</a> <em>searchBarPolicy</em> = <a class="reference internal" href="#_CPPv4N14ListDockWidget15SearchBarPolicyE" title="ListDockWidget::SearchBarPolicy">SearchBarPolicy</a>::ShowByDefault<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14ListDockWidget14ListDockWidgetEP10MainWindowP7QAction15SearchBarPolicy" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N14ListDockWidgetD0Ev">
-<span id="ListDockWidget::~ListDockWidget"></span><span class="target" id="classListDockWidget_1af25cd271d38720162d9de84f76ab672a"></span><code class="descname">~ListDockWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidgetD0Ev">
+<span id="_CPPv3N14ListDockWidgetD0Ev"></span><span id="_CPPv2N14ListDockWidgetD0Ev"></span><span id="ListDockWidget::~ListDockWidget"></span><span class="target" id="classListDockWidget_1af25cd271d38720162d9de84f76ab672a"></span><code class="sig-name descname">~ListDockWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14ListDockWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N14ListDockWidget9showCountEb">
-<span id="ListDockWidget::showCount__b"></span><span class="target" id="classListDockWidget_1a5f0a2267b42a6ab4b735842888848c67"></span>void <code class="descname">showCount</code><span class="sig-paren">(</span>bool <em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N14ListDockWidget9showCountEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N14ListDockWidget9showCountEb">
+<span id="_CPPv3N14ListDockWidget9showCountEb"></span><span id="_CPPv2N14ListDockWidget9showCountEb"></span><span id="ListDockWidget::showCount__b"></span><span class="target" id="classListDockWidget_1a5f0a2267b42a6ab4b735842888848c67"></span>void <code class="sig-name descname">showCount</code><span class="sig-paren">(</span>bool <em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14ListDockWidget9showCountEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -117,7 +106,7 @@
           <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
-<h3><a href="../../index.html">Table Of Contents</a></h3>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
@@ -139,15 +128,15 @@
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
     </div>
   </div>
 
@@ -157,7 +146,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.
     </div>
     
 
