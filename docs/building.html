@@ -83,17 +83,26 @@ First, clone the repository with its dependencies:</p>
 </pre></div>
 </div>
 <p>Then invoke CMake to build Cutter and its dependency radare2.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter/src
-mkdir build
-cmake -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter
+mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+cmake -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON ../src
+cmake --build .
+</pre></div>
+</div>
+<p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter
+cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
 cmake --build build
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>If you are interested in building Cutter with support for Python plugins,
 Syntax Highlighting, Crash Reporting and more,
 please look at the full list of <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
-<p>After the build process is complete, you should be provided with Cutter executable
-that you can start like this:</p>
+</div>
+<p>After the build process is complete, you should have the Cutter executable in the <cite>build</cite> folder.
+You can now execute Cutter like this:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/Cutter
 </pre></div>
 </div>
