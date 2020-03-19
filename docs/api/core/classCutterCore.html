@@ -190,6 +190,28 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv4N10CutterCore8cmdRawAtEPKc3RVA">
+<span id="_CPPv3N10CutterCore8cmdRawAtEPKc3RVA"></span><span id="_CPPv2N10CutterCore8cmdRawAtEPKc3RVA"></span><span id="CutterCore::cmdRawAt__cCP.RVA"></span><span class="target" id="classCutterCore_1aaac27c2ccbef0ab450909c8c78bddb05"></span>QString <code class="sig-name descname">cmdRawAt</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>cmd</em>, RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8cmdRawAtEPKc3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute a command <em>cmd</em> at <em>address</em>. The function will preform a silent seek to the address without triggering the seekChanged event nor adding new entries to the seek history. By nature, the API is executing raw commands, and thus ignores multiple commands and overcome command injections. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the output of the command </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: - a raw command to execute. If multiple commands will be passed (e.g “px 5; pd 7 &amp;&amp; pdf”) then only the first command will be executed. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: - an address to which Cutter will temporarily seek. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore8cmdRawAtERK7QString3RVA">
+<span id="_CPPv3N10CutterCore8cmdRawAtERK7QString3RVA"></span><span id="_CPPv2N10CutterCore8cmdRawAtERK7QString3RVA"></span><span id="CutterCore::cmdRawAt__QStringCR.RVA"></span><span class="target" id="classCutterCore_1a77842a3a74a9fd99fd85ee6896a14198"></span>QString <code class="sig-name descname">cmdRawAt</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em>, RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8cmdRawAtERK7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>a wrapper around <a class="reference internal" href="#classCutterCore_1aaac27c2ccbef0ab450909c8c78bddb05"><span class="std std-ref">cmdRawAt(const char *cmd, RVA address)</span></a>. </p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv4N10CutterCore4cmdjEPKc">
 <span id="_CPPv3N10CutterCore4cmdjEPKc"></span><span id="_CPPv2N10CutterCore4cmdjEPKc"></span><span id="CutterCore::cmdj__cCP"></span><span class="target" id="classCutterCore_1a8556dee0b8bef4578fcd33251e0cc30e"></span>QJsonDocument <code class="sig-name descname">cmdj</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore4cmdjEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -675,6 +697,16 @@
 <dl class="function">
 <dt id="_CPPv4N10CutterCore4seekE4ut64">
 <span id="_CPPv3N10CutterCore4seekE4ut64"></span><span id="_CPPv2N10CutterCore4seekE4ut64"></span><span id="CutterCore::seek__ut64"></span><span class="target" id="classCutterCore_1aebbbb25a92df180d9134faf1670d9557"></span>void <code class="sig-name descname">seek</code><span class="sig-paren">(</span>ut64 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore4seekE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore10seekSilentE4ut64">
+<span id="_CPPv3N10CutterCore10seekSilentE4ut64"></span><span id="_CPPv2N10CutterCore10seekSilentE4ut64"></span><span id="CutterCore::seekSilent__ut64"></span><span class="target" id="classCutterCore_1a07437394be83dd31ac4cf32ece97ff08"></span>void <code class="sig-name descname">seekSilent</code><span class="sig-paren">(</span>ut64 <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10seekSilentE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore10seekSilentE7QString">
+<span id="_CPPv3N10CutterCore10seekSilentE7QString"></span><span id="_CPPv2N10CutterCore10seekSilentE7QString"></span><span id="CutterCore::seekSilent__QString"></span><span class="target" id="classCutterCore_1ad7b1839a0ce60523d2b2380fba518bf3"></span>void <code class="sig-name descname">seekSilent</code><span class="sig-paren">(</span>QString <em>thing</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10seekSilentE7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -1673,6 +1705,60 @@
 <span id="_CPPv3N10CutterCore16getBIHighlighterEv"></span><span id="_CPPv2N10CutterCore16getBIHighlighterEv"></span><span id="CutterCore::getBIHighlighter"></span><span class="target" id="classCutterCore_1a59002b82dff3b27090f9c30c383ab768"></span><a class="reference internal" href="../common/classBasicInstructionHighlighter.html#_CPPv427BasicInstructionHighlighter" title="BasicInstructionHighlighter">BasicInstructionHighlighter</a> *<code class="sig-name descname">getBIHighlighter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16getBIHighlighterEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
+<dl class="function">
+<dt id="_CPPv4N10CutterCore10setIOCacheEb">
+<span id="_CPPv3N10CutterCore10setIOCacheEb"></span><span id="_CPPv2N10CutterCore10setIOCacheEb"></span><span id="CutterCore::setIOCache__b"></span><span class="target" id="classCutterCore_1a7042b355cb11a1ccc7d56999f01e339c"></span>void <code class="sig-name descname">setIOCache</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10setIOCacheEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable or dsiable Cache mode. Cache mode is used to imagine writing to the opened file without committing the changes to the disk. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4NK10CutterCore16isIOCacheEnabledEv">
+<span id="_CPPv3NK10CutterCore16isIOCacheEnabledEv"></span><span id="_CPPv2NK10CutterCore16isIOCacheEnabledEv"></span><span id="CutterCore::isIOCacheEnabledC"></span><span class="target" id="classCutterCore_1aae3cdf10015254c8ee04a442645a697c"></span>bool <code class="sig-name descname">isIOCacheEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10CutterCore16isIOCacheEnabledEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if Cache mode is enabled. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if Cache is enabled, otherwise return false. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore16commitWriteCacheEv">
+<span id="_CPPv3N10CutterCore16commitWriteCacheEv"></span><span id="_CPPv2N10CutterCore16commitWriteCacheEv"></span><span id="CutterCore::commitWriteCache"></span><span class="target" id="classCutterCore_1ad6feffa43814278f6e120f1eda49ff1b"></span>void <code class="sig-name descname">commitWriteCache</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16commitWriteCacheEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Commit write cache to the file on disk. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore12setWriteModeEb">
+<span id="_CPPv3N10CutterCore12setWriteModeEb"></span><span id="_CPPv2N10CutterCore12setWriteModeEb"></span><span id="CutterCore::setWriteMode__b"></span><span class="target" id="classCutterCore_1ad9d7cc37d5b6133a300d6216415b8d15"></span>void <code class="sig-name descname">setWriteMode</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12setWriteModeEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable or disable Write mode. When the file is opened in write mode, any changes to it will be immediately committed to the file on disk, thus modify the file. <a class="reference internal" href="../widgets/classThis.html#classThis"><span class="std std-ref">This</span></a> function wrap radare2 function which re-open the file with the desired permissions. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore18isWriteModeEnabledEv">
+<span id="_CPPv3N10CutterCore18isWriteModeEnabledEv"></span><span id="_CPPv2N10CutterCore18isWriteModeEnabledEv"></span><span id="CutterCore::isWriteModeEnabled"></span><span class="target" id="classCutterCore_1aa7a517df8253abe925608b89eeb04bf2"></span>bool <code class="sig-name descname">isWriteModeEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore18isWriteModeEnabledEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Check if the file is opened in write mode. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>true if write mode is enabled, otherwise return false. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
@@ -1814,6 +1900,16 @@
 <dl class="function">
 <dt id="_CPPv4N10CutterCore12projectSavedEbRK7QString">
 <span id="_CPPv3N10CutterCore12projectSavedEbRK7QString"></span><span id="_CPPv2N10CutterCore12projectSavedEbRK7QString"></span><span id="CutterCore::projectSaved__b.QStringCR"></span><span class="target" id="classCutterCore_1a28a27b9e2da990afbe19abb73db893aa"></span>void <code class="sig-name descname">projectSaved</code><span class="sig-paren">(</span>bool <em>successfully</em>, <em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12projectSavedEbRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore14ioCacheChangedEb">
+<span id="_CPPv3N10CutterCore14ioCacheChangedEb"></span><span id="_CPPv2N10CutterCore14ioCacheChangedEb"></span><span id="CutterCore::ioCacheChanged__b"></span><span class="target" id="classCutterCore_1a5eb11593f58dc9a57865af928bab8f7d"></span>void <code class="sig-name descname">ioCacheChanged</code><span class="sig-paren">(</span>bool <em>newval</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore14ioCacheChangedEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv4N10CutterCore16writeModeChangedEb">
+<span id="_CPPv3N10CutterCore16writeModeChangedEb"></span><span id="_CPPv2N10CutterCore16writeModeChangedEb"></span><span id="CutterCore::writeModeChanged__b"></span><span class="target" id="classCutterCore_1a2494e0e010ebf1000a02857a889c5bb8"></span>void <code class="sig-name descname">writeModeChanged</code><span class="sig-paren">(</span>bool <em>newval</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16writeModeChangedEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
