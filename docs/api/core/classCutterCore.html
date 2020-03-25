@@ -185,14 +185,30 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv4N10CutterCore6cmdRawEPKc">
+<span id="_CPPv3N10CutterCore6cmdRawEPKc"></span><span id="_CPPv2N10CutterCore6cmdRawEPKc"></span><span id="CutterCore::cmdRaw__cCP"></span><span class="target" id="classCutterCore_1a62f4887d75e403a5d237044c79154067"></span>QString <code class="sig-name descname">cmdRaw</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6cmdRawEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Execute a radare2 command <em>cmd</em>. By nature, the API is executing raw commands, and thus ignores multiple commands and overcome command injections. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the output of the command </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: - a raw command to execute. Passing multiple commands (e.g “px 5; pd 7 &amp;&amp; pdf”) will result in them treated as arguments to first command. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv4N10CutterCore6cmdRawERK7QString">
-<span id="_CPPv3N10CutterCore6cmdRawERK7QString"></span><span id="_CPPv2N10CutterCore6cmdRawERK7QString"></span><span id="CutterCore::cmdRaw__QStringCR"></span><span class="target" id="classCutterCore_1aebd17361c88012e68d36b217f3ae0284"></span>QString <code class="sig-name descname">cmdRaw</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6cmdRawERK7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<span id="_CPPv3N10CutterCore6cmdRawERK7QString"></span><span id="_CPPv2N10CutterCore6cmdRawERK7QString"></span><span id="CutterCore::cmdRaw__QStringCR"></span><span class="target" id="classCutterCore_1a2649d386874726dde9d64fac4c52ce1d"></span>QString <code class="sig-name descname">cmdRaw</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6cmdRawERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>a wrapper around <a class="reference internal" href="#classCutterCore_1a62f4887d75e403a5d237044c79154067"><span class="std std-ref">cmdRaw(const char *cmd,)</span></a>. </p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv4N10CutterCore8cmdRawAtEPKc3RVA">
 <span id="_CPPv3N10CutterCore8cmdRawAtEPKc3RVA"></span><span id="_CPPv2N10CutterCore8cmdRawAtEPKc3RVA"></span><span id="CutterCore::cmdRawAt__cCP.RVA"></span><span class="target" id="classCutterCore_1aaac27c2ccbef0ab450909c8c78bddb05"></span>QString <code class="sig-name descname">cmdRawAt</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>cmd</em>, RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8cmdRawAtEPKc3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Execute a command <em>cmd</em> at <em>address</em>. The function will preform a silent seek to the address without triggering the seekChanged event nor adding new entries to the seek history. By nature, the API is executing raw commands, and thus ignores multiple commands and overcome command injections. </p>
+<dd><p>Execute a radare2 command <em>cmd</em> at <em>address</em>. The function will preform a silent seek to the address without triggering the seekChanged event nor adding new entries to the seek history. By nature, the API is executing a single command without going through radare2 shell, and thus ignores multiple commands and tries to overcome command injections. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>the output of the command </p>
 </dd>
