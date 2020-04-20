@@ -46,12 +46,12 @@
             
   <div class="section" id="pluginmanager">
 <h1>PluginManager<a class="headerlink" href="#pluginmanager" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="cpp class">
 <dt id="_CPPv413PluginManager">
 <span id="_CPPv313PluginManager"></span><span id="_CPPv213PluginManager"></span><span id="PluginManager"></span><span class="target" id="classPluginManager"></span><em class="property">class </em><code class="sig-name descname">PluginManager</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv413PluginManager" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
-<dl class="type">
+<dl class="cpp type">
 <dt id="_CPPv4N13PluginManager9PluginPtrE">
 <span id="_CPPv3N13PluginManager9PluginPtrE"></span><span id="_CPPv2N13PluginManager9PluginPtrE"></span><span class="target" id="classPluginManager_1ae4c37bb8a825910ded345667060d94a7"></span><em class="property">using </em><code class="sig-name descname">PluginPtr</code> = std::unique_ptr&lt;<a class="reference internal" href="classCutterPlugin.html#_CPPv412CutterPlugin" title="CutterPlugin">CutterPlugin</a>, <a class="reference internal" href="#_CPPv4N13PluginManager16PluginTerminatorE" title="PluginManager::PluginTerminator">PluginTerminator</a>&gt;<a class="headerlink" href="#_CPPv4N13PluginManager9PluginPtrE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -59,39 +59,46 @@
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4N13PluginManager13PluginManagerEv">
 <span id="_CPPv3N13PluginManager13PluginManagerEv"></span><span id="_CPPv2N13PluginManager13PluginManagerEv"></span><span id="PluginManager::PluginManager"></span><span class="target" id="classPluginManager_1a25f1e568d8d923e4d2a4f777516b4be5"></span><code class="sig-name descname">PluginManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager13PluginManagerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4N13PluginManagerD0Ev">
 <span id="_CPPv3N13PluginManagerD0Ev"></span><span id="_CPPv2N13PluginManagerD0Ev"></span><span id="PluginManager::~PluginManager"></span><span class="target" id="classPluginManager_1ab657302ef5af357907ae11ad817f5dfc"></span><code class="sig-name descname">~PluginManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManagerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="_CPPv4N13PluginManager11loadPluginsEv">
-<span id="_CPPv3N13PluginManager11loadPluginsEv"></span><span id="_CPPv2N13PluginManager11loadPluginsEv"></span><span id="PluginManager::loadPlugins"></span><span class="target" id="classPluginManager_1a685e9abd87edf1e34fd8a29258cf19e0"></span>void <code class="sig-name descname">loadPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager11loadPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager11loadPluginsEb">
+<span id="_CPPv3N13PluginManager11loadPluginsEb"></span><span id="_CPPv2N13PluginManager11loadPluginsEb"></span><span id="PluginManager::loadPlugins__b"></span><span class="target" id="classPluginManager_1ac51ea0b3dd9b290e44c854f49bd372a4"></span>void <code class="sig-name descname">loadPlugins</code><span class="sig-paren">(</span>bool <em>enablePlugins</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager11loadPluginsEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Load all plugins, should be called once on application start. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePlugins</span></code>: set to false if plugin code shouldn’t be started </p></li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4N13PluginManager14destroyPluginsEv">
 <span id="_CPPv3N13PluginManager14destroyPluginsEv"></span><span id="_CPPv2N13PluginManager14destroyPluginsEv"></span><span id="PluginManager::destroyPlugins"></span><span class="target" id="classPluginManager_1a3b549d8216d8c233b25bd84437fd519b"></span>void <code class="sig-name descname">destroyPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager14destroyPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Destroy all loaded plugins, should be called once on application shutdown. </p>
 </dd></dl>
 
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4N13PluginManager10getPluginsEv">
 <span id="_CPPv3N13PluginManager10getPluginsEv"></span><span id="_CPPv2N13PluginManager10getPluginsEv"></span><span id="PluginManager::getPlugins"></span><span class="target" id="classPluginManager_1a31b4693d81f34b89be911539983e8473"></span><em class="property">const</em> std::vector&lt;<a class="reference internal" href="#_CPPv4N13PluginManager9PluginPtrE" title="PluginManager::PluginPtr">PluginPtr</a>&gt; &amp;<code class="sig-name descname">getPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager10getPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4NK13PluginManager20getPluginDirectoriesEv">
 <span id="_CPPv3NK13PluginManager20getPluginDirectoriesEv"></span><span id="_CPPv2NK13PluginManager20getPluginDirectoriesEv"></span><span id="PluginManager::getPluginDirectoriesC"></span><span class="target" id="classPluginManager_1a0a52338262e975a8556557682c38a83d"></span>QVector&lt;QDir&gt; <code class="sig-name descname">getPluginDirectories</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager20getPluginDirectoriesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4NK13PluginManager23getUserPluginsDirectoryEv">
 <span id="_CPPv3NK13PluginManager23getUserPluginsDirectoryEv"></span><span id="_CPPv2NK13PluginManager23getUserPluginsDirectoryEv"></span><span id="PluginManager::getUserPluginsDirectoryC"></span><span class="target" id="classPluginManager_1a4e019db7bed163a7cea3f1c252dd4138"></span>QString <code class="sig-name descname">getUserPluginsDirectory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager23getUserPluginsDirectoryEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -99,18 +106,18 @@
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4N13PluginManager11getInstanceEv">
 <span id="_CPPv3N13PluginManager11getInstanceEv"></span><span id="_CPPv2N13PluginManager11getInstanceEv"></span><span id="PluginManager::getInstance"></span><span class="target" id="classPluginManager_1a9b24d15dbf9166bfccbfc7517933ebf9"></span><a class="reference internal" href="#_CPPv413PluginManager" title="PluginManager">PluginManager</a> *<code class="sig-name descname">getInstance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager11getInstanceEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
-<dl class="class">
+<dl class="cpp class">
 <dt id="_CPPv4N13PluginManager16PluginTerminatorE">
 <span id="_CPPv3N13PluginManager16PluginTerminatorE"></span><span id="_CPPv2N13PluginManager16PluginTerminatorE"></span><span id="PluginManager::PluginTerminator"></span><span class="target" id="classPluginManager_1_1PluginTerminator"></span><em class="property">class </em><code class="sig-name descname">PluginTerminator</code><a class="headerlink" href="#_CPPv4N13PluginManager16PluginTerminatorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
+<dl class="cpp function">
 <dt id="_CPPv4NK13PluginManager16PluginTerminatorclEP12CutterPlugin">
 <span id="_CPPv3NK13PluginManager16PluginTerminatorclEP12CutterPlugin"></span><span id="_CPPv2NK13PluginManager16PluginTerminatorclEP12CutterPlugin"></span><span id="PluginManager::PluginTerminator::call-operator__CutterPluginPC"></span><span class="target" id="classPluginManager_1_1PluginTerminator_1ab328b47200a378dc99bbcd065e255a30"></span>void <code class="sig-name descname">operator()</code><span class="sig-paren">(</span><a class="reference internal" href="classCutterPlugin.html#_CPPv412CutterPlugin" title="CutterPlugin">CutterPlugin</a> *<em>plugin</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager16PluginTerminatorclEP12CutterPlugin" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -172,7 +179,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, The Cutter Developers.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
     </div>
     
 
