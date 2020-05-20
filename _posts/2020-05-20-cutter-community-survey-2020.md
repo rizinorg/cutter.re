@@ -8,6 +8,7 @@ author: cutter
 post_image: "/assets/images/blog/posts/survey-2020/survey2020.png"
 ---
 
+<meta name="twitter:image:src" content="https://cutter.re/assets/images/blog/posts/survey-2020/survey2020.png">
 
 <p>The Cutter team is working hard to create a free and open-source reverse engineering framework that will give you the best RE experience. Our 2020 community survey is here and this is our opportunity to get to know you better.</p>
 
