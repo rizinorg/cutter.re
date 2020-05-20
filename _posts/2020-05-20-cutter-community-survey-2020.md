@@ -6,6 +6,7 @@ tags: ["Survey", "Community"]
 categories: ["Cutter", "Community"]
 author: cutter
 post_image: "/assets/images/blog/posts/survey-2020/survey2020.png"
+description: "Our 2020 community survey is here and this is our opportunity to get to know you better."
 ---
 
 <meta name="twitter:image:src" content="https://cutter.re/assets/images/blog/posts/survey-2020/survey2020.png">
