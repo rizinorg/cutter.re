@@ -54,7 +54,12 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction">
-<span id="_CPPv3N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction"></span><span id="_CPPv2N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction"></span><span id="CutterDockWidget::CutterDockWidget__MainWindowP.QActionP"></span><span class="target" id="classCutterDockWidget_1a03e50c769a3bd1754b5b7435323f3ca4"></span><code class="sig-name descname">CutterDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>parent</em>, QAction *<em>action</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction"></span><span id="_CPPv2N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction"></span><span id="CutterDockWidget::CutterDockWidget__MainWindowP.QActionP"></span><span class="target" id="classCutterDockWidget_1a0579976bf8f5e61be3c13e30dcbe1054"></span><code class="sig-name descname">CutterDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>parent</em>, QAction *<em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget16CutterDockWidgetEP10MainWindowP7QAction" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16CutterDockWidget16CutterDockWidgetEP10MainWindow">
+<span id="_CPPv3N16CutterDockWidget16CutterDockWidgetEP10MainWindow"></span><span id="_CPPv2N16CutterDockWidget16CutterDockWidgetEP10MainWindow"></span><span id="CutterDockWidget::CutterDockWidget__MainWindowP"></span><span class="target" id="classCutterDockWidget_1a8c28b4a9e790d0da17b567d4420634af"></span><code class="sig-name descname">CutterDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget16CutterDockWidgetEP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -99,6 +104,37 @@
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">replaceIfNull</span></code>: passed to the <a class="reference internal" href="../common/classReplacingRefreshDeferrerAccumulator.html#classReplacingRefreshDeferrerAccumulator"><span class="std std-ref">ReplacingRefreshDeferrerAccumulator</span></a> </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">refreshNowFunc</span></code>: lambda taking a single parameter of type ParamResult, called when a refresh should occur </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16CutterDockWidget22serializeViewProprtiesEv">
+<span id="_CPPv3N16CutterDockWidget22serializeViewProprtiesEv"></span><span id="_CPPv2N16CutterDockWidget22serializeViewProprtiesEv"></span><span id="CutterDockWidget::serializeViewProprties"></span><span class="target" id="classCutterDockWidget_1a18f9fe076b3211e02e84130f5795488b"></span>QVariantMap <code class="sig-name descname">serializeViewProprties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget22serializeViewProprtiesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Serialize dock properties for saving as part of layout. </p>
+<p>Override this function for saving dock specific view properties. Use in situations where it makes sense to have different properties for multiple instances of widget. Don’t use for options that are more suitable as global settings and should be applied equally to all widgets or all widgets of this kind.</p>
+<p>Keep synchrononized with deserializeViewProperties. When modifying add project upgrade step in SettingsUpgrade.cpp if necessary.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Dictionary of current dock properties. </p>
+</dd>
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#classCutterDockWidget_1a2f7ff308ea942f30049720f0e2836a67"><span class="std std-ref">CutterDockWidget::deserializeViewProperties</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N16CutterDockWidget25deserializeViewPropertiesERK11QVariantMap">
+<span id="_CPPv3N16CutterDockWidget25deserializeViewPropertiesERK11QVariantMap"></span><span id="_CPPv2N16CutterDockWidget25deserializeViewPropertiesERK11QVariantMap"></span><span id="CutterDockWidget::deserializeViewProperties__QVariantMapCR"></span><span class="target" id="classCutterDockWidget_1a2f7ff308ea942f30049720f0e2836a67"></span>void <code class="sig-name descname">deserializeViewProperties</code><span class="sig-paren">(</span><em class="property">const</em> QVariantMap &amp;<em>properties</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget25deserializeViewPropertiesERK11QVariantMap" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Deserialization half of serialize view properties. </p>
+<p>When a property is not specified in property map dock should reset it to default value instead of leaving it umodified. Empty map should reset all properties controlled by serializeViewProprties/deserializeViewProperties mechanism.</p>
+<p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#classCutterDockWidget_1a18f9fe076b3211e02e84130f5795488b"><span class="std std-ref">CutterDockWidget::serializeViewProprties</span></a> </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code>: to modify for current widget </p></li>
 </ul>
 </dd>
 </dl>
