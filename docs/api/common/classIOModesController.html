@@ -48,8 +48,32 @@
 <h1>IOModesController<a class="headerlink" href="#iomodescontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
 <dt id="_CPPv417IOModesController">
-<span id="_CPPv317IOModesController"></span><span id="_CPPv217IOModesController"></span><span id="IOModesController"></span><span class="target" id="classIOModesController"></span><em class="property">class </em><code class="sig-name descname">IOModesController</code><a class="headerlink" href="#_CPPv417IOModesController" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv317IOModesController"></span><span id="_CPPv217IOModesController"></span><span id="IOModesController"></span><span class="target" id="classIOModesController"></span><em class="property">class </em><code class="sig-name descname">IOModesController</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv417IOModesController" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp enum">
+<dt id="_CPPv4N17IOModesController4ModeE">
+<span id="_CPPv3N17IOModesController4ModeE"></span><span id="_CPPv2N17IOModesController4ModeE"></span><span class="target" id="classIOModesController_1a6ec5dca163cab52132f6a8514c864ce0"></span><em class="property">enum </em><code class="sig-name descname">Mode</code><a class="headerlink" href="#_CPPv4N17IOModesController4ModeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N17IOModesController4Mode9READ_ONLYE">
+<span id="_CPPv3N17IOModesController4Mode9READ_ONLYE"></span><span id="_CPPv2N17IOModesController4Mode9READ_ONLYE"></span><span class="target" id="classIOModesController_1a6ec5dca163cab52132f6a8514c864ce0a47c7e7cb36a953a8c47e02000036bb44"></span><em class="property">enumerator </em><code class="sig-name descname">READ_ONLY</code><a class="headerlink" href="#_CPPv4N17IOModesController4Mode9READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N17IOModesController4Mode5CACHEE">
+<span id="_CPPv3N17IOModesController4Mode5CACHEE"></span><span id="_CPPv2N17IOModesController4Mode5CACHEE"></span><span class="target" id="classIOModesController_1a6ec5dca163cab52132f6a8514c864ce0a08e1be4b785493d9fc2ae52c5ba9ab2e"></span><em class="property">enumerator </em><code class="sig-name descname">CACHE</code><a class="headerlink" href="#_CPPv4N17IOModesController4Mode5CACHEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N17IOModesController4Mode5WRITEE">
+<span id="_CPPv3N17IOModesController4Mode5WRITEE"></span><span id="_CPPv2N17IOModesController4Mode5WRITEE"></span><span class="target" id="classIOModesController_1a6ec5dca163cab52132f6a8514c864ce0ad4b9e47f65b6e79b010582f15785867e"></span><em class="property">enumerator </em><code class="sig-name descname">WRITE</code><a class="headerlink" href="#_CPPv4N17IOModesController4Mode5WRITEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N17IOModesController17prepareForWritingEv">
@@ -59,6 +83,29 @@
 <dl class="cpp function">
 <dt id="_CPPv4N17IOModesController8canWriteEv">
 <span id="_CPPv3N17IOModesController8canWriteEv"></span><span id="_CPPv2N17IOModesController8canWriteEv"></span><span id="IOModesController::canWrite"></span><span class="target" id="classIOModesController_1a0a01c6768869f0df0de5533cab223615"></span>bool <code class="sig-name descname">canWrite</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController8canWriteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N17IOModesController18allChangesComittedEv">
+<span id="_CPPv3N17IOModesController18allChangesComittedEv"></span><span id="_CPPv2N17IOModesController18allChangesComittedEv"></span><span id="IOModesController::allChangesComitted"></span><span class="target" id="classIOModesController_1a1b1c8f520a3599ea51e099719c14fbbf"></span>bool <code class="sig-name descname">allChangesComitted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController18allChangesComittedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N17IOModesController9getIOModeEv">
+<span id="_CPPv3N17IOModesController9getIOModeEv"></span><span id="_CPPv2N17IOModesController9getIOModeEv"></span><span id="IOModesController::getIOMode"></span><span class="target" id="classIOModesController_1aa88fa9669c0a2bdab5908b958b5deb36"></span><a class="reference internal" href="#_CPPv4N17IOModesController4ModeE" title="IOModesController::Mode">Mode</a> <code class="sig-name descname">getIOMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController9getIOModeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N17IOModesController9setIOModeE4Mode">
+<span id="_CPPv3N17IOModesController9setIOModeE4Mode"></span><span id="_CPPv2N17IOModesController9setIOModeE4Mode"></span><span id="IOModesController::setIOMode__Mode"></span><span class="target" id="classIOModesController_1a980b593092ac9642885ce00d66c7e246"></span>void <code class="sig-name descname">setIOMode</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N17IOModesController4ModeE" title="IOModesController::Mode">Mode</a> <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController9setIOModeE4Mode" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Slots</p>
+<dl class="cpp function">
+<dt id="_CPPv4N17IOModesController23askCommitUnsavedChangesEv">
+<span id="_CPPv3N17IOModesController23askCommitUnsavedChangesEv"></span><span id="_CPPv2N17IOModesController23askCommitUnsavedChangesEv"></span><span id="IOModesController::askCommitUnsavedChanges"></span><span class="target" id="classIOModesController_1a25b0c1ce548764fe2420ae9cd2fcc51e"></span>bool <code class="sig-name descname">askCommitUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController23askCommitUnsavedChangesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
