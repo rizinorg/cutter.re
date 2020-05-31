@@ -49,7 +49,18 @@
 <dl class="cpp class">
 <dt id="_CPPv410TempConfig">
 <span id="_CPPv310TempConfig"></span><span id="_CPPv210TempConfig"></span><span id="TempConfig"></span><span class="target" id="classTempConfig"></span><em class="property">class </em><code class="sig-name descname">TempConfig</code><a class="headerlink" href="#_CPPv410TempConfig" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>Class for temporary modifying r2 <code class="docutils literal notranslate"><span class="pre">e</span></code> configuration. </p>
+<p>Modified values will be restored at the end of scope. <a class="reference internal" href="../widgets/classThis.html#classThis"><span class="std std-ref">This</span></a> is useful when using a r2 command that can only be configured using <code class="docutils literal notranslate"><span class="pre">e</span></code> configuration and doesn’t accept arguments. TempConfig::set calls can be chained. If a command or r2 method accepts arguments directly it is preferred to use those instead of temporary modifying global configuration.</p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="n">TempConfig</span> <span class="n">tempConfig</span><span class="p">;</span>
+    <span class="n">tempConfig</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;asm.arch&quot;</span><span class="p">,</span> <span class="s2">&quot;x86&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;asm.comments&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdRaw</span><span class="p">(</span><span class="s2">&quot;pd&quot;</span><span class="p">);</span>
+    <span class="o">//</span> <span class="n">config</span> <span class="n">automatically</span> <span class="n">restored</span> <span class="n">at</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">scope</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N10TempConfig10TempConfigEv">
