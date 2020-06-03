@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="RefreshDeferrerAccumulator" href="classRefreshDeferrerAccumulator.html" />
-    <link rel="prev" title="R2Task" href="classR2Task.html" />
+    <link rel="prev" title="RangeAssignMaxTree" href="classRangeAssignMaxTree.html" />
 
   </head><body>
     
@@ -30,7 +30,7 @@
           <a href="classRefreshDeferrerAccumulator.html" title="RefreshDeferrerAccumulator"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classR2Task.html" title="R2Task"
+          <a href="classRangeAssignMaxTree.html" title="RangeAssignMaxTree"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.10.3 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
@@ -50,7 +50,7 @@
 <dt id="_CPPv415RefreshDeferrer">
 <span id="_CPPv315RefreshDeferrer"></span><span id="_CPPv215RefreshDeferrer"></span><span id="RefreshDeferrer"></span><span class="target" id="classRefreshDeferrer"></span><em class="property">class </em><code class="sig-name descname">RefreshDeferrer</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv415RefreshDeferrer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Helper class for deferred refreshing in Widgets. </p>
-<p><a class="reference internal" href="../widgets/classThis.html#classThis"><span class="std std-ref">This</span></a> class can handle the logic necessary to defer the refreshing of widgets when they are not visible. It contains an optional <a class="reference internal" href="classRefreshDeferrerAccumulator.html#classRefreshDeferrerAccumulator"><span class="std std-ref">RefreshDeferrerAccumulator</span></a>, which can be used to accumulate incoming events while refreshing is deferred.</p>
+<p>This class can handle the logic necessary to defer the refreshing of widgets when they are not visible. It contains an optional <a class="reference internal" href="classRefreshDeferrerAccumulator.html#classRefreshDeferrerAccumulator"><span class="std std-ref">RefreshDeferrerAccumulator</span></a>, which can be used to accumulate incoming events while refreshing is deferred.</p>
 <p>Example (don’t write it like this in practice, use the convenience methods in <a class="reference internal" href="../widgets/classCutterDockWidget.html#classCutterDockWidget"><span class="std std-ref">CutterDockWidget</span></a>): <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// in the constructor of a widget
 this-&gt;refreshDeferrer = new RefreshDeferrer(new ReplacingRefreshDeferrerAccumulator(false), this);
 this-&gt;refreshDeferrer-&gt;registerFor(this);

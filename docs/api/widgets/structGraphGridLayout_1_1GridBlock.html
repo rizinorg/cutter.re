@@ -59,12 +59,14 @@
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock9tree_edgeE">
 <span id="_CPPv3N15GraphGridLayout9GridBlock9tree_edgeE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock9tree_edgeE"></span><span id="GraphGridLayout::GridBlock::tree_edge__std::vector:ut64:"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a1f1ee4c17082c3a18bb117f55c5231fa"></span>std::vector&lt;ut64&gt; <code class="sig-name descname">tree_edge</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock9tree_edgeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>subset of outgoing edges that form a tree </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock8dag_edgeE">
 <span id="_CPPv3N15GraphGridLayout9GridBlock8dag_edgeE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock8dag_edgeE"></span><span id="GraphGridLayout::GridBlock::dag_edge__std::vector:ut64:"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1aa5e9f705aa4ba07205fa308559b7a729"></span>std::vector&lt;ut64&gt; <code class="sig-name descname">dag_edge</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock8dag_edgeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>subset of outgoing edges that form a dag </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock10has_parentE">
@@ -72,28 +74,65 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv4N15GraphGridLayout9GridBlock5levelE">
-<span id="_CPPv3N15GraphGridLayout9GridBlock5levelE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock5levelE"></span><span id="GraphGridLayout::GridBlock::level__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a1447425109da70d1a1cd4c6cb236869e"></span>int <code class="sig-name descname">level</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock5levelE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N15GraphGridLayout9GridBlock10inputCountE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock10inputCountE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock10inputCountE"></span><span id="GraphGridLayout::GridBlock::inputCount__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a1bdfea2d856f3e6712ff1dd210e31fb1"></span>int <code class="sig-name descname">inputCount</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock10inputCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock11outputCountE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock11outputCountE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock11outputCountE"></span><span id="GraphGridLayout::GridBlock::outputCount__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a1401a73b3fe2083b283ae139ca37db29"></span>int <code class="sig-name descname">outputCount</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock11outputCountE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock9row_countE">
 <span id="_CPPv3N15GraphGridLayout9GridBlock9row_countE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock9row_countE"></span><span id="GraphGridLayout::GridBlock::row_count__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a68ca4e672e3e34b2b03e3b2f44579f0d"></span>int <code class="sig-name descname">row_count</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock9row_countE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N15GraphGridLayout9GridBlock9col_countE">
-<span id="_CPPv3N15GraphGridLayout9GridBlock9col_countE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock9col_countE"></span><span id="GraphGridLayout::GridBlock::col_count__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1ab6209673937c106e1a77cb2d4a9f2d7e"></span>int <code class="sig-name descname">col_count</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock9col_countE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Number of rows in subtree. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock3colE">
 <span id="_CPPv3N15GraphGridLayout9GridBlock3colE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock3colE"></span><span id="GraphGridLayout::GridBlock::col__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1ac40433c5b2057f917d83ee85c4536602"></span>int <code class="sig-name descname">col</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock3colE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Column in which the block is. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N15GraphGridLayout9GridBlock3rowE">
 <span id="_CPPv3N15GraphGridLayout9GridBlock3rowE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock3rowE"></span><span id="GraphGridLayout::GridBlock::row__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a1987c07f7a56096654557f63ecae66c3"></span>int <code class="sig-name descname">row</code> = 0<a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock3rowE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Row in which the block is. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock11lastRowLeftE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock11lastRowLeftE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock11lastRowLeftE"></span><span id="GraphGridLayout::GridBlock::lastRowLeft__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1aca945caf69009c683ef4c2ee2f220726"></span>int <code class="sig-name descname">lastRowLeft</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock11lastRowLeftE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>left side of subtree last row </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock12lastRowRightE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock12lastRowRightE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock12lastRowRightE"></span><span id="GraphGridLayout::GridBlock::lastRowRight__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1abf292669e52d0dcd6ed23597eff65433"></span>int <code class="sig-name descname">lastRowRight</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock12lastRowRightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>right side of subtree last row </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock12leftPositionE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock12leftPositionE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock12leftPositionE"></span><span id="GraphGridLayout::GridBlock::leftPosition__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a70cb507b9dbc63510c31aa8bd49d6a38"></span>int <code class="sig-name descname">leftPosition</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock12leftPositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>left side of subtree </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock13rightPositionE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock13rightPositionE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock13rightPositionE"></span><span id="GraphGridLayout::GridBlock::rightPosition__i"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a0807a6ee78d8544939fd09ae4f715994"></span>int <code class="sig-name descname">rightPosition</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock13rightPositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>right side of subtree </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock13leftSideShapeE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock13leftSideShapeE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock13leftSideShapeE"></span><span id="GraphGridLayout::GridBlock::leftSideShape__LinkedListPool:i:::List"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a5e8718614dc7a67945a96df69ea82e7c"></span><a class="reference internal" href="../common/classLinkedListPool.html#_CPPv4I0E14LinkedListPool" title="LinkedListPool">LinkedListPool</a>&lt;int&gt;::List <code class="sig-name descname">leftSideShape</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock13leftSideShapeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N15GraphGridLayout9GridBlock14rightSideShapeE">
+<span id="_CPPv3N15GraphGridLayout9GridBlock14rightSideShapeE"></span><span id="_CPPv2N15GraphGridLayout9GridBlock14rightSideShapeE"></span><span id="GraphGridLayout::GridBlock::rightSideShape__LinkedListPool:i:::List"></span><span class="target" id="structGraphGridLayout_1_1GridBlock_1a9013ef92318cb5412914e174cb276176"></span><a class="reference internal" href="../common/classLinkedListPool.html#_CPPv4I0E14LinkedListPool" title="LinkedListPool">LinkedListPool</a>&lt;int&gt;::List <code class="sig-name descname">rightSideShape</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout9GridBlock14rightSideShapeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
