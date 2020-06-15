@@ -1,4 +1,0 @@
-AnnotatedCode
-=============
-
-.. doxygenstruct:: AnnotatedCode
