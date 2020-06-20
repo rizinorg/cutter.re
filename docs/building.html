@@ -52,6 +52,22 @@
 that we provide pre-compiled binaries for Windows, Linux and macOS on
 our <a class="reference external" href="https://github.com/radareorg/cutter/releases/latest">release page.</a></p>
 </div>
+<div class="section" id="getting-the-source">
+<h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Permalink to this headline">¶</a></h2>
+<p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/radareorg/cutter
+</pre></div>
+</div>
+<p>This will clone the Cutter source and it’s dependencies(radare2, etc.)
+under <strong>cutter</strong> and you should see the following dir structure:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cutter/-<span class="p">|</span>
+        <span class="p">|</span>-docs/     <span class="c1"># Cutter Documentation</span>
+        <span class="p">|</span>-radare2/  <span class="c1"># radare2 submodule</span>
+        <span class="p">|</span>-src/      <span class="c1"># Cutter Source Code</span>
+</pre></div>
+</div>
+<p>Following sections assume that <strong>cutter</strong> is your working dir. (if not, do <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cutter</span></code>)</p>
+</div>
 <div class="section" id="building-on-linux">
 <h2>Building on Linux<a class="headerlink" href="#building-on-linux" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="requirements">
@@ -59,7 +75,6 @@ our <a class="reference external" href="https://github.com/radareorg/cutter/rele
 <p>On Linux, you will need:</p>
 <ul class="simple">
 <li><p>build-essential</p></li>
-<li><p>git</p></li>
 <li><p>cmake</p></li>
 <li><p>meson</p></li>
 <li><p>libzip-dev</p></li>
@@ -67,33 +82,38 @@ our <a class="reference external" href="https://github.com/radareorg/cutter/rele
 <li><p>qt5</p></li>
 <li><p>qt5-svg</p></li>
 <li><p>pkgconf</p></li>
+<li><p>curl*</p></li>
+<li><p>python-setuptools*</p></li>
+<li><p>KSyntaxHighlighter**</p></li>
+<li><p>graphviz**</p></li>
 </ul>
-<p>On Debian-based Linux distributions, all of these packages can be installed with this single command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">git</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
+<blockquote>
+<div><p><cite>*</cite> Recommended while building with <code class="docutils literal notranslate"><span class="pre">make</span></code>/<code class="docutils literal notranslate"><span class="pre">Cmake</span></code>.</p>
+<p><cite>**</cite> Optional. If present, these add extra features to Cutter. See <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
+</div></blockquote>
+<p>On Debian-based Linux distributions, all of these essential packages can be installed with this single command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
-<p>On Arch-based Linux distributions, build-essential should be replaced by base-devel:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="n">git</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Ubuntu 18.04 and lower, <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
+</div>
+<p>On Arch-based Linux distributions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="building-steps">
 <h3>Building steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
-<p>The official way to build Cutter on Linux is by using CMake.
-First, clone the repository with its dependencies:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/radareorg/cutter
-</pre></div>
-</div>
-<p>Then invoke CMake to build Cutter and its dependency radare2.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter
-mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
+<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency radare2.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 cmake -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON ../src
 cmake --build .
 </pre></div>
 </div>
 <p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter
-cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
 cmake --build build
 </pre></div>
 </div>
@@ -103,7 +123,7 @@ cmake --build build
 Syntax Highlighting, Crash Reporting and more,
 please look at the full list of <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
 </div>
-<p>After the build process is complete, you should have the Cutter executable in the <cite>build</cite> folder.
+<p>After the build process is complete, you should have the <code class="docutils literal notranslate"><span class="pre">Cutter</span></code> executable in the <strong>build</strong> dir.
 You can now execute Cutter like this:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/Cutter
 </pre></div>
@@ -114,8 +134,8 @@ You can now execute Cutter like this:</p>
 <h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
 <h3>Requirements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Cutter works on Windows starting from Windows 7 up to Windows 10.
-To compile Cutter it is necessary to have installed:</p>
+<p>Cutter works on Windows 7 or newer.
+To compile Cutter it is necessary to have the following installed:</p>
 <ul class="simple">
 <li><p>A version of Visual Studio (2015, 2017 and 2019 are supported)</p></li>
 <li><p>CMake</p></li>
@@ -126,7 +146,7 @@ To compile Cutter it is necessary to have installed:</p>
 <h3>Default way<a class="headerlink" href="#default-way" title="Permalink to this headline">¶</a></h3>
 <p>To build Cutter on Windows machines using CMake,
 you will have to make sure that the executables are available
-in your <cite>%PATH%</cite> environment variable.</p>
+in your <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code> environment variable.</p>
 <p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="p">=</span>c:\Qt\qt-5.6.2-msvc2013-x86\5.6\msvc2013\lib\cmake
 <span class="k">cd</span> src
@@ -151,7 +171,7 @@ not work or does not suit your needs.</p>
 </ul>
 <p>Download and unpack
 <a class="reference external" href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
-source root directory.</p>
+source root directory (ie. <strong>cutter</strong> - working dir).</p>
 <p>Note that in the below steps, the paths may vary depending on your version of Qt and Visual Studio.</p>
 <p>Environment settings (example for x64 version):</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: Export MSVC variables</span>
@@ -184,14 +204,14 @@ and finally select the <code class="docutils literal notranslate"><span class="p
 QtCreator will then allow you to directly edit the source code and build the project.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For the <cite>.pro</cite> file to be compiled successfully, it is required
-to run <cite>prepare_r2.bat</cite> beforehand.</p>
+<p>On <strong>Windows</strong>, for the <code class="docutils literal notranslate"><span class="pre">.pro</span></code> file to be compiled successfully, it is required
+to run <code class="docutils literal notranslate"><span class="pre">prepare_r2.bat</span></code> beforehand.</p>
 </div>
 </div>
 <div class="section" id="compiling-on-linux-macos">
 <h3>Compiling on Linux / macOS<a class="headerlink" href="#compiling-on-linux-macos" title="Permalink to this headline">¶</a></h3>
 <p>The easiest way, but not the one we recommend, is to simply run <code class="docutils literal notranslate"><span class="pre">./build.sh</span></code> from the root directory,
-and let the magic happen. The script will use qmake to build Cutter.
+and let the magic happen. The script will use <code class="docutils literal notranslate"><span class="pre">qmake</span></code> to build Cutter.
 The <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> script is meant to be deprecated and will be deleted in the future.</p>
 <p>If you want to manually use qmake, follow these steps:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build<span class="p">;</span> <span class="nb">cd</span> build
@@ -299,6 +319,7 @@ The workaround is to either add the <cite>–disable-new-dtags</cite> linker fla
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-the-source">Getting the Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a></li>
