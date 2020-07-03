@@ -70,6 +70,7 @@
 <li><p>assign node positions within grid using tree structure, child subtrees are placed side by side with parent on top</p></li>
 <li><p>perform edge routing</p></li>
 <li><p>calculate column and row pixel positions based on node sizes and amount edges between the rows</p></li>
+<li><p>[optional] layout compacting</p></li>
 </ol>
 </p>
 <p>Contrary to many other layered graph drawing algorithm this implementation doesn’t perform node reordering to minimize edge crossing. This simplifies implementation, and preserves original control flow structure for conditional jumps ( true jump on one side, false jump on other). Due to most of control flow being result of structured programming constructs like if/then/else and loops, resulting layout is usually readable without node reordering within layers.</p>
@@ -103,7 +104,21 @@
 <li><p>column above target node is empty - segments 3-5 are merged Vertical segment intersection with nodes is prevented using a 2d array marking which vertical segments are blocked and naively iterating through all rows between start and end at the desired column.</p></li>
 </ul>
 </p>
-<p>After rough routing segment offsets are calculated relative to their corresponding edge column. This ensures that two segments don’t overlap. Segment offsets within each column are assigned greedily with some heuristics for assignment order to reduce amount of edge crossings and result in more visually pleasing output for a typical CFG graph. Each segment gets assigned an offset that is maximum of previously assigned offsets overlapping with current segment + segment spacing. Assignment order is chosen based on: direction of previous and last segment - helps reducing crossings and place the segments between nodes segment length - reduces crossing when segment endpoints have the same structure as valid parentheses expression edge length - establishes some kind of order when single node is connected to many edges, typically a block with switch statement or block after switch statement. </p>
+<p>After rough routing segment offsets are calculated relative to their corresponding edge column. This ensures that two segments don’t overlap. Segment offsets within each column are assigned greedily with some heuristics for assignment order to reduce amount of edge crossings and result in more visually pleasing output for a typical CFG graph. Each segment gets assigned an offset that is maximum of previously assigned offsets overlapping with current segment + segment spacing. Assignment order is chosen based on: direction of previous and last segment - helps reducing crossings and place the segments between nodes segment length - reduces crossing when segment endpoints have the same structure as valid parentheses expression edge length - establishes some kind of order when single node is connected to many edges, typically a block with switch statement or block after switch statement.</p>
+<p><em>Layout compacting</em></p>
+<p>Doing the layout within a grid causes minimal spacing to be limited by widest and tallest block within each column and row. One common case is block with function entrypoint being wider due to function name causing wide horizontal space between branching blocks. Another case is rows in two parallel columns being aligned.</p>
+<p><img alt="../doxygen-out/xml/layout_compacting.svg" src="../doxygen-out/xml/layout_compacting.svg" /></p>
+<p>Both problems are mitigated by squishing graph. Compressing in each of the two direction is done separately. The process is defined as liner program. Each variable represents a position of edge segment or node in the direction being optimized.</p>
+<p>Following constraints are used<ul class="simple">
+<li><p>Keep the order with nearest segments.</p></li>
+<li><p>If the node has two outgoing edges, one to the node on left side and other to the right, keep them on the corresponding side of node’s center.</p></li>
+<li><p>For all edges keep the node which is above above. This helps when vertical block spacing is set bigger than double edge spacing and edge shadows relationship between two blocks.</p></li>
+<li><p>Equality constraint to keep relative position between nodes and and segments directly connected to them.</p></li>
+<li><p>Equality constraint to keep the node centered when control flow merges In the vertical direction objective function minimizes y positions of nodes and lengths of vertical segments. In the horizontal direction objective function minimizes lengths of horizontal segments.</p></li>
+</ul>
+</p>
+<p>In the resulting linear program all constraints beside x_i &gt;= 0 consist of exactly two variables: either x_i - x_j &lt;= c_k or x_i = x_j + c_k.</p>
+<p>Since it isn’t necessary get perfect solution and to avoid worst case performance current implementation isn’t using a general purpose linear programming solver. Each variable is changed until constraint is reached and afterwards variables are grouped and changed together. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
@@ -136,8 +151,28 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4NK15GraphGridLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi">
-<span id="_CPPv3NK15GraphGridLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi"></span><span id="_CPPv2NK15GraphGridLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi"></span><span id="GraphGridLayout::CalculateLayout__std::unordered_map:ut64.GraphBlock:R.ut64.iR.iRC"></span><span class="target" id="classGraphGridLayout_1a69614287f7895e62bcb6a394b1175d20"></span>void <code class="sig-name descname">CalculateLayout</code><span class="sig-paren">(</span>std::unordered_map&lt;ut64, GraphBlock&gt; &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK15GraphGridLayout15CalculateLayoutERNSt13unordered_mapI4ut6410GraphBlockEE4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi">
+<span id="_CPPv3NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="_CPPv2NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="GraphGridLayout::CalculateLayout__GraphR.ut64.iR.iRC"></span><span class="target" id="classGraphGridLayout_1a69f0749a1d9eeb4db2d83e5a8540909c"></span>void <code class="sig-name descname">CalculateLayout</code><span class="sig-paren">(</span>Graph &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GraphGridLayout24setTightSubtreePlacementEb">
+<span id="_CPPv3N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="_CPPv2N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="GraphGridLayout::setTightSubtreePlacement__b"></span><span class="target" id="classGraphGridLayout_1ace65ee2d4bae3e5df223e41d3df48edc"></span>void <code class="sig-name descname">setTightSubtreePlacement</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout24setTightSubtreePlacementEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GraphGridLayout27setParentBetweenDirectChildEb">
+<span id="_CPPv3N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="_CPPv2N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="GraphGridLayout::setParentBetweenDirectChild__b"></span><span class="target" id="classGraphGridLayout_1a18e195ead36f039589a0abd16c518a64"></span>void <code class="sig-name descname">setParentBetweenDirectChild</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout27setParentBetweenDirectChildEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GraphGridLayout31setverticalBlockAlignmentMiddleEb">
+<span id="_CPPv3N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="_CPPv2N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="GraphGridLayout::setverticalBlockAlignmentMiddle__b"></span><span class="target" id="classGraphGridLayout_1a6471a4f402afa86147f412bd85d1e11c"></span>void <code class="sig-name descname">setverticalBlockAlignmentMiddle</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout31setverticalBlockAlignmentMiddleEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N15GraphGridLayout21setLayoutOptimizationEb">
+<span id="_CPPv3N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="_CPPv2N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="GraphGridLayout::setLayoutOptimization__b"></span><span class="target" id="classGraphGridLayout_1a4bc1da2a32385487fad48bbe5d000804"></span>void <code class="sig-name descname">setLayoutOptimization</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout21setLayoutOptimizationEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
