@@ -1,4 +1,0 @@
-RenameDialog
-============
-
-.. doxygenclass:: RenameDialog
