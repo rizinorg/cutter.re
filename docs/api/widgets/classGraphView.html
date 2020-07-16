@@ -51,7 +51,7 @@
 <dl class="cpp class">
 <dt id="_CPPv49GraphView">
 <span id="_CPPv39GraphView"></span><span id="_CPPv29GraphView"></span><span id="GraphView"></span><span class="target" id="classGraphView"></span><em class="property">class </em><code class="sig-name descname">GraphView</code> : <em class="property">public</em> QAbstractScrollArea<a class="headerlink" href="#_CPPv49GraphView" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Subclassed by <a class="reference internal" href="classDisassemblerGraphView.html#classDisassemblerGraphView"><span class="std std-ref">DisassemblerGraphView</span></a>, <a class="reference internal" href="classOverviewView.html#classOverviewView"><span class="std std-ref">OverviewView</span></a></p>
+<dd><p>Subclassed by <a class="reference internal" href="classCutterGraphView.html#classCutterGraphView"><span class="std std-ref">CutterGraphView</span></a>, <a class="reference internal" href="classOverviewView.html#classOverviewView"><span class="std std-ref">OverviewView</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
@@ -144,11 +144,6 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9GraphView9showBlockEP10GraphBlockb">
-<span id="_CPPv3N9GraphView9showBlockEP10GraphBlockb"></span><span id="_CPPv2N9GraphView9showBlockEP10GraphBlockb"></span><span id="GraphView::showBlock__GraphBlockP.b"></span><span class="target" id="classGraphView_1aebc9a601ff74435adc08ff3b8321367d"></span>void <code class="sig-name descname">showBlock</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> *<em>block</em>, bool <em>anywhere</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9showBlockEP10GraphBlockb" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N9GraphView13showRectangleERK5QRectb">
 <span id="_CPPv3N9GraphView13showRectangleERK5QRectb"></span><span id="_CPPv2N9GraphView13showRectangleERK5QRectb"></span><span id="GraphView::showRectangle__QRectCR.b"></span><span class="target" id="classGraphView_1a12d59d78b9036805670123569c6e7214"></span>void <code class="sig-name descname">showRectangle</code><span class="sig-paren">(</span><em class="property">const</em> QRect &amp;<em>rect</em>, bool <em>anywhere</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13showRectangleERK5QRectb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Move view so that area is visible. </p>
@@ -180,6 +175,11 @@
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView24viewToLogicalCoordinatesE6QPoint">
 <span id="_CPPv3N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="GraphView::viewToLogicalCoordinates__QPoint"></span><span class="target" id="classGraphView_1a9b82b8669d34ad89457fd7ad03fb5a30"></span>QPoint <code class="sig-name descname">viewToLogicalCoordinates</code><span class="sig-paren">(</span>QPoint <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24viewToLogicalCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9GraphView24logicalToViewCoordinatesE6QPoint">
+<span id="_CPPv3N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="GraphView::logicalToViewCoordinates__QPoint"></span><span class="target" id="classGraphView_1a6c02141e25582f70bfde96d9484a91db"></span>QPoint <code class="sig-name descname">logicalToViewCoordinates</code><span class="sig-paren">(</span>QPoint <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24logicalToViewCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -272,6 +272,19 @@
 <dt id="_CPPv4N9GraphView15makeGraphLayoutE6Layoutb">
 <span id="_CPPv3N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="_CPPv2N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="GraphView::makeGraphLayout__Layout.b"></span><span class="target" id="classGraphView_1aa03e76d0ff30688cf0f8d9d9fe4e817f"></span>std::unique_ptr&lt;<a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>&gt; <code class="sig-name descname">makeGraphLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView6LayoutE" title="GraphView::Layout">Layout</a> <em>layout</em>, bool <em>horizontal</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView15makeGraphLayoutE6Layoutb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE">
+<span id="_CPPv3N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="_CPPv2N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="GraphView::cleanupEdges__GraphLayout::GraphR"></span><span class="target" id="classGraphView_1a30c3ee1c48bc858489b14e69ebef97e8"></span>void <code class="sig-name descname">cleanupEdges</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>::<a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout5GraphE" title="GraphLayout::Graph">Graph</a> &amp;<em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove duplicate edges and edges without target in graph. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 </div>
 <dl class="cpp struct">

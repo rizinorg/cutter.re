@@ -1,0 +1,4 @@
+R2GraphWidget
+=============
+
+.. doxygenclass:: R2GraphWidget
