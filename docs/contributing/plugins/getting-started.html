@@ -6,17 +6,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting started with Python Plugins &#8212; Cutter 1.10.3 documentation</title>
-    <link rel="stylesheet" href="../_static/cutter.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Reference" href="../api.html" />
-    <link rel="prev" title="Plugins" href="../plugins.html" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building" href="../../building.html" />
+    <link rel="prev" title="Translate Cutter" href="../translations/getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   </head><body>
     
@@ -25,16 +33,16 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
+          <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../api.html" title="API Reference"
+          <a href="../../building.html" title="Building"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../plugins.html" title="Plugins"
+          <a href="../translations/getting-started.html" title="Translate Cutter"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Cutter 1.10.3 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../plugins.html" accesskey="U">Plugins</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.10.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" accesskey="U">Contributing to Cutter</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Getting started with Python Plugins</a></li> 
       </ul>
     </div>
@@ -79,7 +87,7 @@ Normally, you shouldn’t have to do anything else in this function.</p>
 <p class="admonition-title">Note</p>
 <p>The Cutter API is exposed through the <code class="docutils literal notranslate"><span class="pre">cutter</span></code> module.
 This consists mostly of direct bindings of the original C++ classes, generated with Shiboken2.
-For more detail about this API, see the Cutter C++ code or <a class="reference internal" href="../api.html#api"><span class="std std-ref">API Reference</span></a>.</p>
+For more detail about this API, see the Cutter C++ code or <a class="reference internal" href="../../api.html#api"><span class="std std-ref">API Reference</span></a>.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">CutterPlugin</span></code> subclass contains some meta-info and two callback methods:</p>
 <ul class="simple">
@@ -90,7 +98,7 @@ For more detail about this API, see the Cutter C++ code or <a class="reference i
 <p>Copy this file into the <code class="docutils literal notranslate"><span class="pre">python</span></code> subdirectory located under the plugins directory of Cutter and start the application.
 You should see an entry for your plugin in the list under Edit -&gt; Preferences -&gt; Plugins.
 Here, the absolute path to the plugins directory is shown too if you are unsure where to put your plugin:</p>
-<img alt="../_images/preferences-plugins.png" src="../_images/preferences-plugins.png" />
+<img alt="../../_images/preferences-plugins.png" src="../../_images/preferences-plugins.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As mentioned, plugins are Python modules. This means, instead of only a single .py file, you can also
@@ -142,9 +150,9 @@ Documentation of <a class="reference external" href="https://doc.qt.io/qt-5/refe
 added to the menu for showing and hiding the widget.
 MainWindow provides a helper method called <code class="docutils literal notranslate"><span class="pre">addPluginDockWidget()</span></code> to easily register these.</p>
 <p>When running Cutter now, you should see the widget:</p>
-<img alt="../_images/mydockwidget.png" src="../_images/mydockwidget.png" />
+<img alt="../../_images/mydockwidget.png" src="../../_images/mydockwidget.png" />
 <p>… as well as the action:</p>
-<img alt="../_images/mydockwidget-action.png" src="../_images/mydockwidget-action.png" />
+<img alt="../../_images/mydockwidget-action.png" src="../../_images/mydockwidget-action.png" />
 </div>
 <div class="section" id="fetching-data">
 <h2>Fetching Data<a class="headerlink" href="#fetching-data" title="Permalink to this headline">¶</a></h2>
@@ -190,7 +198,7 @@ with a parameter of 1 to fetch a single line of disassembly.</p>
 To get a general overview, enter a single <code class="docutils literal notranslate"><span class="pre">?</span></code>.</p>
 </div>
 <p>The result will look like the following:</p>
-<img alt="../_images/disasm-static.png" src="../_images/disasm-static.png" />
+<img alt="../../_images/disasm-static.png" src="../../_images/disasm-static.png" />
 <p>Of course, since we only fetch the info once during the creation of the widget, the content never updates.
 We are going to change that in the next section.</p>
 </div>
@@ -227,7 +235,7 @@ This can be done like the following:</p>
 Then we call <code class="docutils literal notranslate"><span class="pre">cutter.core()</span></code>, which returns the global instance of <code class="docutils literal notranslate"><span class="pre">CutterCore</span></code>.
 This class provides the Qt signal <code class="docutils literal notranslate"><span class="pre">seekChanged(RVA)</span></code>, which is emitted every time the current seek changes.
 We can simply connect this signal to our method and our widget will update as we expect it to:</p>
-<img alt="../_images/disasm-dynamic.png" src="../_images/disasm-dynamic.png" />
+<img alt="../../_images/disasm-dynamic.png" src="../../_images/disasm-dynamic.png" />
 <p>For more information about Qt signals and slots, refer to <a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">https://doc.qt.io/qt-5/signalsandslots.html</a>.</p>
 </div>
 <div class="section" id="full-code">
@@ -291,29 +299,32 @@ We can simply connect this signal to our method and our widget will update as we
   <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
     <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="https://cutter.re/">
-          <img class="logo" src="../_static/cutter.ico" alt="Logo"/>
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
-      <a href="../index.html">Cutter documentation</a>
-<h3><a href="../index.html">Table of Contents</a></h3>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../shortcuts.html">Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../building.html">Building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../common-errors.html">Common errors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developers-docs.html">Developer documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-docs.html">User documentation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../plugins.html">Plugins</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../plugins.html#loading-and-overview">Loading and Overview</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../plugins.html#creating-plugins">Creating Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../plugins.html">Plugins</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html#loading-and-overview">Loading and Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../plugins.html#creating-plugins">Creating Plugins</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Getting started with Python Plugins</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
+    <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>

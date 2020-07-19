@@ -8,15 +8,23 @@
     <title>Building &#8212; Cutter 1.10.3 documentation</title>
     <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="_static/admonitions.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
+    <script src="_static/cutter.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Common errors" href="common-errors.html" />
-    <link rel="prev" title="Shortcuts" href="shortcuts.html" />
+    <link rel="prev" title="Getting started with Python Plugins" href="contributing/plugins/getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   </head><body>
     
@@ -31,7 +39,7 @@
           <a href="common-errors.html" title="Common errors"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="shortcuts.html" title="Shortcuts"
+          <a href="contributing/plugins/getting-started.html" title="Getting started with Python Plugins"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Cutter 1.10.3 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Building</a></li> 
@@ -317,20 +325,34 @@ The workaround is to either add the <cite>–disable-new-dtags</cite> linker fla
 <h3><a href="index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/code.html">Developer documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-the-source">Getting the Source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-steps">Building steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-way">Default way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-with-meson">Building with Meson</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-qtcreator">Using QtCreator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compiling-on-linux-macos">Compiling on Linux / macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional steps for macOS</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#cmake-building-options">CMake Building Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#compiling-cutter-with-breakpad-support">Compiling Cutter with Breakpad support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="developers-docs.html">Developer documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
 </ul>

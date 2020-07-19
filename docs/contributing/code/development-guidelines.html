@@ -5,18 +5,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer documentation &#8212; Cutter 1.10.3 documentation</title>
-    <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="First time contributing" href="developers-docs/first-time.html" />
-    <link rel="prev" title="Common errors" href="common-errors.html" />
+    <title>Cutter Development Guidelines &#8212; Cutter 1.10.3 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Development environment setup" href="ide-setup.html" />
+    <link rel="prev" title="Contributing code to Cutter" href="getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   </head><body>
     
@@ -25,16 +33,18 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
+          <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="developers-docs/first-time.html" title="First time contributing"
+          <a href="ide-setup.html" title="Development environment setup"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="common-errors.html" title="Common errors"
+          <a href="getting-started.html" title="Contributing code to Cutter"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Cutter 1.10.3 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Developer documentation</a></li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.10.3 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" >Contributing to Cutter</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../code.html" accesskey="U">Developer Documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cutter Development Guidelines</a></li> 
       </ul>
     </div>
 
@@ -44,41 +54,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="developer-documentation">
-<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This page shows some hints about the coding conventions.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="developers-docs/first-time.html">First time contributing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html#compile-cutter">Compile Cutter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html#read-documentation">Read documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html#get-familiar-with-current-situation">Get familiar with current situation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html#work-on-your-feature-or-bug-fix">Work on your feature or bug-fix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html#open-a-pull-request">Open a Pull request</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="developers-docs/ide-setup.html">Development environment setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#general-advice">General advice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#windows">Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#qt-creator">Qt Creator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#vscode">VSCode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#clion">CLion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html#visual-studio">Visual Studio</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html#solution-description">Solution description</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="cutter-development-guidelines">
+<h1>Cutter Development Guidelines<a class="headerlink" href="#cutter-development-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New to Cutter development? Check out our <a class="reference internal" href="getting-started.html"><span class="doc">tutorial for new developers</span></a>.</p>
 </div>
-<div class="section" id="cutter-coding-advices">
-<h2>Cutter coding advices<a class="headerlink" href="#cutter-coding-advices" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="common-usage">
+<h2>Common Usage<a class="headerlink" href="#common-usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cuttercore-class">
 <h3>CutterCore class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
 <p>This is the main class where every link with r2 is made. It is <em>unique</em>
-accross the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
+across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span>
 </pre></div>
@@ -90,11 +77,9 @@ accross the whole process. To access it, simply call <code class="docutils liter
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdj(&lt;command&gt;)</span></code> - To be used with json commands like <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
 This is the command we used to fetch structured data from radare2.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single radare2 command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single radare2 command
+without going through radare2 shell functionality like output redirects, grep, and multiple command parsing.</p></li>
 </ul>
-<blockquote>
-<div><p>without going through radare2 shell functionality like output redirects, grep, and multiple command parsing.</p>
-</div></blockquote>
 <p>The command then returns its output. This should be used when a command doesn’t have output or the output should be handled as-is. If possible, using the json variation with <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> is always preferred.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRawAt(&lt;command&gt;,</span> <span class="pre">&lt;address&gt;)</span></code> - Executes a single radare2 command in a given address and returns the output. This helps avoiding weird strings concatenation like <code class="docutils literal notranslate"><span class="pre">cmd(&quot;ph</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">hash</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&#64;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">QString::num(address))</span></code>.</p></li>
@@ -278,33 +263,36 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
   <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
     <div class="sphinxsidebarwrapper">
         <p class="logo"><a href="https://cutter.re/">
-          <img class="logo" src="_static/cutter.ico" alt="Logo"/>
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
         </a></p>
-      <a href="index.html">Cutter documentation</a>
-<h3><a href="index.html">Table of Contents</a></h3>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/first-time.html">First time contributing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="developers-docs/ide-setup.html">Development environment setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cutter-coding-advices">Cutter coding advices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#coding-style">Coding style</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#general-coding-advices">General coding advices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code.html">Developer documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cutter Development Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-usage">Common Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-coding-advices">General coding advices</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
+    <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
