@@ -26,6 +26,8 @@ cover_image: ""
 exclude:
   - /docs/
 
+# Include the .well-known folder
+include: [".well-known"]
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
