@@ -169,7 +169,8 @@ const getReleaseVersion = async () => {
     var urlData = await fetch(url);
     var jsonData = await urlData.json();
     var tag = jsonData.tag_name;
-    return tag;
+    var notes = jsonData.body;
+    return [tag, notes];
 }
 
 
@@ -206,8 +207,11 @@ const setDownloadLinksForAllPlatforms = async () => {
 
 
 const fillCutterVersion = async() => {
-    var tag = await getReleaseVersion();
+    const [tag, notes] = await getReleaseVersion();
     document.getElementById("cutterVersion").innerHTML = tag;
+    
+    var converter = new showdown.Converter();
+    document.getElementById("release-notes-content").innerHTML = converter.makeHtml(notes);
 }
 
 // run only on main page
