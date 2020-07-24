@@ -177,9 +177,9 @@ const getReleaseVersion = async () => {
 
 const getReleaseURLForPlatform = async (platform) => {
     var releaseURL = "https://github.com/radareorg/cutter/releases/latest";
-    var tag;
+    var tag, notes;
     if (platform != "unknown") {
-        tag = await getReleaseVersion();
+        [tag, notes] = await getReleaseVersion();
         releaseURL = "https://github.com/radareorg/cutter/releases/download/" + tag + "/Cutter-" + tag + "-x64." + platform;
     }
 
