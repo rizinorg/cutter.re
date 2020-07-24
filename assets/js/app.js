@@ -164,7 +164,7 @@ function getOS() {
 }
 
 
-const getRelaseVersion = async () => {
+const getReleaseVersion = async () => {
     var url = "https://api.github.com/repos/radareorg/cutter/releases/latest";
     var urlData = await fetch(url);
     var jsonData = await urlData.json();
@@ -174,11 +174,11 @@ const getRelaseVersion = async () => {
 
 
 
-const getRelaseURLForPlatform = async (platform) => {
+const getReleaseURLForPlatform = async (platform) => {
     var releaseURL = "https://github.com/radareorg/cutter/releases/latest";
     var tag;
     if (platform != "unknown") {
-        tag = await getRelaseVersion();
+        tag = await getReleaseVersion();
         releaseURL = "https://github.com/radareorg/cutter/releases/download/" + tag + "/Cutter-" + tag + "-x64." + platform;
     }
 
@@ -189,14 +189,14 @@ const setReleaseDownloadLinkForOS = async (os) => {
     if (os.icon) {
         var downloadButton = document.getElementById("downloadBtn");
         downloadButton.insertAdjacentHTML('afterbegin','<i class="fab fa-' + os.icon + '"></i>');
-        downloadButton.href = await getRelaseURLForPlatform(os.name);
+        downloadButton.href = await getReleaseURLForPlatform(os.name);
     }
 }
 
 const setDownloadLinksForAllPlatforms = async () => {
-    var linuxURL = await getRelaseURLForPlatform("Linux.appimage");
-    var windowsURL = await getRelaseURLForPlatform("Windows.zip");
-    var macOSURL = await getRelaseURLForPlatform("macOS.dmg");
+    var linuxURL = await getReleaseURLForPlatform("Linux.appimage");
+    var windowsURL = await getReleaseURLForPlatform("Windows.zip");
+    var macOSURL = await getReleaseURLForPlatform("macOS.dmg");
 
     document.getElementById("downloadMacOS").href = macOSURL;
     document.getElementById("downloadLinux").href = linuxURL;
@@ -206,7 +206,7 @@ const setDownloadLinksForAllPlatforms = async () => {
 
 
 const fillCutterVersion = async() => {
-    var tag = await getRelaseVersion();
+    var tag = await getReleaseVersion();
     document.getElementById("cutterVersion").innerHTML = tag;
 }
 
