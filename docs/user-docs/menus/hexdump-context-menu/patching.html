@@ -42,7 +42,7 @@
           <a href="../hexdump-widget-context-menu.html" title="Hexdump Widget Context Menu"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Cutter 1.11.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../../user-docs.html" >User documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../user-docs.html" >User Documentation</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../menus.html" >Menus</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../hexdump-widget-context-menu.html" accesskey="U">Hexdump Widget Context Menu</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Patching</a></li> 
@@ -59,48 +59,48 @@
 <h1>Patching<a class="headerlink" href="#patching" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="write-string">
 <h2>Write String<a class="headerlink" href="#write-string" title="Permalink to this headline">¶</a></h2>
-<p><strong>Description:</strong> Write ASCII string at the current location. If multiple bytes are selected, the string will be written from the start of the selection. Please note, this item won’t write a null-terminated nor wide strings. Please see the other items for this features.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">string</span></code></p>
+<p><strong>Description:</strong> Write ASCII string at the current location. If multiple bytes are selected, the string will be written from the start of the selection. Please note, this item won’t write a null-terminated nor wide string. Please see the other items for these features.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">string</span></code></p>
 </div>
 <div class="section" id="write-length-and-string">
 <h2>Write Length and String<a class="headerlink" href="#write-length-and-string" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write a length prefix followed by ASCII string at the current location. If multiple bytes are selected, the string will be written from the start of the selection. Please note, although similar to BSTR in its concept, this item would not add a null terminator WCHAR at the end of the string.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">length</span> <span class="pre">and</span> <span class="pre">string</span></code></p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">length</span> <span class="pre">and</span> <span class="pre">string</span></code></p>
 </div>
 <div class="section" id="write-wide-string">
 <h2>Write Wide String<a class="headerlink" href="#write-wide-string" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write null-terminated wide string at the current location. If multiple bytes are selected, the string will be written from the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">wide</span> <span class="pre">string</span></code></p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">wide</span> <span class="pre">string</span></code></p>
 </div>
 <div class="section" id="write-null-terminated-string">
 <h2>Write Null-Terminated String<a class="headerlink" href="#write-null-terminated-string" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write a null-terminated ASCII string at the current location. If multiple bytes are selected, the string will be written from the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">zero</span> <span class="pre">terminated</span> <span class="pre">string</span></code></p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">zero</span> <span class="pre">terminated</span> <span class="pre">string</span></code></p>
 </div>
 <div class="section" id="write-encoded-decoded-base64-string">
 <h2>Write Encoded\Decoded Base64 String<a class="headerlink" href="#write-encoded-decoded-base64-string" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write an encoded or decoded base64 string at the current location. If multiple bytes are selected, the string will be written from the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">De\Encoded</span> <span class="pre">Base64</span> <span class="pre">string</span></code> . On the dialog that will open choose whether you want to encode a string or decode one.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">De\Encoded</span> <span class="pre">Base64</span> <span class="pre">string</span></code> . On the dialog that will open choose whether you want to encode a string or decode one.</p>
 </div>
 <div class="section" id="write-zeroes">
 <h2>Write Zeroes<a class="headerlink" href="#write-zeroes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write null-bytes at the current location. The number of null-bytes is specified by the user. If multiple bytes are selected, the null-bytes will be written from the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">zeroes</span></code>. On the dialog that will open, specify how many null-bytes you’d like to write.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">zeroes</span></code>. On the dialog that will open, specify how many null-bytes you’d like to write.</p>
 </div>
 <div class="section" id="write-random-bytes">
 <h2>Write Random Bytes<a class="headerlink" href="#write-random-bytes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Write random bytes at the current location. The number of bytes is specified by the user. If multiple bytes are selected, the null-bytes will be written from the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">random</span> <span class="pre">bytes</span></code>. On the dialog that will open, specify how many bytes you’d like to write.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Write</span> <span class="pre">random</span> <span class="pre">bytes</span></code>. On the dialog that will open, specify how many bytes you’d like to write.</p>
 </div>
 <div class="section" id="duplicate-bytes-from-offset">
 <h2>Duplicate Bytes From Offset<a class="headerlink" href="#duplicate-bytes-from-offset" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Duplicate N bytes from an offset to the current location. The number of bytes to duplicated and the offset of origin are specified by the user. If multiple bytes are selected, the bytes will be written from the start of the selection. A preview pane will display the bytes to be copied.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Duplicate</span> <span class="pre">from</span> <span class="pre">offset</span></code>. On the dialog that will open, specify the offset from which to copy, and how many bytes to copy.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Duplicate</span> <span class="pre">from</span> <span class="pre">offset</span></code>. On the dialog that will open, specify the offset from which to copy, and how many bytes to copy.</p>
 </div>
 <div class="section" id="increment-decrement-bytes">
-<h2>Increment/Decrement bytes<a class="headerlink" href="#increment-decrement-bytes" title="Permalink to this headline">¶</a></h2>
+<h2>Increment/Decrement Bytes<a class="headerlink" href="#increment-decrement-bytes" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Increment or decrement Byte, Word, Dword or Qword at the current location. The value to add or subtract from the location is specified by the user. If multiple bytes are selected, the function will apply on the start of the selection.</p>
-<p><strong>Steps:</strong> Right click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Increment/Decrement</span></code>. On the dialog that will open, specify if you’d like to modify a Byte, Word, Dword or Qword, choose the value of the operation, and choose whether you want to increment or decrement.</p>
+<p><strong>Steps:</strong> Right-click on a byte and select <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Increment/Decrement</span></code>. On the dialog that will open, specify if you’d like to modify a Byte, Word, Dword or Qword, choose the value of the operation, and choose whether you want to increment or decrement.</p>
 </div>
 </div>
 
@@ -118,9 +118,9 @@
 <h3><a href="../../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../../user-docs.html">User documentation</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user-docs.html">User Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../command-line.html">Command line options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command-line.html">Command-line Options</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../menus.html">Menus</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../breakpoints-widget-context-menu.html">Breakpoints Widget Context Menu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../debug-buttons-toolbar.html">Debug Buttons Toolbar</a></li>
@@ -128,20 +128,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../graph-widget-context-menu.html">Graph Widget Context Menu</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../hexdump-widget-context-menu.html">Hexdump Widget Context Menu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../information-windows-menu.html">Information Windows Menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../menu-bar.html">Menu bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../menu-bar.html">Menu Bar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../registers-widget-context-menu.html">Registers Widget Context Menu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../set-table-layout.html">Set Table Layout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../stack-widget-context-menu.html">Stack Widget Context Menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../syncing-a-widget.html">Syncing a widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../syncing-a-widget.html">Syncing a Widget</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-issues.html">Common Issues</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing to Cutter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing/code.html">Developer documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../building.html">Building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../common-errors.html">Common errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
 </ul>

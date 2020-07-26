@@ -61,7 +61,7 @@ for crash handling.</p>
 <p>Crash Handling System is disabled by default to not interfere with developers while debugging.
 To enable this system, set the <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> build option.</p>
 <div class="section" id="solution-description">
-<h2>Solution description<a class="headerlink" href="#solution-description" title="Permalink to this headline">¶</a></h2>
+<h2>Solution Description<a class="headerlink" href="#solution-description" title="Permalink to this headline">¶</a></h2>
 <p>There are only 2 source files:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CrashHandler.h</span></code></p></li>
@@ -69,12 +69,12 @@ To enable this system, set the <code class="docutils literal notranslate"><span 
 </ul>
 <p>And the API is very simple: One function, <code class="docutils literal notranslate"><span class="pre">initCrashHandler()</span></code>, enables the Crash Handling System if
 <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is true, otherwise it does nothing.</p>
-<p>As soon as a signal is raised, <code class="docutils literal notranslate"><span class="pre">crashHandler(int</span> <span class="pre">signum)</span></code> is called with the signal’s code as argument.
+<p>As soon as a signal is raised, <code class="docutils literal notranslate"><span class="pre">crashHandler(int</span> <span class="pre">signum)</span></code> is called with the signal’s code as an argument.
 This function first writes a crash dump to the operating system’s temporary directory to catch core and
 memory state as it was at the moment of the crash.</p>
 <p>Then the crash dialog is shown:</p>
 <img alt="../../_images/crash-dialog.png" src="../../_images/crash-dialog.png" />
-<p>If the user chooses to create a crash dump, the prepared dump is moved to the directory specified by user.
+<p>If the user chooses to create a crash dump, the prepared dump is moved to the directory specified by the user.
 And then the success dialog is shown:</p>
 <img alt="../../_images/success-dump-dialog.png" src="../../_images/success-dump-dialog.png" />
 </div>
@@ -94,20 +94,19 @@ And then the success dialog is shown:</p>
 <h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../code.html">Developer documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development-guidelines.html">Cutter Development Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Crash Handling System</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#solution-description">Solution description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solution-description">Solution Description</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
 </ul>

@@ -18,8 +18,8 @@
     <script src="_static/cutter.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Common errors" href="common-errors.html" />
-    <link rel="prev" title="Getting started with Python Plugins" href="contributing/plugins/getting-started.html" />
+    <link rel="next" title="Plugins" href="plugins.html" />
+    <link rel="prev" title="Getting Started with Python Plugins" href="contributing/plugins/getting-started.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -36,10 +36,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="common-errors.html" title="Common errors"
+          <a href="plugins.html" title="Plugins"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="contributing/plugins/getting-started.html" title="Getting started with Python Plugins"
+          <a href="contributing/plugins/getting-started.html" title="Getting Started with Python Plugins"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Cutter 1.11.0 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Building</a></li> 
@@ -113,7 +113,7 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 </div>
 </div>
 <div class="section" id="building-steps">
-<h3>Building steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Building Steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
 <p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency radare2.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 cmake -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON ../src
@@ -150,8 +150,8 @@ To compile Cutter it is necessary to have the following installed:</p>
 <li><p>Qt</p></li>
 </ul>
 </div>
-<div class="section" id="default-way">
-<h3>Default way<a class="headerlink" href="#default-way" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="recommended-way">
+<h3>Recommended Way<a class="headerlink" href="#recommended-way" title="Permalink to this headline">¶</a></h3>
 <p>To build Cutter on Windows machines using CMake,
 you will have to make sure that the executables are available
 in your <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code> environment variable.</p>
@@ -165,12 +165,12 @@ cmake-gui ..
 </div>
 <p>Click <code class="docutils literal notranslate"><span class="pre">Configure</span></code> and select your version of Visual Studio from the list,
 for example <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14</span> <span class="pre">2015</span></code>.
-After configuration is done, click <code class="docutils literal notranslate"><span class="pre">Generate</span></code> and you can open
+After the configuration is done, click <code class="docutils literal notranslate"><span class="pre">Generate</span></code> and you can open
 <code class="docutils literal notranslate"><span class="pre">Cutter.sln</span></code> to compile the code as usual.</p>
 </div>
 <div class="section" id="building-with-meson">
 <h3>Building with Meson<a class="headerlink" href="#building-with-meson" title="Permalink to this headline">¶</a></h3>
-<p>There is another way to compile Cutter on Windows, if the one above does
+<p>There is another way to compile Cutter on Windows if the one above does
 not work or does not suit your needs.</p>
 <p>Additional requirements:</p>
 <ul class="simple">
@@ -230,7 +230,7 @@ make
 </div>
 </div>
 <div class="section" id="additional-steps-for-macos">
-<h3>Additional steps for macOS<a class="headerlink" href="#additional-steps-for-macos" title="Permalink to this headline">¶</a></h3>
+<h3>Additional Steps for macOS<a class="headerlink" href="#additional-steps-for-macos" title="Permalink to this headline">¶</a></h3>
 <p>On macOS you will also have to copy the launcher bash script:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mv Cutter.app/Contents/MacOS/Cutter Cutter.app/Contents/MacOS/Cutter.bin
 cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&amp;</span> chmod +x Cutter.app/Contents/MacOS/Cutter
@@ -251,18 +251,18 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad).</p></li>
 </ul>
 <p>These options can be enabled or disabled from the command line arguments passed to CMake.
-For example, in order to build Cutter with support for Python plugins, you can run this command:</p>
+For example, to build Cutter with support for Python plugins, you can run this command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON_BINDINGS</span><span class="o">=</span><span class="n">ON</span>
 </pre></div>
 </div>
-<p>Or if one wants to explicitely disable an option:</p>
+<p>Or if one wants to explicitly disable an option:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">OFF</span>
 </pre></div>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="compiling-cutter-with-breakpad-support">
-<h2>Compiling Cutter with Breakpad support<a class="headerlink" href="#compiling-cutter-with-breakpad-support" title="Permalink to this headline">¶</a></h2>
+<h2>Compiling Cutter with Breakpad Support<a class="headerlink" href="#compiling-cutter-with-breakpad-support" title="Permalink to this headline">¶</a></h2>
 <p>If you want to build Cutter with crash handling system, you will want to first prepare Breakpad.
 For this, simply run one of the scripts (according to your OS) from root Cutter directory:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> scripts/prepare_breakpad_linux.sh <span class="c1"># Linux</span>
@@ -280,7 +280,7 @@ so it contains <code class="docutils literal notranslate"><span class="pre">$CUS
 <div class="section" id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p>Cmake can’t find Qt</p>
+<li><p><strong>Cmake can’t find Qt</strong></p>
 <blockquote>
 <div><p>Cmake: qt development package not found</p>
 </div></blockquote>
@@ -288,7 +288,7 @@ so it contains <code class="docutils literal notranslate"><span class="pre">$CUS
 </ul>
 <p>Depending on how Qt installed (Distribution packages or using the Qt
 installer application), CMake may not be able to find it by itself if it
-is not in a common place. If that is the case, double check that the
+is not in a common place. If that is the case, double-check that the
 correct Qt version is installed. Locate its prefix (a directory
 containing bin/, lib/, include/, etc.) and specify it to CMake using
 <code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code> in the above process, e.g.:</p>
@@ -297,7 +297,7 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 </pre></div>
 </div>
 <ul>
-<li><p>R2 libr_***.so cannot be found when running Cutter</p>
+<li><p><strong>Radare2’s libr_*.so cannot be found when running Cutter</strong></p>
 <blockquote>
 <div><p>./Cutter: error while loading shared libraries: libr_lang.so: cannot open shared object file: No such file or directory</p>
 </div></blockquote>
@@ -306,6 +306,48 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 <p>The exact r2 .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way r2 is currently compiled. It results in some of the r2 libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./Cutter</cite>. If all the r2 libraries are missing you have a different problem.
 The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the r2 installation path to LD_LIBRARY_PATH environment variable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_EXE_LINKER_FLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,--disable-new-dtags&quot;</span>  <span class="o">..</span>
+</pre></div>
+</div>
+<ul>
+<li><p><strong>r_*.h: No such file or directory</strong></p>
+<blockquote>
+<div><p>r_util/r_annotated_code.h: No such file or directory</p>
+</div></blockquote>
+</li>
+</ul>
+<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">r_</span></code> is missing, you should check the <strong>radare2</strong> submodule and
+make sure it is in sync with upstream <strong>Cutter</strong> repo. Simply run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>r_core development package not found</strong></p></li>
+</ul>
+<p>If you installed radare2 and still encounter this error, it could be that your
+<code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable is set improperly (doesn’t contain
+<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the radare2 installation dir to
+your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable.</p>
+<p>macOS specific solutions:</p>
+<p>On macOS, that can also be, for example, due to <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator.app</span></code>
+being copied over to <code class="docutils literal notranslate"><span class="pre">/Applications</span></code>. To fix this, append
+<code class="docutils literal notranslate"><span class="pre">:/usr/local/bin</span></code> to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable within the <em>Build
+Environment</em> section in Qt Creator. See the screenshot below should you
+encounter any problems.</p>
+<p>You can also try:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/radare2/lib/pkgconfig</span> <span class="pre">qmake</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/cutter/radare2/pkgcfg</span> <span class="pre">qmake</span></code> (for a newer
+version and if the radare2 submodule is being built and used)</p></li>
+</ul>
+<img alt="_images/cutter_path_settings.png" src="_images/cutter_path_settings.png" />
+<p>You can also install radare2 into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
+add a variable <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> with the value <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code>.</p>
+<ul class="simple">
+<li><p><strong>macOS libjpeg error</strong></p></li>
+</ul>
+<p>On macOS, Qt5 apps fail to build on QtCreator if you have the <code class="docutils literal notranslate"><span class="pre">libjpeg</span></code>
+installed with brew. Run this command to work around the issue:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span><span class="o">.</span><span class="ow">not</span><span class="o">-</span><span class="n">found</span>
 </pre></div>
 </div>
 </div>
@@ -325,34 +367,33 @@ The workaround is to either add the <cite>–disable-new-dtags</cite> linker fla
 <h3><a href="index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Cutter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing/code.html">Developer documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#getting-the-source">Getting the Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-steps">Building steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-steps">Building Steps</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#default-way">Default way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-way">Recommended Way</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-with-meson">Building with Meson</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#using-qtcreator">Using QtCreator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#compiling-on-linux-macos">Compiling on Linux / macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional steps for macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional Steps for macOS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#cmake-building-options">CMake Building Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compiling-cutter-with-breakpad-support">Compiling Cutter with Breakpad support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-cutter-with-breakpad-support">Compiling Cutter with Breakpad Support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="common-errors.html">Common errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
 </ul>

@@ -63,7 +63,7 @@
 <div class="section" id="common-usage">
 <h2>Common Usage<a class="headerlink" href="#common-usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cuttercore-class">
-<h3>CutterCore class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
+<h3>CutterCore Class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
 <p>This is the main class where every link with r2 is made. It is <em>unique</em>
 across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
 <p>Example:</p>
@@ -72,7 +72,7 @@ across the whole process. To access it, simply call <code class="docutils litera
 </div>
 </div>
 <div class="section" id="calling-a-radare2-command">
-<h3>Calling a radare2 command<a class="headerlink" href="#calling-a-radare2-command" title="Permalink to this headline">¶</a></h3>
+<h3>Calling a radare2 Command<a class="headerlink" href="#calling-a-radare2-command" title="Permalink to this headline">¶</a></h3>
 <p>There are multiple ways to call a radare2 command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdj(&lt;command&gt;)</span></code> - To be used with json commands like <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
@@ -80,22 +80,22 @@ This is the command we used to fetch structured data from radare2.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single radare2 command
 without going through radare2 shell functionality like output redirects, grep, and multiple command parsing.</p></li>
 </ul>
-<p>The command then returns its output. This should be used when a command doesn’t have output or the output should be handled as-is. If possible, using the json variation with <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> is always preferred.</p>
+<p>The command then returns its output. This should be used when a command doesn’t have output or the output should be handled as-is. If possible, using the JSON variation with <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> is always preferred.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRawAt(&lt;command&gt;,</span> <span class="pre">&lt;address&gt;)</span></code> - Executes a single radare2 command in a given address and returns the output. This helps avoiding weird strings concatenation like <code class="docutils literal notranslate"><span class="pre">cmd(&quot;ph</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">hash</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&#64;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">QString::num(address))</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmd()</span></code> - <em>(Discouraged)</em> Only use it when <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code> cannot be used. This is used for complex commands using concatenation of several commands (<code class="docutils literal notranslate"><span class="pre">px</span> <span class="pre">5;</span> <span class="pre">pd</span> <span class="pre">7;</span> <span class="pre">afl;</span></code>), for grepping (<code class="docutils literal notranslate"><span class="pre">pd</span> <span class="pre">5~call</span></code>). for commands inside commands (<code class="docutils literal notranslate"><span class="pre">?e</span> <span class="pre">`afn.`</span></code>) and so on.
-This is also used when the output is complex and does not parsed correctly in <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code>.
+This is also used when the output is complex and is not parsed correctly in <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code>.
 Make sure to carefully sanitize user-controlled variables that are passed to the command, to avoid unexpected command injections.</p></li>
 </ul>
 <p>Generally, if one needs to retrieve information from a radare2 command, it
-is preferred to use the json API.</p>
+is preferred to use the JSON API.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QJsonArray</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">).</span><span class="n">array</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="seek-the-current-file">
-<h3>Seek the current file<a class="headerlink" href="#seek-the-current-file" title="Permalink to this headline">¶</a></h3>
+<h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Permalink to this headline">¶</a></h3>
 <p>To modify radare2 seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
 is important because it will emit a
 <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
@@ -110,14 +110,14 @@ is important because it will emit a
 </div>
 </div>
 <div class="section" id="creating-a-widget">
-<h3>Creating a widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h3>
+<h3>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h3>
 <p>Make sure to connect the <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal
 so your widget refreshes its output when radare2 seek is modified
 (switching to another function, etc.).</p>
 </div>
 </div>
 <div class="section" id="coding-style">
-<h2>Coding style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
 <p>In general, we follow <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a> to
 format the code. If in doubt, you can use <a class="reference external" href="https://sourceforge.net/projects/astyle/files/astyle/astyle%202.06/">AStyle
 2.06</a>
@@ -164,7 +164,7 @@ you can declare the class like this:</p>
 <p>If you need something in the source file (.cpp) that is not a class member,
 then add the include in the source file.</p>
 <p>The includes must be ordered from local to global. That is, first include
-any local header file (with doublequotes like <cite>#include “common/Helpers.h”</cite>.
+any local header file (with double quotes like <cite>#include “common/Helpers.h”</cite>.
 Then, after an empty newline, include Qt definitions like
 <cite>#include &lt;QShortcut&gt;</cite>.
 Finally, include the standard C++ headers you need.</p>
@@ -200,7 +200,7 @@ look like:</p>
 </div>
 </div>
 <div class="section" id="connecting-signals">
-<h3>Connecting signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h3>
+<h3>Connecting Signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h3>
 <p>To connect a signal to a slot, this is the preferred syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QObject</span><span class="o">::</span><span class="n">destroyed</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">objectDestroyed</span><span class="p">);</span>
 </pre></div>
@@ -210,19 +210,19 @@ functions. Other approaches for connecting signals silently break at runtime.</p
 </div>
 </div>
 <div class="section" id="general-coding-advices">
-<h2>General coding advices<a class="headerlink" href="#general-coding-advices" title="Permalink to this headline">¶</a></h2>
+<h2>General Coding Advices<a class="headerlink" href="#general-coding-advices" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="functions-documentation">
-<h3>Functions documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
-<p>You can find the classes documentation in the API Reference menu item.</p>
+<h3>Functions Documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
+<p>You can find the class documentation in the API Reference menu item.</p>
 </div>
-<div class="section" id="updating-the-submodules">
-<h3>Updating the submodules<a class="headerlink" href="#updating-the-submodules" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="updating-the-git-submodules">
+<h3>Updating the Git Submodules<a class="headerlink" href="#updating-the-git-submodules" title="Permalink to this headline">¶</a></h3>
 <p>Git submodules play a major part in Cutter. This, because Cutter is powered
 by radare2, its parent project, and it tries to stay up-to-date with its
 recent version, which allows us to implement new features, and enjoy bug
 fixes and performance improvements on radare2. Often, we need to update
-the radare2 submodule or others, in order to push the most recent
-version of them to Cutter.</p>
+the radare2 submodule or the others, to push their most recent
+version to Cutter.</p>
 <p>You can view the list of all the submodules from the cutter root folder with:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git config --file .gitmodules --get-regexp path <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span>
 </pre></div>
@@ -244,11 +244,11 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="useful-resources-to-learn-more-about-qt-development">
-<h3>Useful resources to learn more about Qt development<a class="headerlink" href="#useful-resources-to-learn-more-about-qt-development" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="useful-resources-qt-development">
+<h3>Useful Resources (Qt Development)<a class="headerlink" href="#useful-resources-qt-development" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">Signals &amp; Slots</a></p></li>
-<li><p><a class="reference external" href="https://doc.qt.io/qt-5/model-view-programming.html">Model/View Programming</a> - read this if you are going to work with list or table-like widgets</p></li>
+<li><p><a class="reference external" href="https://doc.qt.io/qt-5/model-view-programming.html">Model/View Programming</a> - read this if you are going to work with a list or table-like widgets</p></li>
 <li><p><a class="reference external" href="https://doc.qt.io/qt-5/qaction.html#details">QAction</a></p></li>
 </ul>
 </div>
@@ -269,14 +269,14 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
 <h3><a href="../../index.html">Table of Contents</a></h3>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../code.html">Developer documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Cutter Development Guidelines</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#common-usage">Common Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding style</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#general-coding-advices">General coding advices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-coding-advices">General Coding Advices</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
@@ -284,7 +284,6 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../common-errors.html">Common errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
 </ul>
