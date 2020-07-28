@@ -257,6 +257,11 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv4N10CutterCore6cmdjAtEPKc3RVA">
+<span id="_CPPv3N10CutterCore6cmdjAtEPKc3RVA"></span><span id="_CPPv2N10CutterCore6cmdjAtEPKc3RVA"></span><span id="CutterCore::cmdjAt__cCP.RVA"></span><span class="target" id="classCutterCore_1a302d7a47027eb053c842f24f215df86f"></span>QJsonDocument <code class="sig-name descname">cmdjAt</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em>, RVA <em>address</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6cmdjAtEPKc3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv4N10CutterCore7cmdListEPKc">
 <span id="_CPPv3N10CutterCore7cmdListEPKc"></span><span id="_CPPv2N10CutterCore7cmdListEPKc"></span><span id="CutterCore::cmdList__cCP"></span><span class="target" id="classCutterCore_1a5bea0d7ba43a2de827e5610261f476e3"></span>QStringList <code class="sig-name descname">cmdList</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>str</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore7cmdListEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1714,6 +1719,23 @@
 <dt id="_CPPv4N10CutterCore12getVariablesE3RVA">
 <span id="_CPPv3N10CutterCore12getVariablesE3RVA"></span><span id="_CPPv2N10CutterCore12getVariablesE3RVA"></span><span id="CutterCore::getVariables__RVA"></span><span class="target" id="classCutterCore_1a51e9829e845674d356fce9aae5b111c6"></span>QList&lt;<a class="reference internal" href="structVariableDescription.html#_CPPv419VariableDescription" title="VariableDescription">VariableDescription</a>&gt; <code class="sig-name descname">getVariables</code><span class="sig-paren">(</span>RVA <em>at</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12getVariablesE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10CutterCore19getXRefsForVariableE7QStringb3RVA">
+<span id="_CPPv3N10CutterCore19getXRefsForVariableE7QStringb3RVA"></span><span id="_CPPv2N10CutterCore19getXRefsForVariableE7QStringb3RVA"></span><span id="CutterCore::getXRefsForVariable__QString.b.RVA"></span><span class="target" id="classCutterCore_1ac41511b0a679cbbd07c0bbc340c1aa01"></span>QList&lt;<a class="reference internal" href="structXrefDescription.html#_CPPv415XrefDescription" title="XrefDescription">XrefDescription</a>&gt; <code class="sig-name descname">getXRefsForVariable</code><span class="sig-paren">(</span>QString <em>variableName</em>, bool <em>findWrites</em>, RVA <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore19getXRefsForVariableE7QStringb3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fetches all the writes or reads to the specified local variable ‘variableName’ in the function in which the specified offset is a part of. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A list of XrefDescriptions that contains details of all the writes or reads that happen to the variable ‘variableName’. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">variableName</span></code>: Name of the local variable. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">findWrites</span></code>: If this is true, then locations at which modification happen to the specified local variable is fetched. Else, the locations at which the local is variable is read is fetched. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code>: An offset in the function in which the specified local variable exist. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N10CutterCore8getXRefsE3RVAbbRK7QString">
