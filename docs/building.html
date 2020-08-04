@@ -107,7 +107,7 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <p>For Ubuntu 18.04 and lower, <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
 </div>
 <p>On Arch-based Linux distributions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
 </div>
@@ -124,6 +124,7 @@ cmake --build .
 cmake --build build
 </pre></div>
 </div>
+<p>If you want to use Cutter with another version of radare2 you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RADARE2=ON</span></code>. Note that using a version of radare2 which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are interested in building Cutter with support for Python plugins,
