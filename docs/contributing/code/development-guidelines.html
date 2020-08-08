@@ -198,14 +198,34 @@ look like:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="connecting-signals">
-<h3>Connecting Signals<a class="headerlink" href="#connecting-signals" title="Permalink to this headline">¶</a></h3>
-<p>To connect a signal to a slot, this is the preferred syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QObject</span><span class="o">::</span><span class="n">destroyed</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">objectDestroyed</span><span class="p">);</span>
+<div class="section" id="connecting-qt-signals">
+<h3>Connecting Qt Signals<a class="headerlink" href="#connecting-qt-signals" title="Permalink to this headline">¶</a></h3>
+<p>Use one of the following methods for connecting signals to slots:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// typically you will make connection in the constructor to a member of current class</span>
+<span class="n">connect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">button1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span>
+        <span class="k">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">buttonClicked</span><span class="p">);</span> <span class="c1">// Good</span>
+
+<span class="c1">// you can also connect directly other object slots</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">checkbox</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QCheckBox</span><span class="o">::</span><span class="n">toggled</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QWidget</span><span class="o">::</span><span class="n">setEnabled</span><span class="p">);</span> <span class="c1">// Good</span>
+
+<span class="c1">// use lambda for passing extra arguments</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">button1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](){</span> <span class="n">foo</span><span class="p">(</span><span class="n">getBar</span><span class="p">());</span> <span class="p">});</span> <span class="c1">// Good</span>
 </pre></div>
 </div>
 <p>This syntax performs compile-time type checks and allows the use of lambda
-functions. Other approaches for connecting signals silently break at runtime.</p>
+functions. Other approaches for connecting signals can silently break at runtime.</p>
+<p>Don’t use the older macro based syntax or automatic name based connections.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// SIGNAL and SLOT macros</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">),</span> <span class="k">this</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">buttonClicked</span><span class="p">));</span> <span class="c1">// BAD</span>
+
+<span class="c1">// automatic name based connection</span>
+<span class="nl">slot</span><span class="p">:</span>
+   <span class="kt">void</span> <span class="n">on_actionNew_triggered</span><span class="p">();</span> <span class="c1">// BAD</span>
+
+<span class="c1">// 3 argument connect without receiver object</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">SomeObject</span><span class="o">::</span><span class="n">signal</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">](){</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">(</span><span class="n">getBar</span><span class="p">());</span> <span class="p">});</span> <span class="c1">// BAD</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="general-coding-advices">
