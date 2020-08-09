@@ -1,14 +1,13 @@
 title: "Cutter"
-email: "cutter@radare.org"
+email: "team@cutter.re"
 description: >- # this means to ignore newlines until "baseurl:"
-  Open Source RE Platform powered by radare2.
+  Free and Open Source RE Platform powered by radare2
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cutter.re/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: r2gui
 github_username:  radareorg
 logo: "/assets/images/cutter-small.svg"
 small_logo: "/assets/images/cutter-very-small.svg"
-mailchimp-list: //redgadgets.us10.list-manage.com/subscribe/post?u=210acce5db69d3d4a04b0e25d&amp;id=08c6708f40"
 
 permalink: "/:title"
 
