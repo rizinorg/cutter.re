@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translate Cutter &#8212; Cutter 1.11.0 documentation</title>
+    <title>Building docs &#8212; Cutter 1.11.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
@@ -18,8 +18,8 @@
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Getting Started with Python Plugins" href="../plugins/getting-started.html" />
-    <link rel="prev" title="Building docs" href="../docs/building-docs.html" />
+    <link rel="next" title="Translate Cutter" href="../translations/getting-started.html" />
+    <link rel="prev" title="Contributing documentation to Cutter" href="getting-started.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -35,14 +35,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../plugins/getting-started.html" title="Getting Started with Python Plugins"
+          <a href="../translations/getting-started.html" title="Translate Cutter"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../docs/building-docs.html" title="Building docs"
+          <a href="getting-started.html" title="Contributing documentation to Cutter"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.11.0 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../contributing.html" accesskey="U">Contributing to Cutter</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Translate Cutter</a></li> 
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" >Contributing to Cutter</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../docs.html" accesskey="U">Contributing Documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building docs</a></li> 
       </ul>
     </div>
 
@@ -52,13 +53,38 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="translate-cutter">
-<h1>Translate Cutter<a class="headerlink" href="#translate-cutter" title="Permalink to this headline">¶</a></h1>
-<p>Help Cutter by adding translations to the project!</p>
-<p>Cutter is a global project with users from all around the world. We believe that Cutter should be as accessible as possible, and want our users to feel comfortable while using its interface. Providing our community an interface with their own language makes the experience of using Cutter better. Thus, Cutter supports a translation and localization mechanism powered by the <a class="reference external" href="https://crowdin.com/project/cutter">Crowdin</a> platform. We invite you to contribute and add translations to the project.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>We currently support more than 15 languages. If you need to add a language that isn’t available yet, ask any developer from the team and they will happily assist you.</p>
+  <div class="section" id="building-docs">
+<h1>Building docs<a class="headerlink" href="#building-docs" title="Permalink to this headline">¶</a></h1>
+<p>This page explains the steps that are needed to build Cutter’s documentation.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>You will need:</p>
+<ul class="simple">
+<li><p>doxygen</p></li>
+<li><p>python3</p></li>
+<li><p>pip3</p>
+<ul>
+<li><p>sphinx</p></li>
+<li><p>breathe</p></li>
+<li><p>recommonmark</p></li>
+</ul>
+</li>
+</ul>
+<p>On Debian-based Linux distributions, the packages above can be installed with the following command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo apt install make doxygen python3-pip doxygen
+sudo pip3 install sphinx breathe recommonmark
+</pre></div>
+</div>
+<p>Then, you can build the documentation with the following commands:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> cutter/docs/
+make html
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you do not need API documentation, type <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">quick</span></code> instead of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>.</p>
+</div>
+<p>You can find the generated html files at <code class="docutils literal notranslate"><span class="pre">cutter/docs/build</span></code>. Open <code class="docutils literal notranslate"><span class="pre">cutter/docs/build/html/index.html</span></code> with your browser to visit the index file of your local copy of the documentation.</p>
 </div>
 </div>
 
@@ -79,8 +105,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../code.html">Developer Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs.html">Contributing Documentation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Translate Cutter</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../docs.html">Contributing Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Building docs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../translations/getting-started.html">Translate Cutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/getting-started.html">Getting Started with Python Plugins</a></li>
 </ul>
 </li>
