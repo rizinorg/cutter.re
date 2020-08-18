@@ -343,8 +343,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10CutterCore14renameFunctionERK7QStringRK7QString">
-<span id="_CPPv3N10CutterCore14renameFunctionERK7QStringRK7QString"></span><span id="_CPPv2N10CutterCore14renameFunctionERK7QStringRK7QString"></span><span id="CutterCore::renameFunction__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a34e6348207f42f2bb661a536e36fff0d"></span>void <code class="sig-name descname">renameFunction</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>oldName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore14renameFunctionERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N10CutterCore14renameFunctionEK3RVARK7QString">
+<span id="_CPPv3N10CutterCore14renameFunctionEK3RVARK7QString"></span><span id="_CPPv2N10CutterCore14renameFunctionEK3RVARK7QString"></span><span id="CutterCore::renameFunction__RVAC.QStringCR"></span><span class="target" id="classCutterCore_1a66e78dccfbb018e9521beb21a3179c6e"></span>void <code class="sig-name descname">renameFunction</code><span class="sig-paren">(</span><em class="property">const</em> RVA <em>offset</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore14renameFunctionEK3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -356,6 +356,21 @@
 <dt id="_CPPv4N10CutterCore10renameFlagE7QString7QString">
 <span id="_CPPv3N10CutterCore10renameFlagE7QString7QString"></span><span id="_CPPv2N10CutterCore10renameFlagE7QString7QString"></span><span id="CutterCore::renameFlag__QString.QString"></span><span class="target" id="classCutterCore_1aa22fa48fa6fadab039b6fdf48aa2b694"></span>void <code class="sig-name descname">renameFlag</code><span class="sig-paren">(</span>QString <em>old_name</em>, QString <em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10renameFlagE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10CutterCore22renameFunctionVariableE7QString7QString3RVA">
+<span id="_CPPv3N10CutterCore22renameFunctionVariableE7QString7QString3RVA"></span><span id="_CPPv2N10CutterCore22renameFunctionVariableE7QString7QString3RVA"></span><span id="CutterCore::renameFunctionVariable__QString.QString.RVA"></span><span class="target" id="classCutterCore_1a47a2bd6e409808bf42805b7ab8f5ac2c"></span>void <code class="sig-name descname">renameFunctionVariable</code><span class="sig-paren">(</span>QString <em>newName</em>, QString <em>oldName</em>, RVA <em>functionAddress</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore22renameFunctionVariableE7QString7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Renames the specified local variable in the function specified by the address given. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">newName</span></code>: Specifies the name to which the current name of the variable should be renamed. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oldName</span></code>: Specifies the current name of the function variable. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functionAddress</span></code>: Specifies the exact address of the function. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N10CutterCore10functionInE4ut64">
@@ -1229,11 +1244,6 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10CutterCore13addBreakpointE7QString">
-<span id="_CPPv3N10CutterCore13addBreakpointE7QString"></span><span id="_CPPv2N10CutterCore13addBreakpointE7QString"></span><span id="CutterCore::addBreakpoint__QString"></span><span class="target" id="classCutterCore_1a6fd447d2b6a1c93d7115e278fed8a05c"></span>void <code class="sig-name descname">addBreakpoint</code><span class="sig-paren">(</span>QString <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore13addBreakpointE7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N10CutterCore13addBreakpointERK21BreakpointDescription">
 <span id="_CPPv3N10CutterCore13addBreakpointERK21BreakpointDescription"></span><span id="_CPPv2N10CutterCore13addBreakpointERK21BreakpointDescription"></span><span id="CutterCore::addBreakpoint__BreakpointDescriptionCR"></span><span class="target" id="classCutterCore_1a4f2587e7290f8d4d8a6823cc8ce2335b"></span>void <code class="sig-name descname">addBreakpoint</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="structBreakpointDescription.html#_CPPv421BreakpointDescription" title="BreakpointDescription">BreakpointDescription</a> &amp;<em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore13addBreakpointERK21BreakpointDescription" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1246,11 +1256,6 @@
 <dl class="cpp function">
 <dt id="_CPPv4N10CutterCore16toggleBreakpointE3RVA">
 <span id="_CPPv3N10CutterCore16toggleBreakpointE3RVA"></span><span id="_CPPv2N10CutterCore16toggleBreakpointE3RVA"></span><span id="CutterCore::toggleBreakpoint__RVA"></span><span class="target" id="classCutterCore_1ab2626e967ae07bda2ddb8fcbcb43f828"></span>void <code class="sig-name descname">toggleBreakpoint</code><span class="sig-paren">(</span>RVA <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16toggleBreakpointE3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N10CutterCore16toggleBreakpointE7QString">
-<span id="_CPPv3N10CutterCore16toggleBreakpointE7QString"></span><span id="_CPPv2N10CutterCore16toggleBreakpointE7QString"></span><span id="CutterCore::toggleBreakpoint__QString"></span><span class="target" id="classCutterCore_1a32587c352db46579e0c5670d51c4318c"></span>void <code class="sig-name descname">toggleBreakpoint</code><span class="sig-paren">(</span>QString <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16toggleBreakpointE7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -1758,8 +1763,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString">
-<span id="_CPPv3N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString"></span><span id="_CPPv2N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString"></span><span id="CutterCore::triggerFunctionRenamed__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a19705a3a660bbf5107055bef400ee1e4"></span>void <code class="sig-name descname">triggerFunctionRenamed</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>prevName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore22triggerFunctionRenamedERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N10CutterCore22triggerFunctionRenamedEK3RVARK7QString">
+<span id="_CPPv3N10CutterCore22triggerFunctionRenamedEK3RVARK7QString"></span><span id="_CPPv2N10CutterCore22triggerFunctionRenamedEK3RVARK7QString"></span><span id="CutterCore::triggerFunctionRenamed__RVAC.QStringCR"></span><span class="target" id="classCutterCore_1addfae65f944ab8c9e47381ed7f634de3"></span>void <code class="sig-name descname">triggerFunctionRenamed</code><span class="sig-paren">(</span><em class="property">const</em> RVA <em>offset</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore22triggerFunctionRenamedEK3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -1898,8 +1903,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10CutterCore15functionRenamedERK7QStringRK7QString">
-<span id="_CPPv3N10CutterCore15functionRenamedERK7QStringRK7QString"></span><span id="_CPPv2N10CutterCore15functionRenamedERK7QStringRK7QString"></span><span id="CutterCore::functionRenamed__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1af6f9f37358f15f6ee9dde5a58315c121"></span>void <code class="sig-name descname">functionRenamed</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>prev_name</em>, <em class="property">const</em> QString &amp;<em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore15functionRenamedERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N10CutterCore15functionRenamedEK3RVARK7QString">
+<span id="_CPPv3N10CutterCore15functionRenamedEK3RVARK7QString"></span><span id="_CPPv2N10CutterCore15functionRenamedEK3RVARK7QString"></span><span id="CutterCore::functionRenamed__RVAC.QStringCR"></span><span class="target" id="classCutterCore_1a440c7ab96cc1dccac57094b5aa699918"></span>void <code class="sig-name descname">functionRenamed</code><span class="sig-paren">(</span><em class="property">const</em> RVA <em>offset</em>, <em class="property">const</em> QString &amp;<em>new_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore15functionRenamedEK3RVARK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -1933,8 +1938,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10CutterCore18breakpointsChangedEv">
-<span id="_CPPv3N10CutterCore18breakpointsChangedEv"></span><span id="_CPPv2N10CutterCore18breakpointsChangedEv"></span><span id="CutterCore::breakpointsChanged"></span><span class="target" id="classCutterCore_1ae2b1e4b9742718a7ee4e69bc4d6df2c6"></span>void <code class="sig-name descname">breakpointsChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore18breakpointsChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N10CutterCore18breakpointsChangedE3RVA">
+<span id="_CPPv3N10CutterCore18breakpointsChangedE3RVA"></span><span id="_CPPv2N10CutterCore18breakpointsChangedE3RVA"></span><span id="CutterCore::breakpointsChanged__RVA"></span><span class="target" id="classCutterCore_1a7e3f93ee7de404c3a431daa1e35485c2"></span>void <code class="sig-name descname">breakpointsChanged</code><span class="sig-paren">(</span>RVA <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore18breakpointsChangedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
