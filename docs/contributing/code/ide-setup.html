@@ -114,9 +114,9 @@ QTCreator support for CMake is as good as qmake one but not all Cutter project c
 <p>Double-clicking a <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file in a file list opens it inside a visual editor. If you want to make changes that are easier to do by editing <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file as text - right-click the file and select <span class="menuselection">Open With ‣ Plain Text Editor</span>. Switching from visual form editor back to code editor mode will open the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file in read-only mode with the following warning “This file can only be edited in Design mode”. To edit use the same steps as described before.</p>
 </div>
 </div>
-<div class="section" id="vscode">
-<h2>VSCode<a class="headerlink" href="#vscode" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/Microsoft/vscode">VSCode</a> is an open-source code editor made by Microsoft.</p>
+<div class="section" id="vs-code">
+<h2>VS Code<a class="headerlink" href="#vs-code" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/Microsoft/vscode">VS Code</a> is an open-source code editor made by Microsoft.</p>
 <div class="section" id="id2">
 <h3>Pros and Cons<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -135,21 +135,24 @@ QTCreator support for CMake is as good as qmake one but not all Cutter project c
 <div class="section" id="id3">
 <h3>Project setup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><span class="menuselection">File ‣ Open Folder</span> select the folder in which you cloned Cutter</p></li>
-<li><p>If the recommend plugins are already installed, in the corner you will see a popup asking you “Would you like to configure project ‘cutter’? Source: CMake Tools (Extension)”. Click Yes.</p></li>
-<li><p>If you initially dismissed the configuration window or didn’t have the plugins installed yet - open command pallet using <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> and select <span class="guilabel">Cmake: Configure</span></p></li>
-<li><p>In the kit selection choose <span class="guilabel">[Unspecified]</span> unless you have more specific needs.</p></li>
-<li><p>If you see the following error: “CMakeList.txt was not found in the root of folder cutter”, choose <span class="guilabel">Locate</span> and specify the path to <code class="file docutils literal notranslate"><span class="pre">cutter/src/CMakeLists.txt</span></code></p></li>
-<li><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="guilabel">CMake: Edit CMake Cache</span>, find the line <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2:BOOL=OFF</span></code> and change it to ON.</p></li>
+<li><p><span class="menuselection">File ‣ Open Folder…</span> and select the folder in which you cloned Cutter</p></li>
+<li><p>Install the recommended plugins.</p></li>
+<li><p>Once the <cite>CMake Tools</cite> plugin is installed, in the corner you will see a popup asking you “Would you like to configure project ‘cutter’? Source: CMake Tools (Extension)”. Click Yes.</p></li>
+<li><p>In the kit selection popup, choose <span class="guilabel">[Unspecified]</span> unless you have more specific needs.</p></li>
+<li><p>If you initially dismissed the configuration window or didn’t have the plugins installed yet - open command-palette using <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> and select <span class="guilabel">Cmake: Configure</span></p></li>
 </ul>
 </div>
 <div class="section" id="id4">
 <h3>Changing CMake configuration<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>After the first configuration <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="guilabel">CMake: Edit CMake Cache</span> opens a text editor with all CMake options. Cutter specific ones mostly start with “CUTTER”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> option is also defined in <code class="docutils literal notranslate"><span class="pre">.vscode/settings.json</span></code> file and it will be overridden from there. It is set to <code class="docutils literal notranslate"><span class="pre">ON</span></code> by default as it is recommended during development.</p>
+</div>
 </div>
 <div class="section" id="building-running-debugging">
 <span id="vscode-debug-setup"></span><h3>Building, Running, Debugging<a class="headerlink" href="#building-running-debugging" title="Permalink to this headline">¶</a></h3>
-<p>Build and running commands are available in the bar at the bottom left and in the Command Palette menu (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>) named <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Build</span> <span class="pre">F7</span></code>, <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Run</span> <span class="pre">Without</span> <span class="pre">Debugging</span> <span class="pre">Shift+F5</span></code>, and <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Debug</span> <span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F5</span></code>.
+<p>Build and running commands are available in the status bar at the bottom and in the Command Palette menu (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>) named <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Build</span> <span class="pre">F7</span></code>, <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Run</span> <span class="pre">Without</span> <span class="pre">Debugging</span> <span class="pre">Shift+F5</span></code>, and <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Debug</span> <span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F5</span></code>.
 Shortcuts can be viewed in the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> menu. They don’t match default VS Code ones since those depend on <code class="file docutils literal notranslate"><span class="pre">tasks.json`</span></code>.</p>
 <p>Running and debugging launches the executable without any arguments. Command-line arguments can be passed to the debug
 executable by creating a <code class="docutils literal notranslate"><span class="pre">.vscode/launch.json</span></code> configuration. Read the <a class="reference external" href="https://code.visualstudio.com/docs/cpp/launch-json-reference">documentation</a>  for more information. Instead of creating <code class="file docutils literal notranslate"><span class="pre">launch.json</span></code> manually it can be created from template: <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="menuselection">Debug: Select and Start Debugging ‣ Add configuration.. ‣ C,C++: (gdb) Launch</span>.</p>
@@ -270,7 +273,7 @@ It doesn’t do much for CMake based projects. The biggest benefit is that it au
 <li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#qt-creator">Qt Creator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vscode">VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vs-code">VS Code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clion">CLion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#visual-studio">Visual Studio</a></li>
 </ul>
