@@ -248,7 +248,13 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> enable Graphviz for graph layouts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> List of addition plugin locations. Useful when preparing package for Linux distros that have strict package layout rules.</p></li>
+</ul>
+<p>Cutter binary release options, not needed for most users and might not work easily outside CI environment:</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by r2 build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packges.</p></li>
 </ul>
 <p>These options can be enabled or disabled from the command line arguments passed to CMake.
 For example, to build Cutter with support for Python plugins, you can run this command:</p>
