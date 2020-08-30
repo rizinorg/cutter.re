@@ -66,6 +66,19 @@ below.</p>
 <p>Clicking on the “Analyze Program” button will trigger an analysis of the current binary with radare2’s <code class="docutils literal notranslate"><span class="pre">aaa</span></code>
 command, taking into account the configured values of the analysis options.</p>
 <p><strong>Steps to open:</strong> <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Analysis</span></code></p>
+<div class="section" id="search-boundaries-for-analysis">
+<h3>Search boundaries for analysis<a class="headerlink" href="#search-boundaries-for-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Select the boundaries in which the analyis will be performed. The different options are:</p>
+<ul class="simple">
+<li><p>All executable maps (<code class="docutils literal notranslate"><span class="pre">io.maps.x</span></code>)</p></li>
+<li><p>All maps (<code class="docutils literal notranslate"><span class="pre">io.maps</span></code>)</p></li>
+<li><p>Current map (<code class="docutils literal notranslate"><span class="pre">io.map</span></code>)</p></li>
+<li><p>Raw (<code class="docutils literal notranslate"><span class="pre">raw</span></code>)</p></li>
+<li><p>Current mapped section (<code class="docutils literal notranslate"><span class="pre">bin.section</span></code>)</p></li>
+<li><p>All mapped sections (<code class="docutils literal notranslate"><span class="pre">bin.sections</span></code>)</p></li>
+</ul>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.in</span></code></p>
+</div>
 <div class="section" id="speculatively-set-a-name-for-the-functions">
 <h3>Speculatively set a name for the functions<a class="headerlink" href="#speculatively-set-a-name-for-the-functions" title="Permalink to this headline">¶</a></h3>
 <p>Try to name functions without symbols by using artifacts in the functions such as API calls and strings.</p>
@@ -106,6 +119,16 @@ analysis of the program, but also when trying to analyze and define new function
 <p>Print warnings encountered while preforming type analysis. These warnings can help the user understand if anything went
 wrong in the analysis.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.types.verbose</span></code></p>
+</div>
+<div class="section" id="pointer-depth">
+<h3>Pointer depth<a class="headerlink" href="#pointer-depth" title="Permalink to this headline">¶</a></h3>
+<p>The maximum number of nested pointers to follow in analysis.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.ptrdepth</span></code></p>
+</div>
+<div class="section" id="functions-prelude">
+<h3>Functions prelude<a class="headerlink" href="#functions-prelude" title="Permalink to this headline">¶</a></h3>
+<p>Hex value that represents certain opcodes that will be used to identify functions.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.prelude</span></code></p>
 </div>
 </div>
 </div>
