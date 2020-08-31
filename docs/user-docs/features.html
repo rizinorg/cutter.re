@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Common Issues &#8212; Cutter 1.11.0 documentation</title>
+    <title>Features &#8212; Cutter 1.11.0 documentation</title>
     <link rel="stylesheet" href="../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/cutter.css" />
@@ -18,8 +18,8 @@
     <script src="../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing to Cutter" href="../contributing.html" />
-    <link rel="prev" title="Layout" href="preferences/layout.html" />
+    <link rel="next" title="Shortcuts" href="shortcuts.html" />
+    <link rel="prev" title="User Documentation" href="../user-docs.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -35,14 +35,14 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../contributing.html" title="Contributing to Cutter"
+          <a href="shortcuts.html" title="Shortcuts"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="preferences/layout.html" title="Layout"
+          <a href="../user-docs.html" title="User Documentation"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Cutter 1.11.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../user-docs.html" accesskey="U">User Documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Common Issues</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Features</a></li> 
       </ul>
     </div>
 
@@ -52,33 +52,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="common-issues">
-<h1>Common Issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h1>
-<p>This page lists common issues encountered by users.</p>
-<div class="section" id="appimage-crashes">
-<h2>AppImage Crashes<a class="headerlink" href="#appimage-crashes" title="Permalink to this headline">¶</a></h2>
-<p>If the Linux AppImage binary crashes upon startup, make sure your
-<code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> environment variable is empty.
-For a detailed explanation, see the issue <a class="reference external" href="https://github.com/radareorg/cutter/issues/579">#579</a></p>
-</div>
-<div class="section" id="keyboard-layout-issue">
-<h2>Keyboard Layout Issue<a class="headerlink" href="#keyboard-layout-issue" title="Permalink to this headline">¶</a></h2>
-<p>Some people report that they have keyboard issues. Usually it is because
-the Xorg layout is wrong. You can check it with: <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">-query</span></code>
-Most of the time using <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">us</span></code> solves the issue, but it might
-not be enough and require a more advanced Xorg configuration.</p>
-</div>
-<div class="section" id="initial-analysis-takes-a-long-time-or-cutter-ui-freezes">
-<h2>Initial Analysis takes a long time or Cutter UI freezes<a class="headerlink" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes" title="Permalink to this headline">¶</a></h2>
-<p>Cutter and radare2 currently don’t work very well with large and very large binaries.
-The exact limits depend on the content of the binary, but roughly a few MB can be considered large
-and may take a few minutes to analyze. More than 100MB is very large,
-analysis with default settings will likely take a very long time and it might occasionally
-freeze the UI during usage.</p>
-<p>If the analysis takes longer than 5-15 minutes it is recommended to retry it with different
-analysis options. In the “Load Options” dialog, move the analysis slider to the right in order to reach
-the “Advanced Analysis” view. This view will help you learn more about the options that can
-be used to more selectively analyze only the relevant parts of code.</p>
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<p>This section in the user docs gives a more detailed information about different features in Cutter. These are the different
+utilities and views that can be used and controlled by you during your session. As more familiar and comfort you feel with the
+different features in Cutter, the more efficient and effective you are during your reverse-engineering experience.</p>
+<div class="section" id="decompiler">
+<h2>Decompiler<a class="headerlink" href="#decompiler" title="Permalink to this headline">¶</a></h2>
+<p>A decompiler is a program that will analyze binaries and attempt to create a high-level representation of the machine code in it. In other words, it tries to reconstruct the source code from which the binary was compiled in the first place.</p>
+<p>Here’s an image that compares one of the decompiler Cutter supports with the Cutter’s disassembler.</p>
+<img alt="../_images/decompiler_vs_disassembly.png" src="../_images/decompiler_vs_disassembly.png" />
+<p>Cutter provides an interface that supports plugins of multiple decompilers including Ghidra, RetDec and R2Dec. The interface receives data from the decompiler and presenting the decompiler code in a context-sensitive decompiler widget. Check the <a class="reference external" href="https://github.com/radareorg/cutter-plugins#decompilers">Decompilers</a> section on our Plugins repository to know more about the decompilers we support.</p>
+<p>Out of the decompiler plugins that we support, the one that’s officially maintained by the developers of Cutter is R2Ghidra. <a class="reference internal" href="menus/decompiler-context-menu.html"><span class="doc">Click here</span></a> to learn more about the functionalities we provide in the decompiler.</p>
 </div>
 </div>
 
@@ -97,17 +82,15 @@ be used to more selectively analyze only the relevant parts of code.</p>
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../user-docs.html">User Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#decompiler">Decompiler</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="command-line.html">Command-line Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menus.html">Menus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preferences.html">Configuration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Common Issues</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#appimage-crashes">AppImage Crashes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#keyboard-layout-issue">Keyboard Layout Issue</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes">Initial Analysis takes a long time or Cutter UI freezes</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="common-issues.html">Common Issues</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Cutter</a></li>
