@@ -9,7 +9,6 @@ post_image: "/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompil
 description: "The decompiler widget is now responsive than ever! Read about the improvements made possible by Nirmal, a GSoC student"
 ---
 
-<!-- <meta name="twitter:image:src" content="https://cutter.re/assets/images/blog/posts/survey-2020/survey2020.png"> -->
 My name is Nirmal Manoj. I am a second-year CS undergraduate student at IIIT Hyderabad, India. This summer, I participated in a [Google Summer of Code](https://summerofcode.withgoogle.com/) project for [radareorg](https://github.com/radareorg/). The main goal of my project is to improve the decompiler interface in Cutter.
 
 As a part of my project, I worked on multiple repositories, including [Cutter](https://github.com/radareorg/cutter/), [r2ghidra-dec](https://github.com/radareorg/r2ghidra-dec/), and [radare2](https://github.com/radareorg/radare2/). I have also sent a couple of patches to the [retdec-r2plugin](https://github.com/avast/retdec-r2plugin). The following sections sum up the important work that I have done and its impacts. Each section will describe specific features or important API that I have worked on. It will also have links to the code and discussions related to that topic. 
