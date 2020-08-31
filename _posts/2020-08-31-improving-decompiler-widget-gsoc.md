@@ -20,7 +20,7 @@ Cutter’s decompiler didn’t have a good enough decompiler interface for suppo
 
 After discussions in the community, we decided to use `RAnnotatedCode` as the standard decompiler interface across all the decompilers used in Cutter and Radare2. The related work involved shifting `RAnnotatedCode` API from r2ghidra-dec to radare2. I also implemented unit tests for API functions related to `RAnnotatedCode`.
 
-Cutter supports three decompilers: [R2Ghidra](https://github.com/radareorg/r2ghidra-dec)(plugin for Ghidra), [R2Dec](https://github.com/radareorg/r2dec-js), and [RetDec-Radare2](https://github.com/avast/retdec-r2plugin)(plugin for RetDec). The output from all these decompilers was being parsed into a custom structure name `AnnotatedCode` to use in Cutter.  Even then, internally, r2ghidra-dec and retdec-radare2 used `RAnnotatedCode`. After I shifted `RAnnotatedCode` to radare2, I sent patches to both r2ghidra-dec and retdec-radare2 to use `RAnnotatedCode` directly from radare2.
+Currently, Cutter supports three decompilers: [R2Ghidra](https://github.com/radareorg/r2ghidra-dec)(plugin for Ghidra), [R2Dec](https://github.com/radareorg/r2dec-js), and [RetDec-Radare2](https://github.com/avast/retdec-r2plugin)(plugin for RetDec). The output from all these decompilers was being parsed into a custom structure named `AnnotatedCode` to use in Cutter.  Even then, internally, r2ghidra-dec and retdec-radare2 used `RAnnotatedCode`. After I shifted `RAnnotatedCode` to radare2, I sent patches to both r2ghidra-dec and retdec-radare2 to use `RAnnotatedCode` directly from radare2.
 
 ### Related PRs:
 
@@ -44,13 +44,13 @@ This involved refactoring the decompiler widget to use `RAnnotatedCode` instead 
 This involves me making a context-menu with a single action for the decompiler. I replaced the disassembly context menu completely in the decompiler widget. The only action implemented along with the context menu skeleton was an action to copy selected decompiled code.
 
 GIF that shows the decompiler context menu with just copy action
-![skeleton-copy](https://user-images.githubusercontent.com/18501167/91670140-51207900-eb38-11ea-86dd-89101a9dbe89.gif)
+![skeleton-copy](/assets/images/blog/posts/improving-decompiler-widget-gsoc/skeleton-copy.gif)
 
 ### Related PR:
-1. cutter [PR #2256](/assets/images/blog/posts/improving-decompiler-widget-gsoc/skeleton-copy.gif): Dedicated decompiler context menu (skeleton) with an action to copy selected code
+1. cutter [PR #2256](https://github.com/radareorg/cutter/pull/2256): Dedicated decompiler context menu (skeleton) with an action to copy selected code
 
 ## Implementing actions for debugging 
-This involved me implementing actions for the toggling breakpoint, accessing the menu for advanced breakpoint definition, and also for two other debugging related actions in the decompiler context menu. Multiple breakpoints could exist in a decompiled code line, as that’s often a more straightforward representation of multiple lines in assembly. The option to choose the breakpoint that a user wants to edit from the breakpoints list was also implemented. 
+This involved me implementing actions for toggling breakpoint, accessing the menu for advanced breakpoint definition, and also for two other debugging related actions in the decompiler context menu. Multiple breakpoints could exist in a decompiled code line, as that’s often a more straightforward representation of multiple lines in assembly. The option to choose the breakpoint that a user wants to edit from the breakpoints list was also implemented. 
 
 The following GIFs show key functionalities.
 
@@ -85,7 +85,7 @@ GIF demonstrating rename function action:
 3. cutter [PR #2286](https://github.com/radareorg/r2ghidra-dec/pull/123): Action to rename functions in the decompiler context menu
 
 ## Implementing annotations for global variables, constant variables, and related actions 
-This involved consolidating all references (function names, global variables, and constant variables) under a single structure called a `reference`. Two new types were also introduced to accommodate global variables and constant variables. Also, annotators were implemented for these new types of annotations in r2ghidra-dec. 
+This involved consolidating all references (function names, global variables, and constant variables) under a single structure called a "reference". Two new annotation types were also introduced to accommodate global variables and constant variables. Also, annotators were implemented for these new types of annotations in r2ghidra-dec. 
 
 The decompiled code shown in the decompiler widget represents and refers to specific memory addresses in the binary. The ability to view these addresses in other widgets such as Hexdump or Disassembly can be very handy. For this, I created a "show-in" menu that allows the user to open the address related to the decompiled code under the cursor in other widgets. These other widgets include Hexdump, Graph, and Disassembly. One other related feature that can become useful is opening a reference in another widget. For instance, a function referenced under the cursor can be opened in a new decompiler widget or a graph widget. A targeted show-in menu for references was implemented for this. In this same PR, actions for adding, renaming, and deleting global variable names were implemented. See GIFs below to see the functionality implemented.
 
