@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Improving Decompiler Widget - GSoC Project"
-date: 2020-05-20
+date: 2020-08-31
 tags: ["Decompiler", "GSoC"]
 categories: ["Cutter", "Decompiler", "GSoC"]
 author: nirmal_manoj
-# post_image: "/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_1.png"
+post_image: "/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png"
 description: "The decompiler widget is now responsive than ever! Read about the improvements made possible by Nirmal, a GSoC student"
 ---
 
