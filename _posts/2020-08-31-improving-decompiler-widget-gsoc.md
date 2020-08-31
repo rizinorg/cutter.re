@@ -82,7 +82,7 @@ GIF demonstrating rename function action:
 ### Related PRs
 1. radare2 [PR #17204](https://github.com/radareorg/radare2/pull/17204): Annotation for function name
 2. r2ghidra-dec [PR #123](https://github.com/radareorg/r2ghidra-dec/pull/123): Function name annotation annotator implemented
-3. cutter [PR #2286](https://github.com/radareorg/r2ghidra-dec/pull/123): Action to rename functions in the decompiler context menu
+3. cutter [PR #2286](https://github.com/radareorg/cutter/pull/2286): Action to rename functions in the decompiler context menu
 
 ## Implementing annotations for global variables, constant variables, and related actions 
 This involved consolidating all references (function names, global variables, and constant variables) under a single structure called a "reference". Two new annotation types were also introduced to accommodate global variables and constant variables. Also, annotators were implemented for these new types of annotations in r2ghidra-dec. 
