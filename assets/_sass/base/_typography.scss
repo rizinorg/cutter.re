@@ -37,23 +37,19 @@ h3, .heading-3 {
 h4, .heading-4 {
 	@include font-size($h4-font-size); 
 	@include tablet{
-		@include font-size($h4-font-size - 1); 
+		@include font-size($h4-font-size - 0.7); 
 		font-weight:$font-weight-bold;
 	}; 
 }
 h5, .heading-5 { 
 	@include font-size($h5-font-size); 
 	@include tablet{
-		@include font-size($h5-font-size - 1); 
+		@include font-size($h5-font-size - 0.5); 
 		font-weight:$font-weight-bold;
 	}; 
 }
 h6, .heading-6 { 
 	@include font-size($h6-font-size); 
-	@include tablet{
-		@include font-size($h6-font-size - 0.5); 
-		font-weight:$font-weight-bold;
-	}; 
 }
 h1, h2, h3, h4, h5, h6 ,
 .heading-1, .heading-2, 
