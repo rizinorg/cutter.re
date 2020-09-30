@@ -356,6 +356,13 @@ installed with brew. Run this command to work around the issue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span><span class="o">.</span><span class="ow">not</span><span class="o">-</span><span class="n">found</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p><strong>LSOpenURLsWithRole() failed with error -10810</strong></p></li>
+</ul>
+<p>On macOS High Sierra Cutter crashes due to the absence of <code class="docutils literal notranslate"><span class="pre">gettext</span></code> library. To fix this problem, simply install the missing package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">gettext</span>
+</pre></div>
+</div>
 </div>
 </div>
 
