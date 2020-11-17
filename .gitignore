@@ -1,0 +1,6 @@
+_site/
+docs/_site
+.sass-cache/
+.jekyll-cache/
+.vscode/
+Gemfile.lock

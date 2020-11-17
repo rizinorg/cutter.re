@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started with Python Plugins &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building" href="../../building.html" />
+    <link rel="prev" title="Translate Cutter" href="../translations/getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../building.html" title="Building"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../translations/getting-started.html" title="Translate Cutter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" accesskey="U">Contributing to Cutter</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Getting Started with Python Plugins</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-with-python-plugins">
+<h1>Getting Started with Python Plugins<a class="headerlink" href="#getting-started-with-python-plugins" title="Permalink to this headline">¶</a></h1>
+<p>This article provides a step-by-step guide on how to write a simple Python plugin for Cutter.</p>
+<p>Create a python file, called <code class="docutils literal notranslate"><span class="pre">myplugin.py</span></code> for example, and add the following contents:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
+
+<span class="k">class</span> <span class="nc">MyCutterPlugin</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterPlugin</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;My Plugin&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;This plugin does awesome things!&quot;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;1337 h4x0r&quot;</span>
+
+    <span class="k">def</span> <span class="nf">setupPlugin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">setupInterface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">terminate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">create_cutter_plugin</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">MyCutterPlugin</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is the most basic code that makes up a plugin.
+Python plugins in Cutter are regular Python modules that are imported automatically on startup.
+In order to load the plugin, Cutter will call the function <code class="docutils literal notranslate"><span class="pre">create_cutter_plugin()</span></code> located
+in the root of the module and expects it to return an instance of <code class="docutils literal notranslate"><span class="pre">cutter.CutterPlugin</span></code>.
+Normally, you shouldn’t have to do anything else in this function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cutter API is exposed through the <code class="docutils literal notranslate"><span class="pre">cutter</span></code> module.
+This consists mostly of direct bindings of the original C++ classes, generated with Shiboken2.
+For more detail about this API, see the Cutter C++ code or <a class="reference internal" href="../../api.html#api"><span class="std std-ref">API Reference</span></a>.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">CutterPlugin</span></code> subclass contains some meta-info and two callback methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">setupPlugin()</span></code> is called right after the plugin is loaded and can be used to initialize the plugin itself.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setupInterface()</span></code> is called with the instance of MainWindow as an argument and should create and register any UI components.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">terminate()</span></code> is called on shutdown and should clean up any resources used by the plugin.</p></li>
+</ul>
+<p>Copy this file into the <code class="docutils literal notranslate"><span class="pre">python</span></code> subdirectory located under the plugins directory of Cutter and start the application.
+You should see an entry for your plugin in the list under Edit -&gt; Preferences -&gt; Plugins.
+Here, the absolute path to the plugins directory is shown too if you are unsure where to put your plugin:</p>
+<img alt="../../_images/preferences-plugins.png" src="../../_images/preferences-plugins.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As mentioned, plugins are Python modules. This means, instead of only a single .py file, you can also
+use a directory containing multiple python files and an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file that defines or imports the
+<code class="docutils literal notranslate"><span class="pre">create_cutter_plugin()</span></code> function.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are working on a Unix-like system, instead of copying, you can also symlink your plugin into the plugins
+directory, which lets you store the plugin somewhere else without having to copy the files over and over again.</p>
+</div>
+<div class="section" id="creating-a-widget">
+<h2>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h2>
+<p>Next, we are going to add a simple dock widget. Extend the code as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
+
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
+
+<span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyDockWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;MyDockWidget&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;My cool DockWidget&quot;</span><span class="p">)</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="n">label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">MyCutterPlugin</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterPlugin</span><span class="p">):</span>
+    <span class="c1"># ...</span>
+
+    <span class="k">def</span> <span class="nf">setupInterface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main</span><span class="p">):</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="s2">&quot;My Plugin&quot;</span><span class="p">,</span> <span class="n">main</span><span class="p">)</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MyDockWidget</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+        <span class="n">main</span><span class="o">.</span><span class="n">addPluginDockWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>We are subclassing <code class="docutils literal notranslate"><span class="pre">cutter.CutterDockWidget</span></code>, which is the base class for all dock widgets in Cutter,
+and adding a label to it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can access the whole Qt5 API from Python, which is exposed by PySide2. For more information about this, refer to the
+Documentation of <a class="reference external" href="https://doc.qt.io/qt-5/reference-overview.html">Qt</a> and <a class="reference external" href="https://wiki.qt.io/Qt_for_Python">PySide2</a>.</p>
+</div>
+<p>In our <code class="docutils literal notranslate"><span class="pre">setupInterface()</span></code> method, we create an instance of our dock widget and an action to be
+added to the menu for showing and hiding the widget.
+MainWindow provides a helper method called <code class="docutils literal notranslate"><span class="pre">addPluginDockWidget()</span></code> to easily register these.</p>
+<p>When running Cutter now, you should see the widget:</p>
+<img alt="../../_images/mydockwidget.png" src="../../_images/mydockwidget.png" />
+<p>… as well as the action:</p>
+<img alt="../../_images/mydockwidget-action.png" src="../../_images/mydockwidget-action.png" />
+</div>
+<div class="section" id="fetching-data">
+<h2>Fetching Data<a class="headerlink" href="#fetching-data" title="Permalink to this headline">¶</a></h2>
+<p>Next, we want to show some actual data from the binary in our widget.
+As an example, we will display the instruction and instruction size at the current position.
+Extend the code as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+
+<span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+
+        <span class="n">disasm</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;pd 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">instruction</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmdj</span><span class="p">(</span><span class="s2">&quot;pdj 1&quot;</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">instruction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;size&quot;</span><span class="p">]</span>
+
+        <span class="n">label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Current disassembly:</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">with size </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">disasm</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>We can access the data by calling radare2 commands and utilizing their output.
+This is done by using the two functions <code class="docutils literal notranslate"><span class="pre">cmd()</span></code> and <code class="docutils literal notranslate"><span class="pre">cmdj()</span></code>, which behave just as they
+do in <a class="reference external" href="https://radare.gitbooks.io/radare2book/scripting/r2pipe.html">r2pipe</a>.</p>
+<p>Many commands in radare2 can be suffixed with a <code class="docutils literal notranslate"><span class="pre">j</span></code> to return JSON output.
+<code class="docutils literal notranslate"><span class="pre">cmdj()</span></code> will automatically deserialize the JSON into python dicts and lists, so the
+information can be easily accessed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When fetching data that is not meant to be used only as readable text, <strong>always</strong> use the JSON variant of a command!
+Regular command output is not meant to be parsed and is subject to change at any time, which will break your code.</p>
+</div>
+<p>In our case, we use the two commands <code class="docutils literal notranslate"><span class="pre">pd</span></code> (Print Disassembly) and <code class="docutils literal notranslate"><span class="pre">pdj</span></code> (Print Disassembly as JSON)
+with a parameter of 1 to fetch a single line of disassembly.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To try out commands, you can use the Console widget in Cutter. Almost all commands support a <code class="docutils literal notranslate"><span class="pre">?</span></code> suffix, like in
+<code class="docutils literal notranslate"><span class="pre">pd?</span></code>, to show help and available sub-commands.
+To get a general overview, enter a single <code class="docutils literal notranslate"><span class="pre">?</span></code>.</p>
+</div>
+<p>The result will look like the following:</p>
+<img alt="../../_images/disasm-static.png" src="../../_images/disasm-static.png" />
+<p>Of course, since we only fetch the info once during the creation of the widget, the content never updates.
+We are going to change that in the next section.</p>
+</div>
+<div class="section" id="reacting-to-events">
+<h2>Reacting to Events<a class="headerlink" href="#reacting-to-events" title="Permalink to this headline">¶</a></h2>
+<p>We want to update the content of our widget on every seek.
+This can be done like the following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+
+<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
+
+<span class="c1"># ...</span>
+
+<span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="c1"># ...</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="p">)</span>
+
+        <span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">core</span><span class="p">(),</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;seekChanged(RVA)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">disasm</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;pd 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">instruction</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmdj</span><span class="p">(</span><span class="s2">&quot;pdj 1&quot;</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">instruction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;size&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Current disassembly:</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">with size </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">disasm</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>First, we move the update code to a separate method.
+Then we call <code class="docutils literal notranslate"><span class="pre">cutter.core()</span></code>, which returns the global instance of <code class="docutils literal notranslate"><span class="pre">CutterCore</span></code>.
+This class provides the Qt signal <code class="docutils literal notranslate"><span class="pre">seekChanged(RVA)</span></code>, which is emitted every time the current seek changes.
+We can simply connect this signal to our method and our widget will update as we expect it to:</p>
+<img alt="../../_images/disasm-dynamic.png" src="../../_images/disasm-dynamic.png" />
+<p>For more information about Qt signals and slots, refer to <a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">https://doc.qt.io/qt-5/signalsandslots.html</a>.</p>
+</div>
+<div class="section" id="full-code">
+<h2>Full Code<a class="headerlink" href="#full-code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
+
+<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
+
+<span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyDockWidget</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;MyDockWidget&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;My cool DockWidget&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="p">)</span>
+
+        <span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">core</span><span class="p">(),</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;seekChanged(RVA)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">disasm</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;pd 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">instruction</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmdj</span><span class="p">(</span><span class="s2">&quot;pdj 1&quot;</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">instruction</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;size&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Current disassembly:</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">with size </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">disasm</span><span class="p">,</span> <span class="n">size</span><span class="p">))</span>
+
+
+<span class="k">class</span> <span class="nc">MyCutterPlugin</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterPlugin</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;My Plugin&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;This plugin does awesome things!&quot;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;1337 h4x0r&quot;</span>
+
+    <span class="k">def</span> <span class="nf">setupPlugin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">setupInterface</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main</span><span class="p">):</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="s2">&quot;My Plugin&quot;</span><span class="p">,</span> <span class="n">main</span><span class="p">)</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MyDockWidget</span><span class="p">(</span><span class="n">main</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+        <span class="n">main</span><span class="o">.</span><span class="n">addPluginDockWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">terminate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">create_cutter_plugin</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">MyCutterPlugin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../plugins.html">Plugins</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../plugins.html#loading-and-overview">Loading and Overview</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../plugins.html#creating-plugins">Creating Plugins</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Getting Started with Python Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

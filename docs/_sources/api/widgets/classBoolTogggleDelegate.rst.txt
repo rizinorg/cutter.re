@@ -1,0 +1,4 @@
+BoolTogggleDelegate
+===================
+
+.. doxygenclass:: BoolTogggleDelegate

@@ -1,0 +1,4 @@
+AddressableItemList
+===================
+
+.. doxygenclass:: AddressableItemList

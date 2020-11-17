@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis Options &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Initialization Script" href="initialization-script.html" />
+    <link rel="prev" title="Configuration" href="../preferences.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="initialization-script.html" title="Initialization Script"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../preferences.html" title="Configuration"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../user-docs.html" >User Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../preferences.html" accesskey="U">Configuration</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Analysis Options</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="analysis-options">
+<h1>Analysis Options<a class="headerlink" href="#analysis-options" title="Permalink to this headline">¶</a></h1>
+<p>Cutter will use the underlying radare2 analysis options to analyze a binary. These options are usually
+configured when the binary is first loaded. However, they can be later changed using the Analysis
+dialog, and a new analysis that takes these options into account can then be performed.</p>
+<div class="section" id="analysis-dialog">
+<h2>Analysis Dialog<a class="headerlink" href="#analysis-dialog" title="Permalink to this headline">¶</a></h2>
+<img alt="Analysis dialog" src="../../_images/analysis_dialog.png" />
+<p><strong>Description:</strong> The Analysis dialog allows setting some radare2’s analysis options. The supported options are described
+below.</p>
+<p>Clicking on the “Analyze Program” button will trigger an analysis of the current binary with radare2’s <code class="docutils literal notranslate"><span class="pre">aaa</span></code>
+command, taking into account the configured values of the analysis options.</p>
+<p><strong>Steps to open:</strong> <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Analysis</span></code></p>
+<div class="section" id="search-boundaries-for-analysis">
+<h3>Search boundaries for analysis<a class="headerlink" href="#search-boundaries-for-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Select the boundaries in which the analyis will be performed. The different options are:</p>
+<ul class="simple">
+<li><p>All executable maps (<code class="docutils literal notranslate"><span class="pre">io.maps.x</span></code>)</p></li>
+<li><p>All maps (<code class="docutils literal notranslate"><span class="pre">io.maps</span></code>)</p></li>
+<li><p>Current map (<code class="docutils literal notranslate"><span class="pre">io.map</span></code>)</p></li>
+<li><p>Raw (<code class="docutils literal notranslate"><span class="pre">raw</span></code>)</p></li>
+<li><p>Current mapped section (<code class="docutils literal notranslate"><span class="pre">bin.section</span></code>)</p></li>
+<li><p>All mapped sections (<code class="docutils literal notranslate"><span class="pre">bin.sections</span></code>)</p></li>
+</ul>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.in</span></code></p>
+</div>
+<div class="section" id="speculatively-set-a-name-for-the-functions">
+<h3>Speculatively set a name for the functions<a class="headerlink" href="#speculatively-set-a-name-for-the-functions" title="Permalink to this headline">¶</a></h3>
+<p>Try to name functions without symbols by using artifacts in the functions such as API calls and strings.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.autoname</span></code></p>
+</div>
+<div class="section" id="search-for-new-functions-following-already-defined-functions">
+<h3>Search for new functions following already defined functions<a class="headerlink" href="#search-for-new-functions-following-already-defined-functions" title="Permalink to this headline">¶</a></h3>
+<p>Cutter will check if there is a candidate for a new function following an already defined one, as the compiler usually
+state them together. This option is taking the advantages of both Recursive Analysis and Linear Sweep into some kind of a hybrid mode. For each discovered function, the analysis will try to check for a function-prologue, usually following a gap of null bytes or <code class="docutils literal notranslate"><span class="pre">cc</span></code> bytes. This will help with discovering functions which are not referenced in the program. As such, it will make the analysis slower and prone to false-positives.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.hasnext</span></code></p>
+</div>
+<div class="section" id="create-references-for-unconditional-jumps">
+<h3>Create references for unconditional jumps<a class="headerlink" href="#create-references-for-unconditional-jumps" title="Permalink to this headline">¶</a></h3>
+<p>When encountering unconditional jumps during the analysis, Cutter will add a code-reference even if it is not guaranteed
+that the jump will take place.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.jmp.ref</span></code></p>
+</div>
+<div class="section" id="analyze-jump-tables-in-switch-statements">
+<h3>Analyze jump tables in switch statements<a class="headerlink" href="#analyze-jump-tables-in-switch-statements" title="Permalink to this headline">¶</a></h3>
+<p>When encountering switch statements during analysis, continue and analyze the target blocks of the jump tables.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.jmp.tbl</span></code></p>
+</div>
+<div class="section" id="analyze-push-ret-as-jmp">
+<h3>Analyze <code class="docutils literal notranslate"><span class="pre">push</span></code> + <code class="docutils literal notranslate"><span class="pre">ret</span></code> as <code class="docutils literal notranslate"><span class="pre">jmp</span></code><a class="headerlink" href="#analyze-push-ret-as-jmp" title="Permalink to this headline">¶</a></h3>
+<p>When performing analysis of a function, treat the sequence of <code class="docutils literal notranslate"><span class="pre">push</span></code> followed by <code class="docutils literal notranslate"><span class="pre">ret</span></code> instruction as a <code class="docutils literal notranslate"><span class="pre">jmp</span></code>.
+This can help Cutter to continue the analysis to target of the <code class="docutils literal notranslate"><span class="pre">jmp</span></code>.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.pushret</span></code></p>
+</div>
+<div class="section" id="show-verbose-information-when-performing-analysis">
+<h3>Show verbose information when performing analysis<a class="headerlink" href="#show-verbose-information-when-performing-analysis" title="Permalink to this headline">¶</a></h3>
+<p>When enabled, Cutter will print warnings it encountered while preforming analysis. These warnings can help the user
+understand if anything went wrong in the analysis. This function is not only helpful when trying to perform a full
+analysis of the program, but also when trying to analyze and define new functions.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.verbose</span></code></p>
+</div>
+<div class="section" id="verbose-output-from-type-analysis">
+<h3>Verbose output from type analysis<a class="headerlink" href="#verbose-output-from-type-analysis" title="Permalink to this headline">¶</a></h3>
+<p>Print warnings encountered while preforming type analysis. These warnings can help the user understand if anything went
+wrong in the analysis.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.types.verbose</span></code></p>
+</div>
+<div class="section" id="pointer-depth">
+<h3>Pointer depth<a class="headerlink" href="#pointer-depth" title="Permalink to this headline">¶</a></h3>
+<p>The maximum number of nested pointers to follow in analysis.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.ptrdepth</span></code></p>
+</div>
+<div class="section" id="functions-prelude">
+<h3>Functions prelude<a class="headerlink" href="#functions-prelude" title="Permalink to this headline">¶</a></h3>
+<p>Hex value that represents certain opcodes that will be used to identify functions.</p>
+<p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">anal.prelude</span></code></p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command-line.html">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../preferences.html">Configuration</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Analysis Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="initialization-script.html">Initialization Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layout.html">Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

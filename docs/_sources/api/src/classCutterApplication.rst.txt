@@ -1,0 +1,4 @@
+CutterApplication
+=================
+
+.. doxygenclass:: CutterApplication

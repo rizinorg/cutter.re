@@ -1,0 +1,4 @@
+Highlighter
+===========
+
+.. doxygenclass:: Highlighter

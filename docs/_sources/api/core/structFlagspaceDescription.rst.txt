@@ -1,0 +1,4 @@
+FlagspaceDescription
+====================
+
+.. doxygenstruct:: FlagspaceDescription

@@ -1,0 +1,4 @@
+DisassemblerGraphView::Text
+===========================
+
+.. doxygenstruct:: DisassemblerGraphView::Text

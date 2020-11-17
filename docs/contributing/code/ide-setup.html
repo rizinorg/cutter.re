@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development environment setup &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Crash Handling System" href="crash-handling-system.html" />
+    <link rel="prev" title="Cutter Development Guidelines" href="development-guidelines.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="crash-handling-system.html" title="Crash Handling System"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="development-guidelines.html" title="Cutter Development Guidelines"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" >Contributing to Cutter</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../code.html" accesskey="U">Developer Documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Development environment setup</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="development-environment-setup">
+<h1>Development environment setup<a class="headerlink" href="#development-environment-setup" title="Permalink to this headline">¶</a></h1>
+<p>This page contains recommendations and tips on how to better setup different IDEs for Cutter development.</p>
+<div class="section" id="general-advice">
+<h2>General advice<a class="headerlink" href="#general-advice" title="Permalink to this headline">¶</a></h2>
+<p>Everyone has their own preferences for their favorite IDE or code editor.
+There are no strict requirements for using a specific one for Cutter development.
+Any IDE with good CMake integration should work well.</p>
+<p>For most development builds, unless you are working on packaging issues, it is recommended to use <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2=ON</span></code> Cmake option. It is the easiest way to ensure that a compatible r2 version is used, and helps you deal with different versions of radare2 when working with multiple Cutter branches. On Linux, in case you have multiple r2 versions without <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code>, the <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable can be used to select the desired radare2 installation.</p>
+<p>While <a class="reference internal" href="#qt-creator">Qt Creator</a> has a builtin visual form and widget editor, not having it in other IDEs is not a major problem. It is also available as a standalone tool called Qt Designer and you can configure the file associations so that <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files are opened using it. Depending on the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file and changes you want to make, it is sometimes easier to perform them by editing the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file as a text file. Essentially, <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files are XML files. Most code editors should have some support for XML highlighting and possibly block folding.</p>
+<p>The following instructions and recommendations assume that you have already download Cutter source and obtained required dependencies as described in <a class="reference internal" href="../../building.html"><span class="doc">Building</span></a>.</p>
+</div>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<p>On a rolling-release distribution or a somewhat recent version of traditional distributions like Ubuntu 18.04, it should be possible to get all the dependencies from the official repository. There might be some problems with PySide2 and Shiboken2 but it can be easily disabled and isn’t necessary for most work on Cutter. Don’t try to install PySide using pip.</p>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<p>Assuming you have a sufficiently powerful computer, a nice way of getting and configuring Qt for Cutter is to use <a class="reference external" href="https://github.com/Microsoft/vcpkg">vcpkg</a>.
+For a quick test, the exact versions of libraries used by Cutter release packages can be obtained from <a class="reference external" href="https://github.com/radareorg/cutter-deps/releases">cutter-deps</a> but they don’t contain debug
+versions of libraries so they are not suitable for more serious Cutter development on Windows.</p>
+</div>
+<div class="section" id="qt-creator">
+<h2>Qt Creator<a class="headerlink" href="#qt-creator" title="Permalink to this headline">¶</a></h2>
+<p>QT Creator is an open-source IDE made by the same developers as Qt.</p>
+<p>Even though Cutter has qmake project cutter.pro it is recommended to use the CMake project in QTCreator.
+QTCreator support for CMake is as good as qmake one but not all Cutter project configuration options are available in qmake project and in future Cutter qmake project might be removed.</p>
+<div class="section" id="pros-and-cons">
+<h3>Pros and Cons<a class="headerlink" href="#pros-and-cons" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>builtin help for Qt API</p></li>
+<li><p>builtin .ui file editor (Qt Designer - visual form editor)</p></li>
+<li><p>builtin helper for displaying Qt types in the debugger</p></li>
+<li><p>Viewing source files that are not directly part of the project (R2 source code) is somewhat inconvenient.</p></li>
+<li><p>The simplest way of installing on non-Linux operating systems require login with Qt account</p></li>
+</ul>
+</div>
+<div class="section" id="project-setup">
+<h3>Project setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h3>
+<p>The following instructions were made based on version 4.12.4 of Qt Creator. The steps might slightly differ between the versions.</p>
+<ul class="simple">
+<li><p>Go to <span class="menuselection">File ‣ Open File or Project..</span> and select <code class="file docutils literal notranslate"><span class="pre">cutter/src/CMakeList.txt</span></code></p></li>
+<li><p>Select kit and press <span class="guilabel">Configure Project</span></p></li>
+<li><p>Configuration step might fail due to r2 not being found, that’s normal</p></li>
+<li><p>Click <span class="guilabel">Projects</span> button with wrench icon on the left side of the screen</p></li>
+<li><p>Click <span class="menuselection">Add ‣ Boolean</span> in the CMake section</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> as a key name and change the value to ON. In earlier Qt Creator versions it is necessary to do this during the initial kit selection and configuration step.</p></li>
+<li><p>Click <span class="guilabel">Apply Configuration Changes</span>:. The configuration should succeed now. In case of errors inspect the output log.</p></li>
+</ul>
+<p>Either in <span class="menuselection">Projects ‣ Code Style ‣ C++</span> or <span class="menuselection">Tools ‣ Options ‣ C++ ‣ Code Style</span> select <span class="guilabel">Qt [built-in]</span>. It should be selected by default unless you have used Qt Creator for other projects. Cutter Coding style is almost identical to Qt one. This will help with using correct indentation type and basic formatting without running code formatter.</p>
+<p>To configure AStyle for formatting a file go to <span class="menuselection">Tools ‣ Options ‣ Beautifier ‣ Artistic Style</span>. If necessary, specify the path to astyle executable. The <span class="guilabel">Use file *.astylerc defined in project files</span> option doesn’t seem to be working reliably so it is necessary to use <span class="guilabel">Use specific config file</span> option. Cutter astyle configuration is stored in <code class="file docutils literal notranslate"><span class="pre">cutter/src/Cutter.astylerc</span></code>.</p>
+</div>
+<div class="section" id="changing-cmake-configuration">
+<h3>Changing CMake configuration<a class="headerlink" href="#changing-cmake-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Click on the “Projects” button on the left side of the screen and then select “Build”. All the project CMake options are listed and can be edited there in a graphical editor.</p>
+</div>
+<div class="section" id="editing-qt-ui-files">
+<h3>Editing Qt .ui files<a class="headerlink" href="#editing-qt-ui-files" title="Permalink to this headline">¶</a></h3>
+<p>Double-clicking a <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file in a file list opens it inside a visual editor. If you want to make changes that are easier to do by editing <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file as text - right-click the file and select <span class="menuselection">Open With ‣ Plain Text Editor</span>. Switching from visual form editor back to code editor mode will open the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file in read-only mode with the following warning “This file can only be edited in Design mode”. To edit use the same steps as described before.</p>
+</div>
+</div>
+<div class="section" id="vs-code">
+<h2>VS Code<a class="headerlink" href="#vs-code" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/Microsoft/vscode">VS Code</a> is an open-source code editor made by Microsoft.</p>
+<div class="section" id="id2">
+<h3>Pros and Cons<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A large number of plugins</p></li>
+<li><p>A good fallback mechanism for files that are not directly part of a project.</p></li>
+</ul>
+</div>
+<div class="section" id="recommended-plugins">
+<h3>Recommended plugins<a class="headerlink" href="#recommended-plugins" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++</a> - The official C++ support plugin made by Microsoft</p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools">CMake Tools</a> - Provides CMake project integration. Originally developed by vector-of-bool and currently maintained by Microsoft.</p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=twxs.cmake">CMake</a> - CMake language support when editing CMake files. Does not replace the previous CMake plugin. They provide non-overlapping functionality and should be used together.</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Project setup<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="menuselection">File ‣ Open Folder…</span> and select the folder in which you cloned Cutter</p></li>
+<li><p>Install the recommended plugins.</p></li>
+<li><p>Once the <cite>CMake Tools</cite> plugin is installed, in the corner you will see a popup asking you “Would you like to configure project ‘cutter’? Source: CMake Tools (Extension)”. Click Yes.</p></li>
+<li><p>In the kit selection popup, choose <span class="guilabel">[Unspecified]</span> unless you have more specific needs.</p></li>
+<li><p>If you initially dismissed the configuration window or didn’t have the plugins installed yet - open command-palette using <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> and select <span class="guilabel">Cmake: Configure</span></p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Changing CMake configuration<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>After the first configuration <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="guilabel">CMake: Edit CMake Cache</span> opens a text editor with all CMake options. Cutter specific ones mostly start with “CUTTER”.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> option is also defined in <code class="docutils literal notranslate"><span class="pre">.vscode/settings.json</span></code> file and it will be overridden from there. It is set to <code class="docutils literal notranslate"><span class="pre">ON</span></code> by default as it is recommended during development.</p>
+</div>
+</div>
+<div class="section" id="building-running-debugging">
+<span id="vscode-debug-setup"></span><h3>Building, Running, Debugging<a class="headerlink" href="#building-running-debugging" title="Permalink to this headline">¶</a></h3>
+<p>Build and running commands are available in the status bar at the bottom and in the Command Palette menu (<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>) named <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Build</span> <span class="pre">F7</span></code>, <code class="docutils literal notranslate"><span class="pre">CMake:</span> <span class="pre">Run</span> <span class="pre">Without</span> <span class="pre">Debugging</span> <span class="pre">Shift+F5</span></code>, and <code class="docutils literal notranslate"><span class="pre">CMake</span> <span class="pre">Debug</span> <span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F5</span></code>.
+Shortcuts can be viewed in the <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> menu. They don’t match default VS Code ones since those depend on <code class="file docutils literal notranslate"><span class="pre">tasks.json`</span></code>.</p>
+<p>Running and debugging launches the executable without any arguments. Command-line arguments can be passed to the debug
+executable by creating a <code class="docutils literal notranslate"><span class="pre">.vscode/launch.json</span></code> configuration. Read the <a class="reference external" href="https://code.visualstudio.com/docs/cpp/launch-json-reference">documentation</a>  for more information. Instead of creating <code class="file docutils literal notranslate"><span class="pre">launch.json</span></code> manually it can be created from template: <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="menuselection">Debug: Select and Start Debugging ‣ Add configuration.. ‣ C,C++: (gdb) Launch</span>.</p>
+<p>To setup gdb pretty printers for Qt types on Linux, download the scripts from <a class="reference external" href="https://github.com/KDE/kdevelop/tree/master/plugins/gdb/printers">Kdevelop</a>. In the <code class="file docutils literal notranslate"><span class="pre">~/.gdbinit</span></code> file add the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;/path/to/folder/with/pretty_printer_scripts&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">qt</span> <span class="kn">import</span> <span class="n">register_qt_printers</span>
+<span class="n">register_qt_printers</span> <span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">end</span>
+<span class="nb">set</span> <span class="nb">print</span> <span class="n">pretty</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="clion">
+<h2>CLion<a class="headerlink" href="#clion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.jetbrains.com/clion/">CLion</a> is a C and C++ IDE from the popular software development tool maker - JetBrains.</p>
+<div class="section" id="id6">
+<h3>Pros and Cons<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Medium amount of plugins, many first-party plugins made by JetBrains for their IntelliJ based IDE family</p></li>
+<li><p>There is no free version</p></li>
+<li><p>Takes some time to analyze the files after opening a project. Switching between .cpp and corresponding .h file may for the first time may take a few seconds.</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>Project setup<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Go to <span class="menuselection">File ‣ Open</span> and select the folder in which you cloned Cutter</p></li>
+<li><p>Go to <span class="menuselection">File ‣ Settings ‣ Build, Execution, Deployment ‣ CMake</span>. In the <span class="guilabel">CMake Options</span> field enter <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RADARE2=ON</span></code></p></li>
+<li><p>Open <code class="file docutils literal notranslate"><span class="pre">cutter/src/CMakeLists.txt</span></code> using the project file list on the left side of the screen</p></li>
+<li><p>A yellow bar with a message <span class="guilabel">CMake project is not loaded</span> should appear, click <span class="guilabel">Load CMake project</span></p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>Changing CMake configuration<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Go to <span class="menuselection">File ‣ Settings ‣ Build,Execution,Deployment ‣ CMake</span>. CMake options are specified the same way as on command-line <code class="docutils literal notranslate"><span class="pre">-DOPTION_NAME=VALUE</span></code>.</p>
+</div>
+<div class="section" id="id9">
+<h3>Building, Running, Debugging<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Follow the <a class="reference external" href="https://www.jetbrains.com/help/clion/qt-tutorial.html#debug-renderers">Clion documentation</a> for how to configure Qt type debugger renderers. If you are using the MSVC toolchain
+it can use <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code>. In rest of the cases you can use <code class="docutils literal notranslate"><span class="pre">.gdbinit</span></code> or <code class="docutils literal notranslate"><span class="pre">..ldbinit</span></code> based approach similar to one described for <a class="reference internal" href="#vscode-debug-setup"><span class="std std-ref">VSCode setup</span></a></p>
+</div>
+<div class="section" id="id10">
+<h3>Editing Qt .ui files<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Default CLion behavior for opening .ui files is <a class="reference external" href="https://youtrack.jetbrains.com/issue/CPP-17197">somewhat buggy</a>. Double-clicking the file does nothing, but it can be opened by dragging it to the text editor side.
+This can be somewhat improved by changing <a class="reference external" href="https://www.jetbrains.com/help/clion/creating-and-registering-file-types.html">file association</a>. Open <span class="menuselection">File ‣ Settings ‣ Editor ‣ File Types</span> and change type association of *.ui files from <span class="guilabel">Qt UI Designer Form</span> to either “XML” or <span class="guilabel">Files Opened in Associated Applications</span>.
+The first one will open it within CLion as an XML file and the second will use the operating system configuration.</p>
+</div>
+</div>
+<div class="section" id="visual-studio">
+<h2>Visual Studio<a class="headerlink" href="#visual-studio" title="Permalink to this headline">¶</a></h2>
+<p>Visual Studio Community edition is available for free and can be used for contributing to open source projects.</p>
+<p>It is recommended to use the latest Visual Studio version 2019 because it has the best CMake integration.
+Older VS versions can be used but CMake integration isn’t as good. With those, it might be better to generate Visual Studio
+project from CMake project using the command-line or <strong class="command">cmake-gui</strong> and opening the generated Visual Studio project instead of opening the
+CMake project directly.</p>
+<p>Visual Studio supports many different languages and use-cases. Full installation takes a lot of space. To keep the size minimal during installation
+select only component called “Desktop development with C++”. Don’t worry too much about missing something.
+Additional components can be later added or removed through the VS installer which also serves as an updater and package manager for Visual Studio components.</p>
+<div class="section" id="id11">
+<h3>Pros and Cons<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>good debugger</p></li>
+<li><p>medium amount of plugins</p></li>
+<li><p>completely closed source</p></li>
+<li><p>Windows only</p></li>
+</ul>
+</div>
+<div class="section" id="id12">
+<h3>Project setup<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Open folder in which you cloned Cutter source using Visual Studio</p></li>
+<li><p>Open CMake settings configurator using either <span class="menuselection">Project ‣ CMake Settings</span> or by clicking <span class="guilabel">Open the CMake Settings Editor</span> in the overview page.</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> option</p></li>
+<li><p>If you are using vcpkg, Visual Studio should detect it automatically. The list of CMake options in the configurator should have some referring to vcpkg. If they are not there, specify the path to vcpkg toolchain file in the <span class="guilabel">CMake toolchain file</span> field.</p></li>
+<li><p>If you are not using vcpkg, configure the path to Qt as mentioned in <a class="reference internal" href="../../building.html#building-on-windows"><span class="std std-ref">windows CMake instructions</span></a>. You can specify the CMake flag in <span class="guilabel">CMake command arguments:</span> field.</p></li>
+<li><p>To Ensure that VS debugger can display Qt types in a readable way, it is recommended to install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019">Qt Visual Studio Tools</a> plugin. It will create a <code class="file docutils literal notranslate"><span class="pre">Documents/Visual</span> <span class="pre">Studio</span> <span class="pre">2019/Visualizers/qt5.natvis</span></code> file. Once <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code> has been created you can uninstall the plugin.</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>Changing CMake configuration<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>Open <span class="menuselection">Project ‣ CMake Settings</span>. CMake options can be modified either in graphical table editor, as a command-line flag or by switching to the JSON view.</p>
+</div>
+<div class="section" id="editing-qt-ui-files-and-qt-integration">
+<h3>Editing Qt .ui files and Qt integration<a class="headerlink" href="#editing-qt-ui-files-and-qt-integration" title="Permalink to this headline">¶</a></h3>
+<p>By default Visual Studio will open <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files as XML text documents. You can configure to open it using Qt Designer by right-clicking and selecting <span class="guilabel">Open With…</span>.</p>
+<p>There is a  Qt plugin for Visual Studio from Qt. It isn’t very useful for Cutter development since it is aimed more at helping with Qt integration into Visual Studio projects.
+It doesn’t do much for CMake based projects. The biggest benefit is that it automatically installs <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code> file for more readable displaying of Qt types in the debugger.</p>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code.html">Developer documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development-guidelines.html">Cutter Development Guidelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Development environment setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-advice">General advice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qt-creator">Qt Creator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vs-code">VS Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clion">CLion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visual-studio">Visual Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Skip if build is triggered by pull request
+if [ $TRAVIS_PULL_REQUEST == "true" ]; then
+  echo "This is PR, exiting."
+  exit 0
+fi
+
+# Set debug mode
+set -x
+
+# Build with Jekyll into "_site"
+bundle exec jekyll build
+
+# Rename gh-pages jekyll configuration
+mv _site/serve_config.yml _site/_config.yml
+
+# Debug output
+ls _site
+git status
+git checkout .
+for file in * ; do
+	if ! [ "$file" = "_site" ] && ! [ "$file" = "docs" ] ; then
+		rm -fr "$file"
+	fi
+done
+mv _site/* ./
+
+# Cleanup
+rm -fr _site
+rm -fr .bundle .sass-cache Gemfile.lock
+
+# Configure git
+git remote add upload https://${GITHUB_TOKEN}@github.com/radareorg/cutter.re
+git config user.email "itaycohen23@gmail.com"
+git config user.name "ITAYC0HEN"
+
+# Trick to push every to gh-pages without doing a checkout
+git branch -a
+git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+git symbolic-ref HEAD refs/heads/gh-pages
+git reset
+
+# Push
+git add --all
+git commit -a -m "Travis site generation #$TRAVIS_BUILD_NUMBER"
+git branch -a
+git push --force upload gh-pages

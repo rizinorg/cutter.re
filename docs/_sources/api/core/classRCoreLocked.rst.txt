@@ -1,0 +1,4 @@
+RCoreLocked
+===========
+
+.. doxygenclass:: RCoreLocked

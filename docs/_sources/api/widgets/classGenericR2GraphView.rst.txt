@@ -1,0 +1,4 @@
+GenericR2GraphView
+==================
+
+.. doxygenclass:: GenericR2GraphView

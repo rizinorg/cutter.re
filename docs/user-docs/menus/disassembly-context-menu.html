@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disassembly Context Menu &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Debug Context Menu" href="disassembly-context-menu/debug-context-menu.html" />
+    <link rel="prev" title="Decompiler Context Menu" href="decompiler-context-menu.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="disassembly-context-menu/debug-context-menu.html" title="Debug Context Menu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="decompiler-context-menu.html" title="Decompiler Context Menu"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../user-docs.html" >User Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../menus.html" accesskey="U">Menus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Disassembly Context Menu</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="disassembly-context-menu">
+<h1>Disassembly Context Menu<a class="headerlink" href="#disassembly-context-menu" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/debug-context-menu.html">Debug Context Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/manage-breakpoints-context-menu.html">Manage Breakpoints Context Menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/patching.html">Patching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/set-as-code-data-string.html">Set as CodeDataString</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/set-current-bits.html">Set Current Bits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disassembly-context-menu/set-immediate-base.html">Set Immediate Base</a></li>
+</ul>
+</div>
+<p>The Disassembly context menu contains actions that operate with selected instruction in disassembly and graph widgets.</p>
+<div class="section" id="copy">
+<h2>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Copy the selected text.</p>
+<p><strong>Steps:</strong>  Right-click on a selected text and choose <code class="docutils literal notranslate"><span class="pre">Copy</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd></p>
+</div>
+<div class="section" id="copy-address">
+<h2>Copy Address<a class="headerlink" href="#copy-address" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Copy the address of the location under the cursor.</p>
+<p><strong>Steps:</strong>  Right-click on a location and choose <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">address</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd></p>
+</div>
+<div class="section" id="show-address-in-another-widget">
+<h2>Show address in another widget<a class="headerlink" href="#show-address-in-another-widget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show the selected address or item in another opened widget, or open a new one.</p>
+<p><strong>Steps:</strong>  Right-click on an address or an item in instruction and choose the <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">in</span></code> sub-menu</p>
+</div>
+<div class="section" id="add-comment">
+<h2>Add Comment<a class="headerlink" href="#add-comment" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Add a comment in the current location.</p>
+<p><strong>Steps:</strong> Right-click an address and choose <cite>Add Comment</cite>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">;</kbd></p>
+</div>
+<div class="section" id="add-flag">
+<h2>Add Flag<a class="headerlink" href="#add-flag" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Add a flag to the selected item or location by bookmarking and giving it a name.</p>
+<p><strong>Steps:</strong> Right-click an address or item and choose <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Flag</span></code>. This will open the Flag dialog in which you can name the location.</p>
+</div>
+<div class="section" id="rename">
+<h2>Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Rename the flag in the current location.</p>
+<p><strong>Steps:</strong> Right-click an address or item and choose <code class="docutils literal notranslate"><span class="pre">Rename</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">N</kbd></p>
+</div>
+<div class="section" id="edit-function">
+<h2>Edit Function<a class="headerlink" href="#edit-function" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Open the Function edit dialog in which you can define the name of the function, its start address, stack size, calling convention, and more.</p>
+<p><strong>Steps:</strong>  Right-click on a location inside a function and choose <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">function</span></code>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">P</kbd></p>
+</div>
+<div class="section" id="rename-flag-function-variable">
+<h2>Rename Flag/Function/Variable<a class="headerlink" href="#rename-flag-function-variable" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Rename a specific flag, variable or function under the cursor.</p>
+<p><strong>Steps:</strong>  -&gt; Rename Flag/Fcn/Var Used Here</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">N</kbd></p>
+</div>
+<div class="section" id="re-type-local-variables">
+<h2>Re-type Local Variables<a class="headerlink" href="#re-type-local-variables" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Rename or set the types of the function’s variables and arguments.</p>
+<p><strong>Steps:</strong> Right-click anywhere inside a function and then choose <code class="docutils literal notranslate"><span class="pre">Re-type</span> <span class="pre">Local</span> <span class="pre">Variables</span></code>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Y</kbd></p>
+</div>
+<div class="section" id="delete-a-comment">
+<h2>Delete a Comment<a class="headerlink" href="#delete-a-comment" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Delete the comment at the current address. This option only available for addresses with user-defined comments.</p>
+<p><strong>Steps:</strong> Right-click on an instruction with a user-defined comment and choose <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">comment</span></code></p>
+</div>
+<div class="section" id="delete-a-flag">
+<h2>Delete a Flag<a class="headerlink" href="#delete-a-flag" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong>   Delete the flag at the current location.</p>
+<p><strong>Steps:</strong> Right-click on a location with a flag and choose <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">flag</span></code>.</p>
+</div>
+<div class="section" id="undefine-a-function">
+<h2>Undefine a Function<a class="headerlink" href="#undefine-a-function" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Undefine the current function. This will remove the function and its associated meta-data. You can always re-define the function, but every change that was made to the previously defined function (e.g variable renaming) would not be restored.</p>
+<p><strong>Steps:</strong>  Right-Click on the name of the function and choose <code class="docutils literal notranslate"><span class="pre">Undefine</span> <span class="pre">function</span></code>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">U</kbd></p>
+</div>
+<div class="section" id="define-a-function">
+<h2>Define a function<a class="headerlink" href="#define-a-function" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Define a function starting from the current location. Cutter will automatically guess the size of the function. This can later be changed using the function editor.</p>
+<p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Define</span> <span class="pre">function</span> <span class="pre">here</span></code>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">P</kbd></p>
+</div>
+<div class="section" id="set-structure-offset">
+<h2>Set Structure Offset<a class="headerlink" href="#set-structure-offset" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Present the current value is an offset in a structure.</p>
+<p><strong>Steps:</strong>  -&gt; Structure offset</p>
+</div>
+<div class="section" id="link-a-type-to-address">
+<h2>Link a Type to Address<a class="headerlink" href="#link-a-type-to-address" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> You can link type, enum or structure to a specific address. Types, structures and enums can be defined in the Types widget.</p>
+<p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Link</span> <span class="pre">Type</span> <span class="pre">to</span> <span class="pre">Address</span></code>.</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">L</kbd></p>
+</div>
+<div class="section" id="show-cross-references">
+<h2>Show Cross References<a class="headerlink" href="#show-cross-references" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show X-Refs from and to the specific location. This option will open Cutter’s X-Refs dialog in which you will be able to see a list of X-Refs from and to the selected location, in addition to a preview of each cross-reference to quickly inspect the different usages.</p>
+<p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">X-Refs</span></code></p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">X</kbd></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command-line.html">Command-line Options</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../menus.html">Menus</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="breakpoints-widget-context-menu.html">Breakpoints Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debug-buttons-toolbar.html">Debug Buttons Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="decompiler-context-menu.html">Decompiler Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="decompiler-context-menu.html#debug-context-menu">Debug Context Menu</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Disassembly Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph-widget-context-menu.html">Graph Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hexdump-widget-context-menu.html">Hexdump Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="information-windows-menu.html">Information Windows Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu-bar.html">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="registers-widget-context-menu.html">Registers Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set-table-layout.html">Set Table Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stack-widget-context-menu.html">Stack Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="syncing-a-widget.html">Syncing a Widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

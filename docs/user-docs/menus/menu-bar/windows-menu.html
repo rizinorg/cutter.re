@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows Menu &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Plugins Menu" href="plugins-menu.html" />
+    <link rel="prev" title="View Menu" href="view-menu.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plugins-menu.html" title="Plugins Menu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="view-menu.html" title="View Menu"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../user-docs.html" >User Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../menus.html" >Menus</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../menu-bar.html" accesskey="U">Menu Bar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Windows Menu</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="windows-menu">
+<h1>Windows Menu<a class="headerlink" href="#windows-menu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="show-dashboard">
+<h2>Show Dashboard<a class="headerlink" href="#show-dashboard" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><strong>Description:</strong> Show the Dashboard panel. Cutter’s dashboard contains basic information about the binary. On the Dashboard you can find:</dt><dd><ul class="simple">
+<li><p>File name</p></li>
+<li><p>Binary format (PE, ELF64, …)</p></li>
+<li><p>Bits (16, 32, 64, …)</p></li>
+<li><p>Binary Architecture (x86, ARM, …)</p></li>
+<li><p>Access mode (Read, Write, Execute)</p></li>
+<li><p>Size</p></li>
+<li><p>Binary type</p></li>
+<li><p>Written Language</p></li>
+<li><p>Compiler detection</p></li>
+<li><p>Stack Canaries</p></li>
+<li><p>NX bit</p></li>
+<li><p>Position independent code</p></li>
+<li><p>Checksums (MD5, SHA1, …)</p></li>
+<li><p>Entropy</p></li>
+<li><p>and more…</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Steps:</strong> Windows -&gt; Dashboard</p>
+</div>
+<div class="section" id="show-functions">
+<h2>Show Functions<a class="headerlink" href="#show-functions" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Display the list of functions identified by Cutter. The list also contains information about each function such as name, address, size, and more. Some functions like Main, Entrypoint and external functions are highlighted with specific colors to make them easier to spot.</p>
+<p><strong>Steps:</strong> Windows -&gt; Functions</p>
+</div>
+<div class="section" id="show-decompiler">
+<h2>Show Decompiler<a class="headerlink" href="#show-decompiler" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter releases are shipped with two decompilers by default - [r2ghidra](<a class="reference external" href="https://github.com/radareorg/r2ghidra-dec">https://github.com/radareorg/r2ghidra-dec</a>) and [r2dec](<a class="reference external" href="https://github.com/radareorg/r2dec-js">https://github.com/radareorg/r2dec-js</a>). The Decompiler view will display the decompilation of the current function. The widget is interactive and support address-syncing, renaming, re-typing and more. Cutter can be extended with more decompilers.</p>
+<p><strong>Steps:</strong> Windows -&gt; Decompiler</p>
+</div>
+<div class="section" id="show-graph">
+<h2>Show Graph<a class="headerlink" href="#show-graph" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> One of the main views of Cutter allows you to navigate inside functions in a graph mode. This view displays the flow of a functions where each node on the graph represents a basic block in the function. The edges coming-to and getting-out of the blocks represents the control flow.</p>
+<p><strong>Steps:</strong> Windows -&gt; Graph Overview</p>
+</div>
+<div class="section" id="show-search">
+<h2>Show Search<a class="headerlink" href="#show-search" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show the Search panel in which you can search data, strings, hex and more in the opened binary.</p>
+<p><strong>Steps:</strong> Windows -&gt; Search</p>
+</div>
+<div class="section" id="show-strings">
+<h2>Show Strings<a class="headerlink" href="#show-strings" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show the Strings view that will display all the printable strings in the program. A combo-box will allow the user to choose whether they want to view strings from the entire binary or from specific segments and sections.</p>
+<p><strong>Steps:</strong> Windows -&gt; Strings</p>
+</div>
+<div class="section" id="show-types">
+<h2>Show Types<a class="headerlink" href="#show-types" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show the Types widget in which you can define, load, export and manage data types such as Structures and Enums,</p>
+<p><strong>Steps:</strong> Windows -&gt; Types</p>
+</div>
+<div class="section" id="add-a-new-instance-of-the-decompiler-widget">
+<h2>Add a new instance of the Decompiler Widget<a class="headerlink" href="#add-a-new-instance-of-the-decompiler-widget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Create a new instance of the Decompiler widget in order to view multiple decompiled functions using multiple supported decompilers.</p>
+<p><strong>Steps:</strong> Windows -&gt; Add Decompiler</p>
+</div>
+<div class="section" id="add-a-new-instance-of-the-disassembly-widget">
+<h2>Add a new instance of the Disassembly Widget<a class="headerlink" href="#add-a-new-instance-of-the-disassembly-widget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Create a new instance of the Disassembly widget in order to view one or multiple locations at the same time.</p>
+<p><strong>Steps:</strong> Windows -&gt; Add Disassembly</p>
+</div>
+<div class="section" id="add-a-new-instance-of-the-graph-widget">
+<h2>Add a new instance of the Graph Widget<a class="headerlink" href="#add-a-new-instance-of-the-graph-widget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Create a new instance of the Graph widget in order to view one or multiple locations at the same time.</p>
+<p><strong>Steps:</strong> Windows -&gt; Add Graph</p>
+</div>
+<div class="section" id="add-a-new-instance-of-the-hexdump-widget">
+<h2>Add a new instance of the Hexdump Widget<a class="headerlink" href="#add-a-new-instance-of-the-hexdump-widget" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Create a new instance of the Hexdump widget in order to view one or multiple locations at the same time.</p>
+<p><strong>Steps:</strong> Windows -&gt; Add Hexdump</p>
+</div>
+<div class="section" id="show-comments">
+<h2>Show Comments<a class="headerlink" href="#show-comments" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Show the comments widgets in order to view the automatic and user-defined comments in this session.</p>
+<p><strong>Steps:</strong> Windows -&gt; Comments</p>
+</div>
+<div class="section" id="show-console">
+<h2>Show Console<a class="headerlink" href="#show-console" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Open the integrated radare2 console. This will allow you to execute radare2 commands straight from Cutter.</p>
+<p><strong>Steps:</strong> Windows -&gt; Console</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../../index.html">Cutter documentation</a>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command-line.html">Command-line Options</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../menus.html">Menus</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../breakpoints-widget-context-menu.html">Breakpoints Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../debug-buttons-toolbar.html">Debug Buttons Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../decompiler-context-menu.html">Decompiler Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../decompiler-context-menu.html#debug-context-menu">Debug Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../disassembly-context-menu.html">Disassembly Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph-widget-context-menu.html">Graph Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hexdump-widget-context-menu.html">Hexdump Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../information-windows-menu.html">Information Windows Menu</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../menu-bar.html">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../registers-widget-context-menu.html">Registers Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../set-table-layout.html">Set Table Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../stack-widget-context-menu.html">Stack Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../syncing-a-widget.html">Syncing a Widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

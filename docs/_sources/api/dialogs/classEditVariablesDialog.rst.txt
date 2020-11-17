@@ -1,0 +1,4 @@
+EditVariablesDialog
+===================
+
+.. doxygenclass:: EditVariablesDialog

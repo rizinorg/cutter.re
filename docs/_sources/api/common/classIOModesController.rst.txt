@@ -1,0 +1,4 @@
+IOModesController
+=================
+
+.. doxygenclass:: IOModesController

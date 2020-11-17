@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MainWindow &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RCoreLocked" href="classRCoreLocked.html" />
+    <link rel="prev" title="CutterCore" href="classCutterCore.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classRCoreLocked.html" title="RCoreLocked"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classCutterCore.html" title="CutterCore"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../corelist.html" accesskey="U">Core</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MainWindow</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mainwindow">
+<h1>MainWindow<a class="headerlink" href="#mainwindow" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv410MainWindow">
+<span id="_CPPv310MainWindow"></span><span id="_CPPv210MainWindow"></span><span id="MainWindow"></span><span class="target" id="classMainWindow"></span><em class="property">class </em><code class="sig-name descname">MainWindow</code> : <em class="property">public</em> QMainWindow<a class="headerlink" href="#_CPPv410MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp enum">
+<dt id="_CPPv4N10MainWindow8MenuTypeE">
+<span id="_CPPv3N10MainWindow8MenuTypeE"></span><span id="_CPPv2N10MainWindow8MenuTypeE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226"></span><em class="property">enum </em><code class="sig-name descname">MenuType</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType4FileE">
+<span id="_CPPv3N10MainWindow8MenuType4FileE"></span><span id="_CPPv2N10MainWindow8MenuType4FileE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226a0b27918290ff5323bea1e3b78a9cf04e"></span><em class="property">enumerator </em><code class="sig-name descname">File</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType4FileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType4EditE">
+<span id="_CPPv3N10MainWindow8MenuType4EditE"></span><span id="_CPPv2N10MainWindow8MenuType4EditE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226a7dce122004969d56ae2e0245cb754d35"></span><em class="property">enumerator </em><code class="sig-name descname">Edit</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType4EditE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType4ViewE">
+<span id="_CPPv3N10MainWindow8MenuType4ViewE"></span><span id="_CPPv2N10MainWindow8MenuType4ViewE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226a4351cfebe4b61d8aa5efa1d020710005"></span><em class="property">enumerator </em><code class="sig-name descname">View</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType4ViewE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType7WindowsE">
+<span id="_CPPv3N10MainWindow8MenuType7WindowsE"></span><span id="_CPPv2N10MainWindow8MenuType7WindowsE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226aaea23489ce3aa9b6406ebb28e0cda430"></span><em class="property">enumerator </em><code class="sig-name descname">Windows</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType7WindowsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType5DebugE">
+<span id="_CPPv3N10MainWindow8MenuType5DebugE"></span><span id="_CPPv2N10MainWindow8MenuType5DebugE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226aa603905470e2a5b8c13e96b579ef0dba"></span><em class="property">enumerator </em><code class="sig-name descname">Debug</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType5DebugE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType4HelpE">
+<span id="_CPPv3N10MainWindow8MenuType4HelpE"></span><span id="_CPPv2N10MainWindow8MenuType4HelpE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226a6a26f548831e6a8c26bfbbd9f6ec61e0"></span><em class="property">enumerator </em><code class="sig-name descname">Help</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType4HelpE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow8MenuType7PluginsE">
+<span id="_CPPv3N10MainWindow8MenuType7PluginsE"></span><span id="_CPPv2N10MainWindow8MenuType7PluginsE"></span><span class="target" id="classMainWindow_1abc414782df064e87c774a12784c9d226abb38096ab39160dc20d44f3ea6b44507"></span><em class="property">enumerator </em><code class="sig-name descname">Plugins</code><a class="headerlink" href="#_CPPv4N10MainWindow8MenuType7PluginsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N10MainWindow15AddressTypeHintE">
+<span id="_CPPv3N10MainWindow15AddressTypeHintE"></span><span id="_CPPv2N10MainWindow15AddressTypeHintE"></span><span class="target" id="classMainWindow_1adc4f9da1a7264048c50ff68c3386269d"></span><em class="property">enum </em><code class="sig-name descname">AddressTypeHint</code><a class="headerlink" href="#_CPPv4N10MainWindow15AddressTypeHintE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow15AddressTypeHint8FunctionE">
+<span id="_CPPv3N10MainWindow15AddressTypeHint8FunctionE"></span><span id="_CPPv2N10MainWindow15AddressTypeHint8FunctionE"></span><span class="target" id="classMainWindow_1adc4f9da1a7264048c50ff68c3386269da86408593c34af77fdd90df932f8b5261"></span><em class="property">enumerator </em><code class="sig-name descname">Function</code><a class="headerlink" href="#_CPPv4N10MainWindow15AddressTypeHint8FunctionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow15AddressTypeHint4DataE">
+<span id="_CPPv3N10MainWindow15AddressTypeHint4DataE"></span><span id="_CPPv2N10MainWindow15AddressTypeHint4DataE"></span><span class="target" id="classMainWindow_1adc4f9da1a7264048c50ff68c3386269daf6068daa29dbb05a7ead1e3b5a48bbee"></span><em class="property">enumerator </em><code class="sig-name descname">Data</code><a class="headerlink" href="#_CPPv4N10MainWindow15AddressTypeHint4DataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow15AddressTypeHint7UnknownE">
+<span id="_CPPv3N10MainWindow15AddressTypeHint7UnknownE"></span><span id="_CPPv2N10MainWindow15AddressTypeHint7UnknownE"></span><span class="target" id="classMainWindow_1adc4f9da1a7264048c50ff68c3386269da88183b946cc5f0e8c96b2e66e1c74a7e"></span><em class="property">enumerator </em><code class="sig-name descname">Unknown</code><a class="headerlink" href="#_CPPv4N10MainWindow15AddressTypeHint7UnknownE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4N10MainWindow15ContextMenuTypeE">
+<span id="_CPPv3N10MainWindow15ContextMenuTypeE"></span><span id="_CPPv2N10MainWindow15ContextMenuTypeE"></span><span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9"></span><em class="property">enum </em><code class="sig-name descname">ContextMenuType</code><a class="headerlink" href="#_CPPv4N10MainWindow15ContextMenuTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow15ContextMenuType11DisassemblyE">
+<span id="_CPPv3N10MainWindow15ContextMenuType11DisassemblyE"></span><span id="_CPPv2N10MainWindow15ContextMenuType11DisassemblyE"></span><span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9a342ba4d490d032b03c101873e0ef611f"></span><em class="property">enumerator </em><code class="sig-name descname">Disassembly</code><a class="headerlink" href="#_CPPv4N10MainWindow15ContextMenuType11DisassemblyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4N10MainWindow15ContextMenuType11AddressableE">
+<span id="_CPPv3N10MainWindow15ContextMenuType11AddressableE"></span><span id="_CPPv2N10MainWindow15ContextMenuType11AddressableE"></span><span class="target" id="classMainWindow_1a7bc544c90e412bb807d65ae0c0d0d0e9a97f96169d37359de49c980ebecb8cc8f"></span><em class="property">enumerator </em><code class="sig-name descname">Addressable</code><a class="headerlink" href="#_CPPv4N10MainWindow15ContextMenuType11AddressableE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow10MainWindowEP7QWidget">
+<span id="_CPPv3N10MainWindow10MainWindowEP7QWidget"></span><span id="_CPPv2N10MainWindow10MainWindowEP7QWidget"></span><span id="MainWindow::MainWindow__QWidgetP"></span><span class="target" id="classMainWindow_1a996c5a2b6f77944776856f08ec30858d"></span><code class="sig-name descname">MainWindow</code><span class="sig-paren">(</span>QWidget *<em>parent</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow10MainWindowEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindowD0Ev">
+<span id="_CPPv3N10MainWindowD0Ev"></span><span id="_CPPv2N10MainWindowD0Ev"></span><span id="MainWindow::~MainWindow"></span><span class="target" id="classMainWindow_1a1f7d2c56410fc1bfa135bb907d43313f"></span><code class="sig-name descname">~MainWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N10MainWindowD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow11openNewFileER14InitialOptionsb">
+<span id="_CPPv3N10MainWindow11openNewFileER14InitialOptionsb"></span><span id="_CPPv2N10MainWindow11openNewFileER14InitialOptionsb"></span><span id="MainWindow::openNewFile__InitialOptionsR.b"></span><span class="target" id="classMainWindow_1af290f88cd7044cd7a62c6c8a460e394d"></span>void <code class="sig-name descname">openNewFile</code><span class="sig-paren">(</span><a class="reference internal" href="../common/structInitialOptions.html#_CPPv414InitialOptions" title="InitialOptions">InitialOptions</a> &amp;<em>options</em>, bool <em>skipOptionsDialog</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11openNewFileER14InitialOptionsb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow20displayNewFileDialogEv">
+<span id="_CPPv3N10MainWindow20displayNewFileDialogEv"></span><span id="_CPPv2N10MainWindow20displayNewFileDialogEv"></span><span id="MainWindow::displayNewFileDialog"></span><span class="target" id="classMainWindow_1a28a0601121c525b344aadd9bad858b9c"></span>void <code class="sig-name descname">displayNewFileDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow20displayNewFileDialogEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow20displayWelcomeDialogEv">
+<span id="_CPPv3N10MainWindow20displayWelcomeDialogEv"></span><span id="_CPPv2N10MainWindow20displayWelcomeDialogEv"></span><span id="MainWindow::displayWelcomeDialog"></span><span class="target" id="classMainWindow_1a688a85e21c8829098b439952dd55611a"></span>void <code class="sig-name descname">displayWelcomeDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow20displayWelcomeDialogEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>displays the WelocmeDialog </p>
+<p>Upon first execution of Cutter, the <a class="reference internal" href="../dialogs/classWelcomeDialog.html#classWelcomeDialog"><span class="std std-ref">WelcomeDialog</span></a> would be showed to the user. The Welcome dialog would be showed after a reset of Cutter’s preferences by the user. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow18closeNewFileDialogEv">
+<span id="_CPPv3N10MainWindow18closeNewFileDialogEv"></span><span id="_CPPv2N10MainWindow18closeNewFileDialogEv"></span><span id="MainWindow::closeNewFileDialog"></span><span class="target" id="classMainWindow_1ab964d7ceb70ba0d1a9837eb1adfeff79"></span>void <code class="sig-name descname">closeNewFileDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow18closeNewFileDialogEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow11openProjectERK7QString">
+<span id="_CPPv3N10MainWindow11openProjectERK7QString"></span><span id="_CPPv2N10MainWindow11openProjectERK7QString"></span><span id="MainWindow::openProject__QStringCR"></span><span class="target" id="classMainWindow_1a791035494f3e86859e87d1694e9c2b07"></span>void <code class="sig-name descname">openProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11openProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow11saveProjectEb">
+<span id="_CPPv3N10MainWindow11saveProjectEb"></span><span id="_CPPv2N10MainWindow11saveProjectEb"></span><span id="MainWindow::saveProject__b"></span><span class="target" id="classMainWindow_1a1931da4d57653ebe1a20c0d9328c277c"></span>bool <code class="sig-name descname">saveProject</code><span class="sig-paren">(</span>bool <em>quit</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11saveProjectEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>if quit is true, false if the application should not close </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code>: whether to show destructive button in dialog </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow13saveProjectAsEb">
+<span id="_CPPv3N10MainWindow13saveProjectAsEb"></span><span id="_CPPv2N10MainWindow13saveProjectAsEb"></span><span id="MainWindow::saveProjectAs__b"></span><span class="target" id="classMainWindow_1ad68b24d1bfa099bd18636d8b0cbe5029"></span>bool <code class="sig-name descname">saveProjectAs</code><span class="sig-paren">(</span>bool <em>quit</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow13saveProjectAsEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>false if the application should not close </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code>: whether to show destructive button in dialog </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow10closeEventEP11QCloseEvent">
+<span id="_CPPv3N10MainWindow10closeEventEP11QCloseEvent"></span><span id="_CPPv2N10MainWindow10closeEventEP11QCloseEvent"></span><span id="MainWindow::closeEvent__QCloseEventP"></span><span class="target" id="classMainWindow_1a05fb9d72c044aa3bb7d187b994704e2f"></span>void <code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span>QCloseEvent *<em>event</em><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N10MainWindow10closeEventEP11QCloseEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow10paintEventEP11QPaintEvent">
+<span id="_CPPv3N10MainWindow10paintEventEP11QPaintEvent"></span><span id="_CPPv2N10MainWindow10paintEventEP11QPaintEvent"></span><span id="MainWindow::paintEvent__QPaintEventP"></span><span class="target" id="classMainWindow_1a015219518d1d99a94981820468a53b20"></span>void <code class="sig-name descname">paintEvent</code><span class="sig-paren">(</span>QPaintEvent *<em>event</em><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N10MainWindow10paintEventEP11QPaintEvent" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow12readSettingsEv">
+<span id="_CPPv3N10MainWindow12readSettingsEv"></span><span id="_CPPv2N10MainWindow12readSettingsEv"></span><span id="MainWindow::readSettings"></span><span class="target" id="classMainWindow_1a06476208b8466211f3bb0fcae787052b"></span>void <code class="sig-name descname">readSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12readSettingsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow12saveSettingsEv">
+<span id="_CPPv3N10MainWindow12saveSettingsEv"></span><span id="_CPPv2N10MainWindow12saveSettingsEv"></span><span id="MainWindow::saveSettings"></span><span class="target" id="classMainWindow_1abb30531afee763d0586ee6323fd332e2"></span>void <code class="sig-name descname">saveSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12saveSettingsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow11setFilenameERK7QString">
+<span id="_CPPv3N10MainWindow11setFilenameERK7QString"></span><span id="_CPPv2N10MainWindow11setFilenameERK7QString"></span><span id="MainWindow::setFilename__QStringCR"></span><span class="target" id="classMainWindow_1ae964ba4fa310161520738b98294b29c8"></span>void <code class="sig-name descname">setFilename</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11setFilenameERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow14refreshOmniBarERK11QStringList">
+<span id="_CPPv3N10MainWindow14refreshOmniBarERK11QStringList"></span><span id="_CPPv2N10MainWindow14refreshOmniBarERK11QStringList"></span><span id="MainWindow::refreshOmniBar__QStringListCR"></span><span class="target" id="classMainWindow_1a00e016fe2846bef8418733d0fe1455cf"></span>void <code class="sig-name descname">refreshOmniBar</code><span class="sig-paren">(</span><em class="property">const</em> QStringList &amp;<em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow14refreshOmniBarERK11QStringList" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow9addWidgetEP16CutterDockWidget">
+<span id="_CPPv3N10MainWindow9addWidgetEP16CutterDockWidget"></span><span id="_CPPv2N10MainWindow9addWidgetEP16CutterDockWidget"></span><span id="MainWindow::addWidget__CutterDockWidgetP"></span><span class="target" id="classMainWindow_1a9d67b5d11e3756cd4e803b6c9a95c1cf"></span>void <code class="sig-name descname">addWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow9addWidgetEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow19addMemoryDockWidgetEP16MemoryDockWidget">
+<span id="_CPPv3N10MainWindow19addMemoryDockWidgetEP16MemoryDockWidget"></span><span id="_CPPv2N10MainWindow19addMemoryDockWidgetEP16MemoryDockWidget"></span><span id="MainWindow::addMemoryDockWidget__MemoryDockWidgetP"></span><span class="target" id="classMainWindow_1a6b335bed7ef65dfbc2b70259ba8faa8d"></span>void <code class="sig-name descname">addMemoryDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classMemoryDockWidget.html#_CPPv416MemoryDockWidget" title="MemoryDockWidget">MemoryDockWidget</a> *<em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow19addMemoryDockWidgetEP16MemoryDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow12removeWidgetEP16CutterDockWidget">
+<span id="_CPPv3N10MainWindow12removeWidgetEP16CutterDockWidget"></span><span id="_CPPv2N10MainWindow12removeWidgetEP16CutterDockWidget"></span><span id="MainWindow::removeWidget__CutterDockWidgetP"></span><span class="target" id="classMainWindow_1a63801d9ed92163c74174232438568825"></span>void <code class="sig-name descname">removeWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12removeWidgetEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow14addExtraWidgetEP16CutterDockWidget">
+<span id="_CPPv3N10MainWindow14addExtraWidgetEP16CutterDockWidget"></span><span id="_CPPv2N10MainWindow14addExtraWidgetEP16CutterDockWidget"></span><span id="MainWindow::addExtraWidget__CutterDockWidgetP"></span><span class="target" id="classMainWindow_1afb23407436025bc3d5bef1c27071b454"></span>void <code class="sig-name descname">addExtraWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>extraDock</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow14addExtraWidgetEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow18addNewMemoryWidgetE16MemoryWidgetType3RVAb">
+<span id="_CPPv3N10MainWindow18addNewMemoryWidgetE16MemoryWidgetType3RVAb"></span><span id="_CPPv2N10MainWindow18addNewMemoryWidgetE16MemoryWidgetType3RVAb"></span><span id="MainWindow::addNewMemoryWidget__MemoryWidgetType.RVA.b"></span><span class="target" id="classMainWindow_1a0963c5d799068d1c2e71663de19667b5"></span><a class="reference internal" href="../widgets/classMemoryDockWidget.html#_CPPv416MemoryDockWidget" title="MemoryDockWidget">MemoryDockWidget</a> *<code class="sig-name descname">addNewMemoryWidget</code><span class="sig-paren">(</span>MemoryWidgetType <em>type</em>, RVA <em>address</em>, bool <em>synchronized</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow18addNewMemoryWidgetE16MemoryWidgetType3RVAb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow19addPluginDockWidgetEP16CutterDockWidgetP7QAction">
+<span id="_CPPv3N10MainWindow19addPluginDockWidgetEP16CutterDockWidgetP7QAction"></span><span id="_CPPv2N10MainWindow19addPluginDockWidgetEP16CutterDockWidgetP7QAction"></span><span id="MainWindow::addPluginDockWidget__CutterDockWidgetP.QActionP"></span><span class="target" id="classMainWindow_1ab95bd642253c721f3be832afa84cefc7"></span>void <code class="sig-name descname">addPluginDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>dockWidget</em>, QAction*<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow19addPluginDockWidgetEP16CutterDockWidgetP7QAction" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow19addPluginDockWidgetEP16CutterDockWidget">
+<span id="_CPPv3N10MainWindow19addPluginDockWidgetEP16CutterDockWidget"></span><span id="_CPPv2N10MainWindow19addPluginDockWidgetEP16CutterDockWidget"></span><span id="MainWindow::addPluginDockWidget__CutterDockWidgetP"></span><span class="target" id="classMainWindow_1a51c4bedbed4703e6cbcef7c7580f604e"></span>void <code class="sig-name descname">addPluginDockWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a> *<em>dockWidget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow19addPluginDockWidgetEP16CutterDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow13getMenuByTypeE8MenuType">
+<span id="_CPPv3N10MainWindow13getMenuByTypeE8MenuType"></span><span id="_CPPv2N10MainWindow13getMenuByTypeE8MenuType"></span><span id="MainWindow::getMenuByType__MenuType"></span><span class="target" id="classMainWindow_1a91ca7db10380854a613acbfcddca2807"></span>QMenu *<code class="sig-name descname">getMenuByType</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N10MainWindow8MenuTypeE" title="MainWindow::MenuType">MenuType</a> <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow13getMenuByTypeE8MenuType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Getter for <a class="reference internal" href="#classMainWindow"><span class="std std-ref">MainWindow</span></a>’s different menus. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The requested menu or nullptr if “type” is invalid </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: The type which represents the desired menu </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow17addMenuFileActionEP7QAction">
+<span id="_CPPv3N10MainWindow17addMenuFileActionEP7QAction"></span><span id="_CPPv2N10MainWindow17addMenuFileActionEP7QAction"></span><span id="MainWindow::addMenuFileAction__QActionP"></span><span class="target" id="classMainWindow_1a71ea3139924ea1a90d4df42dcf1bc2ea"></span>void <code class="sig-name descname">addMenuFileAction</code><span class="sig-paren">(</span>QAction *<em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow17addMenuFileActionEP7QAction" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10MainWindow11getFilenameEv">
+<span id="_CPPv3NK10MainWindow11getFilenameEv"></span><span id="_CPPv2NK10MainWindow11getFilenameEv"></span><span id="MainWindow::getFilenameC"></span><span class="target" id="classMainWindow_1a0274d98baa451a4e601f344aadb1ecfd"></span>QString <code class="sig-name descname">getFilename</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10MainWindow11getFilenameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow17messageBoxWarningE7QString7QString">
+<span id="_CPPv3N10MainWindow17messageBoxWarningE7QString7QString"></span><span id="_CPPv2N10MainWindow17messageBoxWarningE7QString7QString"></span><span id="MainWindow::messageBoxWarning__QString.QString"></span><span class="target" id="classMainWindow_1a3d61d704112f02274d59372416f3354f"></span>void <code class="sig-name descname">messageBoxWarning</code><span class="sig-paren">(</span>QString <em>title</em>, QString <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow17messageBoxWarningE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Show a warning message box. </p>
+<p>This API can either be used in Cutter internals, or by Python plugins. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK10MainWindow19getUniqueObjectNameERK7QString">
+<span id="_CPPv3NK10MainWindow19getUniqueObjectNameERK7QString"></span><span id="_CPPv2NK10MainWindow19getUniqueObjectNameERK7QString"></span><span id="MainWindow::getUniqueObjectName__QStringCRC"></span><span class="target" id="classMainWindow_1a293a7d70a875b913813d47015012683e"></span>QString <code class="sig-name descname">getUniqueObjectName</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>widgetType</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK10MainWindow19getUniqueObjectNameERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow16showMemoryWidgetEv">
+<span id="_CPPv3N10MainWindow16showMemoryWidgetEv"></span><span id="_CPPv2N10MainWindow16showMemoryWidgetEv"></span><span id="MainWindow::showMemoryWidget"></span><span class="target" id="classMainWindow_1aaa241508c209c0204a0ba2b5b65be653"></span>void <code class="sig-name descname">showMemoryWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16showMemoryWidgetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow16showMemoryWidgetE16MemoryWidgetType">
+<span id="_CPPv3N10MainWindow16showMemoryWidgetE16MemoryWidgetType"></span><span id="_CPPv2N10MainWindow16showMemoryWidgetE16MemoryWidgetType"></span><span id="MainWindow::showMemoryWidget__MemoryWidgetType"></span><span class="target" id="classMainWindow_1ad2925304400159293211576c543e4a46"></span>void <code class="sig-name descname">showMemoryWidget</code><span class="sig-paren">(</span>MemoryWidgetType <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16showMemoryWidgetE16MemoryWidgetType" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow16createShowInMenuEP7QWidget3RVA15AddressTypeHint">
+<span id="_CPPv3N10MainWindow16createShowInMenuEP7QWidget3RVA15AddressTypeHint"></span><span id="_CPPv2N10MainWindow16createShowInMenuEP7QWidget3RVA15AddressTypeHint"></span><span id="MainWindow::createShowInMenu__QWidgetP.RVA.AddressTypeHint"></span><span class="target" id="classMainWindow_1a476d6f9c7a710e0f08d31ef02f243e76"></span>QMenu *<code class="sig-name descname">createShowInMenu</code><span class="sig-paren">(</span>QWidget *<em>parent</em>, RVA <em>address</em>, <a class="reference internal" href="#_CPPv4N10MainWindow15AddressTypeHintE" title="MainWindow::AddressTypeHint">AddressTypeHint</a> <em>addressType</em> = <a class="reference internal" href="#_CPPv4N10MainWindow15AddressTypeHintE" title="MainWindow::AddressTypeHint">AddressTypeHint</a>::<a class="reference internal" href="#_CPPv4N10MainWindow15AddressTypeHint7UnknownE" title="MainWindow::AddressTypeHint::Unknown">Unknown</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16createShowInMenuEP7QWidget3RVA15AddressTypeHint" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow22setCurrentMemoryWidgetEP16MemoryDockWidget">
+<span id="_CPPv3N10MainWindow22setCurrentMemoryWidgetEP16MemoryDockWidget"></span><span id="_CPPv2N10MainWindow22setCurrentMemoryWidgetEP16MemoryDockWidget"></span><span id="MainWindow::setCurrentMemoryWidget__MemoryDockWidgetP"></span><span class="target" id="classMainWindow_1a728f3fdd04611c1faadb45b792d91b14"></span>void <code class="sig-name descname">setCurrentMemoryWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../widgets/classMemoryDockWidget.html#_CPPv416MemoryDockWidget" title="MemoryDockWidget">MemoryDockWidget</a> *<em>memoryWidget</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow22setCurrentMemoryWidgetEP16MemoryDockWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow19getLastMemoryWidgetEv">
+<span id="_CPPv3N10MainWindow19getLastMemoryWidgetEv"></span><span id="_CPPv2N10MainWindow19getLastMemoryWidgetEv"></span><span id="MainWindow::getLastMemoryWidget"></span><span class="target" id="classMainWindow_1a587b2002d98bde0f2c83e62f105fa4c1"></span><a class="reference internal" href="../widgets/classMemoryDockWidget.html#_CPPv416MemoryDockWidget" title="MemoryDockWidget">MemoryDockWidget</a> *<code class="sig-name descname">getLastMemoryWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow19getLastMemoryWidgetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow24getContextMenuExtensionsE15ContextMenuType">
+<span id="_CPPv3N10MainWindow24getContextMenuExtensionsE15ContextMenuType"></span><span id="_CPPv2N10MainWindow24getContextMenuExtensionsE15ContextMenuType"></span><span id="MainWindow::getContextMenuExtensions__ContextMenuType"></span><span class="target" id="classMainWindow_1a3499e4170ca105fce83b5600d568a99c"></span>QMenu *<code class="sig-name descname">getContextMenuExtensions</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N10MainWindow15ContextMenuTypeE" title="MainWindow::ContextMenuType">ContextMenuType</a> <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow24getContextMenuExtensionsE15ContextMenuType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fetches the pointer to a context menu extension of type. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>plugins submenu of the selected context menu </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: - the type of the context menu </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp var">
+<dt id="_CPPv4N10MainWindow10responsiveE">
+<span id="_CPPv3N10MainWindow10responsiveE"></span><span id="_CPPv2N10MainWindow10responsiveE"></span><span id="MainWindow::responsive__b"></span><span class="target" id="classMainWindow_1a7e0821663988a792aa35e327249e5e9b"></span>bool <code class="sig-name descname">responsive</code><a class="headerlink" href="#_CPPv4N10MainWindow10responsiveE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Slots</p>
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow12finalizeOpenEv">
+<span id="_CPPv3N10MainWindow12finalizeOpenEv"></span><span id="_CPPv2N10MainWindow12finalizeOpenEv"></span><span id="MainWindow::finalizeOpen"></span><span class="target" id="classMainWindow_1a871af5af14266ed0500c54aabf73c032"></span>void <code class="sig-name descname">finalizeOpen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12finalizeOpenEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow10refreshAllEv">
+<span id="_CPPv3N10MainWindow10refreshAllEv"></span><span id="_CPPv2N10MainWindow10refreshAllEv"></span><span id="MainWindow::refreshAll"></span><span class="target" id="classMainWindow_1a421b77138ce21b75c35efdf27f257fd2"></span>void <code class="sig-name descname">refreshAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow10refreshAllEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow29seekToFunctionLastInstructionEv">
+<span id="_CPPv3N10MainWindow29seekToFunctionLastInstructionEv"></span><span id="_CPPv2N10MainWindow29seekToFunctionLastInstructionEv"></span><span id="MainWindow::seekToFunctionLastInstruction"></span><span class="target" id="classMainWindow_1a42384a90c2ae70322dd1b57a3736ce1d"></span>void <code class="sig-name descname">seekToFunctionLastInstruction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow29seekToFunctionLastInstructionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow19seekToFunctionStartEv">
+<span id="_CPPv3N10MainWindow19seekToFunctionStartEv"></span><span id="_CPPv2N10MainWindow19seekToFunctionStartEv"></span><span id="MainWindow::seekToFunctionStart"></span><span class="target" id="classMainWindow_1affe56b3f9cc5c42cd8dcb3979103abe8"></span>void <code class="sig-name descname">seekToFunctionStart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow19seekToFunctionStartEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow12setPanelLockEv">
+<span id="_CPPv3N10MainWindow12setPanelLockEv"></span><span id="_CPPv2N10MainWindow12setPanelLockEv"></span><span id="MainWindow::setPanelLock"></span><span class="target" id="classMainWindow_1aacfd5e94539698742f98c7770ff9a08e"></span>void <code class="sig-name descname">setPanelLock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12setPanelLockEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow14setTabLocationEv">
+<span id="_CPPv3N10MainWindow14setTabLocationEv"></span><span id="_CPPv2N10MainWindow14setTabLocationEv"></span><span id="MainWindow::setTabLocation"></span><span class="target" id="classMainWindow_1a755e82a6feddb3581f241945561abb23"></span>void <code class="sig-name descname">setTabLocation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow14setTabLocationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow23on_actionLock_triggeredEv">
+<span id="_CPPv3N10MainWindow23on_actionLock_triggeredEv"></span><span id="_CPPv2N10MainWindow23on_actionLock_triggeredEv"></span><span id="MainWindow::on_actionLock_triggered"></span><span class="target" id="classMainWindow_1ad0edbdc71afbd33cef677699cb764dfc"></span>void <code class="sig-name descname">on_actionLock_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow23on_actionLock_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow29on_actionLockUnlock_triggeredEv">
+<span id="_CPPv3N10MainWindow29on_actionLockUnlock_triggeredEv"></span><span id="_CPPv2N10MainWindow29on_actionLockUnlock_triggeredEv"></span><span id="MainWindow::on_actionLockUnlock_triggered"></span><span class="target" id="classMainWindow_1a90c4539b28fdd50a2b53208eae9f4c91"></span>void <code class="sig-name descname">on_actionLockUnlock_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow29on_actionLockUnlock_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow23on_actionTabs_triggeredEv">
+<span id="_CPPv3N10MainWindow23on_actionTabs_triggeredEv"></span><span id="_CPPv2N10MainWindow23on_actionTabs_triggeredEv"></span><span id="MainWindow::on_actionTabs_triggered"></span><span class="target" id="classMainWindow_1a0392312ca7bd22d1dbfe2f6fe4a68f52"></span>void <code class="sig-name descname">on_actionTabs_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow23on_actionTabs_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow26on_actionAnalyze_triggeredEv">
+<span id="_CPPv3N10MainWindow26on_actionAnalyze_triggeredEv"></span><span id="_CPPv2N10MainWindow26on_actionAnalyze_triggeredEv"></span><span id="MainWindow::on_actionAnalyze_triggered"></span><span class="target" id="classMainWindow_1aed98a875d79a4dc1d1661adfe3af3314"></span>void <code class="sig-name descname">on_actionAnalyze_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow26on_actionAnalyze_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A signal that creates an <a class="reference internal" href="../common/classAsyncTask.html#classAsyncTask"><span class="std std-ref">AsyncTask</span></a> to re-analyze the current file. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow16lockUnlock_DocksEb">
+<span id="_CPPv3N10MainWindow16lockUnlock_DocksEb"></span><span id="_CPPv2N10MainWindow16lockUnlock_DocksEb"></span><span id="MainWindow::lockUnlock_Docks__b"></span><span class="target" id="classMainWindow_1a58613fdd65ecf71e995fe26e74435382"></span>void <code class="sig-name descname">lockUnlock_Docks</code><span class="sig-paren">(</span>bool <em>what</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16lockUnlock_DocksEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow29on_actionRun_Script_triggeredEv">
+<span id="_CPPv3N10MainWindow29on_actionRun_Script_triggeredEv"></span><span id="_CPPv2N10MainWindow29on_actionRun_Script_triggeredEv"></span><span id="MainWindow::on_actionRun_Script_triggered"></span><span class="target" id="classMainWindow_1ae95972c14cda0fe7ed355812919f037c"></span>void <code class="sig-name descname">on_actionRun_Script_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow29on_actionRun_Script_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow16toggleResponsiveEb">
+<span id="_CPPv3N10MainWindow16toggleResponsiveEb"></span><span id="_CPPv2N10MainWindow16toggleResponsiveEb"></span><span id="MainWindow::toggleResponsive__b"></span><span class="target" id="classMainWindow_1a44d7db6c7fb597e0d48f99ec1de910d7"></span>void <code class="sig-name descname">toggleResponsive</code><span class="sig-paren">(</span>bool <em>maybe</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16toggleResponsiveEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow17openNewFileFailedEv">
+<span id="_CPPv3N10MainWindow17openNewFileFailedEv"></span><span id="_CPPv2N10MainWindow17openNewFileFailedEv"></span><span id="MainWindow::openNewFileFailed"></span><span class="target" id="classMainWindow_1a64432b467dfc6ccc0d7070868a978f71"></span>void <code class="sig-name descname">openNewFileFailed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow17openNewFileFailedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow14toggleOverviewEbP11GraphWidget">
+<span id="_CPPv3N10MainWindow14toggleOverviewEbP11GraphWidget"></span><span id="_CPPv2N10MainWindow14toggleOverviewEbP11GraphWidget"></span><span id="MainWindow::toggleOverview__b.GraphWidgetP"></span><span class="target" id="classMainWindow_1a319ab99dd5bc9149c08ade084224fd9d"></span>void <code class="sig-name descname">toggleOverview</code><span class="sig-paren">(</span>bool <em>visibility</em>, <a class="reference internal" href="../widgets/classGraphWidget.html#_CPPv411GraphWidget" title="GraphWidget">GraphWidget</a> *<em>targetGraph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow14toggleOverviewEbP11GraphWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../corelist.html">Core</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classCutterCore.html">CutterCore</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MainWindow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRCoreLocked.html">RCoreLocked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalBaseClassDescription.html">AnalBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalMethodDescription.html">AnalMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalVTableDescription.html">AnalVTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassBaseClassDescription.html">BinClassBaseClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassDescription.html">BinClassDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassFieldDescription.html">BinClassFieldDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBinClassMethodDescription.html">BinClassMethodDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockDescription.html">BlockDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBlockStatistics.html">BlockStatistics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBreakpointDescription.html">BreakpointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentDescription.html">CommentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLine.html">DisassemblyLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structEntrypointDescription.html">EntrypointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structExportDescription.html">ExportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagDescription.html">FlagDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFlagspaceDescription.html">FlagspaceDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFunctionDescription.html">FunctionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHeaderDescription.html">HeaderDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structImportDescription.html">ImportDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMemoryMapDescription.html">MemoryMapDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structProcessDescription.html">ProcessDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRAsmPluginDescription.html">RAsmPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRBinPluginDescription.html">RBinPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRCorePluginDescription.html">RCorePluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRIOPluginDescription.html">RIOPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRefDescription.html">RefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRegisterRefValueDescription.html">RegisterRefValueDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRelocDescription.html">RelocDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structResourcesDescription.html">ResourcesDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSearchDescription.html">SearchDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSectionDescription.html">SectionDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSegmentDescription.html">SegmentDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structStringDescription.html">StringDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSymbolDescription.html">SymbolDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structTypeDescription.html">TypeDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVTableDescription.html">VTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVariableDescription.html">VariableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structXrefDescription.html">XrefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structZignatureDescription.html">ZignatureDescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

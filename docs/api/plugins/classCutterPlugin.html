@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CutterPlugin &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PluginManager" href="classPluginManager.html" />
+    <link rel="prev" title="Plugins" href="../pluginslist.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classPluginManager.html" title="PluginManager"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pluginslist.html" title="Plugins"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../pluginslist.html" accesskey="U">Plugins</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CutterPlugin</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cutterplugin">
+<h1>CutterPlugin<a class="headerlink" href="#cutterplugin" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv412CutterPlugin">
+<span id="_CPPv312CutterPlugin"></span><span id="_CPPv212CutterPlugin"></span><span id="CutterPlugin"></span><span class="target" id="classCutterPlugin"></span><em class="property">class </em><code class="sig-name descname">CutterPlugin</code><a class="headerlink" href="#_CPPv412CutterPlugin" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N12CutterPluginD0Ev">
+<span id="_CPPv3N12CutterPluginD0Ev"></span><span id="_CPPv2N12CutterPluginD0Ev"></span><span id="CutterPlugin::~CutterPlugin"></span><span class="target" id="classCutterPlugin_1a1e195aea29707c9348bb55d3755220eb"></span><code class="sig-name descname">~CutterPlugin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N12CutterPluginD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N12CutterPlugin11setupPluginEv">
+<span id="_CPPv3N12CutterPlugin11setupPluginEv"></span><span id="_CPPv2N12CutterPlugin11setupPluginEv"></span><span id="CutterPlugin::setupPlugin"></span><span class="target" id="classCutterPlugin_1aa21414adc56777aedd17d9f4113ba902"></span>void <code class="sig-name descname">setupPlugin</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv4N12CutterPlugin11setupPluginEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize the Plugin. </p>
+<p>called right when the plugin is loaded initially </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N12CutterPlugin14setupInterfaceEP10MainWindow">
+<span id="_CPPv3N12CutterPlugin14setupInterfaceEP10MainWindow"></span><span id="_CPPv2N12CutterPlugin14setupInterfaceEP10MainWindow"></span><span id="CutterPlugin::setupInterface__MainWindowP"></span><span class="target" id="classCutterPlugin_1af5726ea689c41bf493c7e192c45f9c62"></span>void <code class="sig-name descname">setupInterface</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>main</em><span class="sig-paren">)</span> = 0<a class="headerlink" href="#_CPPv4N12CutterPlugin14setupInterfaceEP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Setup any UI components for the Plugin. </p>
+<p><p>called after Cutter’s core UI has been initialized </p>
+<dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code>: the <a class="reference internal" href="../core/classMainWindow.html#classMainWindow"><span class="std std-ref">MainWindow</span></a> to add any UI to</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N12CutterPlugin19registerDecompilersEv">
+<span id="_CPPv3N12CutterPlugin19registerDecompilersEv"></span><span id="_CPPv2N12CutterPlugin19registerDecompilersEv"></span><span id="CutterPlugin::registerDecompilers"></span><span class="target" id="classCutterPlugin_1a22121063c90e8e648d8d6a3a5a7c36ba"></span>void <code class="sig-name descname">registerDecompilers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12CutterPlugin19registerDecompilersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Register any decompiler implemented by the Plugin. </p>
+<p>called during initialization of Cutter, after <a class="reference internal" href="#classCutterPlugin_1aa21414adc56777aedd17d9f4113ba902"><span class="std std-ref">setupPlugin()</span></a> </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N12CutterPlugin9terminateEv">
+<span id="_CPPv3N12CutterPlugin9terminateEv"></span><span id="_CPPv2N12CutterPlugin9terminateEv"></span><span id="CutterPlugin::terminate"></span><span class="target" id="classCutterPlugin_1a110e057327295124607318d6114a2bd1"></span>void <code class="sig-name descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12CutterPlugin9terminateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shutdown the Plugin. </p>
+<p>called just before the Plugin is deleted. This method is usually only relevant for Python Plugins where there is no direct equivalent of the destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK12CutterPlugin7getNameEv">
+<span id="_CPPv3NK12CutterPlugin7getNameEv"></span><span id="_CPPv2NK12CutterPlugin7getNameEv"></span><span id="CutterPlugin::getNameC"></span><span class="target" id="classCutterPlugin_1a18de3de345631736ecd9b89bc1cd1e94"></span>QString <code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK12CutterPlugin7getNameEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK12CutterPlugin9getAuthorEv">
+<span id="_CPPv3NK12CutterPlugin9getAuthorEv"></span><span id="_CPPv2NK12CutterPlugin9getAuthorEv"></span><span id="CutterPlugin::getAuthorC"></span><span class="target" id="classCutterPlugin_1a4a4976e3faee361a9da3440949f36d14"></span>QString <code class="sig-name descname">getAuthor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK12CutterPlugin9getAuthorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK12CutterPlugin14getDescriptionEv">
+<span id="_CPPv3NK12CutterPlugin14getDescriptionEv"></span><span id="_CPPv2NK12CutterPlugin14getDescriptionEv"></span><span id="CutterPlugin::getDescriptionC"></span><span class="target" id="classCutterPlugin_1ace42942e4802e78d6ec55c76cec3864f"></span>QString <code class="sig-name descname">getDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK12CutterPlugin14getDescriptionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK12CutterPlugin10getVersionEv">
+<span id="_CPPv3NK12CutterPlugin10getVersionEv"></span><span id="_CPPv2NK12CutterPlugin10getVersionEv"></span><span id="CutterPlugin::getVersionC"></span><span class="target" id="classCutterPlugin_1a326ce6ed3f71d772eef0e740170eae30"></span>QString <code class="sig-name descname">getVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em> = 0<a class="headerlink" href="#_CPPv4NK12CutterPlugin10getVersionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pluginslist.html">Plugins</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CutterPlugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPluginManager.html">PluginManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPluginManager_1_1PluginTerminator.html">PluginManager::PluginTerminator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

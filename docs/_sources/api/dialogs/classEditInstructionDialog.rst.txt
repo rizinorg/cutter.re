@@ -1,0 +1,4 @@
+EditInstructionDialog
+=====================
+
+.. doxygenclass:: EditInstructionDialog

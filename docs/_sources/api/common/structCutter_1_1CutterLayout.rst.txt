@@ -1,0 +1,4 @@
+Cutter::CutterLayout
+====================
+
+.. doxygenstruct:: Cutter::CutterLayout

@@ -1,0 +1,4 @@
+ColorPickerHelpers::AlphaChannelBar
+===================================
+
+.. doxygenclass:: ColorPickerHelpers::AlphaChannelBar

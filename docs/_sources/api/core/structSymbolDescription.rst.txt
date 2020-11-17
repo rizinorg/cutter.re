@@ -1,0 +1,4 @@
+SymbolDescription
+=================
+
+.. doxygenstruct:: SymbolDescription

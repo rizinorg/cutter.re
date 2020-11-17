@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugins &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/cutter.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api.html" />
+    <link rel="prev" title="Building" href="building.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="api.html" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="building.html" title="Building"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plugins</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="plugins">
+<h1>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h1>
+<p>Cutter supports writing plugins in both C++ and Python.
+If you are unsure of which language to choose, starting with Python is strongly suggested as
+it provides a faster and simpler workflow.</p>
+<p>If you plan to implement support for a new file format or architecture, Cutter plugins are not the correct approach.
+Instead, you will want to implement a radare2 plugin, which is documented <a class="reference external" href="https://radare.gitbooks.io/radare2book/plugins/intro.html">here</a>.</p>
+<div class="section" id="loading-and-overview">
+<h2>Loading and Overview<a class="headerlink" href="#loading-and-overview" title="Permalink to this headline">¶</a></h2>
+<p>Plugins are loaded from an OS-dependent user-level directory.
+To get the location of this directory and a list of currently loaded plugins, navigate to Edit -&gt; Preferences -&gt; Plugins.</p>
+<img alt="_images/preferences-plugins.png" src="_images/preferences-plugins.png" />
+<p>The plugins directory contains two subdirectories, <code class="docutils literal notranslate"><span class="pre">native</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code> for C++ and Python plugins respectively,
+which will be created automatically by Cutter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The support for Python plugins is only available if Cutter was built with the options <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code>
+and <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> enabled.
+This is the case for all official builds from GitHub Releases starting with version 1.8.0.</p>
+</div>
+</div>
+<div class="section" id="creating-plugins">
+<h2>Creating Plugins<a class="headerlink" href="#creating-plugins" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing/plugins/getting-started.html">Getting Started with Python Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing/plugins/getting-started.html#creating-a-widget">Creating a Widget</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing/plugins/getting-started.html#fetching-data">Fetching Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing/plugins/getting-started.html#reacting-to-events">Reacting to Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing/plugins/getting-started.html#full-code">Full Code</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="index.html">Cutter documentation</a>
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-and-overview">Loading and Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-plugins">Creating Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing/plugins/getting-started.html">Getting Started with Python Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

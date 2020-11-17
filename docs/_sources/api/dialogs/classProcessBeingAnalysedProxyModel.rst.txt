@@ -1,0 +1,4 @@
+ProcessBeingAnalysedProxyModel
+==============================
+
+.. doxygenclass:: ProcessBeingAnalysedProxyModel

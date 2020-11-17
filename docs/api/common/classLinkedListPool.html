@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedListPool &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="LinkedListPool::List" href="classLinkedListPool_1_1List.html" />
+    <link rel="prev" title="LazySegmentTreeBase" href="classLazySegmentTreeBase.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classLinkedListPool_1_1List.html" title="LinkedListPool::List"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classLazySegmentTreeBase.html" title="LazySegmentTreeBase"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinkedListPool</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="linkedlistpool">
+<h1>LinkedListPool<a class="headerlink" href="#linkedlistpool" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv4I0E14LinkedListPool">
+<span id="_CPPv3I0E14LinkedListPool"></span><span id="_CPPv2I0E14LinkedListPool"></span>template&lt;class <code class="sig-name descname">T</code>&gt;<br /><span class="target" id="classLinkedListPool"></span><em class="property">class </em><code class="sig-name descname">LinkedListPool</code><a class="headerlink" href="#_CPPv4I0E14LinkedListPool" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pool of singly linked lists. </p>
+<p>Should not be used as general purpose container. Use only for algorithms that require linked lists ability to split and concatenate them. All the data is owned by <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>.</p>
+<p>In contrast to std::list and std::forward_list doesn’t allocate each node separately. <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a> can reserve all the memory for multiple lists during construction. Uses std::vector as backing container. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool14LinkedListPoolE6size_t">
+<span id="_CPPv3N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="_CPPv2N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="LinkedListPool::LinkedListPool__s"></span><span class="target" id="classLinkedListPool_1a74ea7039c3e5831f39e426de3a0bb63d"></span><code class="sig-name descname">LinkedListPool</code><span class="sig-paren">(</span>size_t <em>initialCapacity</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool14LinkedListPoolE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a linked list pool with capacity for <em>initialCapacity</em> list items. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initialCapacity</span></code>: number of elements to preallocate. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool8makeListERK1T">
+<span id="_CPPv3N14LinkedListPool8makeListERK1T"></span><span id="_CPPv2N14LinkedListPool8makeListERK1T"></span><span id="LinkedListPool::makeList__TCR"></span><span class="target" id="classLinkedListPool_1a19f2b730f498dc04cb6ce407ee709012"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> <code class="sig-name descname">makeList</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4I0E14LinkedListPool" title="LinkedListPool::T">T</a> &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool8makeListERK1T" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a list containing single item. </p>
+<p>Does not invalidate any iterators, but may cause item relocation when initialCapacity is exceeded. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> containing single value <em>value</em> . </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: value of element that will be inserted in the created list </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool9splitTailERK4ListRK12ListIterator">
+<span id="_CPPv3N14LinkedListPool9splitTailERK4ListRK12ListIterator"></span><span id="_CPPv2N14LinkedListPool9splitTailERK4ListRK12ListIterator"></span><span id="LinkedListPool::splitTail__ListCR.ListIteratorCR"></span><span class="target" id="classLinkedListPool_1a66788ea9eb8418b11ee34e079a9b34ab"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> <code class="sig-name descname">splitTail</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>list</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> &amp;<em>head</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool9splitTailERK4ListRK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Split list and return second half. </p>
+<p>After performing the operation, list passed as argument and return list point to the same items. Modifying them will affect both lists.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Returns suffix of <em>list</em>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: The list that needs to be split. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code>: Iterator to the first item in new list. Needs to be within <em>list</em> . </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool9splitHeadERK4ListRK12ListIterator">
+<span id="_CPPv3N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="_CPPv2N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="LinkedListPool::splitHead__ListCR.ListIteratorCR"></span><span class="target" id="classLinkedListPool_1abb92cf76bde99e9d54b60740e2eb8edb"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> <code class="sig-name descname">splitHead</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>list</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> &amp;<em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool9splitHeadERK4ListRK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Split list and return first half. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Returns prefix of <em>list</em>. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: The list that needs to be split. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code>: Iterator to the first item that should not be included in returned list. Needs to be within <em>list</em> . </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool4headERK4List">
+<span id="_CPPv3N14LinkedListPool4headERK4List"></span><span id="_CPPv2N14LinkedListPool4headERK4List"></span><span id="LinkedListPool::head__ListCR"></span><span class="target" id="classLinkedListPool_1a8d73a4d2214eeefc486f15e5da4c1fd5"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> <code class="sig-name descname">head</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool4headERK4List" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create list iterator from list. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Iterator pointing to the first item in the list. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool3endERK4List">
+<span id="_CPPv3N14LinkedListPool3endERK4List"></span><span id="_CPPv2N14LinkedListPool3endERK4List"></span><span id="LinkedListPool::end__ListCR"></span><span class="target" id="classLinkedListPool_1a436229ce30eb07eb02fa5369ba71cbe2"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> <code class="sig-name descname">end</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>list</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool3endERK4List" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool6appendERK4ListRK4List">
+<span id="_CPPv3N14LinkedListPool6appendERK4ListRK4List"></span><span id="_CPPv2N14LinkedListPool6appendERK4ListRK4List"></span><span id="LinkedListPool::append__ListCR.ListCR"></span><span class="target" id="classLinkedListPool_1a4e2e3891527e73be0e5b11258312828b"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> <code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>head</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List">List</a> &amp;<em>tail</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool6appendERK4ListRK4List" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt id="_CPPv4N14LinkedListPool4ListE">
+<span id="_CPPv3N14LinkedListPool4ListE"></span><span id="_CPPv2N14LinkedListPool4ListE"></span><span id="LinkedListPool::List"></span><span class="target" id="classLinkedListPool_1_1List"></span><em class="property">class </em><code class="sig-name descname">List</code><a class="headerlink" href="#_CPPv4N14LinkedListPool4ListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Single list within <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>. </p>
+<p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> only refers to chain of elements. Copying it doesn’t copy any element. Item data is owned by <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>.</p>
+<p>Use <a class="reference internal" href="#classLinkedListPool_1a19f2b730f498dc04cb6ce407ee709012"><span class="std std-ref">LinkedListPool::makeList</span></a> to create non-empty list. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool4List4ListEv">
+<span id="_CPPv3N14LinkedListPool4List4ListEv"></span><span id="_CPPv2N14LinkedListPool4List4ListEv"></span><span id="LinkedListPool::List::List"></span><span class="target" id="classLinkedListPool_1_1List_1a9f7266e6fb26433e1986ec778c17c2d6"></span><code class="sig-name descname">List</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N14LinkedListPool4List4ListEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create an empty list. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK14LinkedListPool4List7isEmptyEv">
+<span id="_CPPv3NK14LinkedListPool4List7isEmptyEv"></span><span id="_CPPv2NK14LinkedListPool4List7isEmptyEv"></span><span id="LinkedListPool::List::isEmptyC"></span><span class="target" id="classLinkedListPool_1_1List_1a690b383b01beb0852ab9076beb252a7a"></span>bool <code class="sig-name descname">isEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14LinkedListPool4List7isEmptyEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N14LinkedListPool12ListIteratorE">
+<span id="_CPPv3N14LinkedListPool12ListIteratorE"></span><span id="_CPPv2N14LinkedListPool12ListIteratorE"></span><span id="LinkedListPool::ListIterator"></span><span class="target" id="classLinkedListPool_1_1ListIterator"></span><em class="property">class </em><code class="sig-name descname">ListIterator</code><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> iterator. </p>
+<p>Iterators don’t get invalidated by adding items to list, but the items may be relocated. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N14LinkedListPool12ListIterator17iterator_categoryE">
+<span id="_CPPv3N14LinkedListPool12ListIterator17iterator_categoryE"></span><span id="_CPPv2N14LinkedListPool12ListIterator17iterator_categoryE"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a7a00ea897a27dcb1f6fdf414f54ad28d"></span><em class="property">using </em><code class="sig-name descname">iterator_category</code> = std::forward_iterator_tag<a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator17iterator_categoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N14LinkedListPool12ListIterator10value_typeE">
+<span id="_CPPv3N14LinkedListPool12ListIterator10value_typeE"></span><span id="_CPPv2N14LinkedListPool12ListIterator10value_typeE"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a079599dcc7251fe3e3683d4106ae8b94"></span><em class="property">using </em><code class="sig-name descname">value_type</code> = <a class="reference internal" href="#_CPPv4I0E14LinkedListPool" title="LinkedListPool::T">T</a><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator10value_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N14LinkedListPool12ListIterator15difference_typeE">
+<span id="_CPPv3N14LinkedListPool12ListIterator15difference_typeE"></span><span id="_CPPv2N14LinkedListPool12ListIterator15difference_typeE"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a9d5c7fc89cc4b211c2359bdd40265f08"></span><em class="property">using </em><code class="sig-name descname">difference_type</code> = size_t<a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator15difference_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N14LinkedListPool12ListIterator7pointerE">
+<span id="_CPPv3N14LinkedListPool12ListIterator7pointerE"></span><span id="_CPPv2N14LinkedListPool12ListIterator7pointerE"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a6bc36c2ac665c7d13312e5f323fc8ef9"></span><em class="property">using </em><code class="sig-name descname">pointer</code> = <a class="reference internal" href="#_CPPv4I0E14LinkedListPool" title="LinkedListPool::T">T</a>*<a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator7pointerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv4N14LinkedListPool12ListIterator9referenceE">
+<span id="_CPPv3N14LinkedListPool12ListIterator9referenceE"></span><span id="_CPPv2N14LinkedListPool12ListIterator9referenceE"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a2137b9b655598e520f731fad0bb005f8"></span><em class="property">using </em><code class="sig-name descname">reference</code> = <a class="reference internal" href="#_CPPv4I0E14LinkedListPool" title="LinkedListPool::T">T</a>&amp;<a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator9referenceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool12ListIterator12ListIteratorEv">
+<span id="_CPPv3N14LinkedListPool12ListIterator12ListIteratorEv"></span><span id="_CPPv2N14LinkedListPool12ListIterator12ListIteratorEv"></span><span id="LinkedListPool::ListIterator::ListIterator"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1ab178f2ec9e1751fe5e071cce74911fc2"></span><code class="sig-name descname">ListIterator</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIterator12ListIteratorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool12ListIteratormlEv">
+<span id="_CPPv3N14LinkedListPool12ListIteratormlEv"></span><span id="_CPPv2N14LinkedListPool12ListIteratormlEv"></span><span id="LinkedListPool::ListIterator::mul-operator"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a7df5bb1b22108921e002f502591b8e36"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIterator9referenceE" title="LinkedListPool::ListIterator::reference">reference</a> <code class="sig-name descname">operator*</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratormlEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool12ListIteratorptEv">
+<span id="_CPPv3N14LinkedListPool12ListIteratorptEv"></span><span id="_CPPv2N14LinkedListPool12ListIteratorptEv"></span><span id="LinkedListPool::ListIterator::pointer-operator"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a0ff82996b81aa4905ab33a0c473dc8c6"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIterator7pointerE" title="LinkedListPool::ListIterator::pointer">pointer</a> <code class="sig-name descname">operator-&gt;</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratorptEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool12ListIteratorppEv">
+<span id="_CPPv3N14LinkedListPool12ListIteratorppEv"></span><span id="_CPPv2N14LinkedListPool12ListIteratorppEv"></span><span id="LinkedListPool::ListIterator::inc-operator"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1ae2fef5e077898bd7a1a4ececa15975fc"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> &amp;<code class="sig-name descname">operator++</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratorppEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N14LinkedListPool12ListIteratorppEi">
+<span id="_CPPv3N14LinkedListPool12ListIteratorppEi"></span><span id="_CPPv2N14LinkedListPool12ListIteratorppEi"></span><span id="LinkedListPool::ListIterator::inc-operator__i"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a12462ef5fcad072f8405569534753aa2"></span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> <code class="sig-name descname">operator++</code><span class="sig-paren">(</span>int<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratorppEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK14LinkedListPool12ListIteratorneERK12ListIterator">
+<span id="_CPPv3NK14LinkedListPool12ListIteratorneERK12ListIterator"></span><span id="_CPPv2NK14LinkedListPool12ListIteratorneERK12ListIterator"></span><span id="LinkedListPool::ListIterator::neq-operator__ListIteratorCRC"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1aaf25d6935b6c9a458511210f9eea4045"></span>bool <code class="sig-name descname">operator!=</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator">ListIterator</a> &amp;<em>b</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14LinkedListPool12ListIteratorneERK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK14LinkedListPool12ListIteratorcvbEv">
+<span id="_CPPv3NK14LinkedListPool12ListIteratorcvbEv"></span><span id="_CPPv2NK14LinkedListPool12ListIteratorcvbEv"></span><span id="LinkedListPool::ListIterator::castto-b-operatorC"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a893c82b6b18ab81d5bbd38fc81f00b47"></span><code class="sig-name descname">operator bool</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK14LinkedListPool12ListIteratorcvbEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Test if iterator points to valid value. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAddressableFilterProxyModel.html">AddressableFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModel.html">AddressableItemModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModelI.html">AddressableItemModelI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDirectionalComboBox.html">DirectionalComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">LinkedListPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1List.html">LinkedListPool::List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1ListIterator.html">LinkedListPool::ListIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentTreeBase.html">SegmentTreeBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutter_1_1CutterLayout.html">Cutter::CutterLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

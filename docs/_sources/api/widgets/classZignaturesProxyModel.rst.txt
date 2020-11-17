@@ -1,0 +1,4 @@
+ZignaturesProxyModel
+====================
+
+.. doxygenclass:: ZignaturesProxyModel

@@ -1,0 +1,4 @@
+MultitypeFileSaveDialog
+=======================
+
+.. doxygenclass:: MultitypeFileSaveDialog

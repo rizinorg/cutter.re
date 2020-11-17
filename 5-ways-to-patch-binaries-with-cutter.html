@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='Free and Open Source RE Platform powered by radare2'>
+    <meta name="keywords" content="">
+    <!-- Facebook Open Graph -->	
+    <meta content="Cutter" property="og:site_name">
+    <meta property="og:locale" content="en_US" />
+    <meta content="5 Ways to patch binaries with Cutter" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="Free and Open Source RE Platform powered by radare2" property="og:description">
+    <meta content="https://cutter.re//5-ways-to-patch-binaries-with-cutter" property="og:url">	
+    <meta content="/assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png" property="og:image">
+    
+    <meta content="Cutter" property="article:section">
+    <meta content="2019-12-26T00:00:00+00:00" property="article:published_time">	
+    <!-- Twitter cards -->
+    <meta name="twitter:site"    content="@r2gui">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title"   content="5 Ways to patch binaries with Cutter">	
+    <meta name="twitter:description" content="Free and Open Source RE Platform powered by radare2">
+    <meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://cutter.re//assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png">
+    <!-- Site Title -->
+    <title> 5 Ways to patch binaries with Cutter </title>
+    <!--  Add Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link type="application/atom+xml" rel="alternate" href="https://cutter.re//index.xml" title="Cutter" />
+</head>
+   <body>
+      <main class="main-area">
+
+       
+
+<header class=" bg-color2">
+<div class="container">
+    <div class="header-nav">
+        <div class="row">
+            <div class="col-lg-2">
+             <div class="header-logo">
+    <a href="https://cutter.re/"><img src="/assets/images/cutter-small.svg " alt="Cutter"></a> 
+</div>
+            </div>
+            <div class="col-lg-10">
+              <nav class="cutter-navbar">
+    <ul class="slimmenu main-menu">
+        <li><a href="/blog" class="js-scroll-trigger"><b>Blog</b></a></li>
+        <li>
+            <a href="#">Links</a>
+            <ul>
+                <li><a href="/getting-started"><b>Getting Started</b></a></li>
+                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/docs/building.html">Build from source</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </li>
+        <li><a href="/#features" class="js-scroll-trigger">Features</a></li>
+        <li><a href="/docs/" class="js-scroll-trigger">Documentation</a></li>
+        <li><a href="/#community" class="js-scroll-trigger">Community</a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </div>
+     
+    
+    <div class="header-page-title">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="page-title text-left white-all">
+                <h1 class="big-font1 m-b-30">5 Ways to patch binaries with Cutter</h1>
+                
+                <ul class="page-post-date list-inline">
+                    <li class="list-inline-item"><img src="/assets/images/page-avatar-icon.png" alt="icon"/><a href="/authors/itay_cohen">Itay Cohen</a></li>
+                    <li class="list-inline-item"><img src="/assets/images/page-clock-icon.png" alt="icon"/>26 December 2019</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</header>
+
+       
+        <div class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="container">
+    <div class="blog-wrapper">   
+        <div class="row">
+            <div class="col-md-10 m-auto">
+            
+            <div class="blog-media m-b-30">
+                <img src="/assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png" alt="5 Ways to patch binaries with Cutter" />
+            </div>
+            
+            <div class="entry-content blog-spacing">
+             <p>I recently watched <a href="https://www.youtube.com/watch?v=LyNyf3UM9Yc">a video</a> by LiveOverflow in which he showed how different tools are used to patch binaries. By demonstrating some of the features that Radare2, Ghidra, and Binary Ninja offer for the task, the viewer can get some sense of the things they can get from using these tools.</p>
+<p>While all these tools are great, and although Radare2 was showed there (and oh boy, things went wrong), there was one tool, which is dear to my heart, that wasn’t there – <a href="https://cutter.re/">Cutter</a>. Notwithstanding that it is the youngest member of the pack, Cutter is growing up very fast and when it has to do with binary patching – it does not stay behind.</p>
+<p>“Binary Patching”, for those the term is unfamiliar, is the process of applying small changes and modifications to a binary file, usually in order to change its behavior. By modifying data or code, the user can change certain values in the program or specific instructions, and adjust the binary to their desired outcome.</p>
+
+<p>Cutter makes patching binaries a simple task - here are 5 ways to do so.</p>
+
+<p><a href="https://www.megabeets.net/5-ways-to-patch-binaries-with-cutter/" target="_blank" class="dwn-btn3 btn btn-primary"><span>Read on Megabeets’ website</span></a></p>
+<but>
+</but>
+
+            </div>
+            <div class="blog-share-tags blog-spacing">
+                <div class="blog-author-tags">
+                    <div class="list-inline">
+                        <div class="list-inline-item">Tags:</div> <a href="/tag/patching/" rel="tag">Patching</a>
+                    </div>
+                </div>
+                <div class="blog-author-share">
+                  <ul class="list-inline">
+    <li class="list-inline-item">Share</li>
+    <li class="list-inline-item">
+        <a  href="https://www.facebook.com/sharer/sharer.php?u=https://cutter.re//5-ways-to-patch-binaries-with-cutter"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="https://twitter.com/intent/tweet?text=5 Ways to patch binaries with Cutter&url=https://cutter.re//5-ways-to-patch-binaries-with-cutter"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" >
+            <i class="fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="http://pinterest.com/pin/create/button/?url=&media=https://cutter.re//assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="fab fa-pinterest-p"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
+            <div class="blog-author-admin blog-spacing">
+
+    <div class="author-avatar">
+        <a href="/authors/itay_cohen"><img class="img-fluid" src="/assets/images/blog/authors/megabeets.png" alt="Itay Cohen"/></a>
+    </div>
+    <div class="author-info">
+        <h5 class="heading-5"><a href="/authors/itay_cohen">Itay Cohen</a></h5>
+        <p>Itay Cohen (aka Megabeets) is a security researcher and a reverse engineer. He is a maintainer of Cutter and a core member of radare2.</p>
+        <ul class="social-link list-inline">
+            
+            
+            <li class="list-inline-item"><a href="https://twitter.com/megabeets_" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            
+             
+            
+            
+            <li class="list-inline-item"><a href="https://github.com/itayc0hen" target="_blank"><i class="fab fa-github"></i></a></li>
+            
+            
+            <li class="list-inline-item"><a href="https://www.megabeets.net" target="_blank"><i class="fas fa-globe"></i></a></li>
+            
+        </ul>
+    </div>
+</div>
+            <nav class="page-pagination d-flex cutter blog-spacing">
+    <ul class="pagination justify-content-between">
+    
+    <li class=" page-item cutter"><a class="page-link prev" href="/defeating-a-ransomware-with-cutter">Prev</a></li>
+    
+    
+    <li class=" page-item cutter"><a class="page-link next" href="/cutter-community-survey-2020">Next</a></li>
+    
+    </ul>
+</nav>
+            <div class="blog-spacing">
+    <div class="latest-slider owl-carousel">
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png" alt="Improving Decompiler Widget - GSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/improving-decompiler-widget-gsoc">Improving Decompiler Widget - GSoC Project</a></h6>
+                    <a href="/improving-decompiler-widget-gsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/survey-2020/survey2020.png" alt="Cutter Community Survey 2020"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/cutter-community-survey-2020">Cutter Community Survey 2020</a></h6>
+                    <a href="/cutter-community-survey-2020" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png" alt="5 Ways to patch binaries with Cutter"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/5-ways-to-patch-binaries-with-cutter">5 Ways to patch binaries with Cutter</a></h6>
+                    <a href="/5-ways-to-patch-binaries-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/ransowmare-cutter-emulation/cover.png" alt="Defeating a Ransomware using Cutter's Emulation"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/defeating-a-ransomware-with-cutter">Defeating a Ransomware using Cutter's Emulation</a></h6>
+                    <a href="/defeating-a-ransomware-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part2.png"" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-2">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2</a></h6>
+                    <a href="/analyzing-dropshot-part-2" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part1.png" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-1">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1</a></h6>
+                    <a href="/analyzing-dropshot-part-1" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+            <div class="comment-wrapper blog-spacing">
+                <!-- comments -->
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+        
+        <div class="footer-wrapper">
+    <footer class="footer-area bg-color2">
+        <div class="container">
+            <div class="footer-widget-wrraper">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="footer-logo"><img src="/assets/images/cutter-very-small.svg" alt="Cutter" /></a>
+                        <div class="footer-widget">
+                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by
+                                reverse
+                                engineers for reverse engineers </p>
+                            <ul class="social-link list-inline">
+                                <li class="list-inline-item"><a href="https://www.github.com/radareorg/cutter"><i
+                                            class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.twitter.com/r2gui"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="https://t.me/r2cutter"><i
+                                            class="fab fa-telegram-plane"></i></a></li>
+                                <li class="list-inline-item"><a href="https://webchat.freenode.net/?channels=#cutter"><i
+                                            class="fas fa-comment-dots"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Cutter</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li>
+                                    <a href="/docs/building.html" target="_blank">
+                                        Build From Source
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cutter.re/docs/contributing.html" target="_blank">
+                                        Contribute
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/issues" target="_blank">
+                                        Report an issue
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/radareorg/cutter/blob/master/COPYING" target="_blank">
+                                        License
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Resources</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li><a href="https://cutter.re/docs/" target="_blank">Documentation</a></li>
+                                <li><a href="https://github.com/radareorg/cutter-plugins" target="_blank">Plugins</a>
+                                </li>
+                                <li><a href="https://radare.org" target="_blank">radare2</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright-wrapper text-center">
+                <p>© 2020 Cutter - a <a href="https://radare.org/r/"
+                        target="_blank"><b>radare.org</b></a> project • Website by <a href="https://www.megabeets.net"
+                        target="_blank"><b>Megabeets</b></a> </p>
+            </div>
+            <a href="#" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <ul class="footer-shape list-inline">
+            <li class="left"><img src="/assets/images/footer-shap.png" alt="footer shape" /></li>
+            <li class="right"><img src="/assets/images/footer-shap2.png" alt="footer shape" /></li>
+        </ul>
+    </footer>
+</div>
+      </main>
+      <!-- jQuery -->
+      <script src="/assets/js/vendor.min.js"></script>
+      <script src="/assets/js/app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.js" integrity="sha512-bvV1V1YSjP1fbfKJjTlNmdnUO2XpsLYUdKwmz5UXBi5U+x40rx9JpA0ooQUMZfpz1MaaBC0ydNLoC6r0sitPUQ==" crossorigin="anonymous"></script>
+   </body>
+</html>

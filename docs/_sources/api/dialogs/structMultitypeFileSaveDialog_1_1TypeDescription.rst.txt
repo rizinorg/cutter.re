@@ -1,0 +1,4 @@
+MultitypeFileSaveDialog::TypeDescription
+========================================
+
+.. doxygenstruct:: MultitypeFileSaveDialog::TypeDescription

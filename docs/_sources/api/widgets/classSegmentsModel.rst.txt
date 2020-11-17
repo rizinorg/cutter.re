@@ -1,0 +1,4 @@
+SegmentsModel
+=============
+
+.. doxygenclass:: SegmentsModel

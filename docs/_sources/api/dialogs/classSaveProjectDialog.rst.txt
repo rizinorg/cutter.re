@@ -1,0 +1,4 @@
+SaveProjectDialog
+=================
+
+.. doxygenclass:: SaveProjectDialog

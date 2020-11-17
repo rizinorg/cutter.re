@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Initialization Script &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Layout" href="layout.html" />
+    <link rel="prev" title="Analysis Options" href="analysis.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="layout.html" title="Layout"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="analysis.html" title="Analysis Options"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../user-docs.html" >User Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../preferences.html" accesskey="U">Configuration</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Initialization Script</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="initialization-script">
+<h1>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this headline">¶</a></h1>
+<p>On the launch of Cutter, it loads <code class="docutils literal notranslate"><span class="pre">.cutterrc</span></code> files from various locations if they are present. The directories from where <code class="docutils literal notranslate"><span class="pre">.cutterrc</span></code> files are loaded are all directories of type <code class="docutils literal notranslate"><span class="pre">QStandardPaths::AppConfigLocation</span></code>. These locations vary according to OS. You can visit <a class="reference external" href="https://doc.qt.io/qt-5/qstandardpaths.html">here</a> to see all the locations.</p>
+<p>If multiple <code class="docutils literal notranslate"><span class="pre">.cutterrc</span></code> scripts are present in different directories, all of them will be loaded. In case of conflicting or contradictory commands, the corresponding command in the script loaded last will override all the previous commands. Cutter has a GUI editor for Initialization Script whose description is given below. The script from the editor will be the last loaded initialization script and hence will override all the previous scripts in the event of conflicting commands.</p>
+<div class="section" id="initialization-script-editor">
+<h2>Initialization Script Editor<a class="headerlink" href="#initialization-script-editor" title="Permalink to this headline">¶</a></h2>
+<img alt="Image of Initialization Script Editor" src="../../_images/InitializationScriptEditor.png" />
+<p><strong>Description:</strong> You can add new commands and modify existing commands here. To save the script, click on the <code class="docutils literal notranslate"><span class="pre">Save</span></code> button. If you want to see the changes you have made without restarting Cutter, you can use the <code class="docutils literal notranslate"><span class="pre">Execute</span></code> button. The hyperlink that shows the location of the script will open the directory containing the script on click.</p>
+<p><strong>Steps to open:</strong> <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Initialization</span> <span class="pre">Script</span></code></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command-line.html">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menus.html">Menus</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../preferences.html">Configuration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="analysis.html">Analysis Options</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Initialization Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="layout.html">Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

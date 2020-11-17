@@ -1,0 +1,4 @@
+Colors
+======
+
+.. doxygenclass:: Colors

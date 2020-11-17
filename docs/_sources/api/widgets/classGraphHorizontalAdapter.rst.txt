@@ -1,0 +1,4 @@
+GraphHorizontalAdapter
+======================
+
+.. doxygenclass:: GraphHorizontalAdapter

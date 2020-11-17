@@ -1,0 +1,4 @@
+DecompilerContextMenu
+=====================
+
+.. doxygenclass:: DecompilerContextMenu

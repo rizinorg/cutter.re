@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Menu &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Edit Menu" href="edit-menu.html" />
+    <link rel="prev" title="Menu Bar" href="../menu-bar.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="edit-menu.html" title="Edit Menu"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../menu-bar.html" title="Menu Bar"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../user-docs.html" >User Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../menus.html" >Menus</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../menu-bar.html" accesskey="U">Menu Bar</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">File Menu</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="file-menu">
+<h1>File Menu<a class="headerlink" href="#file-menu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="new-instance-of-cutter">
+<h2>New Instance of Cutter<a class="headerlink" href="#new-instance-of-cutter" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Open a new instance of Cutter to start a new session. This option will open a new window of Cutter without exiting the current session.</p>
+<p><strong>Steps:</strong> File -&gt; New Window</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">N</kbd></p>
+</div>
+<div class="section" id="map-a-new-file">
+<h2>Map a New File<a class="headerlink" href="#map-a-new-file" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to map the contents of other files into the same I/O space used to contain the loaded binary. The new contents can be placed at random or specific offsets.
+Specifically, Cutter is able to open files and map portions of them at random or specific places in memory. It is the perfect basic tooling to reproduce an environment like a core file, a debug session, or a framework by also loading and mapping all the libraries and files the binary depends on.</p>
+<p><strong>Steps:</strong> File -&gt; Map File</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">M</kbd></p>
+</div>
+<div class="section" id="import-a-pdb-file">
+<h2>Import a PDB File<a class="headerlink" href="#import-a-pdb-file" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to load additional debugging information by loading external PDB files. Unlike other platforms, Cutter does not rely on Windows API to parse a PDB files, thus they can be loaded on any other supported platform like Linux or macOS.</p>
+<p><strong>Steps:</strong> File -&gt; Import PDB</p>
+</div>
+<div class="section" id="enable-write-mode">
+<h2>Enable Write Mode<a class="headerlink" href="#enable-write-mode" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> This option will enable Write mode and allow you to patch and edit the binary on disk. <strong>Please note</strong> that when Write mode is enabled, each change you make to the binary in Cutter will be applied to the original file on disk. In order not to take unnecessary risks, consider using Cache mode instead.</p>
+<p><strong>Steps:</strong> File -&gt; Set mode -&gt; Write mode</p>
+</div>
+<div class="section" id="enable-cache-mode">
+<h2>Enable Cache Mode<a class="headerlink" href="#enable-cache-mode" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> This option will enable Cache mode and allow you to patch and edit the binary <strong>without</strong> applying the changes to the file on disk. Unlike in Write mode, in Cache mode, the changes you make to the binary in Cutter will not be applied to the original file on disk unless you specifically committing them using the “Commit changes” menu item. This is safer than using Write mode because there is no risk to lose important data.</p>
+<p><strong>Steps:</strong> File -&gt; Set mode -&gt; Cache mode</p>
+</div>
+<div class="section" id="enable-read-only-mode">
+<h2>Enable Read-Only Mode<a class="headerlink" href="#enable-read-only-mode" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> This option is available when files are opened in Write or Cache modes. When Read-Only mode is enabled, no patches and editions to the file are allowed. This is the default mode for files in Cutter, unless specified otherwise by the user, by either enabling Write or Cache mode.</p>
+<p><strong>Steps:</strong> File -&gt; Set mode -&gt; Read-Only mode</p>
+</div>
+<div class="section" id="commit-changes-from-cache">
+<h2>Commit Changes from Cache<a class="headerlink" href="#commit-changes-from-cache" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Apply the changes performed in Cache mode to the file on disk. Cache mode will not apply the changes and patches made unless the user clicks “Commit changes”. To automatically apply every change to the file on disk, use the less-safer Write mode.</p>
+<p><strong>Steps:</strong> File -&gt; Commit changes</p>
+</div>
+<div class="section" id="save-project">
+<h2>Save Project<a class="headerlink" href="#save-project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Save your session to a project. If no project file assigned to your session, the “Save as…” dialog will open.</p>
+<p><strong>Steps:</strong> File -&gt; Save</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd></p>
+</div>
+<div class="section" id="save-project-as">
+<h2>Save Project as…<a class="headerlink" href="#save-project-as" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Save the current state of your session, including function names, comments, and more.
+On the saving dialog, choose the project type that fits your needs.
+<strong>*Note:</strong> This feature is currently unstable and under constructions.*</p>
+<p><strong>Steps:</strong> File -&gt; Save As…</p>
+</div>
+<div class="section" id="export-to-code">
+<h2>Export to Code<a class="headerlink" href="#export-to-code" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Export the entire binary in different formats that later can be used in your favorite programming language. The feature supports many formats such as Python arrays, java, several C array formats, javascript, and more.
+<strong>*Note:</strong> This isn’t a decompilation feature.*</p>
+<p><strong>Steps:</strong> File -&gt; Export as code</p>
+</div>
+<div class="section" id="run-a-radare2-script">
+<h2>Run a radare2 Script<a class="headerlink" href="#run-a-radare2-script" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Cutter allows you to execute radare2 scripts to automate task or transfer information. Radare2 scripts are files that contain list of radare2 commands. The scripts can be created manually by you, or automatically generated by radare2 commands (which typically end with a star character. e.g. <code class="docutils literal notranslate"><span class="pre">afl*</span></code>).</p>
+<p>Such a script can look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>?e hello world
+?v 10+5
+pdf @ main
+</pre></div>
+</div>
+<p><strong>Steps:</strong> File -&gt; Run radare2 script</p>
+</div>
+<div class="section" id="quit-cutter">
+<h2>Quit Cutter<a class="headerlink" href="#quit-cutter" title="Permalink to this headline">¶</a></h2>
+<p><strong>Description:</strong> Quit and exit your current session of Cutter. On exit, you’ll be asked whether you want to save your session in order to avoid losing data.</p>
+<p><strong>Steps:</strong> File -&gt; Quit</p>
+<p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Q</kbd></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../../index.html">Cutter documentation</a>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command-line.html">Command-line Options</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../menus.html">Menus</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../breakpoints-widget-context-menu.html">Breakpoints Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../debug-buttons-toolbar.html">Debug Buttons Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../decompiler-context-menu.html">Decompiler Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../decompiler-context-menu.html#debug-context-menu">Debug Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../disassembly-context-menu.html">Disassembly Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../graph-widget-context-menu.html">Graph Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hexdump-widget-context-menu.html">Hexdump Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../information-windows-menu.html">Information Windows Menu</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../menu-bar.html">Menu Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../registers-widget-context-menu.html">Registers Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../set-table-layout.html">Set Table Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../stack-widget-context-menu.html">Stack Widget Context Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../syncing-a-widget.html">Syncing a Widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,4 @@
+DisassemblerGraphView::DisassemblyBlock
+=======================================
+
+.. doxygenstruct:: DisassemblerGraphView::DisassemblyBlock

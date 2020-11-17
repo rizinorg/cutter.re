@@ -1,0 +1,4 @@
+CutterPlugin
+============
+
+.. doxygenclass:: CutterPlugin

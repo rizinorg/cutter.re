@@ -1,0 +1,4 @@
+GraphGridLayout::LayoutState
+============================
+
+.. doxygenstruct:: GraphGridLayout::LayoutState

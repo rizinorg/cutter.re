@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Issues &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing to Cutter" href="../contributing.html" />
+    <link rel="prev" title="Layout" href="preferences/layout.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../contributing.html" title="Contributing to Cutter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="preferences/layout.html" title="Layout"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../user-docs.html" accesskey="U">User Documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Common Issues</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="common-issues">
+<h1>Common Issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h1>
+<p>This page lists common issues encountered by users.</p>
+<div class="section" id="appimage-crashes">
+<h2>AppImage Crashes<a class="headerlink" href="#appimage-crashes" title="Permalink to this headline">¶</a></h2>
+<p>If the Linux AppImage binary crashes upon startup, make sure your
+<code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> environment variable is empty.
+For a detailed explanation, see the issue <a class="reference external" href="https://github.com/radareorg/cutter/issues/579">#579</a></p>
+</div>
+<div class="section" id="keyboard-layout-issue">
+<h2>Keyboard Layout Issue<a class="headerlink" href="#keyboard-layout-issue" title="Permalink to this headline">¶</a></h2>
+<p>Some people report that they have keyboard issues. Usually it is because
+the Xorg layout is wrong. You can check it with: <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">-query</span></code>
+Most of the time using <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">us</span></code> solves the issue, but it might
+not be enough and require a more advanced Xorg configuration.</p>
+</div>
+<div class="section" id="initial-analysis-takes-a-long-time-or-cutter-ui-freezes">
+<h2>Initial Analysis takes a long time or Cutter UI freezes<a class="headerlink" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes" title="Permalink to this headline">¶</a></h2>
+<p>Cutter and radare2 currently don’t work very well with large and very large binaries.
+The exact limits depend on the content of the binary, but roughly a few MB can be considered large
+and may take a few minutes to analyze. More than 100MB is very large,
+analysis with default settings will likely take a very long time and it might occasionally
+freeze the UI during usage.</p>
+<p>If the analysis takes longer than 5-15 minutes it is recommended to retry it with different
+analysis options. In the “Load Options” dialog, move the analysis slider to the right in order to reach
+the “Advanced Analysis” view. This view will help you learn more about the options that can
+be used to more selectively analyze only the relevant parts of code.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../index.html">Cutter documentation</a>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../user-docs.html">User Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shortcuts.html">Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-line.html">Command-line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences.html">Configuration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#appimage-crashes">AppImage Crashes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keyboard-layout-issue">Keyboard Layout Issue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes">Initial Analysis takes a long time or Cutter UI freezes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>

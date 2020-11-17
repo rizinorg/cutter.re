@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://cutter.re//index.xml" rel="self" type="application/atom+xml" /><link href="https://cutter.re//" rel="alternate" type="text/html" /><updated>2020-11-17T08:21:40+00:00</updated><id>https://cutter.re//index.xml</id><title type="html">Cutter</title><subtitle>Free and Open Source RE Platform powered by radare2</subtitle><entry><title type="html">Improving Decompiler Widget - GSoC Project</title><link href="https://cutter.re//improving-decompiler-widget-gsoc" rel="alternate" type="text/html" title="Improving Decompiler Widget - GSoC Project" /><published>2020-08-31T00:00:00+00:00</published><updated>2020-08-31T00:00:00+00:00</updated><id>https://cutter.re//improving-decompiler-widget-gsoc</id><content type="html" xml:base="https://cutter.re//improving-decompiler-widget-gsoc">&lt;p&gt;My name is Nirmal Manoj. I am a second-year CS undergraduate student at IIIT Hyderabad, India. This summer, I participated in a &lt;a href=&quot;https://summerofcode.withgoogle.com/&quot;&gt;Google Summer of Code&lt;/a&gt; project for &lt;a href=&quot;https://github.com/radareorg/&quot;&gt;radareorg&lt;/a&gt;. The main goal of my project is to improve the decompiler interface in Cutter.&lt;/p&gt;
+
+&lt;p&gt;As a part of my project, I worked on multiple repositories, including &lt;a href=&quot;https://github.com/radareorg/cutter/&quot;&gt;Cutter&lt;/a&gt;, &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/&quot;&gt;r2ghidra-dec&lt;/a&gt;, and &lt;a href=&quot;https://github.com/radareorg/radare2/&quot;&gt;radare2&lt;/a&gt;. I have also sent a couple of patches to the &lt;a href=&quot;https://github.com/avast/retdec-r2plugin&quot;&gt;retdec-r2plugin&lt;/a&gt;. The following sections sum up the important work that I have done and its impacts. Each section will describe specific features or important API that I have worked on. It will also have links to the code and discussions related to that topic.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-standard-decompiler-interface&quot;&gt;Creating a standard decompiler interface&lt;/h2&gt;
+
+&lt;p&gt;Cutter’s decompiler didn’t have a good enough decompiler interface for supporting context-sensitive actions. A basic structure named &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; and some useful API functions were already present in r2ghidra-dec for storing the information we get from the Ghidra decompiler.&lt;/p&gt;
+
+&lt;p&gt;After discussions in the community, we decided to use &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; as the standard decompiler interface across all the decompilers used in Cutter and Radare2. The related work involved shifting &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; API from r2ghidra-dec to radare2. I also implemented unit tests for API functions related to &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Currently, Cutter supports three decompilers: &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec&quot;&gt;R2Ghidra&lt;/a&gt;(plugin for Ghidra), &lt;a href=&quot;https://github.com/radareorg/r2dec-js&quot;&gt;R2Dec&lt;/a&gt;, and &lt;a href=&quot;https://github.com/avast/retdec-r2plugin&quot;&gt;RetDec-Radare2&lt;/a&gt;(plugin for RetDec). The output from all these decompilers was being parsed into a custom structure named &lt;code class=&quot;highlighter-rouge&quot;&gt;AnnotatedCode&lt;/code&gt; to use in Cutter.  Even then, internally, r2ghidra-dec and retdec-radare2 used &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt;. After I shifted &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; to radare2, I sent patches to both r2ghidra-dec and retdec-radare2 to use &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; directly from radare2.&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs&quot;&gt;Related PRs:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/16939&quot;&gt;PR #16939&lt;/a&gt;: Shifting RAnnotatedCode to radare2&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/107&quot;&gt;PR #107&lt;/a&gt;: Patching r2ghidra-dec after migrating RAnntoatedCode to use radare2&lt;/li&gt;
+  &lt;li&gt;retdec-r2plugin &lt;a href=&quot;https://github.com/avast/retdec-r2plugin/pull/16&quot;&gt;PR #16&lt;/a&gt;: Patching retdec-r2plugin after migrating RAnnotatedCode to radare2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;allow-cutter-to-use-rannotatedcode-for-the-decompiler&quot;&gt;Allow Cutter to use RAnnotatedCode for the decompiler&lt;/h2&gt;
+
+&lt;p&gt;This involved refactoring the decompiler widget to use &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; instead of the custom &lt;code class=&quot;highlighter-rouge&quot;&gt;AnnotatedCode&lt;/code&gt; it has been using. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;RAnnotatedCode&lt;/code&gt; will enable Cutter to have more data about the decompiled code that is essential for implementing a dedicated context menu. I also refactored the decompiler plugins (r2dec, r2ghidra-dec, r2retdec) to emit RAnnotatedCode directly to Cutter.&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-1&quot;&gt;Related PRs:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2227&quot;&gt;PR #2227&lt;/a&gt;: Refactored Decompiler Widget and R2Dec Plugin to use RAnnotatedCode. 
+ The description of this PR contains more precise details on the significant changes.&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/112&quot;&gt;PR #112&lt;/a&gt;: Emit RAnnotatedCode to Cutter&lt;/li&gt;
+  &lt;li&gt;retdec-r2plugin &lt;a href=&quot;https://github.com/avast/retdec-r2plugin/pull/17&quot;&gt;PR #16&lt;/a&gt;: Emit RAnnotatedCode from decompileAt()&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;implementing-a-skeleton-for-the-decompiler-context-menu&quot;&gt;Implementing a skeleton for the decompiler context menu&lt;/h2&gt;
+
+&lt;p&gt;This involves me making a context-menu with a single action for the decompiler. I replaced the disassembly context menu completely in the decompiler widget. The only action implemented along with the context menu skeleton was an action to copy selected decompiled code.&lt;/p&gt;
+
+&lt;p&gt;GIF that shows the decompiler context menu with just copy action
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/skeleton-copy.gif&quot; alt=&quot;skeleton-copy&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-pr&quot;&gt;Related PR:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2256&quot;&gt;PR #2256&lt;/a&gt;: Dedicated decompiler context menu (skeleton) with an action to copy selected code&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;implementing-actions-for-debugging&quot;&gt;Implementing actions for debugging&lt;/h2&gt;
+&lt;p&gt;This involved me implementing actions for toggling breakpoint, accessing the menu for advanced breakpoint definition, and also for two other debugging related actions in the decompiler context menu. Multiple breakpoints could exist in a decompiled code line, as that’s often a more straightforward representation of multiple lines in assembly. The option to choose the breakpoint that a user wants to edit from the breakpoints list was also implemented.&lt;/p&gt;
+
+&lt;p&gt;The following GIFs show key functionalities.&lt;/p&gt;
+
+&lt;p&gt;Demonstrating toggling of breakpoints
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/toggle-breakpoint.gif&quot; alt=&quot;toggle-breakpoint&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demonstrating the ability to choose the breakpoint in a line for opening the edit breakpoint menu.
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/edit-advanced-breakpoint.gif&quot; alt=&quot;edit-advanced-breakpoint&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-pr-1&quot;&gt;Related PR&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2260&quot;&gt;PR #2260&lt;/a&gt;: Breakpoint Menu and Debug Menu in the Decompiler Context Menu&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;insertion-and-manipulation-of-comments-in-the-decompiled-code&quot;&gt;Insertion and manipulation of comments in the decompiled code&lt;/h2&gt;
+&lt;p&gt;This involves implementing offset annotation for comments in r2ghidra-dec and implementing actions to add, edit, and delete comments in the decompiler context menu.&lt;/p&gt;
+
+&lt;p&gt;The following GIF demonstrates the actions.
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/comment-display.gif&quot; alt=&quot;comment-display&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-2&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2265&quot;&gt;PR #2265&lt;/a&gt;: Comment-related actions for the Decompiler Context Menu&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/121&quot;&gt;PR #121&lt;/a&gt;: Implemented offset annotation for comments&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;implementing-function-name-annotation-and-rename-function-action&quot;&gt;Implementing function name annotation and rename function action&lt;/h2&gt;
+&lt;p&gt;This involved introducing a new type of annotation for function names in radare2 and implementing an annotator to annotate function names in r2ghidra-dec. I have also implemented a rename function action along with these. Other actions are implemented using this annotation. They will be shown in later sections.&lt;/p&gt;
+
+&lt;p&gt;GIF demonstrating rename function action:
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/rename-function-action.gif&quot; alt=&quot;rename-function-action&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-3&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17204&quot;&gt;PR #17204&lt;/a&gt;: Annotation for function name&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/123&quot;&gt;PR #123&lt;/a&gt;: Function name annotation annotator implemented&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2286&quot;&gt;PR #2286&lt;/a&gt;: Action to rename functions in the decompiler context menu&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;implementing-annotations-for-global-variables-constant-variables-and-related-actions&quot;&gt;Implementing annotations for global variables, constant variables, and related actions&lt;/h2&gt;
+&lt;p&gt;This involved consolidating all references (function names, global variables, and constant variables) under a single structure called a “reference”. Two new annotation types were also introduced to accommodate global variables and constant variables. Also, annotators were implemented for these new types of annotations in r2ghidra-dec.&lt;/p&gt;
+
+&lt;p&gt;The decompiled code shown in the decompiler widget represents and refers to specific memory addresses in the binary. The ability to view these addresses in other widgets such as Hexdump or Disassembly can be very handy. For this, I created a “show-in” menu that allows the user to open the address related to the decompiled code under the cursor in other widgets. These other widgets include Hexdump, Graph, and Disassembly. One other related feature that can become useful is opening a reference in another widget. For instance, a function referenced under the cursor can be opened in a new decompiler widget or a graph widget. A targeted show-in menu for references was implemented for this. In this same PR, actions for adding, renaming, and deleting global variable names were implemented. See GIFs below to see the functionality implemented.&lt;/p&gt;
+
+&lt;p&gt;Along with these features, actions for copying instruction address and also reference’s address were implemented. The normal copy action was enhanced to copy a highlighted word to the clipboard if there is no text currently selected by the user. In the event where there is no highlighted word or selection, the entire line of code under the cursor will be copied to the clipboard.&lt;/p&gt;
+
+&lt;p&gt;Demonstrating show-in menu
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/show-in-disassembly.gif&quot; alt=&quot;show-in-disassembly&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demonstrating targeted show-in menu. Here, the function referenced under the cursor is opened in a new widget.
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/show-in-new-graph.gif&quot; alt=&quot;show-in-new-graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demonstrating adding, renaming, and deleting global variable names
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/manipulate-global-variable.gif&quot; alt=&quot;manipulate-global-variable&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Demonstrating enhanced copy action
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/copy-actions.gif&quot; alt=&quot;copy-actions&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-4&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17281&quot;&gt;PR #17281&lt;/a&gt;: Annotations for Constant Variables and Global Variables for the decompiler&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/124&quot;&gt;PR #124&lt;/a&gt;: Annotation for constant and global variables&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2295&quot;&gt;PR #2295&lt;/a&gt;: Show-in menu for references and add/rename/delete name for global variables&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;x-refs-action-in-the-decompiler-and-x-refs-for-variables-in-other-widgets&quot;&gt;X-Refs action in the decompiler and X-Refs for variables in other widgets&lt;/h2&gt;
+&lt;p&gt;This involved making an action to show X-Refs to a reference (functions, global variables, constant variables with an address) in the decompiler. I have also implemented an action to show X-Refs for local variables and arguments in the disassembly context menu. The following GIFs demonstrate these actions:&lt;/p&gt;
+
+&lt;p&gt;X-Refs for variables in the disassembly widgets
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/xrefs-for-variables.gif&quot; alt=&quot;xrefs-for-variables&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;X-Refs for references in the decompiler context menu
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/xrefs-for-references.gif&quot; alt=&quot;xrefs-for-references&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-5&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2297&quot;&gt;PR #2297&lt;/a&gt;: X-refs for variables&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2352&quot;&gt;PR #2352&lt;/a&gt;: X-Refs for references&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;edit-local-variables-and-function-arguments&quot;&gt;Edit local variables and function arguments&lt;/h2&gt;
+&lt;p&gt;This involved introducing two new types of annotations as well as implementing the required annotators in r2ghidra-dec. In Cutter, actions have been implemented for renaming and editing local variables and function arguments. Only variables that are present in the disassembly will be editable. The following GIF demonstrates the two actions:
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/manipulate-local-variable.gif&quot; alt=&quot;manipulate-local-variable&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-6&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17375&quot;&gt;PR #17375&lt;/a&gt;: Annotation for local variables&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/128&quot;&gt;PR #128&lt;/a&gt;: Annotator for local variables and function parameters&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2357&quot;&gt;PR #2357&lt;/a&gt;: Edit/Rename Variables Actions for function variables&lt;/li&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17386&quot;&gt;PR #17386&lt;/a&gt;: API for checking if an annotation is a reference or function variable&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;documentation-unit-tests-final-clean-up-and-merging-to-master&quot;&gt;Documentation, Unit tests, Final clean-up, and Merging to Master&lt;/h2&gt;
+&lt;p&gt;A dedicated context-menu has been implemented by the PRs linked in the previous sections. All of these changes from the skeleton of the decompiler context menu were merged into branches named ‘decompiler-refactoring’ in the involved repositories. This was merged to master.&lt;/p&gt;
+
+&lt;p&gt;Before merging to master, the new code was documented, and unit tests were made for new annotations and API functions in radare2. The final clean-up removed unnecessary parts after careful observation.&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-7&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17397&quot;&gt;PR #17397&lt;/a&gt;: Update docs in annotate code API&lt;/li&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17403&quot;&gt;PR #17403&lt;/a&gt;: Unit tests for annotated code API&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2374&quot;&gt;PR #2374&lt;/a&gt;: Code Documentation + Final Clean Up&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;the-following-prs-merge-all-the-changes-to-the-master-branch&quot;&gt;The following PRs merge all the changes to the master branch&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;radare2 &lt;a href=&quot;https://github.com/radareorg/radare2/pull/17429&quot;&gt;PR #17429&lt;/a&gt;: New annotations and API functions for the decompiler&lt;/li&gt;
+  &lt;li&gt;r2ghidra-dec &lt;a href=&quot;https://github.com/radareorg/r2ghidra-dec/pull/129&quot;&gt;PR #129&lt;/a&gt;: Annotators for new annotations&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2391&quot;&gt;PR #2391&lt;/a&gt;: Enhanced Decompiler Widget with new Dedicated Context Menu&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;synchronized-decompiler-and-enabling-multiple-decompiler-widgets&quot;&gt;Synchronized Decompiler and Enabling Multiple Decompiler Widgets&lt;/h2&gt;
+&lt;p&gt;The existing auto-refresh mechanism with a refresh button was often confusing to users, particularly when the auto-refresh is disabled. In this case, questions like whether renaming a reference or editing instruction in disassembly should reflect on the decompiler were often asked. Moreover, there were multiple benefits to making the decompiler widget a syncable widget like disassembly or graph. These are explained in the issue &lt;a href=&quot;https://github.com/radareorg/cutter/issues/2370&quot;&gt;#2370&lt;/a&gt;. Allowing multiple decompiler widgets to be opened simultaneously will enable users to compare the output of multiple decompilers that Cutter supports, e.g., Ghidra, RetDec, and R2Dec. This was an existing issue &lt;a href=&quot;https://github.com/radareorg/cutter/issues/1766&quot;&gt;#1766&lt;/a&gt;. I solved these two issues. User documentation to the decompiler was also added.&lt;/p&gt;
+
+&lt;p&gt;The following image shows two decompiler widgets with different decompilers side by side.
+&lt;img src=&quot;/assets/images/blog/posts/improving-decompiler-widget-gsoc/ghidra-vs-r2dec.png&quot; alt=&quot;ghidra-vs-r2dec&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;related-prs-8&quot;&gt;Related PRs&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2402&quot;&gt;PR #2402&lt;/a&gt;: Synchronized Decompiler and Enabling Multiple Decompiler Widgets&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2410&quot;&gt;PR #2410&lt;/a&gt;: Save the layout of the Decompiler Widgets&lt;/li&gt;
+  &lt;li&gt;cutter &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2394&quot;&gt;PR #2394&lt;/a&gt;: User documentation for the new decompiler&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-next&quot;&gt;What Next?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;The context-sensitive annotations have been implemented only for R2Ghidra as of now. I have opened issues in both R2Dec (&lt;a href=&quot;https://github.com/radareorg/r2dec-js/issues/220&quot;&gt;issue #220&lt;/a&gt;) R2RetDec (&lt;a href=&quot;https://github.com/avast/retdec-r2plugin/issues/20&quot;&gt;issue #20&lt;/a&gt;) with details on the annotations that are required by the Cutter. Once all new annotations are available from these decompilers, they will support all the actions currently available for r2ghidra-dec. I have also implemented what’s required from the Cutter’s side to support R2Dec by &lt;a href=&quot;https://github.com/radareorg/cutter/pull/2407&quot;&gt;PR #2407&lt;/a&gt;. This can be merged as soon as R2Dec gets patched to have all annotations.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;I haven’t mentioned every single PR I have made as part of my project here.&lt;/em&gt; All my PRs and issues that I solved as part of my project is available at this GitHub project in the radareorg: &lt;a href=&quot;https://github.com/orgs/radareorg/projects/1&quot;&gt;Improving Decompiler Widget (GSoC)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;thanks&quot;&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;I want to thank my mentors Itay Cohen, Kārlis, and Florian Märkl for all their sincere support and guidance. I have come a long way and learned a lot of valuable things in the past three and a half months of GSoC. My GSoC project was the first significant real-world project that I worked on, and I am incredibly happy about the work that I was able to do, and it’s potential. This will not have been possible without the insightful reviews and advice of my mentors. I hope we will continue to work together for Cutter.&lt;/p&gt;</content><author><name>Nirmal Manoj</name></author><category term="Decompiler" /><category term="GSoC" /><summary type="html">My name is Nirmal Manoj. I am a second-year CS undergraduate student at IIIT Hyderabad, India. This summer, I participated in a Google Summer of Code project for radareorg. The main goal of my project is to improve the decompiler interface in Cutter.</summary></entry><entry><title type="html">Cutter Community Survey 2020</title><link href="https://cutter.re//cutter-community-survey-2020" rel="alternate" type="text/html" title="Cutter Community Survey 2020" /><published>2020-05-20T00:00:00+00:00</published><updated>2020-05-20T00:00:00+00:00</updated><id>https://cutter.re//cutter-community-survey-2020</id><content type="html" xml:base="https://cutter.re//cutter-community-survey-2020">&lt;meta name=&quot;twitter:image:src&quot; content=&quot;https://cutter.re/assets/images/blog/posts/survey-2020/survey2020.png&quot; /&gt;
+
+&lt;p&gt;The Cutter team is working hard to create a free and open-source reverse engineering framework that will give you the best RE experience. Our 2020 community survey is here and this is our opportunity to get to know you better.&lt;/p&gt;
+
+&lt;p&gt;We already interact with many of you frequently using Telegram, IRC, and Twitter, but the interactions tend to be about specific problems. We want to hear from all of you, all the way from those who found it too difficult to start with Cutter to those who have contributed several times. We want to hear what you love about Cutter and what you hate about it. We want to hear about your smallest annoyances and problems that may take 5 years to solve. Anything goes. It’s only with your help that we can make Cutter into a truly useful tool.&lt;/p&gt;
+
+&lt;p&gt;Please take a few minutes to fill the survey. We’ll collect responses for about a month and then we’ll publish the results on our blog, groups and social media.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forms.gle/rVwWVktbwZxbaPpF8&quot; target=&quot;_blank&quot; class=&quot;dwn-btn3 btn btn-primary&quot;&gt;&lt;span&gt;Take the survey!&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;but&gt;
+&lt;/but&gt;</content><author><name>Cutter Team</name></author><category term="Survey" /><category term="Community" /><summary type="html"></summary></entry><entry><title type="html">5 Ways to patch binaries with Cutter</title><link href="https://cutter.re//5-ways-to-patch-binaries-with-cutter" rel="alternate" type="text/html" title="5 Ways to patch binaries with Cutter" /><published>2019-12-26T00:00:00+00:00</published><updated>2019-12-26T00:00:00+00:00</updated><id>https://cutter.re//5-ways-to-patch-binaries-with-cutter</id><content type="html" xml:base="https://cutter.re//5-ways-to-patch-binaries-with-cutter">&lt;p&gt;I recently watched &lt;a href=&quot;https://www.youtube.com/watch?v=LyNyf3UM9Yc&quot;&gt;a video&lt;/a&gt; by LiveOverflow in which he showed how different tools are used to patch binaries. By demonstrating some of the features that Radare2, Ghidra, and Binary Ninja offer for the task, the viewer can get some sense of the things they can get from using these tools.&lt;/p&gt;
+&lt;p&gt;While all these tools are great, and although Radare2 was showed there (and oh boy, things went wrong), there was one tool, which is dear to my heart, that wasn’t there – &lt;a href=&quot;https://cutter.re/&quot;&gt;Cutter&lt;/a&gt;. Notwithstanding that it is the youngest member of the pack, Cutter is growing up very fast and when it has to do with binary patching – it does not stay behind.&lt;/p&gt;
+&lt;p&gt;“Binary Patching”, for those the term is unfamiliar, is the process of applying small changes and modifications to a binary file, usually in order to change its behavior. By modifying data or code, the user can change certain values in the program or specific instructions, and adjust the binary to their desired outcome.&lt;/p&gt;
+
+&lt;p&gt;Cutter makes patching binaries a simple task - here are 5 ways to do so.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.megabeets.net/5-ways-to-patch-binaries-with-cutter/&quot; target=&quot;_blank&quot; class=&quot;dwn-btn3 btn btn-primary&quot;&gt;&lt;span&gt;Read on Megabeets’ website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;but&gt;
+&lt;/but&gt;</content><author><name>Itay Cohen</name></author><category term="Patching" /><summary type="html">I recently watched a video by LiveOverflow in which he showed how different tools are used to patch binaries. By demonstrating some of the features that Radare2, Ghidra, and Binary Ninja offer for the task, the viewer can get some sense of the things they can get from using these tools. While all these tools are great, and although Radare2 was showed there (and oh boy, things went wrong), there was one tool, which is dear to my heart, that wasn’t there – Cutter. Notwithstanding that it is the youngest member of the pack, Cutter is growing up very fast and when it has to do with binary patching – it does not stay behind. “Binary Patching”, for those the term is unfamiliar, is the process of applying small changes and modifications to a binary file, usually in order to change its behavior. By modifying data or code, the user can change certain values in the program or specific instructions, and adjust the binary to their desired outcome.</summary></entry><entry><title type="html">Defeating a Ransomware using Cutter’s Emulation</title><link href="https://cutter.re//defeating-a-ransomware-with-cutter" rel="alternate" type="text/html" title="Defeating a Ransomware using Cutter's Emulation" /><published>2019-09-13T00:00:00+00:00</published><updated>2019-09-13T00:00:00+00:00</updated><id>https://cutter.re//defeating-a-ransomware-with-cutter</id><content type="html" xml:base="https://cutter.re//defeating-a-ransomware-with-cutter">&lt;p&gt;Last week I attended the &lt;a href=&quot;https://www.radare.org/con/2019/&quot;&gt;r2con conference&lt;/a&gt; for the first time (for those who haven't heard about it before, it is a reverse engineering conference focused on &lt;a href=&quot;https://www.radare.org/r/&quot;&gt;radare2&lt;/a&gt;) and apart from listening to great talks, I signed up for the basic trainings since I had not used r2 in the past and my RE experience is quite basic. One of the trainings was &quot;Dissecting binaries with Cutter&quot; given by &lt;a href=&quot;https://twitter.com/xarkes_&quot;&gt;Antide Petit&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/megabeets_&quot;&gt;Itay cohen&lt;/a&gt;, and &lt;a href=&quot;https://twitter.com/thestr4ng3r&quot;&gt;Florian Märkl&lt;/a&gt;. It was an introduction to the official GUI application for r2, &lt;a href=&quot;https://cutter.re/&quot;&gt;Cutter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;During the training, there were 3 different exercises and one of them was about reversing a binary called &lt;em&gt;&quot;M1ghty Ransomware.exe&quot;&lt;/em&gt; which by the name of it, you can guess what it is. Along with the binary, there was also a PNG file called &lt;em&gt;&quot;flag.png&quot;&lt;/em&gt; that was encrypted by the malware. We had to use Cutter to analyse the binary and figure out the encryption algorithms, the keys used for the encryption, and finally write a script to decrypt the png file. Sounds easy, right? Well, it took me a while to figure it out. Let's dissect it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://camaya.co/posts/2019/09/11/defeating-a-ransomware-with-cutter/&quot; target=&quot;_blank&quot; class=&quot;dwn-btn3 btn btn-primary&quot;&gt;&lt;span&gt;Read on Cristhian Amaya’s website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;but&gt;
+&lt;/but&gt;</content><author><name>Cutter Team</name></author><category term="Guest article" /><summary type="html">Last week I attended the r2con conference for the first time (for those who haven't heard about it before, it is a reverse engineering conference focused on radare2) and apart from listening to great talks, I signed up for the basic trainings since I had not used r2 in the past and my RE experience is quite basic. One of the trainings was &quot;Dissecting binaries with Cutter&quot; given by Antide Petit, Itay cohen, and Florian Märkl. It was an introduction to the official GUI application for r2, Cutter.</summary></entry><entry><title type="html">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1</title><link href="https://cutter.re//analyzing-dropshot-part-1" rel="alternate" type="text/html" title="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1" /><published>2019-07-26T09:12:09+00:00</published><updated>2019-07-26T09:12:09+00:00</updated><id>https://cutter.re//analyzing-dropshot-part-1</id><content type="html" xml:base="https://cutter.re//analyzing-dropshot-part-1">&lt;h1 id=&quot;prologue&quot;&gt;Prologue&lt;/h1&gt;
+
+&lt;p&gt;As a reverse engineer and malware researcher, the tools I use are super important for me. I have invested hours and hours in creating the best malware analysis environment for myself and chose the best tools for me and my needs. For the last two years, radare2 is my go-to tool for a lot of reverse-engineering tasks such as automating RE related work, scripting, CTFing, exploitation and more. That said, I almost never used radare2 for malware analysis, or more accurately, for analysis of malware for Windows.&lt;/p&gt;
+&lt;p&gt;The main reason was that radare2 command-line interface felt too clumsy, complicated and an over-kill. IDA Pro was simply better for these tasks, a quick inspection of functions, data structures, renaming, commenting, et cetera. It felt more intuitive for me and that what I was searching for while doing malware analysis. And then came Cutter.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.megabeets.net/decrypting-dropshot-with-radare2-and-cutter-part-1/&quot; target=&quot;_blank&quot; class=&quot;dwn-btn3 btn btn-primary&quot;&gt;&lt;span&gt;Read on megabeets.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;but&gt;
+&lt;/but&gt;</content><author><name>Itay Cohen</name></author><category term="Plugins" /><summary type="html">Prologue</summary></entry><entry><title type="html">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2</title><link href="https://cutter.re//analyzing-dropshot-part-2" rel="alternate" type="text/html" title="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2" /><published>2019-07-26T09:12:09+00:00</published><updated>2019-07-26T09:12:09+00:00</updated><id>https://cutter.re//analyzing-dropshot-part-2</id><content type="html" xml:base="https://cutter.re//analyzing-dropshot-part-2">&lt;h1 id=&quot;prologue&quot;&gt;Prologue&lt;/h1&gt;
+
+&lt;p&gt;Previously, in the first part of this article, we used Cutter, a GUI for radare2, to statically analyze APT33’s Dropshot malware. We also used radare2’s Python scripting capabilities in order to decrypt encrypted strings in Dropshot. If you didn’t read the first part yet, I suggest you do it &lt;a href=&quot;https://www.megabeets.net/decrypting-dropshot-with-radare2-and-cutter-part-21&quot;&gt;now&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Today’s article will be shorter, now that we are familiar with cutter and r2pipe, we can quickly analyze another interesting component of Dropshot — an encrypted resource that includes Dropshot’s actual payload. So without further ado, let’s start.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.megabeets.net/decrypting-dropshot-with-radare2-and-cutter-part-2/&quot; target=&quot;_blank&quot; class=&quot;dwn-btn3 btn btn-primary&quot;&gt;&lt;span&gt;Read on megabeets.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;but&gt;
+&lt;/but&gt;</content><author><name>Itay Cohen</name></author><category term="Plugins" /><summary type="html">Prologue</summary></entry></feed>

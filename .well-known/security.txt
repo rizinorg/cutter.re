@@ -1,0 +1,3 @@
+Contact: mailto:security@cutter.re
+Preferred-Languages: en, ru, hi, fr, de, he
+Canonical: https://cutter.re/.well-known/security.txt

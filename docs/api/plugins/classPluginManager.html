@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PluginManager &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PluginManager::PluginTerminator" href="classPluginManager_1_1PluginTerminator.html" />
+    <link rel="prev" title="CutterPlugin" href="classCutterPlugin.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classPluginManager_1_1PluginTerminator.html" title="PluginManager::PluginTerminator"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classCutterPlugin.html" title="CutterPlugin"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../pluginslist.html" accesskey="U">Plugins</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PluginManager</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pluginmanager">
+<h1>PluginManager<a class="headerlink" href="#pluginmanager" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv413PluginManager">
+<span id="_CPPv313PluginManager"></span><span id="_CPPv213PluginManager"></span><span id="PluginManager"></span><span class="target" id="classPluginManager"></span><em class="property">class </em><code class="sig-name descname">PluginManager</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv413PluginManager" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Types</p>
+<dl class="cpp type">
+<dt id="_CPPv4N13PluginManager9PluginPtrE">
+<span id="_CPPv3N13PluginManager9PluginPtrE"></span><span id="_CPPv2N13PluginManager9PluginPtrE"></span><span class="target" id="classPluginManager_1ae4c37bb8a825910ded345667060d94a7"></span><em class="property">using </em><code class="sig-name descname">PluginPtr</code> = std::unique_ptr&lt;<a class="reference internal" href="classCutterPlugin.html#_CPPv412CutterPlugin" title="CutterPlugin">CutterPlugin</a>, <a class="reference internal" href="#_CPPv4N13PluginManager16PluginTerminatorE" title="PluginManager::PluginTerminator">PluginTerminator</a>&gt;<a class="headerlink" href="#_CPPv4N13PluginManager9PluginPtrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager13PluginManagerEv">
+<span id="_CPPv3N13PluginManager13PluginManagerEv"></span><span id="_CPPv2N13PluginManager13PluginManagerEv"></span><span id="PluginManager::PluginManager"></span><span class="target" id="classPluginManager_1a25f1e568d8d923e4d2a4f777516b4be5"></span><code class="sig-name descname">PluginManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager13PluginManagerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManagerD0Ev">
+<span id="_CPPv3N13PluginManagerD0Ev"></span><span id="_CPPv2N13PluginManagerD0Ev"></span><span id="PluginManager::~PluginManager"></span><span class="target" id="classPluginManager_1ab657302ef5af357907ae11ad817f5dfc"></span><code class="sig-name descname">~PluginManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManagerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager11loadPluginsEb">
+<span id="_CPPv3N13PluginManager11loadPluginsEb"></span><span id="_CPPv2N13PluginManager11loadPluginsEb"></span><span id="PluginManager::loadPlugins__b"></span><span class="target" id="classPluginManager_1ac51ea0b3dd9b290e44c854f49bd372a4"></span>void <code class="sig-name descname">loadPlugins</code><span class="sig-paren">(</span>bool <em>enablePlugins</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager11loadPluginsEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Load all plugins, should be called once on application start. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enablePlugins</span></code>: set to false if plugin code shouldn’t be started </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager14destroyPluginsEv">
+<span id="_CPPv3N13PluginManager14destroyPluginsEv"></span><span id="_CPPv2N13PluginManager14destroyPluginsEv"></span><span id="PluginManager::destroyPlugins"></span><span class="target" id="classPluginManager_1a3b549d8216d8c233b25bd84437fd519b"></span>void <code class="sig-name descname">destroyPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager14destroyPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy all loaded plugins, should be called once on application shutdown. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager10getPluginsEv">
+<span id="_CPPv3N13PluginManager10getPluginsEv"></span><span id="_CPPv2N13PluginManager10getPluginsEv"></span><span id="PluginManager::getPlugins"></span><span class="target" id="classPluginManager_1a31b4693d81f34b89be911539983e8473"></span><em class="property">const</em> std::vector&lt;<a class="reference internal" href="#_CPPv4N13PluginManager9PluginPtrE" title="PluginManager::PluginPtr">PluginPtr</a>&gt; &amp;<code class="sig-name descname">getPlugins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager10getPluginsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK13PluginManager20getPluginDirectoriesEv">
+<span id="_CPPv3NK13PluginManager20getPluginDirectoriesEv"></span><span id="_CPPv2NK13PluginManager20getPluginDirectoriesEv"></span><span id="PluginManager::getPluginDirectoriesC"></span><span class="target" id="classPluginManager_1a0a52338262e975a8556557682c38a83d"></span>QVector&lt;QDir&gt; <code class="sig-name descname">getPluginDirectories</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager20getPluginDirectoriesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK13PluginManager23getUserPluginsDirectoryEv">
+<span id="_CPPv3NK13PluginManager23getUserPluginsDirectoryEv"></span><span id="_CPPv2NK13PluginManager23getUserPluginsDirectoryEv"></span><span id="PluginManager::getUserPluginsDirectoryC"></span><span class="target" id="classPluginManager_1a4e019db7bed163a7cea3f1c252dd4138"></span>QString <code class="sig-name descname">getUserPluginsDirectory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager23getUserPluginsDirectoryEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N13PluginManager11getInstanceEv">
+<span id="_CPPv3N13PluginManager11getInstanceEv"></span><span id="_CPPv2N13PluginManager11getInstanceEv"></span><span id="PluginManager::getInstance"></span><span class="target" id="classPluginManager_1a9b24d15dbf9166bfccbfc7517933ebf9"></span><a class="reference internal" href="#_CPPv413PluginManager" title="PluginManager">PluginManager</a> *<code class="sig-name descname">getInstance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13PluginManager11getInstanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt id="_CPPv4N13PluginManager16PluginTerminatorE">
+<span id="_CPPv3N13PluginManager16PluginTerminatorE"></span><span id="_CPPv2N13PluginManager16PluginTerminatorE"></span><span id="PluginManager::PluginTerminator"></span><span class="target" id="classPluginManager_1_1PluginTerminator"></span><em class="property">class </em><code class="sig-name descname">PluginTerminator</code><a class="headerlink" href="#_CPPv4N13PluginManager16PluginTerminatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4NK13PluginManager16PluginTerminatorclEP12CutterPlugin">
+<span id="_CPPv3NK13PluginManager16PluginTerminatorclEP12CutterPlugin"></span><span id="_CPPv2NK13PluginManager16PluginTerminatorclEP12CutterPlugin"></span><span id="PluginManager::PluginTerminator::call-operator__CutterPluginPC"></span><span class="target" id="classPluginManager_1_1PluginTerminator_1ab328b47200a378dc99bbcd065e255a30"></span>void <code class="sig-name descname">operator()</code><span class="sig-paren">(</span><a class="reference internal" href="classCutterPlugin.html#_CPPv412CutterPlugin" title="CutterPlugin">CutterPlugin</a>*<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13PluginManager16PluginTerminatorclEP12CutterPlugin" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pluginslist.html">Plugins</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classCutterPlugin.html">CutterPlugin</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PluginManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPluginManager_1_1PluginTerminator.html">PluginManager::PluginTerminator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+    
+
+  </body>
+</html>
