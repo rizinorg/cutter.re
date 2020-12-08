@@ -30,9 +30,9 @@ To build the latest version of Cutter on your local machine, please follow the i
 
 You can contact the *Cutter* developers and community on:
 
--  Telegram: https://t.me/r2cutter
+-  Telegram: https://t.me/cutter_re
 -  #cutter on irc.freenode.net
--  Twitter: https://twitter.com/r2gui
+-  Twitter: https://twitter.com/cutter_re
 
 ----
 

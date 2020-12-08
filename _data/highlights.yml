@@ -1,6 +1,6 @@
 - title: Powered by Rizin
   description: Cutter is using Rizin as its core engine. Thus, allows access to thousands of features via the GUI or by using the integrated terminal.
-  image: assets/images/radare2.png
+  image: assets/images/rizin.svg
 - title: Interactive Widgets
   description: Cutter provides enormous amount of different widgets and features to make your Reverse Engineering experience as comfortable  as possible.
   image: assets/images/hexdump1.gif
