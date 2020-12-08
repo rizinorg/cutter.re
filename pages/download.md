@@ -20,7 +20,7 @@ permalink: /download/
                      <h3 style="display:inline;">Click to download Cutter</h3>
                   </div>
                   <ul class="banner-btn m-0 list-inline">
-                     <li class="list-inline-item"><a href="https://github.com/radareorg/cutter/releases/"
+                     <li class="list-inline-item"><a href="https://github.com/rizinorg/cutter/releases/"
                            target="_blank" class="dwn-btn3 btn btn-primary">
                            <i class="fab fa-1x fa-linux"></i><span> Linux | </span>
                            <i class="fab fa-1x fa-windows"></i><span> Windows | </span>
