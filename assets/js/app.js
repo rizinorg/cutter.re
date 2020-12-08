@@ -165,7 +165,7 @@ function getOS() {
 
 
 const getReleaseVersion = async () => {
-    var url = "https://api.github.com/repos/radareorg/cutter/releases/latest";
+    var url = "https://api.github.com/repos/rizinorg/cutter/releases/latest";
     var urlData = await fetch(url);
     var jsonData = await urlData.json();
     var tag = jsonData.tag_name;
@@ -176,11 +176,11 @@ const getReleaseVersion = async () => {
 
 
 const getReleaseURLForPlatform = async (platform) => {
-    var releaseURL = "https://github.com/radareorg/cutter/releases/latest";
+    var releaseURL = "https://github.com/rizinorg/cutter/releases/latest";
     var tag, notes;
     if (platform != "unknown") {
         [tag, notes] = await getReleaseVersion();
-        releaseURL = "https://github.com/radareorg/cutter/releases/download/" + tag + "/Cutter-" + tag + "-x64." + platform;
+        releaseURL = "https://github.com/rizinorg/cutter/releases/download/" + tag + "/Cutter-" + tag + "-x64." + platform;
     }
 
     return releaseURL;
