@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DisassemblyWidget &#8212; Cutter 1.12.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -76,7 +76,14 @@
 <dl class="cpp function">
 <dt id="_CPPv4N17DisassemblyWidget20highlightCurrentLineEv">
 <span id="_CPPv3N17DisassemblyWidget20highlightCurrentLineEv"></span><span id="_CPPv2N17DisassemblyWidget20highlightCurrentLineEv"></span><span id="DisassemblyWidget::highlightCurrentLine"></span><span class="target" id="classDisassemblyWidget_1a41714cd08dce01e4a2e3875071592789"></span>void <code class="sig-name descname">highlightCurrentLine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17DisassemblyWidget20highlightCurrentLineEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Highlights the currently selected line and updates the highlighting of the same words under the cursor in the visible screen. This overrides all previous highlighting. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N17DisassemblyWidget15highlightPCLineEv">
+<span id="_CPPv3N17DisassemblyWidget15highlightPCLineEv"></span><span id="_CPPv2N17DisassemblyWidget15highlightPCLineEv"></span><span id="DisassemblyWidget::highlightPCLine"></span><span class="target" id="classDisassemblyWidget_1acf22bea0a960b194d9226a89c0c48142"></span>void <code class="sig-name descname">highlightPCLine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17DisassemblyWidget15highlightPCLineEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Adds the PC line highlighting to the other current highlighting. This should be called after highlightCurrentLine since that function overrides all previous highlighting. </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N17DisassemblyWidget20showDisasContextMenuERK6QPoint">
@@ -215,7 +222,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classGenericR2GraphView.html">GenericR2GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGenericRizinGraphView.html">GenericRizinGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphHorizontalAdapter.html">GraphHorizontalAdapter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
@@ -243,7 +250,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classR2GraphWidget.html">R2GraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
@@ -254,6 +260,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinGraphWidget.html">RizinGraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
@@ -335,7 +342,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
     
 

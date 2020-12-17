@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MainWindow &#8212; Cutter 1.12.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -18,7 +18,7 @@
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="RCoreLocked" href="classRCoreLocked.html" />
+    <link rel="next" title="RzCoreLocked" href="classRzCoreLocked.html" />
     <link rel="prev" title="CutterCore" href="classCutterCore.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -35,7 +35,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classRCoreLocked.html" title="RCoreLocked"
+          <a href="classRzCoreLocked.html" title="RzCoreLocked"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="classCutterCore.html" title="CutterCore"
@@ -175,36 +175,23 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N10MainWindow11openProjectERK7QString">
-<span id="_CPPv3N10MainWindow11openProjectERK7QString"></span><span id="_CPPv2N10MainWindow11openProjectERK7QString"></span><span id="MainWindow::openProject__QStringCR"></span><span class="target" id="classMainWindow_1a791035494f3e86859e87d1694e9c2b07"></span>void <code class="sig-name descname">openProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11openProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N10MainWindow11openProjectERK7QString"></span><span id="_CPPv2N10MainWindow11openProjectERK7QString"></span><span id="MainWindow::openProject__QStringCR"></span><span class="target" id="classMainWindow_1a6d731f27d4abf471eaf19fc36d05ce81"></span>bool <code class="sig-name descname">openProject</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11openProjectERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10MainWindow11saveProjectEb">
-<span id="_CPPv3N10MainWindow11saveProjectEb"></span><span id="_CPPv2N10MainWindow11saveProjectEb"></span><span id="MainWindow::saveProject__b"></span><span class="target" id="classMainWindow_1a1931da4d57653ebe1a20c0d9328c277c"></span>bool <code class="sig-name descname">saveProject</code><span class="sig-paren">(</span>bool <em>quit</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11saveProjectEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>if quit is true, false if the application should not close </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code>: whether to show destructive button in dialog </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
+<dt id="_CPPv4N10MainWindow11saveProjectEPb">
+<span id="_CPPv3N10MainWindow11saveProjectEPb"></span><span id="_CPPv2N10MainWindow11saveProjectEPb"></span><span id="MainWindow::saveProject__bP"></span><span class="target" id="classMainWindow_1ac6b3ba1ad1fa17e75e82c021432b13e0"></span>RzProjectErr <code class="sig-name descname">saveProject</code><span class="sig-paren">(</span>bool *<em>canceled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow11saveProjectEPb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10MainWindow13saveProjectAsEb">
-<span id="_CPPv3N10MainWindow13saveProjectAsEb"></span><span id="_CPPv2N10MainWindow13saveProjectAsEb"></span><span id="MainWindow::saveProjectAs__b"></span><span class="target" id="classMainWindow_1ad68b24d1bfa099bd18636d8b0cbe5029"></span>bool <code class="sig-name descname">saveProjectAs</code><span class="sig-paren">(</span>bool <em>quit</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow13saveProjectAsEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>false if the application should not close </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code>: whether to show destructive button in dialog </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
+<dt id="_CPPv4N10MainWindow13saveProjectAsEPb">
+<span id="_CPPv3N10MainWindow13saveProjectAsEPb"></span><span id="_CPPv2N10MainWindow13saveProjectAsEPb"></span><span id="MainWindow::saveProjectAs__bP"></span><span class="target" id="classMainWindow_1aee79e6425251eb84f0709c7cdfdd0ade"></span>RzProjectErr <code class="sig-name descname">saveProjectAs</code><span class="sig-paren">(</span>bool *<em>canceled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow13saveProjectAsEPb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N10MainWindow20showProjectSaveErrorE12RzProjectErr">
+<span id="_CPPv3N10MainWindow20showProjectSaveErrorE12RzProjectErr"></span><span id="_CPPv2N10MainWindow20showProjectSaveErrorE12RzProjectErr"></span><span id="MainWindow::showProjectSaveError__RzProjectErr"></span><span class="target" id="classMainWindow_1ac77ea9620f3d9150886c8be317bce218"></span>void <code class="sig-name descname">showProjectSaveError</code><span class="sig-paren">(</span>RzProjectErr <em>err</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow20showProjectSaveErrorE12RzProjectErr" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N10MainWindow10closeEventEP11QCloseEvent">
@@ -380,23 +367,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10MainWindow12setPanelLockEv">
-<span id="_CPPv3N10MainWindow12setPanelLockEv"></span><span id="_CPPv2N10MainWindow12setPanelLockEv"></span><span id="MainWindow::setPanelLock"></span><span class="target" id="classMainWindow_1aacfd5e94539698742f98c7770ff9a08e"></span>void <code class="sig-name descname">setPanelLock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow12setPanelLockEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt id="_CPPv4N10MainWindow14setTabLocationEv">
 <span id="_CPPv3N10MainWindow14setTabLocationEv"></span><span id="_CPPv2N10MainWindow14setTabLocationEv"></span><span id="MainWindow::setTabLocation"></span><span class="target" id="classMainWindow_1a755e82a6feddb3581f241945561abb23"></span>void <code class="sig-name descname">setTabLocation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow14setTabLocationEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N10MainWindow23on_actionLock_triggeredEv">
-<span id="_CPPv3N10MainWindow23on_actionLock_triggeredEv"></span><span id="_CPPv2N10MainWindow23on_actionLock_triggeredEv"></span><span id="MainWindow::on_actionLock_triggered"></span><span class="target" id="classMainWindow_1ad0edbdc71afbd33cef677699cb764dfc"></span>void <code class="sig-name descname">on_actionLock_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow23on_actionLock_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N10MainWindow29on_actionLockUnlock_triggeredEv">
-<span id="_CPPv3N10MainWindow29on_actionLockUnlock_triggeredEv"></span><span id="_CPPv2N10MainWindow29on_actionLockUnlock_triggeredEv"></span><span id="MainWindow::on_actionLockUnlock_triggered"></span><span class="target" id="classMainWindow_1a90c4539b28fdd50a2b53208eae9f4c91"></span>void <code class="sig-name descname">on_actionLockUnlock_triggered</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow29on_actionLockUnlock_triggeredEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -411,8 +383,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N10MainWindow16lockUnlock_DocksEb">
-<span id="_CPPv3N10MainWindow16lockUnlock_DocksEb"></span><span id="_CPPv2N10MainWindow16lockUnlock_DocksEb"></span><span id="MainWindow::lockUnlock_Docks__b"></span><span class="target" id="classMainWindow_1a58613fdd65ecf71e995fe26e74435382"></span>void <code class="sig-name descname">lockUnlock_Docks</code><span class="sig-paren">(</span>bool <em>what</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow16lockUnlock_DocksEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N10MainWindow9lockDocksEb">
+<span id="_CPPv3N10MainWindow9lockDocksEb"></span><span id="_CPPv2N10MainWindow9lockDocksEb"></span><span id="MainWindow::lockDocks__b"></span><span class="target" id="classMainWindow_1a78096cb5a64490bff9f8ae3eb174518a"></span>void <code class="sig-name descname">lockDocks</code><span class="sig-paren">(</span>bool <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10MainWindow9lockDocksEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -464,7 +436,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../corelist.html">Core</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="classCutterCore.html">CutterCore</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">MainWindow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classRCoreLocked.html">RCoreLocked</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRzCoreLocked.html">RzCoreLocked</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAnalBaseClassDescription.html">AnalBaseClassDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAnalMethodDescription.html">AnalMethodDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAnalVTableDescription.html">AnalVTableDescription</a></li>
@@ -486,14 +458,14 @@
 <li class="toctree-l3"><a class="reference internal" href="structImportDescription.html">ImportDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMemoryMapDescription.html">MemoryMapDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structProcessDescription.html">ProcessDescription</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRAsmPluginDescription.html">RAsmPluginDescription</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRBinPluginDescription.html">RBinPluginDescription</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRCorePluginDescription.html">RCorePluginDescription</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRIOPluginDescription.html">RIOPluginDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRefDescription.html">RefDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRegisterRefValueDescription.html">RegisterRefValueDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRelocDescription.html">RelocDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structResourcesDescription.html">ResourcesDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRzAsmPluginDescription.html">RzAsmPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRzBinPluginDescription.html">RzBinPluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRzCorePluginDescription.html">RzCorePluginDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRzIOPluginDescription.html">RzIOPluginDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSearchDescription.html">SearchDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSectionDescription.html">SectionDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSegmentDescription.html">SegmentDescription</a></li>
@@ -534,7 +506,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
     
 

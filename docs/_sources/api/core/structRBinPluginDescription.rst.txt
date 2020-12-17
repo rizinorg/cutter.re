@@ -1,4 +1,0 @@
-RBinPluginDescription
-=====================
-
-.. doxygenstruct:: RBinPluginDescription
