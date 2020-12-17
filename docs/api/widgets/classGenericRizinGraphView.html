@@ -4,8 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>R2GraphWidget &#8212; Cutter 1.12.0 documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenericRizinGraphView &#8212; Cutter 1.12.0 documentation</title>
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
@@ -18,8 +18,8 @@
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="RawAddrDock" href="classRawAddrDock.html" />
-    <link rel="prev" title="QuickFilterView" href="classQuickFilterView.html" />
+    <link rel="next" title="GraphGridLayout" href="classGraphGridLayout.html" />
+    <link rel="prev" title="FunctionsWidget" href="classFunctionsWidget.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -35,15 +35,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classRawAddrDock.html" title="RawAddrDock"
+          <a href="classGraphGridLayout.html" title="GraphGridLayout"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classQuickFilterView.html" title="QuickFilterView"
+          <a href="classFunctionsWidget.html" title="FunctionsWidget"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">R2GraphWidget</a></li> 
+        <li class="nav-item nav-item-this"><a href="">GenericRizinGraphView</a></li> 
       </ul>
     </div>
 
@@ -53,21 +53,39 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="r2graphwidget">
-<h1>R2GraphWidget<a class="headerlink" href="#r2graphwidget" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="genericrizingraphview">
+<h1>GenericRizinGraphView<a class="headerlink" href="#genericrizingraphview" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
-<dt id="_CPPv413R2GraphWidget">
-<span id="_CPPv313R2GraphWidget"></span><span id="_CPPv213R2GraphWidget"></span><span id="R2GraphWidget"></span><span class="target" id="classR2GraphWidget"></span><em class="property">class </em><code class="sig-name descname">R2GraphWidget</code> : <em class="property">public</em> <a class="reference internal" href="classCutterDockWidget.html#_CPPv416CutterDockWidget" title="CutterDockWidget">CutterDockWidget</a><a class="headerlink" href="#_CPPv413R2GraphWidget" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dt id="_CPPv421GenericRizinGraphView">
+<span id="_CPPv321GenericRizinGraphView"></span><span id="_CPPv221GenericRizinGraphView"></span><span id="GenericRizinGraphView"></span><span class="target" id="classGenericRizinGraphView"></span><em class="property">class </em><code class="sig-name descname">GenericRizinGraphView</code> : <em class="property">public</em> <a class="reference internal" href="classSimpleTextGraphView.html#_CPPv419SimpleTextGraphView" title="SimpleTextGraphView">SimpleTextGraphView</a><a class="headerlink" href="#_CPPv421GenericRizinGraphView" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generic graph view for rizin graphs. Not all rizin graph commands output the same kind of json. Only those that have following format. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="s2">&quot;tittle&quot;</span><span class="p">:</span> <span class="s2">&quot;node_0_tittle&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span>
+         <span class="s2">&quot;out_nodes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+     <span class="p">},</span>
+     <span class="o">...</span>
+<span class="p">]}</span>
+</pre></div>
+</div>
+ Id don’t have to be sequential. Simple text label is displayed containing concatenation of label and body. No rizin builtin graph uses both. Duplicate edges and edges with target id not present in the list of nodes are removed. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
-<dt id="_CPPv4N13R2GraphWidget13R2GraphWidgetEP10MainWindow">
-<span id="_CPPv3N13R2GraphWidget13R2GraphWidgetEP10MainWindow"></span><span id="_CPPv2N13R2GraphWidget13R2GraphWidgetEP10MainWindow"></span><span id="R2GraphWidget::R2GraphWidget__MainWindowP"></span><span class="target" id="classR2GraphWidget_1a3c0582aa49b6bcbdb19f9521c0688a58"></span><code class="sig-name descname">R2GraphWidget</code><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>main</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13R2GraphWidget13R2GraphWidgetEP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow">
+<span id="_CPPv3N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="_CPPv2N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="GenericRizinGraphView::GenericRizinGraphView__RizinGraphWidgetP.MainWindowP"></span><span class="target" id="classGenericRizinGraphView_1a4d4423b5863ce34cf6f551425e25f8dc"></span><code class="sig-name descname">GenericRizinGraphView</code><span class="sig-paren">(</span><a class="reference internal" href="classRizinGraphWidget.html#_CPPv416RizinGraphWidget" title="RizinGraphWidget">RizinGraphWidget</a> *<em>parent</em>, <a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow">MainWindow</a> *<em>main</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N13R2GraphWidgetD0Ev">
-<span id="_CPPv3N13R2GraphWidgetD0Ev"></span><span id="_CPPv2N13R2GraphWidgetD0Ev"></span><span id="R2GraphWidget::~R2GraphWidget"></span><span class="target" id="classR2GraphWidget_1a6781fdb23fea1bec302ae9021b4a6c3d"></span><code class="sig-name descname">~R2GraphWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13R2GraphWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString">
+<span id="_CPPv3N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="_CPPv2N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="GenericRizinGraphView::setGraphCommand__QString"></span><span class="target" id="classGenericRizinGraphView_1a62ca55f188b4a0928afbf2f02fd86182"></span>void <code class="sig-name descname">setGraphCommand</code><span class="sig-paren">(</span>QString <em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N21GenericRizinGraphView11refreshViewEv">
+<span id="_CPPv3N21GenericRizinGraphView11refreshViewEv"></span><span id="_CPPv2N21GenericRizinGraphView11refreshViewEv"></span><span id="GenericRizinGraphView::refreshView"></span><span class="target" id="classGenericRizinGraphView_1acfc4fda826b78f148b23d65e3b8d5730"></span>void <code class="sig-name descname">refreshView</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView11refreshViewEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -159,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classGenericR2GraphView.html">GenericR2GraphView</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GenericRizinGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphHorizontalAdapter.html">GraphHorizontalAdapter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
@@ -187,7 +205,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">R2GraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
@@ -198,6 +215,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinGraphWidget.html">RizinGraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
@@ -279,7 +297,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
     
 

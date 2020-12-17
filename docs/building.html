@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building &#8212; Cutter 1.12.0 documentation</title>
     <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -56,20 +56,20 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you just want to use the latest Release version of Cutter, please note
-that we provide pre-compiled binaries for Windows, Linux and macOS on
-our <a class="reference external" href="https://github.com/radareorg/cutter/releases/latest">release page.</a></p>
+that we provide pre-compiled binaries for Windows, Linux, and macOS on
+our <a class="reference external" href="https://github.com/rizinorg/cutter/releases/latest">release page.</a></p>
 </div>
 <div class="section" id="getting-the-source">
 <h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Permalink to this headline">¶</a></h2>
 <p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/radareorg/cutter
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/rizinorg/cutter
 </pre></div>
 </div>
-<p>This will clone the Cutter source and it’s dependencies(radare2, etc.)
+<p>This will clone the Cutter source and its dependencies(rizin, etc.)
 under <strong>cutter</strong> and you should see the following dir structure:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cutter/-<span class="p">|</span>
         <span class="p">|</span>-docs/     <span class="c1"># Cutter Documentation</span>
-        <span class="p">|</span>-radare2/  <span class="c1"># radare2 submodule</span>
+        <span class="p">|</span>-rizin/    <span class="c1"># Rizin submodule</span>
         <span class="p">|</span>-src/      <span class="c1"># Cutter Source Code</span>
 </pre></div>
 </div>
@@ -113,18 +113,18 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 </div>
 <div class="section" id="building-steps">
 <h3>Building Steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
-<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency radare2.</p>
+<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON ../src
+cmake -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON ..
 cmake --build .
 </pre></div>
 </div>
 <p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -B build -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON
 cmake --build build
 </pre></div>
 </div>
-<p>If you want to use Cutter with another version of radare2 you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RADARE2=ON</span></code>. Note that using a version of radare2 which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
+<p>If you want to use Cutter with another version of Rizin you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=ON</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are interested in building Cutter with support for Python plugins,
@@ -157,7 +157,6 @@ you will have to make sure that the executables are available
 in your <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code> environment variable.</p>
 <p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="p">=</span>c:\Qt\qt-5.6.2-msvc2013-x86\5.6\msvc2013\lib\cmake
-<span class="k">cd</span> src
 <span class="k">mkdir</span> build
 <span class="k">cd</span> build
 cmake-gui ..
@@ -195,7 +194,7 @@ source root directory (ie. <strong>cutter</strong> - working dir).</p>
 </pre></div>
 </div>
 <p>To compile Cutter, run:</p>
-<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">CALL</span> prepare_r2.bat
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">CALL</span> prepare_rizin.bat
 <span class="k">CALL</span> build.bat
 </pre></div>
 </div>
@@ -213,7 +212,7 @@ QtCreator will then allow you to directly edit the source code and build the pro
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On <strong>Windows</strong>, for the <code class="docutils literal notranslate"><span class="pre">.pro</span></code> file to be compiled successfully, it is required
-to run <code class="docutils literal notranslate"><span class="pre">prepare_r2.bat</span></code> beforehand.</p>
+to run <code class="docutils literal notranslate"><span class="pre">prepare_rizin.bat</span></code> beforehand.</p>
 </div>
 </div>
 <div class="section" id="compiling-on-linux-macos">
@@ -243,7 +242,7 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <h2>CMake Building Options<a class="headerlink" href="#cmake-building-options" title="Permalink to this headline">¶</a></h2>
 <p>Note that there are some major building options available:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> automatically compile Radare2 from submodule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
@@ -253,7 +252,7 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <p>Cutter binary release options, not needed for most users and might not work easily outside CI environment:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by r2 build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by Rizin build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packges.</p></li>
 </ul>
 <p>These options can be enabled or disabled from the command line arguments passed to CMake.
@@ -303,35 +302,35 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 </pre></div>
 </div>
 <ul>
-<li><p><strong>Radare2’s libr_*.so cannot be found when running Cutter</strong></p>
+<li><p><strong>Rizin’s librz_*.so cannot be found when running Cutter</strong></p>
 <blockquote>
-<div><p>./Cutter: error while loading shared libraries: libr_lang.so: cannot open shared object file: No such file or directory</p>
+<div><p>./Cutter: error while loading shared libraries: librz_lang.so: cannot open shared object file: No such file or directory</p>
 </div></blockquote>
 </li>
 </ul>
-<p>The exact r2 .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way r2 is currently compiled. It results in some of the r2 libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./Cutter</cite>. If all the r2 libraries are missing you have a different problem.
-The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the r2 installation path to LD_LIBRARY_PATH environment variable.</p>
+<p>The exact Rizin .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way Rizin is currently compiled. It results in some of the Rizin libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./Cutter</cite>. If all the Rizin libraries are missing you have a different problem.
+The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the Rizin installation path to LD_LIBRARY_PATH environment variable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_EXE_LINKER_FLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,--disable-new-dtags&quot;</span>  <span class="o">..</span>
 </pre></div>
 </div>
 <ul>
 <li><p><strong>r_*.h: No such file or directory</strong></p>
 <blockquote>
-<div><p>r_util/r_annotated_code.h: No such file or directory</p>
+<div><p>rz_util/rz_annotated_code.h: No such file or directory</p>
 </div></blockquote>
 </li>
 </ul>
-<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">r_</span></code> is missing, you should check the <strong>radare2</strong> submodule and
+<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">rz_</span></code> is missing, you should check the <strong>rizin</strong> submodule and
 make sure it is in sync with upstream <strong>Cutter</strong> repo. Simply run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><strong>r_core development package not found</strong></p></li>
+<li><p><strong>rz_core development package not found</strong></p></li>
 </ul>
-<p>If you installed radare2 and still encounter this error, it could be that your
+<p>If you installed Rizin and still encounter this error, it could be that your
 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable is set improperly (doesn’t contain
-<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the radare2 installation dir to
+<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the Rizin installation dir to
 your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable.</p>
 <p>macOS specific solutions:</p>
 <p>On macOS, that can also be, for example, due to <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator.app</span></code>
@@ -341,12 +340,12 @@ Environment</em> section in Qt Creator. See the screenshot below should you
 encounter any problems.</p>
 <p>You can also try:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/radare2/lib/pkgconfig</span> <span class="pre">qmake</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/cutter/radare2/pkgcfg</span> <span class="pre">qmake</span></code> (for a newer
-version and if the radare2 submodule is being built and used)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/rizin/lib/pkgconfig</span> <span class="pre">qmake</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/cutter/rizin/pkgcfg</span> <span class="pre">qmake</span></code> (for a newer
+version and if the rizin submodule is being built and used)</p></li>
 </ul>
 <img alt="_images/cutter_path_settings.png" src="_images/cutter_path_settings.png" />
-<p>You can also install radare2 into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
+<p>You can also install Rizin into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
 add a variable <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> with the value <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code>.</p>
 <ul class="simple">
 <li><p><strong>macOS libjpeg error</strong></p></li>
@@ -430,7 +429,7 @@ installed with brew. Run this command to work around the issue:</p>
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
     
 

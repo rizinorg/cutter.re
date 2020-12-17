@@ -4,8 +4,8 @@ Building
 .. note::
 
  If you just want to use the latest Release version of Cutter, please note
- that we provide pre-compiled binaries for Windows, Linux and macOS on
- our `release page. <https://github.com/radareorg/cutter/releases/latest>`_
+ that we provide pre-compiled binaries for Windows, Linux, and macOS on
+ our `release page. <https://github.com/rizinorg/cutter/releases/latest>`_
 
 Getting the Source
 ------------------
@@ -14,17 +14,17 @@ Make sure you've ``git`` installed in your system (`Installation guide <https://
 
 .. code-block:: sh
 
-   git clone --recurse-submodules https://github.com/radareorg/cutter
+   git clone --recurse-submodules https://github.com/rizinorg/cutter
 
 
-This will clone the Cutter source and it's dependencies(radare2, etc.)
+This will clone the Cutter source and its dependencies(rizin, etc.)
 under **cutter** and you should see the following dir structure:
 
 .. code-block:: sh
 
     cutter/-|
             |-docs/     # Cutter Documentation
-            |-radare2/  # radare2 submodule
+            |-rizin/    # Rizin submodule
             |-src/      # Cutter Source Code
 
 Following sections assume that **cutter** is your working dir. (if not, do ``cd cutter``)
@@ -72,23 +72,23 @@ On Arch-based Linux distributions:
 Building Steps
 ~~~~~~~~~~~~~~
 
-The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency radare2.
+The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.
 
 .. code:: sh
 
    mkdir build && cd build
-   cmake -DCUTTER_USE_BUNDLED_RADARE2=ON ../src
+   cmake -DCUTTER_USE_BUNDLED_RIZIN=ON ..
    cmake --build .
 
 If your operating system has a newer version of CMake (> v3.12) you can use this cleaner solution:
 
 .. code:: sh
 
-   cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2=ON
+   cmake -B build -DCUTTER_USE_BUNDLED_RIZIN=ON
    cmake --build build
 
 .. note::
-If you want to use Cutter with another version of radare2 you can omit ``-DCUTTER_USE_BUNDLED_RADARE2=ON``. Note that using a version of radare2 which isn't the version Cutter is using can cause issues and the compilation might fail.
+If you want to use Cutter with another version of Rizin you can omit ``-DCUTTER_USE_BUNDLED_RIZIN=ON``. Note that using a version of Rizin which isn't the version Cutter is using can cause issues and the compilation might fail.
 
 .. note::
 
@@ -130,7 +130,6 @@ Note that the paths below may vary depending on your version of Qt and Visual St
 .. code:: batch
 
    set CMAKE_PREFIX_PATH=c:\Qt\qt-5.6.2-msvc2013-x86\5.6\msvc2013\lib\cmake
-   cd src
    mkdir build
    cd build
    cmake-gui ..
@@ -179,7 +178,7 @@ To compile Cutter, run:
 
 .. code:: batch
 
-   CALL prepare_r2.bat
+   CALL prepare_rizin.bat
    CALL build.bat
 
 
@@ -199,7 +198,7 @@ QtCreator will then allow you to directly edit the source code and build the pro
 .. note::
 
    On **Windows**, for the ``.pro`` file to be compiled successfully, it is required
-   to run ``prepare_r2.bat`` beforehand.
+   to run ``prepare_rizin.bat`` beforehand.
 
 Compiling on Linux / macOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -235,7 +234,7 @@ CMake Building Options
 
 Note that there are some major building options available:
 
-* ``CUTTER_USE_BUNDLED_RADARE2`` automatically compile Radare2 from submodule.
+* ``CUTTER_USE_BUNDLED_RIZIN`` automatically compile Rizin from submodule.
 * ``CUTTER_ENABLE_PYTHON`` compile with Python support.
 * ``CUTTER_ENABLE_PYTHON_BINDINGS`` automatically generate Python Bindings with Shiboken2, required for Python plugins!
 * ``CUTTER_ENABLE_KSYNTAXHIGHLIGHTING`` use KSyntaxHighlighting for code highlighting.
@@ -245,7 +244,7 @@ Note that there are some major building options available:
 Cutter binary release options, not needed for most users and might not work easily outside CI environment: 
 
 * ``CUTTER_ENABLE_CRASH_REPORTS`` is used to compile Cutter with crash handling system enabled (Breakpad).
-* ``CUTTER_ENABLE_DEPENDENCY_DOWNLOADS`` Enable downloading of dependencies. Setting to OFF doesn't affect any downloads done by r2 build. This option is used for preparing Cutter binary release packges. Turned off by default.
+* ``CUTTER_ENABLE_DEPENDENCY_DOWNLOADS`` Enable downloading of dependencies. Setting to OFF doesn't affect any downloads done by Rizin build. This option is used for preparing Cutter binary release packges. Turned off by default.
 * ``CUTTER_PACKAGE_DEPENDENCIES`` During install step include the third party dependencies. This option is used for preparing Cutter binary release packges. 
 
 
@@ -306,12 +305,12 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
    rm CMakeCache.txt # the cache may be polluted with unwanted libraries found before
    cmake -DCMAKE_PREFIX_PATH=/opt/Qt/5.9.1/gcc_64 ..
 
-* **Radare2's libr_*.so cannot be found when running Cutter**
+* **Rizin's librz_*.so cannot be found when running Cutter**
 
-   ./Cutter: error while loading shared libraries: libr_lang.so: cannot open shared object file: No such file or directory
+   ./Cutter: error while loading shared libraries: librz_lang.so: cannot open shared object file: No such file or directory
 
-The exact r2 .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way r2 is currently compiled. It results in some of the r2 libraries not being found when running cutter. You can verify if this is the problem by running `ldd ./Cutter`. If all the r2 libraries are missing you have a different problem.
-The workaround is to either add the `--disable-new-dtags` linker flag when compiling Cutter or add the r2 installation path to LD_LIBRARY_PATH environment variable.
+The exact Rizin .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way Rizin is currently compiled. It results in some of the Rizin libraries not being found when running cutter. You can verify if this is the problem by running `ldd ./Cutter`. If all the Rizin libraries are missing you have a different problem.
+The workaround is to either add the `--disable-new-dtags` linker flag when compiling Cutter or add the Rizin installation path to LD_LIBRARY_PATH environment variable.
 
 ::
 
@@ -319,20 +318,20 @@ The workaround is to either add the `--disable-new-dtags` linker flag when compi
 
 * **r_*.h: No such file or directory**
 
-    r_util/r_annotated_code.h: No such file or directory
+    rz_util/rz_annotated_code.h: No such file or directory
 
-If you face an error where some header file starting with ``r_`` is missing, you should check the **radare2** submodule and
+If you face an error where some header file starting with ``rz_`` is missing, you should check the **rizin** submodule and
 make sure it is in sync with upstream **Cutter** repo. Simply run:
 
 ::
 
    git submodule update --init --recursive
 
-* **r_core development package not found**
+* **rz_core development package not found**
 
-If you installed radare2 and still encounter this error, it could be that your
+If you installed Rizin and still encounter this error, it could be that your
 ``PATH`` environment variable is set improperly (doesn’t contain
-``/usr/local/bin``). You can fix this by adding the radare2 installation dir to
+``/usr/local/bin``). You can fix this by adding the Rizin installation dir to
 your ``PATH`` variable.
 
 macOS specific solutions:
@@ -345,13 +344,13 @@ encounter any problems.
 
 You can also try:
 
--  ``PKG_CONFIG_PATH=$HOME/bin/prefix/radare2/lib/pkgconfig qmake``
--  ``PKG_CONFIG_PATH=$HOME/cutter/radare2/pkgcfg qmake`` (for a newer
-   version and if the radare2 submodule is being built and used)
+-  ``PKG_CONFIG_PATH=$HOME/bin/prefix/rizin/lib/pkgconfig qmake``
+-  ``PKG_CONFIG_PATH=$HOME/cutter/rizin/pkgcfg qmake`` (for a newer
+   version and if the rizin submodule is being built and used)
 
 .. image:: images/cutter_path_settings.png
 
-You can also install radare2 into ``/usr/lib/pkgconfig/`` and then
+You can also install Rizin into ``/usr/lib/pkgconfig/`` and then
 add a variable ``PKG_CONFIG_PATH`` with the value ``/usr/lib/pkgconfig/``.
 
 * **macOS libjpeg error**

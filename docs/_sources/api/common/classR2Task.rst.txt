@@ -1,4 +1,0 @@
-R2Task
-======
-
-.. doxygenclass:: R2Task
