@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contributing code to Cutter &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -72,7 +71,7 @@
 <div class="section" id="find-something-to-work-on">
 <h2>Find something to work on<a class="headerlink" href="#find-something-to-work-on" title="Permalink to this headline">¶</a></h2>
 <p>Some will reach this page with a clear idea of what issue they want to fix or what feature they wish to implement. But some would simply want to help Cutter getting better while doing open-source, without having a specific thing in mind. If you already have something in mind - great! Move forward to the next section. If you don’t have anything specific, stick with us a little bit more.</p>
-<p>The issues and the feature-requests of Cutter are listed and tracked on our <a class="reference external" href="https://github.com/radareorg/cutter/issues">Github Issues</a> page. Don’t get scared by the number of issues open, we will learn how to filter them to find those which fit you best.</p>
+<p>The issues and the feature-requests of Cutter are listed and tracked on our <a class="reference external" href="https://github.com/rizinorg/cutter/issues">Github Issues</a> page. Don’t get scared by the number of issues open, we will learn how to filter them to find those which fit you best.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Fix your pet peeve!</strong> Anything specific that annoys you about Cutter? Fantastic! This can be a great place to start.</p>
@@ -82,15 +81,15 @@
 <p>In order to organize the hundreds of Issues opened on Cutter, we use several features of Github for project management. Get yourself familiar with the following features, it will help you filter the issues.</p>
 <div class="section" id="labels">
 <h4>Labels<a class="headerlink" href="#labels" title="Permalink to this headline">¶</a></h4>
-<p>Tagging issues and pull requests with labels allows us to quickly search for them later. We use labels to describe the type of the issue, the feature it belongs to, the difficulty, and even its priority. We recommend you to start from issues labeled as <a class="reference external" href="https://github.com/radareorg/cutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good-first-issue</a>. These issues were tagged by us as suitable for new contributors.</p>
+<p>Tagging issues and pull requests with labels allows us to quickly search for them later. We use labels to describe the type of the issue, the feature it belongs to, the difficulty, and even its priority. We recommend you to start from issues labeled as <a class="reference external" href="https://github.com/rizinorg/cutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good-first-issue</a>. These issues were tagged by us as suitable for new contributors.</p>
 </div>
 <div class="section" id="projects">
 <h4>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h4>
-<p>We use <a class="reference external" href="https://github.com/radareorg/cutter/projects">project boards</a> to gather together tasks and issues for specific features or problems. For example, we have dedicated project boards for Debugger, Hexdump widget, Decompiler widget, and High DPI support. If you are interested to take part in developing a major feature, or you want to get a broader look at a progress of a specific part in Cutter, this can be a good place to visit.</p>
+<p>We use <a class="reference external" href="https://github.com/rizinorg/cutter/projects">project boards</a> to gather together tasks and issues for specific features or problems. For example, we have dedicated project boards for Debugger, Hexdump widget, Decompiler widget, and High DPI support. If you are interested to take part in developing a major feature, or you want to get a broader look at a progress of a specific part in Cutter, this can be a good place to visit.</p>
 </div>
 <div class="section" id="milestones">
 <h4>Milestones<a class="headerlink" href="#milestones" title="Permalink to this headline">¶</a></h4>
-<p>When starting working on a new release, we gather together the bug and feature-requests that we consider of high-priority into a <a class="reference external" href="https://github.com/radareorg/cutter/milestones">Milestone</a>. If you want to work on a feature or fix a bug that is needed and prioritized for the next release, then check out the open Milestone,.</p>
+<p>When starting working on a new release, we gather together the bug and feature-requests that we consider of high-priority into a <a class="reference external" href="https://github.com/rizinorg/cutter/milestones">Milestone</a>. If you want to work on a feature or fix a bug that is needed and prioritized for the next release, then check out the open Milestone,.</p>
 </div>
 <div class="section" id="assigning-issues">
 <h4>Assigning Issues<a class="headerlink" href="#assigning-issues" title="Permalink to this headline">¶</a></h4>
@@ -164,6 +163,7 @@
 <li class="toctree-l2"><a class="reference internal" href="development-guidelines.html">Cutter Development Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-procedure.html">Release Procedure</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
@@ -190,7 +190,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 

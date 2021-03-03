@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Building &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="_static/admonitions.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/cutter.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -56,20 +55,20 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you just want to use the latest Release version of Cutter, please note
-that we provide pre-compiled binaries for Windows, Linux and macOS on
-our <a class="reference external" href="https://github.com/radareorg/cutter/releases/latest">release page.</a></p>
+that we provide pre-compiled binaries for Windows, Linux, and macOS on
+our <a class="reference external" href="https://github.com/rizinorg/cutter/releases/latest">release page.</a></p>
 </div>
 <div class="section" id="getting-the-source">
 <h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Permalink to this headline">¶</a></h2>
 <p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/radareorg/cutter
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/rizinorg/cutter
 </pre></div>
 </div>
-<p>This will clone the Cutter source and it’s dependencies(radare2, etc.)
+<p>This will clone the Cutter source and its dependencies(rizin, etc.)
 under <strong>cutter</strong> and you should see the following dir structure:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cutter/-<span class="p">|</span>
         <span class="p">|</span>-docs/     <span class="c1"># Cutter Documentation</span>
-        <span class="p">|</span>-radare2/  <span class="c1"># radare2 submodule</span>
+        <span class="p">|</span>-rizin/    <span class="c1"># Rizin submodule</span>
         <span class="p">|</span>-src/      <span class="c1"># Cutter Source Code</span>
 </pre></div>
 </div>
@@ -113,18 +112,18 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 </div>
 <div class="section" id="building-steps">
 <h3>Building Steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
-<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency radare2.</p>
+<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON ../src
+cmake -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON ..
 cmake --build .
 </pre></div>
 </div>
 <p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -S src -B build -DCUTTER_USE_BUNDLED_RADARE2<span class="o">=</span>ON
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -B build -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON
 cmake --build build
 </pre></div>
 </div>
-<p>If you want to use Cutter with another version of radare2 you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RADARE2=ON</span></code>. Note that using a version of radare2 which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
+<p>If you want to use Cutter with another version of Rizin you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=ON</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are interested in building Cutter with support for Python plugins,
@@ -133,7 +132,7 @@ please look at the full list of <a class="reference internal" href="#cmake-build
 </div>
 <p>After the build process is complete, you should have the <code class="docutils literal notranslate"><span class="pre">Cutter</span></code> executable in the <strong>build</strong> dir.
 You can now execute Cutter like this:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/Cutter
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/cutter
 </pre></div>
 </div>
 </div>
@@ -145,95 +144,66 @@ You can now execute Cutter like this:</p>
 <p>Cutter works on Windows 7 or newer.
 To compile Cutter it is necessary to have the following installed:</p>
 <ul class="simple">
-<li><p>A version of Visual Studio (2015, 2017 and 2019 are supported)</p></li>
-<li><p>CMake</p></li>
-<li><p>Qt</p></li>
+<li><p>A version of <a class="reference external" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=16">Visual Studio</a> (2015, 2017 and 2019 are supported)</p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">CMake</a></p></li>
+<li><p><a class="reference external" href="https://www.qt.io/download-qt-installer">Qt 5</a></p></li>
+<li><p><a class="reference external" href="https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip">Meson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ninja-build/ninja/releases/latest">Ninja</a></p></li>
 </ul>
 </div>
-<div class="section" id="recommended-way">
-<h3>Recommended Way<a class="headerlink" href="#recommended-way" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Building Steps<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>To build Cutter on Windows machines using CMake,
 you will have to make sure that the executables are available
 in your <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code> environment variable.</p>
+<p>You can check if the binaries are available by opening PowerShell and
+executing the following commands.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ninja</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">meson</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">cmake</span> <span class="p">-</span><span class="n">-version</span>
+</pre></div>
+</div>
+<p>If they are not available, you can use PowerShell to add them to your PATH one by one:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\enter\path\here&quot;</span>
+</pre></div>
+</div>
 <p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
-<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">CMAKE_PREFIX_PATH</span><span class="p">=</span>c:\Qt\qt-5.6.2-msvc2013-x86\5.6\msvc2013\lib\cmake
-<span class="k">cd</span> src
-<span class="k">mkdir</span> build
-<span class="k">cd</span> build
-cmake-gui ..
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># First, set CMAKE_PREFIX_PATH to Qt5 intallation prefix</span>
+<span class="nv">$Env:CMAKE_PREFIX_PATH</span> <span class="p">=</span> <span class="s2">&quot;C:\Qt\5.15.2\msvc2019_64\lib\cmake\Qt5&quot;</span>
+
+<span class="c"># Then, add the following directory to your PATH</span>
+<span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\Qt\5.15.2\msvc2019_64\bin&quot;</span>
+
+<span class="c"># Build Cutter</span>
+<span class="n">cmake</span> <span class="n">-B</span> <span class="n">build</span> <span class="n">-DCUTTER_USE_BUNDLED_RIZIN</span><span class="p">=</span><span class="n">ON</span>
+<span class="n">cmake</span> <span class="p">-</span><span class="n">-build</span> <span class="n">build</span>
 </pre></div>
 </div>
-<p>Click <code class="docutils literal notranslate"><span class="pre">Configure</span></code> and select your version of Visual Studio from the list,
-for example <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14</span> <span class="pre">2015</span></code>.
-After the configuration is done, click <code class="docutils literal notranslate"><span class="pre">Generate</span></code> and you can open
-<code class="docutils literal notranslate"><span class="pre">Cutter.sln</span></code> to compile the code as usual.</p>
+<p>After the compilation completes, the <code class="docutils literal notranslate"><span class="pre">cutter.exe</span></code> binary will be available in <code class="docutils literal notranslate"><span class="pre">.\build\Debug\cutter.exe</span></code>.</p>
 </div>
-<div class="section" id="building-with-meson">
-<h3>Building with Meson<a class="headerlink" href="#building-with-meson" title="Permalink to this headline">¶</a></h3>
-<p>There is another way to compile Cutter on Windows if the one above does
-not work or does not suit your needs.</p>
-<p>Additional requirements:</p>
+</div>
+<div class="section" id="building-on-macos">
+<h2>Building on macOS<a class="headerlink" href="#building-on-macos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Requirements<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Ninja build system</p></li>
-<li><p>Meson build system</p></li>
+<li><p>XCode</p></li>
+<li><p>CMake</p></li>
+<li><p>Qt</p></li>
+<li><p>meson</p></li>
+<li><p>ninja</p></li>
 </ul>
-<p>Download and unpack
-<a class="reference external" href="https://github.com/ninja-build/ninja/releases">Ninja</a> to the Cutter
-source root directory (ie. <strong>cutter</strong> - working dir).</p>
-<p>Note that in the below steps, the paths may vary depending on your version of Qt and Visual Studio.</p>
-<p>Environment settings (example for x64 version):</p>
-<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="c1">: Export MSVC variables</span>
-<span class="k">CALL</span> <span class="s2">&quot;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat&quot;</span> x64
-<span class="p">:</span><span class="c1">: Add qmake to PATH</span>
-<span class="k">SET</span> <span class="s2">&quot;PATH=C:\Qt\5.10.1\msvc2015_64\bin;</span><span class="nv">%PATH%</span><span class="s2">&quot;</span>
-<span class="p">:</span><span class="c1">: Add Python to PATH</span>
-<span class="k">SET</span> <span class="s2">&quot;PATH=C:\Program Files\Python36;</span><span class="nv">%PATH%</span><span class="s2">&quot;</span>
-</pre></div>
-</div>
-<p>Install Meson:</p>
-<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span>python -m pip install meson
-</pre></div>
-</div>
-<p>To compile Cutter, run:</p>
-<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">CALL</span> prepare_r2.bat
-<span class="k">CALL</span> build.bat
+<p>For basic build all dependencies except XCode can be installed using homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">qt5</span> <span class="n">meson</span> <span class="n">ninja</span>
 </pre></div>
 </div>
 </div>
-</div>
-<hr class="docutils" />
-<div class="section" id="building-with-qmake">
-<h2>Building with Qmake<a class="headerlink" href="#building-with-qmake" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-qtcreator">
-<h3>Using QtCreator<a class="headerlink" href="#using-qtcreator" title="Permalink to this headline">¶</a></h3>
-<p>One standard way is to simply load the project inside QtCreator.
-To do so, open QtCreator and on the welcome screen click on “Open Project”,
-and finally select the <code class="docutils literal notranslate"><span class="pre">cutter/src/Cutter.pro</span></code> file.
-QtCreator will then allow you to directly edit the source code and build the project.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On <strong>Windows</strong>, for the <code class="docutils literal notranslate"><span class="pre">.pro</span></code> file to be compiled successfully, it is required
-to run <code class="docutils literal notranslate"><span class="pre">prepare_r2.bat</span></code> beforehand.</p>
-</div>
-</div>
-<div class="section" id="compiling-on-linux-macos">
-<h3>Compiling on Linux / macOS<a class="headerlink" href="#compiling-on-linux-macos" title="Permalink to this headline">¶</a></h3>
-<p>The easiest way, but not the one we recommend, is to simply run <code class="docutils literal notranslate"><span class="pre">./build.sh</span></code> from the root directory,
-and let the magic happen. The script will use <code class="docutils literal notranslate"><span class="pre">qmake</span></code> to build Cutter.
-The <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> script is meant to be deprecated and will be deleted in the future.</p>
-<p>If you want to manually use qmake, follow these steps:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build<span class="p">;</span> <span class="nb">cd</span> build
-qmake ../src/Cutter.pro
+<div class="section" id="recommended-way-for-dev-builds">
+<h3>Recommended Way for dev builds<a class="headerlink" href="#recommended-way-for-dev-builds" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> build
+<span class="k">cd</span> build
+cmake .. -DCUTTER_USE_BUNDLED_RIZIN=ON -DCMAKE_PREFIX_PATH=/local/opt/qt5
 make
-<span class="nb">cd</span> ..
-</pre></div>
-</div>
-</div>
-<div class="section" id="additional-steps-for-macos">
-<h3>Additional Steps for macOS<a class="headerlink" href="#additional-steps-for-macos" title="Permalink to this headline">¶</a></h3>
-<p>On macOS you will also have to copy the launcher bash script:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mv Cutter.app/Contents/MacOS/Cutter Cutter.app/Contents/MacOS/Cutter.bin
-cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&amp;</span> chmod +x Cutter.app/Contents/MacOS/Cutter
 </pre></div>
 </div>
 </div>
@@ -243,7 +213,7 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <h2>CMake Building Options<a class="headerlink" href="#cmake-building-options" title="Permalink to this headline">¶</a></h2>
 <p>Note that there are some major building options available:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RADARE2</span></code> automatically compile Radare2 from submodule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
@@ -253,7 +223,7 @@ cp ../src/macos/Cutter Cutter.app/Contents/MacOS/Cutter <span class="o">&amp;&am
 <p>Cutter binary release options, not needed for most users and might not work easily outside CI environment:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_CRASH_REPORTS</span></code> is used to compile Cutter with crash handling system enabled (Breakpad).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by r2 build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by Rizin build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packges.</p></li>
 </ul>
 <p>These options can be enabled or disabled from the command line arguments passed to CMake.
@@ -303,35 +273,35 @@ containing bin/, lib/, include/, etc.) and specify it to CMake using
 </pre></div>
 </div>
 <ul>
-<li><p><strong>Radare2’s libr_*.so cannot be found when running Cutter</strong></p>
+<li><p><strong>Rizin’s librz_*.so cannot be found when running Cutter</strong></p>
 <blockquote>
-<div><p>./Cutter: error while loading shared libraries: libr_lang.so: cannot open shared object file: No such file or directory</p>
+<div><p>./cutter: error while loading shared libraries: librz_lang.so: cannot open shared object file: No such file or directory</p>
 </div></blockquote>
 </li>
 </ul>
-<p>The exact r2 .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way r2 is currently compiled. It results in some of the r2 libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./Cutter</cite>. If all the r2 libraries are missing you have a different problem.
-The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the r2 installation path to LD_LIBRARY_PATH environment variable.</p>
+<p>The exact Rizin .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way Rizin is currently compiled. It results in some of the Rizin libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./cutter</cite>. If all the Rizin libraries are missing you have a different problem.
+The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the Rizin installation path to LD_LIBRARY_PATH environment variable.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_EXE_LINKER_FLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,--disable-new-dtags&quot;</span>  <span class="o">..</span>
 </pre></div>
 </div>
 <ul>
-<li><p><strong>r_*.h: No such file or directory</strong></p>
+<li><p><strong>rz_*.h: No such file or directory</strong></p>
 <blockquote>
-<div><p>r_util/r_annotated_code.h: No such file or directory</p>
+<div><p>Eg: rz_util/rz_annotated_code.h: No such file or directory</p>
 </div></blockquote>
 </li>
 </ul>
-<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">r_</span></code> is missing, you should check the <strong>radare2</strong> submodule and
+<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">rz_</span></code> is missing, you should check the <strong>rizin</strong> submodule and
 make sure it is in sync with upstream <strong>Cutter</strong> repo. Simply run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><strong>r_core development package not found</strong></p></li>
+<li><p><strong>rz_core development package not found</strong></p></li>
 </ul>
-<p>If you installed radare2 and still encounter this error, it could be that your
+<p>If you installed Rizin and still encounter this error, it could be that your
 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable is set improperly (doesn’t contain
-<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the radare2 installation dir to
+<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the Rizin installation dir to
 your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable.</p>
 <p>macOS specific solutions:</p>
 <p>On macOS, that can also be, for example, due to <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator.app</span></code>
@@ -341,12 +311,10 @@ Environment</em> section in Qt Creator. See the screenshot below should you
 encounter any problems.</p>
 <p>You can also try:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/radare2/lib/pkgconfig</span> <span class="pre">qmake</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/cutter/radare2/pkgcfg</span> <span class="pre">qmake</span></code> (for a newer
-version and if the radare2 submodule is being built and used)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/rizin/lib/pkgconfig</span> <span class="pre">cmake</span> <span class="pre">...</span></code></p></li>
 </ul>
 <img alt="_images/cutter_path_settings.png" src="_images/cutter_path_settings.png" />
-<p>You can also install radare2 into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
+<p>You can also install Rizin into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
 add a variable <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> with the value <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code>.</p>
 <ul class="simple">
 <li><p><strong>macOS libjpeg error</strong></p></li>
@@ -354,13 +322,6 @@ add a variable <code class="docutils literal notranslate"><span class="pre">PKG_
 <p>On macOS, Qt5 apps fail to build on QtCreator if you have the <code class="docutils literal notranslate"><span class="pre">libjpeg</span></code>
 installed with brew. Run this command to work around the issue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span><span class="o">.</span><span class="ow">not</span><span class="o">-</span><span class="n">found</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p><strong>LSOpenURLsWithRole() failed with error -10810</strong></p></li>
-</ul>
-<p>On macOS High Sierra Cutter crashes due to the absence of <code class="docutils literal notranslate"><span class="pre">gettext</span></code> library. To fix this problem, simply install the missing package:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">gettext</span>
 </pre></div>
 </div>
 </div>
@@ -392,14 +353,12 @@ installed with brew. Run this command to work around the issue:</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#recommended-way">Recommended Way</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building-with-meson">Building with Meson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Building Steps</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#building-with-qmake">Building with Qmake</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#using-qtcreator">Using QtCreator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compiling-on-linux-macos">Compiling on Linux / macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#additional-steps-for-macos">Additional Steps for macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-macos">Building on macOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-way-for-dev-builds">Recommended Way for dev builds</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#cmake-building-options">CMake Building Options</a></li>
@@ -430,7 +389,7 @@ installed with brew. Run this command to work around the issue:</p>
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 

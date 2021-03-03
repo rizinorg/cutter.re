@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cutter Development Guidelines &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -63,30 +62,30 @@
 <h2>Common Usage<a class="headerlink" href="#common-usage" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cuttercore-class">
 <h3>CutterCore Class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
-<p>This is the main class where every link with r2 is made. It is <em>unique</em>
+<p>This is the main class where every link with Rizin is made. It is <em>unique</em>
 across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="calling-a-radare2-command">
-<h3>Calling a radare2 Command<a class="headerlink" href="#calling-a-radare2-command" title="Permalink to this headline">¶</a></h3>
-<p>There are multiple ways to call a radare2 command:</p>
+<div class="section" id="calling-a-rizin-command">
+<h3>Calling a Rizin Command<a class="headerlink" href="#calling-a-rizin-command" title="Permalink to this headline">¶</a></h3>
+<p>There are multiple ways to call a Rizin command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdj(&lt;command&gt;)</span></code> - To be used with json commands like <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
-This is the command we used to fetch structured data from radare2.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single radare2 command
-without going through radare2 shell functionality like output redirects, grep, and multiple command parsing.</p></li>
+This is the command we used to fetch structured data from Rizin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single Rizin command
+without going through Rizin shell functionality like output redirects, grep, and multiple command parsing.</p></li>
 </ul>
 <p>The command then returns its output. This should be used when a command doesn’t have output or the output should be handled as-is. If possible, using the JSON variation with <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> is always preferred.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRawAt(&lt;command&gt;,</span> <span class="pre">&lt;address&gt;)</span></code> - Executes a single radare2 command in a given address and returns the output. This helps avoiding weird strings concatenation like <code class="docutils literal notranslate"><span class="pre">cmd(&quot;ph</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">hash</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&#64;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">QString::num(address))</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRawAt(&lt;command&gt;,</span> <span class="pre">&lt;address&gt;)</span></code> - Executes a single Rizin command in a given address and returns the output. This helps avoiding weird strings concatenation like <code class="docutils literal notranslate"><span class="pre">cmd(&quot;ph</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">hash</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&#64;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">QString::num(address))</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmd()</span></code> - <em>(Discouraged)</em> Only use it when <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code> cannot be used. This is used for complex commands using concatenation of several commands (<code class="docutils literal notranslate"><span class="pre">px</span> <span class="pre">5;</span> <span class="pre">pd</span> <span class="pre">7;</span> <span class="pre">afl;</span></code>), for grepping (<code class="docutils literal notranslate"><span class="pre">pd</span> <span class="pre">5~call</span></code>). for commands inside commands (<code class="docutils literal notranslate"><span class="pre">?e</span> <span class="pre">`afn.`</span></code>) and so on.
 This is also used when the output is complex and is not parsed correctly in <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code>.
 Make sure to carefully sanitize user-controlled variables that are passed to the command, to avoid unexpected command injections.</p></li>
 </ul>
-<p>Generally, if one needs to retrieve information from a radare2 command, it
+<p>Generally, if one needs to retrieve information from a Rizin command, it
 is preferred to use the JSON API.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QJsonArray</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">).</span><span class="n">array</span><span class="p">();</span>
@@ -95,7 +94,7 @@ is preferred to use the JSON API.</p>
 </div>
 <div class="section" id="seek-the-current-file">
 <h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Permalink to this headline">¶</a></h3>
-<p>To modify radare2 seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
+<p>To modify Rizin seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
 is important because it will emit a
 <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
 <code class="docutils literal notranslate"><span class="pre">cmd(&quot;s</span> <span class="pre">offset&quot;)</span></code>;</p>
@@ -111,18 +110,21 @@ is important because it will emit a
 <div class="section" id="creating-a-widget">
 <h3>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h3>
 <p>Make sure to connect the <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal
-so your widget refreshes its output when radare2 seek is modified
+so your widget refreshes its output when Rizin seek is modified
 (switching to another function, etc.).</p>
 </div>
 </div>
 <div class="section" id="coding-style">
 <h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
-<p>In general, we follow <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a> to
-format the code. If in doubt, you can use <a class="reference external" href="https://sourceforge.net/projects/astyle/files/astyle/astyle%202.06/">AStyle
-2.06</a>
+<p>In general, we follow a slightly customized version of <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a>
+to format the code. Before sending a pull request, you will need to use <a href="#id1"><span class="problematic" id="id2">`clang-format`&lt;https://clang.llvm.org/docs/ClangFormat.html&gt;`__</span></a> (version 8 or newer)
 to format the code. The command line for formatting the code according
 to the style is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>astyle --project<span class="o">=</span>src/Cutter.astylerc src/filename.cpp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang-format -style<span class="o">=</span>file -i src/filename.cpp
+</pre></div>
+</div>
+<p>If your changes were done on many files across the codebase, you can use this oneliner to tun <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> on the entire ‘src’ directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find ./src -regex <span class="s1">&#39;.*\.\(cpp\|h\)&#39;</span> -exec clang-format -style<span class="o">=</span>file -i <span class="o">{}</span> <span class="se">\;</span>
 </pre></div>
 </div>
 <p>In contrast to the official guidelines of Qt, in Cutter we always use curly braces in conditional statements, even if the body of a conditional statement contains only one line.</p>
@@ -176,7 +178,7 @@ function documentation, please use the following format:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @brief Add a new param to the accumulator</span>
 <span class="cm"> */</span>
-<span class="k">virtual</span> <span class="kt">void</span> <span class="n">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span> <span class="n">params</span><span class="p">)</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">virtual</span> <span class="kt">void</span> <span class="nf">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span> <span class="n">params</span><span class="p">)</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -237,10 +239,10 @@ functions. Other approaches for connecting signals can silently break at runtime
 <div class="section" id="updating-the-git-submodules">
 <h3>Updating the Git Submodules<a class="headerlink" href="#updating-the-git-submodules" title="Permalink to this headline">¶</a></h3>
 <p>Git submodules play a major part in Cutter. This, because Cutter is powered
-by radare2, its parent project, and it tries to stay up-to-date with its
+by Rizin, its parent project, and it tries to stay up-to-date with its
 recent version, which allows us to implement new features, and enjoy bug
-fixes and performance improvements on radare2. Often, we need to update
-the radare2 submodule or the others, to push their most recent
+fixes and performance improvements on Rizin. Often, we need to update
+the Rizin submodule or the others, to push their most recent
 version to Cutter.</p>
 <p>You can view the list of all the submodules from the cutter root folder with:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git config --file .gitmodules --get-regexp path <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span>
@@ -253,13 +255,13 @@ git add submodule_name_1 submodule_name_2
 git commit -m <span class="s2">&quot;Update submodules&quot;</span>
 </pre></div>
 </div>
-<p>More likely, you’ll only need to update the radare2 submodule.
+<p>More likely, you’ll only need to update the <em>rizin</em> submodule.
 In order to update one submodule individually, use the following code:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> radare2
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> rizin
 git checkout master <span class="o">&amp;&amp;</span> git pull
 <span class="nb">cd</span> ..
-git add radare2
-git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
+git add rizin
+git commit -m <span class="s2">&quot;Update rizin submodule&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -300,6 +302,7 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crash-handling-system.html">Crash Handling System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-procedure.html">Release Procedure</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
@@ -326,7 +329,7 @@ git commit -m <span class="s2">&quot;Update radare2 submodule&quot;</span>
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 

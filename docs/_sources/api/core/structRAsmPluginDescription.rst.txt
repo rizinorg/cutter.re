@@ -1,4 +1,0 @@
-RAsmPluginDescription
-=====================
-
-.. doxygenstruct:: RAsmPluginDescription

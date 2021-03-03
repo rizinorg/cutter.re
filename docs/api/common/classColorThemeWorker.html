@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ColorThemeWorker &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -57,18 +56,18 @@
 <h1>ColorThemeWorker<a class="headerlink" href="#colorthemeworker" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
 <dt id="_CPPv416ColorThemeWorker">
-<span id="_CPPv316ColorThemeWorker"></span><span id="_CPPv216ColorThemeWorker"></span><span id="ColorThemeWorker"></span><span class="target" id="classColorThemeWorker"></span><em class="property">class </em><code class="sig-name descname">ColorThemeWorker</code> : <em class="property">public</em> QObject<a class="headerlink" href="#_CPPv416ColorThemeWorker" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv316ColorThemeWorker"></span><span id="_CPPv216ColorThemeWorker"></span><span id="ColorThemeWorker"></span><span class="target" id="classColorThemeWorker"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">ColorThemeWorker</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">QObject</span><a class="headerlink" href="#_CPPv416ColorThemeWorker" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The <a class="reference internal" href="#classColorThemeWorker"><span class="std std-ref">ColorThemeWorker</span></a> class is a singletone that provides API for working with color themes. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N16ColorThemeWorkerD0Ev">
-<span id="_CPPv3N16ColorThemeWorkerD0Ev"></span><span id="_CPPv2N16ColorThemeWorkerD0Ev"></span><span id="ColorThemeWorker::~ColorThemeWorker"></span><span class="target" id="classColorThemeWorker_1a2bf39ece201ab47f62dc4557d7bf5758"></span><code class="sig-name descname">~ColorThemeWorker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorkerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N16ColorThemeWorkerD0Ev"></span><span id="_CPPv2N16ColorThemeWorkerD0Ev"></span><span id="ColorThemeWorker::~ColorThemeWorker"></span><span class="target" id="classColorThemeWorker_1a2bf39ece201ab47f62dc4557d7bf5758"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <code class="sig-name descname"><span class="pre">~ColorThemeWorker</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorkerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker4copyERK7QStringRK7QString">
-<span id="_CPPv3NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="ColorThemeWorker::copy__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a12323c343cf3010702fede46260814d4"></span>QString <code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>srcThemeName</em>, <em class="property">const</em> QString &amp;<em>copyThemeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4copyERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="ColorThemeWorker::copy__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a12323c343cf3010702fede46260814d4"></span><span class="pre">QString</span> <code class="sig-name descname"><span class="pre">copy</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">srcThemeName</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">copyThemeName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4copyERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copies <em>srcThemeName</em> with name <em>copyThemeName</em>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>”” on success or error message. </p>
@@ -84,7 +83,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString">
-<span id="_CPPv3NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString"></span><span id="ColorThemeWorker::save__QJsonDocumentCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1aed2d772e27752d80adbf121d382138bc"></span>QString <code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="property">const</em> QJsonDocument &amp;<em>theme</em>, <em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString"></span><span id="ColorThemeWorker::save__QJsonDocumentCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1aed2d772e27752d80adbf121d382138bc"></span><span class="pre">QString</span> <code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QJsonDocument</span> <span class="pre">&amp;</span><em><span class="pre">theme</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">themeName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4saveERK13QJsonDocumentRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Saves <em>theme</em> as <em>themeName</em> theme. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>”” on success or error message. </p>
@@ -100,7 +99,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker13isCustomThemeERK7QString">
-<span id="_CPPv3NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="ColorThemeWorker::isCustomTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ad489ecafe474d39bd7c6f28e82393861"></span>bool <code class="sig-name descname">isCustomTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker13isCustomThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="ColorThemeWorker::isCustomTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ad489ecafe474d39bd7c6f28e82393861"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isCustomTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">themeName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker13isCustomThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not <em>themeName</em> theme is custom (created by user or imported) or not. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -113,7 +112,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker12isThemeExistERK7QString">
-<span id="_CPPv3NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="ColorThemeWorker::isThemeExist__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aee3987ac188b5bbef54be0811619e01a"></span>bool <code class="sig-name descname">isThemeExist</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>name</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker12isThemeExistERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="ColorThemeWorker::isThemeExist__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aee3987ac188b5bbef54be0811619e01a"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isThemeExist</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">name</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker12isThemeExistERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not <em>name</em> theme already exists. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>true if theme exists, false - if not. </p>
@@ -124,7 +123,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker8getThemeERK7QString">
-<span id="_CPPv3NK16ColorThemeWorker8getThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker8getThemeERK7QString"></span><span id="ColorThemeWorker::getTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1a17b540b9e6b9c2de3d2a30b66d122604"></span>QJsonDocument <code class="sig-name descname">getTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker8getThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker8getThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker8getThemeERK7QString"></span><span id="ColorThemeWorker::getTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1a17b540b9e6b9c2de3d2a30b66d122604"></span><span class="pre">QJsonDocument</span> <code class="sig-name descname"><span class="pre">getTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">themeName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker8getThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns theme as Json where key is option name and value is array of 3 Ints (Red, Green, Blue). </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -137,7 +136,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker11deleteThemeERK7QString">
-<span id="_CPPv3NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="ColorThemeWorker::deleteTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ab33bba9d1b45c9a9a57be9c339d08c30"></span>QString <code class="sig-name descname">deleteTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11deleteThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="ColorThemeWorker::deleteTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ab33bba9d1b45c9a9a57be9c339d08c30"></span><span class="pre">QString</span> <code class="sig-name descname"><span class="pre">deleteTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">themeName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11deleteThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes theme named <em>themeName</em>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>”” on success or error message. </p>
@@ -152,7 +151,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker11importThemeERK7QString">
-<span id="_CPPv3NK16ColorThemeWorker11importThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11importThemeERK7QString"></span><span id="ColorThemeWorker::importTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aa3e3e0d79b706e9d57b08a837c4f266a"></span>QString <code class="sig-name descname">importTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>file</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11importThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker11importThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11importThemeERK7QString"></span><span id="ColorThemeWorker::importTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aa3e3e0d79b706e9d57b08a837c4f266a"></span><span class="pre">QString</span> <code class="sig-name descname"><span class="pre">importTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">file</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11importThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Imports theme from <em>file</em>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>”” on success or error message. </p>
@@ -163,7 +162,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker11renameThemeERK7QStringRK7QString">
-<span id="_CPPv3NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="ColorThemeWorker::renameTheme__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a243c35e165fbd7a60b5fd18378e0e26d"></span>QString <code class="sig-name descname">renameTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>themeName</em>, <em class="property">const</em> QString &amp;<em>newName</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11renameThemeERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="ColorThemeWorker::renameTheme__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a243c35e165fbd7a60b5fd18378e0e26d"></span><span class="pre">QString</span> <code class="sig-name descname"><span class="pre">renameTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">themeName</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">newName</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11renameThemeERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Renames theme from <em>themeName</em> to <em>newName</em>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>”” on success or error message. </p>
@@ -174,7 +173,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker11isFileThemeERK7QStringPb">
-<span id="_CPPv3NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="_CPPv2NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="ColorThemeWorker::isFileTheme__QStringCR.bPC"></span><span class="target" id="classColorThemeWorker_1af7614224ba6391d5d38e7ca24478a8a1"></span>bool <code class="sig-name descname">isFileTheme</code><span class="sig-paren">(</span><em class="property">const</em> QString &amp;<em>filePath</em>, bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11isFileThemeERK7QStringPb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="_CPPv2NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="ColorThemeWorker::isFileTheme__QStringCR.bPC"></span><span class="target" id="classColorThemeWorker_1af7614224ba6391d5d38e7ca24478a8a1"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isFileTheme</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">filePath</span></em>, <span class="pre">bool</span> <span class="pre">*</span><em><span class="pre">ok</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11isFileThemeERK7QStringPb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not file at <em>filePath</em> is a color theme. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>true if given file is color theme and ok == true, otherwise returns false. </p>
@@ -190,7 +189,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK16ColorThemeWorker12customThemesEv">
-<span id="_CPPv3NK16ColorThemeWorker12customThemesEv"></span><span id="_CPPv2NK16ColorThemeWorker12customThemesEv"></span><span id="ColorThemeWorker::customThemesC"></span><span class="target" id="classColorThemeWorker_1a1ef98222da3ebd891297a5959bea5dfd"></span>QStringList <code class="sig-name descname">customThemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker12customThemesEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK16ColorThemeWorker12customThemesEv"></span><span id="_CPPv2NK16ColorThemeWorker12customThemesEv"></span><span id="ColorThemeWorker::customThemesC"></span><span class="target" id="classColorThemeWorker_1a1ef98222da3ebd891297a5959bea5dfd"></span><span class="pre">QStringList</span> <code class="sig-name descname"><span class="pre">customThemes</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker12customThemesEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns list of all custom themes. </p>
 </dd></dl>
 
@@ -198,9 +197,9 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
-<dt id="_CPPv4N16ColorThemeWorker22radare2SpecificOptionsE">
-<span id="_CPPv3N16ColorThemeWorker22radare2SpecificOptionsE"></span><span id="_CPPv2N16ColorThemeWorker22radare2SpecificOptionsE"></span><span id="ColorThemeWorker::radare2SpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a90c4bb013a10d5440d2618434bf0c981"></span><em class="property">const</em> QStringList <code class="sig-name descname">radare2SpecificOptions</code> = Core()-&gt;cmdj(&quot;ecj&quot;).object().keys()<a class="headerlink" href="#_CPPv4N16ColorThemeWorker22radare2SpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>radare2SpecificOptions is list of all available radare2-only color options. </p>
+<dt id="_CPPv4N16ColorThemeWorker20rizinSpecificOptionsE">
+<span id="_CPPv3N16ColorThemeWorker20rizinSpecificOptionsE"></span><span id="_CPPv2N16ColorThemeWorker20rizinSpecificOptionsE"></span><span id="ColorThemeWorker::rizinSpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1aa8f8991a891bf993878e7aeebc157132"></span><em class="property"><span class="pre">const</span></em> <span class="pre">QStringList</span> <code class="sig-name descname"><span class="pre">rizinSpecificOptions</span></code> <span class="pre">=</span> <span class="pre">Core</span><span class="pre">(</span><span class="pre">)</span><span class="pre">-&gt;</span><span class="pre">cmdj</span><span class="pre">(</span><span class="pre">&quot;ecj&quot;</span><span class="pre">)</span><span class="pre">.</span><span class="pre">object</span><span class="pre">(</span><span class="pre">)</span><span class="pre">.</span><span class="pre">keys</span><span class="pre">(</span><span class="pre">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker20rizinSpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>rizinSpecificOptions is list of all available Rizin-only color options. </p>
 </dd></dl>
 
 </div>
@@ -208,7 +207,7 @@
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N16ColorThemeWorker8instanceEv">
-<span id="_CPPv3N16ColorThemeWorker8instanceEv"></span><span id="_CPPv2N16ColorThemeWorker8instanceEv"></span><span id="ColorThemeWorker::instance"></span><span class="target" id="classColorThemeWorker_1aa9ed845cdd9e8e3deab9d7fb63f5d3b4"></span><a class="reference internal" href="#_CPPv416ColorThemeWorker" title="ColorThemeWorker">ColorThemeWorker</a> &amp;<code class="sig-name descname">instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker8instanceEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N16ColorThemeWorker8instanceEv"></span><span id="_CPPv2N16ColorThemeWorker8instanceEv"></span><span id="ColorThemeWorker::instance"></span><span class="target" id="classColorThemeWorker_1aa9ed845cdd9e8e3deab9d7fb63f5d3b4"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv416ColorThemeWorker" title="ColorThemeWorker"><span class="pre">ColorThemeWorker</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">instance</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker8instanceEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -216,14 +215,14 @@
 <p class="breathe-sectiondef-title rubric">Public Static Attributes</p>
 <dl class="cpp var">
 <dt id="_CPPv4N16ColorThemeWorker21cutterSpecificOptionsE">
-<span id="_CPPv3N16ColorThemeWorker21cutterSpecificOptionsE"></span><span id="_CPPv2N16ColorThemeWorker21cutterSpecificOptionsE"></span><span id="ColorThemeWorker::cutterSpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a3c9e5ee1717735703a2ee329ab46ec7a"></span><em class="property">const</em> QStringList <code class="sig-name descname">cutterSpecificOptions</code> = {&quot;wordHighlight&quot;, &quot;lineHighlight&quot;, &quot;gui.main&quot;, &quot;gui.imports&quot;, &quot;highlightPC&quot;, &quot;gui.navbar.err&quot;, &quot;gui.navbar.seek&quot;, &quot;gui.navbar.pc&quot;, &quot;gui.navbar.sym&quot;, &quot;gui.dataoffset&quot;, &quot;gui.navbar.code&quot;, &quot;gui.navbar.empty&quot;, &quot;angui.navbar.str&quot;, &quot;gui.disass_selected&quot;, &quot;gui.breakpoint_background&quot;, &quot;gui.overview.node&quot;, &quot;gui.overview.fill&quot;, &quot;gui.overview.border&quot;, &quot;gui.border&quot;, &quot;gui.background&quot;, &quot;gui.alt_background&quot;, &quot;gui.disass_selected&quot;}<a class="headerlink" href="#_CPPv4N16ColorThemeWorker21cutterSpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N16ColorThemeWorker21cutterSpecificOptionsE"></span><span id="_CPPv2N16ColorThemeWorker21cutterSpecificOptionsE"></span><span id="ColorThemeWorker::cutterSpecificOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a3c9e5ee1717735703a2ee329ab46ec7a"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">QStringList</span> <code class="sig-name descname"><span class="pre">cutterSpecificOptions</span></code> <span class="pre">=</span> <span class="pre">{</span><span class="pre">&quot;wordHighlight&quot;</span><span class="pre">,</span> <span class="pre">&quot;lineHighlight&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.main&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.imports&quot;</span><span class="pre">,</span> <span class="pre">&quot;highlightPC&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.err&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.seek&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.pc&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.sym&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.dataoffset&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.code&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.navbar.empty&quot;</span><span class="pre">,</span> <span class="pre">&quot;angui.navbar.str&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.disass_selected&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.breakpoint_background&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.overview.node&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.overview.fill&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.overview.border&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.border&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.background&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.alt_background&quot;</span><span class="pre">,</span> <span class="pre">&quot;gui.disass_selected&quot;</span><span class="pre">}</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker21cutterSpecificOptionsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>cutterSpecificOptions is list of all available Cutter-only color options. </p>
 </dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv4N16ColorThemeWorker20radare2UnusedOptionsE">
-<span id="_CPPv3N16ColorThemeWorker20radare2UnusedOptionsE"></span><span id="_CPPv2N16ColorThemeWorker20radare2UnusedOptionsE"></span><span id="ColorThemeWorker::radare2UnusedOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1aa22c80b0dc021110dc4df5dd5d7f7bc0"></span><em class="property">const</em> QStringList <code class="sig-name descname">radare2UnusedOptions</code> = {&quot;linehl&quot;, &quot;wordhl&quot;, &quot;graph.box&quot;, &quot;graph.box2&quot;, &quot;graph.box3&quot;, &quot;graph.box4&quot;, &quot;graph.current&quot;, &quot;graph.box2&quot;, &quot;widget_sel&quot;, &quot;widget_bg&quot;, &quot;label&quot;, &quot;ai.write&quot;, &quot;invalid&quot;, &quot;ai.seq&quot;, &quot;args&quot;, &quot;ai.read&quot;, &quot;ai.exec&quot;, &quot;ai.ascii&quot;, &quot;prompt&quot;, &quot;graph.traced&quot;}<a class="headerlink" href="#_CPPv4N16ColorThemeWorker20radare2UnusedOptionsE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>radare2UnusedOptions is a list of all radare2 options that Cutter does not use. </p>
+<dt id="_CPPv4N16ColorThemeWorker18rizinUnusedOptionsE">
+<span id="_CPPv3N16ColorThemeWorker18rizinUnusedOptionsE"></span><span id="_CPPv2N16ColorThemeWorker18rizinUnusedOptionsE"></span><span id="ColorThemeWorker::rizinUnusedOptions__QStringListC"></span><span class="target" id="classColorThemeWorker_1a187c5808374895df74e48dfc6083e40e"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">QStringList</span> <code class="sig-name descname"><span class="pre">rizinUnusedOptions</span></code> <span class="pre">=</span> <span class="pre">{</span><span class="pre">&quot;linehl&quot;</span><span class="pre">,</span> <span class="pre">&quot;wordhl&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.box&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.box2&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.box3&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.box4&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.current&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.box2&quot;</span><span class="pre">,</span> <span class="pre">&quot;widget_sel&quot;</span><span class="pre">,</span> <span class="pre">&quot;widget_bg&quot;</span><span class="pre">,</span> <span class="pre">&quot;label&quot;</span><span class="pre">,</span> <span class="pre">&quot;ai.write&quot;</span><span class="pre">,</span> <span class="pre">&quot;invalid&quot;</span><span class="pre">,</span> <span class="pre">&quot;ai.seq&quot;</span><span class="pre">,</span> <span class="pre">&quot;args&quot;</span><span class="pre">,</span> <span class="pre">&quot;ai.read&quot;</span><span class="pre">,</span> <span class="pre">&quot;ai.exec&quot;</span><span class="pre">,</span> <span class="pre">&quot;ai.ascii&quot;</span><span class="pre">,</span> <span class="pre">&quot;prompt&quot;</span><span class="pre">,</span> <span class="pre">&quot;graph.traced&quot;</span><span class="pre">}</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker18rizinUnusedOptionsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>rizinUnusedOptions is a list of all Rizin options that Cutter does not use. </p>
 </dd></dl>
 
 </div>
@@ -274,6 +273,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJSDecDecompiler.html">JSDecDecompiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
@@ -281,16 +281,18 @@
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1List.html">LinkedListPool::List</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1ListIterator.html">LinkedListPool::ListIterator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classR2DecDecompiler.html">R2DecDecompiler</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classR2Task.html">R2Task</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSegmentTreeBase.html">SegmentTreeBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
@@ -343,7 +345,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 

@@ -1,0 +1,4 @@
+RizinCmdTask
+============
+
+.. doxygenclass:: RizinCmdTask

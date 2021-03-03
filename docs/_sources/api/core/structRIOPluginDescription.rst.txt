@@ -1,4 +1,0 @@
-RIOPluginDescription
-====================
-
-.. doxygenstruct:: RIOPluginDescription

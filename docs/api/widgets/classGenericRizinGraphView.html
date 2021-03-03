@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenericRizinGraphView &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GraphGridLayout" href="classGraphGridLayout.html" />
+    <link rel="prev" title="FunctionsWidget" href="classFunctionsWidget.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classGraphGridLayout.html" title="GraphGridLayout"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classFunctionsWidget.html" title="FunctionsWidget"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenericRizinGraphView</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="genericrizingraphview">
+<h1>GenericRizinGraphView<a class="headerlink" href="#genericrizingraphview" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv421GenericRizinGraphView">
+<span id="_CPPv321GenericRizinGraphView"></span><span id="_CPPv221GenericRizinGraphView"></span><span id="GenericRizinGraphView"></span><span class="target" id="classGenericRizinGraphView"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">GenericRizinGraphView</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="classSimpleTextGraphView.html#_CPPv419SimpleTextGraphView" title="SimpleTextGraphView"><span class="pre">SimpleTextGraphView</span></a><a class="headerlink" href="#_CPPv421GenericRizinGraphView" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generic graph view for rizin graphs. Not all rizin graph commands output the same kind of json. Only those that have following format. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="s2">&quot;tittle&quot;</span><span class="p">:</span> <span class="s2">&quot;node_0_tittle&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span>
+         <span class="s2">&quot;out_nodes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+     <span class="p">},</span>
+     <span class="o">...</span>
+<span class="p">]}</span>
+</pre></div>
+</div>
+ Id don’t have to be sequential. Simple text label is displayed containing concatenation of label and body. No rizin builtin graph uses both. Duplicate edges and edges with target id not present in the list of nodes are removed. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow">
+<span id="_CPPv3N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="_CPPv2N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="GenericRizinGraphView::GenericRizinGraphView__RizinGraphWidgetP.MainWindowP"></span><span class="target" id="classGenericRizinGraphView_1a4d4423b5863ce34cf6f551425e25f8dc"></span><code class="sig-name descname"><span class="pre">GenericRizinGraphView</span></code><span class="sig-paren">(</span><a class="reference internal" href="classRizinGraphWidget.html#_CPPv416RizinGraphWidget" title="RizinGraphWidget"><span class="pre">RizinGraphWidget</span></a> <span class="pre">*</span><em><span class="pre">parent</span></em>, <a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow"><span class="pre">MainWindow</span></a> <span class="pre">*</span><em><span class="pre">main</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString">
+<span id="_CPPv3N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="_CPPv2N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="GenericRizinGraphView::setGraphCommand__QString"></span><span class="target" id="classGenericRizinGraphView_1a62ca55f188b4a0928afbf2f02fd86182"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setGraphCommand</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">cmd</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N21GenericRizinGraphView11refreshViewEv">
+<span id="_CPPv3N21GenericRizinGraphView11refreshViewEv"></span><span id="_CPPv2N21GenericRizinGraphView11refreshViewEv"></span><span id="GenericRizinGraphView::refreshView"></span><span class="target" id="classGenericRizinGraphView_1acfc4fda826b78f148b23d65e3b8d5730"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">refreshView</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView11refreshViewEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableDockWidget.html">AddressableDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalClassesModel.html">AnalClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBoolTogggleDelegate.html">BoolTogggleDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointModel.html">BreakpointModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointProxyModel.html">BreakpointProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointWidget.html">BreakpointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBufferData.html">BufferData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCallGraphView.html">CallGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCallGraphWidget.html">CallGraphWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesModel.html">ClassesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesSortFilterProxyModel.html">ClassesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classClassesWidget.html">ClassesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorOptionDelegate.html">ColorOptionDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPicker.html">ColorPicker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1AlphaChannelBar.html">ColorPickerHelpers::AlphaChannelBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickArea.html">ColorPickerHelpers::ColorPickArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickWidgetAbstract.html">ColorPickerHelpers::ColorPickWidgetAbstract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorPickerWidget.html">ColorPickerHelpers::ColorPickerWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorShowWidget.html">ColorPickerHelpers::ColorShowWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorPickerHelpers_1_1ColorValueBar.html">ColorPickerHelpers::ColorValueBar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorSettingsModel.html">ColorSettingsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeComboBox.html">ColorThemeComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeListView.html">ColorThemeListView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classComboQuickFilterView.html">ComboQuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsModel.html">CommentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsProxyModel.html">CommentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsWidget.html">CommentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConsoleWidget.html">ConsoleWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterDockWidget.html">CutterDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterGraphView.html">CutterGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeView.html">CutterTreeView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterTreeWidget.html">CutterTreeWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDashboard.html">Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDebugActions.html">DebugActions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerWidget.html">DecompilerWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblerGraphView.html">DisassemblerGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyLeftPanel.html">DisassemblyLeftPanel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyScrollArea.html">DisassemblyScrollArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextBlockUserData.html">DisassemblyTextBlockUserData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextEdit.html">DisassemblyTextEdit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyWidget.html">DisassemblyWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEntrypointWidget.html">EntrypointWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsModel.html">ExportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsProxyModel.html">ExportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classExportsWidget.html">ExportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsModel.html">FlagsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsSortFilterProxyModel.html">FlagsSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagsWidget.html">FlagsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GenericRizinGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphHorizontalAdapter.html">GraphHorizontalAdapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphView.html">GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphWidget.html">GraphWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGraphvizLayout.html">GraphvizLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersModel.html">HeadersModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersProxyModel.html">HeadersProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHeadersWidget.html">HeadersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexSelection.html">HexSelection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexWidget.html">HexWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpWidget.html">HexdumpWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsModel.html">ImportsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsProxyModel.html">ImportsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classImportsWidget.html">ImportsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classListDockWidget.html">ListDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryData.html">MemoryData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryDockWidget.html">MemoryDockWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapModel.html">MemoryMapModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryMapWidget.html">MemoryMapWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMemoryProxyModel.html">MemoryProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOmnibar.html">Omnibar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegisterRefsWidget.html">RegisterRefsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRegistersWidget.html">RegistersWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsModel.html">RelocsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsProxyModel.html">RelocsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinGraphWidget.html">RizinGraphWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSearchWidget.html">SearchWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsModel.html">SectionsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsProxyModel.html">SectionsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSectionsWidget.html">SectionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsModel.html">SegmentsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsProxyModel.html">SegmentsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentsWidget.html">SegmentsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSimpleTextGraphView.html">SimpleTextGraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStackModel.html">StackModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStackWidget.html">StackWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsModel.html">StringsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsProxyModel.html">StringsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsWidget.html">StringsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsModel.html">SymbolsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsProxyModel.html">SymbolsProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSymbolsWidget.html">SymbolsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classThreadsFilterModel.html">ThreadsFilterModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classThreadsWidget.html">ThreadsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesModel.html">TypesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesSortFilterProxyModel.html">TypesSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesWidget.html">TypesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableModel.html">VTableModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTableSortFilterProxyModel.html">VTableSortFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVTablesWidget.html">VTablesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVirtualAddrDock.html">VirtualAddrDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVisualNavbar.html">VisualNavbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesModel.html">ZignaturesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesProxyModel.html">ZignaturesProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classZignaturesWidget.html">ZignaturesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structAnalClassesModel_1_1Attribute.html">AnalClassesModel::Attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicCursor.html">BasicCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structColorOption.html">ColorOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommentGroup.html">CommentGroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1DisassemblyBlock.html">DisassemblerGraphView::DisassemblyBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Token.html">DisassemblerGraphView::Token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLeftPanel_1_1Arrow.html">DisassemblyLeftPanel::Arrow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridBlock.html">GraphGridLayout::GridBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridEdge.html">GraphGridLayout::GridEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1LayoutState.html">GraphGridLayout::LayoutState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1Point.html">GraphGridLayout::Point</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphBlock.html">GraphLayout::GraphBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1GraphEdge.html">GraphLayout::GraphEdge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphLayout_1_1LayoutConfig.html">GraphLayout::LayoutConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structGraphView_1_1EdgeConfiguration.html">GraphView::EdgeConfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexCursor.html">HexCursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSimpleTextGraphView_1_1BlockContent.html">SimpleTextGraphView::BlockContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structStackModel_1_1Item.html">StackModel::Item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structVisualNavbar_1_1XToAddress.html">VisualNavbar::XToAddress</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
+    </div>
+    
+
+  </body>
+</html>

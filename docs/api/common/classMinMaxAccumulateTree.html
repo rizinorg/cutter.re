@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MinMaxAccumulateTree &#8212; Cutter 1.12.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PointSetMinTree" href="classPointSetMinTree.html" />
+    <link rel="prev" title="MdHighlighter" href="classMdHighlighter.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classPointSetMinTree.html" title="PointSetMinTree"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classMdHighlighter.html" title="MdHighlighter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MinMaxAccumulateTree</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="minmaxaccumulatetree">
+<h1>MinMaxAccumulateTree<a class="headerlink" href="#minmaxaccumulatetree" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv4I0E20MinMaxAccumulateTree">
+<span id="_CPPv3I0E20MinMaxAccumulateTree"></span><span id="_CPPv2I0E20MinMaxAccumulateTree"></span><span class="pre">template&lt;</span><span class="pre">class</span> <code class="sig-name descname"><span class="pre">IntegerType</span></code><span class="pre">&gt;</span><br /><span class="target" id="classMinMaxAccumulateTree"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">MinMaxAccumulateTree</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="classLazySegmentTreeBase.html#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase"><span class="pre">LazySegmentTreeBase</span></a><span class="pre">&lt;</span><span class="pre">std</span><span class="pre">::</span><span class="pre">pair</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a><span class="pre">&gt;</span><span class="pre">,</span> <span class="pre">std</span><span class="pre">::</span><span class="pre">pair</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a><span class="pre">&gt;</span><span class="pre">,</span> <a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree"><span class="pre">MinMaxAccumulateTree</span></a><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a><span class="pre">&gt;</span><span class="pre">&gt;</span><a class="headerlink" href="#_CPPv4I0E20MinMaxAccumulateTree" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Structure for keeping track of minimum and maximum value set at each position. </p>
+<p>Supports range update and range query.</p>
+<p>Example: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MinMaxAccumulateTree</span> <span class="n">t</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="o">//</span> <span class="n">operate</span> <span class="n">within</span> <span class="nb">range</span> <span class="p">[</span><span class="mi">0</span><span class="p">;</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">updateRange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="n">rangeMinMax</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span><span class="o">//</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+<span class="n">t</span><span class="o">.</span><span class="n">updateRange</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+<span class="n">t</span><span class="o">.</span><span class="n">updateRange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
+<span class="n">t</span><span class="o">.</span><span class="n">rangeMinMax</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span> <span class="o">//</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">}</span>
+<span class="n">t</span><span class="o">.</span><span class="n">rangeMinMax</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="o">//</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+<span class="n">t</span><span class="o">.</span><span class="n">rangeMinMax</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span> <span class="o">//</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">}</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N20MinMaxAccumulateTree20MinMaxAccumulateTreeE6size_t9ValueType">
+<span id="_CPPv3N20MinMaxAccumulateTree20MinMaxAccumulateTreeE6size_t9ValueType"></span><span id="_CPPv2N20MinMaxAccumulateTree20MinMaxAccumulateTreeE6size_t9ValueType"></span><span id="MinMaxAccumulateTree::MinMaxAccumulateTree__s.ValueType"></span><span class="target" id="classMinMaxAccumulateTree_1a0232471907345f539f430f477045dda1"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">MinMaxAccumulateTree</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">size</span></em>, <span class="pre">ValueType</span> <em><span class="pre">initialValue</span></em> <span class="pre">=</span> <span class="pre">LIMITS</span><span class="pre">(</span><span class="pre">)</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MinMaxAccumulateTree20MinMaxAccumulateTreeE6size_t9ValueType" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N20MinMaxAccumulateTree18updateFromChildrenER8NodeTypeRK8NodeTypeRK8NodeType">
+<span id="_CPPv3N20MinMaxAccumulateTree18updateFromChildrenER8NodeTypeRK8NodeTypeRK8NodeType"></span><span id="_CPPv2N20MinMaxAccumulateTree18updateFromChildrenER8NodeTypeRK8NodeTypeRK8NodeType"></span><span id="MinMaxAccumulateTree::updateFromChildren__NodeTypeR.NodeTypeCR.NodeTypeCR"></span><span class="target" id="classMinMaxAccumulateTree_1aa84868f820da183c1e24c728069f9642"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">updateFromChildren</span></code><span class="sig-paren">(</span><span class="pre">NodeType</span> <span class="pre">&amp;</span><em><span class="pre">parent</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">NodeType</span> <span class="pre">&amp;</span><em><span class="pre">left</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">NodeType</span> <span class="pre">&amp;</span><em><span class="pre">right</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MinMaxAccumulateTree18updateFromChildrenER8NodeTypeRK8NodeTypeRK8NodeType" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N20MinMaxAccumulateTree8pushDownE12NodePosition">
+<span id="_CPPv3N20MinMaxAccumulateTree8pushDownE12NodePosition"></span><span id="_CPPv2N20MinMaxAccumulateTree8pushDownE12NodePosition"></span><span id="MinMaxAccumulateTree::pushDown__NodePosition"></span><span class="target" id="classMinMaxAccumulateTree_1af3f4bd4c9e7b6bfbd4f2d3797b7e91f8"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">pushDown</span></code><span class="sig-paren">(</span><span class="pre">NodePosition</span> <em><span class="pre">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MinMaxAccumulateTree8pushDownE12NodePosition" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N20MinMaxAccumulateTree11updateRangeE6size_t6size_t11IntegerType">
+<span id="_CPPv3N20MinMaxAccumulateTree11updateRangeE6size_t6size_t11IntegerType"></span><span id="_CPPv2N20MinMaxAccumulateTree11updateRangeE6size_t6size_t11IntegerType"></span><span id="MinMaxAccumulateTree::updateRange__s.s.IntegerType"></span><span class="target" id="classMinMaxAccumulateTree_1a7c2d76239adfbbfdd78ddbe8b60c3f3c"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">updateRange</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">left</span></em>, <span class="pre">size_t</span> <em><span class="pre">right</span></em>, <a class="reference internal" href="#_CPPv4I0E20MinMaxAccumulateTree" title="MinMaxAccumulateTree::IntegerType"><span class="pre">IntegerType</span></a> <em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MinMaxAccumulateTree11updateRangeE6size_t6size_t11IntegerType" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Update min and max values in the range [<em>left</em>, <em>right</em>) with number <em>value</em>. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code>: inclusive range left side </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">right</span></code>: exclusive right side of range </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: number to be used for updating minimum and maximum </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N20MinMaxAccumulateTree11rangeMinMaxE6size_t6size_t">
+<span id="_CPPv3N20MinMaxAccumulateTree11rangeMinMaxE6size_t6size_t"></span><span id="_CPPv2N20MinMaxAccumulateTree11rangeMinMaxE6size_t6size_t"></span><span id="MinMaxAccumulateTree::rangeMinMax__s.s"></span><span class="target" id="classMinMaxAccumulateTree_1ac159fe70f8f05cfa0afc264b0c52c67d"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">MinMax</span> <code class="sig-name descname"><span class="pre">rangeMinMax</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">l</span></em>, <span class="pre">size_t</span> <em><span class="pre">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20MinMaxAccumulateTree11rangeMinMaxE6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculate minimum and maximum value in the range [l, r) </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>std::pair {min, max} </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code>: inclusive left side of range </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code>: exclusive right side of range </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAddressableFilterProxyModel.html">AddressableFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModel.html">AddressableItemModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModelI.html">AddressableItemModelI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalTask.html">AnalTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDirectionalComboBox.html">DirectionalComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJSDecDecompiler.html">JSDecDecompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonModel.html">JsonModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classJsonTreeItem.html">JsonTreeItem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1List.html">LinkedListPool::List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1ListIterator.html">LinkedListPool::ListIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">MinMaxAccumulateTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentTreeBase.html">SegmentTreeBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlock.html">BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutter_1_1CutterLayout.html">Cutter::CutterLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
+    </div>
+    
+
+  </body>
+</html>

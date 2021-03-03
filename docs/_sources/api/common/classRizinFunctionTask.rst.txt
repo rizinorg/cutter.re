@@ -1,0 +1,4 @@
+RizinFunctionTask
+=================
+
+.. doxygenclass:: RizinFunctionTask

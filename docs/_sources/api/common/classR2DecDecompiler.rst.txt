@@ -1,4 +1,0 @@
-R2DecDecompiler
-===============
-
-.. doxygenclass:: R2DecDecompiler

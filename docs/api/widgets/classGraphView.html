@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GraphView &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -57,79 +56,79 @@
 <h1>GraphView<a class="headerlink" href="#graphview" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
 <dt id="_CPPv49GraphView">
-<span id="_CPPv39GraphView"></span><span id="_CPPv29GraphView"></span><span id="GraphView"></span><span class="target" id="classGraphView"></span><em class="property">class </em><code class="sig-name descname">GraphView</code> : <em class="property">public</em> QAbstractScrollArea<a class="headerlink" href="#_CPPv49GraphView" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv39GraphView"></span><span id="_CPPv29GraphView"></span><span id="GraphView"></span><span class="target" id="classGraphView"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">GraphView</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">QAbstractScrollArea</span><a class="headerlink" href="#_CPPv49GraphView" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Subclassed by <a class="reference internal" href="classCutterGraphView.html#classCutterGraphView"><span class="std std-ref">CutterGraphView</span></a>, <a class="reference internal" href="classOverviewView.html#classOverviewView"><span class="std std-ref">OverviewView</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N9GraphView6LayoutE">
-<span id="_CPPv3N9GraphView6LayoutE"></span><span id="_CPPv2N9GraphView6LayoutE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409"></span><em class="property">enum </em><code class="sig-name descname">Layout</code><a class="headerlink" href="#_CPPv4N9GraphView6LayoutE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6LayoutE"></span><span id="_CPPv2N9GraphView6LayoutE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">Layout</span></code><a class="headerlink" href="#_CPPv4N9GraphView6LayoutE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout10GridNarrowE">
-<span id="_CPPv3N9GraphView6Layout10GridNarrowE"></span><span id="_CPPv2N9GraphView6Layout10GridNarrowE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a12c16d92f47383d7049ec608c0781bcb"></span><em class="property">enumerator </em><code class="sig-name descname">GridNarrow</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridNarrowE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout10GridNarrowE"></span><span id="_CPPv2N9GraphView6Layout10GridNarrowE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a12c16d92f47383d7049ec608c0781bcb"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridNarrow</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridNarrowE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout10GridMediumE">
-<span id="_CPPv3N9GraphView6Layout10GridMediumE"></span><span id="_CPPv2N9GraphView6Layout10GridMediumE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409aca8499d706e59c72fe119ac34c5e6d4e"></span><em class="property">enumerator </em><code class="sig-name descname">GridMedium</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridMediumE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout10GridMediumE"></span><span id="_CPPv2N9GraphView6Layout10GridMediumE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409aca8499d706e59c72fe119ac34c5e6d4e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridMedium</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridMediumE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout8GridWideE">
-<span id="_CPPv3N9GraphView6Layout8GridWideE"></span><span id="_CPPv2N9GraphView6Layout8GridWideE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a7d86c8889b647ccc205af6631013a0ac"></span><em class="property">enumerator </em><code class="sig-name descname">GridWide</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout8GridWideE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout8GridWideE"></span><span id="_CPPv2N9GraphView6Layout8GridWideE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a7d86c8889b647ccc205af6631013a0ac"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridWide</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout8GridWideE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridAAAE">
-<span id="_CPPv3N9GraphView6Layout7GridAAAE"></span><span id="_CPPv2N9GraphView6Layout7GridAAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a3c400ae2b92a562e653b4751ebe8a6cf"></span><em class="property">enumerator </em><code class="sig-name descname">GridAAA</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAAAE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridAAAE"></span><span id="_CPPv2N9GraphView6Layout7GridAAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a3c400ae2b92a562e653b4751ebe8a6cf"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridAAA</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAAAE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridAABE">
-<span id="_CPPv3N9GraphView6Layout7GridAABE"></span><span id="_CPPv2N9GraphView6Layout7GridAABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a518947f759984421b3553ce9cada7be7"></span><em class="property">enumerator </em><code class="sig-name descname">GridAAB</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAABE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridAABE"></span><span id="_CPPv2N9GraphView6Layout7GridAABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a518947f759984421b3553ce9cada7be7"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridAAB</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAABE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridABAE">
-<span id="_CPPv3N9GraphView6Layout7GridABAE"></span><span id="_CPPv2N9GraphView6Layout7GridABAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409addced78ae004dc00c9a331b584adc8f2"></span><em class="property">enumerator </em><code class="sig-name descname">GridABA</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABAE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridABAE"></span><span id="_CPPv2N9GraphView6Layout7GridABAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409addced78ae004dc00c9a331b584adc8f2"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridABA</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABAE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridABBE">
-<span id="_CPPv3N9GraphView6Layout7GridABBE"></span><span id="_CPPv2N9GraphView6Layout7GridABBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a60651cc01c86cf17e2fa43ec0cd66f06"></span><em class="property">enumerator </em><code class="sig-name descname">GridABB</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABBE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridABBE"></span><span id="_CPPv2N9GraphView6Layout7GridABBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a60651cc01c86cf17e2fa43ec0cd66f06"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridABB</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABBE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridBAAE">
-<span id="_CPPv3N9GraphView6Layout7GridBAAE"></span><span id="_CPPv2N9GraphView6Layout7GridBAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a6b12b97f54016a3486b1bafcb0f7c677"></span><em class="property">enumerator </em><code class="sig-name descname">GridBAA</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBAAE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBAAE"></span><span id="_CPPv2N9GraphView6Layout7GridBAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a6b12b97f54016a3486b1bafcb0f7c677"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridBAA</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBAAE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridBABE">
-<span id="_CPPv3N9GraphView6Layout7GridBABE"></span><span id="_CPPv2N9GraphView6Layout7GridBABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a2a1b29ea59843c15976db492639f9736"></span><em class="property">enumerator </em><code class="sig-name descname">GridBAB</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBABE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBABE"></span><span id="_CPPv2N9GraphView6Layout7GridBABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a2a1b29ea59843c15976db492639f9736"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridBAB</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBABE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridBBAE">
-<span id="_CPPv3N9GraphView6Layout7GridBBAE"></span><span id="_CPPv2N9GraphView6Layout7GridBBAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a92d9fcee4cd1187cf5fb1ee3340faaae"></span><em class="property">enumerator </em><code class="sig-name descname">GridBBA</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBAE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBBAE"></span><span id="_CPPv2N9GraphView6Layout7GridBBAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a92d9fcee4cd1187cf5fb1ee3340faaae"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridBBA</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBAE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N9GraphView6Layout7GridBBBE">
-<span id="_CPPv3N9GraphView6Layout7GridBBBE"></span><span id="_CPPv2N9GraphView6Layout7GridBBBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a71d078cda2a5f02bf10508e85ce17f29"></span><em class="property">enumerator </em><code class="sig-name descname">GridBBB</code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBBE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBBBE"></span><span id="_CPPv2N9GraphView6Layout7GridBBBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a71d078cda2a5f02bf10508e85ce17f29"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">GridBBB</span></code><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBBE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="cpp type">
 <dt id="_CPPv4N9GraphView10GraphBlockE">
-<span id="_CPPv3N9GraphView10GraphBlockE"></span><span id="_CPPv2N9GraphView10GraphBlockE"></span><span class="target" id="classGraphView_1a4c06376e9379db665808ff587a6448eb"></span><em class="property">using </em><code class="sig-name descname">GraphBlock</code> = <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>::<a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout10GraphBlockE" title="GraphLayout::GraphBlock">GraphBlock</a><a class="headerlink" href="#_CPPv4N9GraphView10GraphBlockE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView10GraphBlockE"></span><span id="_CPPv2N9GraphView10GraphBlockE"></span><span class="target" id="classGraphView_1a4c06376e9379db665808ff587a6448eb"></span><em class="property"><span class="pre">using</span> </em><code class="sig-name descname"><span class="pre">GraphBlock</span></code> <span class="pre">=</span> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">::</span><a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout10GraphBlockE" title="GraphLayout::GraphBlock"><span class="pre">GraphBlock</span></a><a class="headerlink" href="#_CPPv4N9GraphView10GraphBlockE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp type">
 <dt id="_CPPv4N9GraphView9GraphEdgeE">
-<span id="_CPPv3N9GraphView9GraphEdgeE"></span><span id="_CPPv2N9GraphView9GraphEdgeE"></span><span class="target" id="classGraphView_1a66d7b1efa0dfe51375e5c3a2f446ff32"></span><em class="property">using </em><code class="sig-name descname">GraphEdge</code> = <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>::<a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout9GraphEdgeE" title="GraphLayout::GraphEdge">GraphEdge</a><a class="headerlink" href="#_CPPv4N9GraphView9GraphEdgeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView9GraphEdgeE"></span><span id="_CPPv2N9GraphView9GraphEdgeE"></span><span class="target" id="classGraphView_1a66d7b1efa0dfe51375e5c3a2f446ff32"></span><em class="property"><span class="pre">using</span> </em><code class="sig-name descname"><span class="pre">GraphEdge</span></code> <span class="pre">=</span> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">::</span><a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout9GraphEdgeE" title="GraphLayout::GraphEdge"><span class="pre">GraphEdge</span></a><a class="headerlink" href="#_CPPv4N9GraphView9GraphEdgeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -137,22 +136,22 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView9GraphViewEP7QWidget">
-<span id="_CPPv3N9GraphView9GraphViewEP7QWidget"></span><span id="_CPPv2N9GraphView9GraphViewEP7QWidget"></span><span id="GraphView::GraphView__QWidgetP"></span><span class="target" id="classGraphView_1a5ea67d2f2d98206a03c0bbb4c639d478"></span><code class="sig-name descname">GraphView</code><span class="sig-paren">(</span>QWidget *<em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9GraphViewEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView9GraphViewEP7QWidget"></span><span id="_CPPv2N9GraphView9GraphViewEP7QWidget"></span><span id="GraphView::GraphView__QWidgetP"></span><span class="target" id="classGraphView_1a5ea67d2f2d98206a03c0bbb4c639d478"></span><em class="property"><span class="pre">explicit</span></em> <code class="sig-name descname"><span class="pre">GraphView</span></code><span class="sig-paren">(</span><span class="pre">QWidget</span> <span class="pre">*</span><em><span class="pre">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9GraphViewEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphViewD0Ev">
-<span id="_CPPv3N9GraphViewD0Ev"></span><span id="_CPPv2N9GraphViewD0Ev"></span><span id="GraphView::~GraphView"></span><span class="target" id="classGraphView_1ace83dc05d5270ef5da07c296cfd79588"></span><code class="sig-name descname">~GraphView</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">override</em><a class="headerlink" href="#_CPPv4N9GraphViewD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphViewD0Ev"></span><span id="_CPPv2N9GraphViewD0Ev"></span><span id="GraphView::~GraphView"></span><span class="target" id="classGraphView_1ace83dc05d5270ef5da07c296cfd79588"></span><code class="sig-name descname"><span class="pre">~GraphView</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4N9GraphViewD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView9showBlockER10GraphBlockb">
-<span id="_CPPv3N9GraphView9showBlockER10GraphBlockb"></span><span id="_CPPv2N9GraphView9showBlockER10GraphBlockb"></span><span id="GraphView::showBlock__GraphBlockR.b"></span><span class="target" id="classGraphView_1ae00473373369c76c32af037460f9fcfe"></span>void <code class="sig-name descname">showBlock</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> &amp;<em>block</em>, bool <em>anywhere</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9showBlockER10GraphBlockb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView9showBlockER10GraphBlockb"></span><span id="_CPPv2N9GraphView9showBlockER10GraphBlockb"></span><span id="GraphView::showBlock__GraphBlockR.b"></span><span class="target" id="classGraphView_1ae00473373369c76c32af037460f9fcfe"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">showBlock</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock"><span class="pre">GraphBlock</span></a> <span class="pre">&amp;</span><em><span class="pre">block</span></em>, <span class="pre">bool</span> <em><span class="pre">anywhere</span></em> <span class="pre">=</span> <span class="pre">false</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9showBlockER10GraphBlockb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView13showRectangleERK5QRectb">
-<span id="_CPPv3N9GraphView13showRectangleERK5QRectb"></span><span id="_CPPv2N9GraphView13showRectangleERK5QRectb"></span><span id="GraphView::showRectangle__QRectCR.b"></span><span class="target" id="classGraphView_1a12d59d78b9036805670123569c6e7214"></span>void <code class="sig-name descname">showRectangle</code><span class="sig-paren">(</span><em class="property">const</em> QRect &amp;<em>rect</em>, bool <em>anywhere</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13showRectangleERK5QRectb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView13showRectangleERK5QRectb"></span><span id="_CPPv2N9GraphView13showRectangleERK5QRectb"></span><span id="GraphView::showRectangle__QRectCR.b"></span><span class="target" id="classGraphView_1a12d59d78b9036805670123569c6e7214"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">showRectangle</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QRect</span> <span class="pre">&amp;</span><em><span class="pre">rect</span></em>, <span class="pre">bool</span> <em><span class="pre">anywhere</span></em> <span class="pre">=</span> <span class="pre">false</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13showRectangleERK5QRectb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Move view so that area is visible. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -166,7 +165,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView18getBlockContainingE6QPoint">
-<span id="_CPPv3N9GraphView18getBlockContainingE6QPoint"></span><span id="_CPPv2N9GraphView18getBlockContainingE6QPoint"></span><span id="GraphView::getBlockContaining__QPoint"></span><span class="target" id="classGraphView_1ab32eb403380ef266756f50cef2a30744"></span><a class="reference internal" href="#_CPPv49GraphView" title="GraphView">GraphView</a>::<a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock">GraphBlock</a> *<code class="sig-name descname">getBlockContaining</code><span class="sig-paren">(</span>QPoint <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView18getBlockContainingE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView18getBlockContainingE6QPoint"></span><span id="_CPPv2N9GraphView18getBlockContainingE6QPoint"></span><span id="GraphView::getBlockContaining__QPoint"></span><span class="target" id="classGraphView_1ab32eb403380ef266756f50cef2a30744"></span><a class="reference internal" href="#_CPPv49GraphView" title="GraphView"><span class="pre">GraphView</span></a><span class="pre">::</span><a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock"><span class="pre">GraphBlock</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">getBlockContaining</span></code><span class="sig-paren">(</span><span class="pre">QPoint</span> <em><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView18getBlockContainingE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get block containing specified point logical coordinates. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>Block or nullptr if position is outside all blocks. </p>
@@ -181,82 +180,82 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView24viewToLogicalCoordinatesE6QPoint">
-<span id="_CPPv3N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="GraphView::viewToLogicalCoordinates__QPoint"></span><span class="target" id="classGraphView_1a9b82b8669d34ad89457fd7ad03fb5a30"></span>QPoint <code class="sig-name descname">viewToLogicalCoordinates</code><span class="sig-paren">(</span>QPoint <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24viewToLogicalCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24viewToLogicalCoordinatesE6QPoint"></span><span id="GraphView::viewToLogicalCoordinates__QPoint"></span><span class="target" id="classGraphView_1a9b82b8669d34ad89457fd7ad03fb5a30"></span><span class="pre">QPoint</span> <code class="sig-name descname"><span class="pre">viewToLogicalCoordinates</span></code><span class="sig-paren">(</span><span class="pre">QPoint</span> <em><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24viewToLogicalCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView24logicalToViewCoordinatesE6QPoint">
-<span id="_CPPv3N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="GraphView::logicalToViewCoordinates__QPoint"></span><span class="target" id="classGraphView_1a6c02141e25582f70bfde96d9484a91db"></span>QPoint <code class="sig-name descname">logicalToViewCoordinates</code><span class="sig-paren">(</span>QPoint <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24logicalToViewCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="_CPPv2N9GraphView24logicalToViewCoordinatesE6QPoint"></span><span id="GraphView::logicalToViewCoordinates__QPoint"></span><span class="target" id="classGraphView_1a6c02141e25582f70bfde96d9484a91db"></span><span class="pre">QPoint</span> <code class="sig-name descname"><span class="pre">logicalToViewCoordinates</span></code><span class="sig-paren">(</span><span class="pre">QPoint</span> <em><span class="pre">p</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView24logicalToViewCoordinatesE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE">
-<span id="_CPPv3N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE"></span><span id="_CPPv2N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE"></span><span id="GraphView::setGraphLayout__std::unique_ptr:GraphLayout:"></span><span class="target" id="classGraphView_1a6d04763e788f496270eecccff33e8a3a"></span>void <code class="sig-name descname">setGraphLayout</code><span class="sig-paren">(</span>std::unique_ptr&lt;<a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>&gt; <em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE"></span><span id="_CPPv2N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE"></span><span id="GraphView::setGraphLayout__std::unique_ptr:GraphLayout:"></span><span class="target" id="classGraphView_1a6d04763e788f496270eecccff33e8a3a"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setGraphLayout</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">unique_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">&gt;</span> <em><span class="pre">layout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView14setGraphLayoutENSt10unique_ptrI11GraphLayoutEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK9GraphView14getGraphLayoutEv">
-<span id="_CPPv3NK9GraphView14getGraphLayoutEv"></span><span id="_CPPv2NK9GraphView14getGraphLayoutEv"></span><span id="GraphView::getGraphLayoutC"></span><span class="target" id="classGraphView_1a048bfe23525eea44d899e53f85f07724"></span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a> &amp;<code class="sig-name descname">getGraphLayout</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9GraphView14getGraphLayoutEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK9GraphView14getGraphLayoutEv"></span><span id="_CPPv2NK9GraphView14getGraphLayoutEv"></span><span id="GraphView::getGraphLayoutC"></span><span class="target" id="classGraphView_1a048bfe23525eea44d899e53f85f07724"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">getGraphLayout</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK9GraphView14getGraphLayoutEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE">
-<span id="_CPPv3N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE"></span><span id="_CPPv2N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE"></span><span id="GraphView::setLayoutConfig__GraphLayout::LayoutConfigCR"></span><span class="target" id="classGraphView_1a02c9245844d5bf8a12922ba4692ec7e5"></span>void <code class="sig-name descname">setLayoutConfig</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>::<a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout12LayoutConfigE" title="GraphLayout::LayoutConfig">LayoutConfig</a> &amp;<em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE"></span><span id="_CPPv2N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE"></span><span id="GraphView::setLayoutConfig__GraphLayout::LayoutConfigCR"></span><span class="target" id="classGraphView_1a02c9245844d5bf8a12922ba4692ec7e5"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setLayoutConfig</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">::</span><a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout12LayoutConfigE" title="GraphLayout::LayoutConfig"><span class="pre">LayoutConfig</span></a> <span class="pre">&amp;</span><em><span class="pre">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView15setLayoutConfigERKN11GraphLayout12LayoutConfigE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView5paintER8QPainter6QPoint5QRect5qrealb">
-<span id="_CPPv3N9GraphView5paintER8QPainter6QPoint5QRect5qrealb"></span><span id="_CPPv2N9GraphView5paintER8QPainter6QPoint5QRect5qrealb"></span><span id="GraphView::paint__QPainterR.QPoint.QRect.qreal.b"></span><span class="target" id="classGraphView_1a473547bcefad00c9a891e50f23aba614"></span>void <code class="sig-name descname">paint</code><span class="sig-paren">(</span>QPainter &amp;<em>p</em>, QPoint <em>offset</em>, QRect <em>area</em>, qreal <em>scale</em> = 1.0, bool <em>interactive</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView5paintER8QPainter6QPoint5QRect5qrealb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView5paintER8QPainter6QPoint5QRect5qrealb"></span><span id="_CPPv2N9GraphView5paintER8QPainter6QPoint5QRect5qrealb"></span><span id="GraphView::paint__QPainterR.QPoint.QRect.qreal.b"></span><span class="target" id="classGraphView_1a473547bcefad00c9a891e50f23aba614"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">paint</span></code><span class="sig-paren">(</span><span class="pre">QPainter</span> <span class="pre">&amp;</span><em><span class="pre">p</span></em>, <span class="pre">QPoint</span> <em><span class="pre">offset</span></em>, <span class="pre">QRect</span> <em><span class="pre">area</span></em>, <span class="pre">qreal</span> <em><span class="pre">scale</span></em> <span class="pre">=</span> <span class="pre">1.0</span>, <span class="pre">bool</span> <em><span class="pre">interactive</span></em> <span class="pre">=</span> <span class="pre">true</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView5paintER8QPainter6QPoint5QRect5qrealb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView12saveAsBitmapE7QStringPKcdb">
-<span id="_CPPv3N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="_CPPv2N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="GraphView::saveAsBitmap__QString.cCP.double.b"></span><span class="target" id="classGraphView_1ab73837f36d766c465ffdf38a07497072"></span>void <code class="sig-name descname">saveAsBitmap</code><span class="sig-paren">(</span>QString <em>path</em>, <em class="property">const</em> char *<em>format</em> = nullptr, double <em>scaler</em> = 1.0, bool <em>transparent</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12saveAsBitmapE7QStringPKcdb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="_CPPv2N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="GraphView::saveAsBitmap__QString.cCP.double.b"></span><span class="target" id="classGraphView_1ab73837f36d766c465ffdf38a07497072"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">saveAsBitmap</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">path</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">format</span></em> <span class="pre">=</span> <span class="pre">nullptr</span>, <span class="pre">double</span> <em><span class="pre">scaler</span></em> <span class="pre">=</span> <span class="pre">1.0</span>, <span class="pre">bool</span> <em><span class="pre">transparent</span></em> <span class="pre">=</span> <span class="pre">false</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12saveAsBitmapE7QStringPKcdb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView9saveAsSvgE7QString">
-<span id="_CPPv3N9GraphView9saveAsSvgE7QString"></span><span id="_CPPv2N9GraphView9saveAsSvgE7QString"></span><span id="GraphView::saveAsSvg__QString"></span><span class="target" id="classGraphView_1a5002094aa3a47e5cc802fd9506201128"></span>void <code class="sig-name descname">saveAsSvg</code><span class="sig-paren">(</span>QString <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9saveAsSvgE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView9saveAsSvgE7QString"></span><span id="_CPPv2N9GraphView9saveAsSvgE7QString"></span><span id="GraphView::saveAsSvg__QString"></span><span class="target" id="classGraphView_1a5002094aa3a47e5cc802fd9506201128"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">saveAsSvg</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9saveAsSvgE7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView21computeGraphPlacementEv">
-<span id="_CPPv3N9GraphView21computeGraphPlacementEv"></span><span id="_CPPv2N9GraphView21computeGraphPlacementEv"></span><span id="GraphView::computeGraphPlacement"></span><span class="target" id="classGraphView_1a362bdaeeeafe21de93757c120ca3a6d7"></span>void <code class="sig-name descname">computeGraphPlacement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView21computeGraphPlacementEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView21computeGraphPlacementEv"></span><span id="_CPPv2N9GraphView21computeGraphPlacementEv"></span><span id="GraphView::computeGraphPlacement"></span><span class="target" id="classGraphView_1a362bdaeeeafe21de93757c120ca3a6d7"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">computeGraphPlacement</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView21computeGraphPlacementEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK9GraphView13getViewOffsetEv">
-<span id="_CPPv3NK9GraphView13getViewOffsetEv"></span><span id="_CPPv2NK9GraphView13getViewOffsetEv"></span><span id="GraphView::getViewOffsetC"></span><span class="target" id="classGraphView_1ab77503d2bb65987c283d2be4bab35892"></span>QPoint <code class="sig-name descname">getViewOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9GraphView13getViewOffsetEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK9GraphView13getViewOffsetEv"></span><span id="_CPPv2NK9GraphView13getViewOffsetEv"></span><span id="GraphView::getViewOffsetC"></span><span class="target" id="classGraphView_1ab77503d2bb65987c283d2be4bab35892"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">QPoint</span> <code class="sig-name descname"><span class="pre">getViewOffset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK9GraphView13getViewOffsetEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView13setViewOffsetE6QPoint">
-<span id="_CPPv3N9GraphView13setViewOffsetE6QPoint"></span><span id="_CPPv2N9GraphView13setViewOffsetE6QPoint"></span><span id="GraphView::setViewOffset__QPoint"></span><span class="target" id="classGraphView_1aba0ec827a68cee446e9f4110c0b16d9d"></span>void <code class="sig-name descname">setViewOffset</code><span class="sig-paren">(</span>QPoint <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13setViewOffsetE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView13setViewOffsetE6QPoint"></span><span id="_CPPv2N9GraphView13setViewOffsetE6QPoint"></span><span id="GraphView::setViewOffset__QPoint"></span><span class="target" id="classGraphView_1aba0ec827a68cee446e9f4110c0b16d9d"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setViewOffset</span></code><span class="sig-paren">(</span><span class="pre">QPoint</span> <em><span class="pre">offset</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13setViewOffsetE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK9GraphView12getViewScaleEv">
-<span id="_CPPv3NK9GraphView12getViewScaleEv"></span><span id="_CPPv2NK9GraphView12getViewScaleEv"></span><span id="GraphView::getViewScaleC"></span><span class="target" id="classGraphView_1a16c8142a2e60c5056c7aa0e72e3655e3"></span>qreal <code class="sig-name descname">getViewScale</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK9GraphView12getViewScaleEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK9GraphView12getViewScaleEv"></span><span id="_CPPv2NK9GraphView12getViewScaleEv"></span><span id="GraphView::getViewScaleC"></span><span class="target" id="classGraphView_1a16c8142a2e60c5056c7aa0e72e3655e3"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">qreal</span> <code class="sig-name descname"><span class="pre">getViewScale</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK9GraphView12getViewScaleEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView12setViewScaleE5qreal">
-<span id="_CPPv3N9GraphView12setViewScaleE5qreal"></span><span id="_CPPv2N9GraphView12setViewScaleE5qreal"></span><span id="GraphView::setViewScale__qreal"></span><span class="target" id="classGraphView_1a060b050de9d58f1070ce72be1e051eda"></span>void <code class="sig-name descname">setViewScale</code><span class="sig-paren">(</span>qreal <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12setViewScaleE5qreal" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView12setViewScaleE5qreal"></span><span id="_CPPv2N9GraphView12setViewScaleE5qreal"></span><span id="GraphView::setViewScale__qreal"></span><span class="target" id="classGraphView_1a060b050de9d58f1070ce72be1e051eda"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setViewScale</span></code><span class="sig-paren">(</span><span class="pre">qreal</span> <em><span class="pre">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12setViewScaleE5qreal" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView6centerEv">
-<span id="_CPPv3N9GraphView6centerEv"></span><span id="_CPPv2N9GraphView6centerEv"></span><span id="GraphView::center"></span><span class="target" id="classGraphView_1a0c2c899f78b079b013d34c3805e86567"></span>void <code class="sig-name descname">center</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView6centerEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6centerEv"></span><span id="_CPPv2N9GraphView6centerEv"></span><span id="GraphView::center"></span><span class="target" id="classGraphView_1a0c2c899f78b079b013d34c3805e86567"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">center</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView6centerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView7centerXEv">
-<span id="_CPPv3N9GraphView7centerXEv"></span><span id="_CPPv2N9GraphView7centerXEv"></span><span id="GraphView::centerX"></span><span class="target" id="classGraphView_1abb5e83cf695d699d2ec503613774b413"></span>void <code class="sig-name descname">centerX</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView7centerXEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView7centerXEv"></span><span id="_CPPv2N9GraphView7centerXEv"></span><span id="GraphView::centerX"></span><span class="target" id="classGraphView_1abb5e83cf695d699d2ec503613774b413"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">centerX</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView7centerXEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView7centerYEv">
-<span id="_CPPv3N9GraphView7centerYEv"></span><span id="_CPPv2N9GraphView7centerYEv"></span><span id="GraphView::centerY"></span><span class="target" id="classGraphView_1a4babd629226bf7a2bae48aebec86155b"></span>void <code class="sig-name descname">centerY</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView7centerYEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView7centerYEv"></span><span id="_CPPv2N9GraphView7centerYEv"></span><span id="GraphView::centerY"></span><span class="target" id="classGraphView_1a4babd629226bf7a2bae48aebec86155b"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">centerY</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView7centerYEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -264,12 +263,12 @@
 <p class="breathe-sectiondef-title rubric">Signals</p>
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView17viewOffsetChangedE6QPoint">
-<span id="_CPPv3N9GraphView17viewOffsetChangedE6QPoint"></span><span id="_CPPv2N9GraphView17viewOffsetChangedE6QPoint"></span><span id="GraphView::viewOffsetChanged__QPoint"></span><span class="target" id="classGraphView_1a19d12d95978028d685d986a37594a0b9"></span>void <code class="sig-name descname">viewOffsetChanged</code><span class="sig-paren">(</span>QPoint <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView17viewOffsetChangedE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17viewOffsetChangedE6QPoint"></span><span id="_CPPv2N9GraphView17viewOffsetChangedE6QPoint"></span><span id="GraphView::viewOffsetChanged__QPoint"></span><span class="target" id="classGraphView_1a19d12d95978028d685d986a37594a0b9"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">viewOffsetChanged</span></code><span class="sig-paren">(</span><span class="pre">QPoint</span> <em><span class="pre">offset</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView17viewOffsetChangedE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView16viewScaleChangedE5qreal">
-<span id="_CPPv3N9GraphView16viewScaleChangedE5qreal"></span><span id="_CPPv2N9GraphView16viewScaleChangedE5qreal"></span><span id="GraphView::viewScaleChanged__qreal"></span><span class="target" id="classGraphView_1a79977bb934aced16420c1a0e5beba898"></span>void <code class="sig-name descname">viewScaleChanged</code><span class="sig-paren">(</span>qreal <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView16viewScaleChangedE5qreal" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView16viewScaleChangedE5qreal"></span><span id="_CPPv2N9GraphView16viewScaleChangedE5qreal"></span><span id="GraphView::viewScaleChanged__qreal"></span><span class="target" id="classGraphView_1a79977bb934aced16420c1a0e5beba898"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">viewScaleChanged</span></code><span class="sig-paren">(</span><span class="pre">qreal</span> <em><span class="pre">scale</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView16viewScaleChangedE5qreal" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -277,12 +276,12 @@
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView15makeGraphLayoutE6Layoutb">
-<span id="_CPPv3N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="_CPPv2N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="GraphView::makeGraphLayout__Layout.b"></span><span class="target" id="classGraphView_1aa03e76d0ff30688cf0f8d9d9fe4e817f"></span>std::unique_ptr&lt;<a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>&gt; <code class="sig-name descname">makeGraphLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView6LayoutE" title="GraphView::Layout">Layout</a> <em>layout</em>, bool <em>horizontal</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView15makeGraphLayoutE6Layoutb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="_CPPv2N9GraphView15makeGraphLayoutE6Layoutb"></span><span id="GraphView::makeGraphLayout__Layout.b"></span><span class="target" id="classGraphView_1aa03e76d0ff30688cf0f8d9d9fe4e817f"></span><em class="property"><span class="pre">static</span></em> <span class="pre">std</span><span class="pre">::</span><span class="pre">unique_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">makeGraphLayout</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9GraphView6LayoutE" title="GraphView::Layout"><span class="pre">Layout</span></a> <em><span class="pre">layout</span></em>, <span class="pre">bool</span> <em><span class="pre">horizontal</span></em> <span class="pre">=</span> <span class="pre">false</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView15makeGraphLayoutE6Layoutb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE">
-<span id="_CPPv3N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="_CPPv2N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="GraphView::cleanupEdges__GraphLayout::GraphR"></span><span class="target" id="classGraphView_1a30c3ee1c48bc858489b14e69ebef97e8"></span>void <code class="sig-name descname">cleanupEdges</code><span class="sig-paren">(</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a>::<a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout5GraphE" title="GraphLayout::Graph">Graph</a> &amp;<em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="_CPPv2N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="GraphView::cleanupEdges__GraphLayout::GraphR"></span><span class="target" id="classGraphView_1a30c3ee1c48bc858489b14e69ebef97e8"></span><em class="property"><span class="pre">static</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">cleanupEdges</span></code><span class="sig-paren">(</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><span class="pre">::</span><a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout5GraphE" title="GraphLayout::Graph"><span class="pre">Graph</span></a> <span class="pre">&amp;</span><em><span class="pre">graph</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove duplicate edges and edges without target in graph. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -296,32 +295,32 @@
 </div>
 <dl class="cpp struct">
 <dt id="_CPPv4N9GraphView17EdgeConfigurationE">
-<span id="_CPPv3N9GraphView17EdgeConfigurationE"></span><span id="_CPPv2N9GraphView17EdgeConfigurationE"></span><span id="GraphView::EdgeConfiguration"></span><span class="target" id="structGraphView_1_1EdgeConfiguration"></span><em class="property">struct </em><code class="sig-name descname">EdgeConfiguration</code><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfigurationE"></span><span id="_CPPv2N9GraphView17EdgeConfigurationE"></span><span id="GraphView::EdgeConfiguration"></span><span class="target" id="structGraphView_1_1EdgeConfiguration"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">EdgeConfiguration</span></code><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfigurationE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="cpp var">
 <dt id="_CPPv4N9GraphView17EdgeConfiguration5colorE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration5colorE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration5colorE"></span><span id="GraphView::EdgeConfiguration::color__QColor"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1ae5d89660d2e1f8df1ffe208b0af50f1f"></span>QColor <code class="sig-name descname">color</code> = QColor(128, 128, 128)<a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration5colorE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfiguration5colorE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration5colorE"></span><span id="GraphView::EdgeConfiguration::color__QColor"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1ae5d89660d2e1f8df1ffe208b0af50f1f"></span><span class="pre">QColor</span> <code class="sig-name descname"><span class="pre">color</span></code> <span class="pre">=</span> <span class="pre">QColor</span><span class="pre">(</span><span class="pre">128</span><span class="pre">,</span> <span class="pre">128</span><span class="pre">,</span> <span class="pre">128</span><span class="pre">)</span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration5colorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N9GraphView17EdgeConfiguration11start_arrowE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="GraphView::EdgeConfiguration::start_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a055b62b99484361d2541ca0aea7a8e2d"></span>bool <code class="sig-name descname">start_arrow</code> = false<a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11start_arrowE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="GraphView::EdgeConfiguration::start_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a055b62b99484361d2541ca0aea7a8e2d"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">start_arrow</span></code> <span class="pre">=</span> <span class="pre">false</span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11start_arrowE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N9GraphView17EdgeConfiguration9end_arrowE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="GraphView::EdgeConfiguration::end_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a05b09300c8ca2175d1239b4475b72fdf"></span>bool <code class="sig-name descname">end_arrow</code> = true<a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration9end_arrowE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="GraphView::EdgeConfiguration::end_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a05b09300c8ca2175d1239b4475b72fdf"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">end_arrow</span></code> <span class="pre">=</span> <span class="pre">true</span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration9end_arrowE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N9GraphView17EdgeConfiguration11width_scaleE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="GraphView::EdgeConfiguration::width_scale__qreal"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1ade127f72245836e62051d539e60bb523"></span>qreal <code class="sig-name descname">width_scale</code> = 1.0<a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11width_scaleE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="GraphView::EdgeConfiguration::width_scale__qreal"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1ade127f72245836e62051d539e60bb523"></span><span class="pre">qreal</span> <code class="sig-name descname"><span class="pre">width_scale</span></code> <span class="pre">=</span> <span class="pre">1.0</span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11width_scaleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N9GraphView17EdgeConfiguration9lineStyleE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration9lineStyleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration9lineStyleE"></span><span id="GraphView::EdgeConfiguration::lineStyle__Qt::PenStyle"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1aca52d0d8d94b9e87f047d52ebd911cb3"></span>Qt::PenStyle <code class="sig-name descname">lineStyle</code> = Qt::PenStyle::SolidLine<a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration9lineStyleE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView17EdgeConfiguration9lineStyleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration9lineStyleE"></span><span id="GraphView::EdgeConfiguration::lineStyle__Qt::PenStyle"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1aca52d0d8d94b9e87f047d52ebd911cb3"></span><span class="pre">Qt</span><span class="pre">::</span><span class="pre">PenStyle</span> <code class="sig-name descname"><span class="pre">lineStyle</span></code> <span class="pre">=</span> <span class="pre">Qt</span><span class="pre">::</span><span class="pre">PenStyle</span><span class="pre">::</span><span class="pre">SolidLine</span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration9lineStyleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -415,7 +414,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classGenericR2GraphView.html">GenericR2GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGenericRizinGraphView.html">GenericRizinGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphGridLayout.html">GraphGridLayout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphHorizontalAdapter.html">GraphHorizontalAdapter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
@@ -443,7 +442,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classR2GraphWidget.html">R2GraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
@@ -454,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinGraphWidget.html">RizinGraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
@@ -494,6 +493,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Token.html">DisassemblerGraphView::Token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLeftPanel_1_1Arrow.html">DisassemblyLeftPanel::Arrow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridBlock.html">GraphGridLayout::GridBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridEdge.html">GraphGridLayout::GridEdge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1LayoutState.html">GraphGridLayout::LayoutState</a></li>
@@ -505,7 +505,6 @@
 <li class="toctree-l3"><a class="reference internal" href="structHexCursor.html">HexCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRange.html">Range</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSimpleTextGraphView_1_1BlockContent.html">SimpleTextGraphView::BlockContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structStackModel_1_1Item.html">StackModel::Item</a></li>
@@ -535,7 +534,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 

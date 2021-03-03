@@ -6,20 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GraphGridLayout &#8212; Cutter 1.12.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="GraphHorizontalAdapter" href="classGraphHorizontalAdapter.html" />
-    <link rel="prev" title="GenericR2GraphView" href="classGenericR2GraphView.html" />
+    <link rel="prev" title="GenericRizinGraphView" href="classGenericRizinGraphView.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -38,7 +37,7 @@
           <a href="classGraphHorizontalAdapter.html" title="GraphHorizontalAdapter"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classGenericR2GraphView.html" title="GenericR2GraphView"
+          <a href="classGenericRizinGraphView.html" title="GenericRizinGraphView"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 1.12.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
@@ -57,7 +56,7 @@
 <h1>GraphGridLayout<a class="headerlink" href="#graphgridlayout" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
 <dt id="_CPPv415GraphGridLayout">
-<span id="_CPPv315GraphGridLayout"></span><span id="_CPPv215GraphGridLayout"></span><span id="GraphGridLayout"></span><span class="target" id="classGraphGridLayout"></span><em class="property">class </em><code class="sig-name descname">GraphGridLayout</code> : <em class="property">public</em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout">GraphLayout</a><a class="headerlink" href="#_CPPv415GraphGridLayout" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv315GraphGridLayout"></span><span id="_CPPv215GraphGridLayout"></span><span id="GraphGridLayout"></span><span class="target" id="classGraphGridLayout"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">GraphGridLayout</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="pre">GraphLayout</span></a><a class="headerlink" href="#_CPPv415GraphGridLayout" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Graph layout algorithm on layered graph layout approach. For simplicity all the nodes are placed in a grid. </p>
 <p>Basic familiarity with graph algorithms is recommended.</p>
 <p><em>Terms used:</em></p>
@@ -83,7 +82,7 @@
 <p>Contrary to many other layered graph drawing algorithm this implementation doesn’t perform node reordering to minimize edge crossing. This simplifies implementation, and preserves original control flow structure for conditional jumps ( true jump on one side, false jump on other). Due to most of control flow being result of structured programming constructs like if/then/else and loops, resulting layout is usually readable without node reordering within layers.</p>
 <p><em>Description of grid.</em></p>
 <p>To simplify the layout algorithm initial steps assume that all nodes have the same size and edges are zero width. After placing the nodes and routing the edges it is known which nodes are in in which row and column, how many edges are between each pair of rows. Using this information positions are converted from the grid cells to pixel coordinates. Routing 0 width edges between rows can also be interpreted as every second row and column being reserved for edges. The row numbers in code are using first interpretation. To allow better centering of nodes one above other each node is 2 columns wide and 1 row high.</p>
-<p><img alt="../doxygen-out/xml/graph_grid.svg" src="../doxygen-out/xml/graph_grid.svg" /></p>
+<p><img alt="../../_images/graph_grid.svg" src="../../_images/graph_grid.svg" /></p>
 <p><em>1-2 Cycle removal and toposort</em></p>
 <p>Cycle removal and toposort are done at the same time during single DFS traversal. In case entrypoint is part of a loop DFS started from entrypoint. This ensures that entrypoint is at the top of resulting layout if possible. Resulting toposort order is used in many of the following layout steps that require calculating some property of a vertex based on child property or the other way around. Using toposort order such operations can be implemented iteration through array in either forward or reverse direction. To prevent running out of stack memory when processing large graphs DFS is implemented non-recursively.</p>
 <p><em>Row assignment</em></p>
@@ -93,7 +92,7 @@
 <p>Since the graph has been reduced to a tree, node placement is more or less putting subtrees side by side with parent on top. There is some room for interpretation what exactly side by side means and where exactly on top is. Drawing the graph either too dense or too big may make it less readable so there are configuration options which allow choosing these things resulting in more or less dense layout.</p>
 <p>Once the subtrees are placed side by side. Parent node can be placed either in the middle of horizontal bounds or in the middle of direct children. First option results in narrower layout and more vertical columns. Second option results in nodes being more spread out which may help seeing where each edge goes.</p>
 <p>In more compact mode two subtrees are placed side by side taking into account their shape. In wider mode bounding box of shorter subtree is used instead of exact shape. This gives slightly sparse layout without it being too wide.</p>
-<p><img alt="../doxygen-out/xml/graph_parent_placement.svg" src="../doxygen-out/xml/graph_parent_placement.svg" /></p>
+<p><img alt="../../_images/graph_parent_placement.svg" src="../../_images/graph_parent_placement.svg" /></p>
 <p><em>Edge routing</em></p>
 <p>Edge routing can be split into: main column selection, rough routing, segment offset calculation.</p>
 <p>Transition from source to target row is done using single vertical segment. This is called main column.</p>
@@ -114,7 +113,7 @@
 <p>After rough routing segment offsets are calculated relative to their corresponding edge column. This ensures that two segments don’t overlap. Segment offsets within each column are assigned greedily with some heuristics for assignment order to reduce amount of edge crossings and result in more visually pleasing output for a typical CFG graph. Each segment gets assigned an offset that is maximum of previously assigned offsets overlapping with current segment + segment spacing. Assignment order is chosen based on: direction of previous and last segment - helps reducing crossings and place the segments between nodes segment length - reduces crossing when segment endpoints have the same structure as valid parentheses expression edge length - establishes some kind of order when single node is connected to many edges, typically a block with switch statement or block after switch statement.</p>
 <p><em>Layout compacting</em></p>
 <p>Doing the layout within a grid causes minimal spacing to be limited by widest and tallest block within each column and row. One common case is block with function entrypoint being wider due to function name causing wide horizontal space between branching blocks. Another case is rows in two parallel columns being aligned.</p>
-<p><img alt="../doxygen-out/xml/layout_compacting.svg" src="../doxygen-out/xml/layout_compacting.svg" /></p>
+<p><img alt="../../_images/layout_compacting.svg" src="../../_images/layout_compacting.svg" /></p>
 <p>Both problems are mitigated by squishing graph. Compressing in each of the two direction is done separately. The process is defined as liner program. Each variable represents a position of edge segment or node in the direction being optimized.</p>
 <p>Following constraints are used<ul class="simple">
 <li><p>Keep the order with nearest segments.</p></li>
@@ -130,21 +129,21 @@
 <p class="breathe-sectiondef-title rubric">Public Types</p>
 <dl class="cpp enum">
 <dt id="_CPPv4N15GraphGridLayout10LayoutTypeE">
-<span id="_CPPv3N15GraphGridLayout10LayoutTypeE"></span><span id="_CPPv2N15GraphGridLayout10LayoutTypeE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12d"></span><em class="property">enum </em><code class="sig-name descname">LayoutType</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout10LayoutTypeE"></span><span id="_CPPv2N15GraphGridLayout10LayoutTypeE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12d"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">LayoutType</span></code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4N15GraphGridLayout10LayoutType6MediumE">
-<span id="_CPPv3N15GraphGridLayout10LayoutType6MediumE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType6MediumE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12da87f8a6ab85c9ced3702b4ea641ad4bb5"></span><em class="property">enumerator </em><code class="sig-name descname">Medium</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType6MediumE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout10LayoutType6MediumE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType6MediumE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12da87f8a6ab85c9ced3702b4ea641ad4bb5"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">Medium</span></code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType6MediumE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N15GraphGridLayout10LayoutType4WideE">
-<span id="_CPPv3N15GraphGridLayout10LayoutType4WideE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType4WideE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12dae7c770a61dbdf81ca922ae0260e327c1"></span><em class="property">enumerator </em><code class="sig-name descname">Wide</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType4WideE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout10LayoutType4WideE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType4WideE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12dae7c770a61dbdf81ca922ae0260e327c1"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">Wide</span></code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType4WideE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt id="_CPPv4N15GraphGridLayout10LayoutType6NarrowE">
-<span id="_CPPv3N15GraphGridLayout10LayoutType6NarrowE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType6NarrowE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12da4a7ab319be06025840ef3389301424b9"></span><em class="property">enumerator </em><code class="sig-name descname">Narrow</code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType6NarrowE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout10LayoutType6NarrowE"></span><span id="_CPPv2N15GraphGridLayout10LayoutType6NarrowE"></span><span class="target" id="classGraphGridLayout_1a77c7d9da9e9db2ee528d0e1e6053e12da4a7ab319be06025840ef3389301424b9"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">Narrow</span></code><a class="headerlink" href="#_CPPv4N15GraphGridLayout10LayoutType6NarrowE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -154,32 +153,32 @@
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N15GraphGridLayout15GraphGridLayoutE10LayoutType">
-<span id="_CPPv3N15GraphGridLayout15GraphGridLayoutE10LayoutType"></span><span id="_CPPv2N15GraphGridLayout15GraphGridLayoutE10LayoutType"></span><span id="GraphGridLayout::GraphGridLayout__LayoutType"></span><span class="target" id="classGraphGridLayout_1a387f73e1df46c6bf54c98fb219021de7"></span><code class="sig-name descname">GraphGridLayout</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="GraphGridLayout::LayoutType">LayoutType</a> <em>layoutType</em> = <a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="GraphGridLayout::LayoutType">LayoutType</a>::<a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutType6MediumE" title="GraphGridLayout::LayoutType::Medium">Medium</a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout15GraphGridLayoutE10LayoutType" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout15GraphGridLayoutE10LayoutType"></span><span id="_CPPv2N15GraphGridLayout15GraphGridLayoutE10LayoutType"></span><span id="GraphGridLayout::GraphGridLayout__LayoutType"></span><span class="target" id="classGraphGridLayout_1a387f73e1df46c6bf54c98fb219021de7"></span><code class="sig-name descname"><span class="pre">GraphGridLayout</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="GraphGridLayout::LayoutType"><span class="pre">LayoutType</span></a> <em><span class="pre">layoutType</span></em> <span class="pre">=</span> <a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutTypeE" title="GraphGridLayout::LayoutType"><span class="pre">LayoutType</span></a><span class="pre">::</span><a class="reference internal" href="#_CPPv4N15GraphGridLayout10LayoutType6MediumE" title="GraphGridLayout::LayoutType::Medium"><span class="pre">Medium</span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout15GraphGridLayoutE10LayoutType" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi">
-<span id="_CPPv3NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="_CPPv2NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="GraphGridLayout::CalculateLayout__GraphR.ut64.iR.iRC"></span><span class="target" id="classGraphGridLayout_1a69f0749a1d9eeb4db2d83e5a8540909c"></span>void <code class="sig-name descname">CalculateLayout</code><span class="sig-paren">(</span>Graph &amp;<em>blocks</em>, ut64 <em>entry</em>, int &amp;<em>width</em>, int &amp;<em>height</em><span class="sig-paren">)</span> <em class="property">const</em> <em class="property">override</em><a class="headerlink" href="#_CPPv4NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="_CPPv2NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi"></span><span id="GraphGridLayout::CalculateLayout__GraphR.ut64.iR.iRC"></span><span class="target" id="classGraphGridLayout_1a69f0749a1d9eeb4db2d83e5a8540909c"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">CalculateLayout</span></code><span class="sig-paren">(</span><span class="pre">Graph</span> <span class="pre">&amp;</span><em><span class="pre">blocks</span></em>, <span class="pre">ut64</span> <em><span class="pre">entry</span></em>, <span class="pre">int</span> <span class="pre">&amp;</span><em><span class="pre">width</span></em>, <span class="pre">int</span> <span class="pre">&amp;</span><em><span class="pre">height</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4NK15GraphGridLayout15CalculateLayoutER5Graph4ut64RiRi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15GraphGridLayout24setTightSubtreePlacementEb">
-<span id="_CPPv3N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="_CPPv2N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="GraphGridLayout::setTightSubtreePlacement__b"></span><span class="target" id="classGraphGridLayout_1ace65ee2d4bae3e5df223e41d3df48edc"></span>void <code class="sig-name descname">setTightSubtreePlacement</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout24setTightSubtreePlacementEb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="_CPPv2N15GraphGridLayout24setTightSubtreePlacementEb"></span><span id="GraphGridLayout::setTightSubtreePlacement__b"></span><span class="target" id="classGraphGridLayout_1ace65ee2d4bae3e5df223e41d3df48edc"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">setTightSubtreePlacement</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">enabled</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout24setTightSubtreePlacementEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15GraphGridLayout27setParentBetweenDirectChildEb">
-<span id="_CPPv3N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="_CPPv2N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="GraphGridLayout::setParentBetweenDirectChild__b"></span><span class="target" id="classGraphGridLayout_1a18e195ead36f039589a0abd16c518a64"></span>void <code class="sig-name descname">setParentBetweenDirectChild</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout27setParentBetweenDirectChildEb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="_CPPv2N15GraphGridLayout27setParentBetweenDirectChildEb"></span><span id="GraphGridLayout::setParentBetweenDirectChild__b"></span><span class="target" id="classGraphGridLayout_1a18e195ead36f039589a0abd16c518a64"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">setParentBetweenDirectChild</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">enabled</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout27setParentBetweenDirectChildEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15GraphGridLayout31setverticalBlockAlignmentMiddleEb">
-<span id="_CPPv3N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="_CPPv2N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="GraphGridLayout::setverticalBlockAlignmentMiddle__b"></span><span class="target" id="classGraphGridLayout_1a6471a4f402afa86147f412bd85d1e11c"></span>void <code class="sig-name descname">setverticalBlockAlignmentMiddle</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout31setverticalBlockAlignmentMiddleEb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="_CPPv2N15GraphGridLayout31setverticalBlockAlignmentMiddleEb"></span><span id="GraphGridLayout::setverticalBlockAlignmentMiddle__b"></span><span class="target" id="classGraphGridLayout_1a6471a4f402afa86147f412bd85d1e11c"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">setverticalBlockAlignmentMiddle</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">enabled</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout31setverticalBlockAlignmentMiddleEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15GraphGridLayout21setLayoutOptimizationEb">
-<span id="_CPPv3N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="_CPPv2N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="GraphGridLayout::setLayoutOptimization__b"></span><span class="target" id="classGraphGridLayout_1a4bc1da2a32385487fad48bbe5d000804"></span>void <code class="sig-name descname">setLayoutOptimization</code><span class="sig-paren">(</span>bool <em>enabled</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout21setLayoutOptimizationEb" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="_CPPv2N15GraphGridLayout21setLayoutOptimizationEb"></span><span id="GraphGridLayout::setLayoutOptimization__b"></span><span class="target" id="classGraphGridLayout_1a4bc1da2a32385487fad48bbe5d000804"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">setLayoutOptimization</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">enabled</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15GraphGridLayout21setLayoutOptimizationEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -271,7 +270,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classGenericR2GraphView.html">GenericR2GraphView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGenericRizinGraphView.html">GenericRizinGraphView</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">GraphGridLayout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphHorizontalAdapter.html">GraphHorizontalAdapter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGraphLayout.html">GraphLayout</a></li>
@@ -299,7 +298,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classR2GraphWidget.html">R2GraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefProxyModel.html">RegisterRefProxyModel</a></li>
@@ -310,6 +308,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classRelocsWidget.html">RelocsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesModel.html">ResourcesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classResourcesWidget.html">ResourcesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinGraphWidget.html">RizinGraphWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSdbWidget.html">SdbWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchModel.html">SearchModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSearchSortFilterProxyModel.html">SearchSortFilterProxyModel</a></li>
@@ -350,6 +349,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Instr.html">DisassemblerGraphView::Instr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Text.html">DisassemblerGraphView::Text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblerGraphView_1_1Token.html">DisassemblerGraphView::Token</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyLeftPanel_1_1Arrow.html">DisassemblyLeftPanel::Arrow</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridBlock.html">GraphGridLayout::GridBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1GridEdge.html">GraphGridLayout::GridEdge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structGraphGridLayout_1_1LayoutState.html">GraphGridLayout::LayoutState</a></li>
@@ -361,7 +361,6 @@
 <li class="toctree-l3"><a class="reference internal" href="structHexCursor.html">HexCursor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structHexWidget_1_1Selection.html">HexWidget::Selection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRange.html">Range</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSimpleTextGraphView_1_1BlockContent.html">SimpleTextGraphView::BlockContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structStackModel_1_1Item.html">StackModel::Item</a></li>
@@ -391,7 +390,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.1.
     </div>
     
 
