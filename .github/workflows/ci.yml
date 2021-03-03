@@ -1,0 +1,35 @@
+name: gh-pages
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: install dependencies
+        run: |
+          sudo gem install jekyll bundler
+          bundle install
+      - name: build site
+        run: |
+          bundle exec jekyll build
+          mv _site/serve_config.yml _site/_config.yml
+          mv docs _site/
+      - name: deploy gh-pages
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          cname: cutter.re
+          force_orphan: true
+          exclude_assets: ".bundle,.sass-cache,Gemfile*,.gitignore,.github"
