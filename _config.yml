@@ -24,6 +24,7 @@ cover_image: ""
 # Force include of files from documentation 
 exclude:
   - /docs/
+  - vendor
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem
