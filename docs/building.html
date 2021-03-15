@@ -56,8 +56,10 @@
 <p class="admonition-title">Note</p>
 <p>If you just want to use the latest Release version of Cutter, please note
 that we provide pre-compiled binaries for Windows, Linux, and macOS on
-our <a class="reference external" href="https://github.com/rizinorg/cutter/releases/latest">release page.</a></p>
+our <a class="reference external" href="https://github.com/rizinorg/cutter/releases/latest">release page</a> and
+<a class="reference external" href="https://nightly.link/rizinorg/cutter/workflows/ccpp/master">CI page</a> for latest development builds.</p>
 </div>
+<p>This page describes how to do a basic build from the command line. If you are planning to modify Cutter it is recommended to also read our <a class="reference internal" href="contributing/code/ide-setup.html"><span class="doc">development environment setup</span></a>.</p>
 <div class="section" id="getting-the-source">
 <h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Permalink to this headline">¶</a></h2>
 <p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
@@ -114,16 +116,16 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <h3>Building Steps<a class="headerlink" href="#building-steps" title="Permalink to this headline">¶</a></h3>
 <p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON ..
+cmake ..
 cmake --build .
 </pre></div>
 </div>
 <p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -B build -DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -B build
 cmake --build build
 </pre></div>
 </div>
-<p>If you want to use Cutter with another version of Rizin you can omit <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=ON</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
+<p>If you want to use Cutter with another version of Rizin you can set <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=OFF</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are interested in building Cutter with support for Python plugins,
@@ -135,6 +137,30 @@ You can now execute Cutter like this:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/cutter
 </pre></div>
 </div>
+</div>
+<div class="section" id="making-linux-distribution-specific-packages">
+<h3>Making Linux distribution specific packages<a class="headerlink" href="#making-linux-distribution-specific-packages" title="Permalink to this headline">¶</a></h3>
+<p>When making a distribution specific package, the default install target should give you a good starting point.
+It uses CMake built-in functionality and <a class="reference external" href="https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html?highlight=gnu%20directories">GNUInstallDirs</a> for
+installing the executable, desktop file, headers and other files required for plugin compilation. See CMake documentation for adjusting installed file locations and properties.
+It shouldn’t be necessary to manually copy files from plain build.</p>
+<p>It is recommended to build and package rizin as a separate package so that it can be used with or without Cutter. Doing that will also give more control over the way rizin dependencies are handled. We are trying to maintain
+compatibility with latest rizin release at the time of Cutter release and making a new Cutter release when new rizin version is released.</p>
+<p>If you are packaging Cutter, users will appreciate it if you also package <a class="reference external" href="https://github.com/rizinorg/rz-ghidra">rz-ghidra</a> and <a class="reference external" href="https://github.com/rizinorg/jsdec">jsdec</a> decompilers as optional packages.
+It should be possible to compile Cutter plugins against proper Cutter installation without having direct access to Cutter source code.</p>
+<p>If the names “Cutter” or “cutter” conflict with other packages or their content, “rz-cutter” can be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Configuration for packaging</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE=Release</span></code> turn on release optimizations, unless your distro has more specific guidelines for common compiler options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN=OFF</span></code> turn off use of rizin from submodule to use previously packaged rizin. Note that keeping it on doesn’t install rizin in a way suitable for linux packaging without doing additional manual steps making packaging process more complex. Bundled rizin will also likely conflict with standalone rizin package.</p></li>
+<li><p>Correct install prefix. By default CMake will install to /usr/local suitable for user builds. Change it according to your distro packaging guidelines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> and  <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> it is recommended to turn on for complete user experience. May require manual path specification on distros with multiple python versions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> and <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> optional but nice to have since they are available on most distros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> use it to specify additional plugin search locations if distro packaging guidelines require you placing them in locations Cutter doesn’t use by default.</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="building-on-windows">
@@ -175,7 +201,7 @@ executing the following commands.</p>
 <span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\Qt\5.15.2\msvc2019_64\bin&quot;</span>
 
 <span class="c"># Build Cutter</span>
-<span class="n">cmake</span> <span class="n">-B</span> <span class="n">build</span> <span class="n">-DCUTTER_USE_BUNDLED_RIZIN</span><span class="p">=</span><span class="n">ON</span>
+<span class="n">cmake</span> <span class="n">-B</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="p">-</span><span class="n">-build</span> <span class="n">build</span>
 </pre></div>
 </div>
@@ -202,7 +228,7 @@ executing the following commands.</p>
 <h3>Recommended Way for dev builds<a class="headerlink" href="#recommended-way-for-dev-builds" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> build
 <span class="k">cd</span> build
-cmake .. -DCUTTER_USE_BUNDLED_RIZIN=ON -DCMAKE_PREFIX_PATH=/local/opt/qt5
+cmake .. -DCMAKE_PREFIX_PATH=/local/opt/qt5
 make
 </pre></div>
 </div>
@@ -213,7 +239,7 @@ make
 <h2>CMake Building Options<a class="headerlink" href="#cmake-building-options" title="Permalink to this headline">¶</a></h2>
 <p>Note that there are some major building options available:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule (Enabled by default).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken2, required for Python plugins!</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
@@ -349,6 +375,7 @@ installed with brew. Run this command to work around the issue:</p>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#building-steps">Building Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-linux-distribution-specific-packages">Making Linux distribution specific packages</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>

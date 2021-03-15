@@ -60,7 +60,7 @@
 <p>Everyone has their own preferences for their favorite IDE or code editor.
 There are no strict requirements for using a specific one for Cutter development.
 Any IDE with good CMake integration should work well.</p>
-<p>For most development builds, unless you are working on packaging issues, it is recommended to use <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN=ON</span></code> Cmake option. It is the easiest way to ensure that a compatible Rizin version is used, and helps you deal with different versions of Rizin when working with multiple Cutter branches. On Linux, in case you have multiple Rizin versions without <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code>, the <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable can be used to select the desired Rizin installation.</p>
+<p>For most development builds, unless you are working on packaging issues, it is recommended to build Cutter with the bundled version of Rizin. It is the default configuration and the easiest way to ensure that a compatible Rizin version is used and helps you deal with different versions of Rizin when working with multiple Cutter branches. In case you want to build Cutter with a different version of Rizin installed on your system, you can set <cite>CUTTER_USE_BUNDLED_RIZIN=OFF</cite>. On Linux, in case you have multiple Rizin versions without <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code>, the <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable can be used to select the desired Rizin installation.</p>
 <p>While <a class="reference internal" href="#qt-creator">Qt Creator</a> has a builtin visual form and widget editor, not having it in other IDEs is not a major problem. It is also available as a standalone tool called Qt Designer and you can configure the file associations so that <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files are opened using it. Depending on the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file and changes you want to make, it is sometimes easier to perform them by editing the <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file as a text file. Essentially, <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files are XML files. Most code editors should have some support for XML highlighting and possibly block folding.</p>
 <p>The following instructions and recommendations assume that you have already download Cutter source and obtained required dependencies as described in <a class="reference internal" href="../../building.html"><span class="doc">Building</span></a>.</p>
 </div>
@@ -93,11 +93,6 @@ versions of libraries so they are not suitable for more serious Cutter developme
 <ul class="simple">
 <li><p>Go to <span class="menuselection">File ‣ Open File or Project..</span> and select <code class="file docutils literal notranslate"><span class="pre">cutter/CMakeList.txt</span></code></p></li>
 <li><p>Select kit and press <span class="guilabel">Configure Project</span></p></li>
-<li><p>Configuration step might fail due to Rizin not being found, that’s normal</p></li>
-<li><p>Click <span class="guilabel">Projects</span> button with wrench icon on the left side of the screen</p></li>
-<li><p>Click <span class="menuselection">Add ‣ Boolean</span> in the CMake section</p></li>
-<li><p>Enter <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> as a key name and change the value to ON. In earlier Qt Creator versions it is necessary to do this during the initial kit selection and configuration step.</p></li>
-<li><p>Click <span class="guilabel">Apply Configuration Changes</span>: The configuration should succeed now. In case of errors inspect the output log.</p></li>
 </ul>
 </div>
 <div class="section" id="formatting-using-clang-format">
@@ -144,10 +139,6 @@ versions of libraries so they are not suitable for more serious Cutter developme
 <div class="section" id="id4">
 <h3>Changing CMake configuration<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>After the first configuration <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd>/<span class="guilabel">CMake: Edit CMake Cache</span> opens a text editor with all CMake options. Cutter specific ones mostly start with “CUTTER”.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> option is also defined in <code class="docutils literal notranslate"><span class="pre">.vscode/settings.json</span></code> file and it will be overridden from there. It is set to <code class="docutils literal notranslate"><span class="pre">ON</span></code> by default as it is recommended during development.</p>
-</div>
 </div>
 <div class="section" id="vscode-debug-setup">
 <span id="id5"></span><h3>Formatting using clang-format<a class="headerlink" href="#vscode-debug-setup" title="Permalink to this headline">¶</a></h3>
@@ -188,7 +179,6 @@ executable by creating a <code class="docutils literal notranslate"><span class=
 <h3>Project setup<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Go to <span class="menuselection">File ‣ Open</span> and select the folder in which you cloned Cutter</p></li>
-<li><p>Go to <span class="menuselection">File ‣ Settings ‣ Build, Execution, Deployment ‣ CMake</span>. In the <span class="guilabel">CMake Options</span> field enter <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=ON</span></code></p></li>
 <li><p>Open <code class="file docutils literal notranslate"><span class="pre">cutter/CMakeLists.txt</span></code> using the project file list on the left side of the screen</p></li>
 <li><p>A yellow bar with a message <span class="guilabel">CMake project is not loaded</span> should appear, click <span class="guilabel">Load CMake project</span></p></li>
 </ul>
@@ -237,7 +227,7 @@ Additional components can be later added or removed through the VS installer whi
 <ul class="simple">
 <li><p>Open folder in which you cloned Cutter source using Visual Studio</p></li>
 <li><p>Open CMake settings configurator using either <span class="menuselection">Project ‣ CMake Settings</span> or by clicking <span class="guilabel">Open the CMake Settings Editor</span> in the overview page.</p></li>
-<li><p>Check <code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> option</p></li>
+<li><p>Check options that you want Cutter to be built with, or leave it as-is for the default options.</p></li>
 <li><p>If you are using vcpkg, Visual Studio should detect it automatically. The list of CMake options in the configurator should have some referring to vcpkg. If they are not there, specify the path to vcpkg toolchain file in the <span class="guilabel">CMake toolchain file</span> field.</p></li>
 <li><p>If you are not using vcpkg, configure the path to Qt as mentioned in <a class="reference internal" href="../../building.html#building-on-windows"><span class="std std-ref">windows CMake instructions</span></a>. You can specify the CMake flag in <span class="guilabel">CMake command arguments:</span> field.</p></li>
 <li><p>To Ensure that VS debugger can display Qt types in a readable way, it is recommended to install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019">Qt Visual Studio Tools</a> plugin. It will create a <code class="file docutils literal notranslate"><span class="pre">Documents/Visual</span> <span class="pre">Studio</span> <span class="pre">2019/Visualizers/qt5.natvis</span></code> file. Once <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code> has been created you can uninstall the plugin.</p></li>
