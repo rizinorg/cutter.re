@@ -24,6 +24,7 @@ jobs:
           bundle exec jekyll build
           mv _site/serve_config.yml _site/_config.yml
           mv docs _site/
+          mv .well-known _site/
       - name: deploy gh-pages
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
