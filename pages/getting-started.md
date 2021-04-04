@@ -12,7 +12,7 @@ Cutter is actively maintained by its developer team and releases a new feature e
 ### Get Cutter
 
 Cutter is available for all platforms (Linux, OS X, Windows). You can
-download the latest release from our [release page](https://github.com/rizingorg/cutter/releases).
+download the latest release from our [release page](https://github.com/rizinorg/cutter/releases).
 - OSX: Download the latest ``.dmg`` file.
 - Windows: Download the latest archive.
 - Linux: use the AppImage file. Then just make it executable and run it: ``chmod +x Cutter-[version]-x86_64.AppImage``
