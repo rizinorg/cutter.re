@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Disassembly Context Menu &#8212; Cutter 2.0.0 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
@@ -52,7 +53,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="disassembly-context-menu">
+  <section id="disassembly-context-menu">
 <h1>Disassembly Context Menu<a class="headerlink" href="#disassembly-context-menu" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
@@ -65,92 +66,92 @@
 </ul>
 </div>
 <p>The Disassembly context menu contains actions that operate with selected instruction in disassembly and graph widgets.</p>
-<div class="section" id="copy">
+<section id="copy">
 <h2>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Copy the selected text.</p>
 <p><strong>Steps:</strong>  Right-click on a selected text and choose <code class="docutils literal notranslate"><span class="pre">Copy</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd></p>
-</div>
-<div class="section" id="copy-address">
+</section>
+<section id="copy-address">
 <h2>Copy Address<a class="headerlink" href="#copy-address" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Copy the address of the location under the cursor.</p>
 <p><strong>Steps:</strong>  Right-click on a location and choose <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">address</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd></p>
-</div>
-<div class="section" id="show-address-in-another-widget">
+</section>
+<section id="show-address-in-another-widget">
 <h2>Show address in another widget<a class="headerlink" href="#show-address-in-another-widget" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Show the selected address or item in another opened widget, or open a new one.</p>
 <p><strong>Steps:</strong>  Right-click on an address or an item in instruction and choose the <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">in</span></code> sub-menu</p>
-</div>
-<div class="section" id="add-comment">
+</section>
+<section id="add-comment">
 <h2>Add Comment<a class="headerlink" href="#add-comment" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Add a comment in the current location.</p>
 <p><strong>Steps:</strong> Right-click an address and choose <cite>Add Comment</cite>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">;</kbd></p>
-</div>
-<div class="section" id="add-flag">
+</section>
+<section id="add-flag">
 <h2>Add Flag<a class="headerlink" href="#add-flag" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Add a flag to the selected item or location by bookmarking and giving it a name.</p>
 <p><strong>Steps:</strong> Right-click an address or item and choose <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Flag</span></code>. This will open the Flag dialog in which you can name the location.</p>
-</div>
-<div class="section" id="rename">
+</section>
+<section id="rename">
 <h2>Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Rename the flag, function or local variable at current location. If empty, remove the currently associated name.</p>
 <p><strong>Steps:</strong> Right-click an address or item and choose <code class="docutils literal notranslate"><span class="pre">Rename</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">N</kbd></p>
-</div>
-<div class="section" id="edit-function">
+</section>
+<section id="edit-function">
 <h2>Edit Function<a class="headerlink" href="#edit-function" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Open the Function edit dialog in which you can define the name of the function, its start address, stack size, calling convention, and more.</p>
 <p><strong>Steps:</strong>  Right-click on a location inside a function and choose <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">function</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">P</kbd></p>
-</div>
-<div class="section" id="re-type-local-variables">
+</section>
+<section id="re-type-local-variables">
 <h2>Re-type Local Variables<a class="headerlink" href="#re-type-local-variables" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Rename or set the types of the function’s variables and arguments.</p>
 <p><strong>Steps:</strong> Right-click anywhere inside a function and then choose <code class="docutils literal notranslate"><span class="pre">Re-type</span> <span class="pre">Local</span> <span class="pre">Variables</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Y</kbd></p>
-</div>
-<div class="section" id="delete-a-comment">
+</section>
+<section id="delete-a-comment">
 <h2>Delete a Comment<a class="headerlink" href="#delete-a-comment" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Delete the comment at the current address. This option only available for addresses with user-defined comments.</p>
 <p><strong>Steps:</strong> Right-click on an instruction with a user-defined comment and choose <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">comment</span></code></p>
-</div>
-<div class="section" id="delete-a-flag">
+</section>
+<section id="delete-a-flag">
 <h2>Delete a Flag<a class="headerlink" href="#delete-a-flag" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong>   Delete the flag at the current location.</p>
 <p><strong>Steps:</strong> Right-click on a location with a flag and choose <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">flag</span></code>.</p>
-</div>
-<div class="section" id="undefine-a-function">
+</section>
+<section id="undefine-a-function">
 <h2>Undefine a Function<a class="headerlink" href="#undefine-a-function" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Undefine the current function. This will remove the function and its associated meta-data. You can always re-define the function, but every change that was made to the previously defined function (e.g variable renaming) would not be restored.</p>
 <p><strong>Steps:</strong>  Right-Click on the name of the function and choose <code class="docutils literal notranslate"><span class="pre">Undefine</span> <span class="pre">function</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">U</kbd></p>
-</div>
-<div class="section" id="define-a-function">
+</section>
+<section id="define-a-function">
 <h2>Define a function<a class="headerlink" href="#define-a-function" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Define a function starting from the current location. Cutter will automatically guess the size of the function. This can later be changed using the function editor.</p>
 <p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Define</span> <span class="pre">function</span> <span class="pre">here</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">P</kbd></p>
-</div>
-<div class="section" id="set-structure-offset">
+</section>
+<section id="set-structure-offset">
 <h2>Set Structure Offset<a class="headerlink" href="#set-structure-offset" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Present the current value is an offset in a structure.</p>
 <p><strong>Steps:</strong>  -&gt; Structure offset</p>
-</div>
-<div class="section" id="link-a-type-to-address">
+</section>
+<section id="link-a-type-to-address">
 <h2>Link a Type to Address<a class="headerlink" href="#link-a-type-to-address" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> You can link type, enum or structure to a specific address. Types, structures and enums can be defined in the Types widget.</p>
 <p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Link</span> <span class="pre">Type</span> <span class="pre">to</span> <span class="pre">Address</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">L</kbd></p>
-</div>
-<div class="section" id="show-cross-references">
+</section>
+<section id="show-cross-references">
 <h2>Show Cross References<a class="headerlink" href="#show-cross-references" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Show X-Refs from and to the specific location. This option will open Cutter’s X-Refs dialog in which you will be able to see a list of X-Refs from and to the selected location, in addition to a preview of each cross-reference to quickly inspect the different usages.</p>
 <p><strong>Steps:</strong> Right-click on an instruction and choose <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">X-Refs</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">X</kbd></p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -164,7 +165,7 @@
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
 <h3><a href="../../index.html">Table of Contents</a></h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../features.html">Features</a></li>

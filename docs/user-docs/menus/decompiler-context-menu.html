@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Decompiler Context Menu &#8212; Cutter 2.0.0 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
@@ -52,108 +53,108 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="decompiler-context-menu">
+  <section id="decompiler-context-menu">
 <h1>Decompiler Context Menu<a class="headerlink" href="#decompiler-context-menu" title="Permalink to this headline">¶</a></h1>
 <p>The decompiler context menu is a context-sensitive menu that contains actions that are available for the position under the cursor.</p>
-<div class="section" id="copy">
+<section id="copy">
 <h2>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> If text is selected, copy the selected text to the clipboard. If a word is highlighted, copy that word. In all other cases, copy the line under the cursor.</p>
 <p><strong>Steps:</strong>  Right-click on a selected text and choose <code class="docutils literal notranslate"><span class="pre">Copy</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd></p>
-</div>
-<div class="section" id="copy-instruction-address">
+</section>
+<section id="copy-instruction-address">
 <h2>Copy Instruction Address<a class="headerlink" href="#copy-instruction-address" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Copy the address of the instruction mapped to the part of the code under the cursor.</p>
 <p><strong>Steps:</strong>  Right-click on the portion of code for which you want the instruction’s address and choose <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">instruction</span> <span class="pre">address</span> <span class="pre">(&lt;address&gt;)</span></code></p>
-</div>
-<div class="section" id="copy-address-of-reference">
+</section>
+<section id="copy-address-of-reference">
 <h2>Copy Address of Reference<a class="headerlink" href="#copy-address-of-reference" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Copy the address of the reference under the cursor. References include functions, global variables, and constant variables with an address.</p>
 <p><strong>Steps:</strong>  Right-click on a reference and choose <code class="docutils literal notranslate"><span class="pre">Copy</span>&#160; <span class="pre">address</span> <span class="pre">[of</span> <span class="pre">&lt;name&gt;]</span> <span class="pre">(&lt;address&gt;)</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd></p>
-</div>
-<div class="section" id="show-the-code-in-another-widget">
+</section>
+<section id="show-the-code-in-another-widget">
 <h2>Show the code in another widget<a class="headerlink" href="#show-the-code-in-another-widget" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Show the code under the cursor in another opened widget, or open a new one. If a non-decompiler widget is chosen, the address mapped to the portion of code under the cursor will be opened in that widget.</p>
 <p><strong>Steps:</strong>  Right-click on an item and go to the <span class="menuselection">Show in</span> submenu. You can choose a widget or open a new widget from here.</p>
-</div>
-<div class="section" id="show-the-selected-item-in-another-widget">
+</section>
+<section id="show-the-selected-item-in-another-widget">
 <h2>Show the selected item in another widget<a class="headerlink" href="#show-the-selected-item-in-another-widget" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Show the selected item in another opened widget, or open a new one. Items include functions, global variables, and constant variables under the cursor.</p>
 <p><strong>Steps:</strong>  Right-click on an item and go to the submenu <span class="menuselection">Show &lt;item&gt; in</span> or <span class="menuselection">&lt;function name&gt; (&lt;address&gt;)</span>. You can choose a widget or open a new widget from here.</p>
-</div>
-<div class="section" id="add-and-edit-comment">
+</section>
+<section id="add-and-edit-comment">
 <h2>Add and Edit Comment<a class="headerlink" href="#add-and-edit-comment" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Add a comment for the line of code under the cursor or edit the comment under the cursor. The <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">comment</span></code> option is only available for user-defined comments.</p>
 <p><strong>Steps:</strong> Right-click and choose <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Comment</span></code> or <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Comment</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">;</kbd></p>
-</div>
-<div class="section" id="delete-a-comment">
+</section>
+<section id="delete-a-comment">
 <h2>Delete a Comment<a class="headerlink" href="#delete-a-comment" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Delete the comment under the cursor. If a comment doesn’t exist under the cursor, delete the comment at the offset mapped to the portion of code under the cursor.</p>
 <p><strong>Steps:</strong> Right-click on an instruction with a user-defined comment and choose <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">comment</span></code></p>
-</div>
-<div class="section" id="rename-function">
+</section>
+<section id="rename-function">
 <h2>Rename function<a class="headerlink" href="#rename-function" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Rename a function under the cursor.</p>
 <p><strong>Steps:</strong> Right-click on a function name and choose <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">function</span> <span class="pre">&lt;name&gt;</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">N</kbd></p>
-</div>
-<div class="section" id="give-a-name-or-rename-global-variables">
+</section>
+<section id="give-a-name-or-rename-global-variables">
 <h2>Give a name or rename global variables<a class="headerlink" href="#give-a-name-or-rename-global-variables" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Give a name or rename the global variable under the cursor.</p>
 <p><strong>Steps:</strong> Right-click the global variable and choose <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">name</span> <span class="pre">to</span> <span class="pre">&lt;address</span> <span class="pre">of</span> <span class="pre">global</span> <span class="pre">variable&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">&lt;name&gt;</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">N</kbd></p>
-</div>
-<div class="section" id="delete-the-name-of-a-global-variable">
+</section>
+<section id="delete-the-name-of-a-global-variable">
 <h2>Delete the name of a global variable<a class="headerlink" href="#delete-the-name-of-a-global-variable" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Delete the name of the global variable under the cursor.</p>
 <p><strong>Steps:</strong> Right-click on a global variable and choose <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">&lt;name&gt;</span></code>.</p>
-</div>
-<div class="section" id="rename-function-variable">
+</section>
+<section id="rename-function-variable">
 <h2>Rename Function Variable<a class="headerlink" href="#rename-function-variable" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Rename local variables and arguments in the decompiled function. Note that this option is available only for function variables defined in the disassembly.</p>
 <p><strong>Steps:</strong> Right-click on a variable and choose <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">variable</span> <span class="pre">&lt;name&gt;</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">N</kbd></p>
-</div>
-<div class="section" id="edit-local-variables-and-arguments">
+</section>
+<section id="edit-local-variables-and-arguments">
 <h2>Edit Local Variables and Arguments<a class="headerlink" href="#edit-local-variables-and-arguments" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Rename or set the types of the function’s variables and arguments. Note that this option is available only for function variables and arguments defined in the disassembly.</p>
 <p><strong>Steps:</strong> Right-click on a variable and choose <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">variable</span> <span class="pre">&lt;name&gt;</span></code>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Y</kbd></p>
-</div>
-<div class="section" id="show-cross-references">
+</section>
+<section id="show-cross-references">
 <h2>Show Cross References<a class="headerlink" href="#show-cross-references" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Show X-Refs to the reference under the cursor. This option will open Cutter’s X-Refs dialog in which you will be able to see a list of X-Refs from and to the address of the reference. You can also see a preview of each cross-reference to quickly inspect the different usages. Note that references refer to function names, global variables, and constant variables with an address.</p>
 <p><strong>Steps:</strong> Right-click on a reference and choose <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">X-Refs</span></code></p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">X</kbd></p>
-</div>
-</div>
-<div class="section" id="debug-context-menu">
+</section>
+</section>
+<section id="debug-context-menu">
 <h1>Debug Context Menu<a class="headerlink" href="#debug-context-menu" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="add-or-remove-breakpoint">
+<section id="add-or-remove-breakpoint">
 <h2>Add or Remove Breakpoint<a class="headerlink" href="#add-or-remove-breakpoint" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Add a breakpoint at the earliest offset in the line under the cursor. If you use the keyboard shortcut to remove a breakpoint, all the breakpoints defined in the line will be removed.</p>
 <p><strong>Steps:</strong> Right-click on a line of code and choose <span class="menuselection">Breakpoint ‣ Add breakpoint</span>  or <span class="menuselection">Breakpoint ‣ Remove breakpoint</span>.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">F2</kbd></p>
-</div>
-<div class="section" id="advanced-breakpoint-dialog">
+</section>
+<section id="advanced-breakpoint-dialog">
 <h2>Advanced Breakpoint Dialog<a class="headerlink" href="#advanced-breakpoint-dialog" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Open the advanced breakpoint dialog. This dialog lets you define not only a regular breakpoint in this address, but also a hardware breakpoint, a conditional breakpoint, and more.</p>
 <p><strong>Steps:</strong> Right-click on a line of code and choose <span class="menuselection">Breakpoint ‣ Advanced breakpoint</span>. If multiple breakpoints are present in the line, you will be able choose the breakpoint you want to edit from the <span class="menuselection">Edit breakpoint</span> submenu.</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F2</kbd></kbd></p>
-</div>
-<div class="section" id="continue-until-line">
+</section>
+<section id="continue-until-line">
 <h2>Continue Until Line<a class="headerlink" href="#continue-until-line" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Continue the execution of the program until it reaches the offset in the selected line. The program is not guaranteed to ever reach this address and will keep running until exited or until reached another breakpoint. If other breakpoints hit before reaching this line, they will be triggered and pause the execution. <em>This option is only available on Debug or Emulation modes</em>.</p>
 <p><strong>Steps:</strong> While in Debug or Emulation modes, right-click on a line of code and choose <span class="menuselection">Debug ‣ Continue until line</span>.</p>
-</div>
-<div class="section" id="set-program-counter-pc">
+</section>
+<section id="set-program-counter-pc">
 <h2>Set Program Counter (PC)<a class="headerlink" href="#set-program-counter-pc" title="Permalink to this headline">¶</a></h2>
 <p><strong>Description:</strong> Set the Program Counter of the debugger to the current offset. For example, on an Intel 64bit program, Cutter will set the value of the RIP register to the current address.  <em>This option is only available on Debug or Emulation modes</em>.</p>
 <p><strong>Steps:</strong> While in Debug or Emulation modes, right-click on a line of code and choose <span class="menuselection">Debug ‣ Set PC</span>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -167,7 +168,7 @@
         </a></p>
       <a href="../../index.html">Cutter documentation</a>
 <h3><a href="../../index.html">Table of Contents</a></h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../user-docs.html">User Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../features.html">Features</a></li>
