@@ -150,62 +150,62 @@
 <dt id="_CPPv4N15CutterGraphView11exportGraphE7QString15GraphExportType7QString3RVA">
 <span id="_CPPv3N15CutterGraphView11exportGraphE7QString15GraphExportType7QString3RVA"></span><span id="_CPPv2N15CutterGraphView11exportGraphE7QString15GraphExportType7QString3RVA"></span><span id="CutterGraphView::exportGraph__QString.GraphExportType.QString.RVA"></span><span class="target" id="classCutterGraphView_1af6ed08b414caad5fb099604182ff8064"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">exportGraph</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">filePath</span></em>, <a class="reference internal" href="#_CPPv4N15CutterGraphView15GraphExportTypeE" title="CutterGraphView::GraphExportType"><span class="pre">GraphExportType</span></a> <em><span class="pre">type</span></em>, <span class="pre">QString</span> <em><span class="pre">graphCommand</span></em> <span class="pre">=</span> <span class="pre">&quot;&quot;</span>, <span class="pre">RVA</span> <em><span class="pre">address</span></em> <span class="pre">=</span> <span class="pre">RVA_INVALID</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15CutterGraphView11exportGraphE7QString15GraphExportType7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Export graph to a file in the specified format. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code>: </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: export type, GV* and Rz* types require <code class="docutils literal notranslate"><span class="pre">graphCommand</span></code> </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphCommand</span></code>: rizin graph printing command without type, not required for direct image export </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: object address for commands like agf </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filePath</strong> – </p></li>
+<li><p><strong>type</strong> – export type, GV* and Rz* types require <code class="docutils literal notranslate"><span class="pre">graphCommand</span></code> </p></li>
+<li><p><strong>graphCommand</strong> – rizin graph printing command without type, not required for direct image export </p></li>
+<li><p><strong>address</strong> – object address for commands like agf </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15CutterGraphView24exportRizinGraphvizGraphE7QString7QString7QString3RVA">
 <span id="_CPPv3N15CutterGraphView24exportRizinGraphvizGraphE7QString7QString7QString3RVA"></span><span id="_CPPv2N15CutterGraphView24exportRizinGraphvizGraphE7QString7QString7QString3RVA"></span><span id="CutterGraphView::exportRizinGraphvizGraph__QString.QString.QString.RVA"></span><span class="target" id="classCutterGraphView_1a4e988910381093227198edfb2e8ccce3"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">exportRizinGraphvizGraph</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">filePath</span></em>, <span class="pre">QString</span> <em><span class="pre">type</span></em>, <span class="pre">QString</span> <em><span class="pre">graphCommand</span></em>, <span class="pre">RVA</span> <em><span class="pre">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15CutterGraphView24exportRizinGraphvizGraphE7QString7QString7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Export image using rizin ag*w command and graphviz. Requires graphviz dot executable in the path. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code>: output file path </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: image format as expected by “e graph.gv.format” </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphCommand</span></code>: rizin command without type, for example agf </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: object address if required by command </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filePath</strong> – output file path </p></li>
+<li><p><strong>type</strong> – image format as expected by “e graph.gv.format” </p></li>
+<li><p><strong>graphCommand</strong> – rizin command without type, for example agf </p></li>
+<li><p><strong>address</strong> – object address if required by command </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15CutterGraphView17exportRzTextGraphE7QString7QString3RVA">
 <span id="_CPPv3N15CutterGraphView17exportRzTextGraphE7QString7QString3RVA"></span><span id="_CPPv2N15CutterGraphView17exportRzTextGraphE7QString7QString3RVA"></span><span id="CutterGraphView::exportRzTextGraph__QString.QString.RVA"></span><span class="target" id="classCutterGraphView_1a46bf6ce777d6693042f8841809d1ef94"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">exportRzTextGraph</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">filePath</span></em>, <span class="pre">QString</span> <em><span class="pre">graphCommand</span></em>, <span class="pre">RVA</span> <em><span class="pre">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15CutterGraphView17exportRzTextGraphE7QString7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Export graph in one of the text formats supported by rizin json, gml, SDB key-value. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code>: output file path </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphCommand</span></code>: graph command including the format, example “agfd” or “agfg” </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: object address if required by command </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filePath</strong> – output file path </p></li>
+<li><p><strong>graphCommand</strong> – graph command including the format, example “agfd” or “agfg” </p></li>
+<li><p><strong>address</strong> – object address if required by command </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15CutterGraphView21showExportGraphDialogE7QString7QString3RVA">
 <span id="_CPPv3N15CutterGraphView21showExportGraphDialogE7QString7QString3RVA"></span><span id="_CPPv2N15CutterGraphView21showExportGraphDialogE7QString7QString3RVA"></span><span id="CutterGraphView::showExportGraphDialog__QString.QString.RVA"></span><span class="target" id="classCutterGraphView_1a7d2cf2af713422c9fc0e5864a8ada084"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">showExportGraphDialog</span></code><span class="sig-paren">(</span><span class="pre">QString</span> <em><span class="pre">defaultName</span></em>, <span class="pre">QString</span> <em><span class="pre">graphCommand</span></em> <span class="pre">=</span> <span class="pre">&quot;&quot;</span>, <span class="pre">RVA</span> <em><span class="pre">address</span></em> <span class="pre">=</span> <span class="pre">RVA_INVALID</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15CutterGraphView21showExportGraphDialogE7QString7QString3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Show graph export dialog. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultName</span></code>: - default file name in the export dialog </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">graphCommand</span></code>: - rizin graph commmand with graph type and without export type, for example afC. Leave empty for non-rizin graphs. In such case only direct image export will be available. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code>: - object address if relevant for <code class="docutils literal notranslate"><span class="pre">graphCommand</span></code> </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>defaultName</strong> – - default file name in the export dialog </p></li>
+<li><p><strong>graphCommand</strong> – - rizin graph commmand with graph type and without export type, for example afC. Leave empty for non-rizin graphs. In such case only direct image export will be available. </p></li>
+<li><p><strong>address</strong> – - object address if relevant for <code class="docutils literal notranslate"><span class="pre">graphCommand</span></code> </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 </div>

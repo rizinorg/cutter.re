@@ -96,27 +96,25 @@
 <dt id="_CPPv4I0EN16CutterDockWidget21createRefreshDeferrerEP15RefreshDeferrer4Func">
 <span id="_CPPv3I0EN16CutterDockWidget21createRefreshDeferrerE4Func"></span><span id="_CPPv2I0EN16CutterDockWidget21createRefreshDeferrerE4Func"></span><span class="pre">template&lt;</span><span class="pre">typename</span> <code class="sig-name descname"><span class="pre">Func</span></code><span class="pre">&gt;</span><br /><span class="target" id="classCutterDockWidget_1a9d004dc52bb52db08f82b0325f0e236b"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="../common/classRefreshDeferrer.html#_CPPv415RefreshDeferrer" title="RefreshDeferrer"><span class="pre">RefreshDeferrer</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">createRefreshDeferrer</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN16CutterDockWidget21createRefreshDeferrerEP15RefreshDeferrer4Func" title="CutterDockWidget::createRefreshDeferrer::Func"><span class="pre">Func</span></a> <em><span class="pre">refreshNowFunc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN16CutterDockWidget21createRefreshDeferrerEP15RefreshDeferrer4Func" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Convenience method for creating and registering a <a class="reference internal" href="../common/classRefreshDeferrer.html#classRefreshDeferrer"><span class="std std-ref">RefreshDeferrer</span></a> without any parameters. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">refreshNowFunc</span></code>: lambda taking no parameters, called when a refresh should occur </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>refreshNowFunc</strong> – lambda taking no parameters, called when a refresh should occur </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4I00EN16CutterDockWidget30createReplacingRefreshDeferrerEP15RefreshDeferrerb4Func">
 <span id="_CPPv3I00EN16CutterDockWidget30createReplacingRefreshDeferrerEb4Func"></span><span id="_CPPv2I00EN16CutterDockWidget30createReplacingRefreshDeferrerEb4Func"></span><span class="pre">template&lt;</span><span class="pre">class</span> <code class="sig-name descname"><span class="pre">ParamResult</span></code><span class="pre">,</span> <span class="pre">typename</span> <code class="sig-name descname"><span class="pre">Func</span></code><span class="pre">&gt;</span><br /><span class="target" id="classCutterDockWidget_1aad3fccb2bc094acf119d9ec710bae365"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="../common/classRefreshDeferrer.html#_CPPv415RefreshDeferrer" title="RefreshDeferrer"><span class="pre">RefreshDeferrer</span></a> <span class="pre">*</span><code class="sig-name descname"><span class="pre">createReplacingRefreshDeferrer</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">replaceIfNull</span></em>, <a class="reference internal" href="#_CPPv4I00EN16CutterDockWidget30createReplacingRefreshDeferrerEP15RefreshDeferrerb4Func" title="CutterDockWidget::createReplacingRefreshDeferrer::Func"><span class="pre">Func</span></a> <em><span class="pre">refreshNowFunc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN16CutterDockWidget30createReplacingRefreshDeferrerEP15RefreshDeferrerb4Func" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Convenience method for creating and registering a <a class="reference internal" href="../common/classRefreshDeferrer.html#classRefreshDeferrer"><span class="std std-ref">RefreshDeferrer</span></a> with a replacing Accumulator. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">replaceIfNull</span></code>: passed to the <a class="reference internal" href="../common/classReplacingRefreshDeferrerAccumulator.html#classReplacingRefreshDeferrerAccumulator"><span class="std std-ref">ReplacingRefreshDeferrerAccumulator</span></a> </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">refreshNowFunc</span></code>: lambda taking a single parameter of type ParamResult, called when a refresh should occur </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>replaceIfNull</strong> – passed to the <a class="reference internal" href="../common/classReplacingRefreshDeferrerAccumulator.html#classReplacingRefreshDeferrerAccumulator"><span class="std std-ref">ReplacingRefreshDeferrerAccumulator</span></a> </p></li>
+<li><p><strong>refreshNowFunc</strong> – lambda taking a single parameter of type ParamResult, called when a refresh should occur </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -126,12 +124,15 @@
 <p>Override this function for saving dock specific view properties. Use in situations where it makes sense to have different properties for multiple instances of widget. Don’t use for options that are more suitable as global settings and should be applied equally to all widgets or all widgets of this kind.</p>
 <p>Keep synchrononized with deserializeViewProperties. When modifying add project upgrade step in SettingsUpgrade.cpp if necessary.</p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Dictionary of current dock properties. </p>
-</dd>
 <dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#classCutterDockWidget_1a2f7ff308ea942f30049720f0e2836a67"><span class="std std-ref">CutterDockWidget::deserializeViewProperties</span></a> </p>
 </dd>
 </dl>
 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary of current dock properties. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -142,25 +143,24 @@
 <p><dl class="simple">
 <dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#classCutterDockWidget_1a18f9fe076b3211e02e84130f5795488b"><span class="std std-ref">CutterDockWidget::serializeViewProprties</span></a> </p>
 </dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code>: to modify for current widget </p></li>
-</ul>
-</dd>
 </dl>
 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>properties</strong> – to modify for current widget </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N16CutterDockWidget22ignoreVisibilityStatusEb">
 <span id="_CPPv3N16CutterDockWidget22ignoreVisibilityStatusEb"></span><span id="_CPPv2N16CutterDockWidget22ignoreVisibilityStatusEb"></span><span id="CutterDockWidget::ignoreVisibilityStatus__b"></span><span class="target" id="classCutterDockWidget_1af2b85659bd5c14b5bfa0c2d6881d1e2e"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">ignoreVisibilityStatus</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">ignored</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16CutterDockWidget22ignoreVisibilityStatusEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Ignore visibility status. Useful for temporary ignoring visibility changes while this information is unreliable. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ignored</span></code>: - set to true for enabling ignoring mode </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ignored</strong> – - set to true for enabling ignoring mode </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">

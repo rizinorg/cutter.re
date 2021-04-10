@@ -60,11 +60,12 @@
 <span id="_CPPv3I00E15SegmentTreeBase"></span><span id="_CPPv2I00E15SegmentTreeBase"></span><span class="pre">template&lt;</span><span class="pre">class</span> <code class="sig-name descname"><span class="pre">NodeTypeT</span></code><span class="pre">,</span> <span class="pre">class</span> <code class="sig-name descname"><span class="pre">FinalType</span></code><span class="pre">&gt;</span><br /><span class="target" id="classSegmentTreeBase"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">SegmentTreeBase</span></code><a class="headerlink" href="#_CPPv4I00E15SegmentTreeBase" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Not really a segment tree for storing segments as referred in academic literature. Can be considered a full, almost perfect, augmented binary tree. In the context of competitive programming often called segment tree.</p>
 <p>Child classes are expected to implement updateFromChildren(NodeType&amp;parent, NodeType&amp; left, NodeType&amp; right) method which calculates inner node values from children nodes.</p>
-<p><dl class="simple">
-<dt><strong>Template Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">NodeTypeT</span></code>: type of each tree element </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FinalType</span></code>: final child class used for curiously recurring template pattern </p></li>
-</ul>
+<p><dl class="field-list simple">
+<dt class="field-odd">tparam NodeTypeT</dt>
+<dd class="field-odd"><p>type of each tree element </p>
+</dd>
+<dt class="field-even">tparam FinalType</dt>
+<dd class="field-even"><p>final child class used for curiously recurring template pattern </p>
 </dd>
 </dl>
 </p>
@@ -87,27 +88,26 @@
 <dt id="_CPPv4N15SegmentTreeBase15SegmentTreeBaseE6size_t">
 <span id="_CPPv3N15SegmentTreeBase15SegmentTreeBaseE6size_t"></span><span id="_CPPv2N15SegmentTreeBase15SegmentTreeBaseE6size_t"></span><span id="SegmentTreeBase::SegmentTreeBase__s"></span><span class="target" id="classSegmentTreeBase_1adc521e063bb1366a93b9af5505f6b4b3"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">explicit</span></em> <code class="sig-name descname"><span class="pre">SegmentTreeBase</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15SegmentTreeBase15SegmentTreeBaseE6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create tree with <em>size</em> leaves. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: number of leaves in the tree </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>size</strong> – number of leaves in the tree </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N15SegmentTreeBase15SegmentTreeBaseE6size_tRK8NodeType">
 <span id="_CPPv3N15SegmentTreeBase15SegmentTreeBaseE6size_tRK8NodeType"></span><span id="_CPPv2N15SegmentTreeBase15SegmentTreeBaseE6size_tRK8NodeType"></span><span id="SegmentTreeBase::SegmentTreeBase__s.NodeTypeCR"></span><span class="target" id="classSegmentTreeBase_1aea35ceca9ff8872f0edcdd7642c4690f"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">SegmentTreeBase</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">size</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N15SegmentTreeBase8NodeTypeE" title="SegmentTreeBase::NodeType"><span class="pre">NodeType</span></a> <span class="pre">&amp;</span><em><span class="pre">initialValue</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15SegmentTreeBase15SegmentTreeBaseE6size_tRK8NodeType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a tree with given size and initial value. </p>
-<p>Inner nodes are calculated from leaves. <dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: number of leaves </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialValue</span></code>: initial leave value </p></li>
+<p>Inner nodes are calculated from leaves. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – number of leaves </p></li>
+<li><p><strong>initialValue</strong> – initial leave value </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 </div>

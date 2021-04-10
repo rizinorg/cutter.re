@@ -74,13 +74,11 @@
 <dt id="_CPPv4N14CutterSeekable4seekE3RVA">
 <span id="_CPPv3N14CutterSeekable4seekE3RVA"></span><span id="_CPPv2N14CutterSeekable4seekE3RVA"></span><span id="CutterSeekable::seek__RVA"></span><span class="target" id="classCutterSeekable_1a996357a7db3386678c6984f18078da82"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">seek</span></code><span class="sig-paren">(</span><span class="pre">RVA</span> <em><span class="pre">addr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14CutterSeekable4seekE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>seek changes current offset. If the seekable is synchronized with Core, then the Core offset will be modified and then the <a class="reference internal" href="../core/classCutterCore.html#classCutterCore_1a410eb12ecd85b1190abe5d806ab9affb"><span class="std std-ref">CutterCore::seekChanged</span></a> signal will be emitted. In any case, CutterSeekable::seekableSeekChanged is emitted. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">addr</span></code>: the location to seek at. </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>addr</strong> – the location to seek at. </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -93,35 +91,33 @@
 <dt id="_CPPv4N14CutterSeekable9getOffsetEv">
 <span id="_CPPv3N14CutterSeekable9getOffsetEv"></span><span id="_CPPv2N14CutterSeekable9getOffsetEv"></span><span id="CutterSeekable::getOffset"></span><span class="target" id="classCutterSeekable_1a757c7b54ac5b7911c99e80af203d1743"></span><span class="pre">RVA</span> <code class="sig-name descname"><span class="pre">getOffset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14CutterSeekable9getOffsetEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>getOffset returns the seekable offset. If the seekable is synchronized with Core, this function is similar to Core()-&gt;getOffset. If it’s not synchronized, it will return the seekable current seek. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>the seekable current offset. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the seekable current offset. </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14CutterSeekable14isSynchronizedEv">
 <span id="_CPPv3N14CutterSeekable14isSynchronizedEv"></span><span id="_CPPv2N14CutterSeekable14isSynchronizedEv"></span><span id="CutterSeekable::isSynchronized"></span><span class="target" id="classCutterSeekable_1a6b23f65891426947bc8478653b38d19a"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isSynchronized</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14CutterSeekable14isSynchronizedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>isSynchronized tells whether the seekable is synchronized with Core or not. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>boolean </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>boolean </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14CutterSeekable15seekToReferenceE3RVA">
 <span id="_CPPv3N14CutterSeekable15seekToReferenceE3RVA"></span><span id="_CPPv2N14CutterSeekable15seekToReferenceE3RVA"></span><span id="CutterSeekable::seekToReference__RVA"></span><span class="target" id="classCutterSeekable_1af8d39bb4259b06490aba888eefd6c291"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">seekToReference</span></code><span class="sig-paren">(</span><span class="pre">RVA</span> <em><span class="pre">offset</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14CutterSeekable15seekToReferenceE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>seekToReference will seek to the function or the object which is referenced in a given offset </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code>: - an address that contains a reference to jump to </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>offset</strong> – - an address that contains a reference to jump to </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 </div>

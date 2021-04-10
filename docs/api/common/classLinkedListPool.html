@@ -67,28 +67,26 @@
 <dt id="_CPPv4N14LinkedListPool14LinkedListPoolE6size_t">
 <span id="_CPPv3N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="_CPPv2N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="LinkedListPool::LinkedListPool__s"></span><span class="target" id="classLinkedListPool_1a74ea7039c3e5831f39e426de3a0bb63d"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">LinkedListPool</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">initialCapacity</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool14LinkedListPoolE6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a linked list pool with capacity for <em>initialCapacity</em> list items. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">initialCapacity</span></code>: number of elements to preallocate. </p></li>
-</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>initialCapacity</strong> – number of elements to preallocate. </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14LinkedListPool8makeListERK1T">
 <span id="_CPPv3N14LinkedListPool8makeListERK1T"></span><span id="_CPPv2N14LinkedListPool8makeListERK1T"></span><span id="LinkedListPool::makeList__TCR"></span><span class="target" id="classLinkedListPool_1a19f2b730f498dc04cb6ce407ee709012"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <code class="sig-name descname"><span class="pre">makeList</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4I0E14LinkedListPool" title="LinkedListPool::T"><span class="pre">T</span></a> <span class="pre">&amp;</span><em><span class="pre">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool8makeListERK1T" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a list containing single item. </p>
-<p>Does not invalidate any iterators, but may cause item relocation when initialCapacity is exceeded. <dl class="simple">
-<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> containing single value <em>value</em> . </p>
+<p>Does not invalidate any iterators, but may cause item relocation when initialCapacity is exceeded. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – value of element that will be inserted in the created list </p>
 </dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: value of element that will be inserted in the created list </p></li>
-</ul>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> containing single value <em>value</em> . </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -96,47 +94,48 @@
 <span id="_CPPv3N14LinkedListPool9splitTailERK4ListRK12ListIterator"></span><span id="_CPPv2N14LinkedListPool9splitTailERK4ListRK12ListIterator"></span><span id="LinkedListPool::splitTail__ListCR.ListIteratorCR"></span><span class="target" id="classLinkedListPool_1a66788ea9eb8418b11ee34e079a9b34ab"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <code class="sig-name descname"><span class="pre">splitTail</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <span class="pre">&amp;</span><em><span class="pre">list</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator"><span class="pre">ListIterator</span></a> <span class="pre">&amp;</span><em><span class="pre">head</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool9splitTailERK4ListRK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Split list and return second half. </p>
 <p>After performing the operation, list passed as argument and return list point to the same items. Modifying them will affect both lists.</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Returns suffix of <em>list</em>. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: The list that needs to be split. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code>: Iterator to the first item in new list. Needs to be within <em>list</em> . </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list</strong> – The list that needs to be split. </p></li>
+<li><p><strong>head</strong> – Iterator to the first item in new list. Needs to be within <em>list</em> . </p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns suffix of <em>list</em>. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14LinkedListPool9splitHeadERK4ListRK12ListIterator">
 <span id="_CPPv3N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="_CPPv2N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="LinkedListPool::splitHead__ListCR.ListIteratorCR"></span><span class="target" id="classLinkedListPool_1abb92cf76bde99e9d54b60740e2eb8edb"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <code class="sig-name descname"><span class="pre">splitHead</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <span class="pre">&amp;</span><em><span class="pre">list</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator"><span class="pre">ListIterator</span></a> <span class="pre">&amp;</span><em><span class="pre">end</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool9splitHeadERK4ListRK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Split list and return first half. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Returns prefix of <em>list</em>. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: The list that needs to be split. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code>: Iterator to the first item that should not be included in returned list. Needs to be within <em>list</em> . </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list</strong> – The list that needs to be split. </p></li>
+<li><p><strong>end</strong> – Iterator to the first item that should not be included in returned list. Needs to be within <em>list</em> . </p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns prefix of <em>list</em>. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv4N14LinkedListPool4headERK4List">
 <span id="_CPPv3N14LinkedListPool4headERK4List"></span><span id="_CPPv2N14LinkedListPool4headERK4List"></span><span id="LinkedListPool::head__ListCR"></span><span class="target" id="classLinkedListPool_1a8d73a4d2214eeefc486f15e5da4c1fd5"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator"><span class="pre">ListIterator</span></a> <code class="sig-name descname"><span class="pre">head</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="pre">List</span></a> <span class="pre">&amp;</span><em><span class="pre">list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool4headERK4List" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create list iterator from list. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Iterator pointing to the first item in the list. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>list</strong> – </p>
 </dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code>: </p></li>
-</ul>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Iterator pointing to the first item in the list. </p>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">

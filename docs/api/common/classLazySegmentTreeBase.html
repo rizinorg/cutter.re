@@ -61,12 +61,15 @@
 <dd><p>Tree that supports lazily applying an operation to range. </p>
 <p>Each inner node has a promise value describing an operation that needs to be applied to corresponding subtree.</p>
 <p>Child classes are expected to implement to pushDown(size_t nodePosition) method. Which applies the applies the operation stored in <em>promise</em> for nodePosition to the direct children nodes.</p>
-<p><dl class="simple">
-<dt><strong>Template Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">NodeType</span></code>: type of tree nodes </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">PromiseType</span></code>: type describing operation that needs to be applied to subtree </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FinalType</span></code>: child class type for CRTP. See <a class="reference internal" href="classSegmentTreeBase.html#classSegmentTreeBase"><span class="std std-ref">SegmentTreeBase</span></a> </p></li>
-</ul>
+<p><dl class="field-list simple">
+<dt class="field-odd">tparam NodeType</dt>
+<dd class="field-odd"><p>type of tree nodes </p>
+</dd>
+<dt class="field-even">tparam PromiseType</dt>
+<dd class="field-even"><p>type describing operation that needs to be applied to subtree </p>
+</dd>
+<dt class="field-odd">tparam FinalType</dt>
+<dd class="field-odd"><p>child class type for CRTP. See <a class="reference internal" href="classSegmentTreeBase.html#classSegmentTreeBase"><span class="std std-ref">SegmentTreeBase</span></a> </p>
 </dd>
 </dl>
 </p>
@@ -75,14 +78,14 @@
 <dl class="cpp function">
 <dt id="_CPPv4N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType">
 <span id="_CPPv3N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType"></span><span id="_CPPv2N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType"></span><span id="LazySegmentTreeBase::LazySegmentTreeBase__s.PromiseTypeCR"></span><span class="target" id="classLazySegmentTreeBase_1a1551fd5ec31058585d14cbd575eedee9"></span><em class="property"><span class="pre">inline</span></em> <code class="sig-name descname"><span class="pre">LazySegmentTreeBase</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">size</span></em>, <em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::PromiseType"><span class="pre">PromiseType</span></a> <span class="pre">&amp;</span><em><span class="pre">neutralPromise</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code>: Number of tree leaves. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">neutralPromise</span></code>: Promise value that doesn’t modify tree nodes. </p></li>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – Number of tree leaves. </p></li>
+<li><p><strong>neutralPromise</strong> – Promise value that doesn’t modify tree nodes. </p></li>
 </ul>
 </dd>
 </dl>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -94,17 +97,18 @@
 <dt id="_CPPv4N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType">
 <span id="_CPPv3N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType"></span><span id="_CPPv2N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType"></span><span id="LazySegmentTreeBase::rangeOperation__s.s.NodeType"></span><span class="target" id="classLazySegmentTreeBase_1a349c9e16b54a0a089f3c63eb08cf0827"></span><em class="property"><span class="pre">inline</span></em> <a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::NodeType"><span class="pre">NodeType</span></a> <code class="sig-name descname"><span class="pre">rangeOperation</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">l</span></em>, <span class="pre">size_t</span> <em><span class="pre">r</span></em>, <a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::NodeType"><span class="pre">NodeType</span></a> <em><span class="pre">initialValue</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Calculate the tree operation over the range [<em>l</em>, <em>r</em>) </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>Tree operation calculated over the range. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code>: inclusive range left side </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code>: exclusive range right side </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialValue</span></code>: Initial value for aggregate operation. </p></li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>l</strong> – inclusive range left side </p></li>
+<li><p><strong>r</strong> – exclusive range right side </p></li>
+<li><p><strong>initialValue</strong> – Initial value for aggregate operation. </p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tree operation calculated over the range. </p>
+</dd>
 </dl>
-</p>
 </dd></dl>
 
 </div>
