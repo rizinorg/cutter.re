@@ -4,13 +4,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>AsyncTask &#8212; Cutter 2.0.2 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -52,99 +53,99 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="asynctask">
+  <section id="asynctask">
 <h1>AsyncTask<a class="headerlink" href="#asynctask" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
-<dt id="_CPPv49AsyncTask">
-<span id="_CPPv39AsyncTask"></span><span id="_CPPv29AsyncTask"></span><span id="AsyncTask"></span><span class="target" id="classAsyncTask"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">AsyncTask</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">QObject</span><span class="pre">,</span> <em class="property"><span class="pre">public</span></em> <span class="pre">QRunnable</span><a class="headerlink" href="#_CPPv49AsyncTask" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv49AsyncTask">
+<span id="_CPPv39AsyncTask"></span><span id="_CPPv29AsyncTask"></span><span id="AsyncTask"></span><span class="target" id="classAsyncTask"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AsyncTask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QRunnable</span></span><a class="headerlink" href="#_CPPv49AsyncTask" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Subclassed by <a class="reference internal" href="classAnalTask.html#classAnalTask"><span class="std std-ref">AnalTask</span></a>, <a class="reference internal" href="classCommandTask.html#classCommandTask"><span class="std std-ref">CommandTask</span></a>, <a class="reference internal" href="classFunctionsTask.html#classFunctionsTask"><span class="std std-ref">FunctionsTask</span></a>, <a class="reference internal" href="classRunScriptTask.html#classRunScriptTask"><span class="std std-ref">RunScriptTask</span></a>, <a class="reference internal" href="classStringsTask.html#classStringsTask"><span class="std std-ref">StringsTask</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
-<dt id="_CPPv4N9AsyncTask3PtrE">
-<span id="_CPPv3N9AsyncTask3PtrE"></span><span id="_CPPv2N9AsyncTask3PtrE"></span><span class="target" id="classAsyncTask_1a095923d0cd21d9c7c2b0f1415a6c6bc2"></span><em class="property"><span class="pre">using</span> </em><code class="sig-name descname"><span class="pre">Ptr</span></code> <span class="pre">=</span> <span class="pre">QSharedPointer</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv49AsyncTask" title="AsyncTask"><span class="pre">AsyncTask</span></a><span class="pre">&gt;</span><a class="headerlink" href="#_CPPv4N9AsyncTask3PtrE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask3PtrE">
+<span id="_CPPv3N9AsyncTask3PtrE"></span><span id="_CPPv2N9AsyncTask3PtrE"></span><span class="target" id="classAsyncTask_1a095923d0cd21d9c7c2b0f1415a6c6bc2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Ptr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv49AsyncTask" title="AsyncTask"><span class="n"><span class="pre">AsyncTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9AsyncTask3PtrE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask9AsyncTaskEv">
-<span id="_CPPv3N9AsyncTask9AsyncTaskEv"></span><span id="_CPPv2N9AsyncTask9AsyncTaskEv"></span><span id="AsyncTask::AsyncTask"></span><span class="target" id="classAsyncTask_1a45a98d7511cd125223d440c95be1f108"></span><code class="sig-name descname"><span class="pre">AsyncTask</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9AsyncTaskEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask9AsyncTaskEv">
+<span id="_CPPv3N9AsyncTask9AsyncTaskEv"></span><span id="_CPPv2N9AsyncTask9AsyncTaskEv"></span><span id="AsyncTask::AsyncTask"></span><span class="target" id="classAsyncTask_1a45a98d7511cd125223d440c95be1f108"></span><span class="sig-name descname"><span class="n"><span class="pre">AsyncTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9AsyncTaskEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTaskD0Ev">
-<span id="_CPPv3N9AsyncTaskD0Ev"></span><span id="_CPPv2N9AsyncTaskD0Ev"></span><span id="AsyncTask::~AsyncTask"></span><span class="target" id="classAsyncTask_1a6888fd261752a6c018e3fdb2637a88e9"></span><code class="sig-name descname"><span class="pre">~AsyncTask</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTaskD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTaskD0Ev">
+<span id="_CPPv3N9AsyncTaskD0Ev"></span><span id="_CPPv2N9AsyncTaskD0Ev"></span><span id="AsyncTask::~AsyncTask"></span><span class="target" id="classAsyncTask_1a6888fd261752a6c018e3fdb2637a88e9"></span><span class="sig-name descname"><span class="n"><span class="pre">~AsyncTask</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTaskD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask3runEv">
-<span id="_CPPv3N9AsyncTask3runEv"></span><span id="_CPPv2N9AsyncTask3runEv"></span><span id="AsyncTask::run"></span><span class="target" id="classAsyncTask_1a1110337de398a647e5ed14f4eb213c37"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">final</span></em> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4N9AsyncTask3runEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask3runEv">
+<span id="_CPPv3N9AsyncTask3runEv"></span><span id="_CPPv2N9AsyncTask3runEv"></span><span id="AsyncTask::run"></span><span class="target" id="classAsyncTask_1a1110337de398a647e5ed14f4eb213c37"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">final</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9AsyncTask3runEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask4waitEv">
-<span id="_CPPv3N9AsyncTask4waitEv"></span><span id="_CPPv2N9AsyncTask4waitEv"></span><span id="AsyncTask::wait"></span><span class="target" id="classAsyncTask_1ad65db07e5ba68a544e6de1addc090141"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">wait</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask4waitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask4waitEv">
+<span id="_CPPv3N9AsyncTask4waitEv"></span><span id="_CPPv2N9AsyncTask4waitEv"></span><span id="AsyncTask::wait"></span><span class="target" id="classAsyncTask_1ad65db07e5ba68a544e6de1addc090141"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask4waitEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask4waitEi">
-<span id="_CPPv3N9AsyncTask4waitEi"></span><span id="_CPPv2N9AsyncTask4waitEi"></span><span id="AsyncTask::wait__i"></span><span class="target" id="classAsyncTask_1ab9f91e6e80ba5b12f510225247e5fa52"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">wait</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask4waitEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask4waitEi">
+<span id="_CPPv3N9AsyncTask4waitEi"></span><span id="_CPPv2N9AsyncTask4waitEi"></span><span id="AsyncTask::wait__i"></span><span class="target" id="classAsyncTask_1ab9f91e6e80ba5b12f510225247e5fa52"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wait</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask4waitEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask9interruptEv">
-<span id="_CPPv3N9AsyncTask9interruptEv"></span><span id="_CPPv2N9AsyncTask9interruptEv"></span><span id="AsyncTask::interrupt"></span><span class="target" id="classAsyncTask_1a0de9c0d99fa1f89ad8b2562d60b73edc"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">void</span> <code class="sig-name descname"><span class="pre">interrupt</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9interruptEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask9interruptEv">
+<span id="_CPPv3N9AsyncTask9interruptEv"></span><span id="_CPPv2N9AsyncTask9interruptEv"></span><span id="AsyncTask::interrupt"></span><span class="target" id="classAsyncTask_1a0de9c0d99fa1f89ad8b2562d60b73edc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interrupt</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9interruptEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask13isInterruptedEv">
-<span id="_CPPv3N9AsyncTask13isInterruptedEv"></span><span id="_CPPv2N9AsyncTask13isInterruptedEv"></span><span id="AsyncTask::isInterrupted"></span><span class="target" id="classAsyncTask_1a944d688dcbbe887d2b87663489aa826e"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isInterrupted</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask13isInterruptedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask13isInterruptedEv">
+<span id="_CPPv3N9AsyncTask13isInterruptedEv"></span><span id="_CPPv2N9AsyncTask13isInterruptedEv"></span><span id="AsyncTask::isInterrupted"></span><span class="target" id="classAsyncTask_1a944d688dcbbe887d2b87663489aa826e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInterrupted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask13isInterruptedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask9isRunningEv">
-<span id="_CPPv3N9AsyncTask9isRunningEv"></span><span id="_CPPv2N9AsyncTask9isRunningEv"></span><span id="AsyncTask::isRunning"></span><span class="target" id="classAsyncTask_1a4cd8371c0e96c9219d8f9051280b2af2"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">bool</span> <code class="sig-name descname"><span class="pre">isRunning</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9isRunningEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask9isRunningEv">
+<span id="_CPPv3N9AsyncTask9isRunningEv"></span><span id="_CPPv2N9AsyncTask9isRunningEv"></span><span id="AsyncTask::isRunning"></span><span class="target" id="classAsyncTask_1a4cd8371c0e96c9219d8f9051280b2af2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isRunning</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9isRunningEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask6getLogEv">
-<span id="_CPPv3N9AsyncTask6getLogEv"></span><span id="_CPPv2N9AsyncTask6getLogEv"></span><span id="AsyncTask::getLog"></span><span class="target" id="classAsyncTask_1a0019f40a561600de3cdea0cc842d9271"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">getLog</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask6getLogEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask6getLogEv">
+<span id="_CPPv3N9AsyncTask6getLogEv"></span><span id="_CPPv2N9AsyncTask6getLogEv"></span><span id="AsyncTask::getLog"></span><span class="target" id="classAsyncTask_1a0019f40a561600de3cdea0cc842d9271"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getLog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask6getLogEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask8getTimerEv">
-<span id="_CPPv3N9AsyncTask8getTimerEv"></span><span id="_CPPv2N9AsyncTask8getTimerEv"></span><span id="AsyncTask::getTimer"></span><span class="target" id="classAsyncTask_1aad404ebaabc0c263759da79a536c031a"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">QElapsedTimer</span> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">getTimer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8getTimerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask8getTimerEv">
+<span id="_CPPv3N9AsyncTask8getTimerEv"></span><span id="_CPPv2N9AsyncTask8getTimerEv"></span><span id="AsyncTask::getTimer"></span><span class="target" id="classAsyncTask_1aad404ebaabc0c263759da79a536c031a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QElapsedTimer</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getTimer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8getTimerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask14getElapsedTimeEv">
-<span id="_CPPv3N9AsyncTask14getElapsedTimeEv"></span><span id="_CPPv2N9AsyncTask14getElapsedTimeEv"></span><span id="AsyncTask::getElapsedTime"></span><span class="target" id="classAsyncTask_1a6ce891bbcdb5fa9da2a1e53394a002af"></span><em class="property"><span class="pre">inline</span></em> <span class="pre">qint64</span> <code class="sig-name descname"><span class="pre">getElapsedTime</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask14getElapsedTimeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask14getElapsedTimeEv">
+<span id="_CPPv3N9AsyncTask14getElapsedTimeEv"></span><span id="_CPPv2N9AsyncTask14getElapsedTimeEv"></span><span id="AsyncTask::getElapsedTime"></span><span class="target" id="classAsyncTask_1a6ce891bbcdb5fa9da2a1e53394a002af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">qint64</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getElapsedTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask14getElapsedTimeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask8getTitleEv">
-<span id="_CPPv3N9AsyncTask8getTitleEv"></span><span id="_CPPv2N9AsyncTask8getTitleEv"></span><span id="AsyncTask::getTitle"></span><span class="target" id="classAsyncTask_1a47ebdf2d4150d72cdf9ef5af86f29f88"></span><em class="property"><span class="pre">inline</span></em> <em class="property"><span class="pre">virtual</span></em> <span class="pre">QString</span> <code class="sig-name descname"><span class="pre">getTitle</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8getTitleEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask8getTitleEv">
+<span id="_CPPv3N9AsyncTask8getTitleEv"></span><span id="_CPPv2N9AsyncTask8getTitleEv"></span><span id="AsyncTask::getTitle"></span><span class="target" id="classAsyncTask_1a47ebdf2d4150d72cdf9ef5af86f29f88"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8getTitleEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask8finishedEv">
-<span id="_CPPv3N9AsyncTask8finishedEv"></span><span id="_CPPv2N9AsyncTask8finishedEv"></span><span id="AsyncTask::finished"></span><span class="target" id="classAsyncTask_1a058018fdfc622730c054cbfc52ae0df6"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">finished</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8finishedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask8finishedEv">
+<span id="_CPPv3N9AsyncTask8finishedEv"></span><span id="_CPPv2N9AsyncTask8finishedEv"></span><span id="AsyncTask::finished"></span><span class="target" id="classAsyncTask_1a058018fdfc622730c054cbfc52ae0df6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">finished</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8finishedEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9AsyncTask10logChangedERK7QString">
-<span id="_CPPv3N9AsyncTask10logChangedERK7QString"></span><span id="_CPPv2N9AsyncTask10logChangedERK7QString"></span><span id="AsyncTask::logChanged__QStringCR"></span><span class="target" id="classAsyncTask_1aca432cabce8eb26bd1ea7d749a1d4bb5"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">logChanged</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QString</span> <span class="pre">&amp;</span><em><span class="pre">log</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask10logChangedERK7QString" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask10logChangedERK7QString">
+<span id="_CPPv3N9AsyncTask10logChangedERK7QString"></span><span id="_CPPv2N9AsyncTask10logChangedERK7QString"></span><span id="AsyncTask::logChanged__QStringCR"></span><span class="target" id="classAsyncTask_1aca432cabce8eb26bd1ea7d749a1d4bb5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">logChanged</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">log</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask10logChangedERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -261,7 +262,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
     
 

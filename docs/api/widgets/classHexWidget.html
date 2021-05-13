@@ -4,13 +4,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>HexWidget &#8212; Cutter 2.0.2 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/cutter.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -52,98 +53,98 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="hexwidget">
+  <section id="hexwidget">
 <h1>HexWidget<a class="headerlink" href="#hexwidget" title="Permalink to this headline">¶</a></h1>
 <dl class="cpp class">
-<dt id="_CPPv49HexWidget">
-<span id="_CPPv39HexWidget"></span><span id="_CPPv29HexWidget"></span><span id="HexWidget"></span><span class="target" id="classHexWidget"></span><em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">HexWidget</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">QScrollArea</span><a class="headerlink" href="#_CPPv49HexWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv49HexWidget">
+<span id="_CPPv39HexWidget"></span><span id="_CPPv29HexWidget"></span><span id="HexWidget"></span><span class="target" id="classHexWidget"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HexWidget</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QScrollArea</span></span><a class="headerlink" href="#_CPPv49HexWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp enum">
-<dt id="_CPPv4N9HexWidget9AddrWidthE">
-<span id="_CPPv3N9HexWidget9AddrWidthE"></span><span id="_CPPv2N9HexWidget9AddrWidthE"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60ab"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">AddrWidth</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidthE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9AddrWidthE">
+<span id="_CPPv3N9HexWidget9AddrWidthE"></span><span id="_CPPv2N9HexWidget9AddrWidthE"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60ab"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddrWidth</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidthE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget9AddrWidth11AddrWidth32E">
-<span id="_CPPv3N9HexWidget9AddrWidth11AddrWidth32E"></span><span id="_CPPv2N9HexWidget9AddrWidth11AddrWidth32E"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60abad4027e4a545a5ee3bcfbbb5d212c25aa"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">AddrWidth32</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidth11AddrWidth32E" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9AddrWidth11AddrWidth32E">
+<span id="_CPPv3N9HexWidget9AddrWidth11AddrWidth32E"></span><span id="_CPPv2N9HexWidget9AddrWidth11AddrWidth32E"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60abad4027e4a545a5ee3bcfbbb5d212c25aa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddrWidth32</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidth11AddrWidth32E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget9AddrWidth11AddrWidth64E">
-<span id="_CPPv3N9HexWidget9AddrWidth11AddrWidth64E"></span><span id="_CPPv2N9HexWidget9AddrWidth11AddrWidth64E"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60aba6525b19f4cb96b918b3a882d797c7170"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">AddrWidth64</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidth11AddrWidth64E" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9AddrWidth11AddrWidth64E">
+<span id="_CPPv3N9HexWidget9AddrWidth11AddrWidth64E"></span><span id="_CPPv2N9HexWidget9AddrWidth11AddrWidth64E"></span><span class="target" id="classHexWidget_1a86daa83e05f3583a9b42e34a9adc60aba6525b19f4cb96b918b3a882d797c7170"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddrWidth64</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9AddrWidth11AddrWidth64E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4N9HexWidget8ItemSizeE">
-<span id="_CPPv3N9HexWidget8ItemSizeE"></span><span id="_CPPv2N9HexWidget8ItemSizeE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">ItemSize</span></code><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget8ItemSizeE">
+<span id="_CPPv3N9HexWidget8ItemSizeE"></span><span id="_CPPv2N9HexWidget8ItemSizeE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemSize</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSizeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget8ItemSize12ItemSizeByteE">
-<span id="_CPPv3N9HexWidget8ItemSize12ItemSizeByteE"></span><span id="_CPPv2N9HexWidget8ItemSize12ItemSizeByteE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146af359d87204ac340c696624e71cfc4620"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemSizeByte</span></code><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize12ItemSizeByteE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget8ItemSize12ItemSizeByteE">
+<span id="_CPPv3N9HexWidget8ItemSize12ItemSizeByteE"></span><span id="_CPPv2N9HexWidget8ItemSize12ItemSizeByteE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146af359d87204ac340c696624e71cfc4620"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemSizeByte</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize12ItemSizeByteE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget8ItemSize12ItemSizeWordE">
-<span id="_CPPv3N9HexWidget8ItemSize12ItemSizeWordE"></span><span id="_CPPv2N9HexWidget8ItemSize12ItemSizeWordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146ab1612dace67f00ebadfec4c89b6d03dc"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemSizeWord</span></code><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize12ItemSizeWordE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget8ItemSize12ItemSizeWordE">
+<span id="_CPPv3N9HexWidget8ItemSize12ItemSizeWordE"></span><span id="_CPPv2N9HexWidget8ItemSize12ItemSizeWordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146ab1612dace67f00ebadfec4c89b6d03dc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemSizeWord</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize12ItemSizeWordE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget8ItemSize13ItemSizeDwordE">
-<span id="_CPPv3N9HexWidget8ItemSize13ItemSizeDwordE"></span><span id="_CPPv2N9HexWidget8ItemSize13ItemSizeDwordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146adee538abde5c23a978397bc918066090"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemSizeDword</span></code><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize13ItemSizeDwordE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget8ItemSize13ItemSizeDwordE">
+<span id="_CPPv3N9HexWidget8ItemSize13ItemSizeDwordE"></span><span id="_CPPv2N9HexWidget8ItemSize13ItemSizeDwordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146adee538abde5c23a978397bc918066090"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemSizeDword</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize13ItemSizeDwordE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget8ItemSize13ItemSizeQwordE">
-<span id="_CPPv3N9HexWidget8ItemSize13ItemSizeQwordE"></span><span id="_CPPv2N9HexWidget8ItemSize13ItemSizeQwordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146a4b035145273fea513763e2d53f0a9abe"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemSizeQword</span></code><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize13ItemSizeQwordE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget8ItemSize13ItemSizeQwordE">
+<span id="_CPPv3N9HexWidget8ItemSize13ItemSizeQwordE"></span><span id="_CPPv2N9HexWidget8ItemSize13ItemSizeQwordE"></span><span class="target" id="classHexWidget_1a76a28b7b5260e663c4ae16dd33e72146a4b035145273fea513763e2d53f0a9abe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemSizeQword</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget8ItemSize13ItemSizeQwordE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4N9HexWidget10ItemFormatE">
-<span id="_CPPv3N9HexWidget10ItemFormatE"></span><span id="_CPPv2N9HexWidget10ItemFormatE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">ItemFormat</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormatE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormatE">
+<span id="_CPPv3N9HexWidget10ItemFormatE"></span><span id="_CPPv2N9HexWidget10ItemFormatE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormat</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormatE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ItemFormat13ItemFormatHexE">
-<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatHexE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatHexE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a9e67fdd664a8785f63bc42f2bd8844a0"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemFormatHex</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatHexE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormat13ItemFormatHexE">
+<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatHexE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatHexE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a9e67fdd664a8785f63bc42f2bd8844a0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormatHex</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatHexE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ItemFormat13ItemFormatOctE">
-<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatOctE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatOctE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a12eb5c866567ea8650789ca41131cd88"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemFormatOct</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatOctE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormat13ItemFormatOctE">
+<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatOctE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatOctE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a12eb5c866567ea8650789ca41131cd88"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormatOct</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatOctE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ItemFormat13ItemFormatDecE">
-<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatDecE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatDecE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a4986984655cf7814c0581a1f9ae81801"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemFormatDec</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatDecE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormat13ItemFormatDecE">
+<span id="_CPPv3N9HexWidget10ItemFormat13ItemFormatDecE"></span><span id="_CPPv2N9HexWidget10ItemFormat13ItemFormatDecE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979a4986984655cf7814c0581a1f9ae81801"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormatDec</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat13ItemFormatDecE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ItemFormat19ItemFormatSignedDecE">
-<span id="_CPPv3N9HexWidget10ItemFormat19ItemFormatSignedDecE"></span><span id="_CPPv2N9HexWidget10ItemFormat19ItemFormatSignedDecE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979aab13dc85f91abfc24453553580923f1c"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemFormatSignedDec</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat19ItemFormatSignedDecE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormat19ItemFormatSignedDecE">
+<span id="_CPPv3N9HexWidget10ItemFormat19ItemFormatSignedDecE"></span><span id="_CPPv2N9HexWidget10ItemFormat19ItemFormatSignedDecE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979aab13dc85f91abfc24453553580923f1c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormatSignedDec</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat19ItemFormatSignedDecE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ItemFormat15ItemFormatFloatE">
-<span id="_CPPv3N9HexWidget10ItemFormat15ItemFormatFloatE"></span><span id="_CPPv2N9HexWidget10ItemFormat15ItemFormatFloatE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979ad1717154420720eeb27ac6d0eeaaff19"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">ItemFormatFloat</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat15ItemFormatFloatE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ItemFormat15ItemFormatFloatE">
+<span id="_CPPv3N9HexWidget10ItemFormat15ItemFormatFloatE"></span><span id="_CPPv2N9HexWidget10ItemFormat15ItemFormatFloatE"></span><span class="target" id="classHexWidget_1a3d0fed4f141649706cf0ba7af1678979ad1717154420720eeb27ac6d0eeaaff19"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemFormatFloat</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ItemFormat15ItemFormatFloatE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4N9HexWidget10ColumnModeE">
-<span id="_CPPv3N9HexWidget10ColumnModeE"></span><span id="_CPPv2N9HexWidget10ColumnModeE"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-name descname"><span class="pre">ColumnMode</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnModeE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ColumnModeE">
+<span id="_CPPv3N9HexWidget10ColumnModeE"></span><span id="_CPPv2N9HexWidget10ColumnModeE"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColumnMode</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnModeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ColumnMode5FixedE">
-<span id="_CPPv3N9HexWidget10ColumnMode5FixedE"></span><span id="_CPPv2N9HexWidget10ColumnMode5FixedE"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0a4457d440870ad6d42bab9082d9bf9b61"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">Fixed</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnMode5FixedE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ColumnMode5FixedE">
+<span id="_CPPv3N9HexWidget10ColumnMode5FixedE"></span><span id="_CPPv2N9HexWidget10ColumnMode5FixedE"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0a4457d440870ad6d42bab9082d9bf9b61"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Fixed</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnMode5FixedE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4N9HexWidget10ColumnMode8PowerOf2E">
-<span id="_CPPv3N9HexWidget10ColumnMode8PowerOf2E"></span><span id="_CPPv2N9HexWidget10ColumnMode8PowerOf2E"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0a2344f45a294cf681568625cf5d705434"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">PowerOf2</span></code><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnMode8PowerOf2E" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget10ColumnMode8PowerOf2E">
+<span id="_CPPv3N9HexWidget10ColumnMode8PowerOf2E"></span><span id="_CPPv2N9HexWidget10ColumnMode8PowerOf2E"></span><span class="target" id="classHexWidget_1ac9eef6963230ee6be9a7ea0e64178fc0a2344f45a294cf681568625cf5d705434"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PowerOf2</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget10ColumnMode8PowerOf2E" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -152,43 +153,43 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget9HexWidgetEP7QWidget">
-<span id="_CPPv3N9HexWidget9HexWidgetEP7QWidget"></span><span id="_CPPv2N9HexWidget9HexWidgetEP7QWidget"></span><span id="HexWidget::HexWidget__QWidgetP"></span><span class="target" id="classHexWidget_1afe21a37aa0945738d0ce29c146941517"></span><em class="property"><span class="pre">explicit</span></em> <code class="sig-name descname"><span class="pre">HexWidget</span></code><span class="sig-paren">(</span><span class="pre">QWidget</span> <span class="pre">*</span><em><span class="pre">parent</span></em> <span class="pre">=</span> <span class="pre">nullptr</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget9HexWidgetEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9HexWidgetEP7QWidget">
+<span id="_CPPv3N9HexWidget9HexWidgetEP7QWidget"></span><span id="_CPPv2N9HexWidget9HexWidgetEP7QWidget"></span><span id="HexWidget::HexWidget__QWidgetP"></span><span class="target" id="classHexWidget_1afe21a37aa0945738d0ce29c146941517"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HexWidget</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget9HexWidgetEP7QWidget" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidgetD0Ev">
-<span id="_CPPv3N9HexWidgetD0Ev"></span><span id="_CPPv2N9HexWidgetD0Ev"></span><span id="HexWidget::~HexWidget"></span><span class="target" id="classHexWidget_1a890b7699f8675eb184f274e16480243c"></span><code class="sig-name descname"><span class="pre">~HexWidget</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidgetD0Ev">
+<span id="_CPPv3N9HexWidgetD0Ev"></span><span id="_CPPv2N9HexWidgetD0Ev"></span><span id="HexWidget::~HexWidget"></span><span class="target" id="classHexWidget_1a890b7699f8675eb184f274e16480243c"></span><span class="sig-name descname"><span class="n"><span class="pre">~HexWidget</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidgetD0Ev" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget16setMonospaceFontERK5QFont">
-<span id="_CPPv3N9HexWidget16setMonospaceFontERK5QFont"></span><span id="_CPPv2N9HexWidget16setMonospaceFontERK5QFont"></span><span id="HexWidget::setMonospaceFont__QFontCR"></span><span class="target" id="classHexWidget_1a27dbe77493fcdf9e39beb06dcd34916b"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setMonospaceFont</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <span class="pre">QFont</span> <span class="pre">&amp;</span><em><span class="pre">font</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setMonospaceFontERK5QFont" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget16setMonospaceFontERK5QFont">
+<span id="_CPPv3N9HexWidget16setMonospaceFontERK5QFont"></span><span id="_CPPv2N9HexWidget16setMonospaceFontERK5QFont"></span><span id="HexWidget::setMonospaceFont__QFontCR"></span><span class="target" id="classHexWidget_1a27dbe77493fcdf9e39beb06dcd34916b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMonospaceFont</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QFont</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">font</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setMonospaceFontERK5QFont" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget11setItemSizeEi">
-<span id="_CPPv3N9HexWidget11setItemSizeEi"></span><span id="_CPPv2N9HexWidget11setItemSizeEi"></span><span id="HexWidget::setItemSize__i"></span><span class="target" id="classHexWidget_1a2dc6374eff1c2968c1599c1aed5a7f5b"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setItemSize</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">nbytes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget11setItemSizeEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget11setItemSizeEi">
+<span id="_CPPv3N9HexWidget11setItemSizeEi"></span><span id="_CPPv2N9HexWidget11setItemSizeEi"></span><span id="HexWidget::setItemSize__i"></span><span class="target" id="classHexWidget_1a2dc6374eff1c2968c1599c1aed5a7f5b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nbytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget11setItemSizeEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget13setItemFormatE10ItemFormat">
-<span id="_CPPv3N9HexWidget13setItemFormatE10ItemFormat"></span><span id="_CPPv2N9HexWidget13setItemFormatE10ItemFormat"></span><span id="HexWidget::setItemFormat__ItemFormat"></span><span class="target" id="classHexWidget_1a746976fce7dd3e259c020cde5b035335"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setItemFormat</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget10ItemFormatE" title="HexWidget::ItemFormat"><span class="pre">ItemFormat</span></a> <em><span class="pre">format</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget13setItemFormatE10ItemFormat" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget13setItemFormatE10ItemFormat">
+<span id="_CPPv3N9HexWidget13setItemFormatE10ItemFormat"></span><span id="_CPPv2N9HexWidget13setItemFormatE10ItemFormat"></span><span id="HexWidget::setItemFormat__ItemFormat"></span><span class="target" id="classHexWidget_1a746976fce7dd3e259c020cde5b035335"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemFormat</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget10ItemFormatE" title="HexWidget::ItemFormat"><span class="n"><span class="pre">ItemFormat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget13setItemFormatE10ItemFormat" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget16setItemEndianessEb">
-<span id="_CPPv3N9HexWidget16setItemEndianessEb"></span><span id="_CPPv2N9HexWidget16setItemEndianessEb"></span><span id="HexWidget::setItemEndianess__b"></span><span class="target" id="classHexWidget_1a25776632d65aae7a4f86f8aef3464665"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setItemEndianess</span></code><span class="sig-paren">(</span><span class="pre">bool</span> <em><span class="pre">bigEndian</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setItemEndianessEb" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget16setItemEndianessEb">
+<span id="_CPPv3N9HexWidget16setItemEndianessEb"></span><span id="_CPPv2N9HexWidget16setItemEndianessEb"></span><span id="HexWidget::setItemEndianess__b"></span><span class="target" id="classHexWidget_1a25776632d65aae7a4f86f8aef3464665"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemEndianess</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bigEndian</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setItemEndianessEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget16setItemGroupSizeEi">
-<span id="_CPPv3N9HexWidget16setItemGroupSizeEi"></span><span id="_CPPv2N9HexWidget16setItemGroupSizeEi"></span><span id="HexWidget::setItemGroupSize__i"></span><span class="target" id="classHexWidget_1a3dc12d22c4365487b64029c58c55c449"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setItemGroupSize</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">size</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setItemGroupSizeEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget16setItemGroupSizeEi">
+<span id="_CPPv3N9HexWidget16setItemGroupSizeEi"></span><span id="_CPPv2N9HexWidget16setItemGroupSizeEi"></span><span id="HexWidget::setItemGroupSize__i"></span><span class="target" id="classHexWidget_1a3dc12d22c4365487b64029c58c55c449"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemGroupSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setItemGroupSizeEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget16setFixedLineSizeEi">
-<span id="_CPPv3N9HexWidget16setFixedLineSizeEi"></span><span id="_CPPv2N9HexWidget16setFixedLineSizeEi"></span><span id="HexWidget::setFixedLineSize__i"></span><span class="target" id="classHexWidget_1acb18c9498e4a431f58ce66203517cf22"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setFixedLineSize</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">bytes</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setFixedLineSizeEi" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget16setFixedLineSizeEi">
+<span id="_CPPv3N9HexWidget16setFixedLineSizeEi"></span><span id="_CPPv2N9HexWidget16setFixedLineSizeEi"></span><span id="HexWidget::setFixedLineSize__i"></span><span class="target" id="classHexWidget_1acb18c9498e4a431f58ce66203517cf22"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFixedLineSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16setFixedLineSizeEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets line size in bytes. Changes column mode to fixed. Command can be rejected if current item format is bigger than requested size. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -198,13 +199,13 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget13setColumnModeE10ColumnMode">
-<span id="_CPPv3N9HexWidget13setColumnModeE10ColumnMode"></span><span id="_CPPv2N9HexWidget13setColumnModeE10ColumnMode"></span><span id="HexWidget::setColumnMode__ColumnMode"></span><span class="target" id="classHexWidget_1a5a6e57607bae08fec48ca81c2319ddb7"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setColumnMode</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget10ColumnModeE" title="HexWidget::ColumnMode"><span class="pre">ColumnMode</span></a> <em><span class="pre">mode</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget13setColumnModeE10ColumnMode" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget13setColumnModeE10ColumnMode">
+<span id="_CPPv3N9HexWidget13setColumnModeE10ColumnMode"></span><span id="_CPPv2N9HexWidget13setColumnModeE10ColumnMode"></span><span id="HexWidget::setColumnMode__ColumnMode"></span><span class="target" id="classHexWidget_1a5a6e57607bae08fec48ca81c2319ddb7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setColumnMode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget10ColumnModeE" title="HexWidget::ColumnMode"><span class="n"><span class="pre">ColumnMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget13setColumnModeE10ColumnMode" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget11selectRangeE3RVA3RVA">
-<span id="_CPPv3N9HexWidget11selectRangeE3RVA3RVA"></span><span id="_CPPv2N9HexWidget11selectRangeE3RVA3RVA"></span><span id="HexWidget::selectRange__RVA.RVA"></span><span class="target" id="classHexWidget_1afa79d162e5b1f290495240bbdcbc6459"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">selectRange</span></code><span class="sig-paren">(</span><span class="pre">RVA</span> <em><span class="pre">start</span></em>, <span class="pre">RVA</span> <em><span class="pre">end</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget11selectRangeE3RVA3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget11selectRangeE3RVA3RVA">
+<span id="_CPPv3N9HexWidget11selectRangeE3RVA3RVA"></span><span id="_CPPv2N9HexWidget11selectRangeE3RVA3RVA"></span><span id="HexWidget::selectRange__RVA.RVA"></span><span class="target" id="classHexWidget_1afa79d162e5b1f290495240bbdcbc6459"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">selectRange</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span>, <span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">end</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget11selectRangeE3RVA3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Select non empty inclusive range [start; end]. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -217,65 +218,65 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget14clearSelectionEv">
-<span id="_CPPv3N9HexWidget14clearSelectionEv"></span><span id="_CPPv2N9HexWidget14clearSelectionEv"></span><span id="HexWidget::clearSelection"></span><span class="target" id="classHexWidget_1a11b4608d6f5c6a3270037a19783f3a03"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">clearSelection</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget14clearSelectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget14clearSelectionEv">
+<span id="_CPPv3N9HexWidget14clearSelectionEv"></span><span id="_CPPv2N9HexWidget14clearSelectionEv"></span><span id="HexWidget::clearSelection"></span><span class="target" id="classHexWidget_1a11b4608d6f5c6a3270037a19783f3a03"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearSelection</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget14clearSelectionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget12getSelectionEv">
-<span id="_CPPv3N9HexWidget12getSelectionEv"></span><span id="_CPPv2N9HexWidget12getSelectionEv"></span><span id="HexWidget::getSelection"></span><span class="target" id="classHexWidget_1a4012580059b92208010af812dbf3a361"></span><a class="reference internal" href="#_CPPv4N9HexWidget9SelectionE" title="HexWidget::Selection"><span class="pre">Selection</span></a> <code class="sig-name descname"><span class="pre">getSelection</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget12getSelectionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget12getSelectionEv">
+<span id="_CPPv3N9HexWidget12getSelectionEv"></span><span id="_CPPv2N9HexWidget12getSelectionEv"></span><span id="HexWidget::getSelection"></span><span class="target" id="classHexWidget_1a4012580059b92208010af812dbf3a361"></span><a class="reference internal" href="#_CPPv4N9HexWidget9SelectionE" title="HexWidget::Selection"><span class="n"><span class="pre">Selection</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSelection</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget12getSelectionEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-slots">Public Slots</p>
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget4seekE8uint64_t">
-<span id="_CPPv3N9HexWidget4seekE8uint64_t"></span><span id="_CPPv2N9HexWidget4seekE8uint64_t"></span><span id="HexWidget::seek__uint64_t"></span><span class="target" id="classHexWidget_1a57d18dbb9ee245096e512f127ca3c358"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">seek</span></code><span class="sig-paren">(</span><span class="pre">uint64_t</span> <em><span class="pre">address</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget4seekE8uint64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget4seekE8uint64_t">
+<span id="_CPPv3N9HexWidget4seekE8uint64_t"></span><span id="_CPPv2N9HexWidget4seekE8uint64_t"></span><span id="HexWidget::seek__uint64_t"></span><span class="target" id="classHexWidget_1a57d18dbb9ee245096e512f127ca3c358"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget4seekE8uint64_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget7refreshEv">
-<span id="_CPPv3N9HexWidget7refreshEv"></span><span id="_CPPv2N9HexWidget7refreshEv"></span><span id="HexWidget::refresh"></span><span class="target" id="classHexWidget_1a62c6dca3d3d587037194bc7abcc02bd6"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">refresh</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget7refreshEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget7refreshEv">
+<span id="_CPPv3N9HexWidget7refreshEv"></span><span id="_CPPv2N9HexWidget7refreshEv"></span><span id="HexWidget::refresh"></span><span class="target" id="classHexWidget_1a62c6dca3d3d587037194bc7abcc02bd6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refresh</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget7refreshEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget12updateColorsEv">
-<span id="_CPPv3N9HexWidget12updateColorsEv"></span><span id="_CPPv2N9HexWidget12updateColorsEv"></span><span id="HexWidget::updateColors"></span><span class="target" id="classHexWidget_1aed14a241dba87559975c7f79ad39c87d"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">updateColors</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget12updateColorsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget12updateColorsEv">
+<span id="_CPPv3N9HexWidget12updateColorsEv"></span><span id="_CPPv2N9HexWidget12updateColorsEv"></span><span id="HexWidget::updateColors"></span><span class="target" id="classHexWidget_1aed14a241dba87559975c7f79ad39c87d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateColors</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget12updateColorsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget16selectionChangedE9Selection">
-<span id="_CPPv3N9HexWidget16selectionChangedE9Selection"></span><span id="_CPPv2N9HexWidget16selectionChangedE9Selection"></span><span id="HexWidget::selectionChanged__Selection"></span><span class="target" id="classHexWidget_1a39574eedf41742149a853b62f6981d7c"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">selectionChanged</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget9SelectionE" title="HexWidget::Selection"><span class="pre">Selection</span></a> <em><span class="pre">selection</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16selectionChangedE9Selection" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget16selectionChangedE9Selection">
+<span id="_CPPv3N9HexWidget16selectionChangedE9Selection"></span><span id="_CPPv2N9HexWidget16selectionChangedE9Selection"></span><span id="HexWidget::selectionChanged__Selection"></span><span class="target" id="classHexWidget_1a39574eedf41742149a853b62f6981d7c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">selectionChanged</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9HexWidget9SelectionE" title="HexWidget::Selection"><span class="n"><span class="pre">Selection</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">selection</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget16selectionChangedE9Selection" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N9HexWidget15positionChangedE3RVA">
-<span id="_CPPv3N9HexWidget15positionChangedE3RVA"></span><span id="_CPPv2N9HexWidget15positionChangedE3RVA"></span><span id="HexWidget::positionChanged__RVA"></span><span class="target" id="classHexWidget_1a5c9c8e9f040be6d577374e109cff9cc1"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">positionChanged</span></code><span class="sig-paren">(</span><span class="pre">RVA</span> <em><span class="pre">start</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget15positionChangedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget15positionChangedE3RVA">
+<span id="_CPPv3N9HexWidget15positionChangedE3RVA"></span><span id="_CPPv2N9HexWidget15positionChangedE3RVA"></span><span id="HexWidget::positionChanged__RVA"></span><span class="target" id="classHexWidget_1a5c9c8e9f040be6d577374e109cff9cc1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">positionChanged</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">start</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9HexWidget15positionChangedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
 <dl class="cpp struct">
-<dt id="_CPPv4N9HexWidget9SelectionE">
-<span id="_CPPv3N9HexWidget9SelectionE"></span><span id="_CPPv2N9HexWidget9SelectionE"></span><span id="HexWidget::Selection"></span><span class="target" id="structHexWidget_1_1Selection"></span><em class="property"><span class="pre">struct</span> </em><code class="sig-name descname"><span class="pre">Selection</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9SelectionE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9SelectionE">
+<span id="_CPPv3N9HexWidget9SelectionE"></span><span id="_CPPv2N9HexWidget9SelectionE"></span><span id="HexWidget::Selection"></span><span class="target" id="structHexWidget_1_1Selection"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Selection</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9SelectionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt id="_CPPv4N9HexWidget9Selection5emptyE">
-<span id="_CPPv3N9HexWidget9Selection5emptyE"></span><span id="_CPPv2N9HexWidget9Selection5emptyE"></span><span id="HexWidget::Selection::empty__b"></span><span class="target" id="structHexWidget_1_1Selection_1a7e5a6f35005d251add1b6de944630004"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">empty</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9Selection5emptyE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9Selection5emptyE">
+<span id="_CPPv3N9HexWidget9Selection5emptyE"></span><span id="_CPPv2N9HexWidget9Selection5emptyE"></span><span id="HexWidget::Selection::empty__b"></span><span class="target" id="structHexWidget_1_1Selection_1a7e5a6f35005d251add1b6de944630004"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">empty</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9Selection5emptyE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv4N9HexWidget9Selection12startAddressE">
-<span id="_CPPv3N9HexWidget9Selection12startAddressE"></span><span id="_CPPv2N9HexWidget9Selection12startAddressE"></span><span id="HexWidget::Selection::startAddress__RVA"></span><span class="target" id="structHexWidget_1_1Selection_1a5fdf6a4a2a4f53a6e2c654c36ea4cfe4"></span><span class="pre">RVA</span> <code class="sig-name descname"><span class="pre">startAddress</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9Selection12startAddressE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9Selection12startAddressE">
+<span id="_CPPv3N9HexWidget9Selection12startAddressE"></span><span id="_CPPv2N9HexWidget9Selection12startAddressE"></span><span id="HexWidget::Selection::startAddress__RVA"></span><span class="target" id="structHexWidget_1_1Selection_1a5fdf6a4a2a4f53a6e2c654c36ea4cfe4"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startAddress</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9Selection12startAddressE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt id="_CPPv4N9HexWidget9Selection10endAddressE">
-<span id="_CPPv3N9HexWidget9Selection10endAddressE"></span><span id="_CPPv2N9HexWidget9Selection10endAddressE"></span><span id="HexWidget::Selection::endAddress__RVA"></span><span class="target" id="structHexWidget_1_1Selection_1a2fdac431c01122e27343c29dc21c41ef"></span><span class="pre">RVA</span> <code class="sig-name descname"><span class="pre">endAddress</span></code><a class="headerlink" href="#_CPPv4N9HexWidget9Selection10endAddressE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9HexWidget9Selection10endAddressE">
+<span id="_CPPv3N9HexWidget9Selection10endAddressE"></span><span id="_CPPv2N9HexWidget9Selection10endAddressE"></span><span id="HexWidget::Selection::endAddress__RVA"></span><span class="target" id="structHexWidget_1_1Selection_1a2fdac431c01122e27343c29dc21c41ef"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">endAddress</span></span></span><a class="headerlink" href="#_CPPv4N9HexWidget9Selection10endAddressE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -283,7 +284,7 @@
 
 </dd></dl>
 
-</div>
+</section>
 
 
             <div class="clearer"></div>
@@ -489,7 +490,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.1.
     </div>
     
 
