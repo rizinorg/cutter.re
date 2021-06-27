@@ -1164,6 +1164,42 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore13getHeapChunksE3RVA">
+<span id="_CPPv3N10CutterCore13getHeapChunksE3RVA"></span><span id="_CPPv2N10CutterCore13getHeapChunksE3RVA"></span><span id="CutterCore::getHeapChunks__RVA"></span><span class="target" id="classCutterCore_1ade298b361cca0e979c37327a14d740a2"></span><span class="n"><span class="pre">QVector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structChunk.html#_CPPv45Chunk" title="Chunk"><span class="n"><span class="pre">Chunk</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeapChunks</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arena_addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore13getHeapChunksE3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a list of heap chunks Uses RZ_API rz_heap_chunks_list to get vector of chunks If arena_addr is zero return the chunks for main arena. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>arena_addr</strong> – base address for the arena </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Vector of heap chunks for the given arena </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore9getArenasEv">
+<span id="_CPPv3N10CutterCore9getArenasEv"></span><span id="_CPPv2N10CutterCore9getArenasEv"></span><span id="CutterCore::getArenas"></span><span class="target" id="classCutterCore_1a11d0ec2dce3922f53ce80435ad40211b"></span><span class="n"><span class="pre">QVector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structArena.html#_CPPv45Arena" title="Arena"><span class="n"><span class="pre">Arena</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getArenas</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore9getArenasEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get a list of heap arenas Uses RZ_API rz_heap_arenas_list to get list of arenas. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Vector of arenas </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12getHeapChunkE4ut64">
+<span id="_CPPv3N10CutterCore12getHeapChunkE4ut64"></span><span id="_CPPv2N10CutterCore12getHeapChunkE4ut64"></span><span id="CutterCore::getHeapChunk__ut64"></span><span class="target" id="classCutterCore_1ad35c964af09a62276147a5d6c84eca74"></span><span class="n"><span class="pre">RzHeapChunkSimple</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getHeapChunk</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ut64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12getHeapChunkE4ut64" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get detailed information about a heap chunk Uses RZ_API rz_heap_chunk. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>RzHeapChunkSimple struct pointer for the heap chunk </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10startDebugEv">
 <span id="_CPPv3N10CutterCore10startDebugEv"></span><span id="_CPPv2N10CutterCore10startDebugEv"></span><span id="CutterCore::startDebug"></span><span class="target" id="classCutterCore_1a98982b2031e1bb6dc13ce0cbe2c83d94"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startDebug</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10startDebugEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1874,6 +1910,11 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore24currentlyRemoteDebuggingE">
+<span id="_CPPv3N10CutterCore24currentlyRemoteDebuggingE"></span><span id="_CPPv2N10CutterCore24currentlyRemoteDebuggingE"></span><span id="CutterCore::currentlyRemoteDebugging__b"></span><span class="target" id="classCutterCore_1a485cb8051e948b6ccd1b0eabf7534a83"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentlyRemoteDebugging</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N10CutterCore24currentlyRemoteDebuggingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore22currentlyAttachedToPIDE">
 <span id="_CPPv3N10CutterCore22currentlyAttachedToPIDE"></span><span id="_CPPv2N10CutterCore22currentlyAttachedToPIDE"></span><span id="CutterCore::currentlyAttachedToPID__i"></span><span class="target" id="classCutterCore_1aac35b9962ee324308a5fa70c2ac76210"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentlyAttachedToPID</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N10CutterCore22currentlyAttachedToPIDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -2123,6 +2164,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structAnalBaseClassDescription.html">AnalBaseClassDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAnalMethodDescription.html">AnalMethodDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structAnalVTableDescription.html">AnalVTableDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structArena.html">Arena</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBinClassBaseClassDescription.html">BinClassBaseClassDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBinClassDescription.html">BinClassDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBinClassFieldDescription.html">BinClassFieldDescription</a></li>
@@ -2130,6 +2172,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structBlockDescription.html">BlockDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBlockStatistics.html">BlockStatistics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBreakpointDescription.html">BreakpointDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structChunk.html">Chunk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommentDescription.html">CommentDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyLine.html">DisassemblyLine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structEntrypointDescription.html">EntrypointDescription</a></li>
