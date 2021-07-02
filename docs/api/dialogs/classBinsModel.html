@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>BinsModel &#8212; Cutter 2.0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/cutter.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BreakpointsDialog" href="classBreakpointsDialog.html" />
+    <link rel="prev" title="Base64EnDecodedWriteDialog" href="classBase64EnDecodedWriteDialog.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classBreakpointsDialog.html" title="BreakpointsDialog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classBase64EnDecodedWriteDialog.html" title="Base64EnDecodedWriteDialog"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.0.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../dialogslist.html" accesskey="U">Dialogs</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BinsModel</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="binsmodel">
+<h1>BinsModel<a class="headerlink" href="#binsmodel" title="Permalink to this headline">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv49BinsModel">
+<span id="_CPPv39BinsModel"></span><span id="_CPPv29BinsModel"></span><span id="BinsModel"></span><span class="target" id="classBinsModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BinsModel</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QAbstractTableModel</span></span><a class="headerlink" href="#_CPPv49BinsModel" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6ColumnE">
+<span id="_CPPv3N9BinsModel6ColumnE"></span><span id="_CPPv2N9BinsModel6ColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Column</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6ColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column10TypeColumnE">
+<span id="_CPPv3N9BinsModel6Column10TypeColumnE"></span><span id="_CPPv2N9BinsModel6Column10TypeColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a3696ebe7bc2196bea42eb956e6ad0a49"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TypeColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column10TypeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column12BinNumColumnE">
+<span id="_CPPv3N9BinsModel6Column12BinNumColumnE"></span><span id="_CPPv2N9BinsModel6Column12BinNumColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a697bf29455872a5a964626a3176b64b3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BinNumColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column12BinNumColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column8FdColumnE">
+<span id="_CPPv3N9BinsModel6Column8FdColumnE"></span><span id="_CPPv2N9BinsModel6Column8FdColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3aa77ab03d9384a46dff4c357c827cd032"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FdColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column8FdColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column8BkColumnE">
+<span id="_CPPv3N9BinsModel6Column8BkColumnE"></span><span id="_CPPv2N9BinsModel6Column8BkColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a1e40e7bc9f7a43c01fdff36c3d67ab17"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BkColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column8BkColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column11CountColumnE">
+<span id="_CPPv3N9BinsModel6Column11CountColumnE"></span><span id="_CPPv2N9BinsModel6Column11CountColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a426f6b6256a00c9c1e561393dbeb1fbc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CountColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column11CountColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column10SizeColumnE">
+<span id="_CPPv3N9BinsModel6Column10SizeColumnE"></span><span id="_CPPv2N9BinsModel6Column10SizeColumnE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a7b3965f74ab6c308451fe000f57854a0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SizeColumn</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column10SizeColumnE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6Column11ColumnCountE">
+<span id="_CPPv3N9BinsModel6Column11ColumnCountE"></span><span id="_CPPv2N9BinsModel6Column11ColumnCountE"></span><span class="target" id="classBinsModel_1a6436a092b68e53acf9572d1751d8bde3a4be79478c05996436c5fa6b24b8448cf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColumnCount</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6Column11ColumnCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel9BinsModelE3RVAP7QObject">
+<span id="_CPPv3N9BinsModel9BinsModelE3RVAP7QObject"></span><span id="_CPPv2N9BinsModel9BinsModelE3RVAP7QObject"></span><span id="BinsModel::BinsModel__RVA.QObjectP"></span><span class="target" id="classBinsModel_1a61cd13355f201c7b5dc267c1bebe7f7b"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BinsModel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arena_addr</span></span>, <span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9BinsModel9BinsModelE3RVAP7QObject" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6reloadEv">
+<span id="_CPPv3N9BinsModel6reloadEv"></span><span id="_CPPv2N9BinsModel6reloadEv"></span><span id="BinsModel::reload"></span><span class="target" id="classBinsModel_1a5182cf8d78e3c897f51ff1cf7a9f3b78"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9BinsModel6reloadEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9BinsModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK9BinsModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK9BinsModel8rowCountERK11QModelIndex"></span><span id="BinsModel::rowCount__QModelIndexCRC"></span><span class="target" id="classBinsModel_1a8211dbc5fb2304b345ef6afc8e7452a3"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rowCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK9BinsModel8rowCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9BinsModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK9BinsModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK9BinsModel11columnCountERK11QModelIndex"></span><span id="BinsModel::columnCount__QModelIndexCRC"></span><span class="target" id="classBinsModel_1a76a1b3b7970c1dd662b394e52f41b20a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">columnCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK9BinsModel11columnCountERK11QModelIndex" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel9clearDataEv">
+<span id="_CPPv3N9BinsModel9clearDataEv"></span><span id="_CPPv2N9BinsModel9clearDataEv"></span><span id="BinsModel::clearData"></span><span class="target" id="classBinsModel_1a0ccec835f592c80915d676fa921add2a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9BinsModel9clearDataEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9BinsModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK9BinsModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK9BinsModel4dataERK11QModelIndexi"></span><span id="BinsModel::data__QModelIndexCR.iC"></span><span class="target" id="classBinsModel_1ae23ee4048bc04723bbc68eefc7084f97"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK9BinsModel4dataERK11QModelIndexi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9BinsModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK9BinsModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK9BinsModel10headerDataEiN2Qt11OrientationEi"></span><span id="BinsModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classBinsModel_1a10ac6873cd4d6eb058706bc8160d2715"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">headerData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">section</span></span>, <span class="n"><span class="pre">Qt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Orientation</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">orientation</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK9BinsModel10headerDataEiN2Qt11OrientationEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel9getChunksEi">
+<span id="_CPPv3N9BinsModel9getChunksEi"></span><span id="_CPPv2N9BinsModel9getChunksEi"></span><span id="BinsModel::getChunks__i"></span><span class="target" id="classBinsModel_1a9b15160549e9424a591005721784b6e2"></span><span class="n"><span class="pre">RzList</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getChunks</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9BinsModel9getChunksEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel13getBinMessageEi">
+<span id="_CPPv3N9BinsModel13getBinMessageEi"></span><span id="_CPPv2N9BinsModel13getBinMessageEi"></span><span id="BinsModel::getBinMessage__i"></span><span class="target" id="classBinsModel_1a9b28e7da5b07990084c19e68e9c9aff7"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBinMessage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9BinsModel13getBinMessageEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel10arena_addrE">
+<span id="_CPPv3N9BinsModel10arena_addrE"></span><span id="_CPPv2N9BinsModel10arena_addrE"></span><span id="BinsModel::arena_addr__RVA"></span><span class="target" id="classBinsModel_1a232871088f47cb8fd4124692f17ea2e2"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arena_addr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9BinsModel10arena_addrE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9BinsModel6valuesE">
+<span id="_CPPv3N9BinsModel6valuesE"></span><span id="_CPPv2N9BinsModel6valuesE"></span><span id="BinsModel::values__QVector:RzHeapBinP:"></span><span class="target" id="classBinsModel_1a7689ab9da0fde1a387806ee35b74f7fc"></span><span class="n"><span class="pre">QVector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">RzHeapBin</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><a class="headerlink" href="#_CPPv4N9BinsModel6valuesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+        <p class="logo"><a href="https://cutter.re/">
+          <img class="logo" src="../../_static/cutter.ico" alt="Logo"/>
+        </a></p>
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../commonlist.html">Common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dialogslist.html">Dialogs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAboutDialog.html">AboutDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskDialog.html">AsyncTaskDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAttachProcDialog.html">AttachProcDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBase64EnDecodedWriteDialog.html">Base64EnDecodedWriteDialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BinsModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBreakpointsDialog.html">BreakpointsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommentsDialog.html">CommentsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDuplicateFromOffsetDialog.html">DuplicateFromOffsetDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditFunctionDialog.html">EditFunctionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditInstructionDialog.html">EditInstructionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditMethodDialog.html">EditMethodDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditStringDialog.html">EditStringDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classEditVariablesDialog.html">EditVariablesDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFlagDialog.html">FlagDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGlibcHeapBinsDialog.html">GlibcHeapBinsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGlibcHeapInfoDialog.html">GlibcHeapInfoDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHexdumpRangeDialog.html">HexdumpRangeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIncrementDecrementDialog.html">IncrementDecrementDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classInitialOptionsDialog.html">InitialOptionsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLayoutManager.html">LayoutManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkTypeDialog.html">LinkTypeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMapFileDialog.html">MapFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMultitypeFileSaveDialog.html">MultitypeFileSaveDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classNativeDebugDialog.html">NativeDebugDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classNewFileDialog.html">NewFileDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessBeingAnalysedProxyModel.html">ProcessBeingAnalysedProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessModel.html">ProcessModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProcessProxyModel.html">ProcessProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRemoteDebugDialog.html">RemoteDebugDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinPluginsDialog.html">RizinPluginsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinTaskDialog.html">RizinTaskDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSetToDataDialog.html">SetToDataDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTypesInteractionDialog.html">TypesInteractionDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classVersionInfoDialog.html">VersionInfoDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classWelcomeDialog.html">WelcomeDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classXrefModel.html">XrefModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classXrefsDialog.html">XrefsDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDbgBackend.html">DbgBackend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptionsDialog_1_1AnalysisCommands.html">InitialOptionsDialog::AnalysisCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMultitypeFileSaveDialog_1_1TypeDescription.html">MultitypeFileSaveDialog::TypeDescription</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+    
+
+  </body>
+</html>
