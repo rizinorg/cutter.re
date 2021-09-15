@@ -1,0 +1,4 @@
+AnalysisClassesModel::Attribute
+===============================
+
+.. doxygenstruct:: AnalysisClassesModel::Attribute

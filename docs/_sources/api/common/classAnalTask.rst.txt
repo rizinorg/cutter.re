@@ -1,4 +1,0 @@
-AnalTask
-========
-
-.. doxygenclass:: AnalTask

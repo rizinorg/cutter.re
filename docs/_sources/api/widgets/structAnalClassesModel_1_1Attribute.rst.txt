@@ -1,4 +1,0 @@
-AnalClassesModel::Attribute
-===========================
-
-.. doxygenstruct:: AnalClassesModel::Attribute

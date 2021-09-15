@@ -1,4 +1,0 @@
-AnalMethodDescription
-=====================
-
-.. doxygenstruct:: AnalMethodDescription
