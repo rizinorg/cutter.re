@@ -1705,41 +1705,6 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore8addTypesEPKc">
-<span id="_CPPv3N10CutterCore8addTypesEPKc"></span><span id="_CPPv2N10CutterCore8addTypesEPKc"></span><span id="CutterCore::addTypes__cCP"></span><span class="target" id="classCutterCore_1a0fb4a0de7478f79f5bd087b6de4bdbfb"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTypes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8addTypesEPKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Adds new types It first uses the rz_parse_c_string() function from Rizin API to parse the supplied C file (in the form of a string). If there were errors, they are displayed. If there were no errors, it uses sdb_query_lines() function from Rizin API to save the parsed types returned by rz_parse_c_string() </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>str</strong> – Contains the definition of the data types </p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>returns an empty QString if there was no error, else returns the error </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore8addTypesERK7QString">
-<span id="_CPPv3N10CutterCore8addTypesERK7QString"></span><span id="_CPPv2N10CutterCore8addTypesERK7QString"></span><span id="CutterCore::addTypes__QStringCR"></span><span class="target" id="classCutterCore_1a599b53d5474d2ec18b2370c5e84b6e4c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTypes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8addTypesERK7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10deleteTypeEPKc">
-<span id="_CPPv3N10CutterCore10deleteTypeEPKc"></span><span id="_CPPv2N10CutterCore10deleteTypeEPKc"></span><span id="CutterCore::deleteType__cCP"></span><span class="target" id="classCutterCore_1a19ab85ac8a31dd4fb834f2daa9ef15b0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">typeName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10deleteTypeEPKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Remove a type. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>typeName</strong> – Name of the type to remove </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10deleteTypeE7QString">
-<span id="_CPPv3N10CutterCore10deleteTypeE7QString"></span><span id="_CPPv2N10CutterCore10deleteTypeE7QString"></span><span id="CutterCore::deleteType__QString"></span><span class="target" id="classCutterCore_1aaf534b66f0b74d56d4ad6f3e603acd3b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteType</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">typeName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10deleteTypeE7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore15isAddressMappedE3RVA">
 <span id="_CPPv3N10CutterCore15isAddressMappedE3RVA"></span><span id="_CPPv2N10CutterCore15isAddressMappedE3RVA"></span><span id="CutterCore::isAddressMapped__RVA"></span><span class="target" id="classCutterCore_1a634f352cbd4ce8e9e03f9fe0117aa58d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isAddressMapped</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore15isAddressMappedE3RVA" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Checks if the given address is mapped to a region. </p>
