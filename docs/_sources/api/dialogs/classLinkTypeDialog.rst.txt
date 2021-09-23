@@ -1,4 +1,0 @@
-LinkTypeDialog
-==============
-
-.. doxygenclass:: LinkTypeDialog
