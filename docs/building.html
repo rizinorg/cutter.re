@@ -104,9 +104,18 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
+<p>Depending on your configuration you’ll might also need the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libkf5syntaxhighlighting</span><span class="o">-</span><span class="n">dev</span>
+<span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgraphviz</span><span class="o">-</span><span class="n">dev</span>
+<span class="c1"># when building with CUTTER_ENABLE_PYTHON_BINDINGS</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libshiboken2</span><span class="o">-</span><span class="n">dev</span> <span class="n">libpyside2</span><span class="o">-</span><span class="n">dev</span>  <span class="n">qtdeclarative5</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For Ubuntu 18.04 and lower, <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
+<p>For Ubuntu 20.04 and lower (or in any case you get an error <code class="docutils literal notranslate"><span class="pre">Meson</span> <span class="pre">version</span> <span class="pre">is</span> <span class="pre">x</span> <span class="pre">but</span> <span class="pre">project</span> <span class="pre">requires</span> <span class="pre">&gt;=y</span></code>), <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
 </div>
 <p>On Arch-based Linux distributions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
