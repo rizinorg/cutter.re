@@ -64,7 +64,7 @@
 </dd>
 </dl>
 </li>
-<li><p>If there is a desire to keep working in the master branch, create branch for the release and do all the following work there.</p></li>
+<li><p>Merge the current state of dev into stable. This can happen even earlier in order to feature-freeze the release while keeping development on dev alive. The rizin submodule on stable should point to a commit of stable in rizin and dev to a commit in dev.</p></li>
 <li><p>Lock rzghidra and rzdec versions downloaded by packaging scripts. Specify a tag or commit hash.</p></li>
 <li><dl class="simple">
 <dt>Update version</dt><dd><ol class="arabic simple">
@@ -89,11 +89,11 @@
 <li><p>Create a GitHub release, mark it as pre-release save draft, set the tag to v1.11.0-rc1</p></li>
 <li><p>Wait for packages to build</p></li>
 <li><p>On all operating systems do the <a class="reference internal" href="#basic-testing-procedure">Basic testing procedure</a> to ensure nothing badly broken.</p></li>
-<li><p>If any major problems are found, open an issue and fix them. If a release branch is used fix them in master and cherry pick into release branch. If the amount of changes is sufficiently large repeat from step 3. increasing rc number by one.</p></li>
+<li><p>If any major problems are found, open an issue and fix them in dev and cherry pick into release branch. If the amount of changes is sufficiently large repeat from step 3. increasing rc number by one.</p></li>
 <li><p>Update version to 1.11.0</p></li>
 <li><p>Create tag</p></li>
 <li><p>Create release
-* Fill the release notes in the Release description. Preparing release notes can begin earlier. Compare current master or release branch against previous release to find all the changes. Choose the most important ones. Don’t duplicate the commit log. Release notes should be a summary for people who don’t want to read whole commit log. Group related changes together under titles such as “New features”, “Bug Fixes”, “Decompiler”, “Rizin” and similar.</p></li>
+* Fill the release notes in the Release description. Preparing release notes can begin earlier. Compare current dev branch against previous release to find all the changes. Choose the most important ones. Don’t duplicate the commit log. Release notes should be a summary for people who don’t want to read whole commit log. Group related changes together under titles such as “New features”, “Bug Fixes”, “Decompiler”, “Rizin” and similar.</p></li>
 <li><p>Prepare announcement tweets and messages to send in the Telegram group, reddit, and others.</p></li>
 <li><p>Close milestone if there was one</p></li>
 </ol>
@@ -101,8 +101,7 @@
 <h2>Bugfix Release<a class="headerlink" href="#bugfix-release" title="Permalink to this headline">¶</a></h2>
 <p>The process for bugfix release is similar no normal release procedure described above with some differences.</p>
 <ul class="simple">
-<li><p>Create the branch from the last tag instead of master or reuse the branch from x.y.0 release if it was already created.</p></li>
-<li><p>Cherry pick required bugfixes from master into the branch.</p></li>
+<li><p>Cherry pick required bugfixes from dev into the stable.</p></li>
 <li><p>Increase the third version number x.y.n into x.y.(n+1) .</p></li>
 </ul>
 </section>
