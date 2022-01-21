@@ -1,4 +1,0 @@
-ZignatureDescription
-====================
-
-.. doxygenstruct:: ZignatureDescription

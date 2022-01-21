@@ -1,4 +1,0 @@
-ZignaturesModel
-===============
-
-.. doxygenclass:: ZignaturesModel
