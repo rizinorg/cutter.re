@@ -82,10 +82,10 @@
 <dd><p>Serialize dock properties for saving as part of layout. </p>
 <p>Override this function for saving dock specific view properties. Use in situations where it makes sense to have different properties for multiple instances of widget. Don’t use for options that are more suitable as global settings and should be applied equally to all widgets or all widgets of this kind.</p>
 <p>Keep synchrononized with deserializeViewProperties. When modifying add project upgrade step in SettingsUpgrade.cpp if necessary.</p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget_1a2f7ff308ea942f30049720f0e2836a67"><span class="std std-ref">CutterDockWidget::deserializeViewProperties</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget_1a2f7ff308ea942f30049720f0e2836a67"><span class="std std-ref">CutterDockWidget::deserializeViewProperties</span></a> </p>
+</div>
 </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -99,10 +99,10 @@
 <span id="_CPPv3N21AddressableDockWidget25deserializeViewPropertiesERK11QVariantMap"></span><span id="_CPPv2N21AddressableDockWidget25deserializeViewPropertiesERK11QVariantMap"></span><span id="AddressableDockWidget::deserializeViewProperties__QVariantMapCR"></span><span class="target" id="classAddressableDockWidget_1a762fe9c0f4d23cfbf7097f28150cba8c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deserializeViewProperties</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QVariantMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">properties</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N21AddressableDockWidget25deserializeViewPropertiesERK11QVariantMap" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deserialization half of serialize view properties. </p>
 <p>When a property is not specified in property map dock should reset it to default value instead of leaving it umodified. Empty map should reset all properties controlled by serializeViewProprties/deserializeViewProperties mechanism.</p>
-<p><dl class="simple">
-<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget_1a18f9fe076b3211e02e84130f5795488b"><span class="std std-ref">CutterDockWidget::serializeViewProprties</span></a> </p>
-</dd>
-</dl>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="classCutterDockWidget.html#classCutterDockWidget_1a18f9fe076b3211e02e84130f5795488b"><span class="std std-ref">CutterDockWidget::serializeViewProprties</span></a> </p>
+</div>
 </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

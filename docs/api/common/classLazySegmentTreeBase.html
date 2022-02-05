@@ -61,18 +61,15 @@
 <dd><p>Tree that supports lazily applying an operation to range. </p>
 <p>Each inner node has a promise value describing an operation that needs to be applied to corresponding subtree.</p>
 <p>Child classes are expected to implement to pushDown(size_t nodePosition) method. Which applies the applies the operation stored in <em>promise</em> for nodePosition to the direct children nodes.</p>
-<p><dl class="field-list simple">
-<dt class="field-odd">tparam NodeType</dt>
-<dd class="field-odd"><p>type of tree nodes </p>
-</dd>
-<dt class="field-even">tparam PromiseType</dt>
-<dd class="field-even"><p>type describing operation that needs to be applied to subtree </p>
-</dd>
-<dt class="field-odd">tparam FinalType</dt>
-<dd class="field-odd"><p>child class type for CRTP. See <a class="reference internal" href="classSegmentTreeBase.html#classSegmentTreeBase"><span class="std std-ref">SegmentTreeBase</span></a> </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NodeType</strong> – type of tree nodes </p></li>
+<li><p><strong>PromiseType</strong> – type describing operation that needs to be applied to subtree </p></li>
+<li><p><strong>FinalType</strong> – child class type for CRTP. See <a class="reference internal" href="classSegmentTreeBase.html#classSegmentTreeBase"><span class="std std-ref">SegmentTreeBase</span></a> </p></li>
+</ul>
 </dd>
 </dl>
-</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
