@@ -59,15 +59,15 @@
 <dt class="sig sig-object cpp" id="_CPPv421GenericRizinGraphView">
 <span id="_CPPv321GenericRizinGraphView"></span><span id="_CPPv221GenericRizinGraphView"></span><span id="GenericRizinGraphView"></span><span class="target" id="classGenericRizinGraphView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericRizinGraphView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classSimpleTextGraphView.html#_CPPv419SimpleTextGraphView" title="SimpleTextGraphView"><span class="n"><span class="pre">SimpleTextGraphView</span></span></a><a class="headerlink" href="#_CPPv421GenericRizinGraphView" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Generic graph view for rizin graphs. Not all rizin graph commands output the same kind of json. Only those that have following format. </p>
-<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="p">[</span>
-     <span class="p">{</span>
-         <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-         <span class="s2">&quot;tittle&quot;</span><span class="p">:</span> <span class="s2">&quot;node_0_tittle&quot;</span><span class="p">,</span>
-         <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="o">.</span>
-         <span class="s2">&quot;out_nodes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-     <span class="p">},</span>
-     <span class="o">...</span>
-<span class="p">]}</span>
+<p><div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{ &quot;nodes&quot;: [
+     {
+         &quot;id&quot;: 0,
+         &quot;tittle&quot;: &quot;node_0_tittle&quot;,
+         &quot;body&quot;: &quot;&quot;.
+         &quot;out_nodes&quot;: [1, 2, 3]
+     },
+     ...
+]}
 </pre></div>
 </div>
  Id don’t have to be sequential. Simple text label is displayed containing concatenation of label and body. No rizin builtin graph uses both. Duplicate edges and edges with target id not present in the list of nodes are removed. </p>
