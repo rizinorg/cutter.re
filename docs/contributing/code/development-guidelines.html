@@ -89,7 +89,7 @@ Make sure to carefully sanitize user-controlled variables that are passed to the
 <p>Generally, if one needs to retrieve information from a Rizin command, it
 is preferred to use the JSON API.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QJsonArray</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">).</span><span class="n">array</span><span class="p">();</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CutterJson</span> <span class="n">array</span> <span class="o">=</span> <span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
