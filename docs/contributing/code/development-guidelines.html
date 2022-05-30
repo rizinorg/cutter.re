@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Cutter Development Guidelines &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,15 +55,15 @@
           <div class="body" role="main">
             
   <section id="cutter-development-guidelines">
-<h1>Cutter Development Guidelines<a class="headerlink" href="#cutter-development-guidelines" title="Permalink to this headline">¶</a></h1>
+<h1>Cutter Development Guidelines<a class="headerlink" href="#cutter-development-guidelines" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>New to Cutter development? Check out our <a class="reference internal" href="getting-started.html"><span class="doc">tutorial for new developers</span></a>.</p>
 </div>
 <section id="common-usage">
-<h2>Common Usage<a class="headerlink" href="#common-usage" title="Permalink to this headline">¶</a></h2>
+<h2>Common Usage<a class="headerlink" href="#common-usage" title="Permalink to this heading">¶</a></h2>
 <section id="cuttercore-class">
-<h3>CutterCore Class<a class="headerlink" href="#cuttercore-class" title="Permalink to this headline">¶</a></h3>
+<h3>CutterCore Class<a class="headerlink" href="#cuttercore-class" title="Permalink to this heading">¶</a></h3>
 <p>This is the main class where every link with Rizin is made. It is <em>unique</em>
 across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
 <p>Example:</p>
@@ -71,7 +72,7 @@ across the whole process. To access it, simply call <code class="docutils litera
 </div>
 </section>
 <section id="calling-a-rizin-command">
-<h3>Calling a Rizin Command<a class="headerlink" href="#calling-a-rizin-command" title="Permalink to this headline">¶</a></h3>
+<h3>Calling a Rizin Command<a class="headerlink" href="#calling-a-rizin-command" title="Permalink to this heading">¶</a></h3>
 <p>There are multiple ways to call a Rizin command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdj(&lt;command&gt;)</span></code> - To be used with json commands like <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
@@ -94,7 +95,7 @@ is preferred to use the JSON API.</p>
 </div>
 </section>
 <section id="seek-the-current-file">
-<h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Permalink to this headline">¶</a></h3>
+<h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Permalink to this heading">¶</a></h3>
 <p>To modify Rizin seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
 is important because it will emit a
 <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
@@ -109,14 +110,14 @@ is important because it will emit a
 </div>
 </section>
 <section id="creating-a-widget">
-<h3>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this headline">¶</a></h3>
+<h3>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Permalink to this heading">¶</a></h3>
 <p>Make sure to connect the <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal
 so your widget refreshes its output when Rizin seek is modified
 (switching to another function, etc.).</p>
 </section>
 </section>
 <section id="coding-style">
-<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this headline">¶</a></h2>
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Permalink to this heading">¶</a></h2>
 <p>In general, we follow a slightly customized version of <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a>
 to format the code. Before sending a pull request, you will need to use <a href="#id1"><span class="problematic" id="id2">`clang-format`&lt;https://clang.llvm.org/docs/ClangFormat.html&gt;`__</span></a> (version 8 or newer)
 to format the code. The command line for formatting the code according
@@ -149,7 +150,7 @@ to the style is:</p>
 </pre></div>
 </div>
 <section id="includes">
-<h3>Includes<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h3>
+<h3>Includes<a class="headerlink" href="#includes" title="Permalink to this heading">¶</a></h3>
 <p>Strive to include only <strong>required</strong> definitions inside header files.
 This will avoid triggering additional unnecessary compilations.</p>
 <p>If you only need to know that a class exists but don’t need the prototype,
@@ -173,7 +174,7 @@ Finally, include the standard C++ headers you need.</p>
 <p>Includes must be sorted by alphabetical order.</p>
 </section>
 <section id="docstrings">
-<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h3>
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this heading">¶</a></h3>
 <p>Our API reference is generated using Doxygen, so when it comes to
 function documentation, please use the following format:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
@@ -184,7 +185,7 @@ function documentation, please use the following format:</p>
 </div>
 </section>
 <section id="loops">
-<h3>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h3>
+<h3>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">¶</a></h3>
 <p>We use the C++11 foreach loop style, which means any “foreach” loop should
 look like:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">QJsonValue</span> <span class="nl">value</span> <span class="p">:</span> <span class="n">importsArray</span><span class="p">)</span> <span class="p">{</span>
@@ -194,7 +195,7 @@ look like:</p>
 </div>
 </section>
 <section id="nullptr">
-<h3>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this headline">¶</a></h3>
+<h3>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this heading">¶</a></h3>
 <p>Please do not use <code class="docutils literal notranslate"><span class="pre">0</span></code> nor <code class="docutils literal notranslate"><span class="pre">Q_NULLPTR</span></code>, only use <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
 <p>Example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span> <span class="o">*</span><span class="n">object</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
@@ -202,7 +203,7 @@ look like:</p>
 </div>
 </section>
 <section id="connecting-qt-signals">
-<h3>Connecting Qt Signals<a class="headerlink" href="#connecting-qt-signals" title="Permalink to this headline">¶</a></h3>
+<h3>Connecting Qt Signals<a class="headerlink" href="#connecting-qt-signals" title="Permalink to this heading">¶</a></h3>
 <p>Use one of the following methods for connecting signals to slots:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// typically you will make connection in the constructor to a member of current class</span>
 <span class="n">connect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">button1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span>
@@ -232,13 +233,13 @@ functions. Other approaches for connecting signals can silently break at runtime
 </section>
 </section>
 <section id="general-coding-advices">
-<h2>General Coding Advices<a class="headerlink" href="#general-coding-advices" title="Permalink to this headline">¶</a></h2>
+<h2>General Coding Advices<a class="headerlink" href="#general-coding-advices" title="Permalink to this heading">¶</a></h2>
 <section id="functions-documentation">
-<h3>Functions Documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this headline">¶</a></h3>
+<h3>Functions Documentation<a class="headerlink" href="#functions-documentation" title="Permalink to this heading">¶</a></h3>
 <p>You can find the class documentation in the API Reference menu item.</p>
 </section>
 <section id="updating-the-git-submodules">
-<h3>Updating the Git Submodules<a class="headerlink" href="#updating-the-git-submodules" title="Permalink to this headline">¶</a></h3>
+<h3>Updating the Git Submodules<a class="headerlink" href="#updating-the-git-submodules" title="Permalink to this heading">¶</a></h3>
 <p>Git submodules play a major part in Cutter. This, because Cutter is powered
 by Rizin, its parent project, and it tries to stay up-to-date with its
 recent version, which allows us to implement new features, and enjoy bug
@@ -267,7 +268,7 @@ git commit -m <span class="s2">&quot;Update rizin submodule&quot;</span>
 </div>
 </section>
 <section id="useful-resources-qt-development">
-<h3>Useful Resources (Qt Development)<a class="headerlink" href="#useful-resources-qt-development" title="Permalink to this headline">¶</a></h3>
+<h3>Useful Resources (Qt Development)<a class="headerlink" href="#useful-resources-qt-development" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">Signals &amp; Slots</a></p></li>
 <li><p><a class="reference external" href="https://doc.qt.io/qt-5/model-view-programming.html">Model/View Programming</a> - read this if you are going to work with a list or table-like widgets</p></li>
@@ -320,7 +321,7 @@ git commit -m <span class="s2">&quot;Update rizin submodule&quot;</span>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -330,7 +331,7 @@ git commit -m <span class="s2">&quot;Update rizin submodule&quot;</span>
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 

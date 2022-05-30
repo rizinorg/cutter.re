@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ColorThemeWorker &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,7 +55,7 @@
           <div class="body" role="main">
             
   <section id="colorthemeworker">
-<h1>ColorThemeWorker<a class="headerlink" href="#colorthemeworker" title="Permalink to this headline">¶</a></h1>
+<h1>ColorThemeWorker<a class="headerlink" href="#colorthemeworker" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv416ColorThemeWorker">
 <span id="_CPPv316ColorThemeWorker"></span><span id="_CPPv216ColorThemeWorker"></span><span id="ColorThemeWorker"></span><span class="target" id="classColorThemeWorker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorThemeWorker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv416ColorThemeWorker" title="Permalink to this definition">¶</a><br /></dt>
@@ -79,13 +80,13 @@
 <span id="_CPPv3NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4copyERK7QStringRK7QString"></span><span id="ColorThemeWorker::copy__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a12323c343cf3010702fede46260814d4"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">srcThemeName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">copyThemeName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4copyERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Copies <em>srcThemeName</em> with name <em>copyThemeName</em>. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>srcThemeName</strong> – Name of theme to be copied. </p></li>
 <li><p><strong>copyThemeName</strong> – Name of copy. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>“” on success or error message. </p>
 </dd>
 </dl>
@@ -96,13 +97,13 @@
 <span id="_CPPv3NK16ColorThemeWorker4saveERK5ThemeRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker4saveERK5ThemeRK7QString"></span><span id="ColorThemeWorker::save__ThemeCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1af1075a7b28c6d9df82a56fb04dfb7ac1"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">save</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N16ColorThemeWorker5ThemeE" title="ColorThemeWorker::Theme"><span class="n"><span class="pre">Theme</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">theme</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">themeName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker4saveERK5ThemeRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Saves <em>theme</em> as <em>themeName</em> theme. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>theme</strong> – Theme to be saved. </p></li>
 <li><p><strong>themeName</strong> – Name of theme to save. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>“” on success or error message. </p>
 </dd>
 </dl>
@@ -113,7 +114,7 @@
 <span id="_CPPv3NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker13isCustomThemeERK7QString"></span><span id="ColorThemeWorker::isCustomTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ad489ecafe474d39bd7c6f28e82393861"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isCustomTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">themeName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker13isCustomThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not <em>themeName</em> theme is custom (created by user or imported) or not. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>themeName</strong> – Name of theme to check. </p>
 </dd>
 </dl>
@@ -124,7 +125,7 @@
 <span id="_CPPv3NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker12isThemeExistERK7QString"></span><span id="ColorThemeWorker::isThemeExist__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aee3987ac188b5bbef54be0811619e01a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isThemeExist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker12isThemeExistERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not <em>name</em> theme already exists. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true if theme exists, false - if not. </p>
 </dd>
 </dl>
@@ -135,7 +136,7 @@
 <span id="_CPPv3NK16ColorThemeWorker8getThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker8getThemeERK7QString"></span><span id="ColorThemeWorker::getTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1a5316bb2641e414ae01cbd7155f567b55"></span><a class="reference internal" href="#_CPPv4N16ColorThemeWorker5ThemeE" title="ColorThemeWorker::Theme"><span class="n"><span class="pre">Theme</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">themeName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker8getThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns theme as QHash where key is option name and value is QColor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>themeName</strong> – Theme to get. </p>
 </dd>
 </dl>
@@ -146,10 +147,10 @@
 <span id="_CPPv3NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11deleteThemeERK7QString"></span><span id="ColorThemeWorker::deleteTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1ab33bba9d1b45c9a9a57be9c339d08c30"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">themeName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11deleteThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deletes theme named <em>themeName</em>. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>themeName</strong> – Name of theme to be removed. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>“” on success or error message. </p>
 </dd>
 </dl>
@@ -160,7 +161,7 @@
 <span id="_CPPv3NK16ColorThemeWorker11importThemeERK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11importThemeERK7QString"></span><span id="ColorThemeWorker::importTheme__QStringCRC"></span><span class="target" id="classColorThemeWorker_1aa3e3e0d79b706e9d57b08a837c4f266a"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">importTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11importThemeERK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Imports theme from <em>file</em>. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>“” on success or error message. </p>
 </dd>
 </dl>
@@ -171,7 +172,7 @@
 <span id="_CPPv3NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="_CPPv2NK16ColorThemeWorker11renameThemeERK7QStringRK7QString"></span><span id="ColorThemeWorker::renameTheme__QStringCR.QStringCRC"></span><span class="target" id="classColorThemeWorker_1a243c35e165fbd7a60b5fd18378e0e26d"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renameTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">themeName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11renameThemeERK7QStringRK7QString" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Renames theme from <em>themeName</em> to <em>newName</em>. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>“” on success or error message. </p>
 </dd>
 </dl>
@@ -182,13 +183,13 @@
 <span id="_CPPv3NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="_CPPv2NK16ColorThemeWorker11isFileThemeERK7QStringPb"></span><span id="ColorThemeWorker::isFileTheme__QStringCR.bPC"></span><span class="target" id="classColorThemeWorker_1af7614224ba6391d5d38e7ca24478a8a1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFileTheme</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filePath</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ok</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker11isFileThemeERK7QStringPb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns whether or not file at <em>filePath</em> is a color theme. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filePath</strong> – Path to file to check. </p></li>
 <li><p><strong>ok</strong> – Output parameter. Indicates wheter or not check was successful. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>true if given file is color theme and ok == true, otherwise returns false. </p>
 </dd>
 </dl>
@@ -349,7 +350,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -359,7 +360,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 

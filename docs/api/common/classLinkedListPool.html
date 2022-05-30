@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>LinkedListPool &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,7 +55,7 @@
           <div class="body" role="main">
             
   <section id="linkedlistpool">
-<h1>LinkedListPool<a class="headerlink" href="#linkedlistpool" title="Permalink to this headline">¶</a></h1>
+<h1>LinkedListPool<a class="headerlink" href="#linkedlistpool" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I0E14LinkedListPool">
 <span id="_CPPv3I0E14LinkedListPool"></span><span id="_CPPv2I0E14LinkedListPool"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classLinkedListPool"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LinkedListPool</span></span></span><a class="headerlink" href="#_CPPv4I0E14LinkedListPool" title="Permalink to this definition">¶</a><br /></dt>
@@ -68,7 +69,7 @@
 <span id="_CPPv3N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="_CPPv2N14LinkedListPool14LinkedListPoolE6size_t"></span><span id="LinkedListPool::LinkedListPool__s"></span><span class="target" id="classLinkedListPool_1a74ea7039c3e5831f39e426de3a0bb63d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LinkedListPool</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">initialCapacity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool14LinkedListPoolE6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a linked list pool with capacity for <em>initialCapacity</em> list items. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>initialCapacity</strong> – number of elements to preallocate. </p>
 </dd>
 </dl>
@@ -80,10 +81,10 @@
 <dd><p>Create a list containing single item. </p>
 <p>Does not invalidate any iterators, but may cause item relocation when initialCapacity is exceeded. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>value</strong> – value of element that will be inserted in the created list </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> containing single value <em>value</em> . </p>
 </dd>
 </dl>
@@ -95,13 +96,13 @@
 <dd><p>Split list and return second half. </p>
 <p>After performing the operation, list passed as argument and return list point to the same items. Modifying them will affect both lists.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>list</strong> – The list that needs to be split. </p></li>
 <li><p><strong>head</strong> – Iterator to the first item in new list. Needs to be within <em>list</em> . </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns suffix of <em>list</em>. </p>
 </dd>
 </dl>
@@ -112,13 +113,13 @@
 <span id="_CPPv3N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="_CPPv2N14LinkedListPool9splitHeadERK4ListRK12ListIterator"></span><span id="LinkedListPool::splitHead__ListCR.ListIteratorCR"></span><span class="target" id="classLinkedListPool_1abb92cf76bde99e9d54b60740e2eb8edb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">splitHead</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator"><span class="n"><span class="pre">ListIterator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">end</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool9splitHeadERK4ListRK12ListIterator" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Split list and return first half. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>list</strong> – The list that needs to be split. </p></li>
 <li><p><strong>end</strong> – Iterator to the first item that should not be included in returned list. Needs to be within <em>list</em> . </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns prefix of <em>list</em>. </p>
 </dd>
 </dl>
@@ -129,10 +130,10 @@
 <span id="_CPPv3N14LinkedListPool4headERK4List"></span><span id="_CPPv2N14LinkedListPool4headERK4List"></span><span id="LinkedListPool::head__ListCR"></span><span class="target" id="classLinkedListPool_1a8d73a4d2214eeefc486f15e5da4c1fd5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="LinkedListPool::ListIterator"><span class="n"><span class="pre">ListIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">head</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N14LinkedListPool4ListE" title="LinkedListPool::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14LinkedListPool4headERK4List" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create list iterator from list. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>list</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Iterator pointing to the first item in the list. </p>
 </dd>
 </dl>
@@ -355,7 +356,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -365,7 +366,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 

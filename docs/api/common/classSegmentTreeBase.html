@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>SegmentTreeBase &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,14 +55,14 @@
           <div class="body" role="main">
             
   <section id="segmenttreebase">
-<h1>SegmentTreeBase<a class="headerlink" href="#segmenttreebase" title="Permalink to this headline">¶</a></h1>
+<h1>SegmentTreeBase<a class="headerlink" href="#segmenttreebase" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I00E15SegmentTreeBase">
 <span id="_CPPv3I00E15SegmentTreeBase"></span><span id="_CPPv2I00E15SegmentTreeBase"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeTypeT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FinalType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classSegmentTreeBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SegmentTreeBase</span></span></span><a class="headerlink" href="#_CPPv4I00E15SegmentTreeBase" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Not really a segment tree for storing segments as referred in academic literature. Can be considered a full, almost perfect, augmented binary tree. In the context of competitive programming often called segment tree.</p>
 <p>Child classes are expected to implement updateFromChildren(NodeType&amp;parent, NodeType&amp; left, NodeType&amp; right) method which calculates inner node values from children nodes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Template Parameters</dt>
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>NodeTypeT</strong> – type of each tree element </p></li>
 <li><p><strong>FinalType</strong> – final child class used for curiously recurring template pattern </p></li>
@@ -88,7 +89,7 @@
 <span id="_CPPv3N15SegmentTreeBase15SegmentTreeBaseE6size_t"></span><span id="_CPPv2N15SegmentTreeBase15SegmentTreeBaseE6size_t"></span><span id="SegmentTreeBase::SegmentTreeBase__s"></span><span class="target" id="classSegmentTreeBase_1adc521e063bb1366a93b9af5505f6b4b3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SegmentTreeBase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15SegmentTreeBase15SegmentTreeBaseE6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create tree with <em>size</em> leaves. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>size</strong> – number of leaves in the tree </p>
 </dd>
 </dl>
@@ -100,7 +101,7 @@
 <dd><p>Create a tree with given size and initial value. </p>
 <p>Inner nodes are calculated from leaves. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>size</strong> – number of leaves </p></li>
 <li><p><strong>initialValue</strong> – initial leave value </p></li>
@@ -220,7 +221,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -230,7 +231,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 

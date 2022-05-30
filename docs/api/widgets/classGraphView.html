@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>GraphView &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,7 +55,7 @@
           <div class="body" role="main">
             
   <section id="graphview">
-<h1>GraphView<a class="headerlink" href="#graphview" title="Permalink to this headline">¶</a></h1>
+<h1>GraphView<a class="headerlink" href="#graphview" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv49GraphView">
 <span id="_CPPv39GraphView"></span><span id="_CPPv29GraphView"></span><span id="GraphView"></span><span class="target" id="classGraphView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QAbstractScrollArea</span></span><a class="headerlink" href="#_CPPv49GraphView" title="Permalink to this definition">¶</a><br /></dt>
@@ -155,7 +156,7 @@
 <span id="_CPPv3N9GraphView13showRectangleERK5QRectb"></span><span id="_CPPv2N9GraphView13showRectangleERK5QRectb"></span><span id="GraphView::showRectangle__QRectCR.b"></span><span class="target" id="classGraphView_1a12d59d78b9036805670123569c6e7214"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showRectangle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QRect</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rect</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">anywhere</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView13showRectangleERK5QRectb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Move view so that area is visible. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>rect</strong> – Rectangle to show </p></li>
 <li><p><strong>anywhere</strong> – - set to true for minimizing movement </p></li>
@@ -169,10 +170,10 @@
 <span id="_CPPv3N9GraphView18getBlockContainingE6QPoint"></span><span id="_CPPv2N9GraphView18getBlockContainingE6QPoint"></span><span id="GraphView::getBlockContaining__QPoint"></span><span class="target" id="classGraphView_1ab32eb403380ef266756f50cef2a30744"></span><a class="reference internal" href="#_CPPv49GraphView" title="GraphView"><span class="n"><span class="pre">GraphView</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9GraphView10GraphBlockE" title="GraphView::GraphBlock"><span class="n"><span class="pre">GraphBlock</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getBlockContaining</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QPoint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView18getBlockContainingE6QPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get block containing specified point logical coordinates. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>p</strong> – positionin graph logical coordinates </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Block or nullptr if position is outside all blocks. </p>
 </dd>
 </dl>
@@ -284,7 +285,7 @@
 <span id="_CPPv3N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="_CPPv2N9GraphView12cleanupEdgesERN11GraphLayout5GraphE"></span><span id="GraphView::cleanupEdges__GraphLayout::GraphR"></span><span class="target" id="classGraphView_1a30c3ee1c48bc858489b14e69ebef97e8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cleanupEdges</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classGraphLayout.html#_CPPv411GraphLayout" title="GraphLayout"><span class="n"><span class="pre">GraphLayout</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classGraphLayout.html#_CPPv4N11GraphLayout5GraphE" title="GraphLayout::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">graph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12cleanupEdgesERN11GraphLayout5GraphE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Remove duplicate edges and edges without target in graph. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>graph</strong> – </p>
 </dd>
 </dl>
@@ -526,7 +527,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -536,7 +537,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 

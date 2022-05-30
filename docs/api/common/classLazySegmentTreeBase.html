@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>LazySegmentTreeBase &#8212; Cutter 2.0.5 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -14,6 +14,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/cutter.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -54,7 +55,7 @@
           <div class="body" role="main">
             
   <section id="lazysegmenttreebase">
-<h1>LazySegmentTreeBase<a class="headerlink" href="#lazysegmenttreebase" title="Permalink to this headline">¶</a></h1>
+<h1>LazySegmentTreeBase<a class="headerlink" href="#lazysegmenttreebase" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I000E19LazySegmentTreeBase">
 <span id="_CPPv3I000E19LazySegmentTreeBase"></span><span id="_CPPv2I000E19LazySegmentTreeBase"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PromiseType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FinalType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classLazySegmentTreeBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LazySegmentTreeBase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classSegmentTreeBase.html#_CPPv4I00E15SegmentTreeBase" title="SegmentTreeBase"><span class="n"><span class="pre">SegmentTreeBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::NodeType"><span class="n"><span class="pre">NodeType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::FinalType"><span class="n"><span class="pre">FinalType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I000E19LazySegmentTreeBase" title="Permalink to this definition">¶</a><br /></dt>
@@ -62,7 +63,7 @@
 <p>Each inner node has a promise value describing an operation that needs to be applied to corresponding subtree.</p>
 <p>Child classes are expected to implement to pushDown(size_t nodePosition) method. Which applies the applies the operation stored in <em>promise</em> for nodePosition to the direct children nodes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Template Parameters</dt>
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>NodeType</strong> – type of tree nodes </p></li>
 <li><p><strong>PromiseType</strong> – type describing operation that needs to be applied to subtree </p></li>
@@ -76,7 +77,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType">
 <span id="_CPPv3N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType"></span><span id="_CPPv2N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType"></span><span id="LazySegmentTreeBase::LazySegmentTreeBase__s.PromiseTypeCR"></span><span class="target" id="classLazySegmentTreeBase_1a1551fd5ec31058585d14cbd575eedee9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LazySegmentTreeBase</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::PromiseType"><span class="n"><span class="pre">PromiseType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">neutralPromise</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19LazySegmentTreeBase19LazySegmentTreeBaseE6size_tRK11PromiseType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>size</strong> – Number of tree leaves. </p></li>
 <li><p><strong>neutralPromise</strong> – Promise value that doesn’t modify tree nodes. </p></li>
@@ -95,14 +96,14 @@
 <span id="_CPPv3N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType"></span><span id="_CPPv2N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType"></span><span id="LazySegmentTreeBase::rangeOperation__s.s.NodeType"></span><span class="target" id="classLazySegmentTreeBase_1a349c9e16b54a0a089f3c63eb08cf0827"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::NodeType"><span class="n"><span class="pre">NodeType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rangeOperation</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">l</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span>, <a class="reference internal" href="#_CPPv4I000E19LazySegmentTreeBase" title="LazySegmentTreeBase::NodeType"><span class="n"><span class="pre">NodeType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19LazySegmentTreeBase14rangeOperationE6size_t6size_t8NodeType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Calculate the tree operation over the range [<em>l</em>, <em>r</em>) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>l</strong> – inclusive range left side </p></li>
 <li><p><strong>r</strong> – exclusive range right side </p></li>
 <li><p><strong>initialValue</strong> – Initial value for aggregate operation. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Tree operation calculated over the range. </p>
 </dd>
 </dl>
@@ -219,7 +220,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
     </div>
   </div>
 
@@ -229,7 +230,7 @@
     
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.0.
     </div>
     
 
