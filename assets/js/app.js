@@ -154,33 +154,36 @@
 
 
 function getOS() {
-    var OSName="unknown";
-    if (navigator.appVersion.indexOf("Win")!=-1) return { name: "Windows.zip", icon: "windows"};
-    if (navigator.appVersion.indexOf("Linux")!=-1) return { name: "Linux.appimage", icon: "linux"};
-    if (navigator.appVersion.indexOf("Mac")!=-1) return { name: "macOS.dmg", icon: "apple"};
-    if (navigator.appVersion.indexOf("X11")!=-1) return { name: "Linux.appimage", icon: "linux"};
-
-    return { name: OSName, icon: "download"};
+    if (navigator.appVersion.indexOf("Win")!=-1) return { name: "windows", icon: "windows"};
+    if (navigator.appVersion.indexOf("Linux")!=-1) return { name: "linux", icon: "linux"};
+    if (navigator.appVersion.indexOf("Mac")!=-1) return { name: "macos", icon: "apple"};
+    if (navigator.appVersion.indexOf("X11")!=-1) return { name: "linux", icon: "linux"};
+    return { name: "unknown", icon: "download"};
 }
 
 
-const getReleaseVersion = async () => {
+const releaseVersion = (async () => {
     var url = "https://api.github.com/repos/rizinorg/cutter/releases/latest";
     var urlData = await fetch(url);
     var jsonData = await urlData.json();
     var tag = jsonData.tag_name;
     var notes = jsonData.body;
     return [tag, notes];
-}
+})();
 
 
+const releaseSuffix = {
+    linux: "Linux-x86_64.AppImage",
+    macos: "macOS-x86_64.dmg",
+    windows: "Windows-x86_64.zip"
+};
 
-const getReleaseURLForPlatform = async (platform) => {
+const getReleaseURLForPlatform = async (os) => {
     var releaseURL = "https://github.com/rizinorg/cutter/releases/latest";
     var tag, notes;
-    if (platform != "unknown") {
-        [tag, notes] = await getReleaseVersion();
-        releaseURL = "https://github.com/rizinorg/cutter/releases/download/" + tag + "/Cutter-" + tag + "-x64." + platform;
+    if (os in releaseSuffix) {
+        [tag, notes] = await releaseVersion;
+        releaseURL = `https://github.com/rizinorg/cutter/releases/download/${tag}/Cutter-${tag}-${releaseSuffix[os]}`;
     }
 
     return releaseURL;
@@ -195,9 +198,9 @@ const setReleaseDownloadLinkForOS = async (os) => {
 }
 
 const setDownloadLinksForAllPlatforms = async () => {
-    var linuxURL = await getReleaseURLForPlatform("Linux.appimage");
-    var windowsURL = await getReleaseURLForPlatform("Windows.zip");
-    var macOSURL = await getReleaseURLForPlatform("macOS.dmg");
+    var linuxURL = await getReleaseURLForPlatform("linux");
+    var windowsURL = await getReleaseURLForPlatform("windows");
+    var macOSURL = await getReleaseURLForPlatform("macos");
 
     document.getElementById("downloadMacOS").href = macOSURL;
     document.getElementById("downloadLinux").href = linuxURL;
@@ -207,7 +210,7 @@ const setDownloadLinksForAllPlatforms = async () => {
 
 
 const fillCutterVersion = async() => {
-    const [tag, notes] = await getReleaseVersion();
+    const [tag, notes] = await releaseVersion;
     document.getElementById("cutterVersion").innerHTML = tag;
     
     var converter = new showdown.Converter();
