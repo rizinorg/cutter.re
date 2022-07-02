@@ -59,7 +59,7 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv412UpdateWorker">
 <span id="_CPPv312UpdateWorker"></span><span id="_CPPv212UpdateWorker"></span><span id="UpdateWorker"></span><span class="target" id="classUpdateWorker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdateWorker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv412UpdateWorker" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The <a class="reference internal" href="#classUpdateWorker"><span class="std std-ref">UpdateWorker</span></a> class is a class providing API to check for current Cutter version and download specific version of one. </p>
+<dd><p>The <a class="reference internal" href="#classUpdateWorker"><span class="std std-ref">UpdateWorker</span></a> class is a class providing API to check for current Cutter version. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -74,43 +74,9 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker8downloadE7QString7QString">
-<span id="_CPPv3N12UpdateWorker8downloadE7QString7QString"></span><span id="_CPPv2N12UpdateWorker8downloadE7QString7QString"></span><span id="UpdateWorker::download__QString.QString"></span><span class="target" id="classUpdateWorker_1af316f90e4ee2db088c4e1dd302f472dd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">download</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">version</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker8downloadE7QString7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Downloads provided <em>version</em> of Cutter into <em>downloadDir</em>. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#classUpdateWorker_1a6d7cb42dcd524bf926f3d36068936da4"><span class="std std-ref">downloadProcess(size_t bytesReceived, size_t bytesTotal)</span></a> </p>
-</div>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker16showUpdateDialogEb">
 <span id="_CPPv3N12UpdateWorker16showUpdateDialogEb"></span><span id="_CPPv2N12UpdateWorker16showUpdateDialogEb"></span><span id="UpdateWorker::showUpdateDialog__b"></span><span class="target" id="classUpdateWorker_1a2e39c4e83fd9b9ee932a6dd7a43e46ef"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showUpdateDialog</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">showDontCheckForUpdatesButton</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker16showUpdateDialogEb" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Shows dialog that allows user to either download latest version of Cutter from website or download it by clicking on a button. This dialog also has “Don’t check for updates” button which disables on-start update checks if <em>showDontCheckForUpdatesButton</em> is true.</p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#classUpdateWorker_1a6d7cb42dcd524bf926f3d36068936da4"><span class="std std-ref">downloadProcess(size_t bytesReceived, size_t bytesTotal)</span></a> </p>
-</div>
-</p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-slots">Public Slots</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker13abortDownloadEv">
-<span id="_CPPv3N12UpdateWorker13abortDownloadEv"></span><span id="_CPPv2N12UpdateWorker13abortDownloadEv"></span><span id="UpdateWorker::abortDownload"></span><span class="target" id="classUpdateWorker_1a50bb3cc613212e512704e155374a0014"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">abortDownload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker13abortDownloadEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Stops current process of downloading. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>download(QDir downloadDir, QString version) </p>
-</div>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a class="reference internal" href="#classUpdateWorker_1ad512dff4893bdc51ea9e64cec8c7bd68"><span class="std std-ref">UpdateWorker::downloadFinished(QString filename)</span></a> is not send after this function.</p>
-</div>
+<dd><p>Shows dialog that allows user to download latest version of Cutter from website. This dialog also has “Don’t check for updates” button which disables on-start update checks if <em>showDontCheckForUpdatesButton</em> is true. </p>
 </dd></dl>
 
 </div>
@@ -126,24 +92,6 @@ The signal is emitted when check has been done with an empty <em>errorMsg</em> s
 <p>checkComplete(const QString&amp; verson, const QString&amp; errorMsg)</p>
 </div>
 </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker15downloadProcessE6size_t6size_t">
-<span id="_CPPv3N12UpdateWorker15downloadProcessE6size_t6size_t"></span><span id="_CPPv2N12UpdateWorker15downloadProcessE6size_t6size_t"></span><span id="UpdateWorker::downloadProcess__s.s"></span><span class="target" id="classUpdateWorker_1a6d7cb42dcd524bf926f3d36068936da4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">downloadProcess</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytesReceived</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytesTotal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker15downloadProcessE6size_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The signal is emitted each time when some amount of bytes was downloaded. May be used as indicator of download progress. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker16downloadFinishedE7QString">
-<span id="_CPPv3N12UpdateWorker16downloadFinishedE7QString"></span><span id="_CPPv2N12UpdateWorker16downloadFinishedE7QString"></span><span id="UpdateWorker::downloadFinished__QString"></span><span class="target" id="classUpdateWorker_1ad512dff4893bdc51ea9e64cec8c7bd68"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">downloadFinished</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker16downloadFinishedE7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The signal is emitted as soon as downloading completes. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N12UpdateWorker13downloadErrorE7QString">
-<span id="_CPPv3N12UpdateWorker13downloadErrorE7QString"></span><span id="_CPPv2N12UpdateWorker13downloadErrorE7QString"></span><span id="UpdateWorker::downloadError__QString"></span><span class="target" id="classUpdateWorker_1a1a5813b97b6a27c65940613e1fe5d8c3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">downloadError</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">errorStr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12UpdateWorker13downloadErrorE7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The signal is emitted when error occures during download. </p>
 </dd></dl>
 
 </div>
