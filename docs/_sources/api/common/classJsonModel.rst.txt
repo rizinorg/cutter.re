@@ -1,4 +1,0 @@
-JsonModel
-=========
-
-.. doxygenclass:: JsonModel

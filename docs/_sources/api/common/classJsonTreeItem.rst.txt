@@ -1,4 +1,0 @@
-JsonTreeItem
-============
-
-.. doxygenclass:: JsonTreeItem
