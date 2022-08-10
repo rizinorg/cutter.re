@@ -98,10 +98,11 @@
 <p><em>Edge routing</em></p>
 <p>Edge routing can be split into: main column selection, rough routing, segment offset calculation.</p>
 <p>Transition from source to target row is done using single vertical segment. This is called main column.</p>
+<p>A sweep line is used for computing main columns: Blocks and edges are processed as events top to bottom based off their row (max(start row, end row) for edges). Blocked columns are tracked in a tree structure which allows searching nearest column with at least last N rows empty. The column of the starting block is favored for the main column, otherwise the target block’s column is chosen if it is not blocked. If both the source and target columns are blocked, nearest unblocked column is chosen. An empty column can always be found, in the worst case there are empty columns at the sides of drawing. If two columns are equally close, the tie is broken based on whether the edge is a true or false branch. In case of upward edges it is allowed to choose a column on the outside which is slightly further than nearest empty to reduce the chance of producing tilted figure 8 shaped crossing between two blocks.</p>
 <p>Rough routing creates the path of edge using up to 5 segments using grid coordinates. Due to nodes being placed in a grid. Horizontal segments of edges can’t intersect with any nodes. The path for edges is chosen so that it consists of at most 5 segments, typically resulting in sideways U shape or square Z shape.<ul class="simple">
 <li><p>short vertical segment from node to horizontal line</p></li>
 <li><p>move to empty column</p></li>
-<li><p>vertical segment between starting row and end row, an empty column can always be found, in the worst case there are empty columns at the sides of drawing</p></li>
+<li><p>vertical segment between starting row and end row</p></li>
 <li><p>horizontal segment to target node column</p></li>
 <li><p>short vertical segment connecting to target node</p></li>
 </ul>
@@ -109,7 +110,7 @@
 <p>There are 3 special cases:<ul class="simple">
 <li><p>source and target nodes are in the same column with no nodes between - single vertical segment</p></li>
 <li><p>column bellow stating node is empty - segments 1-3 are merged</p></li>
-<li><p>column above target node is empty - segments 3-5 are merged Vertical segment intersection with nodes is prevented using a 2d array marking which vertical segments are blocked and naively iterating through all rows between start and end at the desired column.</p></li>
+<li><p>column above target node is empty - segments 3-5 are merged</p></li>
 </ul>
 </p>
 <p>After rough routing segment offsets are calculated relative to their corresponding edge column. This ensures that two segments don’t overlap. Segment offsets within each column are assigned greedily with some heuristics for assignment order to reduce amount of edge crossings and result in more visually pleasing output for a typical CFG graph. Each segment gets assigned an offset that is maximum of previously assigned offsets overlapping with current segment + segment spacing. Assignment order is chosen based on: direction of previous and last segment - helps reducing crossings and place the segments between nodes segment length - reduces crossing when segment endpoints have the same structure as valid parentheses expression edge length - establishes some kind of order when single node is connected to many edges, typically a block with switch statement or block after switch statement.</p>
