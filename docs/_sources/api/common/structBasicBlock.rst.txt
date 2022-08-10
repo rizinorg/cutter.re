@@ -1,4 +1,0 @@
-BasicBlock
-==========
-
-.. doxygenstruct:: BasicBlock
