@@ -1,0 +1,4 @@
+CutterCore::SeekReturn
+======================
+
+.. doxygenclass:: CutterCore::SeekReturn
