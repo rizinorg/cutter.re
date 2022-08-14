@@ -190,29 +190,6 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore8asyncCmdEPKcR14QSharedPointerI9RizinTaskE">
-<span id="_CPPv3N10CutterCore8asyncCmdEPKcR14QSharedPointerI9RizinTaskE"></span><span id="_CPPv2N10CutterCore8asyncCmdEPKcR14QSharedPointerI9RizinTaskE"></span><span id="CutterCore::asyncCmd__cCP.QSharedPointer:RizinTask:R"></span><span class="target" id="classCutterCore_1a01bfb2c279cc99ccecd6a30d15edac7c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asyncCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../common/classRizinTask.html#_CPPv49RizinTask" title="RizinTask"><span class="n"><span class="pre">RizinTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8asyncCmdEPKcR14QSharedPointerI9RizinTaskE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>send a command to Rizin asynchronously </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>connect to the &amp;RizinTask::finished signal to add your own logic once the command is finished. Use task-&gt;getResult()/getResultJson() for the return value. Once you have setup connections you can start the task with task-&gt;startTask() If you want to seek to an address, you should use CutterCore::seek. </p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>str</strong> – the command you want to execute </p></li>
-<li><p><strong>task</strong> – a shared pointer that will be returned with the Rizin command task </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI9RizinTaskE">
-<span id="_CPPv3N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI9RizinTaskE"></span><span id="_CPPv2N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI9RizinTaskE"></span><span id="CutterCore::asyncCmd__QStringCR.QSharedPointer:RizinTask:R"></span><span class="target" id="classCutterCore_1a5982dc82363a3b57c4332e7c35eab4ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asyncCmd</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../common/classRizinTask.html#_CPPv49RizinTask" title="RizinTask"><span class="n"><span class="pre">RizinTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8asyncCmdERK7QStringR14QSharedPointerI9RizinTaskE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore9asyncTaskENSt8functionIFPvP6RzCoreEEER14QSharedPointerI9RizinTaskE">
 <span id="_CPPv3N10CutterCore9asyncTaskENSt8functionIFPvP6RzCoreEEER14QSharedPointerI9RizinTaskE"></span><span id="_CPPv2N10CutterCore9asyncTaskENSt8functionIFPvP6RzCoreEEER14QSharedPointerI9RizinTaskE"></span><span class="target" id="classCutterCore_1a1651e91006d7c7531c71c1e7d13ee304"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asyncTask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">RzCore</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fcn</span></span>, <span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../common/classRizinTask.html#_CPPv49RizinTask" title="RizinTask"><span class="n"><span class="pre">RizinTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore9asyncTaskENSt8functionIFPvP6RzCoreEEER14QSharedPointerI9RizinTaskE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>send a task to Rizin </p>
@@ -225,6 +202,11 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12functionTaskENSt8functionIFPvP6RzCoreEEE">
+<span id="_CPPv3N10CutterCore12functionTaskENSt8functionIFPvP6RzCoreEEE"></span><span id="_CPPv2N10CutterCore12functionTaskENSt8functionIFPvP6RzCoreEEE"></span><span class="target" id="classCutterCore_1a7e3c5e23cb7e4cbf804a89764681734a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">functionTask</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">RzCore</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fcn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12functionTaskENSt8functionIFPvP6RzCoreEEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore6cmdRawEPKc">
@@ -287,61 +269,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore6cmdjAtEPKc3RVA">
-<span id="_CPPv3N10CutterCore6cmdjAtEPKc3RVA"></span><span id="_CPPv2N10CutterCore6cmdjAtEPKc3RVA"></span><span id="CutterCore::cmdjAt__cCP.RVA"></span><span class="target" id="classCutterCore_1afd8627c6ce4002367ec1f2708f5a7c6a"></span><a class="reference internal" href="classCutterJson.html#_CPPv410CutterJson" title="CutterJson"><span class="n"><span class="pre">CutterJson</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cmdjAt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6cmdjAtEPKc3RVA" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore7cmdTaskERK7QString">
 <span id="_CPPv3N10CutterCore7cmdTaskERK7QString"></span><span id="_CPPv2N10CutterCore7cmdTaskERK7QString"></span><span id="CutterCore::cmdTask__QStringCR"></span><span class="target" id="classCutterCore_1a03a67fc071cb84fe4b68a0da1d7a4277"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cmdTask</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore7cmdTaskERK7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore8cmdjTaskERK7QString">
-<span id="_CPPv3N10CutterCore8cmdjTaskERK7QString"></span><span id="_CPPv2N10CutterCore8cmdjTaskERK7QString"></span><span id="CutterCore::cmdjTask__QStringCR"></span><span class="target" id="classCutterCore_1a036740fc3c684235188ee0c3a502963c"></span><a class="reference internal" href="classCutterJson.html#_CPPv410CutterJson" title="CutterJson"><span class="n"><span class="pre">CutterJson</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cmdjTask</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore8cmdjTaskERK7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore7cmdEsilEPKc">
-<span id="_CPPv3N10CutterCore7cmdEsilEPKc"></span><span id="_CPPv2N10CutterCore7cmdEsilEPKc"></span><span id="CutterCore::cmdEsil__cCP"></span><span class="target" id="classCutterCore_1a55e35bd6c0120ebf6665430de2a78fc4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cmdEsil</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">command</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore7cmdEsilEPKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>send a command to Rizin and check for ESIL errors </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want to seek to an address, you should use CutterCore::seek. </p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>command</strong> – the command you want to execute </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore7cmdEsilERK7QString">
-<span id="_CPPv3N10CutterCore7cmdEsilERK7QString"></span><span id="_CPPv2N10CutterCore7cmdEsilERK7QString"></span><span id="CutterCore::cmdEsil__QStringCR"></span><span class="target" id="classCutterCore_1a0bafabd626c668019f1a877ece3569bc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cmdEsil</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">command</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore7cmdEsilERK7QString" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI9RizinTaskE">
-<span id="_CPPv3N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI9RizinTaskE"></span><span id="_CPPv2N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI9RizinTaskE"></span><span id="CutterCore::asyncCmdEsil__cCP.QSharedPointer:RizinTask:R"></span><span class="target" id="classCutterCore_1aef98117e6578cc995ec5cbaebf8f2b80"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asyncCmdEsil</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">command</span></span>, <span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../common/classRizinTask.html#_CPPv49RizinTask" title="RizinTask"><span class="n"><span class="pre">RizinTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12asyncCmdEsilEPKcR14QSharedPointerI9RizinTaskE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>send a command to Rizin and check for ESIL errors </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>connect to the &amp;RizinTask::finished signal to add your own logic once the command is finished. Use task-&gt;getResult()/getResultJson() for the return value. Once you have setup connections you can start the task with task-&gt;startTask() If you want to seek to an address, you should use CutterCore::seek. </p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>command</strong> – the command you want to execute </p></li>
-<li><p><strong>task</strong> – a shared pointer that will be returned with the Rizin command task </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI9RizinTaskE">
-<span id="_CPPv3N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI9RizinTaskE"></span><span id="_CPPv2N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI9RizinTaskE"></span><span id="CutterCore::asyncCmdEsil__QStringCR.QSharedPointer:RizinTask:R"></span><span class="target" id="classCutterCore_1ad8678d1bf319999da14b7dbd6e6004f5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">asyncCmdEsil</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">command</span></span>, <span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../common/classRizinTask.html#_CPPv49RizinTask" title="RizinTask"><span class="n"><span class="pre">RizinTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12asyncCmdEsilERK7QStringR14QSharedPointerI9RizinTaskE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
