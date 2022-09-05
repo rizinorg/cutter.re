@@ -58,8 +58,36 @@
 <h1>CutterPVector::iterator<a class="headerlink" href="#cutterpvector-iterator" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iteratorE">
-<span id="_CPPv3N13CutterPVector8iteratorE"></span><span id="_CPPv2N13CutterPVector8iteratorE"></span><span id="CutterPVector::iterator"></span><span class="target" id="classCutterPVector_1_1iterator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input_iterator_tag</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iteratorE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13CutterPVector8iteratorE"></span><span id="_CPPv2N13CutterPVector8iteratorE"></span><span id="CutterPVector::iterator"></span><span class="target" id="classCutterPVector_1_1iterator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iterator</span></span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iteratorE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator17iterator_categoryE">
+<span id="_CPPv3N13CutterPVector8iterator17iterator_categoryE"></span><span id="_CPPv2N13CutterPVector8iterator17iterator_categoryE"></span><span class="target" id="classCutterPVector_1_1iterator_1a6e6c38e7ed4282c1a57f060df0ea949d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iterator_category</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">input_iterator_tag</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iterator17iterator_categoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator10value_typeE">
+<span id="_CPPv3N13CutterPVector8iterator10value_typeE"></span><span id="_CPPv2N13CutterPVector8iterator10value_typeE"></span><span class="target" id="classCutterPVector_1_1iterator_1aa193b5cf7380a2ff56978443132fe9d8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iterator10value_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator15difference_typeE">
+<span id="_CPPv3N13CutterPVector8iterator15difference_typeE"></span><span id="_CPPv2N13CutterPVector8iterator15difference_typeE"></span><span class="target" id="classCutterPVector_1_1iterator_1aa1f35444e563200a37186935c6d2524d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">difference_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">ptrdiff_t</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iterator15difference_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator7pointerE">
+<span id="_CPPv3N13CutterPVector8iterator7pointerE"></span><span id="_CPPv2N13CutterPVector8iterator7pointerE"></span><span class="target" id="classCutterPVector_1_1iterator_1a73db7f7079026d4c7e6ab9518d7d4f9d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pointer</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iterator7pointerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator9referenceE">
+<span id="_CPPv3N13CutterPVector8iterator9referenceE"></span><span id="_CPPv2N13CutterPVector8iterator9referenceE"></span><span class="target" id="classCutterPVector_1_1iterator_1a7252859df4d5e7a14bc70cddea88d81d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reference</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&amp;</span></span><a class="headerlink" href="#_CPPv4N13CutterPVector8iterator9referenceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N13CutterPVector8iterator8iteratorEPP1T">
