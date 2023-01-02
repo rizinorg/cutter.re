@@ -66,15 +66,15 @@ our <a class="reference external" href="https://github.com/rizinorg/cutter/relea
 <section id="getting-the-source">
 <h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Permalink to this heading">¶</a></h2>
 <p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone --recurse-submodules https://github.com/rizinorg/cutter
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/rizinorg/cutter
 </pre></div>
 </div>
 <p>This will clone the Cutter source and its dependencies(rizin, etc.)
 under <strong>cutter</strong> and you should see the following dir structure:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cutter/-<span class="p">|</span>
-        <span class="p">|</span>-docs/     <span class="c1"># Cutter Documentation</span>
-        <span class="p">|</span>-rizin/    <span class="c1"># Rizin submodule</span>
-        <span class="p">|</span>-src/      <span class="c1"># Cutter Source Code</span>
+<span class="w">        </span><span class="p">|</span>-docs/<span class="w">     </span><span class="c1"># Cutter Documentation</span>
+<span class="w">        </span><span class="p">|</span>-rizin/<span class="w">    </span><span class="c1"># Rizin submodule</span>
+<span class="w">        </span><span class="p">|</span>-src/<span class="w">      </span><span class="c1"># Cutter Source Code</span>
 </pre></div>
 </div>
 <p>Following sections assume that <strong>cutter</strong> is your working dir. (if not, do <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cutter</span></code>)</p>
@@ -131,14 +131,14 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <section id="building-steps">
 <h3>Building Steps<a class="headerlink" href="#building-steps" title="Permalink to this heading">¶</a></h3>
 <p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
-cmake ..
-cmake --build .
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+cmake<span class="w"> </span>--build<span class="w"> </span>.
 </pre></div>
 </div>
 <p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake -B build
-cmake --build build
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build
 </pre></div>
 </div>
 <p>If you want to use Cutter with another version of Rizin you can set <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=OFF</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
@@ -283,14 +283,14 @@ For example, to build Cutter with support for Python plugins, you can run this c
 <h2>Compiling Cutter with Breakpad Support<a class="headerlink" href="#compiling-cutter-with-breakpad-support" title="Permalink to this heading">¶</a></h2>
 <p>If you want to build Cutter with crash handling system, you will want to first prepare Breakpad.
 For this, simply run one of the scripts (according to your OS) from root Cutter directory:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> scripts/prepare_breakpad_linux.sh <span class="c1"># Linux</span>
-<span class="nb">source</span> scripts/prepare_breakpad_macos.sh <span class="c1"># MacOS</span>
-scripts/prepare_breakpad.bat <span class="c1"># Windows</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>scripts/prepare_breakpad_linux.sh<span class="w"> </span><span class="c1"># Linux</span>
+<span class="nb">source</span><span class="w"> </span>scripts/prepare_breakpad_macos.sh<span class="w"> </span><span class="c1"># MacOS</span>
+scripts/prepare_breakpad.bat<span class="w"> </span><span class="c1"># Windows</span>
 </pre></div>
 </div>
 <p>Then if you are building on Linux you want to change <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> environment variable
 so it contains <code class="docutils literal notranslate"><span class="pre">$CUSTOM_BREAKPAD_PREFIX/lib/pkgconfig</span></code>. For this simply run</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$CUSTOM_BREAKPAD_PREFIX</span><span class="s2">/lib/pkgconfig:</span><span class="nv">$PKG_CONFIG_PATH</span><span class="s2">&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$CUSTOM_BREAKPAD_PREFIX</span><span class="s2">/lib/pkgconfig:</span><span class="nv">$PKG_CONFIG_PATH</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </section>

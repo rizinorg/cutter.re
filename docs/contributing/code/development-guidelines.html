@@ -68,7 +68,7 @@
 <p>This is the main class where every link with Rizin is made. It is <em>unique</em>
 across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
@@ -91,7 +91,7 @@ Make sure to carefully sanitize user-controlled variables that are passed to the
 <p>Generally, if one needs to retrieve information from a Rizin command, it
 is preferred to use the JSON API.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CutterJson</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CutterJson</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
@@ -102,7 +102,7 @@ is important because it will emit a
 <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
 <code class="docutils literal notranslate"><span class="pre">cmd(&quot;s</span> <span class="pre">offset&quot;)</span></code>;</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x00C0FFEE</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x00C0FFEE</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -123,31 +123,31 @@ so your widget refreshes its output when Rizin seek is modified
 to format the code. Before sending a pull request, you will need to use <a href="#id1"><span class="problematic" id="id2">`clang-format`&lt;https://clang.llvm.org/docs/ClangFormat.html&gt;`__</span></a> (version 8 or newer)
 to format the code. The command line for formatting the code according
 to the style is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang-format -style<span class="o">=</span>file -i src/filename.cpp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang-format<span class="w"> </span>-style<span class="o">=</span>file<span class="w"> </span>-i<span class="w"> </span>src/filename.cpp
 </pre></div>
 </div>
 <p>If your changes were done on many files across the codebase, you can use this oneliner to tun <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> on the entire ‘src’ directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find ./src -regex <span class="s1">&#39;.*\.\(cpp\|h\)&#39;</span> -exec clang-format -style<span class="o">=</span>file -i <span class="o">{}</span> <span class="se">\;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>./src<span class="w"> </span>-regex<span class="w"> </span><span class="s1">&#39;.*\.\(cpp\|h\)&#39;</span><span class="w"> </span>-exec<span class="w"> </span>clang-format<span class="w"> </span>-style<span class="o">=</span>file<span class="w"> </span>-i<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </pre></div>
 </div>
 <p>In contrast to the official guidelines of Qt, in Cutter we always use curly braces in conditional statements, even if the body of a conditional statement contains only one line.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Wrong</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 
 <span class="c1">// Correct</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
 
 <span class="c1">// Wrong</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
-<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 
 <span class="c1">// Correct</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <section id="includes">
@@ -156,12 +156,12 @@ to the style is:</p>
 This will avoid triggering additional unnecessary compilations.</p>
 <p>If you only need to know that a class exists but don’t need the prototype,
 you can declare the class like this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyClassThatExists</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyClassThatExists</span><span class="p">;</span>
 
-<span class="cm">/** ... **/</span><span class="w"></span>
+<span class="cm">/** ... **/</span>
 
-<span class="k">private</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">MyClassThatExists</span><span class="w"> </span><span class="o">*</span><span class="n">classInstance</span><span class="p">;</span><span class="w"></span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">MyClassThatExists</span><span class="w"> </span><span class="o">*</span><span class="n">classInstance</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>And then include the class header inside your .cpp so you can use that class.</p>
@@ -180,8 +180,8 @@ Finally, include the standard C++ headers you need.</p>
 function documentation, please use the following format:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * @brief Add a new param to the accumulator</span>
-<span class="cm"> */</span><span class="w"></span>
-<span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span><span class="w"> </span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="cm"> */</span>
+<span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span><span class="w"> </span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>
@@ -189,9 +189,9 @@ function documentation, please use the following format:</p>
 <h3>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">¶</a></h3>
 <p>We use the C++11 foreach loop style, which means any “foreach” loop should
 look like:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">QJsonValue</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">doSomething</span><span class="p">(</span><span class="n">value</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">QJsonValue</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">doSomething</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -199,7 +199,7 @@ look like:</p>
 <h3>nullptr<a class="headerlink" href="#nullptr" title="Permalink to this heading">¶</a></h3>
 <p>Please do not use <code class="docutils literal notranslate"><span class="pre">0</span></code> nor <code class="docutils literal notranslate"><span class="pre">Q_NULLPTR</span></code>, only use <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="w"> </span><span class="o">*</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="w"> </span><span class="o">*</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>
@@ -207,7 +207,7 @@ look like:</p>
 <h3>Connecting Qt Signals<a class="headerlink" href="#connecting-qt-signals" title="Permalink to this heading">¶</a></h3>
 <p>Use one of the following methods for connecting signals to slots:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// typically you will make connection in the constructor to a member of current class</span>
-<span class="n">connect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">button1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"></span>
+<span class="n">connect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">button1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span>
 <span class="w">        </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">buttonClicked</span><span class="p">);</span><span class="w"> </span><span class="c1">// Good</span>
 
 <span class="c1">// you can also connect directly other object slots</span>
@@ -224,7 +224,7 @@ functions. Other approaches for connecting signals can silently break at runtime
 <span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">SLOT</span><span class="p">(</span><span class="n">buttonClicked</span><span class="p">));</span><span class="w"> </span><span class="c1">// BAD</span>
 
 <span class="c1">// automatic name based connection</span>
-<span class="nl">slot</span><span class="p">:</span><span class="w"></span>
+<span class="nl">slot</span><span class="p">:</span>
 <span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">on_actionNew_triggered</span><span class="p">();</span><span class="w"> </span><span class="c1">// BAD</span>
 
 <span class="c1">// 3 argument connect without receiver object</span>
@@ -248,23 +248,23 @@ fixes and performance improvements on Rizin. Often, we need to update
 the Rizin submodule or the others, to push their most recent
 version to Cutter.</p>
 <p>You can view the list of all the submodules from the cutter root folder with:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git config --file .gitmodules --get-regexp path <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--file<span class="w"> </span>.gitmodules<span class="w"> </span>--get-regexp<span class="w"> </span>path<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $2 }&#39;</span>
 </pre></div>
 </div>
 <p>To update all the submodules at once, run these commands from the
 cutter root folder:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git submodule foreach git pull origin master
-git add submodule_name_1 submodule_name_2
-git commit -m <span class="s2">&quot;Update submodules&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>submodule<span class="w"> </span>foreach<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master
+git<span class="w"> </span>add<span class="w"> </span>submodule_name_1<span class="w"> </span>submodule_name_2
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update submodules&quot;</span>
 </pre></div>
 </div>
 <p>More likely, you’ll only need to update the <em>rizin</em> submodule.
 In order to update one submodule individually, use the following code:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> rizin
-git checkout dev <span class="o">&amp;&amp;</span> git pull
-<span class="nb">cd</span> ..
-git add rizin
-git commit -m <span class="s2">&quot;Update rizin submodule&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>rizin
+git<span class="w"> </span>checkout<span class="w"> </span>dev<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull
+<span class="nb">cd</span><span class="w"> </span>..
+git<span class="w"> </span>add<span class="w"> </span>rizin
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update rizin submodule&quot;</span>
 </pre></div>
 </div>
 </section>
