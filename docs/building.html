@@ -106,6 +106,10 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On Debian 11 (bullseye) and higher or Ubuntu 22.04 (Jammy) and higher, replace <code class="docutils literal notranslate"><span class="pre">qt5-default</span></code> above with <code class="docutils literal notranslate"><span class="pre">qtbase5-dev</span></code>.</p>
+</div>
 <p>Depending on your configuration you’ll might also need the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libkf5syntaxhighlighting</span><span class="o">-</span><span class="n">dev</span>
