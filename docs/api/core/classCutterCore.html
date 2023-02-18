@@ -1859,6 +1859,40 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore17getTextualGraphAtE15RzCoreGraphType17RzCoreGraphFormat3RVA">
+<span id="_CPPv3N10CutterCore17getTextualGraphAtE15RzCoreGraphType17RzCoreGraphFormat3RVA"></span><span id="_CPPv2N10CutterCore17getTextualGraphAtE15RzCoreGraphType17RzCoreGraphFormat3RVA"></span><span id="CutterCore::getTextualGraphAt__RzCoreGraphType.RzCoreGraphFormat.RVA"></span><span class="target" id="classCutterCore_1a0dfbbbec8833ead676043e068f5eef1d"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getTextualGraphAt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RzCoreGraphType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span>, <span class="n"><span class="pre">RzCoreGraphFormat</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore17getTextualGraphAtE15RzCoreGraphType17RzCoreGraphFormat3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the textual version of global or specific graph. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – Graph type, example RZ_CORE_GRAPH_TYPE_FUNCALL or RZ_CORE_GRAPH_TYPE_IMPORT </p></li>
+<li><p><strong>format</strong> – Graph format, example RZ_CORE_GRAPH_FORMAT_DOT or RZ_CORE_GRAPH_FORMAT_GML </p></li>
+<li><p><strong>address</strong> – The object address (if global set it to RVA_INVALID) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The textual graph string. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore24writeGraphvizGraphToFileE7QString7QString15RzCoreGraphType3RVA">
+<span id="_CPPv3N10CutterCore24writeGraphvizGraphToFileE7QString7QString15RzCoreGraphType3RVA"></span><span id="_CPPv2N10CutterCore24writeGraphvizGraphToFileE7QString7QString15RzCoreGraphType3RVA"></span><span id="CutterCore::writeGraphvizGraphToFile__QString.QString.RzCoreGraphType.RVA"></span><span class="target" id="classCutterCore_1ad24bd116d25e2b6601dd04f35d3464a8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeGraphvizGraphToFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span>, <span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span>, <span class="n"><span class="pre">RzCoreGraphType</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span>, <span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore24writeGraphvizGraphToFileE7QString7QString15RzCoreGraphType3RVA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Writes a graphviz graph to a file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – The file output path </p></li>
+<li><p><strong>format</strong> – The output format (see graph.gv.format) </p></li>
+<li><p><strong>type</strong> – The graph type, example RZ_CORE_GRAPH_TYPE_FUNCALL or RZ_CORE_GRAPH_TYPE_IMPORT </p></li>
+<li><p><strong>address</strong> – The object address (if global set it to RVA_INVALID) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
