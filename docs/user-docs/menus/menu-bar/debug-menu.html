@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Debug Menu &#8212; Cutter 2.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/cutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../../_static/documentation_options.js?v=b21de401"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Debug -&gt; View Menu" href="debug-view-menu.html" />
@@ -54,59 +53,59 @@
           <div class="body" role="main">
             
   <section id="debug-menu">
-<h1>Debug Menu<a class="headerlink" href="#debug-menu" title="Permalink to this heading">¶</a></h1>
+<h1>Debug Menu<a class="headerlink" href="#debug-menu" title="Link to this heading">¶</a></h1>
 <section id="start-debugging">
-<h2>Start Debugging<a class="headerlink" href="#start-debugging" title="Permalink to this heading">¶</a></h2>
+<h2>Start Debugging<a class="headerlink" href="#start-debugging" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Start the debugging session of the current loaded binary.</p>
 <p><strong>Steps:</strong> Debug -&gt; Start debug</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">F9</kbd></p>
 </section>
 <section id="start-emulation">
-<h2>Start Emulation<a class="headerlink" href="#start-emulation" title="Permalink to this heading">¶</a></h2>
+<h2>Start Emulation<a class="headerlink" href="#start-emulation" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Start an emulation session on the current loaded binary. Cutter supports emulation of different file formats. Unlike debugging, emulation isn’t really executing the binary, but only emulating the instructions. This is very strong feature for analysis of self-contained functions or programs, to analyze cryptographic algorithms or to deobfuscate data. Emulation isn’t limited by the running platform, so Linux files such as ELF can be emulated on Windows platforms, and DLL can be emulated on Linux.</p>
 <p><strong>Steps:</strong> Debug -&gt; Start emulation</p>
 </section>
 <section id="attach-to-process">
-<h2>Attach to Process<a class="headerlink" href="#attach-to-process" title="Permalink to this heading">¶</a></h2>
+<h2>Attach to Process<a class="headerlink" href="#attach-to-process" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Attach Cutter’s debugger to a running process, instead of spawning a new process.</p>
 <p><strong>Steps:</strong> Debug -&gt; Attach to process</p>
 </section>
 <section id="connect-to-a-remote-debugger">
-<h2>Connect to a Remote Debugger<a class="headerlink" href="#connect-to-a-remote-debugger" title="Permalink to this heading">¶</a></h2>
+<h2>Connect to a Remote Debugger<a class="headerlink" href="#connect-to-a-remote-debugger" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Connect Cutter to a remote debugger such as GDB ot WinDbg by providing IP and Port of the remote debugger..</p>
 <p><strong>Steps:</strong> Debug -&gt; Connect to a remote debugger</p>
 </section>
 <section id="step-into">
-<h2>Step Into<a class="headerlink" href="#step-into" title="Permalink to this heading">¶</a></h2>
+<h2>Step Into<a class="headerlink" href="#step-into" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Execute a single assembler instruction, stepping into functions and loops.</p>
 <p><strong>Steps:</strong> Debug -&gt; Step</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">F7</kbd></p>
 </section>
 <section id="step-over">
-<h2>Step Over<a class="headerlink" href="#step-over" title="Permalink to this heading">¶</a></h2>
+<h2>Step Over<a class="headerlink" href="#step-over" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Execute a single assembler instruction, stepping over functions and procedures. The functions will not be skipped and will be executed by Cutter. The execution will pause when reaching the instruction after the function call.</p>
 <p><strong>Steps:</strong> Debug -&gt; Step over</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">F8</kbd></p>
 </section>
 <section id="step-out">
-<h2>Step Out<a class="headerlink" href="#step-out" title="Permalink to this heading">¶</a></h2>
+<h2>Step Out<a class="headerlink" href="#step-out" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Execute the code and suspends execution when the current function returns</p>
 <p><strong>Steps:</strong> Debug -&gt; Step out</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">F8</kbd></p>
 </section>
 <section id="continue">
-<h2>Continue<a class="headerlink" href="#continue" title="Permalink to this heading">¶</a></h2>
+<h2>Continue<a class="headerlink" href="#continue" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Continue the execution of the running program. The execution will stop when reached a breakpoint, when manually suspended by the user, or when the running program quits.</p>
 <p><strong>Steps:</strong> Debug -&gt; Continue</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">F5</kbd></p>
 </section>
 <section id="continue-until-call">
-<h2>Continue Until Call<a class="headerlink" href="#continue-until-call" title="Permalink to this heading">¶</a></h2>
+<h2>Continue Until Call<a class="headerlink" href="#continue-until-call" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Continue the execution of the program until a function call is reached.</p>
 <p><strong>Steps:</strong> Debug -&gt; Continue until call</p>
 </section>
 <section id="continue-until-syscall">
-<h2>Continue Until Syscall<a class="headerlink" href="#continue-until-syscall" title="Permalink to this heading">¶</a></h2>
+<h2>Continue Until Syscall<a class="headerlink" href="#continue-until-syscall" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Continue the execution of the program until a Syscall is reached.</p>
 <p><strong>Steps:</strong> Debug -&gt; Continue until syscall</p>
 </section>
@@ -172,8 +171,8 @@
 
     
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.3.
     </div>
     
 

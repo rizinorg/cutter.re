@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>GenericRizinGraphView &#8212; Cutter 2.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/cutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../_static/documentation_options.js?v=b21de401"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="GlibcHeapModel" href="classGlibcHeapModel.html" />
@@ -53,20 +52,20 @@
           <div class="body" role="main">
             
   <section id="genericrizingraphview">
-<h1>GenericRizinGraphView<a class="headerlink" href="#genericrizingraphview" title="Permalink to this heading">¶</a></h1>
+<h1>GenericRizinGraphView<a class="headerlink" href="#genericrizingraphview" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv421GenericRizinGraphView">
-<span id="_CPPv321GenericRizinGraphView"></span><span id="_CPPv221GenericRizinGraphView"></span><span id="GenericRizinGraphView"></span><span class="target" id="classGenericRizinGraphView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericRizinGraphView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classSimpleTextGraphView.html#_CPPv419SimpleTextGraphView" title="SimpleTextGraphView"><span class="n"><span class="pre">SimpleTextGraphView</span></span></a><a class="headerlink" href="#_CPPv421GenericRizinGraphView" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv321GenericRizinGraphView"></span><span id="_CPPv221GenericRizinGraphView"></span><span id="GenericRizinGraphView"></span><span class="target" id="classGenericRizinGraphView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericRizinGraphView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classSimpleTextGraphView.html#_CPPv419SimpleTextGraphView" title="SimpleTextGraphView"><span class="n"><span class="pre">SimpleTextGraphView</span></span></a><a class="headerlink" href="#_CPPv421GenericRizinGraphView" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Generic graph view for rizin graphs. Not all rizin graph commands output the same kind of json. Only those that have following format. </p>
-<p><div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{ &quot;nodes&quot;: [
-     {
-         &quot;id&quot;: 0,
-         &quot;tittle&quot;: &quot;node_0_tittle&quot;,
-         &quot;body&quot;: &quot;&quot;.
-         &quot;out_nodes&quot;: [1, 2, 3]
-     },
-     ...
-]}
+<p><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;nodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;tittle&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node_0_tittle&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="err">.</span>
+<span class="w">         </span><span class="nt">&quot;out_nodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="err">...</span>
+<span class="p">]}</span>
 </pre></div>
 </div>
  Id don’t have to be sequential. Simple text label is displayed containing concatenation of label and body. No rizin builtin graph uses both. Duplicate edges and edges with target id not present in the list of nodes are removed. </p>
@@ -74,17 +73,17 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow">
-<span id="_CPPv3N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="_CPPv2N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="GenericRizinGraphView::GenericRizinGraphView__RizinGraphWidgetP.MainWindowP"></span><span class="target" id="classGenericRizinGraphView_1a4d4423b5863ce34cf6f551425e25f8dc"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericRizinGraphView</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classRizinGraphWidget.html#_CPPv416RizinGraphWidget" title="RizinGraphWidget"><span class="n"><span class="pre">RizinGraphWidget</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span>, <a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow"><span class="n"><span class="pre">MainWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">main</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="_CPPv2N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow"></span><span id="GenericRizinGraphView::GenericRizinGraphView__RizinGraphWidgetP.MainWindowP"></span><span class="target" id="classGenericRizinGraphView_1a4d4423b5863ce34cf6f551425e25f8dc"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericRizinGraphView</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classRizinGraphWidget.html#_CPPv416RizinGraphWidget" title="RizinGraphWidget"><span class="n"><span class="pre">RizinGraphWidget</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span>, <a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow"><span class="n"><span class="pre">MainWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">main</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView21GenericRizinGraphViewEP16RizinGraphWidgetP10MainWindow" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString">
-<span id="_CPPv3N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="_CPPv2N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="GenericRizinGraphView::setGraphCommand__QString"></span><span class="target" id="classGenericRizinGraphView_1a62ca55f188b4a0928afbf2f02fd86182"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGraphCommand</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="_CPPv2N21GenericRizinGraphView15setGraphCommandE7QString"></span><span id="GenericRizinGraphView::setGraphCommand__QString"></span><span class="target" id="classGenericRizinGraphView_1a62ca55f188b4a0928afbf2f02fd86182"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGraphCommand</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cmd</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView15setGraphCommandE7QString" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N21GenericRizinGraphView11refreshViewEv">
-<span id="_CPPv3N21GenericRizinGraphView11refreshViewEv"></span><span id="_CPPv2N21GenericRizinGraphView11refreshViewEv"></span><span id="GenericRizinGraphView::refreshView"></span><span class="target" id="classGenericRizinGraphView_1acfc4fda826b78f148b23d65e3b8d5730"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refreshView</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView11refreshViewEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21GenericRizinGraphView11refreshViewEv"></span><span id="_CPPv2N21GenericRizinGraphView11refreshViewEv"></span><span id="GenericRizinGraphView::refreshView"></span><span class="target" id="classGenericRizinGraphView_1acfc4fda826b78f148b23d65e3b8d5730"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refreshView</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N21GenericRizinGraphView11refreshViewEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -299,8 +298,8 @@
 
     
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.3.
     </div>
     
 

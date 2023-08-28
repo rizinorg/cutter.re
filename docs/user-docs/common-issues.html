@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Common Issues &#8212; Cutter 2.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/cutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css?v=f99abf92" />
+    <script src="../_static/documentation_options.js?v=b21de401"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Contributing to Cutter" href="../contributing.html" />
@@ -52,23 +51,23 @@
           <div class="body" role="main">
             
   <section id="common-issues">
-<h1>Common Issues<a class="headerlink" href="#common-issues" title="Permalink to this heading">¶</a></h1>
+<h1>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading">¶</a></h1>
 <p>This page lists common issues encountered by users.</p>
 <section id="appimage-crashes">
-<h2>AppImage Crashes<a class="headerlink" href="#appimage-crashes" title="Permalink to this heading">¶</a></h2>
+<h2>AppImage Crashes<a class="headerlink" href="#appimage-crashes" title="Link to this heading">¶</a></h2>
 <p>If the Linux AppImage binary crashes upon startup, make sure your
 <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> environment variable is empty.
 For a detailed explanation, see the issue <a class="reference external" href="https://github.com/rizinorg/cutter/issues/579">#579</a></p>
 </section>
 <section id="keyboard-layout-issue">
-<h2>Keyboard Layout Issue<a class="headerlink" href="#keyboard-layout-issue" title="Permalink to this heading">¶</a></h2>
+<h2>Keyboard Layout Issue<a class="headerlink" href="#keyboard-layout-issue" title="Link to this heading">¶</a></h2>
 <p>Some people report that they have keyboard issues. Usually it is because
 the Xorg layout is wrong. You can check it with: <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">-query</span></code>
 Most of the time using <code class="docutils literal notranslate"><span class="pre">setxkbmap</span> <span class="pre">us</span></code> solves the issue, but it might
 not be enough and require a more advanced Xorg configuration.</p>
 </section>
 <section id="initial-analysis-takes-a-long-time-or-cutter-ui-freezes">
-<h2>Initial Analysis takes a long time or Cutter UI freezes<a class="headerlink" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes" title="Permalink to this heading">¶</a></h2>
+<h2>Initial Analysis takes a long time or Cutter UI freezes<a class="headerlink" href="#initial-analysis-takes-a-long-time-or-cutter-ui-freezes" title="Link to this heading">¶</a></h2>
 <p>Cutter and Rizin currently don’t work very well with large and very large binaries.
 The exact limits depend on the content of the binary, but roughly a few MB can be considered large
 and may take a few minutes to analyze. More than 100MB is very large,
@@ -131,8 +130,8 @@ be used to more selectively analyze only the relevant parts of code.</p>
 
     
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.3.
     </div>
     
 

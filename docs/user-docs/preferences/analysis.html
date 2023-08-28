@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Analysis Options &#8212; Cutter 2.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/cutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../_static/documentation_options.js?v=b21de401"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Initialization Script" href="initialization-script.html" />
@@ -53,12 +52,12 @@
           <div class="body" role="main">
             
   <section id="analysis-options">
-<h1>Analysis Options<a class="headerlink" href="#analysis-options" title="Permalink to this heading">¶</a></h1>
+<h1>Analysis Options<a class="headerlink" href="#analysis-options" title="Link to this heading">¶</a></h1>
 <p>Cutter will use the underlying Rizin analysis options to analyze a binary. These options are usually
 configured when the binary is first loaded. However, they can be later changed using the Analysis
 dialog, and a new analysis that takes these options into account can then be performed.</p>
 <section id="analysis-dialog">
-<h2>Analysis Dialog<a class="headerlink" href="#analysis-dialog" title="Permalink to this heading">¶</a></h2>
+<h2>Analysis Dialog<a class="headerlink" href="#analysis-dialog" title="Link to this heading">¶</a></h2>
 <img alt="Analysis dialog" src="../../_images/analysis_dialog.png" />
 <p><strong>Description:</strong> The Analysis dialog allows setting some Rizin’s analysis options. The supported options are described
 below.</p>
@@ -66,7 +65,7 @@ below.</p>
 command, taking into account the configured values of the analysis options.</p>
 <p><strong>Steps to open:</strong> <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Analysis</span></code></p>
 <section id="search-boundaries-for-analysis">
-<h3>Search boundaries for analysis<a class="headerlink" href="#search-boundaries-for-analysis" title="Permalink to this heading">¶</a></h3>
+<h3>Search boundaries for analysis<a class="headerlink" href="#search-boundaries-for-analysis" title="Link to this heading">¶</a></h3>
 <p>Select the boundaries in which the analyis will be performed. The different options are:</p>
 <ul class="simple">
 <li><p>All executable maps (<code class="docutils literal notranslate"><span class="pre">io.maps.x</span></code>)</p></li>
@@ -79,53 +78,53 @@ command, taking into account the configured values of the analysis options.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.in</span></code></p>
 </section>
 <section id="speculatively-set-a-name-for-the-functions">
-<h3>Speculatively set a name for the functions<a class="headerlink" href="#speculatively-set-a-name-for-the-functions" title="Permalink to this heading">¶</a></h3>
+<h3>Speculatively set a name for the functions<a class="headerlink" href="#speculatively-set-a-name-for-the-functions" title="Link to this heading">¶</a></h3>
 <p>Try to name functions without symbols by using artifacts in the functions such as API calls and strings.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.autoname</span></code></p>
 </section>
 <section id="search-for-new-functions-following-already-defined-functions">
-<h3>Search for new functions following already defined functions<a class="headerlink" href="#search-for-new-functions-following-already-defined-functions" title="Permalink to this heading">¶</a></h3>
+<h3>Search for new functions following already defined functions<a class="headerlink" href="#search-for-new-functions-following-already-defined-functions" title="Link to this heading">¶</a></h3>
 <p>Cutter will check if there is a candidate for a new function following an already defined one, as the compiler usually
 state them together. This option is taking the advantages of both Recursive Analysis and Linear Sweep into some kind of a hybrid mode. For each discovered function, the analysis will try to check for a function-prologue, usually following a gap of null bytes or <code class="docutils literal notranslate"><span class="pre">cc</span></code> bytes. This will help with discovering functions which are not referenced in the program. As such, it will make the analysis slower and prone to false-positives.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.hasnext</span></code></p>
 </section>
 <section id="create-references-for-unconditional-jumps">
-<h3>Create references for unconditional jumps<a class="headerlink" href="#create-references-for-unconditional-jumps" title="Permalink to this heading">¶</a></h3>
+<h3>Create references for unconditional jumps<a class="headerlink" href="#create-references-for-unconditional-jumps" title="Link to this heading">¶</a></h3>
 <p>When encountering unconditional jumps during the analysis, Cutter will add a code-reference even if it is not guaranteed
 that the jump will take place.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.jmp.ref</span></code></p>
 </section>
 <section id="analyze-jump-tables-in-switch-statements">
-<h3>Analyze jump tables in switch statements<a class="headerlink" href="#analyze-jump-tables-in-switch-statements" title="Permalink to this heading">¶</a></h3>
+<h3>Analyze jump tables in switch statements<a class="headerlink" href="#analyze-jump-tables-in-switch-statements" title="Link to this heading">¶</a></h3>
 <p>When encountering switch statements during analysis, continue and analyze the target blocks of the jump tables.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.jmp.tbl</span></code></p>
 </section>
 <section id="analyze-push-ret-as-jmp">
-<h3>Analyze <code class="docutils literal notranslate"><span class="pre">push</span></code> + <code class="docutils literal notranslate"><span class="pre">ret</span></code> as <code class="docutils literal notranslate"><span class="pre">jmp</span></code><a class="headerlink" href="#analyze-push-ret-as-jmp" title="Permalink to this heading">¶</a></h3>
+<h3>Analyze <code class="docutils literal notranslate"><span class="pre">push</span></code> + <code class="docutils literal notranslate"><span class="pre">ret</span></code> as <code class="docutils literal notranslate"><span class="pre">jmp</span></code><a class="headerlink" href="#analyze-push-ret-as-jmp" title="Link to this heading">¶</a></h3>
 <p>When performing analysis of a function, treat the sequence of <code class="docutils literal notranslate"><span class="pre">push</span></code> followed by <code class="docutils literal notranslate"><span class="pre">ret</span></code> instruction as a <code class="docutils literal notranslate"><span class="pre">jmp</span></code>.
 This can help Cutter to continue the analysis to target of the <code class="docutils literal notranslate"><span class="pre">jmp</span></code>.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.pushret</span></code></p>
 </section>
 <section id="show-verbose-information-when-performing-analysis">
-<h3>Show verbose information when performing analysis<a class="headerlink" href="#show-verbose-information-when-performing-analysis" title="Permalink to this heading">¶</a></h3>
+<h3>Show verbose information when performing analysis<a class="headerlink" href="#show-verbose-information-when-performing-analysis" title="Link to this heading">¶</a></h3>
 <p>When enabled, Cutter will print warnings it encountered while preforming analysis. These warnings can help the user
 understand if anything went wrong in the analysis. This function is not only helpful when trying to perform a full
 analysis of the program, but also when trying to analyze and define new functions.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.verbose</span></code></p>
 </section>
 <section id="verbose-output-from-type-analysis">
-<h3>Verbose output from type analysis<a class="headerlink" href="#verbose-output-from-type-analysis" title="Permalink to this heading">¶</a></h3>
+<h3>Verbose output from type analysis<a class="headerlink" href="#verbose-output-from-type-analysis" title="Link to this heading">¶</a></h3>
 <p>Print warnings encountered while preforming type analysis. These warnings can help the user understand if anything went
 wrong in the analysis.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.types.verbose</span></code></p>
 </section>
 <section id="pointer-depth">
-<h3>Pointer depth<a class="headerlink" href="#pointer-depth" title="Permalink to this heading">¶</a></h3>
+<h3>Pointer depth<a class="headerlink" href="#pointer-depth" title="Link to this heading">¶</a></h3>
 <p>The maximum number of nested pointers to follow in analysis.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.ptrdepth</span></code></p>
 </section>
 <section id="functions-prelude">
-<h3>Functions prelude<a class="headerlink" href="#functions-prelude" title="Permalink to this heading">¶</a></h3>
+<h3>Functions prelude<a class="headerlink" href="#functions-prelude" title="Link to this heading">¶</a></h3>
 <p>Hex value that represents certain opcodes that will be used to identify functions.</p>
 <p><strong>Configuration variable:</strong> <code class="docutils literal notranslate"><span class="pre">analysis.prelude</span></code></p>
 </section>
@@ -182,8 +181,8 @@ wrong in the analysis.</p>
 
     
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.3.
     </div>
     
 

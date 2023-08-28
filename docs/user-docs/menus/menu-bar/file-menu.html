@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>File Menu &#8212; Cutter 2.2.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css" />
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/cutter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../../_static/documentation_options.js?v=b21de401"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Edit Menu" href="edit-menu.html" />
@@ -54,65 +53,65 @@
           <div class="body" role="main">
             
   <section id="file-menu">
-<h1>File Menu<a class="headerlink" href="#file-menu" title="Permalink to this heading">¶</a></h1>
+<h1>File Menu<a class="headerlink" href="#file-menu" title="Link to this heading">¶</a></h1>
 <section id="new-instance-of-cutter">
-<h2>New Instance of Cutter<a class="headerlink" href="#new-instance-of-cutter" title="Permalink to this heading">¶</a></h2>
+<h2>New Instance of Cutter<a class="headerlink" href="#new-instance-of-cutter" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Open a new instance of Cutter to start a new session. This option will open a new window of Cutter without exiting the current session.</p>
 <p><strong>Steps:</strong> File -&gt; New Window</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">N</kbd></p>
 </section>
 <section id="map-a-new-file">
-<h2>Map a New File<a class="headerlink" href="#map-a-new-file" title="Permalink to this heading">¶</a></h2>
+<h2>Map a New File<a class="headerlink" href="#map-a-new-file" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Cutter allows you to map the contents of other files into the same I/O space used to contain the loaded binary. The new contents can be placed at random or specific offsets.
 Specifically, Cutter is able to open files and map portions of them at random or specific places in memory. It is the perfect basic tooling to reproduce an environment like a core file, a debug session, or a framework by also loading and mapping all the libraries and files the binary depends on.</p>
 <p><strong>Steps:</strong> File -&gt; Map File</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">M</kbd></p>
 </section>
 <section id="import-a-pdb-file">
-<h2>Import a PDB File<a class="headerlink" href="#import-a-pdb-file" title="Permalink to this heading">¶</a></h2>
+<h2>Import a PDB File<a class="headerlink" href="#import-a-pdb-file" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Cutter allows you to load additional debugging information by loading external PDB files. Unlike other platforms, Cutter does not rely on Windows API to parse a PDB files, thus they can be loaded on any other supported platform like Linux or macOS.</p>
 <p><strong>Steps:</strong> File -&gt; Import PDB</p>
 </section>
 <section id="enable-write-mode">
-<h2>Enable Write Mode<a class="headerlink" href="#enable-write-mode" title="Permalink to this heading">¶</a></h2>
+<h2>Enable Write Mode<a class="headerlink" href="#enable-write-mode" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> This option will enable Write mode and allow you to patch and edit the binary on disk. <strong>Please note</strong> that when Write mode is enabled, each change you make to the binary in Cutter will be applied to the original file on disk. In order not to take unnecessary risks, consider using Cache mode instead.</p>
 <p><strong>Steps:</strong> File -&gt; Set mode -&gt; Write mode</p>
 </section>
 <section id="enable-cache-mode">
-<h2>Enable Cache Mode<a class="headerlink" href="#enable-cache-mode" title="Permalink to this heading">¶</a></h2>
+<h2>Enable Cache Mode<a class="headerlink" href="#enable-cache-mode" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> This option will enable Cache mode and allow you to patch and edit the binary <strong>without</strong> applying the changes to the file on disk. Unlike in Write mode, in Cache mode, the changes you make to the binary in Cutter will not be applied to the original file on disk unless you specifically committing them using the “Commit changes” menu item. This is safer than using Write mode because there is no risk to lose important data.</p>
 <p><strong>Steps:</strong> File -&gt; Set mode -&gt; Cache mode</p>
 </section>
 <section id="enable-read-only-mode">
-<h2>Enable Read-Only Mode<a class="headerlink" href="#enable-read-only-mode" title="Permalink to this heading">¶</a></h2>
+<h2>Enable Read-Only Mode<a class="headerlink" href="#enable-read-only-mode" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> This option is available when files are opened in Write or Cache modes. When Read-Only mode is enabled, no patches and editions to the file are allowed. This is the default mode for files in Cutter, unless specified otherwise by the user, by either enabling Write or Cache mode.</p>
 <p><strong>Steps:</strong> File -&gt; Set mode -&gt; Read-Only mode</p>
 </section>
 <section id="commit-changes-from-cache">
-<h2>Commit Changes from Cache<a class="headerlink" href="#commit-changes-from-cache" title="Permalink to this heading">¶</a></h2>
+<h2>Commit Changes from Cache<a class="headerlink" href="#commit-changes-from-cache" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Apply the changes performed in Cache mode to the file on disk. Cache mode will not apply the changes and patches made unless the user clicks “Commit changes”. To automatically apply every change to the file on disk, use the less-safer Write mode.</p>
 <p><strong>Steps:</strong> File -&gt; Commit changes</p>
 </section>
 <section id="save-project">
-<h2>Save Project<a class="headerlink" href="#save-project" title="Permalink to this heading">¶</a></h2>
+<h2>Save Project<a class="headerlink" href="#save-project" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Save your session to a project. If no project file assigned to your session, the “Save as…” dialog will open.</p>
 <p><strong>Steps:</strong> File -&gt; Save</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd></p>
 </section>
 <section id="save-project-as">
-<h2>Save Project as…<a class="headerlink" href="#save-project-as" title="Permalink to this heading">¶</a></h2>
+<h2>Save Project as…<a class="headerlink" href="#save-project-as" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Save the current state of your session, including function names, comments, and more.
 <strong>Note:</strong> This feature is currently in <a href="#id1"><span class="problematic" id="id2">`Beta&lt;https://rizin.re/posts/introducing-projects/&gt;`_</span></a>.</p>
 <p><strong>Steps:</strong> File -&gt; Save As…</p>
 </section>
 <section id="export-to-code">
-<h2>Export to Code<a class="headerlink" href="#export-to-code" title="Permalink to this heading">¶</a></h2>
+<h2>Export to Code<a class="headerlink" href="#export-to-code" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Export the entire binary in different formats that later can be used in your favorite programming language. The feature supports many formats such as Python arrays, java, several C array formats, javascript, and more.
 <strong>*Note:</strong> This isn’t a decompilation feature.*</p>
 <p><strong>Steps:</strong> File -&gt; Export as code</p>
 </section>
 <section id="run-a-rizin-script">
-<h2>Run a Rizin Script<a class="headerlink" href="#run-a-rizin-script" title="Permalink to this heading">¶</a></h2>
+<h2>Run a Rizin Script<a class="headerlink" href="#run-a-rizin-script" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Cutter allows you to execute Rizin scripts to automate task or transfer information. Rizin scripts are files that contain list of Rizin commands. The scripts can be created manually by you, or automatically generated by Rizin commands (which typically end with a star character. e.g. <code class="docutils literal notranslate"><span class="pre">afl*</span></code>).</p>
 <p>Such a script can look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>?e hello world
@@ -123,7 +122,7 @@ pdf @ main
 <p><strong>Steps:</strong> File -&gt; Run Rizin script</p>
 </section>
 <section id="quit-cutter">
-<h2>Quit Cutter<a class="headerlink" href="#quit-cutter" title="Permalink to this heading">¶</a></h2>
+<h2>Quit Cutter<a class="headerlink" href="#quit-cutter" title="Link to this heading">¶</a></h2>
 <p><strong>Description:</strong> Quit and exit your current session of Cutter. On exit, you’ll be asked whether you want to save your session in order to avoid losing data.</p>
 <p><strong>Steps:</strong> File -&gt; Quit</p>
 <p><strong>Shortcut:</strong> <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Q</kbd></p>
@@ -190,8 +189,8 @@ pdf @ main
 
     
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.3.
     </div>
     
 
