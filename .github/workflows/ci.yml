@@ -33,4 +33,4 @@ jobs:
           publish_dir: ./_site
           cname: cutter.re
           force_orphan: true
-          exclude_assets: ".bundle,.sass-cache,Gemfile*,.gitignore,.github"
+          exclude_assets: ".bundle,.sass-cache,Gemfile*,.gitignore,.github,README.md"
