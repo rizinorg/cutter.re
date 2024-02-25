@@ -1,4 +1,0 @@
-JSDecDecompiler
-===============
-
-.. doxygenclass:: JSDecDecompiler
