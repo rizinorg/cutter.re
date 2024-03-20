@@ -664,6 +664,9 @@ small,
 .social-color3 {
   color: #29a8eb; }
 
+.social-color4 {
+  color: #563ACC; }
+
 div[class*="-wrapper"] {
   position: relative;
   z-index: 3; }
