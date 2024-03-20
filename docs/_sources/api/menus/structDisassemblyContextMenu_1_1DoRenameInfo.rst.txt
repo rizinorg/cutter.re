@@ -1,0 +1,4 @@
+DisassemblyContextMenu::DoRenameInfo
+====================================
+
+.. doxygenstruct:: DisassemblyContextMenu::DoRenameInfo

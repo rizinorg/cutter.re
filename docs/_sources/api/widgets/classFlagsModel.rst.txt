@@ -1,0 +1,4 @@
+FlagsModel
+==========
+
+.. doxygenclass:: FlagsModel
