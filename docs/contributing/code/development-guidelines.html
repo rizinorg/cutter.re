@@ -68,29 +68,6 @@ across the whole process. To access it, simply call <code class="docutils litera
 </pre></div>
 </div>
 </section>
-<section id="calling-a-rizin-command">
-<h3>Calling a Rizin Command<a class="headerlink" href="#calling-a-rizin-command" title="Link to this heading">¶</a></h3>
-<p>There are multiple ways to call a Rizin command:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdj(&lt;command&gt;)</span></code> - To be used with json commands like <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;agj&quot;)</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdj(&quot;aflj&quot;)</span></code>.
-This is the command we used to fetch structured data from Rizin.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRaw(&lt;command&gt;)</span></code> - Executes a single Rizin command
-without going through Rizin shell functionality like output redirects, grep, and multiple command parsing.</p></li>
-</ul>
-<p>The command then returns its output. This should be used when a command doesn’t have output or the output should be handled as-is. If possible, using the JSON variation with <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> is always preferred.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmdRawAt(&lt;command&gt;,</span> <span class="pre">&lt;address&gt;)</span></code> - Executes a single Rizin command in a given address and returns the output. This helps avoiding weird strings concatenation like <code class="docutils literal notranslate"><span class="pre">cmd(&quot;ph</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">hash</span> <span class="pre">+</span> <span class="pre">&quot;</span> <span class="pre">&#64;</span> <span class="pre">&quot;</span> <span class="pre">+</span> <span class="pre">QString::num(address))</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CutterCore::cmd()</span></code> - <em>(Discouraged)</em> Only use it when <code class="docutils literal notranslate"><span class="pre">cmdj</span></code> or <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code> cannot be used. This is used for complex commands using concatenation of several commands (<code class="docutils literal notranslate"><span class="pre">px</span> <span class="pre">5;</span> <span class="pre">pd</span> <span class="pre">7;</span> <span class="pre">afl;</span></code>), for grepping (<code class="docutils literal notranslate"><span class="pre">pd</span> <span class="pre">5~call</span></code>). for commands inside commands (<code class="docutils literal notranslate"><span class="pre">?e</span> <span class="pre">`afn.`</span></code>) and so on.
-This is also used when the output is complex and is not parsed correctly in <code class="docutils literal notranslate"><span class="pre">cmdRaw</span></code>.
-Make sure to carefully sanitize user-controlled variables that are passed to the command, to avoid unexpected command injections.</p></li>
-</ul>
-<p>Generally, if one needs to retrieve information from a Rizin command, it
-is preferred to use the JSON API.</p>
-<p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CutterJson</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">cmdj</span><span class="p">(</span><span class="s">&quot;pdj 1 @ main&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
 <section id="seek-the-current-file">
 <h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Link to this heading">¶</a></h3>
 <p>To modify Rizin seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
