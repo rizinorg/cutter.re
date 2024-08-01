@@ -229,7 +229,7 @@ Additional components can be later added or removed through the VS installer whi
 <li><p>Check options that you want Cutter to be built with, or leave it as-is for the default options.</p></li>
 <li><p>If you are using vcpkg, Visual Studio should detect it automatically. The list of CMake options in the configurator should have some referring to vcpkg. If they are not there, specify the path to vcpkg toolchain file in the <span class="guilabel">CMake toolchain file</span> field.</p></li>
 <li><p>If you are not using vcpkg, configure the path to Qt as mentioned in <a class="reference internal" href="../../building.html#building-on-windows"><span class="std std-ref">windows CMake instructions</span></a>. You can specify the CMake flag in <span class="guilabel">CMake command arguments:</span> field.</p></li>
-<li><p>To Ensure that VS debugger can display Qt types in a readable way, it is recommended to install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019">Qt Visual Studio Tools</a> plugin. It will create a <code class="file docutils literal notranslate"><span class="pre">Documents/Visual</span> <span class="pre">Studio</span> <span class="pre">2019/Visualizers/qt5.natvis</span></code> file. Once <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code> has been created you can uninstall the plugin.</p></li>
+<li><p>To Ensure that VS debugger can display Qt types in a readable way, it is recommended to install <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2019">Qt Visual Studio Tools</a> plugin. It will create a <code class="file docutils literal notranslate"><span class="pre">Documents/Visual</span> <span class="pre">Studio</span> <span class="pre">2019/Visualizers/qt6.natvis</span></code> file. Once <code class="file docutils literal notranslate"><span class="pre">qt6.natvis</span></code> has been created you can uninstall the plugin.</p></li>
 </ul>
 </section>
 <section id="id17">
@@ -244,7 +244,7 @@ Additional components can be later added or removed through the VS installer whi
 <h3>Editing Qt .ui files and Qt integration<a class="headerlink" href="#editing-qt-ui-files-and-qt-integration" title="Link to this heading">¶</a></h3>
 <p>By default Visual Studio will open <code class="docutils literal notranslate"><span class="pre">.ui</span></code> files as XML text documents. You can configure to open it using Qt Designer by right-clicking and selecting <span class="guilabel">Open With…</span>.</p>
 <p>There is a  Qt plugin for Visual Studio from Qt. It isn’t very useful for Cutter development since it is aimed more at helping with Qt integration into Visual Studio projects.
-It doesn’t do much for CMake based projects. The biggest benefit is that it automatically installs <code class="file docutils literal notranslate"><span class="pre">qt5.natvis</span></code> file for more readable displaying of Qt types in the debugger.</p>
+It doesn’t do much for CMake based projects. The biggest benefit is that it automatically installs <code class="file docutils literal notranslate"><span class="pre">qt6.natvis</span></code> file for more readable displaying of Qt types in the debugger.</p>
 </section>
 </section>
 </section>

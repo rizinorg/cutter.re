@@ -86,33 +86,27 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <li><p>meson</p></li>
 <li><p>libzip-dev</p></li>
 <li><p>libzlib-dev</p></li>
-<li><p>qt5</p></li>
-<li><p>qt5-svg</p></li>
+<li><p>qt6</p></li>
+<li><p>qt6-svg</p></li>
 <li><p>pkgconf</p></li>
 <li><p>curl*</p></li>
 <li><p>python-setuptools*</p></li>
 <li><p>KSyntaxHighlighter**</p></li>
 <li><p>graphviz**</p></li>
+<li><p>shiboken6**</p></li>
+<li><p>pyside6**</p></li>
 </ul>
 <blockquote>
 <div><p><cite>*</cite> Recommended while building with <code class="docutils literal notranslate"><span class="pre">make</span></code>/<code class="docutils literal notranslate"><span class="pre">Cmake</span></code>.</p>
 <p><cite>**</cite> Optional. If present, these add extra features to Cutter. See <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
 </div></blockquote>
 <p>On Debian-based Linux distributions, all of these essential packages can be installed with this single command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt5</span><span class="o">-</span><span class="n">default</span> <span class="n">libqt5svg5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">pkgconf</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span> <span class="n">libqt6svg6</span><span class="o">-</span><span class="n">dev</span> <span class="n">libqt6core5compat6</span><span class="o">-</span><span class="n">dev</span> <span class="n">libqt6svgwidgets6</span> <span class="n">qt6</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">tools</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>On Debian 11 (bullseye) and higher or Ubuntu 22.04 (Jammy) and higher, replace <code class="docutils literal notranslate"><span class="pre">qt5-default</span></code> above with <code class="docutils literal notranslate"><span class="pre">qtbase5-dev</span></code>.</p>
-</div>
 <p>Depending on your configuration you’ll might also need the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libkf5syntaxhighlighting</span><span class="o">-</span><span class="n">dev</span>
-<span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgraphviz</span><span class="o">-</span><span class="n">dev</span>
-<span class="c1"># when building with CUTTER_ENABLE_PYTHON_BINDINGS</span>
-<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libshiboken2</span><span class="o">-</span><span class="n">dev</span> <span class="n">libpyside2</span><span class="o">-</span><span class="n">dev</span>  <span class="n">qtdeclarative5</span><span class="o">-</span><span class="n">dev</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -120,18 +114,23 @@ under <strong>cutter</strong> and you should see the following dir structure:</p
 <p>For Ubuntu 20.04 and lower (or in any case you get an error <code class="docutils literal notranslate"><span class="pre">Meson</span> <span class="pre">version</span> <span class="pre">is</span> <span class="pre">x</span> <span class="pre">but</span> <span class="pre">project</span> <span class="pre">requires</span> <span class="pre">&gt;=y</span></code>), <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
 </div>
 <p>On Arch-based Linux distributions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt6</span><span class="o">-</span><span class="n">base</span> <span class="n">qt6</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span>
+
+<span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
 <span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span>
 <span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
 <span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">graphviz</span>
-
-<span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">base</span> <span class="n">qt5</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt5</span><span class="o">-</span><span class="n">tools</span>
+<span class="c1"># When building with CUTTER_ENABLE_PYTHON and CUTTER_ENABLE_PYTHON_BINDINGS</span>
+<span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">pyside6</span> <span class="n">shiboken6</span>
 </pre></div>
 </div>
 <p>On dnf/yum based distributions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gcc</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span> <span class="n">make</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt5</span><span class="o">-</span><span class="n">qtbase</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt5</span><span class="o">-</span><span class="n">qtsvg</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt5</span><span class="o">-</span><span class="n">qttools</span><span class="o">-</span><span class="n">devel</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gcc</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span> <span class="n">make</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qtbase</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qtsvg</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qttools</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qt5compat</span><span class="o">-</span><span class="n">devel</span>
+<span class="c1"># Optional packages</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">graphviz</span><span class="o">-</span><span class="n">devel</span> <span class="n">kf6</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span><span class="o">-</span><span class="n">devel</span> <span class="n">python3</span><span class="o">-</span><span class="n">devel</span> <span class="n">shiboken6</span> <span class="n">python3</span><span class="o">-</span><span class="n">pyside6</span><span class="o">-</span><span class="n">devel</span> <span class="n">clang</span>
 </pre></div>
 </div>
+<p>On older Linux systems not supported by QT6 you can use Qt 5.15. Use of Qt5 on operating systems other than Linux is untested.</p>
 </section>
 <section id="building-steps">
 <h3>Building Steps<a class="headerlink" href="#building-steps" title="Link to this heading">¶</a></h3>
@@ -187,12 +186,12 @@ It should be possible to compile Cutter plugins against proper Cutter installati
 <h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Link to this heading">¶</a></h2>
 <section id="id1">
 <h3>Requirements<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
-<p>Cutter works on Windows 7 or newer.
+<p>Cutter works on Windows 10 or newer.
 To compile Cutter it is necessary to have the following installed:</p>
 <ul class="simple">
-<li><p>A version of <a class="reference external" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=16">Visual Studio</a> (2015, 2017 and 2019 are supported)</p></li>
+<li><p>A version of <a class="reference external" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=16">Visual Studio</a> (2019 or newer)</p></li>
 <li><p><a class="reference external" href="https://cmake.org/download/">CMake</a></p></li>
-<li><p><a class="reference external" href="https://www.qt.io/download-qt-installer">Qt 5</a></p></li>
+<li><p><a class="reference external" href="https://www.qt.io/download-qt-installer">Qt 6</a>  See <a class="reference internal" href="contributing/code/ide-setup.html"><span class="doc">development environment setup</span></a> for alternative ways of obtaining Qt that don’t require Qt account.</p></li>
 <li><p><a class="reference external" href="https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip">Meson</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ninja-build/ninja/releases/latest">Ninja</a></p></li>
 </ul>
@@ -214,11 +213,8 @@ executing the following commands.</p>
 </pre></div>
 </div>
 <p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># First, set CMAKE_PREFIX_PATH to Qt5 intallation prefix</span>
-<span class="nv">$Env:CMAKE_PREFIX_PATH</span> <span class="p">=</span> <span class="s2">&quot;C:\Qt\5.15.2\msvc2019_64\lib\cmake\Qt5&quot;</span>
-
-<span class="c"># Then, add the following directory to your PATH</span>
-<span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\Qt\5.15.2\msvc2019_64\bin&quot;</span>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Add the following directory to your PATH</span>
+<span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\Qt\6.7.2\msvc2019_64\bin&quot;</span>
 
 <span class="c"># Build Cutter</span>
 <span class="n">cmake</span> <span class="n">-B</span> <span class="n">build</span>
@@ -240,7 +236,7 @@ executing the following commands.</p>
 <li><p>ninja</p></li>
 </ul>
 <p>For basic build all dependencies except XCode can be installed using homebrew:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">qt5</span> <span class="n">meson</span> <span class="n">ninja</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">qt6</span> <span class="n">meson</span> <span class="n">ninja</span>
 </pre></div>
 </div>
 </section>
@@ -248,7 +244,7 @@ executing the following commands.</p>
 <h3>Recommended Way for dev builds<a class="headerlink" href="#recommended-way-for-dev-builds" title="Link to this heading">¶</a></h3>
 <div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> build
 <span class="k">cd</span> build
-cmake .. -DCMAKE_PREFIX_PATH=/usr/local/opt/qt5
+cmake .. -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt6
 make
 </pre></div>
 </div>
@@ -260,17 +256,19 @@ make
 <p>Note that there are some major building options available:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule (Enabled by default).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support, required for Python plugins.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken, required for Python plugins!</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> enable Graphviz for graph layouts.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> List of addition plugin locations. Useful when preparing package for Linux distros that have strict package layout rules.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_QT</span></code> Qt major version to use. Defaults to 6. Allowed values: 5, 6.</p></li>
 </ul>
 <p>Cutter binary release options, not needed for most users and might not work easily outside CI environment:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by Rizin build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packages.</p></li>
 </ul>
+<p>For full list of Cutter specific build options and their description see CMakeCache.txt after configuring the project or use a graphical CMake configurator if your IDE provides one.</p>
 <p>These options can be enabled or disabled from the command line arguments passed to CMake.
 For example, to build Cutter with support for Python plugins, you can run this command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON_BINDINGS</span><span class="o">=</span><span class="n">ON</span>
@@ -345,14 +343,6 @@ encounter any problems.</p>
 <img alt="_images/cutter_path_settings.png" src="_images/cutter_path_settings.png" />
 <p>You can also install Rizin into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
 add a variable <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> with the value <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code>.</p>
-<ul class="simple">
-<li><p><strong>macOS libjpeg error</strong></p></li>
-</ul>
-<p>On macOS, Qt5 apps fail to build on QtCreator if you have the <code class="docutils literal notranslate"><span class="pre">libjpeg</span></code>
-installed with brew. Run this command to work around the issue:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mv</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libjpeg</span><span class="o">.</span><span class="n">dylib</span><span class="o">.</span><span class="ow">not</span><span class="o">-</span><span class="n">found</span>
-</pre></div>
-</div>
 </section>
 </section>
 
