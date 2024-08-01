@@ -1,0 +1,4 @@
+ThreadsWidget
+=============
+
+.. doxygenclass:: ThreadsWidget
