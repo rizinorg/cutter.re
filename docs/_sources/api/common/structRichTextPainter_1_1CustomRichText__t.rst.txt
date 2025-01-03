@@ -1,0 +1,4 @@
+RichTextPainter::CustomRichText_t
+=================================
+
+.. doxygenstruct:: RichTextPainter::CustomRichText_t
