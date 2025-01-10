@@ -57,7 +57,9 @@
 <dt class="sig sig-object cpp" id="_CPPv4I00E15SegmentTreeBase">
 <span id="_CPPv3I00E15SegmentTreeBase"></span><span id="_CPPv2I00E15SegmentTreeBase"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeTypeT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FinalType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classSegmentTreeBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SegmentTreeBase</span></span></span><a class="headerlink" href="#_CPPv4I00E15SegmentTreeBase" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Not really a segment tree for storing segments as referred in academic literature. Can be considered a full, almost perfect, augmented binary tree. In the context of competitive programming often called segment tree.</p>
-<p>Child classes are expected to implement updateFromChildren(NodeType&amp;parent, NodeType&amp; left, NodeType&amp; right) method which calculates inner node values from children nodes.</p>
+<p><p>Child classes are expected to implement updateFromChildren(NodeType&amp;parent, NodeType&amp; left,</p>
+<p>NodeType&amp; right) method which calculates inner node values from children nodes.</p>
+</p>
 <dl class="field-list simple">
 <dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
