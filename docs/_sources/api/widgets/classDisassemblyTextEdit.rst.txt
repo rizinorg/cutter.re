@@ -1,0 +1,4 @@
+DisassemblyTextEdit
+===================
+
+.. doxygenclass:: DisassemblyTextEdit
