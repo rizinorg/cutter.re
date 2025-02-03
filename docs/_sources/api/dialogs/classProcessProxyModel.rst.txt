@@ -1,0 +1,4 @@
+ProcessProxyModel
+=================
+
+.. doxygenclass:: ProcessProxyModel

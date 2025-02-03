@@ -1,0 +1,4 @@
+CutterGraphView
+===============
+
+.. doxygenclass:: CutterGraphView

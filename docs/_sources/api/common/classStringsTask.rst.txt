@@ -1,0 +1,4 @@
+StringsTask
+===========
+
+.. doxygenclass:: StringsTask

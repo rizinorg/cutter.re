@@ -1,0 +1,4 @@
+CutterTreeView
+==============
+
+.. doxygenclass:: CutterTreeView

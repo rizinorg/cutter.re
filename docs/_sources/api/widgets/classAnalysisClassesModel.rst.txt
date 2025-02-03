@@ -1,0 +1,4 @@
+AnalysisClassesModel
+====================
+
+.. doxygenclass:: AnalysisClassesModel
