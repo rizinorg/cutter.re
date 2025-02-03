@@ -1163,7 +1163,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore17getProcessThreadsEi">
-<span id="_CPPv3N10CutterCore17getProcessThreadsEi"></span><span id="_CPPv2N10CutterCore17getProcessThreadsEi"></span><span id="CutterCore::getProcessThreads__i"></span><span class="target" id="classCutterCore_1acf8ca91c6853a733db4fda42704a70d9"></span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structProcessDescription.html#_CPPv418ProcessDescription" title="ProcessDescription"><span class="n"><span class="pre">ProcessDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getProcessThreads</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pid</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore17getProcessThreadsEi" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N10CutterCore17getProcessThreadsEi"></span><span id="_CPPv2N10CutterCore17getProcessThreadsEi"></span><span id="CutterCore::getProcessThreads__i"></span><span class="target" id="classCutterCore_1ab6d37ecd07e891b4fe470c3ef10501d8"></span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structThreadDescription.html#_CPPv417ThreadDescription" title="ThreadDescription"><span class="n"><span class="pre">ThreadDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getProcessThreads</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore17getProcessThreadsEi" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Get a list of a given process’s threads. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1751,9 +1751,18 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore15getAllProcessesEv">
-<span id="_CPPv3N10CutterCore15getAllProcessesEv"></span><span id="_CPPv2N10CutterCore15getAllProcessesEv"></span><span id="CutterCore::getAllProcesses"></span><span class="target" id="classCutterCore_1ab0805a564ac987514b53042993534d63"></span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structProcessDescription.html#_CPPv418ProcessDescription" title="ProcessDescription"><span class="n"><span class="pre">ProcessDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAllProcesses</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore15getAllProcessesEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12getProcessesEi">
+<span id="_CPPv3N10CutterCore12getProcessesEi"></span><span id="_CPPv2N10CutterCore12getProcessesEi"></span><span id="CutterCore::getProcesses__i"></span><span class="target" id="classCutterCore_1a74be0aff072147a4d86acafc0fe18c75"></span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structProcessDescription.html#_CPPv418ProcessDescription" title="ProcessDescription"><span class="n"><span class="pre">ProcessDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getProcesses</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pid</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12getProcessesEi" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get list of processes attachable by debugger. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pid</strong> – 0 - all processes, -1 - currently debugged process </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>QList&lt;ProcessDescription&gt; </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore6getRegEv">
@@ -2296,6 +2305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structSegmentDescription.html">SegmentDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structStringDescription.html">StringDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSymbolDescription.html">SymbolDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structThreadDescription.html">ThreadDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structTypeDescription.html">TypeDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structVTableDescription.html">VTableDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structVariableDescription.html">VariableDescription</a></li>

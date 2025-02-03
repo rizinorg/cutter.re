@@ -1,4 +1,0 @@
-ThreadsFilterModel
-==================
-
-.. doxygenclass:: ThreadsFilterModel

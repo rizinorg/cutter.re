@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ThreadsFilterModel &#8212; Cutter 2.4.0 documentation</title>
+    <title>ThreadModel &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -41,7 +41,7 @@
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">ThreadsFilterModel</a></li> 
+        <li class="nav-item nav-item-this"><a href="">ThreadModel</a></li> 
       </ul>
     </div>
 
@@ -51,16 +51,90 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="threadsfiltermodel">
-<h1>ThreadsFilterModel<a class="headerlink" href="#threadsfiltermodel" title="Link to this heading">¶</a></h1>
+  <section id="threadmodel">
+<h1>ThreadModel<a class="headerlink" href="#threadmodel" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv418ThreadsFilterModel">
-<span id="_CPPv318ThreadsFilterModel"></span><span id="_CPPv218ThreadsFilterModel"></span><span id="ThreadsFilterModel"></span><span class="target" id="classThreadsFilterModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadsFilterModel</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QSortFilterProxyModel</span></span><a class="headerlink" href="#_CPPv418ThreadsFilterModel" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv411ThreadModel">
+<span id="_CPPv311ThreadModel"></span><span id="_CPPv211ThreadModel"></span><span id="ThreadModel"></span><span class="target" id="classThreadModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThreadModel</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QAbstractListModel</span></span><a class="headerlink" href="#_CPPv411ThreadModel" title="Link to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndexE">
+<span id="_CPPv3N11ThreadModel11ColumnIndexE"></span><span id="_CPPv2N11ThreadModel11ColumnIndexE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColumnIndex</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndexE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex10COLUMN_PIDE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex10COLUMN_PIDE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex10COLUMN_PIDE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6a7cfdbc76c5872c3bc2e1401591319d48"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_PID</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex10COLUMN_PIDE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex13COLUMN_STATUSE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex13COLUMN_STATUSE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex13COLUMN_STATUSE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6afe08de4f472802e7a19dc2543bd4e703"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_STATUS</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex13COLUMN_STATUSE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex11COLUMN_PATHE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex11COLUMN_PATHE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex11COLUMN_PATHE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6a03b4b5d89338f79857c3fee6e3365524"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_PATH</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex11COLUMN_PATHE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex9COLUMN_PCE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex9COLUMN_PCE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex9COLUMN_PCE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6aa18764f60cf6c29cf5ca8f790908f6bc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_PC</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex9COLUMN_PCE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex10COLUMN_TLSE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex10COLUMN_TLSE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex10COLUMN_TLSE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6a752abd7f0a47032ba4df6001cf928c07"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_TLS</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex10COLUMN_TLSE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ColumnIndex12COLUMN_COUNTE">
+<span id="_CPPv3N11ThreadModel11ColumnIndex12COLUMN_COUNTE"></span><span id="_CPPv2N11ThreadModel11ColumnIndex12COLUMN_COUNTE"></span><span class="target" id="classThreadModel_1a61291bbcb27827d09f10667624a38ca6a0835d7e026f9cc1ec9610147fbc51dd4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">COLUMN_COUNT</span></span></span><a class="headerlink" href="#_CPPv4N11ThreadModel11ColumnIndex12COLUMN_COUNTE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N18ThreadsFilterModel18ThreadsFilterModelEP7QObject">
-<span id="_CPPv3N18ThreadsFilterModel18ThreadsFilterModelEP7QObject"></span><span id="_CPPv2N18ThreadsFilterModel18ThreadsFilterModelEP7QObject"></span><span id="ThreadsFilterModel::ThreadsFilterModel__QObjectP"></span><span class="target" id="classThreadsFilterModel_1ac76b63c6b47aaa760cf6632afa4b626c"></span><span class="sig-name descname"><span class="n"><span class="pre">ThreadsFilterModel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18ThreadsFilterModel18ThreadsFilterModelEP7QObject" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel11ThreadModelEP7QObject">
+<span id="_CPPv3N11ThreadModel11ThreadModelEP7QObject"></span><span id="_CPPv2N11ThreadModel11ThreadModelEP7QObject"></span><span id="ThreadModel::ThreadModel__QObjectP"></span><span class="target" id="classThreadModel_1a1319a1463819b20cfe9b586244637ff1"></span><span class="sig-name descname"><span class="n"><span class="pre">ThreadModel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ThreadModel11ThreadModelEP7QObject" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK11ThreadModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK11ThreadModel8rowCountERK11QModelIndex"></span><span id="ThreadModel::rowCount__QModelIndexCRC"></span><span class="target" id="classThreadModel_1a4b9138ece0b89dfa3429de5d40e8a0e6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rowCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel8rowCountERK11QModelIndex" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK11ThreadModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK11ThreadModel11columnCountERK11QModelIndex"></span><span id="ThreadModel::columnCount__QModelIndexCRC"></span><span class="target" id="classThreadModel_1ad5f2b85c377e6e654719edb7e317868a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">columnCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel11columnCountERK11QModelIndex" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK11ThreadModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK11ThreadModel4dataERK11QModelIndexi"></span><span id="ThreadModel::data__QModelIndexCR.iC"></span><span class="target" id="classThreadModel_1a072c80181766b4c453e15c6a4c47f571"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel4dataERK11QModelIndexi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK11ThreadModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK11ThreadModel10headerDataEiN2Qt11OrientationEi"></span><span id="ThreadModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classThreadModel_1aa41fb46fe74021797591b2529f4af773"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">headerData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">section</span></span>, <span class="n"><span class="pre">Qt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Orientation</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">orientation</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Qt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DisplayRole</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel10headerDataEiN2Qt11OrientationEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11ThreadModel7setListE5QListI17ThreadDescriptionE">
+<span id="_CPPv3N11ThreadModel7setListE5QListI17ThreadDescriptionE"></span><span id="_CPPv2N11ThreadModel7setListE5QListI17ThreadDescriptionE"></span><span id="ThreadModel::setList__QList:ThreadDescription:"></span><span class="target" id="classThreadModel_1a5ce3be0ac06efda1f6316dafb353c74d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setList</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../core/structThreadDescription.html#_CPPv417ThreadDescription" title="ThreadDescription"><span class="n"><span class="pre">ThreadDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11ThreadModel7setListE5QListI17ThreadDescriptionE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel11descriptionERK11QModelIndex">
+<span id="_CPPv3NK11ThreadModel11descriptionERK11QModelIndex"></span><span id="_CPPv2NK11ThreadModel11descriptionERK11QModelIndex"></span><span id="ThreadModel::description__QModelIndexCRC"></span><span class="target" id="classThreadModel_1add764069af6810b653128c2b3f79b3a9"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../core/structThreadDescription.html#_CPPv417ThreadDescription" title="ThreadDescription"><span class="n"><span class="pre">ThreadDescription</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel11descriptionERK11QModelIndex" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11ThreadModel15translateStatusEKc">
+<span id="_CPPv3NK11ThreadModel15translateStatusEKc"></span><span id="_CPPv2NK11ThreadModel15translateStatusEKc"></span><span id="ThreadModel::translateStatus__cCC"></span><span class="target" id="classThreadModel_1a0cb100357aa8dfb24ff5faf81d175ea7"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">translateStatus</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">status</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11ThreadModel15translateStatusEKc" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -216,7 +290,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classSymbolsModel.html">SymbolsModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSymbolsProxyModel.html">SymbolsProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classSymbolsWidget.html">SymbolsWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ThreadsFilterModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ThreadModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classThreadsWidget.html">ThreadsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classTypesModel.html">TypesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classTypesSortFilterProxyModel.html">TypesSortFilterProxyModel</a></li>
