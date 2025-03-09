@@ -1,0 +1,4 @@
+ImportsProxyModel
+=================
+
+.. doxygenclass:: ImportsProxyModel

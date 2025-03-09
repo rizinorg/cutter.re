@@ -1,0 +1,4 @@
+RichTextPainter
+===============
+
+.. doxygenclass:: RichTextPainter
