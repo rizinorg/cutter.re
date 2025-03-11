@@ -1,0 +1,4 @@
+ResourcesModel
+==============
+
+.. doxygenclass:: ResourcesModel

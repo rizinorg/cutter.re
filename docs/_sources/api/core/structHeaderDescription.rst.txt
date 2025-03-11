@@ -1,0 +1,4 @@
+HeaderDescription
+=================
+
+.. doxygenstruct:: HeaderDescription
