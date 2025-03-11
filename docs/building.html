@@ -179,6 +179,8 @@ It should be possible to compile Cutter plugins against proper Cutter installati
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> and  <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> it is recommended to turn on for complete user experience. May require manual path specification on distros with multiple python versions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> and <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> optional but nice to have since they are available on most distros.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> use it to specify additional plugin search locations if distro packaging guidelines require you placing them in locations Cutter doesn’t use by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_VERSION_SUFFIX</span></code> can be used to differentiate multiple builds based on same upstream Cutter version, distro specific package build number and similar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_INCLUDE_GIT_HASH=OFF</span></code> By default cutter includes git commit hash in the full version string. If you are building from source tarrball or other source which isn’t original git repository you might want to disable this.</p></li>
 </ul>
 </section>
 </section>
