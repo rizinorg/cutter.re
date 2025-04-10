@@ -1,0 +1,4 @@
+SegmentsProxyModel
+==================
+
+.. doxygenclass:: SegmentsProxyModel

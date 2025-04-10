@@ -1,0 +1,4 @@
+ExportsWidget
+=============
+
+.. doxygenclass:: ExportsWidget

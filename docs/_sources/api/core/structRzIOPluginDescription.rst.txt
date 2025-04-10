@@ -1,0 +1,4 @@
+RzIOPluginDescription
+=====================
+
+.. doxygenstruct:: RzIOPluginDescription

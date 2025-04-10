@@ -1,0 +1,4 @@
+DebugActions
+============
+
+.. doxygenclass:: DebugActions
