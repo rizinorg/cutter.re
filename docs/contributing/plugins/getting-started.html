@@ -83,7 +83,7 @@ Normally, you shouldn’t have to do anything else in this function.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Cutter API is exposed through the <code class="docutils literal notranslate"><span class="pre">cutter</span></code> module.
-This consists mostly of direct bindings of the original C++ classes, generated with Shiboken2.
+This consists mostly of direct bindings of the original C++ classes, generated with Shiboken6.
 For more detail about this API, see the Cutter C++ code or <a class="reference internal" href="../../api.html#api"><span class="std std-ref">API Reference</span></a>.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">CutterPlugin</span></code> subclass contains some meta-info and two callback methods:</p>
@@ -112,7 +112,7 @@ directory, which lets you store the plugin somewhere else without having to copy
 <p>Next, we are going to add a simple dock widget. Extend the code as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
 
-<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
 
 <span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
@@ -140,8 +140,13 @@ directory, which lets you store the plugin somewhere else without having to copy
 and adding a label to it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can access the whole Qt5 API from Python, which is exposed by PySide2. For more information about this, refer to the
-Documentation of <a class="reference external" href="https://doc.qt.io/qt-5/reference-overview.html">Qt</a> and <a class="reference external" href="https://wiki.qt.io/Qt_for_Python">PySide2</a>.</p>
+<p>You can access the whole Qt6 API from Python, which is exposed by PySide6. For more information about this, refer to the
+Documentation of <a class="reference external" href="https://doc.qt.io/qt-6/reference-overview.html">Qt</a> and <a class="reference external" href="https://wiki.qt.io/Qt_for_Python">PySide6</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Main cutter packages are now using QT6, but Qt5 builds are still provided for compatibilty with older OS versions. If you
+want your plugin to support both, Qt usage process is a bit more complicated.</p>
 </div>
 <p>In our <code class="docutils literal notranslate"><span class="pre">setupInterface()</span></code> method, we create an instance of our dock widget and an action to be
 added to the menu for showing and hiding the widget.
@@ -205,7 +210,7 @@ We are going to change that in the next section.</p>
 This can be done like the following:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
 
-<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
 
 <span class="c1"># ...</span>
 
@@ -233,14 +238,14 @@ Then we call <code class="docutils literal notranslate"><span class="pre">cutter
 This class provides the Qt signal <code class="docutils literal notranslate"><span class="pre">seekChanged(RVA)</span></code>, which is emitted every time the current seek changes.
 We can simply connect this signal to our method and our widget will update as we expect it to:</p>
 <img alt="../../_images/disasm-dynamic.png" src="../../_images/disasm-dynamic.png" />
-<p>For more information about Qt signals and slots, refer to <a class="reference external" href="https://doc.qt.io/qt-5/signalsandslots.html">https://doc.qt.io/qt-5/signalsandslots.html</a>.</p>
+<p>For more information about Qt signals and slots, refer to <a class="reference external" href="https://doc.qt.io/qt-6/signalsandslots.html">https://doc.qt.io/qt-6/signalsandslots.html</a>.</p>
 </section>
 <section id="full-code">
 <h2>Full Code<a class="headerlink" href="#full-code" title="Link to this heading">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
 
-<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
-<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
 
 <span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
