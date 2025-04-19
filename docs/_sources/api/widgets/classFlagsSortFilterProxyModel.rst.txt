@@ -1,0 +1,4 @@
+FlagsSortFilterProxyModel
+=========================
+
+.. doxygenclass:: FlagsSortFilterProxyModel

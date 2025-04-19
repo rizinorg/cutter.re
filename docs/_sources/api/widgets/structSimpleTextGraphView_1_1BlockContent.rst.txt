@@ -1,0 +1,4 @@
+SimpleTextGraphView::BlockContent
+=================================
+
+.. doxygenstruct:: SimpleTextGraphView::BlockContent
