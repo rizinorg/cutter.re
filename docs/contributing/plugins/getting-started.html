@@ -222,7 +222,6 @@ This can be done like the following:</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="p">)</span>
 
         <span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">core</span><span class="p">(),</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;seekChanged(RVA)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">update_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">disasm</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;pd 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -245,7 +244,8 @@ We can simply connect this signal to our method and our widget will update as we
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cutter</span>
 
 <span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">SIGNAL</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QLabel</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QLabel</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="n">QAction</span>
 
 <span class="k">class</span> <span class="nc">MyDockWidget</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">CutterDockWidget</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
@@ -257,7 +257,6 @@ We can simply connect this signal to our method and our widget will update as we
         <span class="bp">self</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_label</span><span class="p">)</span>
 
         <span class="n">QObject</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">cutter</span><span class="o">.</span><span class="n">core</span><span class="p">(),</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="s2">&quot;seekChanged(RVA)&quot;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">update_contents</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="nf">update_contents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">disasm</span> <span class="o">=</span> <span class="n">cutter</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s2">&quot;pd 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
