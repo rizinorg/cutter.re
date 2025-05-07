@@ -1,0 +1,4 @@
+GlibcHeapBinsDialog
+===================
+
+.. doxygenclass:: GlibcHeapBinsDialog

@@ -1,0 +1,4 @@
+InitialOptionsDialog
+====================
+
+.. doxygenclass:: InitialOptionsDialog

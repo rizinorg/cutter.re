@@ -1,0 +1,4 @@
+CommentsDialog
+==============
+
+.. doxygenclass:: CommentsDialog
