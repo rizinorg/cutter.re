@@ -1,0 +1,4 @@
+BasefindResultDescription
+=========================
+
+.. doxygenstruct:: BasefindResultDescription

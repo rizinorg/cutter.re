@@ -1,0 +1,4 @@
+DisassemblyLeftPanel::Arrow
+===========================
+
+.. doxygenstruct:: DisassemblyLeftPanel::Arrow

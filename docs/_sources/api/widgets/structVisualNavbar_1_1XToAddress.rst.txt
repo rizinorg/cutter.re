@@ -1,0 +1,4 @@
+VisualNavbar::XToAddress
+========================
+
+.. doxygenstruct:: VisualNavbar::XToAddress

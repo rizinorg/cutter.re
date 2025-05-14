@@ -1,0 +1,4 @@
+CommentsProxyModel
+==================
+
+.. doxygenclass:: CommentsProxyModel
