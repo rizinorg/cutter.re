@@ -949,6 +949,11 @@
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore19listFlagsAsStringAtE3RVA"><code class="docutils literal notranslate"><span class="pre">listFlagsAsStringAt()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore11nearestFlagE3RVAP3RVA"><code class="docutils literal notranslate"><span class="pre">nearestFlag()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore19triggerFlagsChangedEv"><code class="docutils literal notranslate"><span class="pre">triggerFlagsChanged()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore7addMarkE3RVA3RVA7QString7QString6QColor"><code class="docutils literal notranslate"><span class="pre">addMark()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore7delMarkERK7QString"><code class="docutils literal notranslate"><span class="pre">delMark()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore8getMarksEv"><code class="docutils literal notranslate"><span class="pre">getMarks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore10getMarksAtE3RVA"><code class="docutils literal notranslate"><span class="pre">getMarksAt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore22getBlendedMarksColorAtE3RVA"><code class="docutils literal notranslate"><span class="pre">getBlendedMarksColorAt()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore17addGlobalVariableE3RVA7QString7QString"><code class="docutils literal notranslate"><span class="pre">addGlobalVariable()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore17delGlobalVariableE7QString"><code class="docutils literal notranslate"><span class="pre">delGlobalVariable()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore17delGlobalVariableE3RVA"><code class="docutils literal notranslate"><span class="pre">delGlobalVariable()</span></code></a></li>
@@ -1192,6 +1197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore18breakpointsChangedE3RVA"><code class="docutils literal notranslate"><span class="pre">breakpointsChanged</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore16refreshCodeViewsEv"><code class="docutils literal notranslate"><span class="pre">refreshCodeViews</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore12stackChangedEv"><code class="docutils literal notranslate"><span class="pre">stackChanged</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore12marksChangedEv"><code class="docutils literal notranslate"><span class="pre">marksChanged</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore11codeRebasedEv"><code class="docutils literal notranslate"><span class="pre">codeRebased</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore14switchedThreadEv"><code class="docutils literal notranslate"><span class="pre">switchedThread</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/core/classCutterCore.html#_CPPv4N10CutterCore15switchedProcessEv"><code class="docutils literal notranslate"><span class="pre">switchedProcess</span></code></a></li>
@@ -1777,6 +1783,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="api/core/structMarkDescription.html">MarkDescription</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv415MarkDescription"><code class="docutils literal notranslate"><span class="pre">MarkDescription</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription4fromE"><code class="docutils literal notranslate"><span class="pre">from</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription2toE"><code class="docutils literal notranslate"><span class="pre">to</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription4nameE"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription8realnameE"><code class="docutils literal notranslate"><span class="pre">realname</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription7commentE"><code class="docutils literal notranslate"><span class="pre">comment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/core/structMarkDescription.html#_CPPv4N15MarkDescription5colorE"><code class="docutils literal notranslate"><span class="pre">color</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="api/core/structMemoryMapDescription.html">MemoryMapDescription</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/core/structMemoryMapDescription.html#_CPPv420MemoryMapDescription"><code class="docutils literal notranslate"><span class="pre">MemoryMapDescription</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/core/structMemoryMapDescription.html#_CPPv4N20MemoryMapDescription9addrStartE"><code class="docutils literal notranslate"><span class="pre">addrStart</span></code></a></li>
@@ -2277,6 +2295,15 @@
 <li class="toctree-l3"><a class="reference internal" href="api/dialogs/classMapFileDialog.html#_CPPv413MapFileDialog"><code class="docutils literal notranslate"><span class="pre">MapFileDialog</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/dialogs/classMapFileDialog.html#_CPPv4N13MapFileDialog13MapFileDialogEP7QWidget"><code class="docutils literal notranslate"><span class="pre">MapFileDialog()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/dialogs/classMapFileDialog.html#_CPPv4N13MapFileDialogD0Ev"><code class="docutils literal notranslate"><span class="pre">~MapFileDialog()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/dialogs/classMarkDialog.html">MarkDialog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/dialogs/classMarkDialog.html#_CPPv410MarkDialog"><code class="docutils literal notranslate"><span class="pre">MarkDialog</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/dialogs/classMarkDialog.html#_CPPv4N10MarkDialog10MarkDialogE3RVA3RVAP7QWidget7QString"><code class="docutils literal notranslate"><span class="pre">MarkDialog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/dialogs/classMarkDialog.html#_CPPv4N10MarkDialogD0Ev"><code class="docutils literal notranslate"><span class="pre">~MarkDialog()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/dialogs/classMarkDialog.html#_CPPv4N10MarkDialog6acceptEv"><code class="docutils literal notranslate"><span class="pre">accept()</span></code></a></li>
 </ul>
 </li>
 </ul>

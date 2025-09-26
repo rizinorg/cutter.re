@@ -1,0 +1,4 @@
+MarkDialog
+==========
+
+.. doxygenclass:: MarkDialog
