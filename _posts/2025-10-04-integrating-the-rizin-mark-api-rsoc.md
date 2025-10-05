@@ -9,7 +9,7 @@ post_image: "/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/cover
 description: "Marks in Cutter are now visual and easier to manage with tooltips, colors, and overlapping support in the Hexdump. Read about the new feature implemented by Emad Sohail, an RSoC student"
 ---
 
-As a second project of my RSoC internship, I worked on integrating the Rizin Mark API into Cutter to visually show the prescence of marks in the `Hexdump` widget.
+As a second project of my RSoC internship, I worked on integrating the Rizin Mark API into Cutter to visually show the presence of marks in the `Hexdump` widget.
 
 ![Mark Complete](/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/mark-complete.gif)
 
@@ -23,7 +23,7 @@ Refer to [RSoC 2025 - Adding Mark API](https://rizin.re/posts/rsoc-2025-mark-api
 
 ## **Implementation**
 
-For now **Marks** are only available in the **Hexdump** widget
+For now, **Marks** are only available in the **Hexdump** widget
 
 ### **Adding, Editing and Removing Marks**
 
@@ -53,7 +53,7 @@ struct MarkDescription
 };
 ```
 
-Each mark is then rendered in its assigned color, and finally the **Data bytes** and **ASCII** characters are drawn on top, so the marks integrate smoothly into the **Hexdump** view.
+Each mark is then rendered in its assigned color, and finally the **Data bytes** and **ASCII** characters are drawn on top so the marks integrate smoothly into the **Hexdump** view.
 
 ![Two highlighted marks](/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/mark-highlight.png)
 
@@ -63,7 +63,7 @@ To handle **overlapping Marks**, their colors are blended to create a combined c
 
 ![Two highlighted overlapping marks](/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/mark-highlight-overlap.png)
 
-Here the **overlapping** region is highlighted by a subtle green color.
+Here, the **overlapping** region is highlighted by a subtle green color.
 
 ### **Tooltip**
 
@@ -91,22 +91,22 @@ To solve this, the **Remove** and **Edit** actions in the context menu now list 
 
 Everything worked fine until we hit an issue: whenever the cursor moved inside a highlighted mark range, the background reverted to Cutter’s default color instead of staying with the mark’s highlight. This happened because the cursor redraw overwrote the background each time it moved.
 
-If there was only one mark at the cursor address, fixing this would be easy, just query the mark and repaint the background with its color. But since multiple marks can overlap at the same address, we needed a smarter approach. To solve this, we introduced a helper function `getBlendedMarksColorAt()` inside `CutterCore`, which calculates the final blended color for all marks at a given address.
+If there was only one mark at the cursor address, fixing this would be easy: just query the mark and repaint the background with its color. But since multiple marks can overlap at the same address, we needed a smarter approach. To solve this, we introduced a helper function `getBlendedMarksColorAt()` inside `CutterCore`, which calculates the final blended color for all marks at a given address.
 
-## **Future Improvments**
+## **Future Improvements**
 
 A cool idea for future work could be to create another tab alongside the **Parsing** and **Information** tabs in the right panel, dedicated to **Marks**.
-This tab would display all added marks in a table-like view with their names, and allow quick interaction.
+This tab would display all added marks in a table-like view with their names and allow quick interaction.
 
-Clicking on a mark would open its details (such as comment, color, etc.) and provide options to directly edit or remove it, without needing to use the right-click context menu.
+Clicking on a mark would open its details (such as comment, color, etc.) and provide options to directly edit or remove it without needing to use the right-click context menu.
 Additionally, double-clicking on a row could automatically move the **cursor** and **viewpoint** to the starting address of the selected mark, making navigation much faster and more intuitive.
 
 ![Right pane highlighted with arrow and red box](/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/mark-future-improvement.png)
 
-And also extending **Marks** support to different widgets (Disassembly, Graph etc).
+And also extend **Marks** support to different widgets (Disassembly, Graph, etc.).
 
 ## **Conclusion**
 
-The integration of the Rizin Mark API in Cutter enables adding, editing, and managing overlapping marks directly in the Hexdump. With tooltips and context menu actions, it streamlines annotating binaries while leaving room for future enhancements. 
+The integration of the Rizin Mark API in Cutter enables adding, editing, and managing overlapping marks directly in the Hexdump. With tooltips and context menu actions, it streamlines annotating binaries while leaving room for future enhancements.
 
-This was no doubt a great learning experience and at the end I would like to thank [@xvilka](https://github.com/notxvilka) for this amazing oppurtunity and also [@karliss](https://github.com/karliss), [@deroad](https://github.com/wargio) for the help and guidance.
+This was no doubt a great learning experience, and at the end I would like to thank [@xvilka](https://github.com/notxvilka) for this amazing opportunity and also [@karliss](https://github.com/karliss) and [@deroad](https://github.com/wargio) for the help and guidance.

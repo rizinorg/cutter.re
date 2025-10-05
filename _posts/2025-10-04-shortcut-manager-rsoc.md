@@ -13,23 +13,23 @@ description: "Introducing a centralized Shortcut Manager in Cutter for improved 
 
 Greetings! I'm Emad Sohail (aka PremadeS), a 2nd-year CS undergraduate student at Information Technology University - Lahore. You can find me on [Github](https://github.com/PremadeS) and [LinkedIn](https://www.linkedin.com/in/emad-sohail-130b3b265/).
 
-This summer I worked on improving the user experience of Cutter. 
+This summer I worked on improving the user experience of Cutter.
 
-This was the first project. The main objective of this project was to introduce a universal **Shortcut Manager** in Cutter and to provide a flexible setup that can support custom shortcuts in the future with minimal additions.
+This was the first project. The main objective of this project was to introduce a universal **Shortcut Manager** in Cutter and provide a flexible setup that can support custom shortcuts in the future with minimal additions.
 
-You can find the write-up of my second project [here](https://cutter.re/integrating-the-rizin-mark-api-rsoc)
+You can find the write-up of my second project [here](https://cutter.re/integrating-the-rizin-mark-api-rsoc).
 
 ## **Why a Shortcut Manager**
 
-Default key sequences, *also referred to here as shortcuts*, were previosuly defined in their respective classes. While this approach works if the codebase is small. However, it gets exceptionally difficult to manage as the project grows, making it hard to keep track of which shortcuts are assigned to which functions. On top of that, as the key sequences were scattered in different files there was no way to create a centralized view that allows the user to see the default shortcuts and their respective actions.  
+Default key sequences, *also referred to here as shortcuts*, were previously defined in their respective classes. While this approach works if the codebase is small, it becomes exceptionally difficult to manage as the project grows, making it hard to keep track of which shortcuts are assigned to which functions. On top of that, because the key sequences were scattered across different files, there was no way to create a centralized view that allows the user to see the default shortcuts and their respective actions.
 
 ## **Design Goals**
 
 The **Shortcut Manager** was designed with three key goals:
 
-1) **Consistency:** Shortcuts should behave uniformly across the application, regardless of whether they originate from a `QAction` or a `QShortcut`
-2) **Maintainablity:** All of the default shortcuts must be at the same place, which allows the developers to quickly add, remove or edit key sequences without needing to look through multiple files 
-3) **Extensibility:** The system should provide a solid foundation that can be expanded in the future, enabling features like custom user-defined shortcuts
+1) **Consistency:** Shortcuts should behave uniformly across the application, regardless of whether they originate from a `QAction` or a `QShortcut`.
+2) **Maintainability:** All default shortcuts must be in the same place, allowing developers to quickly add, remove, or edit key sequences without needing to look through multiple files.
+3) **Extensibility:** The system should provide a solid foundation that can be expanded in the future, enabling features like custom user-defined shortcuts.
 
 ## **Implementation**
 
@@ -41,7 +41,7 @@ The `ShortcutManager` then looks up the corresponding entry in the default short
 
 ![Shortcut manager process flowchart](/assets/images/blog/posts/shortcut-manager-rsoc/shortcut-registering-flowchart.png)
 
-To make the process even simpler, the `ShortcutManager` also provides utility methods that return fully configured `QAction` or `QShortcut` objects based on the given ID. This not only streamlines shortcut creation but also hides away the underlying complexity, keeping the codebase clean and consistent.
+To make the process even simpler, the `ShortcutManager` also provides utility methods that return fully configured `QAction` or `QShortcut` objects based on the given ID. This not only streamlines shortcut creation but also hides the underlying complexity, keeping the codebase clean and consistent.
 
 A Default Shortcuts widget has also been introduced, allowing users to easily view all default key sequences alongside their corresponding actions. It also includes a search bar, making it simple to quickly find specific shortcuts or actions. [PR #3504](https://github.com/rizinorg/cutter/pull/3504/)
 
