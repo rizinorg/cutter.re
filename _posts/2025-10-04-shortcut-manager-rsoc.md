@@ -9,7 +9,7 @@ post_image: "/assets/images/blog/posts/shortcut-manager-rsoc/cover.png"
 description: "Introducing a centralized Shortcut Manager in Cutter for improved consistency and maintainability. Read about the improvements made possible by Emad Sohail, an RSoC student"
 ---
 
-# **Shortcut Manager - RSoC Project**
+# Shortcut Manager - RSoC Project
 
 Greetings! I'm Emad Sohail (aka PremadeS), a 2nd-year CS undergraduate student at Information Technology University - Lahore. You can find me on [Github](https://github.com/PremadeS) and [LinkedIn](https://www.linkedin.com/in/emad-sohail-130b3b265/).
 
@@ -19,11 +19,11 @@ This was the first project. The main objective of this project was to introduce 
 
 You can find the write-up of my second project [here](https://cutter.re/integrating-the-rizin-mark-api-rsoc).
 
-## **Why a Shortcut Manager**
+## Why a Shortcut Manager
 
 Default key sequences, *also referred to here as shortcuts*, were previously defined in their respective classes. While this approach works if the codebase is small, it becomes exceptionally difficult to manage as the project grows, making it hard to keep track of which shortcuts are assigned to which functions. On top of that, because the key sequences were scattered across different files, there was no way to create a centralized view that allows the user to see the default shortcuts and their respective actions.
 
-## **Design Goals**
+## Design Goals
 
 The **Shortcut Manager** was designed with three key goals:
 
@@ -31,7 +31,7 @@ The **Shortcut Manager** was designed with three key goals:
 2) **Maintainability:** All default shortcuts must be in the same place, allowing developers to quickly add, remove, or edit key sequences without needing to look through multiple files.
 3) **Extensibility:** The system should provide a solid foundation that can be expanded in the future, enabling features like custom user-defined shortcuts.
 
-## **Implementation**
+## Implementation
 
 Default key sequences are stored in a `Shortcut` struct, each mapped to a unique ID within `shortcuts/DefaultShortcuts` using a **hashmap**. The `Shortcut` struct holds both the key sequence and a descriptive text string, along with a context string that is particularly useful for translations.
 
@@ -47,7 +47,7 @@ A Default Shortcuts widget has also been introduced, allowing users to easily vi
 
 ![Cutter Shortcut Filter](/assets/images/blog/posts/shortcut-manager-rsoc/shortcut-widget-filter.gif)
 
-## **Future Improvements**
+## Future Improvements
 
 While the **Shortcut Manager** already improves consistency and maintainability, it also lays the groundwork for more advanced functionality:
 
@@ -55,6 +55,6 @@ While the **Shortcut Manager** already improves consistency and maintainability,
 
 **Profiles and Configurations:** A logical next step would be to allow different sets of shortcuts for different profiles or workflows, making it easier to switch between tailored setups.
 
-## **Conclusion**
+## Conclusion
 
 The introduction of the **Shortcut Manager** marks an important step in making Cutter more user-friendly and maintainable. By centralizing shortcuts, we’ve eliminated fragmentation in the codebase while also opening the door to future enhancements. While the project itself was relatively small in terms of code changes and complexity, its impact and long-term benefits are substantial.
