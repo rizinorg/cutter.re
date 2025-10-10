@@ -18,3 +18,9 @@ nirmal_manoj:
     name: Nirmal Manoj
     bio: Nirmal Manoj is a CS undergraduate student at IIIT Hyderabad, India. He was a GSoC 2020 student who worked on improving the decompiler widget.
     image: /assets/images/blog/authors/nirmal_manoj.png
+
+emad_sohail:
+    name: Emad Sohail
+    bio: Emad Sohail (aka PremadeS) is a CS undergraduate student at ITU Lahore, Pakistan. He was a RSoC 2025 student who worked on improving the User Experience of Cutter.
+    github: https://github.com/PremadeS
+    image: /assets/images/blog/authors/emad_sohail.png
