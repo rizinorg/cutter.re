@@ -1,0 +1,4 @@
+BinClassBaseClassDescription
+============================
+
+.. doxygenstruct:: BinClassBaseClassDescription
