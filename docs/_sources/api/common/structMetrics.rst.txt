@@ -1,0 +1,4 @@
+Metrics
+=======
+
+.. doxygenstruct:: Metrics

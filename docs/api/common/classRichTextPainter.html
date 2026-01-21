@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>RichTextPainter &#8212; Cutter 2.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../_static/documentation_options.js?v=4d935f96"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/cutter.js?v=b9d5d2df"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="RizinCmdTask" href="classRizinCmdTask.html" />
+    <link rel="prev" title="ReplacingRefreshDeferrerAccumulator" href="classReplacingRefreshDeferrerAccumulator.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="classRizinCmdTask.html" title="RizinCmdTask"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classReplacingRefreshDeferrerAccumulator.html" title="ReplacingRefreshDeferrerAccumulator"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RichTextPainter</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="richtextpainter">
+<h1>RichTextPainter<a class="headerlink" href="#richtextpainter" title="Link to this heading">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv415RichTextPainter">
+<span id="_CPPv315RichTextPainter"></span><span id="_CPPv215RichTextPainter"></span><span id="RichTextPainter"></span><span class="target" id="classRichTextPainter"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RichTextPainter</span></span></span><a class="headerlink" href="#_CPPv415RichTextPainter" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter19CustomRichTextFlagsE">
+<span id="_CPPv3N15RichTextPainter19CustomRichTextFlagsE"></span><span id="_CPPv2N15RichTextPainter19CustomRichTextFlagsE"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomRichTextFlags</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter19CustomRichTextFlagsE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter19CustomRichTextFlags8FlagNoneE">
+<span id="_CPPv3N15RichTextPainter19CustomRichTextFlags8FlagNoneE"></span><span id="_CPPv2N15RichTextPainter19CustomRichTextFlags8FlagNoneE"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4a0da65c6df0a9af219b7522bb599613cc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FlagNone</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter19CustomRichTextFlags8FlagNoneE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter19CustomRichTextFlags9FlagColorE">
+<span id="_CPPv3N15RichTextPainter19CustomRichTextFlags9FlagColorE"></span><span id="_CPPv2N15RichTextPainter19CustomRichTextFlags9FlagColorE"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4a2e014095b0c433524d2aaef5c83ddc8d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FlagColor</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter19CustomRichTextFlags9FlagColorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter19CustomRichTextFlags14FlagBackgroundE">
+<span id="_CPPv3N15RichTextPainter19CustomRichTextFlags14FlagBackgroundE"></span><span id="_CPPv2N15RichTextPainter19CustomRichTextFlags14FlagBackgroundE"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4aaeface535b7bd29e2c337ed766afa1f0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FlagBackground</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter19CustomRichTextFlags14FlagBackgroundE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter19CustomRichTextFlags7FlagAllE">
+<span id="_CPPv3N15RichTextPainter19CustomRichTextFlags7FlagAllE"></span><span id="_CPPv2N15RichTextPainter19CustomRichTextFlags7FlagAllE"></span><span class="target" id="classRichTextPainter_1a5f714b93b6ccefaddb19c7d9c741aba4ac5b466d6c2df6b775a4c2019be72be86"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FlagAll</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter19CustomRichTextFlags7FlagAllE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter4ListE">
+<span id="_CPPv3N15RichTextPainter4ListE"></span><span id="_CPPv2N15RichTextPainter4ListE"></span><span id="RichTextPainter::List"></span><span class="target" id="classRichTextPainter_1aacdbc30e914b6f1e5899f2bf37807780"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N15RichTextPainter16CustomRichText_tE" title="RichTextPainter::CustomRichText_t"><span class="n"><span class="pre">CustomRichText_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">List</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter4ListE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE">
+<span id="_CPPv3I0EN15RichTextPainter13paintRichTextEP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE"></span><span id="_CPPv2I0EN15RichTextPainter13paintRichTextEP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">qreal</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classRichTextPainter_1aa04cb98d8ed97c03a49671ed2ea302b7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">paintRichText</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QPainter</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">painter</span></span>, <a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">y</span></span>, <a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span>, <a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">h</span></span>, <a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">xinc</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15RichTextPainter4ListE" title="RichTextPainter::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">richText</span></span>, <a class="reference internal" href="classCachedFontMetrics.html#_CPPv4I0E17CachedFontMetrics" title="CachedFontMetrics"><span class="n"><span class="pre">CachedFontMetrics</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="RichTextPainter::paintRichText::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fontMetrics</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN15RichTextPainter13paintRichTextEvP8QPainter1T1T1T1T1TRK4ListP17CachedFontMetricsI1TE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString">
+<span id="_CPPv3N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString"></span><span id="_CPPv2N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString"></span><span id="RichTextPainter::htmlRichText__ListCR.QStringR.QStringR"></span><span class="target" id="classRichTextPainter_1a11f65e54efbd6680042591cb7310879e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">htmlRichText</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15RichTextPainter4ListE" title="RichTextPainter::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">richText</span></span>, <span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">textHtml</span></span>, <span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">textPlain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RichTextPainter12htmlRichTextERK4ListR7QStringR7QString" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#classRichTextPainter_1a11f65e54efbd6680042591cb7310879e"><span class="std std-ref">RichTextPainter::htmlRichText</span></a> Convert rich text in x64dbg to HTML, for use by other applications. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>richText</strong> – The rich text to be converted to HTML format </p></li>
+<li><p><strong>textHtml</strong> – The HTML source. Any previous content will be preserved and new content will be appended at the end. </p></li>
+<li><p><strong>textPlain</strong> – The plain text. Any previous content will be preserved and new content will be appended at the end. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16fromTextDocumentERK13QTextDocument">
+<span id="_CPPv3N15RichTextPainter16fromTextDocumentERK13QTextDocument"></span><span id="_CPPv2N15RichTextPainter16fromTextDocumentERK13QTextDocument"></span><span id="RichTextPainter::fromTextDocument__QTextDocumentCR"></span><span class="target" id="classRichTextPainter_1ab4926da36627e1e1930d6d03b831e356"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15RichTextPainter4ListE" title="RichTextPainter::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromTextDocument</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QTextDocument</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">doc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RichTextPainter16fromTextDocumentERK13QTextDocument" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter7croppedERK4ListiRK7QStringPb">
+<span id="_CPPv3N15RichTextPainter7croppedERK4ListiRK7QStringPb"></span><span id="_CPPv2N15RichTextPainter7croppedERK4ListiRK7QStringPb"></span><span id="RichTextPainter::cropped__ListCR.i.QStringCR.bP"></span><span class="target" id="classRichTextPainter_1ab4fa0138057dd51df041ddde3f46e4ed"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15RichTextPainter4ListE" title="RichTextPainter::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cropped</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15RichTextPainter4ListE" title="RichTextPainter::List"><span class="n"><span class="pre">List</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">richText</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxCols</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">indicator</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">croppedOut</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15RichTextPainter7croppedERK4ListiRK7QStringPb" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_tE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_tE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_tE"></span><span id="RichTextPainter::CustomRichText_t"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomRichText_t</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_tE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t4textE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t4textE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t4textE"></span><span id="RichTextPainter::CustomRichText_t::text__QString"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1ad8a5d961c173fb278ed8463f18230b9a"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">text</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t4textE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t9textColorE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t9textColorE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t9textColorE"></span><span id="RichTextPainter::CustomRichText_t::textColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a9d59424038d8b6e7cabcaad8c72a9366"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textColor</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t9textColorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14textBackgroundE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t14textBackgroundE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14textBackgroundE"></span><span id="RichTextPainter::CustomRichText_t::textBackground__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeb28dcca29bdc1f5112de8bc7aabbc1d"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textBackground</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t14textBackgroundE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t5flagsE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t5flagsE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t5flagsE"></span><span id="RichTextPainter::CustomRichText_t::flags__CustomRichTextFlags"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2d036e2b389b75eb7ecd5644b2d98c71"></span><a class="reference internal" href="#_CPPv4N15RichTextPainter19CustomRichTextFlagsE" title="RichTextPainter::CustomRichTextFlags"><span class="n"><span class="pre">CustomRichTextFlags</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flags</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t5flagsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t9highlightE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t9highlightE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t9highlightE"></span><span id="RichTextPainter::CustomRichText_t::highlight__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1afb1630c4e9dc43f266868b4c6f5e6f13"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlight</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t9highlightE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14highlightColorE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t14highlightColorE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightColorE"></span><span id="RichTextPainter::CustomRichText_t::highlightColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeec225f7a072912301ca40f9fd66e3bb"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightColor</span></span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t14highlightColorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14highlightWidthE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t14highlightWidthE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightWidthE"></span><span id="RichTextPainter::CustomRichText_t::highlightWidth__i"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1adf4e0dc2c577ba662eb809f480c71449"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightWidth</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t14highlightWidthE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t20highlightConnectPrevE">
+<span id="_CPPv3N15RichTextPainter16CustomRichText_t20highlightConnectPrevE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t20highlightConnectPrevE"></span><span id="RichTextPainter::CustomRichText_t::highlightConnectPrev__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2921628474cb99a5755c23fc46d47ae1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightConnectPrev</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N15RichTextPainter16CustomRichText_t20highlightConnectPrevE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../commonlist.html">Common</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="classAddressableFilterProxyModel.html">AddressableFilterProxyModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModel.html">AddressableItemModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemModelI.html">AddressableItemModelI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAnalysisTask.html">AnalysisTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTask.html">AsyncTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAsyncTaskManager.html">AsyncTaskManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicBlockHighlighter.html">BasicBlockHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDirectionalComboBox.html">DirectionalComboBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classDisassemblyTextBlockUserData.html">DisassemblyTextBlockUserData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1List.html">LinkedListPool::List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1ListIterator.html">LinkedListPool::ListIterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">RichTextPainter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classRunScriptTask.html">RunScriptTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSegmentTreeBase.html">SegmentTreeBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classStringsTask.html">StringsTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classSvgIconEngine.html">SvgIconEngine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicBlockHighlighter_1_1BasicBlock.html">BasicBlockHighlighter::BasicBlock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structCutter_1_1CutterLayout.html">Cutter::CutterLayout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../corelist.html">Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dialogslist.html">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menuslist.html">Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pluginslist.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../srclist.html">Src</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../widgetslist.html">Widgets</a></li>
+</ul>
+</li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+    
+
+  </body>
+</html>

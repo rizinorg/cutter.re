@@ -1,0 +1,4 @@
+SetToDataDialog
+===============
+
+.. doxygenclass:: SetToDataDialog
