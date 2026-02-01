@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GlobalVariableDialog &#8212; Cutter 2.4.0 documentation</title>
+    <title>EditRegProfileDialog &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="HexdumpRangeDialog" href="classHexdumpRangeDialog.html" />
-    <link rel="prev" title="GlibcHeapInfoDialog" href="classGlibcHeapInfoDialog.html" />
+    <link rel="next" title="EditStringDialog" href="classEditStringDialog.html" />
+    <link rel="prev" title="EditMethodDialog" href="classEditMethodDialog.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classHexdumpRangeDialog.html" title="HexdumpRangeDialog"
+          <a href="classEditStringDialog.html" title="EditStringDialog"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classGlibcHeapInfoDialog.html" title="GlibcHeapInfoDialog"
+          <a href="classEditMethodDialog.html" title="EditMethodDialog"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../dialogslist.html" accesskey="U">Dialogs</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">GlobalVariableDialog</a></li> 
+        <li class="nav-item nav-item-this"><a href="">EditRegProfileDialog</a></li> 
       </ul>
     </div>
 
@@ -51,22 +51,45 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="globalvariabledialog">
-<h1>GlobalVariableDialog<a class="headerlink" href="#globalvariabledialog" title="Link to this heading">¶</a></h1>
+  <section id="editregprofiledialog">
+<h1>EditRegProfileDialog<a class="headerlink" href="#editregprofiledialog" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv420GlobalVariableDialog">
-<span id="_CPPv320GlobalVariableDialog"></span><span id="_CPPv220GlobalVariableDialog"></span><span id="GlobalVariableDialog"></span><span class="target" id="classGlobalVariableDialog"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GlobalVariableDialog</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QDialog</span></span><a class="headerlink" href="#_CPPv420GlobalVariableDialog" title="Link to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dt class="sig sig-object cpp" id="_CPPv420EditRegProfileDialog">
+<span id="_CPPv320EditRegProfileDialog"></span><span id="_CPPv220EditRegProfileDialog"></span><span id="EditRegProfileDialog"></span><span class="target" id="classEditRegProfileDialog"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EditRegProfileDialog</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QDialog</span></span><a class="headerlink" href="#_CPPv420EditRegProfileDialog" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Dialog for editing Rizin register profiles using tables or raw text. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N20GlobalVariableDialog20GlobalVariableDialogE3RVAP7QWidget">
-<span id="_CPPv3N20GlobalVariableDialog20GlobalVariableDialogE3RVAP7QWidget"></span><span id="_CPPv2N20GlobalVariableDialog20GlobalVariableDialogE3RVAP7QWidget"></span><span id="GlobalVariableDialog::GlobalVariableDialog__RVA.QWidgetP"></span><span class="target" id="classGlobalVariableDialog_1af396aa1bf7026d78704b0a2a18236ad2"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GlobalVariableDialog</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20GlobalVariableDialog20GlobalVariableDialogE3RVAP7QWidget" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N20EditRegProfileDialog20EditRegProfileDialogEP7QWidget">
+<span id="_CPPv3N20EditRegProfileDialog20EditRegProfileDialogEP7QWidget"></span><span id="_CPPv2N20EditRegProfileDialog20EditRegProfileDialogEP7QWidget"></span><span id="EditRegProfileDialog::EditRegProfileDialog__QWidgetP"></span><span class="target" id="classEditRegProfileDialog_1a4f498506c3dbf4d9cfcb0e17ab79e85c"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EditRegProfileDialog</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20EditRegProfileDialog20EditRegProfileDialogEP7QWidget" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N20GlobalVariableDialogD0Ev">
-<span id="_CPPv3N20GlobalVariableDialogD0Ev"></span><span id="_CPPv2N20GlobalVariableDialogD0Ev"></span><span id="GlobalVariableDialog::~GlobalVariableDialog"></span><span class="target" id="classGlobalVariableDialog_1a9aaba806e2d8d895528ac92091088606"></span><span class="sig-name descname"><span class="n"><span class="pre">~GlobalVariableDialog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20GlobalVariableDialogD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N20EditRegProfileDialogD0Ev">
+<span id="_CPPv3N20EditRegProfileDialogD0Ev"></span><span id="_CPPv2N20EditRegProfileDialogD0Ev"></span><span id="EditRegProfileDialog::~EditRegProfileDialog"></span><span class="target" id="classEditRegProfileDialog_1a2f399c0da40cc8e65216c316438ac561"></span><span class="sig-name descname"><span class="n"><span class="pre">~EditRegProfileDialog</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20EditRegProfileDialogD0Ev" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N20EditRegProfileDialog14setProfileDataERK7QString">
+<span id="_CPPv3N20EditRegProfileDialog14setProfileDataERK7QString"></span><span id="_CPPv2N20EditRegProfileDialog14setProfileDataERK7QString"></span><span id="EditRegProfileDialog::setProfileData__QStringCR"></span><span class="target" id="classEditRegProfileDialog_1a3d72704a341f7e68488e026cb4c794a9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setProfileData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N20EditRegProfileDialog14setProfileDataERK7QString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Loads a raw profile string into the editor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The raw Rizin profile string to parse </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK20EditRegProfileDialog13getProfleDataEv">
+<span id="_CPPv3NK20EditRegProfileDialog13getProfleDataEv"></span><span id="_CPPv2NK20EditRegProfileDialog13getProfleDataEv"></span><span id="EditRegProfileDialog::getProfleDataC"></span><span class="target" id="classEditRegProfileDialog_1aaa30e3b518f5ee288ba4bcb58442c6d1"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getProfleData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK20EditRegProfileDialog13getProfleDataEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Retrieves the current profile data from the active editor tab. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The formatted profile string </p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 </dd></dl>
@@ -105,13 +128,13 @@
 <li class="toctree-l3"><a class="reference internal" href="classEditFunctionDialog.html">EditFunctionDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditInstructionDialog.html">EditInstructionDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditMethodDialog.html">EditMethodDialog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classEditRegProfileDialog.html">EditRegProfileDialog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EditRegProfileDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditStringDialog.html">EditStringDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classEditVariablesDialog.html">EditVariablesDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFlagDialog.html">FlagDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGlibcHeapBinsDialog.html">GlibcHeapBinsDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGlibcHeapInfoDialog.html">GlibcHeapInfoDialog</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">GlobalVariableDialog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classGlobalVariableDialog.html">GlobalVariableDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHexdumpRangeDialog.html">HexdumpRangeDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classIncrementDecrementDialog.html">IncrementDecrementDialog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classInitialOptionsDialog.html">InitialOptionsDialog</a></li>
