@@ -1,0 +1,4 @@
+AbstractAddrDock
+================
+
+.. doxygenclass:: AbstractAddrDock

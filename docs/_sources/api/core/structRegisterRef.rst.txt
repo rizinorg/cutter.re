@@ -1,0 +1,4 @@
+RegisterRef
+===========
+
+.. doxygenstruct:: RegisterRef

@@ -1,0 +1,4 @@
+SegmentsWidget
+==============
+
+.. doxygenclass:: SegmentsWidget
