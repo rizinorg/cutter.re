@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>AddressableItemList &#8212; Cutter 2.4.0 documentation</title>
+    <title>AddressRangeScrollBar &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="AnalysisClassesModel" href="classAnalysisClassesModel.html" />
-    <link rel="prev" title="AddressableDockWidget" href="classAddressableDockWidget.html" />
+    <link rel="next" title="AddressableDockWidget" href="classAddressableDockWidget.html" />
+    <link rel="prev" title="AddrDockScene" href="classAddrDockScene.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classAnalysisClassesModel.html" title="AnalysisClassesModel"
+          <a href="classAddressableDockWidget.html" title="AddressableDockWidget"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classAddressableDockWidget.html" title="AddressableDockWidget"
+          <a href="classAddrDockScene.html" title="AddrDockScene"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">AddressableItemList</a></li> 
+        <li class="nav-item nav-item-this"><a href="">AddressRangeScrollBar</a></li> 
       </ul>
     </div>
 
@@ -51,43 +51,72 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="addressableitemlist">
-<h1>AddressableItemList<a class="headerlink" href="#addressableitemlist" title="Link to this heading">¶</a></h1>
+  <section id="addressrangescrollbar">
+<h1>AddressRangeScrollBar<a class="headerlink" href="#addressrangescrollbar" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4I0E19AddressableItemList">
-<span id="_CPPv3I0E19AddressableItemList"></span><span id="_CPPv2I0E19AddressableItemList"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseListWidget</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classCutterTreeView.html#_CPPv414CutterTreeView" title="CutterTreeView"><span class="n"><span class="pre">CutterTreeView</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAddressableItemList"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddressableItemList</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classCutterTreeView.html#_CPPv414CutterTreeView" title="CutterTreeView"><span class="n"><span class="pre">CutterTreeView</span></span></a><a class="headerlink" href="#_CPPv4I0E19AddressableItemList" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv421AddressRangeScrollBar">
+<span id="_CPPv321AddressRangeScrollBar"></span><span id="_CPPv221AddressRangeScrollBar"></span><span id="AddressRangeScrollBar"></span><span class="target" id="classAddressRangeScrollBar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddressRangeScrollBar</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QScrollBar</span></span><a class="headerlink" href="#_CPPv421AddressRangeScrollBar" title="Link to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList19AddressableItemListEP7QWidget">
-<span id="_CPPv3N19AddressableItemList19AddressableItemListEP7QWidget"></span><span id="_CPPv2N19AddressableItemList19AddressableItemListEP7QWidget"></span><span id="AddressableItemList::AddressableItemList__QWidgetP"></span><span class="target" id="classAddressableItemList_1af7bca53ec446dfa0f2ad138b47b8400e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AddressableItemList</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList19AddressableItemListEP7QWidget" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar21AddressRangeScrollBarEP7QWidget">
+<span id="_CPPv3N21AddressRangeScrollBar21AddressRangeScrollBarEP7QWidget"></span><span id="_CPPv2N21AddressRangeScrollBar21AddressRangeScrollBarEP7QWidget"></span><span id="AddressRangeScrollBar::AddressRangeScrollBar__QWidgetP"></span><span class="target" id="classAddressRangeScrollBar_1abd94d41bc7d1964d13be4f6448f623d1"></span><span class="sig-name descname"><span class="n"><span class="pre">AddressRangeScrollBar</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar21AddressRangeScrollBarEP7QWidget" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList8setModelEP21AddressableItemModelI">
-<span id="_CPPv3N19AddressableItemList8setModelEP21AddressableItemModelI"></span><span id="_CPPv2N19AddressableItemList8setModelEP21AddressableItemModelI"></span><span id="AddressableItemList::setModel__AddressableItemModelIP"></span><span class="target" id="classAddressableItemList_1a66a025c341dfb470b3aaad65851b6406"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../common/classAddressableItemModelI.html#_CPPv421AddressableItemModelI" title="AddressableItemModelI"><span class="n"><span class="pre">AddressableItemModelI</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">addressableItemModel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList8setModelEP21AddressableItemModelI" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar12refreshRangeEv">
+<span id="_CPPv3N21AddressRangeScrollBar12refreshRangeEv"></span><span id="_CPPv2N21AddressRangeScrollBar12refreshRangeEv"></span><span id="AddressRangeScrollBar::refreshRange"></span><span class="target" id="classAddressRangeScrollBar_1a7c26808783632e21c6944836e049ca38"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refreshRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar12refreshRangeEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList13setMainWindowEP10MainWindow">
-<span id="_CPPv3N19AddressableItemList13setMainWindowEP10MainWindow"></span><span id="_CPPv2N19AddressableItemList13setMainWindowEP10MainWindow"></span><span id="AddressableItemList::setMainWindow__MainWindowP"></span><span class="target" id="classAddressableItemList_1a5531258d712047ca1642b6bccf4f31e1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMainWindow</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow"><span class="n"><span class="pre">MainWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mainWindow</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList13setMainWindowEP10MainWindow" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar11setPositionE3RVA">
+<span id="_CPPv3N21AddressRangeScrollBar11setPositionE3RVA"></span><span id="_CPPv2N21AddressRangeScrollBar11setPositionE3RVA"></span><span id="AddressRangeScrollBar::setPosition__RVA"></span><span class="target" id="classAddressRangeScrollBar_1ad484779d99cb055d5452b09430bcf7b2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar11setPositionE3RVA" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList18getItemContextMenuEv">
-<span id="_CPPv3N19AddressableItemList18getItemContextMenuEv"></span><span id="_CPPv2N19AddressableItemList18getItemContextMenuEv"></span><span id="AddressableItemList::getItemContextMenu"></span><span class="target" id="classAddressableItemList_1af3fbac91b5a3426dc88fd88341ce1015"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="../menus/classAddressableItemContextMenu.html#_CPPv426AddressableItemContextMenu" title="AddressableItemContextMenu"><span class="n"><span class="pre">AddressableItemContextMenu</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getItemContextMenu</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList18getItemContextMenuEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar7addressEv">
+<span id="_CPPv3N21AddressRangeScrollBar7addressEv"></span><span id="_CPPv2N21AddressRangeScrollBar7addressEv"></span><span id="AddressRangeScrollBar::address"></span><span class="target" id="classAddressRangeScrollBar_1af24b4c59ab393ab52e8d048d86ef83f4"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">address</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar7addressEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList18setItemContextMenuEP26AddressableItemContextMenu">
-<span id="_CPPv3N19AddressableItemList18setItemContextMenuEP26AddressableItemContextMenu"></span><span id="_CPPv2N19AddressableItemList18setItemContextMenuEP26AddressableItemContextMenu"></span><span id="AddressableItemList::setItemContextMenu__AddressableItemContextMenuP"></span><span class="target" id="classAddressableItemList_1a9b1647aa6062acae7b8ee43e67fe82d5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemContextMenu</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../menus/classAddressableItemContextMenu.html#_CPPv426AddressableItemContextMenu" title="AddressableItemContextMenu"><span class="n"><span class="pre">AddressableItemContextMenu</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">menu</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList18setItemContextMenuEP26AddressableItemContextMenu" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar19clampAddressToRangeE3RVA">
+<span id="_CPPv3N21AddressRangeScrollBar19clampAddressToRangeE3RVA"></span><span id="_CPPv2N21AddressRangeScrollBar19clampAddressToRangeE3RVA"></span><span id="AddressRangeScrollBar::clampAddressToRange__RVA"></span><span class="target" id="classAddressRangeScrollBar_1a5e9ac5a485a188a1128b8d1e67bd6030"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clampAddressToRange</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar19clampAddressToRangeE3RVA" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N19AddressableItemList36setShowItemContextMenuWithoutAddressEb">
-<span id="_CPPv3N19AddressableItemList36setShowItemContextMenuWithoutAddressEb"></span><span id="_CPPv2N19AddressableItemList36setShowItemContextMenuWithoutAddressEb"></span><span id="AddressableItemList::setShowItemContextMenuWithoutAddress__b"></span><span class="target" id="classAddressableItemList_1a748f8d8ce2e4a281a749d6b8300671c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setShowItemContextMenuWithoutAddress</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19AddressableItemList36setShowItemContextMenuWithoutAddressEb" title="Link to this definition">¶</a><br /></dt>
-<dd><p>If this is set to true, the context menu will also be shown if no item is currently selected. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar9rangeSizeEv">
+<span id="_CPPv3N21AddressRangeScrollBar9rangeSizeEv"></span><span id="_CPPv2N21AddressRangeScrollBar9rangeSizeEv"></span><span id="AddressRangeScrollBar::rangeSize"></span><span class="target" id="classAddressRangeScrollBar_1a7846b9793ffdcfa22522b86b9676b97b"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rangeSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar9rangeSizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent">
+<span id="_CPPv3N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent"></span><span id="_CPPv2N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent"></span><span id="AddressRangeScrollBar::repostWheelEvent__QWheelEventP"></span><span class="target" id="classAddressRangeScrollBar_1ac42f63d1d437fbebae3f223acb4bb1e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">repostWheelEvent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWheelEvent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Reposts a wheel event to this scrollbar to synchronize its visual state. </p>
+<p>This allows external widgets (like side panels or text edits) to notify the scrollbar of wheel activity. It is needed for systems which have the option to show the scrollbar only while scrolling (when using Cutter’s “Native” theme)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> – The original QWheelEvent to be processed by the scrollbar </p>
+</dd>
+</dl>
 </dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar13hideScrollBarEv">
+<span id="_CPPv3N21AddressRangeScrollBar13hideScrollBarEv"></span><span id="_CPPv2N21AddressRangeScrollBar13hideScrollBarEv"></span><span id="AddressRangeScrollBar::hideScrollBar"></span><span class="target" id="classAddressRangeScrollBar_1a58a7c217a1d9da4ac6fd8fbf0466a05d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hideScrollBar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar13hideScrollBarEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar13showScrollBarEv">
+<span id="_CPPv3N21AddressRangeScrollBar13showScrollBarEv"></span><span id="_CPPv2N21AddressRangeScrollBar13showScrollBarEv"></span><span id="AddressRangeScrollBar::showScrollBar"></span><span class="target" id="classAddressRangeScrollBar_1aa75aaa36f8343c1349b09f7dc67882eb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showScrollBar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar13showScrollBarEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar8scrolledEi">
+<span id="_CPPv3N21AddressRangeScrollBar8scrolledEi"></span><span id="_CPPv2N21AddressRangeScrollBar8scrolledEi"></span><span id="AddressRangeScrollBar::scrolled__i"></span><span class="target" id="classAddressRangeScrollBar_1a84b94165d01fb9879d11f0a596da97c2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scrolled</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lines</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar8scrolledEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
@@ -121,9 +150,9 @@
 <li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAddressRangeScrollBar.html">AddressRangeScrollBar</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AddressRangeScrollBar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddressableDockWidget.html">AddressableDockWidget</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">AddressableItemList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalysisClassesModel.html">AnalysisClassesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
