@@ -1,0 +1,4 @@
+IncrementDecrementDialog
+========================
+
+.. doxygenclass:: IncrementDecrementDialog

@@ -1,0 +1,4 @@
+StackModel::Item
+================
+
+.. doxygenstruct:: StackModel::Item

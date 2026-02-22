@@ -1,0 +1,4 @@
+NewFileDialog
+=============
+
+.. doxygenclass:: NewFileDialog

@@ -1,0 +1,4 @@
+PointSetSegmentTree
+===================
+
+.. doxygenclass:: PointSetSegmentTree

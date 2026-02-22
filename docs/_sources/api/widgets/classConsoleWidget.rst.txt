@@ -1,0 +1,4 @@
+ConsoleWidget
+=============
+
+.. doxygenclass:: ConsoleWidget

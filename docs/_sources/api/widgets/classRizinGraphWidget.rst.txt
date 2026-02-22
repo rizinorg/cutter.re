@@ -1,0 +1,4 @@
+RizinGraphWidget
+================
+
+.. doxygenclass:: RizinGraphWidget

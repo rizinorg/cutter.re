@@ -1,0 +1,4 @@
+ResourcesWidget
+===============
+
+.. doxygenclass:: ResourcesWidget

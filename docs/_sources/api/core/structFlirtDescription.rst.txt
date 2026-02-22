@@ -1,0 +1,4 @@
+FlirtDescription
+================
+
+.. doxygenstruct:: FlirtDescription

@@ -1,0 +1,4 @@
+LinkedListPool::Item
+====================
+
+.. doxygenstruct:: LinkedListPool::Item

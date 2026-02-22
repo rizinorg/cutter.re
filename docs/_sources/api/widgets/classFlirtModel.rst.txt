@@ -1,0 +1,4 @@
+FlirtModel
+==========
+
+.. doxygenclass:: FlirtModel

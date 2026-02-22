@@ -1,0 +1,4 @@
+SymbolsProxyModel
+=================
+
+.. doxygenclass:: SymbolsProxyModel

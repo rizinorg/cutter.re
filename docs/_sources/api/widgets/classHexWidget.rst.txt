@@ -1,0 +1,4 @@
+HexWidget
+=========
+
+.. doxygenclass:: HexWidget

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Building &#8212; Cutter 2.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="_static/admonitions.css?v=f99abf92" />
+    <script src="_static/documentation_options.js?v=4d935f96"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/cutter.js?v=b9d5d2df"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Plugins" href="plugins.html" />
+    <link rel="prev" title="Getting Started with Python Plugins" href="contributing/plugins/getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plugins.html" title="Plugins"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="contributing/plugins/getting-started.html" title="Getting Started with Python Plugins"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cutter 2.4.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="building">
+<h1>Building<a class="headerlink" href="#building" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you just want to use the latest Release version of Cutter, please note
+that we provide pre-compiled binaries for Windows, Linux, and macOS on
+our <a class="reference external" href="https://github.com/rizinorg/cutter/releases/latest">release page</a> and
+<a class="reference external" href="https://nightly.link/rizinorg/cutter/workflows/ccpp/dev">CI page</a> for latest development builds.</p>
+</div>
+<p>This page describes how to do a basic build from the command line. If you are planning to modify Cutter it is recommended to also read our <a class="reference internal" href="contributing/code/ide-setup.html"><span class="doc">development environment setup</span></a>.</p>
+<section id="getting-the-source">
+<h2>Getting the Source<a class="headerlink" href="#getting-the-source" title="Link to this heading">¶</a></h2>
+<p>Make sure you’ve <code class="docutils literal notranslate"><span class="pre">git</span></code> installed in your system (<a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installation guide</a>) and do the following:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recurse-submodules<span class="w"> </span>https://github.com/rizinorg/cutter
+</pre></div>
+</div>
+<p>This will clone the Cutter source and its dependencies(rizin, etc.)
+under <strong>cutter</strong> and you should see the following dir structure:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cutter/-<span class="p">|</span>
+<span class="w">        </span><span class="p">|</span>-docs/<span class="w">     </span><span class="c1"># Cutter Documentation</span>
+<span class="w">        </span><span class="p">|</span>-rizin/<span class="w">    </span><span class="c1"># Rizin submodule</span>
+<span class="w">        </span><span class="p">|</span>-src/<span class="w">      </span><span class="c1"># Cutter Source Code</span>
+</pre></div>
+</div>
+<p>Following sections assume that <strong>cutter</strong> is your working dir. (if not, do <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">cutter</span></code>)</p>
+</section>
+<section id="building-on-linux">
+<h2>Building on Linux<a class="headerlink" href="#building-on-linux" title="Link to this heading">¶</a></h2>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h3>
+<p>On Linux, you will need:</p>
+<ul class="simple">
+<li><p>build-essential</p></li>
+<li><p>cmake</p></li>
+<li><p>meson</p></li>
+<li><p>libzip-dev</p></li>
+<li><p>libzlib-dev</p></li>
+<li><p>qt6</p></li>
+<li><p>qt6-svg</p></li>
+<li><p>pkgconf</p></li>
+<li><p>curl*</p></li>
+<li><p>python-setuptools*</p></li>
+<li><p>KSyntaxHighlighter**</p></li>
+<li><p>graphviz**</p></li>
+<li><p>shiboken6**</p></li>
+<li><p>pyside6**</p></li>
+</ul>
+<blockquote>
+<div><p><cite>*</cite> Recommended while building with <code class="docutils literal notranslate"><span class="pre">make</span></code>/<code class="docutils literal notranslate"><span class="pre">Cmake</span></code>.</p>
+<p><cite>**</cite> Optional. If present, these add extra features to Cutter. See <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
+</div></blockquote>
+<p>On Debian-based Linux distributions, all of these essential packages can be installed with this single command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">pkgconf</span> <span class="n">libzip</span><span class="o">-</span><span class="n">dev</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">dev</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span> <span class="n">libqt6svg6</span><span class="o">-</span><span class="n">dev</span> <span class="n">libqt6core5compat6</span><span class="o">-</span><span class="n">dev</span> <span class="n">libqt6svgwidgets6</span> <span class="n">qt6</span><span class="o">-</span><span class="n">l10n</span><span class="o">-</span><span class="n">tools</span>
+</pre></div>
+</div>
+<p>Depending on your configuration you’ll might also need the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libgraphviz</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Ubuntu 20.04 and lower (or in any case you get an error <code class="docutils literal notranslate"><span class="pre">Meson</span> <span class="pre">version</span> <span class="pre">is</span> <span class="pre">x</span> <span class="pre">but</span> <span class="pre">project</span> <span class="pre">requires</span> <span class="pre">&gt;=y</span></code>), <code class="docutils literal notranslate"><span class="pre">meson</span></code> should be installed with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">meson</span></code>.</p>
+</div>
+<p>On Arch-based Linux distributions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">base</span><span class="o">-</span><span class="n">devel</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt6</span><span class="o">-</span><span class="n">base</span> <span class="n">qt6</span><span class="o">-</span><span class="n">svg</span> <span class="n">qt6</span><span class="o">-</span><span class="n">tools</span>
+
+<span class="c1"># When building with CUTTER_ENABLE_KSYNTAXHIGHLIGHTING (Default)</span>
+<span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span>
+<span class="c1"># When building with CUTTER_ENABLE_GRAPHVIZ (Default)</span>
+<span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">graphviz</span>
+<span class="c1"># When building with CUTTER_ENABLE_PYTHON and CUTTER_ENABLE_PYTHON_BINDINGS</span>
+<span class="n">sudo</span> <span class="n">pacman</span> <span class="o">-</span><span class="n">Syu</span> <span class="o">--</span><span class="n">needed</span> <span class="n">pyside6</span> <span class="n">shiboken6</span>
+</pre></div>
+</div>
+<p>On dnf/yum based distributions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gcc</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span> <span class="n">make</span> <span class="n">cmake</span> <span class="n">meson</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qtbase</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qtsvg</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qttools</span><span class="o">-</span><span class="n">devel</span> <span class="n">qt6</span><span class="o">-</span><span class="n">qt5compat</span><span class="o">-</span><span class="n">devel</span>
+<span class="c1"># Optional packages</span>
+<span class="n">sudo</span> <span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">graphviz</span><span class="o">-</span><span class="n">devel</span> <span class="n">kf6</span><span class="o">-</span><span class="n">syntax</span><span class="o">-</span><span class="n">highlighting</span><span class="o">-</span><span class="n">devel</span> <span class="n">python3</span><span class="o">-</span><span class="n">devel</span> <span class="n">shiboken6</span> <span class="n">python3</span><span class="o">-</span><span class="n">pyside6</span><span class="o">-</span><span class="n">devel</span> <span class="n">clang</span>
+</pre></div>
+</div>
+<p>On older Linux systems not supported by QT6 you can use Qt 5.15. Use of Qt5 on operating systems other than Linux is untested.</p>
+</section>
+<section id="building-steps">
+<h3>Building Steps<a class="headerlink" href="#building-steps" title="Link to this heading">¶</a></h3>
+<p>The recommended way to build Cutter on Linux is by using CMake. Simply invoke CMake to build Cutter and its dependency Rizin.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+cmake<span class="w"> </span>--build<span class="w"> </span>.
+</pre></div>
+</div>
+<p>If your operating system has a newer version of CMake (&gt; v3.12) you can use this cleaner solution:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build
+</pre></div>
+</div>
+<p>If you want to use Cutter with another version of Rizin you can set <code class="docutils literal notranslate"><span class="pre">-DCUTTER_USE_BUNDLED_RIZIN=OFF</span></code>. Note that using a version of Rizin which isn’t the version Cutter is using can cause issues and the compilation might fail.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are interested in building Cutter with support for Python plugins,
+Syntax Highlighting and more, please look at the full list of <a class="reference internal" href="#cmake-building-options">CMake Building Options</a>.</p>
+</div>
+<p>After the build process is complete, you should have the <code class="docutils literal notranslate"><span class="pre">Cutter</span></code> executable in the <strong>build</strong> dir.
+You can now execute Cutter like this:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./build/cutter
+</pre></div>
+</div>
+</section>
+<section id="making-linux-distribution-specific-packages">
+<h3>Making Linux distribution specific packages<a class="headerlink" href="#making-linux-distribution-specific-packages" title="Link to this heading">¶</a></h3>
+<p>When making a distribution specific package, the default install target should give you a good starting point.
+It uses CMake built-in functionality and <a class="reference external" href="https://cmake.org/cmake/help/latest/module/GNUInstallDirs.html?highlight=gnu%20directories">GNUInstallDirs</a> for
+installing the executable, desktop file, headers and other files required for plugin compilation. See CMake documentation for adjusting installed file locations and properties.
+It shouldn’t be necessary to manually copy files from plain build.</p>
+<p>It is recommended to build and package rizin as a separate package so that it can be used with or without Cutter. Doing that will also give more control over the way rizin dependencies are handled. We are trying to maintain
+compatibility with latest rizin release at the time of Cutter release and making a new Cutter release when new rizin version is released.</p>
+<p>If you are packaging Cutter, users will appreciate it if you also package <a class="reference external" href="https://github.com/rizinorg/rz-ghidra">rz-ghidra</a> and <a class="reference external" href="https://github.com/rizinorg/jsdec">jsdec</a> decompilers as optional packages.
+It should be possible to compile Cutter plugins against proper Cutter installation without having direct access to Cutter source code.</p>
+<p>If the names “Cutter” or “cutter” conflict with other packages or their content, “rz-cutter” can be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Configuration for packaging<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE=Release</span></code> turn on release optimizations, unless your distro has more specific guidelines for common compiler options.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN=OFF</span></code> turn off use of rizin from submodule to use previously packaged rizin. Note that keeping it on doesn’t install rizin in a way suitable for linux packaging without doing additional manual steps making packaging process more complex. Bundled rizin will also likely conflict with standalone rizin package.</p></li>
+<li><p>Correct install prefix. By default CMake will install to /usr/local suitable for user builds. Change it according to your distro packaging guidelines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> and  <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> it is recommended to turn on for complete user experience. May require manual path specification on distros with multiple python versions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> and <code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> optional but nice to have since they are available on most distros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> use it to specify additional plugin search locations if distro packaging guidelines require you placing them in locations Cutter doesn’t use by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_VERSION_SUFFIX</span></code> can be used to differentiate multiple builds based on same upstream Cutter version, distro specific package build number and similar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_INCLUDE_GIT_HASH=OFF</span></code> By default cutter includes git commit hash in the full version string. If you are building from source tarrball or other source which isn’t original git repository you might want to disable this.</p></li>
+</ul>
+</section>
+</section>
+<section id="building-on-windows">
+<h2>Building on Windows<a class="headerlink" href="#building-on-windows" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Requirements<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Cutter works on Windows 10 or newer.
+To compile Cutter it is necessary to have the following installed:</p>
+<ul class="simple">
+<li><p>A version of <a class="reference external" href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=16">Visual Studio</a> (2019 or newer)</p></li>
+<li><p><a class="reference external" href="https://cmake.org/download/">CMake</a></p></li>
+<li><p><a class="reference external" href="https://www.qt.io/download-qt-installer">Qt 6</a>  See <a class="reference internal" href="contributing/code/ide-setup.html"><span class="doc">development environment setup</span></a> for alternative ways of obtaining Qt that don’t require Qt account.</p></li>
+<li><p><a class="reference external" href="https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip">Meson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ninja-build/ninja/releases/latest">Ninja</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Building Steps<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>To build Cutter on Windows machines using CMake,
+you will have to make sure that the executables are available
+in your <code class="docutils literal notranslate"><span class="pre">%PATH%</span></code> environment variable.</p>
+<p>You can check if the binaries are available by opening PowerShell and
+executing the following commands.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ninja</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">meson</span> <span class="p">-</span><span class="n">-version</span>
+<span class="n">cmake</span> <span class="p">-</span><span class="n">-version</span>
+</pre></div>
+</div>
+<p>If they are not available, you can use PowerShell to add them to your PATH one by one:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\enter\path\here&quot;</span>
+</pre></div>
+</div>
+<p>Note that the paths below may vary depending on your version of Qt and Visual Studio.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Add the following directory to your PATH</span>
+<span class="nv">$Env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;C:\Qt\6.7.2\msvc2019_64\bin&quot;</span>
+
+<span class="c"># Build Cutter</span>
+<span class="n">cmake</span> <span class="n">-B</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="p">-</span><span class="n">-build</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>After the compilation completes, the <code class="docutils literal notranslate"><span class="pre">cutter.exe</span></code> binary will be available in <code class="docutils literal notranslate"><span class="pre">.\build\Debug\cutter.exe</span></code>.</p>
+</section>
+</section>
+<section id="building-on-macos">
+<h2>Building on macOS<a class="headerlink" href="#building-on-macos" title="Link to this heading">¶</a></h2>
+<section id="id3">
+<h3>Requirements<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>XCode</p></li>
+<li><p>CMake</p></li>
+<li><p>Qt</p></li>
+<li><p>meson</p></li>
+<li><p>ninja</p></li>
+</ul>
+<p>For basic build all dependencies except XCode can be installed using homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span> <span class="n">qt6</span> <span class="n">meson</span> <span class="n">ninja</span>
+</pre></div>
+</div>
+</section>
+<section id="recommended-way-for-dev-builds">
+<h3>Recommended Way for dev builds<a class="headerlink" href="#recommended-way-for-dev-builds" title="Link to this heading">¶</a></h3>
+<div class="highlight-batch notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> build
+<span class="k">cd</span> build
+cmake .. -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt6
+make
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cmake-building-options">
+<h2>CMake Building Options<a class="headerlink" href="#cmake-building-options" title="Link to this heading">¶</a></h2>
+<p>Note that there are some major building options available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_USE_BUNDLED_RIZIN</span></code> automatically compile Rizin from submodule (Enabled by default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON</span></code> compile with Python support, required for Python plugins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_PYTHON_BINDINGS</span></code> automatically generate Python Bindings with Shiboken, required for Python plugins!</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_KSYNTAXHIGHLIGHTING</span></code> use KSyntaxHighlighting for code highlighting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_GRAPHVIZ</span></code> enable Graphviz for graph layouts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_EXTRA_PLUGIN_DIRS</span></code> List of addition plugin locations. Useful when preparing package for Linux distros that have strict package layout rules.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_QT</span></code> Qt major version to use. Defaults to 6. Allowed values: 5, 6.</p></li>
+</ul>
+<p>Cutter binary release options, not needed for most users and might not work easily outside CI environment:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_ENABLE_DEPENDENCY_DOWNLOADS</span></code> Enable downloading of dependencies. Setting to OFF doesn’t affect any downloads done by Rizin build. This option is used for preparing Cutter binary release packges. Turned off by default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CUTTER_PACKAGE_DEPENDENCIES</span></code> During install step include the third party dependencies. This option is used for preparing Cutter binary release packages.</p></li>
+</ul>
+<p>For full list of Cutter specific build options and their description see CMakeCache.txt after configuring the project or use a graphical CMake configurator if your IDE provides one.</p>
+<p>These options can be enabled or disabled from the command line arguments passed to CMake.
+For example, to build Cutter with support for Python plugins, you can run this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON_BINDINGS</span><span class="o">=</span><span class="n">ON</span>
+</pre></div>
+</div>
+<p>Or if one wants to explicitly disable an option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">B</span> <span class="n">build</span> <span class="o">-</span><span class="n">DCUTTER_ENABLE_PYTHON</span><span class="o">=</span><span class="n">OFF</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p><strong>Cmake can’t find Qt</strong></p>
+<blockquote>
+<div><p>Cmake: qt development package not found</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Depending on how Qt installed (Distribution packages or using the Qt
+installer application), CMake may not be able to find it by itself if it
+is not in a common place. If that is the case, double-check that the
+correct Qt version is installed. Locate its prefix (a directory
+containing bin/, lib/, include/, etc.) and specify it to CMake using
+<code class="docutils literal notranslate"><span class="pre">CMAKE_PREFIX_PATH</span></code> in the above process, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="n">CMakeCache</span><span class="o">.</span><span class="n">txt</span> <span class="c1"># the cache may be polluted with unwanted libraries found before</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_PREFIX_PATH</span><span class="o">=/</span><span class="n">opt</span><span class="o">/</span><span class="n">Qt</span><span class="o">/</span><span class="mf">5.9.1</span><span class="o">/</span><span class="n">gcc_64</span> <span class="o">..</span>
+</pre></div>
+</div>
+<ul>
+<li><p><strong>Rizin’s librz_*.so cannot be found when running Cutter</strong></p>
+<blockquote>
+<div><p>./cutter: error while loading shared libraries: librz_lang.so: cannot open shared object file: No such file or directory</p>
+</div></blockquote>
+</li>
+</ul>
+<p>The exact Rizin .so file that cannot be found may vary. On some systems, the linker by default uses RUNPATH instead of RPATH which is incompatible with the way Rizin is currently compiled. It results in some of the Rizin libraries not being found when running cutter. You can verify if this is the problem by running <cite>ldd ./cutter</cite>. If all the Rizin libraries are missing you have a different problem.
+The workaround is to either add the <cite>–disable-new-dtags</cite> linker flag when compiling Cutter or add the Rizin installation path to LD_LIBRARY_PATH environment variable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_EXE_LINKER_FLAGS</span><span class="o">=</span><span class="s2">&quot;-Wl,--disable-new-dtags&quot;</span>  <span class="o">..</span>
+</pre></div>
+</div>
+<ul>
+<li><p><strong>rz_*.h: No such file or directory</strong></p>
+<blockquote>
+<div><p>Eg: rz_util/rz_annotated_code.h: No such file or directory</p>
+</div></blockquote>
+</li>
+</ul>
+<p>If you face an error where some header file starting with <code class="docutils literal notranslate"><span class="pre">rz_</span></code> is missing, you should check the <strong>rizin</strong> submodule and
+make sure it is in sync with upstream <strong>Cutter</strong> repo. Simply run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>rz_core development package not found</strong></p></li>
+</ul>
+<p>If you installed Rizin and still encounter this error, it could be that your
+<code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable is set improperly (doesn’t contain
+<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>). You can fix this by adding the Rizin installation dir to
+your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable.</p>
+<p>macOS specific solutions:</p>
+<p>On macOS, that can also be, for example, due to <code class="docutils literal notranslate"><span class="pre">Qt</span> <span class="pre">Creator.app</span></code>
+being copied over to <code class="docutils literal notranslate"><span class="pre">/Applications</span></code>. To fix this, append
+<code class="docutils literal notranslate"><span class="pre">:/usr/local/bin</span></code> to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable within the <em>Build
+Environment</em> section in Qt Creator. See the screenshot below should you
+encounter any problems.</p>
+<p>You can also try:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH=$HOME/bin/prefix/rizin/lib/pkgconfig</span> <span class="pre">cmake</span> <span class="pre">...</span></code></p></li>
+</ul>
+<img alt="_images/cutter_path_settings.png" src="_images/cutter_path_settings.png" />
+<p>You can also install Rizin into <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code> and then
+add a variable <code class="docutils literal notranslate"><span class="pre">PKG_CONFIG_PATH</span></code> with the value <code class="docutils literal notranslate"><span class="pre">/usr/lib/pkgconfig/</span></code>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+      <a href="index.html">Cutter documentation</a>
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/code.html">Developer documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-the-source">Getting the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-linux">Building on Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-steps">Building Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-linux-distribution-specific-packages">Making Linux distribution specific packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-windows">Building on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Building Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-on-macos">Building on macOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-way-for-dev-builds">Recommended Way for dev builds</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cmake-building-options">CMake Building Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2020, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+    
+
+  </body>
+</html>

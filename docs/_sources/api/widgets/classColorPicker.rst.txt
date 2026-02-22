@@ -1,0 +1,4 @@
+ColorPicker
+===========
+
+.. doxygenclass:: ColorPicker

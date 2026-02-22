@@ -1,0 +1,4 @@
+GraphLayout::GraphBlock
+=======================
+
+.. doxygenstruct:: GraphLayout::GraphBlock

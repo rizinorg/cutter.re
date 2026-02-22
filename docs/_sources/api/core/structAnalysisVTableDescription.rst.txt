@@ -1,0 +1,4 @@
+AnalysisVTableDescription
+=========================
+
+.. doxygenstruct:: AnalysisVTableDescription

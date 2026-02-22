@@ -1,0 +1,4 @@
+CutterTreeWidget
+================
+
+.. doxygenclass:: CutterTreeWidget

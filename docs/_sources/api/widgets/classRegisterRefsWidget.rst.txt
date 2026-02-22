@@ -1,0 +1,4 @@
+RegisterRefsWidget
+==================
+
+.. doxygenclass:: RegisterRefsWidget

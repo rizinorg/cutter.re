@@ -1,0 +1,4 @@
+ArenaInfoDialog
+===============
+
+.. doxygenclass:: ArenaInfoDialog

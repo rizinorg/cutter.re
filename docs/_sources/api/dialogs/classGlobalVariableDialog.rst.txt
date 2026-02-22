@@ -1,0 +1,4 @@
+GlobalVariableDialog
+====================
+
+.. doxygenclass:: GlobalVariableDialog
