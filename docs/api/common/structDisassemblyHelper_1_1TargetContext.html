@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>RichTextPainter::CustomRichText_t &#8212; Cutter 2.4.0 documentation</title>
+    <title>DisassemblyHelper::TargetContext &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="mmio_lookup_context" href="structmmio__lookup__context.html" />
-    <link rel="prev" title="RecentFileEntry" href="structRecentFileEntry.html" />
+    <link rel="next" title="FallbackSyntaxHighlighter::HighlightingRule" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html" />
+    <link rel="prev" title="DisassemblyHelper::TargetAction" href="structDisassemblyHelper_1_1TargetAction.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="structmmio__lookup__context.html" title="mmio_lookup_context"
+          <a href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html" title="FallbackSyntaxHighlighter::HighlightingRule"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="structRecentFileEntry.html" title="RecentFileEntry"
+          <a href="structDisassemblyHelper_1_1TargetAction.html" title="DisassemblyHelper::TargetAction"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">RichTextPainter::CustomRichText_t</a></li> 
+        <li class="nav-item nav-item-this"><a href="">DisassemblyHelper::TargetContext</a></li> 
       </ul>
     </div>
 
@@ -51,51 +51,27 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="richtextpainter-customrichtext-t">
-<h1>RichTextPainter::CustomRichText_t<a class="headerlink" href="#richtextpainter-customrichtext-t" title="Link to this heading">¶</a></h1>
+  <section id="disassemblyhelper-targetcontext">
+<h1>DisassemblyHelper::TargetContext<a class="headerlink" href="#disassemblyhelper-targetcontext" title="Link to this heading">¶</a></h1>
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_tE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_tE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_tE"></span><span id="RichTextPainter::CustomRichText_t"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomRichText_t</span></span></span><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13TargetContextE">
+<span id="_CPPv3N17DisassemblyHelper13TargetContextE"></span><span id="_CPPv2N17DisassemblyHelper13TargetContextE"></span><span id="DisassemblyHelper::TargetContext"></span><span class="target" id="structDisassemblyHelper_1_1TargetContext"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TargetContext</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13TargetContextE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Data used to figure out what is under the mouse. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t4textE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t4textE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t4textE"></span><span id="RichTextPainter::CustomRichText_t::text__QString"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1ad8a5d961c173fb278ed8463f18230b9a"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">text</span></span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13TargetContext6offsetE">
+<span id="_CPPv3N17DisassemblyHelper13TargetContext6offsetE"></span><span id="_CPPv2N17DisassemblyHelper13TargetContext6offsetE"></span><span id="DisassemblyHelper::TargetContext::offset__RVA"></span><span class="target" id="structDisassemblyHelper_1_1TargetContext_1a83d0249b58ce1419b605138431855347"></span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13TargetContext6offsetE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t9textColorE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t9textColorE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t9textColorE"></span><span id="RichTextPainter::CustomRichText_t::textColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a9d59424038d8b6e7cabcaad8c72a9366"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textColor</span></span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13TargetContext4wordE">
+<span id="_CPPv3N17DisassemblyHelper13TargetContext4wordE"></span><span id="_CPPv2N17DisassemblyHelper13TargetContext4wordE"></span><span id="DisassemblyHelper::TargetContext::word__QString"></span><span class="target" id="structDisassemblyHelper_1_1TargetContext_1acdf8421b0c60f7ae19bb5f7358ba7395"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">word</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13TargetContext4wordE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14textBackgroundE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t14textBackgroundE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14textBackgroundE"></span><span id="RichTextPainter::CustomRichText_t::textBackground__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeb28dcca29bdc1f5112de8bc7aabbc1d"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">textBackground</span></span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t5flagsE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t5flagsE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t5flagsE"></span><span id="RichTextPainter::CustomRichText_t::flags__CustomRichTextFlags"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2d036e2b389b75eb7ecd5644b2d98c71"></span><a class="reference internal" href="classRichTextPainter.html#_CPPv4N15RichTextPainter19CustomRichTextFlagsE" title="RichTextPainter::CustomRichTextFlags"><span class="n"><span class="pre">CustomRichTextFlags</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flags</span></span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t9highlightE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t9highlightE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t9highlightE"></span><span id="RichTextPainter::CustomRichText_t::highlight__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1afb1630c4e9dc43f266868b4c6f5e6f13"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlight</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14highlightColorE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t14highlightColorE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightColorE"></span><span id="RichTextPainter::CustomRichText_t::highlightColor__QColor"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1aeec225f7a072912301ca40f9fd66e3bb"></span><span class="n"><span class="pre">QColor</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightColor</span></span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t14highlightWidthE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t14highlightWidthE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t14highlightWidthE"></span><span id="RichTextPainter::CustomRichText_t::highlightWidth__i"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1adf4e0dc2c577ba662eb809f480c71449"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightWidth</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N15RichTextPainter16CustomRichText_t20highlightConnectPrevE">
-<span id="_CPPv3N15RichTextPainter16CustomRichText_t20highlightConnectPrevE"></span><span id="_CPPv2N15RichTextPainter16CustomRichText_t20highlightConnectPrevE"></span><span id="RichTextPainter::CustomRichText_t::highlightConnectPrev__b"></span><span class="target" id="structRichTextPainter_1_1CustomRichText__t_1a2921628474cb99a5755c23fc46d47ae1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">highlightConnectPrev</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13TargetContext4lineE">
+<span id="_CPPv3N17DisassemblyHelper13TargetContext4lineE"></span><span id="_CPPv2N17DisassemblyHelper13TargetContext4lineE"></span><span id="DisassemblyHelper::TargetContext::line__QString"></span><span class="target" id="structDisassemblyHelper_1_1TargetContext_1acb14b6697fdd813844ead7bb8fd967ba"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">line</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13TargetContext4lineE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -174,7 +150,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutter_1_1CutterLayout.html">Cutter::CutterLayout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
@@ -184,7 +160,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">RichTextPainter::CustomRichText_t</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
 </ul>
