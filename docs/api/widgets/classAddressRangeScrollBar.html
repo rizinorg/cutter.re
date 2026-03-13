@@ -89,15 +89,10 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent">
-<span id="_CPPv3N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent"></span><span id="_CPPv2N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent"></span><span id="AddressRangeScrollBar::repostWheelEvent__QWheelEventP"></span><span class="target" id="classAddressRangeScrollBar_1ac42f63d1d437fbebae3f223acb4bb1e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">repostWheelEvent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWheelEvent</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar16repostWheelEventEP11QWheelEvent" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Reposts a wheel event to this scrollbar to synchronize its visual state. </p>
-<p>This allows external widgets (like side panels or text edits) to notify the scrollbar of wheel activity. It is needed for systems which have the option to show the scrollbar only while scrolling (when using Cutter’s “Native” theme)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>event</strong> – The original QWheelEvent to be processed by the scrollbar </p>
-</dd>
-</dl>
+<dt class="sig sig-object cpp" id="_CPPv4N21AddressRangeScrollBar22showTransientScrollBarEv">
+<span id="_CPPv3N21AddressRangeScrollBar22showTransientScrollBarEv"></span><span id="_CPPv2N21AddressRangeScrollBar22showTransientScrollBarEv"></span><span id="AddressRangeScrollBar::showTransientScrollBar"></span><span class="target" id="classAddressRangeScrollBar_1aba6704b97fc057eb30c0a3c7f7de57df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showTransientScrollBar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N21AddressRangeScrollBar22showTransientScrollBarEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Sends fake wheelEvent to the parent QScrollBar. </p>
+<p>This allows external widgets (like side panels or text edits) to notify the scrollbar of wheel activity. It is needed for systems (like MacOS) which have the option to enable transient scrollbars meaning the ability to show the scrollbar only while scrolling and hiding it later (when using Cutter’s “Native” theme) </p>
 </dd></dl>
 
 </div>
