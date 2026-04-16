@@ -420,6 +420,11 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore14getAddressTypeE3RVA">
+<span id="_CPPv3N10CutterCore14getAddressTypeE3RVA"></span><span id="_CPPv2N10CutterCore14getAddressTypeE3RVA"></span><span id="CutterCore::getAddressType__RVA"></span><span class="target" id="classCutterCore_1a4af5948d1d03ff31d114f66d3f02b209"></span><span class="n"><span class="pre">AddressTypeHint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAddressType</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore14getAddressTypeE3RVA" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore16createFunctionAtE3RVA">
 <span id="_CPPv3N10CutterCore16createFunctionAtE3RVA"></span><span id="_CPPv2N10CutterCore16createFunctionAtE3RVA"></span><span id="CutterCore::createFunctionAt__RVA"></span><span class="target" id="classCutterCore_1a01f80deb04b1c21ab227cbfc1e1e8561"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createFunctionAt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16createFunctionAtE3RVA" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1454,6 +1459,20 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore19getSectionAtAddressE3RVA">
+<span id="_CPPv3N10CutterCore19getSectionAtAddressE3RVA"></span><span id="_CPPv2N10CutterCore19getSectionAtAddressE3RVA"></span><span id="CutterCore::getSectionAtAddress__RVA"></span><span class="target" id="classCutterCore_1af9785823c3794db451943f123dad5a4a"></span><a class="reference internal" href="structSectionDescription.html#_CPPv418SectionDescription" title="SectionDescription"><span class="n"><span class="pre">SectionDescription</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSectionAtAddress</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore19getSectionAtAddressE3RVA" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the section at the given address. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>addr</strong> – Address to get the section for </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="structSectionDescription.html#structSectionDescription"><span class="std std-ref">SectionDescription</span></a> of the section at the given address </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore20setProfileDirectivesERK7QString">
 <span id="_CPPv3N10CutterCore20setProfileDirectivesERK7QString"></span><span id="_CPPv2N10CutterCore20setProfileDirectivesERK7QString"></span><span id="CutterCore::setProfileDirectives__QStringCR"></span><span class="target" id="classCutterCore_1a6c656c485ff299c16a4dca8d0dce0697"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setProfileDirectives</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">directives</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore20setProfileDirectivesERK7QString" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Sets the RzRun profile directives by writing them to a file If a profile path is already set in ‘dbg.profile’, this method overwrites that file If no path is set, it creates a temporary file and updates ‘dbg.profile’ to point to it. </p>
@@ -2336,6 +2355,11 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore25showMemoryWidgetRequestedEv">
 <span id="_CPPv3N10CutterCore25showMemoryWidgetRequestedEv"></span><span id="_CPPv2N10CutterCore25showMemoryWidgetRequestedEv"></span><span id="CutterCore::showMemoryWidgetRequested"></span><span class="target" id="classCutterCore_1a884a31fe900c42ad07d8774dee584e49"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showMemoryWidgetRequested</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore25showMemoryWidgetRequestedEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore20showAddressRequestedE3RVA">
+<span id="_CPPv3N10CutterCore20showAddressRequestedE3RVA"></span><span id="_CPPv2N10CutterCore20showAddressRequestedE3RVA"></span><span id="CutterCore::showAddressRequested__RVA"></span><span class="target" id="classCutterCore_1aa2a78c2839b3a53966a3ac5cb89db7a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showAddressRequested</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RVA</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore20showAddressRequestedE3RVA" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">

@@ -127,6 +127,7 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore14getFunctionEndE3RVA"><code class="docutils literal notranslate"><span class="pre">getFunctionEnd()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore26getLastFunctionInstructionE3RVA"><code class="docutils literal notranslate"><span class="pre">getLastFunctionInstruction()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore6flagAtE3RVAb"><code class="docutils literal notranslate"><span class="pre">flagAt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore14getAddressTypeE3RVA"><code class="docutils literal notranslate"><span class="pre">getAddressType()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16createFunctionAtE3RVA"><code class="docutils literal notranslate"><span class="pre">createFunctionAt()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16createFunctionAtE3RVA7QString"><code class="docutils literal notranslate"><span class="pre">createFunctionAt()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore21getDisassemblyPreviewE3RVAi"><code class="docutils literal notranslate"><span class="pre">getDisassemblyPreview()</span></code></a></li>
@@ -284,6 +285,7 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore15getBreakpointAtE3RVA"><code class="docutils literal notranslate"><span class="pre">getBreakpointAt()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore12isBreakpointERK5QListI3RVAE3RVA"><code class="docutils literal notranslate"><span class="pre">isBreakpoint()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore23getBreakpointsAddressesEv"><code class="docutils literal notranslate"><span class="pre">getBreakpointsAddresses()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore19getSectionAtAddressE3RVA"><code class="docutils literal notranslate"><span class="pre">getSectionAtAddress()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore20setProfileDirectivesERK7QString"><code class="docutils literal notranslate"><span class="pre">setProfileDirectives()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore18setRegisterProfileERK7QString"><code class="docutils literal notranslate"><span class="pre">setRegisterProfile()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore17convertGDBProfileERK7QString"><code class="docutils literal notranslate"><span class="pre">convertGDBProfile()</span></code></a></li>
@@ -416,6 +418,7 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore10newMessageERK7QString"><code class="docutils literal notranslate"><span class="pre">newMessage</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore15newDebugMessageERK7QString"><code class="docutils literal notranslate"><span class="pre">newDebugMessage</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore25showMemoryWidgetRequestedEv"><code class="docutils literal notranslate"><span class="pre">showMemoryWidgetRequested</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore20showAddressRequestedE3RVA"><code class="docutils literal notranslate"><span class="pre">showAddressRequested</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore17showTypeRequestedERK7QString"><code class="docutils literal notranslate"><span class="pre">showTypeRequested</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore8instanceEv"><code class="docutils literal notranslate"><span class="pre">instance()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore24sanitizeStringForCommandE7QString"><code class="docutils literal notranslate"><span class="pre">sanitizeStringForCommand()</span></code></a></li>
@@ -614,12 +617,6 @@
 <li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow8MenuType7PluginsE"><code class="docutils literal notranslate"><span class="pre">Plugins</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15AddressTypeHintE"><code class="docutils literal notranslate"><span class="pre">AddressTypeHint</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15AddressTypeHint8FunctionE"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15AddressTypeHint4DataE"><code class="docutils literal notranslate"><span class="pre">Data</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15AddressTypeHint7UnknownE"><code class="docutils literal notranslate"><span class="pre">Unknown</span></code></a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15ContextMenuTypeE"><code class="docutils literal notranslate"><span class="pre">ContextMenuType</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15ContextMenuType11DisassemblyE"><code class="docutils literal notranslate"><span class="pre">Disassembly</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow15ContextMenuType11AddressableE"><code class="docutils literal notranslate"><span class="pre">Addressable</span></code></a></li>
@@ -658,9 +655,11 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow16createShowInMenuEP7QWidget3RVA15AddressTypeHint"><code class="docutils literal notranslate"><span class="pre">createShowInMenu()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow22setCurrentMemoryWidgetEP16MemoryDockWidget"><code class="docutils literal notranslate"><span class="pre">setCurrentMemoryWidget()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow19getLastMemoryWidgetEv"><code class="docutils literal notranslate"><span class="pre">getLastMemoryWidget()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow23getOrCreateMemoryWidgetE16MemoryWidgetType3RVAb"><code class="docutils literal notranslate"><span class="pre">getOrCreateMemoryWidget()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow24getContextMenuExtensionsE15ContextMenuType"><code class="docutils literal notranslate"><span class="pre">getContextMenuExtensions()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow10responsiveE"><code class="docutils literal notranslate"><span class="pre">responsive</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow12finalizeOpenEv"><code class="docutils literal notranslate"><span class="pre">finalizeOpen</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow11showAddressE3RVA"><code class="docutils literal notranslate"><span class="pre">showAddress</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow10refreshAllEv"><code class="docutils literal notranslate"><span class="pre">refreshAll</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow29seekToFunctionLastInstructionEv"><code class="docutils literal notranslate"><span class="pre">seekToFunctionLastInstruction</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classMainWindow.html#_CPPv4N10MainWindow19seekToFunctionStartEv"><code class="docutils literal notranslate"><span class="pre">seekToFunctionStart</span></code></a></li>
