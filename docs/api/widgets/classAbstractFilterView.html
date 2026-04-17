@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SearchableTextEdit::SearchResult &#8212; Cutter 2.4.0 documentation</title>
+    <title>AbstractFilterView &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="SimpleTextGraphView::BlockContent" href="structSimpleTextGraphView_1_1BlockContent.html" />
-    <link rel="prev" title="SearchKindInfo" href="structSearchKindInfo.html" />
+    <link rel="next" title="AddrDockScene" href="classAddrDockScene.html" />
+    <link rel="prev" title="AbstractData" href="classAbstractData.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="structSimpleTextGraphView_1_1BlockContent.html" title="SimpleTextGraphView::BlockContent"
+          <a href="classAddrDockScene.html" title="AddrDockScene"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="structSearchKindInfo.html" title="SearchKindInfo"
+          <a href="classAbstractData.html" title="AbstractData"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">SearchableTextEdit::SearchResult</a></li> 
+        <li class="nav-item nav-item-this"><a href="">AbstractFilterView</a></li> 
       </ul>
     </div>
 
@@ -51,21 +51,55 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="searchabletextedit-searchresult">
-<h1>SearchableTextEdit::SearchResult<a class="headerlink" href="#searchabletextedit-searchresult" title="Link to this heading">¶</a></h1>
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N18SearchableTextEdit12SearchResultE">
-<span id="_CPPv3N18SearchableTextEdit12SearchResultE"></span><span id="_CPPv2N18SearchableTextEdit12SearchResultE"></span><span id="SearchableTextEdit::SearchResult"></span><span class="target" id="structSearchableTextEdit_1_1SearchResult"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SearchResult</span></span></span><a class="headerlink" href="#_CPPv4N18SearchableTextEdit12SearchResultE" title="Link to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18SearchableTextEdit12SearchResult8positionE">
-<span id="_CPPv3N18SearchableTextEdit12SearchResult8positionE"></span><span id="_CPPv2N18SearchableTextEdit12SearchResult8positionE"></span><span id="SearchableTextEdit::SearchResult::position__i"></span><span class="target" id="structSearchableTextEdit_1_1SearchResult_1a0500d935ba88f34ada857f82e0aae43c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><a class="headerlink" href="#_CPPv4N18SearchableTextEdit12SearchResult8positionE" title="Link to this definition">¶</a><br /></dt>
+  <section id="abstractfilterview">
+<h1>AbstractFilterView<a class="headerlink" href="#abstractfilterview" title="Link to this heading">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv418AbstractFilterView">
+<span id="_CPPv318AbstractFilterView"></span><span id="_CPPv218AbstractFilterView"></span><span id="AbstractFilterView"></span><span class="target" id="classAbstractFilterView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AbstractFilterView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QWidget</span></span><a class="headerlink" href="#_CPPv418AbstractFilterView" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classComboQuickFilterView.html#classComboQuickFilterView"><span class="std std-ref">ComboQuickFilterView</span></a>, <a class="reference internal" href="classQuickFilterView.html#classQuickFilterView"><span class="std std-ref">QuickFilterView</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView18AbstractFilterViewEP7QWidget">
+<span id="_CPPv3N18AbstractFilterView18AbstractFilterViewEP7QWidget"></span><span id="_CPPv2N18AbstractFilterView18AbstractFilterViewEP7QWidget"></span><span id="AbstractFilterView::AbstractFilterView__QWidgetP"></span><span class="target" id="classAbstractFilterView_1aecd7ea73901fe4bb16a18d52542b6c65"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AbstractFilterView</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView18AbstractFilterViewEP7QWidget" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N18SearchableTextEdit12SearchResult6lengthE">
-<span id="_CPPv3N18SearchableTextEdit12SearchResult6lengthE"></span><span id="_CPPv2N18SearchableTextEdit12SearchResult6lengthE"></span><span id="SearchableTextEdit::SearchResult::length__i"></span><span class="target" id="structSearchableTextEdit_1_1SearchResult_1acaa004d63cf8a6f80e8fd212a14909af"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><a class="headerlink" href="#_CPPv4N18SearchableTextEdit12SearchResult6lengthE" title="Link to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView12setItemCountEi">
+<span id="_CPPv3N18AbstractFilterView12setItemCountEi"></span><span id="_CPPv2N18AbstractFilterView12setItemCountEi"></span><span id="AbstractFilterView::setItemCount__i"></span><span class="target" id="classAbstractFilterView_1a4bc14444d9d8a72bd6eabe266f2237fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setItemCount</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView12setItemCountEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView13showItemCountEb">
+<span id="_CPPv3N18AbstractFilterView13showItemCountEb"></span><span id="_CPPv2N18AbstractFilterView13showItemCountEb"></span><span id="AbstractFilterView::showItemCount__b"></span><span class="target" id="classAbstractFilterView_1aca7efda25d4e4c9c6ffbad5653f27090"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showItemCount</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">show</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView13showItemCountEb" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView10showFilterEv">
+<span id="_CPPv3N18AbstractFilterView10showFilterEv"></span><span id="_CPPv2N18AbstractFilterView10showFilterEv"></span><span id="AbstractFilterView::showFilter"></span><span class="target" id="classAbstractFilterView_1a589128ce35e7cfd8766ad1eca0a717ff"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView10showFilterEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView11clearFilterEv">
+<span id="_CPPv3N18AbstractFilterView11clearFilterEv"></span><span id="_CPPv2N18AbstractFilterView11clearFilterEv"></span><span id="AbstractFilterView::clearFilter"></span><span class="target" id="classAbstractFilterView_1a79d97fcf9c78cab30ccf5eb19781eb25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView11clearFilterEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView11closeFilterEv">
+<span id="_CPPv3N18AbstractFilterView11closeFilterEv"></span><span id="_CPPv2N18AbstractFilterView11closeFilterEv"></span><span id="AbstractFilterView::closeFilter"></span><span class="target" id="classAbstractFilterView_1a955add83ada9729643c3c48a30b6aa93"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">closeFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView11closeFilterEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView17filterTextChangedERK7QString">
+<span id="_CPPv3N18AbstractFilterView17filterTextChangedERK7QString"></span><span id="_CPPv2N18AbstractFilterView17filterTextChangedERK7QString"></span><span id="AbstractFilterView::filterTextChanged__QStringCR"></span><span class="target" id="classAbstractFilterView_1a807869fbe308c79ecd9c62ea001efb7c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterTextChanged</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView17filterTextChangedERK7QString" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView12filterClosedEv">
+<span id="_CPPv3N18AbstractFilterView12filterClosedEv"></span><span id="_CPPv2N18AbstractFilterView12filterClosedEv"></span><span id="AbstractFilterView::filterClosed"></span><span class="target" id="classAbstractFilterView_1a6a40ffb3efc6bb4a5eb00db14bd974ad"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filterClosed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView12filterClosedEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -99,7 +133,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../widgetslist.html">Widgets</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="classAbstractAddrDock.html">AbstractAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAbstractData.html">AbstractData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classAbstractFilterView.html">AbstractFilterView</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AbstractFilterView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddrDockScene.html">AddrDockScene</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddressRangeScrollBar.html">AddressRangeScrollBar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddressableDockWidget.html">AddressableDockWidget</a></li>
@@ -260,7 +294,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structOptionInfo.html">OptionInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRegisterRefDescription.html">RegisterRefDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSearchKindInfo.html">SearchKindInfo</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">SearchableTextEdit::SearchResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structSearchableTextEdit_1_1SearchResult.html">SearchableTextEdit::SearchResult</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structSimpleTextGraphView_1_1BlockContent.html">SimpleTextGraphView::BlockContent</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structStackModel_1_1Item.html">StackModel::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structVisualNavbar_1_1XToAddress.html">VisualNavbar::XToAddress</a></li>
