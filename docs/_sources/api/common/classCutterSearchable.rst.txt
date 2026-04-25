@@ -1,0 +1,4 @@
+CutterSearchable
+================
+
+.. doxygenclass:: CutterSearchable

@@ -1,0 +1,4 @@
+Base64EnDecodedWriteDialog
+==========================
+
+.. doxygenclass:: Base64EnDecodedWriteDialog

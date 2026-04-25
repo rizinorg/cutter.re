@@ -1,0 +1,4 @@
+GraphLayout::LayoutConfig
+=========================
+
+.. doxygenstruct:: GraphLayout::LayoutConfig

@@ -1,0 +1,4 @@
+RegisterProfileDialog
+=====================
+
+.. doxygenclass:: RegisterProfileDialog
