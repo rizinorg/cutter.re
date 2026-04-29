@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FunctionsWidget &#8212; Cutter 2.4.0 documentation</title>
+    <title>BacktraceModel &#8212; Cutter 2.4.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GenericRizinGraphView" href="classGenericRizinGraphView.html" />
-    <link rel="prev" title="FunctionSortFilterProxyModel" href="classFunctionSortFilterProxyModel.html" />
+    <link rel="next" title="BacktraceWidget" href="classBacktraceWidget.html" />
+    <link rel="prev" title="AnalysisClassesModel" href="classAnalysisClassesModel.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classGenericRizinGraphView.html" title="GenericRizinGraphView"
+          <a href="classBacktraceWidget.html" title="BacktraceWidget"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classFunctionSortFilterProxyModel.html" title="FunctionSortFilterProxyModel"
+          <a href="classAnalysisClassesModel.html" title="AnalysisClassesModel"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../widgetslist.html" accesskey="U">Widgets</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FunctionsWidget</a></li> 
+        <li class="nav-item nav-item-this"><a href="">BacktraceModel</a></li> 
       </ul>
     </div>
 
@@ -51,26 +51,80 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="functionswidget">
-<h1>FunctionsWidget<a class="headerlink" href="#functionswidget" title="Link to this heading">¶</a></h1>
+  <section id="backtracemodel">
+<h1>BacktraceModel<a class="headerlink" href="#backtracemodel" title="Link to this heading">¶</a></h1>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv415FunctionsWidget">
-<span id="_CPPv315FunctionsWidget"></span><span id="_CPPv215FunctionsWidget"></span><span id="FunctionsWidget"></span><span class="target" id="classFunctionsWidget"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FunctionsWidget</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classListDockWidget.html#_CPPv414ListDockWidget" title="ListDockWidget"><span class="n"><span class="pre">ListDockWidget</span></span></a><a class="headerlink" href="#_CPPv415FunctionsWidget" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv414BacktraceModel">
+<span id="_CPPv314BacktraceModel"></span><span id="_CPPv214BacktraceModel"></span><span id="BacktraceModel"></span><span class="target" id="classBacktraceModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BacktraceModel</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QAbstractListModel</span></span><a class="headerlink" href="#_CPPv414BacktraceModel" title="Link to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6ColumnE">
+<span id="_CPPv3N14BacktraceModel6ColumnE"></span><span id="_CPPv2N14BacktraceModel6ColumnE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Column</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6ColumnE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column8FunctionE">
+<span id="_CPPv3N14BacktraceModel6Column8FunctionE"></span><span id="_CPPv2N14BacktraceModel6Column8FunctionE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864a9491378fbf8828dd4dd36c14bb7798aa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column8FunctionE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column2PCE">
+<span id="_CPPv3N14BacktraceModel6Column2PCE"></span><span id="_CPPv2N14BacktraceModel6Column2PCE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864afb4b1cd942aebe7da1a9afa3201db560"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PC</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column2PCE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column2SPE">
+<span id="_CPPv3N14BacktraceModel6Column2SPE"></span><span id="_CPPv2N14BacktraceModel6Column2SPE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864a4846083359fbe846e65b90f87ab1ecc7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SP</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column2SPE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column9FrameSizeE">
+<span id="_CPPv3N14BacktraceModel6Column9FrameSizeE"></span><span id="_CPPv2N14BacktraceModel6Column9FrameSizeE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864acd773256e6774b6935a01912fdf26c1b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FrameSize</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column9FrameSizeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column11DescriptionE">
+<span id="_CPPv3N14BacktraceModel6Column11DescriptionE"></span><span id="_CPPv2N14BacktraceModel6Column11DescriptionE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864a003728ad5428bf14e1234be6b391fd4f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Description</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column11DescriptionE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel6Column5CountE">
+<span id="_CPPv3N14BacktraceModel6Column5CountE"></span><span id="_CPPv2N14BacktraceModel6Column5CountE"></span><span class="target" id="classBacktraceModel_1a380912b93026bf119904ff56f059f864a190d5e46c1c7afdda5b0d57234f5022d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Count</span></span></span><a class="headerlink" href="#_CPPv4N14BacktraceModel6Column5CountE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N15FunctionsWidget15FunctionsWidgetEP10MainWindow">
-<span id="_CPPv3N15FunctionsWidget15FunctionsWidgetEP10MainWindow"></span><span id="_CPPv2N15FunctionsWidget15FunctionsWidgetEP10MainWindow"></span><span id="FunctionsWidget::FunctionsWidget__MainWindowP"></span><span class="target" id="classFunctionsWidget_1afd8055cef7f1aae707e0ffb8252e45ef"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FunctionsWidget</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../core/classMainWindow.html#_CPPv410MainWindow" title="MainWindow"><span class="n"><span class="pre">MainWindow</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">main</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15FunctionsWidget15FunctionsWidgetEP10MainWindow" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel14BacktraceModelEP7QObject">
+<span id="_CPPv3N14BacktraceModel14BacktraceModelEP7QObject"></span><span id="_CPPv2N14BacktraceModel14BacktraceModelEP7QObject"></span><span id="BacktraceModel::BacktraceModel__QObjectP"></span><span class="target" id="classBacktraceModel_1aeb3dceee7b0613974cea967f2118bdfd"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BacktraceModel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QObject</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14BacktraceModel14BacktraceModelEP7QObject" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N15FunctionsWidgetD0Ev">
-<span id="_CPPv3N15FunctionsWidgetD0Ev"></span><span id="_CPPv2N15FunctionsWidgetD0Ev"></span><span id="FunctionsWidget::~FunctionsWidget"></span><span class="target" id="classFunctionsWidget_1a9f29ad18401570e75c8c30ae1ec46370"></span><span class="sig-name descname"><span class="n"><span class="pre">~FunctionsWidget</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N15FunctionsWidgetD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK14BacktraceModel8rowCountERK11QModelIndex">
+<span id="_CPPv3NK14BacktraceModel8rowCountERK11QModelIndex"></span><span id="_CPPv2NK14BacktraceModel8rowCountERK11QModelIndex"></span><span id="BacktraceModel::rowCount__QModelIndexCRC"></span><span class="target" id="classBacktraceModel_1a63aa74b563c62e1691367d505eac2049"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rowCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14BacktraceModel8rowCountERK11QModelIndex" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N15FunctionsWidget16changeSizePolicyEN11QSizePolicy6PolicyEN11QSizePolicy6PolicyE">
-<span id="_CPPv3N15FunctionsWidget16changeSizePolicyEN11QSizePolicy6PolicyEN11QSizePolicy6PolicyE"></span><span id="_CPPv2N15FunctionsWidget16changeSizePolicyEN11QSizePolicy6PolicyEN11QSizePolicy6PolicyE"></span><span id="FunctionsWidget::changeSizePolicy__QSizePolicy::Policy.QSizePolicy::Policy"></span><span class="target" id="classFunctionsWidget_1ac1a11dd541a7ff60210c44c087c5d418"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">changeSizePolicy</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QSizePolicy</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Policy</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hor</span></span>, <span class="n"><span class="pre">QSizePolicy</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Policy</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ver</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15FunctionsWidget16changeSizePolicyEN11QSizePolicy6PolicyEN11QSizePolicy6PolicyE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK14BacktraceModel11columnCountERK11QModelIndex">
+<span id="_CPPv3NK14BacktraceModel11columnCountERK11QModelIndex"></span><span id="_CPPv2NK14BacktraceModel11columnCountERK11QModelIndex"></span><span id="BacktraceModel::columnCount__QModelIndexCRC"></span><span class="target" id="classBacktraceModel_1ae124b90a689d71aa266f9450982ec5f4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">columnCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">parent</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14BacktraceModel11columnCountERK11QModelIndex" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14BacktraceModel4dataERK11QModelIndexi">
+<span id="_CPPv3NK14BacktraceModel4dataERK11QModelIndexi"></span><span id="_CPPv2NK14BacktraceModel4dataERK11QModelIndexi"></span><span id="BacktraceModel::data__QModelIndexCR.iC"></span><span class="target" id="classBacktraceModel_1ade0b97e5c1c61d6d86415f9be32934fd"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QModelIndex</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14BacktraceModel4dataERK11QModelIndexi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14BacktraceModel10headerDataEiN2Qt11OrientationEi">
+<span id="_CPPv3NK14BacktraceModel10headerDataEiN2Qt11OrientationEi"></span><span id="_CPPv2NK14BacktraceModel10headerDataEiN2Qt11OrientationEi"></span><span id="BacktraceModel::headerData__i.Qt::Orientation.iC"></span><span class="target" id="classBacktraceModel_1aac9f58acdb5e2cd75b652637f5b66ae4"></span><span class="n"><span class="pre">QVariant</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">headerData</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">section</span></span>, <span class="n"><span class="pre">Qt</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Orientation</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">orientation</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">role</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14BacktraceModel10headerDataEiN2Qt11OrientationEi" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14BacktraceModel13setBacktracesERK5QListI20BacktraceDescriptionE">
+<span id="_CPPv3N14BacktraceModel13setBacktracesERK5QListI20BacktraceDescriptionE"></span><span id="_CPPv2N14BacktraceModel13setBacktracesERK5QListI20BacktraceDescriptionE"></span><span id="BacktraceModel::setBacktraces__QList:BacktraceDescription:CR"></span><span class="target" id="classBacktraceModel_1ab8bc07b48364c87fb9349592b2367ec5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBacktraces</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../core/structBacktraceDescription.html#_CPPv420BacktraceDescription" title="BacktraceDescription"><span class="n"><span class="pre">BacktraceDescription</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">backtraces</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14BacktraceModel13setBacktracesERK5QListI20BacktraceDescriptionE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -110,7 +164,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classAddressableDockWidget.html">AddressableDockWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAddressableItemList.html">AddressableItemList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classAnalysisClassesModel.html">AnalysisClassesModel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classBacktraceModel.html">BacktraceModel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BacktraceModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBoolTogggleDelegate.html">BoolTogggleDelegate</a></li>
@@ -162,7 +216,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classFlirtWidget.html">FlirtWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionModel.html">FunctionModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionSortFilterProxyModel.html">FunctionSortFilterProxyModel</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">FunctionsWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classFunctionsWidget.html">FunctionsWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGenericRizinGraphView.html">GenericRizinGraphView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGlibcHeapModel.html">GlibcHeapModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classGlibcHeapWidget.html">GlibcHeapWidget</a></li>
