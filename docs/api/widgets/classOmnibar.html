@@ -16,7 +16,7 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OverviewView" href="classOverviewView.html" />
+    <link rel="next" title="OmnibarCompleter" href="classOmnibarCompleter.html" />
     <link rel="prev" title="MemoryProxyModel" href="classMemoryProxyModel.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -33,7 +33,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classOverviewView.html" title="OverviewView"
+          <a href="classOmnibarCompleter.html" title="OmnibarCompleter"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="classMemoryProxyModel.html" title="MemoryProxyModel"
@@ -57,6 +57,30 @@
 <dt class="sig sig-object cpp" id="_CPPv47Omnibar">
 <span id="_CPPv37Omnibar"></span><span id="_CPPv27Omnibar"></span><span id="Omnibar"></span><span class="target" id="classOmnibar"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Omnibar</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QLineEdit</span></span><a class="headerlink" href="#_CPPv47Omnibar" title="Link to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar8ItemTypeE">
+<span id="_CPPv3N7Omnibar8ItemTypeE"></span><span id="_CPPv2N7Omnibar8ItemTypeE"></span><span class="target" id="classOmnibar_1a7c1b70c7a15b2f851b1f4bfddbc98809"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ItemType</span></span></span><a class="headerlink" href="#_CPPv4N7Omnibar8ItemTypeE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar8ItemType8StandardE">
+<span id="_CPPv3N7Omnibar8ItemType8StandardE"></span><span id="_CPPv2N7Omnibar8ItemType8StandardE"></span><span class="target" id="classOmnibar_1a7c1b70c7a15b2f851b1f4bfddbc98809a1831e0a3bf9ad3983285250fa6968677"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Standard</span></span></span><a class="headerlink" href="#_CPPv4N7Omnibar8ItemType8StandardE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar8ItemType8ShowMoreE">
+<span id="_CPPv3N7Omnibar8ItemType8ShowMoreE"></span><span id="_CPPv2N7Omnibar8ItemType8ShowMoreE"></span><span class="target" id="classOmnibar_1a7c1b70c7a15b2f851b1f4bfddbc98809ac80ff744de4c34aa4d4ef0f9805269cc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ShowMore</span></span></span><a class="headerlink" href="#_CPPv4N7Omnibar8ItemType8ShowMoreE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar8ItemType7ShowAllE">
+<span id="_CPPv3N7Omnibar8ItemType7ShowAllE"></span><span id="_CPPv2N7Omnibar8ItemType7ShowAllE"></span><span class="target" id="classOmnibar_1a7c1b70c7a15b2f851b1f4bfddbc98809a4987bf568685b0cc1dcce6dd7b8a50d7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ShowAll</span></span></span><a class="headerlink" href="#_CPPv4N7Omnibar8ItemType7ShowAllE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7Omnibar7OmnibarEP10MainWindowP7QWidget">
@@ -64,8 +88,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar7refreshERK11QStringList">
-<span id="_CPPv3N7Omnibar7refreshERK11QStringList"></span><span id="_CPPv2N7Omnibar7refreshERK11QStringList"></span><span id="Omnibar::refresh__QStringListCR"></span><span class="target" id="classOmnibar_1a554367e62bfdc9163ebff0d73ee59a08"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refresh</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QStringList</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">flagList</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Omnibar7refreshERK11QStringList" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N7Omnibar7refreshEv">
+<span id="_CPPv3N7Omnibar7refreshEv"></span><span id="_CPPv2N7Omnibar7refreshEv"></span><span id="Omnibar::refresh"></span><span class="target" id="classOmnibar_1a27653f98c020b027aa25285cee0a0ad5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refresh</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Omnibar7refreshEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -197,6 +221,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classMemoryMapWidget.html">MemoryMapWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMemoryProxyModel.html">MemoryProxyModel</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Omnibar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classOmnibarCompleter.html">OmnibarCompleter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewView.html">OverviewView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
