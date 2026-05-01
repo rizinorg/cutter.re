@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='We are excited to release Cutter v2.0 - our first release with Rizin.'>
+    <meta name="keywords" content="">
+    <!-- Facebook Open Graph -->	
+    <meta content="Cutter" property="og:site_name">
+    <meta property="og:locale" content="en_US" />
+    <meta content="Cutter 2.0 Release" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="We are excited to release Cutter v2.0 - our first release with Rizin." property="og:description">
+    <meta content="https://cutter.re//cutter-2.0" property="og:url">	
+    <meta content="/assets/images/blog/posts/cutter-2.0/cutter-2.png" property="og:image">
+    
+    <meta content="Cutter" property="article:section">
+    <meta content="2021-03-29T00:00:00+00:00" property="article:published_time">	
+    <!-- Twitter cards -->
+    <meta name="twitter:site"    content="@cutter_re">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title"   content="Cutter 2.0 Release">	
+    <meta name="twitter:description" content="We are excited to release Cutter v2.0 - our first release with Rizin.">
+    <meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://cutter.re//assets/images/blog/posts/cutter-2.0/cutter-2.png">
+    <!-- Site Title -->
+    <title> Cutter 2.0 Release </title>
+    <!--  Add Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link type="application/atom+xml" rel="alternate" href="https://cutter.re//index.xml" title="Cutter" />
+</head>
+   <body>
+      <main class="main-area">
+
+       
+
+<header class=" bg-color2">
+<div class="container">
+    <div class="header-nav">
+        <div class="row">
+            <div class="col-lg-2">
+             <div class="header-logo">
+    <a href="https://cutter.re/"><img src="/assets/images/cutter-small.svg " alt="Cutter"></a> 
+</div>
+            </div>
+            <div class="col-lg-10">
+              <nav class="cutter-navbar">
+    <ul class="slimmenu main-menu">
+        <li><a href="/blog" class="js-scroll-trigger"><b>Blog</b></a></li>
+        <li>
+            <a href="#">Links</a>
+            <ul>
+                <li><a href="/getting-started"><b>Getting Started</b></a></li>
+                <li><a href="https://github.com/rizinorg/cutter-plugins" target="_blank">Plugins</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/docs/building.html">Build from source</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </li>
+        <li><a href="/#features" class="js-scroll-trigger">Features</a></li>
+        <li><a href="/docs/" class="js-scroll-trigger">Documentation</a></li>
+        <li><a href="/#community" class="js-scroll-trigger">Community</a></li>
+        <li><a href="https://rizin.re" class="js-scroll-trigger">Rizin</a></li>
+    </ul>
+</nav>
+
+            </div>
+        </div>
+    </div>
+     
+    
+    <div class="header-page-title">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="page-title text-left white-all">
+                <h1 class="big-font1 m-b-30">Cutter 2.0 Release</h1>
+                
+                <ul class="page-post-date list-inline">
+                    <li class="list-inline-item"><img src="/assets/images/page-avatar-icon.png" alt="icon"/><a href="/authors/cutter">Cutter Team</a></li>
+                    <li class="list-inline-item"><img src="/assets/images/page-clock-icon.png" alt="icon"/>29 March 2021</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</header>
+
+       
+        <div class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="container">
+    <div class="blog-wrapper">   
+        <div class="row">
+            <div class="col-md-10 m-auto">
+            
+            <div class="blog-media m-b-30">
+                <img src="/assets/images/blog/posts/cutter-2.0/cutter-2.png" alt="Cutter 2.0 Release" />
+            </div>
+            
+            <div class="entry-content blog-spacing">
+             <style>
+	figure
+	{
+		text-align: center;
+		font-size: 0.8em;
+		margin: 0;
+		margin-bottom: 2em;
+	}
+
+	figure img
+	{
+		max-width: 100% !important;
+		width: auto !important;
+		margin-bottom: 0 !important;
+	}
+</style>
+
+<p>We are excited to release Cutter v2.0 — the first release of Cutter that is using <a href="https://rizin.re">Rizin</a> as its core backend. Since forking radare2 and creating Rizin, we invested countless hours in improving the projects feature, overall stability, and the way we work. Releasing Cutter 2.0 is a significant milestone for us, as we believe that the recent improvements we made to our core — Rizin, and to Cutter itself, are the starting point of creating a better reverse engineering software.</p>
+
+<p>Many of you waited for our first release with Rizin, and now the time has finally arrived. In this post, we note down some of the recent changes we have made to Cutter and what you should expect to see in this new release. To view the detailed changelog or download Cutter 2.0,
+check out the <a href="https://github.com/rizinorg/cutter/releases/tag/v2.0.0">release on GitHub</a>!</p>
+
+<h1 id="highlights">Highlights</h1>
+
+<h2 id="saving-and-loading-your-work-with-projects">Saving and loading your work with Projects</h2>
+
+<p>During reverse-engineering sessions, it is crucial to be able to keep track of the gained knowledge through annotations such as comments, function and variable names. As such, the tool one is working with also needs to provide a reliable and future-proof way to save and restore this information. This functionality was deeply important to us and to our users and was requested by the community often.</p>
+
+<p>Up to this release, Cutter had only a basic and unreliable support for saving the user’s work in projects, a functionality provided by radare2. When Rizin was forked from radare2, the team decided to create a reliable mechanism of saving and loading projects from scratch. The technical details of this newly created projects feature are described in a <a href="https://rizin.re/posts/introducing-projects/">dedicated post published in rizin’s blog</a>.</p>
+
+<p>Cutter 2.0 introduces full support for Projects, and you can now save and load you work seamlessly. The feature is in beta support that will last until the first major release of Rizin (v1.0).</p>
+
+<p>By the way, because Cutter directly uses Rizin’s project format, projects created in command-line Rizin can be directly loaded in Cutter and vice-versa, giving you the possibility to change between both tools whenever you want.</p>
+
+<h3 id="saving-a-project">Saving a project</h3>
+
+<p>Saving your work in a project is simple and intuitive. Click on the “File” menu and choose “Save Project” or “Save Project As”. This will open a dialog that will ask you where do you want to save the new project. The extension for Rizin and Cutter projects is <code class="language-plaintext highlighter-rouge">.rzdb</code>.</p>
+
+<p>Those of you who wish to use keyboard shortcuts can use <code class="language-plaintext highlighter-rouge">Ctrl + S</code> to save the project. You can use these shortcuts many times during your work to save the changes to the project file.</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/save-project-menu.png" alt="Save Project Menu" />
+</figure>
+
+<h3 id="loading-projects">Loading projects</h3>
+
+<p>Opening projects in Cutter can be done in two ways. The first one, is from the Projects tab in Cutter’s opening dialog. To do this, open Cutter and click on the Projects tab. In there, you will see the recent projects you created or loaded. Double-click on a project, or click “select” and choose another project file from the dialog.</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/open-project-dialog.png" alt="Open Project Dialog" style="max-height: 500px;" />
+</figure>
+
+<p>The second option to open a project in Cutter is via the command line. To do this, run Cutter with the <code class="language-plaintext highlighter-rouge">-p</code> or <code class="language-plaintext highlighter-rouge">--project</code> flag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cutter -p demo.rzdb
+</code></pre></div></div>
+
+<h2 id="cutter-now-supports-reverse-debugging">Cutter now supports Reverse Debugging</h2>
+
+<p>Another feature that we’re very excited about in this release is the addition of reverse debugging to all debug backends, including remote and ESIL. Reverse debug allows you to move the program counter backwards and revert the program state to the saved state at that point.</p>
+
+<p>The debug toolbar now includes the option to start a ‘trace session’ that enables reverse debug:</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-toolbar.png" alt="Debug Toolbar" />
+</figure>
+
+<p>Once you start a trace session, Cutter begins recording the program’s memory and register changes from the current program counter. This allows you to step backwards and continue backwards to restore the program’s state up to the trace session’s first recorded instruction:</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-toolbar-started.png" alt="Debug Toolbar while Debugging" />
+  <figcaption>From right to left - stop trace session, continue backwards and step backwards</figcaption>
+</figure>
+
+<p>When stepping or continuing back, we locate the target instruction in the recorded session and revert the state of the registers and memory up to that point. It’s important to note that Cutter doesn’t handle non-deterministic events like signals or syscalls.</p>
+
+<p><strong>Continuing back to the future</strong></p>
+
+<p>Similarly to regular continue, backwards continue currently only stops due to an interrupt (by clicking on the “suspend process” button) or a breakpoint. Otherwise, it will continue all the way back to the session’s first instruction.</p>
+
+<p>Since Cutter stops at every instruction to record memory and register changes while continuing, this may significantly slow down the traversal between two points. To solve this issue, we have also added the <code class="language-plaintext highlighter-rouge">dbg.trace_continue</code>(default=true) flag to the debug settings. This flag allows the user to save the program’s state only between two states: the first state is the original program counter position before continue, and the second is the destination of the run. This means that stepping backwards will also return to the last recorded point before continue as illustrated:</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-trace-continue-false.png" alt="dbg.trace_continue=false" />
+  <figcaption>Continue with <code class="highlighter-rouge">dbg.trace_continue=false</code></figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-trace-continue-false-back.png" alt="dbg.trace_continue=false" />
+  <figcaption>Stepping back after continue with <code class="highlighter-rouge">dbg.trace_continue=false</code></figcaption>
+</figure>
+
+<p>Compared to being able to step back to any point after continue with <code class="language-plaintext highlighter-rouge">dbg.trace_continue=true</code>:</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-trace-continue-true.png" alt="dbg.trace_continue=true" />
+  <figcaption>Continue with <code class="highlighter-rouge">dbg.trace_continue=true</code></figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/debug-trace-continue-true-back.png" alt="dbg.trace_continue=true" />
+  <figcaption>Stepping back after continue with <code class="highlighter-rouge">dbg.trace_continue=true</code></figcaption>
+</figure>
+
+<h2 id="improving-the-renaming-workflow">Improving the renaming workflow</h2>
+
+<p>Last year, we asked you what are the things you want to see improved in Cutter. Many of you mentioned that the basic workflow of renaming isn’t user-friendly and can be improved. And indeed, during the recent months we worked on improving it and created an easier renaming workflow in which you can press <code class="language-plaintext highlighter-rouge">N</code> in many places in the disassembly to rename functions, flags, and more. You can also use <code class="language-plaintext highlighter-rouge">N</code> to add new flags in certain addresses.</p>
+
+<p>There are more improvement to do when it comes to renaming in Cutter, such as having better support for renaming symbols and renaming information in the decompiler. We plan to improve these areas in future releases.</p>
+
+<h2 id="basic-block-headers-in-graph-view">Basic block headers in Graph view</h2>
+
+<p>A new feature that was added in Cutter v2.0 is the option to display the basic blocks offsets in the Graph view. When enabled, each basic block will have its start-address displayed at the top. This feature can be enabled or disabled from the preferences view: Edit → Preferences → Disassembly → Graph → Show offset of the first instruction in each graph block.</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/bb-headers.png" alt="Basic Block Headers" />
+</figure>
+
+<h2 id="hover-on-address-to-view-its-content">Hover on address to view its content</h2>
+
+<p>The functions widget of Cutter had a functionality that allowed the user to preview the contents of a function by hovering with their mouse on a function name from the list. Now, in our new release, we expanded this feature and added support for previewing the contents of a function, flag or address, by hovering on them in the disassembly view. This will allow you to quickly view data and code in target address, without navigating to this address.</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/hover-addr.png" alt="Hover on address" />
+</figure>
+
+<h2 id="new-comment-column-in-multiple-table-views">New Comment Column in multiple Table Views</h2>
+
+<p>We improved multiple table view widgets to now display comments that are being added in these addresses. For example, if the user added a comment to an offset of a string, or of a flag, the comments will be displayed in the list.</p>
+
+<figure>
+  <img src="/assets/images/blog/posts/cutter-2.0/comment-col.png" alt="Comment Column" />
+</figure>
+
+            </div>
+            <div class="blog-share-tags blog-spacing">
+                <div class="blog-author-tags">
+                    <div class="list-inline">
+                        <div class="list-inline-item">Tags:</div> <a href="/tag/release/" rel="tag">Release</a>, <a href="/tag/rizin/" rel="tag">Rizin</a>
+                    </div>
+                </div>
+                <div class="blog-author-share">
+                  <ul class="list-inline">
+    <li class="list-inline-item">Share</li>
+    <li class="list-inline-item">
+        <a  href="https://www.facebook.com/sharer/sharer.php?u=https://cutter.re//cutter-2.0"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="https://twitter.com/intent/tweet?text=Cutter 2.0 Release&url=https://cutter.re//cutter-2.0"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" >
+            <i class="fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="http://pinterest.com/pin/create/button/?url=&media=https://cutter.re//assets/images/blog/posts/cutter-2.0/cutter-2.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="fab fa-pinterest-p"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
+            <div class="blog-author-admin blog-spacing">
+
+    <div class="author-avatar">
+        <a href="/authors/cutter"><img class="img-fluid" src="/assets/images/blog/authors/cutter.png" alt="Cutter Team"/></a>
+    </div>
+    <div class="author-info">
+        <h5 class="heading-5"><a href="/authors/cutter">Cutter Team</a></h5>
+        <p>The team behind Cutter.</p>
+        <ul class="social-link list-inline">
+            
+            
+            <li class="list-inline-item"><a href="https://twitter.com/cutter_re" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            
+             
+            
+            
+            <li class="list-inline-item"><a href="https://github.com/rizinorg/cutter" target="_blank"><i class="fab fa-github"></i></a></li>
+            
+            
+            <li class="list-inline-item"><a href="https://cutter.re" target="_blank"><i class="fas fa-globe"></i></a></li>
+            
+        </ul>
+    </div>
+</div>
+            <nav class="page-pagination d-flex cutter blog-spacing">
+    <ul class="pagination justify-content-between">
+    
+    <li class=" page-item cutter"><a class="page-link prev" href="/improving-decompiler-widget-gsoc">Prev</a></li>
+    
+    
+    <li class=" page-item cutter"><a class="page-link next" href="/integrating-the-rizin-mark-api-rsoc">Next</a></li>
+    
+    </ul>
+</nav>
+            <div class="blog-spacing">
+    <div class="latest-slider owl-carousel">
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/shortcut-manager-rsoc/cover.png" alt="Shortcut Manager - RSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/shortcut-manager-rsoc">Shortcut Manager - RSoC Project</a></h6>
+                    <a href="/shortcut-manager-rsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/cover.png" alt="Integrating the Rizin Mark API - RSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/integrating-the-rizin-mark-api-rsoc">Integrating the Rizin Mark API - RSoC Project</a></h6>
+                    <a href="/integrating-the-rizin-mark-api-rsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/cutter-2.0/cutter-2.png" alt="Cutter 2.0 Release"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/cutter-2.0">Cutter 2.0 Release</a></h6>
+                    <a href="/cutter-2.0" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png" alt="Improving Decompiler Widget - GSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/improving-decompiler-widget-gsoc">Improving Decompiler Widget - GSoC Project</a></h6>
+                    <a href="/improving-decompiler-widget-gsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/survey-2020/survey2020.png" alt="Cutter Community Survey 2020"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/cutter-community-survey-2020">Cutter Community Survey 2020</a></h6>
+                    <a href="/cutter-community-survey-2020" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png" alt="5 Ways to patch binaries with Cutter"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/5-ways-to-patch-binaries-with-cutter">5 Ways to patch binaries with Cutter</a></h6>
+                    <a href="/5-ways-to-patch-binaries-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/ransowmare-cutter-emulation/cover.png" alt="Defeating a Ransomware using Cutter's Emulation"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/defeating-a-ransomware-with-cutter">Defeating a Ransomware using Cutter's Emulation</a></h6>
+                    <a href="/defeating-a-ransomware-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part2.png"" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-2">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2</a></h6>
+                    <a href="/analyzing-dropshot-part-2" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part1.png" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-1">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1</a></h6>
+                    <a href="/analyzing-dropshot-part-1" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+            <div class="comment-wrapper blog-spacing">
+                <!-- comments -->
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+        
+        <div class="footer-wrapper">
+    <footer class="footer-area bg-color2">
+        <div class="container">
+            <div class="footer-widget-wrraper">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="footer-logo"><img src="/assets/images/cutter-very-small.svg" alt="Cutter" /></a>
+                        <div class="footer-widget">
+                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by
+                                reverse
+                                engineers for reverse engineers </p>
+                            <ul class="social-link list-inline">
+                                <li class="list-inline-item"><a href="https://im.rizin.re/"><img src="/assets/images/mattermost_light.svg" height="22" style="margin-top: -5px;" alt="mattermost icon"/></a></li>
+                                <li class="list-inline-item"><a href="https://web.libera.chat/#cutter"><i class="fas fa-comment-dots"></i></a></li>
+                                <li class="list-inline-item"><a href="https://t.me/cutter_re"><i class="fab fa-telegram-plane"></i></a></li>                                
+                                <li class="list-inline-item"><a href="https://www.twitter.com/cutter_re"><img src="/assets/images/twitter_x_light.svg" height="22" style="margin-top: -5px;" alt="twitter-x icon"/></a></li>
+                                <li class="list-inline-item"><a href="https://www.github.com/rizinorg/cutter"><i class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://fosstodon.org/@rizin"><i class="fab fa-mastodon"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Cutter</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li>
+                                    <a href="/docs/building.html" target="_blank">
+                                        Build From Source
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cutter.re/docs/contributing.html" target="_blank">
+                                        Contribute
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rizinorg/cutter/issues" target="_blank">
+                                        Report an issue
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rizinorg/cutter/blob/master/COPYING" target="_blank">
+                                        License
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Resources</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li><a href="https://cutter.re/docs/" target="_blank">Documentation</a></li>
+                                <li><a href="https://github.com/rizinorg/cutter-plugins" target="_blank">Plugins</a>
+                                </li>
+                                <li><a href="https://rizin.re" target="_blank">Rizin</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright-wrapper text-center">
+                <p>© 2026 Cutter - a <a href="https://rizin.re/"
+                        target="_blank"><b>rizin.re</b></a> project • Website by <a href="https://www.megabeets.net"
+                        target="_blank"><b>Megabeets</b></a> </p>
+            </div>
+            <a href="#" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <ul class="footer-shape list-inline">
+            <li class="left"><img src="/assets/images/footer-shap.png" alt="footer shape" /></li>
+            <li class="right"><img src="/assets/images/footer-shap2.png" alt="footer shape" /></li>
+        </ul>
+    </footer>
+</div>
+      </main>
+      <!-- jQuery -->
+      <script src="/assets/js/vendor.min.js"></script>
+      <script src="/assets/js/app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.js" integrity="sha512-bvV1V1YSjP1fbfKJjTlNmdnUO2XpsLYUdKwmz5UXBi5U+x40rx9JpA0ooQUMZfpz1MaaBC0ydNLoC6r0sitPUQ==" crossorigin="anonymous"></script>
+   </body>
+</html>

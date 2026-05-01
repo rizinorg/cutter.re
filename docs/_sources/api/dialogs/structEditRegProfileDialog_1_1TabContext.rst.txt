@@ -1,0 +1,4 @@
+EditRegProfileDialog::TabContext
+================================
+
+.. doxygenstruct:: EditRegProfileDialog::TabContext

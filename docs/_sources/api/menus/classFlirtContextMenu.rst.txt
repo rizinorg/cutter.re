@@ -1,0 +1,4 @@
+FlirtContextMenu
+================
+
+.. doxygenclass:: FlirtContextMenu
