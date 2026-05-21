@@ -56,66 +56,68 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv49GraphView">
 <span id="_CPPv39GraphView"></span><span id="_CPPv29GraphView"></span><span id="GraphView"></span><span class="target" id="classGraphView"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphView</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QAbstractScrollArea</span></span><a class="headerlink" href="#_CPPv49GraphView" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Subclassed by <a class="reference internal" href="classCutterGraphView.html#classCutterGraphView"><span class="std std-ref">CutterGraphView</span></a>, <a class="reference internal" href="classOverviewView.html#classOverviewView"><span class="std std-ref">OverviewView</span></a></p>
+<dd><p>Base class for rendering and interacting with control-flow graphs. </p>
+<p>Supports both QPainter and OpenGL rendering </p>
+<p>Subclassed by <a class="reference internal" href="classCutterGraphView.html#classCutterGraphView"><span class="std std-ref">CutterGraphView</span></a>, <a class="reference internal" href="classOverviewView.html#classOverviewView"><span class="std std-ref">OverviewView</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6LayoutE">
-<span id="_CPPv3N9GraphView6LayoutE"></span><span id="_CPPv2N9GraphView6LayoutE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Layout</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6LayoutE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6LayoutE"></span><span id="_CPPv2N9GraphView6LayoutE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cc"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Layout</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ut8</span></span><a class="headerlink" href="#_CPPv4N9GraphView6LayoutE" title="Link to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout10GridNarrowE">
-<span id="_CPPv3N9GraphView6Layout10GridNarrowE"></span><span id="_CPPv2N9GraphView6Layout10GridNarrowE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a12c16d92f47383d7049ec608c0781bcb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridNarrow</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridNarrowE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout10GridNarrowE"></span><span id="_CPPv2N9GraphView6Layout10GridNarrowE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca12c16d92f47383d7049ec608c0781bcb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridNarrow</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridNarrowE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout10GridMediumE">
-<span id="_CPPv3N9GraphView6Layout10GridMediumE"></span><span id="_CPPv2N9GraphView6Layout10GridMediumE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409aca8499d706e59c72fe119ac34c5e6d4e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridMedium</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridMediumE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout10GridMediumE"></span><span id="_CPPv2N9GraphView6Layout10GridMediumE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9ccaca8499d706e59c72fe119ac34c5e6d4e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridMedium</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout10GridMediumE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout8GridWideE">
-<span id="_CPPv3N9GraphView6Layout8GridWideE"></span><span id="_CPPv2N9GraphView6Layout8GridWideE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a7d86c8889b647ccc205af6631013a0ac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridWide</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout8GridWideE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout8GridWideE"></span><span id="_CPPv2N9GraphView6Layout8GridWideE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca7d86c8889b647ccc205af6631013a0ac"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridWide</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout8GridWideE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridAAAE">
-<span id="_CPPv3N9GraphView6Layout7GridAAAE"></span><span id="_CPPv2N9GraphView6Layout7GridAAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a3c400ae2b92a562e653b4751ebe8a6cf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridAAA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAAAE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridAAAE"></span><span id="_CPPv2N9GraphView6Layout7GridAAAE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca3c400ae2b92a562e653b4751ebe8a6cf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridAAA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAAAE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridAABE">
-<span id="_CPPv3N9GraphView6Layout7GridAABE"></span><span id="_CPPv2N9GraphView6Layout7GridAABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a518947f759984421b3553ce9cada7be7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridAAB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAABE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridAABE"></span><span id="_CPPv2N9GraphView6Layout7GridAABE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca518947f759984421b3553ce9cada7be7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridAAB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridAABE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridABAE">
-<span id="_CPPv3N9GraphView6Layout7GridABAE"></span><span id="_CPPv2N9GraphView6Layout7GridABAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409addced78ae004dc00c9a331b584adc8f2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridABA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABAE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridABAE"></span><span id="_CPPv2N9GraphView6Layout7GridABAE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9ccaddced78ae004dc00c9a331b584adc8f2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridABA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABAE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridABBE">
-<span id="_CPPv3N9GraphView6Layout7GridABBE"></span><span id="_CPPv2N9GraphView6Layout7GridABBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a60651cc01c86cf17e2fa43ec0cd66f06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridABB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABBE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridABBE"></span><span id="_CPPv2N9GraphView6Layout7GridABBE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca60651cc01c86cf17e2fa43ec0cd66f06"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridABB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridABBE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridBAAE">
-<span id="_CPPv3N9GraphView6Layout7GridBAAE"></span><span id="_CPPv2N9GraphView6Layout7GridBAAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a6b12b97f54016a3486b1bafcb0f7c677"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBAA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBAAE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBAAE"></span><span id="_CPPv2N9GraphView6Layout7GridBAAE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca6b12b97f54016a3486b1bafcb0f7c677"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBAA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBAAE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridBABE">
-<span id="_CPPv3N9GraphView6Layout7GridBABE"></span><span id="_CPPv2N9GraphView6Layout7GridBABE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a2a1b29ea59843c15976db492639f9736"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBAB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBABE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBABE"></span><span id="_CPPv2N9GraphView6Layout7GridBABE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca2a1b29ea59843c15976db492639f9736"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBAB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBABE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridBBAE">
-<span id="_CPPv3N9GraphView6Layout7GridBBAE"></span><span id="_CPPv2N9GraphView6Layout7GridBBAE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a92d9fcee4cd1187cf5fb1ee3340faaae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBBA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBAE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBBAE"></span><span id="_CPPv2N9GraphView6Layout7GridBBAE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca92d9fcee4cd1187cf5fb1ee3340faaae"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBBA</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBAE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N9GraphView6Layout7GridBBBE">
-<span id="_CPPv3N9GraphView6Layout7GridBBBE"></span><span id="_CPPv2N9GraphView6Layout7GridBBBE"></span><span class="target" id="classGraphView_1a350639da1c3c3e2e3849c8581d8ac409a71d078cda2a5f02bf10508e85ce17f29"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBBB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBBE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9GraphView6Layout7GridBBBE"></span><span id="_CPPv2N9GraphView6Layout7GridBBBE"></span><span class="target" id="classGraphView_1a9202d496c5008238e5aa0c2a59c1d9cca71d078cda2a5f02bf10508e85ce17f29"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GridBBB</span></span></span><a class="headerlink" href="#_CPPv4N9GraphView6Layout7GridBBBE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -207,13 +209,13 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9GraphView12saveAsBitmapE7QStringPKcdb">
-<span id="_CPPv3N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="_CPPv2N9GraphView12saveAsBitmapE7QStringPKcdb"></span><span id="GraphView::saveAsBitmap__QString.cCP.double.b"></span><span class="target" id="classGraphView_1ab73837f36d766c465ffdf38a07497072"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveAsBitmap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scaler</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">transparent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12saveAsBitmapE7QStringPKcdb" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9GraphView12saveAsBitmapERK7QStringPKcdb">
+<span id="_CPPv3N9GraphView12saveAsBitmapERK7QStringPKcdb"></span><span id="_CPPv2N9GraphView12saveAsBitmapERK7QStringPKcdb"></span><span id="GraphView::saveAsBitmap__QStringCR.cCP.double.b"></span><span class="target" id="classGraphView_1a50a828981c3b4f90f42e9db37d49a11b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveAsBitmap</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scaler</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">transparent</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView12saveAsBitmapERK7QStringPKcdb" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9GraphView9saveAsSvgE7QString">
-<span id="_CPPv3N9GraphView9saveAsSvgE7QString"></span><span id="_CPPv2N9GraphView9saveAsSvgE7QString"></span><span id="GraphView::saveAsSvg__QString"></span><span class="target" id="classGraphView_1a5002094aa3a47e5cc802fd9506201128"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveAsSvg</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9saveAsSvgE7QString" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9GraphView9saveAsSvgERK7QString">
+<span id="_CPPv3N9GraphView9saveAsSvgERK7QString"></span><span id="_CPPv2N9GraphView9saveAsSvgERK7QString"></span><span id="GraphView::saveAsSvg__QStringCR"></span><span class="target" id="classGraphView_1a2d25f75929f28df7acbbf45885edbf36"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">saveAsSvg</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9GraphView9saveAsSvgERK7QString" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -300,18 +302,18 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration11start_arrowE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11start_arrowE"></span><span id="GraphView::EdgeConfiguration::start_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a055b62b99484361d2541ca0aea7a8e2d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start_arrow</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11start_arrowE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration10startArrowE">
+<span id="_CPPv3N9GraphView17EdgeConfiguration10startArrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration10startArrowE"></span><span id="GraphView::EdgeConfiguration::startArrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a4d4e40bec54ab83a774617c1e11ea01f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startArrow</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration10startArrowE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration9end_arrowE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration9end_arrowE"></span><span id="GraphView::EdgeConfiguration::end_arrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a05b09300c8ca2175d1239b4475b72fdf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end_arrow</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration9end_arrowE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration8endArrowE">
+<span id="_CPPv3N9GraphView17EdgeConfiguration8endArrowE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration8endArrowE"></span><span id="GraphView::EdgeConfiguration::endArrow__b"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a3f7698dae3d7ffcedc65744f7c24b387"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">endArrow</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration8endArrowE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration11width_scaleE">
-<span id="_CPPv3N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration11width_scaleE"></span><span id="GraphView::EdgeConfiguration::width_scale__qreal"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1ade127f72245836e62051d539e60bb523"></span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">width_scale</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration11width_scaleE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9GraphView17EdgeConfiguration10widthScaleE">
+<span id="_CPPv3N9GraphView17EdgeConfiguration10widthScaleE"></span><span id="_CPPv2N9GraphView17EdgeConfiguration10widthScaleE"></span><span id="GraphView::EdgeConfiguration::widthScale__qreal"></span><span class="target" id="structGraphView_1_1EdgeConfiguration_1a471b2822f62a58543dda98cea938090c"></span><span class="n"><span class="pre">qreal</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">widthScale</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N9GraphView17EdgeConfiguration10widthScaleE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -361,7 +363,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceModel.html">BacktraceModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBacktraceWidget.html">BacktraceWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBinClassesModel.html">BinClassesModel</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classBoolTogggleDelegate.html">BoolTogggleDelegate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classBoolToggleDelegate.html">BoolToggleDelegate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBreakpointModel.html">BreakpointModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBreakpointProxyModel.html">BreakpointProxyModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classBreakpointWidget.html">BreakpointWidget</a></li>
@@ -447,6 +449,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classOverviewWidget.html">OverviewWidget</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesFilterModel.html">ProcessesFilterModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classProcessesWidget.html">ProcessesWidget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classQuickFilterView.html">QuickFilterView</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRawAddrDock.html">RawAddrDock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRegisterRefModel.html">RegisterRefModel</a></li>

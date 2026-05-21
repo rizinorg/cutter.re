@@ -56,12 +56,13 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv49AsyncTask">
 <span id="_CPPv39AsyncTask"></span><span id="_CPPv29AsyncTask"></span><span id="AsyncTask"></span><span class="target" id="classAsyncTask"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AsyncTask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QRunnable</span></span><a class="headerlink" href="#_CPPv49AsyncTask" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Subclassed by <a class="reference internal" href="classAnalysisTask.html#classAnalysisTask"><span class="std std-ref">AnalysisTask</span></a>, <a class="reference internal" href="classCommandTask.html#classCommandTask"><span class="std std-ref">CommandTask</span></a>, <a class="reference internal" href="classFunctionsTask.html#classFunctionsTask"><span class="std std-ref">FunctionsTask</span></a>, <a class="reference internal" href="classRunScriptTask.html#classRunScriptTask"><span class="std std-ref">RunScriptTask</span></a>, <a class="reference internal" href="classStringsTask.html#classStringsTask"><span class="std std-ref">StringsTask</span></a></p>
+<dd><p>Wrapper class for QRunnable that provides timing and logging, intended to be used with <a class="reference internal" href="classAsyncTaskManager.html#classAsyncTaskManager"><span class="std std-ref">AsyncTaskManager</span></a>. </p>
+<p>Subclassed by <a class="reference internal" href="classAnalysisTask.html#classAnalysisTask"><span class="std std-ref">AnalysisTask</span></a>, <a class="reference internal" href="classCommandTask.html#classCommandTask"><span class="std std-ref">CommandTask</span></a>, <a class="reference internal" href="classFunctionsTask.html#classFunctionsTask"><span class="std std-ref">FunctionsTask</span></a>, <a class="reference internal" href="classRunScriptTask.html#classRunScriptTask"><span class="std std-ref">RunScriptTask</span></a>, <a class="reference internal" href="classStringsTask.html#classStringsTask"><span class="std std-ref">StringsTask</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask3PtrE">
-<span id="_CPPv3N9AsyncTask3PtrE"></span><span id="_CPPv2N9AsyncTask3PtrE"></span><span class="target" id="classAsyncTask_1a095923d0cd21d9c7c2b0f1415a6c6bc2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Ptr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QSharedPointer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv49AsyncTask" title="AsyncTask"><span class="n"><span class="pre">AsyncTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9AsyncTask3PtrE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N9AsyncTask3PtrE"></span><span id="_CPPv2N9AsyncTask3PtrE"></span><span class="target" id="classAsyncTask_1a525f05dcc766ff3f33168a99b98760ec"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Ptr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv49AsyncTask" title="AsyncTask"><span class="n"><span class="pre">AsyncTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9AsyncTask3PtrE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -98,13 +99,13 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask13isInterruptedEv">
-<span id="_CPPv3N9AsyncTask13isInterruptedEv"></span><span id="_CPPv2N9AsyncTask13isInterruptedEv"></span><span id="AsyncTask::isInterrupted"></span><span class="target" id="classAsyncTask_1a944d688dcbbe887d2b87663489aa826e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInterrupted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask13isInterruptedEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9AsyncTask13isInterruptedEv">
+<span id="_CPPv3NK9AsyncTask13isInterruptedEv"></span><span id="_CPPv2NK9AsyncTask13isInterruptedEv"></span><span id="AsyncTask::isInterruptedC"></span><span class="target" id="classAsyncTask_1af8eabbdb81b8ebb1f51bf64aec3caad9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isInterrupted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9AsyncTask13isInterruptedEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask9isRunningEv">
-<span id="_CPPv3N9AsyncTask9isRunningEv"></span><span id="_CPPv2N9AsyncTask9isRunningEv"></span><span id="AsyncTask::isRunning"></span><span class="target" id="classAsyncTask_1a4cd8371c0e96c9219d8f9051280b2af2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isRunning</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask9isRunningEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9AsyncTask9isRunningEv">
+<span id="_CPPv3NK9AsyncTask9isRunningEv"></span><span id="_CPPv2NK9AsyncTask9isRunningEv"></span><span id="AsyncTask::isRunningC"></span><span class="target" id="classAsyncTask_1a450961e4e0a585bb61fddbc797512521"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isRunning</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9AsyncTask9isRunningEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -123,8 +124,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9AsyncTask8getTitleEv">
-<span id="_CPPv3N9AsyncTask8getTitleEv"></span><span id="_CPPv2N9AsyncTask8getTitleEv"></span><span id="AsyncTask::getTitle"></span><span class="target" id="classAsyncTask_1a47ebdf2d4150d72cdf9ef5af86f29f88"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9AsyncTask8getTitleEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9AsyncTask8getTitleEv">
+<span id="_CPPv3NK9AsyncTask8getTitleEv"></span><span id="_CPPv2NK9AsyncTask8getTitleEv"></span><span id="AsyncTask::getTitleC"></span><span class="target" id="classAsyncTask_1a21e1b1d2a9e4cb2d9d5fc5b260dc634c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9AsyncTask8getTitleEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -173,10 +174,9 @@
 <li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classCutterSearchable.html">CutterSearchable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSearchableI.html">CutterSearchableI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
@@ -185,7 +185,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
@@ -195,12 +194,10 @@
 <li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
@@ -211,7 +208,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicBlockHighlighter_1_1BasicBlock.html">BasicBlockHighlighter::BasicBlock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstructionHighlighter_1_1BasicInstruction.html">BasicInstructionHighlighter::BasicInstruction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
@@ -220,16 +217,15 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMmioLookupContext.html">MmioLookupContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText.html">RichTextPainter::CustomRichText</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
 </ul>
 </li>

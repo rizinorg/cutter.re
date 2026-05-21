@@ -1,4 +1,0 @@
-Highlighter::HighlightingRule
-=============================
-
-.. doxygenstruct:: Highlighter::HighlightingRule

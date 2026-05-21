@@ -1,0 +1,4 @@
+CutterPVector::Iterator
+=======================
+
+.. doxygenclass:: CutterPVector::Iterator

@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Configuration" href="classConfiguration.html" />
-    <link rel="prev" title="Colors" href="classColors.html" />
+    <link rel="prev" title="ColorThemeWorker" href="classColorThemeWorker.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
           <a href="classConfiguration.html" title="Configuration"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classColors.html" title="Colors"
+          <a href="classColorThemeWorker.html" title="ColorThemeWorker"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
@@ -56,30 +56,31 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv411CommandTask">
 <span id="_CPPv311CommandTask"></span><span id="_CPPv211CommandTask"></span><span id="CommandTask"></span><span class="target" id="classCommandTask"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CommandTask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classAsyncTask.html#_CPPv49AsyncTask" title="AsyncTask"><span class="n"><span class="pre">AsyncTask</span></span></a><a class="headerlink" href="#_CPPv411CommandTask" title="Link to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>Background task for running a command in rizin. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp enum">
 <dt class="sig sig-object cpp" id="_CPPv4N11CommandTask9ColorModeE">
-<span id="_CPPv3N11CommandTask9ColorModeE"></span><span id="_CPPv2N11CommandTask9ColorModeE"></span><span class="target" id="classCommandTask_1a6fce292c18e10897e7ec1fef672cdcb2"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorMode</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorModeE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N11CommandTask9ColorModeE"></span><span id="_CPPv2N11CommandTask9ColorModeE"></span><span class="target" id="classCommandTask_1a6c90f4c23d160a82b5309c793882ecff"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorMode</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorModeE" title="Link to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N11CommandTask9ColorMode8DISABLEDE">
-<span id="_CPPv3N11CommandTask9ColorMode8DISABLEDE"></span><span id="_CPPv2N11CommandTask9ColorMode8DISABLEDE"></span><span class="target" id="classCommandTask_1a6fce292c18e10897e7ec1fef672cdcb2abd92eacae6960b2211d8984d0425a542"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DISABLED</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8DISABLEDE" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N11CommandTask9ColorMode8DISABLEDE"></span><span id="_CPPv2N11CommandTask9ColorMode8DISABLEDE"></span><span class="target" id="classCommandTask_1a6c90f4c23d160a82b5309c793882ecffabd92eacae6960b2211d8984d0425a542"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DISABLED</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8DISABLEDE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N11CommandTask9ColorMode7MODE_16E">
-<span id="_CPPv3N11CommandTask9ColorMode7MODE_16E"></span><span id="_CPPv2N11CommandTask9ColorMode7MODE_16E"></span><span class="target" id="classCommandTask_1a6fce292c18e10897e7ec1fef672cdcb2af956cc797b04d26783f7bccd8b352412"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_16</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode7MODE_16E" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N11CommandTask9ColorMode7MODE_16E"></span><span id="_CPPv2N11CommandTask9ColorMode7MODE_16E"></span><span class="target" id="classCommandTask_1a6c90f4c23d160a82b5309c793882ecffaf956cc797b04d26783f7bccd8b352412"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_16</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode7MODE_16E" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N11CommandTask9ColorMode8MODE_256E">
-<span id="_CPPv3N11CommandTask9ColorMode8MODE_256E"></span><span id="_CPPv2N11CommandTask9ColorMode8MODE_256E"></span><span class="target" id="classCommandTask_1a6fce292c18e10897e7ec1fef672cdcb2a3ad7c281ac234d3f4a13eaebb9c16c31"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_256</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8MODE_256E" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N11CommandTask9ColorMode8MODE_256E"></span><span id="_CPPv2N11CommandTask9ColorMode8MODE_256E"></span><span class="target" id="classCommandTask_1a6c90f4c23d160a82b5309c793882ecffa3ad7c281ac234d3f4a13eaebb9c16c31"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_256</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8MODE_256E" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
 <dt class="sig sig-object cpp" id="_CPPv4N11CommandTask9ColorMode8MODE_16ME">
-<span id="_CPPv3N11CommandTask9ColorMode8MODE_16ME"></span><span id="_CPPv2N11CommandTask9ColorMode8MODE_16ME"></span><span class="target" id="classCommandTask_1a6fce292c18e10897e7ec1fef672cdcb2a788f298f92153c215f74faddd9c3ef8a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_16M</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8MODE_16ME" title="Link to this definition">¶</a><br /></dt>
+<span id="_CPPv3N11CommandTask9ColorMode8MODE_16ME"></span><span id="_CPPv2N11CommandTask9ColorMode8MODE_16ME"></span><span class="target" id="classCommandTask_1a6c90f4c23d160a82b5309c793882ecffa788f298f92153c215f74faddd9c3ef8a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MODE_16M</span></span></span><a class="headerlink" href="#_CPPv4N11CommandTask9ColorMode8MODE_16ME" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -93,8 +94,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N11CommandTask8getTitleEv">
-<span id="_CPPv3N11CommandTask8getTitleEv"></span><span id="_CPPv2N11CommandTask8getTitleEv"></span><span id="CommandTask::getTitle"></span><span class="target" id="classCommandTask_1a57338f1f41c07321fe0c79ce9ea9b71e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N11CommandTask8getTitleEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK11CommandTask8getTitleEv">
+<span id="_CPPv3NK11CommandTask8getTitleEv"></span><span id="_CPPv2NK11CommandTask8getTitleEv"></span><span id="CommandTask::getTitleC"></span><span class="target" id="classCommandTask_1a482f79c097bf16354791faa3a4deac2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTitle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK11CommandTask8getTitleEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -138,10 +139,9 @@
 <li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">CommandTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classCutterSearchable.html">CutterSearchable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSearchableI.html">CutterSearchableI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
@@ -150,7 +150,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
@@ -160,12 +159,10 @@
 <li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
@@ -176,7 +173,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicBlockHighlighter_1_1BasicBlock.html">BasicBlockHighlighter::BasicBlock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstructionHighlighter_1_1BasicInstruction.html">BasicInstructionHighlighter::BasicInstruction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
@@ -185,16 +182,15 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMmioLookupContext.html">MmioLookupContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText.html">RichTextPainter::CustomRichText</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
 </ul>
 </li>

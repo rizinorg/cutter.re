@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="LazySegmentTreeBase" href="classLazySegmentTreeBase.html" />
-    <link rel="prev" title="Highlighter" href="classHighlighter.html" />
+    <link rel="prev" title="HighDpiPixmap" href="classHighDpiPixmap.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
           <a href="classLazySegmentTreeBase.html" title="LazySegmentTreeBase"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classHighlighter.html" title="Highlighter"
+          <a href="classHighDpiPixmap.html" title="HighDpiPixmap"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.4.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
@@ -56,7 +56,9 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv417IOModesController">
 <span id="_CPPv317IOModesController"></span><span id="_CPPv217IOModesController"></span><span id="IOModesController"></span><span class="target" id="classIOModesController"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IOModesController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv417IOModesController" title="Link to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>Manages switching between Read-Only, Cache, and Write modes. </p>
+<p>Handles the logic required when changing how Cutter interacts with the underlying file on disk </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp enum-class">
 <dt class="sig sig-object cpp" id="_CPPv4N17IOModesController4ModeE">
@@ -95,11 +97,6 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N17IOModesController8canWriteEv">
 <span id="_CPPv3N17IOModesController8canWriteEv"></span><span id="_CPPv2N17IOModesController8canWriteEv"></span><span id="IOModesController::canWrite"></span><span class="target" id="classIOModesController_1a0a01c6768869f0df0de5533cab223615"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">canWrite</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController8canWriteEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N17IOModesController18allChangesComittedEv">
-<span id="_CPPv3N17IOModesController18allChangesComittedEv"></span><span id="_CPPv2N17IOModesController18allChangesComittedEv"></span><span id="IOModesController::allChangesComitted"></span><span class="target" id="classIOModesController_1a1b1c8f520a3599ea51e099719c14fbbf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allChangesComitted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17IOModesController18allChangesComittedEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -153,10 +150,9 @@
 <li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classColorThemeWorker.html">ColorThemeWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classCutterSearchable.html">CutterSearchable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSearchableI.html">CutterSearchableI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
@@ -165,7 +161,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">IOModesController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
@@ -175,12 +170,10 @@
 <li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
@@ -191,7 +184,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicBlockHighlighter_1_1BasicBlock.html">BasicBlockHighlighter::BasicBlock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstructionHighlighter_1_1BasicInstruction.html">BasicInstructionHighlighter::BasicInstruction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
@@ -200,16 +193,15 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMmioLookupContext.html">MmioLookupContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText.html">RichTextPainter::CustomRichText</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
 </ul>
 </li>

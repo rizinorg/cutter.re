@@ -16,7 +16,7 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Colors" href="classColors.html" />
+    <link rel="next" title="CommandTask" href="classCommandTask.html" />
     <link rel="prev" title="CachedFontMetrics" href="classCachedFontMetrics.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -33,7 +33,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="classColors.html" title="Colors"
+          <a href="classCommandTask.html" title="CommandTask"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="classCachedFontMetrics.html" title="CachedFontMetrics"
@@ -56,7 +56,7 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv416ColorThemeWorker">
 <span id="_CPPv316ColorThemeWorker"></span><span id="_CPPv216ColorThemeWorker"></span><span id="ColorThemeWorker"></span><span class="target" id="classColorThemeWorker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorThemeWorker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">QObject</span></span><a class="headerlink" href="#_CPPv416ColorThemeWorker" title="Link to this definition">¶</a><br /></dt>
-<dd><p>The <a class="reference internal" href="#classColorThemeWorker"><span class="std std-ref">ColorThemeWorker</span></a> class is a singletone that provides API for working with color themes. </p>
+<dd><p>The <a class="reference internal" href="#classColorThemeWorker"><span class="std std-ref">ColorThemeWorker</span></a> class is a singleton that provides API for working with color themes. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
@@ -187,7 +187,7 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true if given file is color theme and ok == true, otherwise returns false. </p>
+<dd class="field-even"><p>true if given file is a valid color theme and ok == true, otherwise returns false. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -199,13 +199,13 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N16ColorThemeWorker21getStandardThemesPathEv">
-<span id="_CPPv3N16ColorThemeWorker21getStandardThemesPathEv"></span><span id="_CPPv2N16ColorThemeWorker21getStandardThemesPathEv"></span><span id="ColorThemeWorker::getStandardThemesPath"></span><span class="target" id="classColorThemeWorker_1a26cb76fafa5b45a2deb96d4e99b9dcd2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStandardThemesPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker21getStandardThemesPathEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK16ColorThemeWorker21getStandardThemesPathEv">
+<span id="_CPPv3NK16ColorThemeWorker21getStandardThemesPathEv"></span><span id="_CPPv2NK16ColorThemeWorker21getStandardThemesPathEv"></span><span id="ColorThemeWorker::getStandardThemesPathC"></span><span class="target" id="classColorThemeWorker_1a766f2426899571aa53e7c40a587c4efe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStandardThemesPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker21getStandardThemesPathEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N16ColorThemeWorker19getCustomThemesPathEv">
-<span id="_CPPv3N16ColorThemeWorker19getCustomThemesPathEv"></span><span id="_CPPv2N16ColorThemeWorker19getCustomThemesPathEv"></span><span id="ColorThemeWorker::getCustomThemesPath"></span><span class="target" id="classColorThemeWorker_1a69eab5ccf2c295c7554fac20b7883601"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCustomThemesPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16ColorThemeWorker19getCustomThemesPathEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK16ColorThemeWorker19getCustomThemesPathEv">
+<span id="_CPPv3NK16ColorThemeWorker19getCustomThemesPathEv"></span><span id="_CPPv2NK16ColorThemeWorker19getCustomThemesPathEv"></span><span id="ColorThemeWorker::getCustomThemesPathC"></span><span class="target" id="classColorThemeWorker_1ace772269699671967c11e4c97ea5877b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCustomThemesPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16ColorThemeWorker19getCustomThemesPathEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -269,10 +269,9 @@
 <li class="toctree-l3"><a class="reference internal" href="classBasicInstructionHighlighter.html">BasicInstructionHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCachedFontMetrics.html">CachedFontMetrics</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ColorThemeWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classColors.html">Colors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCommandTask.html">CommandTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classConfiguration.html">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classCutterSearchable.html">CutterSearchable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="classCutterSearchableI.html">CutterSearchableI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classCutterSeekable.html">CutterSeekable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompiler.html">Decompiler</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classDecompilerHighlighter.html">DecompilerHighlighter</a></li>
@@ -281,7 +280,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classFallbackSyntaxHighlighter.html">FallbackSyntaxHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classFunctionsTask.html">FunctionsTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classHighDpiPixmap.html">HighDpiPixmap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classHighlighter.html">Highlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classIOModesController.html">IOModesController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLazySegmentTreeBase.html">LazySegmentTreeBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool.html">LinkedListPool</a></li>
@@ -291,12 +289,10 @@
 <li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classProgressIndicator.html">ProgressIndicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrer.html">RefreshDeferrer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRefreshDeferrerAccumulator.html">RefreshDeferrerAccumulator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classReplacingRefreshDeferrerAccumulator.html">ReplacingRefreshDeferrerAccumulator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classRichTextPainter.html">RichTextPainter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinCmdTask.html">RizinCmdTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinFunctionTask.html">RizinFunctionTask</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRizinTask.html">RizinTask</a></li>
@@ -307,7 +303,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classTempConfig.html">TempConfig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classUpdateWorker.html">UpdateWorker</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structBasicBlockHighlighter_1_1BasicBlock.html">BasicBlockHighlighter::BasicBlock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structBasicInstruction.html">BasicInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structBasicInstructionHighlighter_1_1BasicInstruction.html">BasicInstructionHighlighter::BasicInstruction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCommandDescription.html">CommandDescription</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
@@ -316,16 +312,15 @@
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structHighlighter_1_1HighlightingRule.html">Highlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structInitialOptions.html">InitialOptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structLinkedListPool_1_1Item.html">LinkedListPool::Item</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMdHighlighter_1_1HighlightingRule.html">MdHighlighter::HighlightingRule</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics.html">Metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01int_01_4.html">Metrics&lt; int &gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structMetrics_3_01qreal_01_4.html">Metrics&lt; qreal &gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structMmioLookupContext.html">MmioLookupContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structRecentFileEntry.html">RecentFileEntry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText__t.html">RichTextPainter::CustomRichText_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="structmmio__lookup__context.html">mmio_lookup_context</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structRichTextPainter_1_1CustomRichText.html">RichTextPainter::CustomRichText</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structqhelpers_1_1SizePolicyMinMax.html">qhelpers::SizePolicyMinMax</a></li>
 </ul>
 </li>
