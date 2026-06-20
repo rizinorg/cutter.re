@@ -1848,6 +1848,16 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore17getAllTypeClassesEv">
+<span id="_CPPv3N10CutterCore17getAllTypeClassesEv"></span><span id="_CPPv2N10CutterCore17getAllTypeClassesEv"></span><span id="CutterCore::getAllTypeClasses"></span><span class="target" id="classCutterCore_1a3961419608fe60b9c58f90d80449c9c2"></span><span class="n"><span class="pre">QList</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">QString</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAllTypeClasses</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore17getAllTypeClassesEv" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>all typeclasses </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10getTypeAsCERK7QString">
 <span id="_CPPv3N10CutterCore10getTypeAsCERK7QString"></span><span id="_CPPv2N10CutterCore10getTypeAsCERK7QString"></span><span id="CutterCore::getTypeAsC__QStringCR"></span><span class="target" id="classCutterCore_1a4e251a4d82cc6e50ead46f88b4e2e4d1"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTypeAsC</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10getTypeAsCERK7QString" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Fetching the C representation of a given Type. </p>
@@ -1882,6 +1892,34 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>typeName</strong> – The name of the type to be shown </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10renameTypeERK7QStringRK7QString">
+<span id="_CPPv3N10CutterCore10renameTypeERK7QStringRK7QString"></span><span id="_CPPv2N10CutterCore10renameTypeERK7QStringRK7QString"></span><span id="CutterCore::renameType__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1a68e6133218160e7058cb1ed6e430751e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">renameType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">from</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">to</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore10renameTypeERK7QStringRK7QString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Renames type to <em>newName</em> and updates all of its references. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from</strong> – The type to rename </p></li>
+<li><p><strong>to</strong> – New name for type </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore12setTypeClassERK7QStringRK7QString">
+<span id="_CPPv3N10CutterCore12setTypeClassERK7QStringRK7QString"></span><span id="_CPPv2N10CutterCore12setTypeClassERK7QStringRK7QString"></span><span id="CutterCore::setTypeClass__QStringCR.QStringCR"></span><span class="target" id="classCutterCore_1afe5c170df614847365aa29bcb7faf8ca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTypeClass</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">typeClass</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore12setTypeClassERK7QStringRK7QString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Set the typeclass of a type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – Type to set typeclass for </p></li>
+<li><p><strong>typeClass</strong> – Name of typeclass </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
