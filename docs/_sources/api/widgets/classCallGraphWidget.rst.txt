@@ -1,0 +1,4 @@
+CallGraphWidget
+===============
+
+.. doxygenclass:: CallGraphWidget

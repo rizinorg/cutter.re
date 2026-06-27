@@ -1,0 +1,4 @@
+CutterSearchLock
+================
+
+.. doxygenclass:: CutterSearchLock

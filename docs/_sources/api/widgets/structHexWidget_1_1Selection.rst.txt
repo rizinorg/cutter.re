@@ -1,0 +1,4 @@
+HexWidget::Selection
+====================
+
+.. doxygenstruct:: HexWidget::Selection

@@ -1,0 +1,4 @@
+LinkedListPool::ListIterator
+============================
+
+.. doxygenclass:: LinkedListPool::ListIterator

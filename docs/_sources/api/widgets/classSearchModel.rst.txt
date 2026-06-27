@@ -1,0 +1,4 @@
+SearchModel
+===========
+
+.. doxygenclass:: SearchModel

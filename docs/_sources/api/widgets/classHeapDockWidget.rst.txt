@@ -1,0 +1,4 @@
+HeapDockWidget
+==============
+
+.. doxygenclass:: HeapDockWidget

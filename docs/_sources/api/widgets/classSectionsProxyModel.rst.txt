@@ -1,0 +1,4 @@
+SectionsProxyModel
+==================
+
+.. doxygenclass:: SectionsProxyModel

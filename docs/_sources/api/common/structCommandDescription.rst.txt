@@ -1,0 +1,4 @@
+CommandDescription
+==================
+
+.. doxygenstruct:: CommandDescription

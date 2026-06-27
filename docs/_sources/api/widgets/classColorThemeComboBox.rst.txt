@@ -1,0 +1,4 @@
+ColorThemeComboBox
+==================
+
+.. doxygenclass:: ColorThemeComboBox

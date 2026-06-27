@@ -1,0 +1,4 @@
+MdHighlighter
+=============
+
+.. doxygenclass:: MdHighlighter

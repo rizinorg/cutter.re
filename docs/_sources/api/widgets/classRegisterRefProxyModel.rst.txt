@@ -1,0 +1,4 @@
+RegisterRefProxyModel
+=====================
+
+.. doxygenclass:: RegisterRefProxyModel

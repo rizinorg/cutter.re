@@ -1,0 +1,4 @@
+HighDpiPixmap
+=============
+
+.. doxygenclass:: HighDpiPixmap

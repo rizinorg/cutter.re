@@ -1,0 +1,4 @@
+CommentGroup
+============
+
+.. doxygenstruct:: CommentGroup

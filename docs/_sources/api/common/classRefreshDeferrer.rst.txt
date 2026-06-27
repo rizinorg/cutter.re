@@ -1,0 +1,4 @@
+RefreshDeferrer
+===============
+
+.. doxygenclass:: RefreshDeferrer

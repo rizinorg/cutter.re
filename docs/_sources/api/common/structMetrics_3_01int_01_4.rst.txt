@@ -1,0 +1,4 @@
+Metrics< int >
+==============
+
+.. doxygenstruct:: Metrics< int >

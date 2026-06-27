@@ -1,0 +1,4 @@
+RefreshDeferrerAccumulator
+==========================
+
+.. doxygenclass:: RefreshDeferrerAccumulator

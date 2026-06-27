@@ -1,0 +1,4 @@
+VirtualAddrDock
+===============
+
+.. doxygenclass:: VirtualAddrDock

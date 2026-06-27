@@ -1,0 +1,4 @@
+IntervalDialog
+==============
+
+.. doxygenclass:: IntervalDialog

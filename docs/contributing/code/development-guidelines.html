@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cutter Development Guidelines &#8212; Cutter 2.5.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
+    <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
+    <script src="../../_static/documentation_options.js?v=3c4615cf"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/cutter.js?v=b9d5d2df"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Development environment setup" href="ide-setup.html" />
+    <link rel="prev" title="Contributing code to Cutter" href="getting-started.html" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head><body>
+    
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ide-setup.html" title="Development environment setup"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="getting-started.html" title="Contributing code to Cutter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.5.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../contributing.html" >Contributing to Cutter</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../code.html" accesskey="U">Developer Documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Cutter Development Guidelines</a></li> 
+      </ul>
+    </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cutter-development-guidelines">
+<h1>Cutter Development Guidelines<a class="headerlink" href="#cutter-development-guidelines" title="Link to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>New to Cutter development? Check out our <a class="reference internal" href="getting-started.html"><span class="doc">tutorial for new developers</span></a>.</p>
+</div>
+<section id="common-usage">
+<h2>Common Usage<a class="headerlink" href="#common-usage" title="Link to this heading">¶</a></h2>
+<section id="cuttercore-class">
+<h3>CutterCore Class<a class="headerlink" href="#cuttercore-class" title="Link to this heading">¶</a></h3>
+<p>This is the main class where every link with Rizin is made. It is <em>unique</em>
+across the whole process. To access it, simply call <code class="docutils literal notranslate"><span class="pre">Core()</span></code>.</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getOffset</span><span class="p">();</span>
+</pre></div>
+</div>
+</section>
+<section id="seek-the-current-file">
+<h3>Seek the Current File<a class="headerlink" href="#seek-the-current-file" title="Link to this heading">¶</a></h3>
+<p>To modify Rizin seek use <code class="docutils literal notranslate"><span class="pre">CutterCore::seek(const</span> <span class="pre">RVA</span> <span class="pre">offset)</span></code>. This
+is important because it will emit a
+<code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal. Never ever call
+<code class="docutils literal notranslate"><span class="pre">cmd(&quot;s</span> <span class="pre">offset&quot;)</span></code>;</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Core</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">seek</span><span class="p">(</span><span class="mh">0x00C0FFEE</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cutter also supports a silent seek which doesn’t trigger the <code class="docutils literal notranslate"><span class="pre">seekChanged</span></code> event and doesn’t add new entries to the seek history.</p>
+</div>
+</section>
+<section id="creating-a-widget">
+<h3>Creating a Widget<a class="headerlink" href="#creating-a-widget" title="Link to this heading">¶</a></h3>
+<p>Make sure to connect the <code class="docutils literal notranslate"><span class="pre">CutterCore::seekChanged(RVA</span> <span class="pre">offset)</span></code> signal
+so your widget refreshes its output when Rizin seek is modified
+(switching to another function, etc.).</p>
+</section>
+</section>
+<section id="coding-style">
+<h2>Coding Style<a class="headerlink" href="#coding-style" title="Link to this heading">¶</a></h2>
+<section id="clang-format">
+<h3>clang-format<a class="headerlink" href="#clang-format" title="Link to this heading">¶</a></h3>
+<p>In general, we follow a slightly customized version of <a class="reference external" href="https://wiki.qt.io/Qt_Coding_Style">the official Qt guidelines</a>
+to format the code. Before sending a pull request, you will need to use <a class="reference external" href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a> (version 8 or newer)
+to format the code. The command line for formatting the code according
+to the style is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang-format<span class="w"> </span>-style<span class="o">=</span>file<span class="w"> </span>-i<span class="w"> </span>src/filename.cpp
+</pre></div>
+</div>
+<p>If your changes were done on many files across the codebase, you can use this oneliner to run <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> on the entire <code class="docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>./src<span class="w"> </span>-regex<span class="w"> </span><span class="s1">&#39;.*\.\(cpp\|h\)&#39;</span><span class="w"> </span>-exec<span class="w"> </span>clang-format<span class="w"> </span>-style<span class="o">=</span>file<span class="w"> </span>-i<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+</pre></div>
+</div>
+</section>
+<section id="clang-tidy">
+<h3>clang-tidy<a class="headerlink" href="#clang-tidy" title="Link to this heading">¶</a></h3>
+<p>Beyond formatting, we use <a class="reference external" href="https://clang.llvm.org/extra/clang-tidy/">clang-tidy</a> (version 13 or newer) to catch potential style violations.</p>
+<p>To run <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code>, first configure your build to generate <code class="docutils literal notranslate"><span class="pre">compile_commands.json</span></code> and run the autogen tools:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build<span class="w"> </span>-G<span class="w"> </span>Ninja<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DCUTTER_QT<span class="o">=</span><span class="m">6</span><span class="w"> </span>-DCUTTER_USE_BUNDLED_RIZIN<span class="o">=</span>ON<span class="w"> </span>-DCMAKE_EXPORT_COMPILE_COMMANDS<span class="o">=</span>ON
+
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>Cutter_autogen
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> on modified files relative to the latest commit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>-U0<span class="w"> </span>--no-color<span class="w"> </span>HEAD~1<span class="w"> </span><span class="p">|</span><span class="w"> </span>clang-tidy-diff.py<span class="w"> </span>-p1<span class="w"> </span>-path<span class="w"> </span>build/
+</pre></div>
+</div>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">clang-format</span></code>, If your changes were done on many files across the codebase, you can use this oneliner to run <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> on the entire ‘src’ directory. The following command excludes third-party and auto generated files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>run-clang-tidy<span class="w"> </span>-p<span class="w"> </span>build<span class="w"> </span><span class="s2">&quot;.*src/(?!(themes|bindings|fonts|img|translations|Cutter_autogen)).*\.(cpp|h)</span>$<span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> can also attempt to fix style violations using the <code class="docutils literal notranslate"><span class="pre">-fix</span></code> flag. However these may not always be perfect. Make sure to verify the fixes before opening a pull request:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>-U0<span class="w"> </span>--no-color<span class="w"> </span>HEAD~1<span class="w"> </span><span class="p">|</span><span class="w"> </span>clang-tidy-diff.py<span class="w"> </span>-fix<span class="w"> </span>-p1<span class="w"> </span>-path<span class="w"> </span>build/
+</pre></div>
+</div>
+</section>
+<section id="python-scripts">
+<h3>Python scripts<a class="headerlink" href="#python-scripts" title="Link to this heading">¶</a></h3>
+<p>If you don’t want to run manual commands, cutter also provides scripts for running <code class="docutils literal notranslate"><span class="pre">clang-format</span></code> and <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> in the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>scripts/clang-format.py<span class="w"> </span>-h
+usage:<span class="w"> </span>clang-format.py<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span><span class="o">[</span>-C<span class="w"> </span>CLANG_FORMAT<span class="o">]</span><span class="w"> </span><span class="o">[</span>-c<span class="o">]</span><span class="w"> </span><span class="o">[</span>-v<span class="o">]</span><span class="w"> </span><span class="o">[</span>-f<span class="w"> </span>FILE<span class="o">]</span><span class="w"> </span><span class="o">[</span>-d<span class="w"> </span>DIFF<span class="o">]</span>
+
+Clang<span class="w"> </span>format<span class="w"> </span>the<span class="w"> </span>cutter<span class="w"> </span>project
+
+options:
+<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">            </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+<span class="w">  </span>-C,<span class="w"> </span>--clang-format<span class="w"> </span>CLANG_FORMAT
+<span class="w">                        </span>path<span class="w"> </span>of<span class="w"> </span>clang-format
+<span class="w">  </span>-c,<span class="w"> </span>--check<span class="w">           </span><span class="nb">enable</span><span class="w"> </span>the<span class="w"> </span>check<span class="w"> </span>mode
+<span class="w">  </span>-v,<span class="w"> </span>--verbose<span class="w">         </span>use<span class="w"> </span>verbose<span class="w"> </span>output
+<span class="w">  </span>-f,<span class="w"> </span>--file<span class="w"> </span>FILE<span class="w">       </span>formats<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>checks<span class="o">)</span><span class="w"> </span>only<span class="w"> </span>the<span class="w"> </span>given<span class="w"> </span>file
+<span class="w">  </span>-d,<span class="w"> </span>--diff<span class="w"> </span>DIFF<span class="w">       </span>format<span class="w"> </span>all<span class="w"> </span>modified<span class="w"> </span>file<span class="w"> </span>related<span class="w"> </span>to<span class="w"> </span>branch
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usage:<span class="w"> </span>clang-tidy.py<span class="w"> </span><span class="o">[</span>-h<span class="o">]</span><span class="w"> </span><span class="o">[</span>-T<span class="w"> </span>RUN_CLANG_TIDY<span class="o">]</span><span class="w"> </span><span class="o">[</span>-p<span class="w"> </span>BUILD_PATH<span class="o">]</span><span class="w"> </span><span class="o">[</span>-j<span class="w"> </span>JOBS<span class="o">]</span><span class="w"> </span><span class="o">[</span>-r<span class="w"> </span>REGEX<span class="o">]</span><span class="w"> </span><span class="o">[</span>-i<span class="o">]</span><span class="w"> </span><span class="o">[</span>-q<span class="o">]</span>
+
+clang-tidy<span class="w"> </span>regex<span class="w"> </span>wrapper
+
+options:
+<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">            </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+<span class="w">  </span>-T,<span class="w"> </span>--run-clang-tidy<span class="w"> </span>RUN_CLANG_TIDY
+<span class="w">                        </span>Path<span class="w"> </span>of<span class="w"> </span>run-clang-tidy<span class="w"> </span>binary
+<span class="w">  </span>-p,<span class="w"> </span>--build-path<span class="w"> </span>BUILD_PATH
+<span class="w">                        </span>Path<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>build<span class="w"> </span>directory
+<span class="w">  </span>-j,<span class="w"> </span>--jobs<span class="w"> </span>JOBS<span class="w">       </span>Number<span class="w"> </span>of<span class="w"> </span>parallel<span class="w"> </span>execution<span class="w"> </span><span class="nb">jobs</span>
+<span class="w">  </span>-r,<span class="w"> </span>--regex<span class="w"> </span>REGEX<span class="w">     </span>Regex<span class="w"> </span>pattern<span class="w"> </span><span class="k">for</span><span class="w"> </span>filtering<span class="w"> </span>files
+<span class="w">  </span>-i,<span class="w"> </span>--fix<span class="w">             </span>Apply<span class="w"> </span>fixes<span class="w"> </span>automatically
+<span class="w">  </span>-q,<span class="w"> </span>--quiet<span class="w">           </span>Suppress<span class="w"> </span>configuration<span class="w"> </span>logs
+</pre></div>
+</div>
+<p>Below are some of the low level coding conventions that we follow</p>
+</section>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h3>
+<p>Variable names start with a lowercase letter with each consecutive word starting with an uppercase letter. (<strong>camelBack</strong> case)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">Height</span><span class="w">             </span><span class="c1">// Wrong</span>
+<span class="n">string</span><span class="w"> </span><span class="n">name_of_widget</span><span class="w">  </span><span class="c1">// Wrong</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w">            </span><span class="c1">// Correct</span>
+<span class="n">string</span><span class="w"> </span><span class="n">nameOfWidget</span><span class="w">    </span><span class="c1">// Correct</span>
+</pre></div>
+</div>
+<p>Avoid meaningless variable names</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">              </span><span class="c1">// Wrong</span>
+<span class="n">string</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">              </span><span class="c1">// Wrong</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w">     </span><span class="c1">// Correct</span>
+<span class="n">string</span><span class="w"> </span><span class="n">nameOfThis</span><span class="p">;</span><span class="w">     </span><span class="c1">// Correct</span>
+<span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w">            </span><span class="c1">// Also Correct</span>
+</pre></div>
+</div>
+<p>Only first letter of an acronym is uppercase</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CutterJsonWigdet</span><span class="w"> </span><span class="n">cutterJSONWidget</span><span class="p">;</span><span class="w">    </span><span class="c1">// Wrong</span>
+
+<span class="n">CutterJsonWigdet</span><span class="w"> </span><span class="n">cutterJsonWigdet</span><span class="p">;</span><span class="w">    </span><span class="c1">// Correct</span>
+</pre></div>
+</div>
+<p>Variable names don’t use leading/trailing underscores, including prefixes like m_</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Example</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index_</span><span class="p">;</span><span class="w">     </span><span class="c1">// Wrong</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m_index</span><span class="p">;</span><span class="w">    </span><span class="c1">// Wrong</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">;</span><span class="w">      </span><span class="c1">// Correct</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Global variables follow the same naming conventions</p>
+</section>
+<section id="anonymous-namespace">
+<h3>Anonymous Namespace<a class="headerlink" href="#anonymous-namespace" title="Link to this heading">¶</a></h3>
+<p>Global entities (variables, functions, structs…) private to a source file (internal linkage) are defined in an anonymous namespace</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">globalCounter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">doSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h3>
+<p>Function names follow the same naming convention as <a class="reference internal" href="#variables">variables</a>. (<strong>camelBack</strong> casing)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">do_something</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">     </span><span class="c1">// Wrong</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">DoSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">      </span><span class="c1">// Wrong</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">doSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">      </span><span class="c1">// Correct</span>
+</pre></div>
+</div>
+<p>Unused parameters inside a function are omitted in the definition either by commenting out the parameter name or not writing the name at all.</p>
+<p>Avoid using <code class="docutils literal notranslate"><span class="pre">Q_UNUSED</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Bad</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">doSomething</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">one</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">two</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Q_UNUSED</span><span class="p">(</span><span class="n">one</span><span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+
+<span class="c1">// Good</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">doSomething</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="cm">/*one*/</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">two</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+
+<span class="c1">// Good</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">doSomething</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">two</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Avoid the use of automatic name based connections. See <a class="reference internal" href="#connecting-qt-signals">Connecting Qt Signals</a>.</p>
+</section>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h3>
+<p>First letter of each word is uppercased. (<strong>CamelCase</strong>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">memory_dock_widget</span><span class="p">;</span><span class="w">   </span><span class="c1">// Wrong</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">memoryDockWidget</span><span class="p">;</span><span class="w">     </span><span class="c1">// Wrong</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MemoryDockWidget</span><span class="p">;</span><span class="w">     </span><span class="c1">// Correct</span>
+</pre></div>
+</div>
+<p>Only first letter of an acronym is uppercase</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CutterJSONWidget</span><span class="w">    </span><span class="c1">// Wrong</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CutterJsonWidget</span><span class="w">    </span><span class="c1">// Correct</span>
+</pre></div>
+</div>
+<p>Member variables follow the same naming conventions defined in <a class="reference internal" href="#variables">variables</a> that means no leading/trailing underscores or m_ prefixes</p>
+</section>
+<section id="casting">
+<h3>Casting<a class="headerlink" href="#casting" title="Link to this heading">¶</a></h3>
+<p>Avoid the use of C style casts, prefer C++ casts (<code class="docutils literal notranslate"><span class="pre">static_cast</span></code>, <code class="docutils literal notranslate"><span class="pre">const_cast</span></code> …)</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">qobject_cast</span></code> for <code class="docutils literal notranslate"><span class="pre">QObjects</span></code></p>
+</section>
+<section id="smart-pointers">
+<h3>Smart Pointers<a class="headerlink" href="#smart-pointers" title="Link to this heading">¶</a></h3>
+<p>Prefer the use of C++ smart pointers (<code class="docutils literal notranslate"><span class="pre">unique_ptr</span></code>, <code class="docutils literal notranslate"><span class="pre">shared_ptr</span></code>…)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">RegisterProfileDialog</span><span class="w"> </span><span class="o">*</span><span class="n">ui</span><span class="p">;</span><span class="w">                        </span><span class="c1">// Bad</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Ui</span><span class="o">::</span><span class="n">RegisterProfileDialog</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ui</span><span class="p">;</span><span class="w">    </span><span class="c1">// Good</span>
+</pre></div>
+</div>
+</section>
+<section id="braces">
+<h3>Braces<a class="headerlink" href="#braces" title="Link to this heading">¶</a></h3>
+<p>In contrast to the official guidelines of Qt, in Cutter we always use curly braces in conditional statements, even if the body of a conditional statement contains only one line.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Wrong</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="c1">// Correct</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">address</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Wrong</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+
+<span class="c1">// Correct</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">qDebug</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="loops">
+<h3>Loops<a class="headerlink" href="#loops" title="Link to this heading">¶</a></h3>
+<p>We use the C++11 foreach loop style, which means any “foreach” loop should
+look like:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Good - If a copy of each element is required</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">doSomething</span><span class="p">(</span><span class="k">import</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Good - If copy is not required</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">doSomething</span><span class="p">(</span><span class="k">import</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Good - If no modification is required</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">doSomething</span><span class="p">(</span><span class="k">import</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="auto">
+<h3>auto<a class="headerlink" href="#auto" title="Link to this heading">¶</a></h3>
+<p>Prefer the use of <code class="docutils literal notranslate"><span class="pre">auto</span></code> keyword when working with the following:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Iterators</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myMap</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="k">import</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">importsArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// Lambdas</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">multiply</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+
+<span class="c1">// Casting</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">myFloat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">myInt</span><span class="p">);</span>
+
+<span class="c1">// Initializing using new</span>
+<span class="k">auto</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">QListWidgetItem</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="nullptr">
+<h3>nullptr<a class="headerlink" href="#nullptr" title="Link to this heading">¶</a></h3>
+<p>Please do not use <code class="docutils literal notranslate"><span class="pre">0</span></code> nor <code class="docutils literal notranslate"><span class="pre">Q_NULLPTR</span></code>, only use <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">QObject</span><span class="o">&gt;</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+
+<span class="c1">// Note that this is just an example, unique_ptr constructor initializes the internal pointer to nullptr by default</span>
+</pre></div>
+</div>
+</section>
+<section id="connecting-qt-signals">
+<h3>Connecting Qt Signals<a class="headerlink" href="#connecting-qt-signals" title="Link to this heading">¶</a></h3>
+<p>Use one of the following methods for connecting signals to slots:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// typically you will make connection in the constructor to a member of current class</span>
+<span class="n">connect</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">ui</span><span class="o">-&gt;</span><span class="n">button1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span>
+<span class="w">        </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">MyObject</span><span class="o">::</span><span class="n">buttonClicked</span><span class="p">);</span><span class="w"> </span><span class="c1">// Good</span>
+
+<span class="c1">// you can also connect directly other object slots</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">checkbox</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QCheckBox</span><span class="o">::</span><span class="n">toggled</span><span class="p">,</span><span class="w"> </span><span class="n">widget</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QWidget</span><span class="o">::</span><span class="n">setEnabled</span><span class="p">);</span><span class="w"> </span><span class="c1">// Good</span>
+
+<span class="c1">// use lambda for passing extra arguments</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">button1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">this</span><span class="p">](){</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="n">getBar</span><span class="p">());</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Good</span>
+</pre></div>
+</div>
+<p>This syntax performs compile-time type checks and allows the use of lambda
+functions. Other approaches for connecting signals can silently break at runtime.</p>
+<p>Don’t use the older macro based syntax or automatic name based connections.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// SIGNAL and SLOT macros</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">),</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">SLOT</span><span class="p">(</span><span class="n">buttonClicked</span><span class="p">));</span><span class="w"> </span><span class="c1">// BAD</span>
+
+<span class="c1">// automatic name based connection</span>
+<span class="nl">slot</span><span class="p">:</span>
+<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">on_actionNew_triggered</span><span class="p">();</span><span class="w"> </span><span class="c1">// BAD</span>
+
+<span class="c1">// 3 argument connect without receiver object</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SomeObject</span><span class="o">::</span><span class="n">signal</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">this</span><span class="p">](){</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">foo</span><span class="p">(</span><span class="n">getBar</span><span class="p">());</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// BAD</span>
+</pre></div>
+</div>
+</section>
+<section id="includes">
+<h3>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h3>
+<p>Strive to include only <strong>required</strong> definitions inside header files.
+This will avoid triggering additional unnecessary compilations.</p>
+<p>If you only need to know that a class exists but don’t need the prototype,
+you can declare the class like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyClassThatExists</span><span class="p">;</span>
+
+<span class="cm">/** ... **/</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">unqiue_ptr</span><span class="o">&lt;</span><span class="n">MyClassThatExists</span><span class="o">&gt;</span><span class="w"> </span><span class="n">classInstance</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>And then include the class header inside your .cpp so you can use that class.</p>
+<p>If you need something in the source file (.cpp) that is not a class member,
+then add the include in the source file.</p>
+<p>The includes must be ordered from local to global. That is, first include
+any local header file (with double quotes like <cite>#include “common/Helpers.h”</cite>.
+Then, after an empty newline, include Qt definitions like
+<cite>#include &lt;QShortcut&gt;</cite>.
+Finally, include the standard C++ headers you need.</p>
+<p>Includes must be sorted by alphabetical order.</p>
+<p>This is automatically handled by running <code class="docutils literal notranslate"><span class="pre">clang-format</span></code></p>
+</section>
+<section id="docstrings">
+<h3>Docstrings<a class="headerlink" href="#docstrings" title="Link to this heading">¶</a></h3>
+<p>Our API reference is generated using Doxygen, so when it comes to
+function documentation, please use the following format:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Add new parameters to the accumulator</span>
+<span class="cm"> * @param params The parameters to add</span>
+<span class="cm"> * @return True if the parameters were added, false otherwise</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">accumulate</span><span class="p">(</span><span class="n">RefreshDeferrerParams</span><span class="w"> </span><span class="n">params</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">};</span>
+</pre></div>
+</div>
+<p>Documenting every function is generally not required. Only document those functions whose purpose is not immediately understandable just by looking at the function name.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// No need for docs</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="c1">// Should provide docs</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">syncRemote</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>It is preferred for classes to have documentation just above the definition, explaining their purpose.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief A short description about SomeDialog</span>
+<span class="cm"> */</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SomeDialog</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="general-coding-advices">
+<h2>General Coding Advices<a class="headerlink" href="#general-coding-advices" title="Link to this heading">¶</a></h2>
+<section id="functions-documentation">
+<h3>Functions Documentation<a class="headerlink" href="#functions-documentation" title="Link to this heading">¶</a></h3>
+<p>You can find the class documentation in the <a class="reference external" href="https://cutter.re/docs/api.html">API Reference</a> menu item.</p>
+</section>
+<section id="updating-the-git-submodules">
+<h3>Updating the Git Submodules<a class="headerlink" href="#updating-the-git-submodules" title="Link to this heading">¶</a></h3>
+<p>Git submodules play a major part in Cutter. This, because Cutter is powered
+by Rizin, its parent project, and it tries to stay up-to-date with its
+recent version, which allows us to implement new features, and enjoy bug
+fixes and performance improvements on Rizin. Often, we need to update
+the Rizin submodule or the others, to push their most recent
+version to Cutter.</p>
+<p>You can view the list of all the submodules from the cutter root folder with:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--file<span class="w"> </span>.gitmodules<span class="w"> </span>--get-regexp<span class="w"> </span>path<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{ print $2 }&#39;</span>
+</pre></div>
+</div>
+<p>To update all the submodules at once, run these commands from the
+cutter root folder:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>submodule<span class="w"> </span>foreach<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>master
+git<span class="w"> </span>add<span class="w"> </span>submodule_name_1<span class="w"> </span>submodule_name_2
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update submodules&quot;</span>
+</pre></div>
+</div>
+<p>More likely, you’ll only need to update the <em>rizin</em> submodule.
+In order to update one submodule individually, use the following code:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>rizin
+git<span class="w"> </span>checkout<span class="w"> </span>dev<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull
+<span class="nb">cd</span><span class="w"> </span>..
+git<span class="w"> </span>add<span class="w"> </span>rizin
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update rizin submodule&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="useful-resources-qt-development">
+<h3>Useful Resources (Qt Development)<a class="headerlink" href="#useful-resources-qt-development" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doc.qt.io/qt-6/signalsandslots.html">Signals &amp; Slots</a></p></li>
+<li><p><a class="reference external" href="https://doc.qt.io/qt-6/model-view-programming.html">Model/View Programming</a> - read this if you are going to work with a list or table-like widgets</p></li>
+<li><p><a class="reference external" href="https://doc.qt.io/qt-6/qaction.html#details">QAction</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+  <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+    <div class="sphinxsidebarwrapper">
+      <a href="../../index.html">Cutter documentation</a>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../user-docs.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Cutter</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../code.html">Developer documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cutter Development Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-usage">Common Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-style">Coding Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-coding-advices">General Coding Advices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ide-setup.html">Development environment setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release-procedure.html">Release Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building.html">Building</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Reference</a></li>
+</ul>
+
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+    </div>
+  </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, The Cutter Developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    </div>
+    
+
+  </body>
+</html>

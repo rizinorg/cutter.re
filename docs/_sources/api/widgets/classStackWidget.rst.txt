@@ -1,0 +1,4 @@
+StackWidget
+===========
+
+.. doxygenclass:: StackWidget

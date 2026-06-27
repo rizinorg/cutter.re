@@ -1,0 +1,4 @@
+BoolToggleDelegate
+==================
+
+.. doxygenclass:: BoolToggleDelegate

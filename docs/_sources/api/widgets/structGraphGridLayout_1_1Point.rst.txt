@@ -1,0 +1,4 @@
+GraphGridLayout::Point
+======================
+
+.. doxygenstruct:: GraphGridLayout::Point

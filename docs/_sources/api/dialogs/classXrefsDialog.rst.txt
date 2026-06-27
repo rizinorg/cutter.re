@@ -1,0 +1,4 @@
+XrefsDialog
+===========
+
+.. doxygenclass:: XrefsDialog

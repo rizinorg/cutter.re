@@ -1,0 +1,4 @@
+GlobalsProxyModel
+=================
+
+.. doxygenclass:: GlobalsProxyModel

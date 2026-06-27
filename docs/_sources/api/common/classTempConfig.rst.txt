@@ -1,0 +1,4 @@
+TempConfig
+==========
+
+.. doxygenclass:: TempConfig

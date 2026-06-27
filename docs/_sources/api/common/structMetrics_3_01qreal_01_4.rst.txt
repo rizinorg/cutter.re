@@ -1,0 +1,4 @@
+Metrics< qreal >
+================
+
+.. doxygenstruct:: Metrics< qreal >

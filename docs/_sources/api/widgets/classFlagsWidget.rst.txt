@@ -1,0 +1,4 @@
+FlagsWidget
+===========
+
+.. doxygenclass:: FlagsWidget

@@ -1,0 +1,4 @@
+LinkedListPool
+==============
+
+.. doxygenclass:: LinkedListPool

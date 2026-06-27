@@ -1,0 +1,4 @@
+ProfileDirectivesDialog
+=======================
+
+.. doxygenclass:: ProfileDirectivesDialog

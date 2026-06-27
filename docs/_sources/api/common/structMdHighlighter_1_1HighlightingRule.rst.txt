@@ -1,0 +1,4 @@
+MdHighlighter::HighlightingRule
+===============================
+
+.. doxygenstruct:: MdHighlighter::HighlightingRule
