@@ -1,0 +1,4 @@
+BasicInstructionHighlighter::BasicInstruction
+=============================================
+
+.. doxygenstruct:: BasicInstructionHighlighter::BasicInstruction

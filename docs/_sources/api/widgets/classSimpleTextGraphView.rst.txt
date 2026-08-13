@@ -1,0 +1,4 @@
+SimpleTextGraphView
+===================
+
+.. doxygenclass:: SimpleTextGraphView

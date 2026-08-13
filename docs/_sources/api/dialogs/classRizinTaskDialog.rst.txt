@@ -1,0 +1,4 @@
+RizinTaskDialog
+===============
+
+.. doxygenclass:: RizinTaskDialog

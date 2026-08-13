@@ -1,0 +1,4 @@
+MemoryMapDescription
+====================
+
+.. doxygenstruct:: MemoryMapDescription

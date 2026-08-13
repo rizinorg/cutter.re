@@ -1,0 +1,4 @@
+FlagDialog
+==========
+
+.. doxygenclass:: FlagDialog

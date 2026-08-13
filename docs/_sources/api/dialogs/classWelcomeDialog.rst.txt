@@ -1,0 +1,4 @@
+WelcomeDialog
+=============
+
+.. doxygenclass:: WelcomeDialog

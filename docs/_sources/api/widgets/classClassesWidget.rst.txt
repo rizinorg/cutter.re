@@ -1,0 +1,4 @@
+ClassesWidget
+=============
+
+.. doxygenclass:: ClassesWidget

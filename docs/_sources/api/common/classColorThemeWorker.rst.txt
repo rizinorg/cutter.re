@@ -1,0 +1,4 @@
+ColorThemeWorker
+================
+
+.. doxygenclass:: ColorThemeWorker

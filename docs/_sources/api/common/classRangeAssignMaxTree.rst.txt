@@ -1,0 +1,4 @@
+RangeAssignMaxTree
+==================
+
+.. doxygenclass:: RangeAssignMaxTree

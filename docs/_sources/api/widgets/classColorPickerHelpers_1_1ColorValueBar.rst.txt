@@ -1,0 +1,4 @@
+ColorPickerHelpers::ColorValueBar
+=================================
+
+.. doxygenclass:: ColorPickerHelpers::ColorValueBar

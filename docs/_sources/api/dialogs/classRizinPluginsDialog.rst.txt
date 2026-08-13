@@ -1,0 +1,4 @@
+RizinPluginsDialog
+==================
+
+.. doxygenclass:: RizinPluginsDialog

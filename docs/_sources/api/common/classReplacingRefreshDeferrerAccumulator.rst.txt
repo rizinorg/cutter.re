@@ -1,0 +1,4 @@
+ReplacingRefreshDeferrerAccumulator
+===================================
+
+.. doxygenclass:: ReplacingRefreshDeferrerAccumulator

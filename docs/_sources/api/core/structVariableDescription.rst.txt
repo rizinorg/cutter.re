@@ -1,0 +1,4 @@
+VariableDescription
+===================
+
+.. doxygenstruct:: VariableDescription

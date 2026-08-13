@@ -1,0 +1,4 @@
+SectionDescription
+==================
+
+.. doxygenstruct:: SectionDescription

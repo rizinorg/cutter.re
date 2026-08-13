@@ -1,0 +1,4 @@
+FallbackSyntaxHighlighter
+=========================
+
+.. doxygenclass:: FallbackSyntaxHighlighter

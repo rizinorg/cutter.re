@@ -1,0 +1,4 @@
+SymbolsModel
+============
+
+.. doxygenclass:: SymbolsModel

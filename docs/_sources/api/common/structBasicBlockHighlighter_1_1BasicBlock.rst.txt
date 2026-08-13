@@ -1,0 +1,4 @@
+BasicBlockHighlighter::BasicBlock
+=================================
+
+.. doxygenstruct:: BasicBlockHighlighter::BasicBlock

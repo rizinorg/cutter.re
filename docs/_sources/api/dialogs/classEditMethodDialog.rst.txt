@@ -1,0 +1,4 @@
+EditMethodDialog
+================
+
+.. doxygenclass:: EditMethodDialog

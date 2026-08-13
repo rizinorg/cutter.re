@@ -1,0 +1,4 @@
+RegisterRefValueDescription
+===========================
+
+.. doxygenstruct:: RegisterRefValueDescription

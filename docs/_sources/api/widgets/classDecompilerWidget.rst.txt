@@ -1,0 +1,4 @@
+DecompilerWidget
+================
+
+.. doxygenclass:: DecompilerWidget

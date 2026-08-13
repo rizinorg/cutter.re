@@ -1,0 +1,4 @@
+ResourcesDescription
+====================
+
+.. doxygenstruct:: ResourcesDescription

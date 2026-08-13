@@ -1,0 +1,4 @@
+BasicInstructionHighlighter
+===========================
+
+.. doxygenclass:: BasicInstructionHighlighter

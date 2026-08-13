@@ -1,0 +1,4 @@
+CommentDescription
+==================
+
+.. doxygenstruct:: CommentDescription

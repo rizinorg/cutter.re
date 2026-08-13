@@ -1,0 +1,4 @@
+HexdumpRangeDialog
+==================
+
+.. doxygenclass:: HexdumpRangeDialog

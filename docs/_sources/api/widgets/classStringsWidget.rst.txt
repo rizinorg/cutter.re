@@ -1,0 +1,4 @@
+StringsWidget
+=============
+
+.. doxygenclass:: StringsWidget

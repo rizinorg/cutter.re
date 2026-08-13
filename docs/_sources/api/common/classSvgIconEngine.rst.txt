@@ -1,0 +1,4 @@
+SvgIconEngine
+=============
+
+.. doxygenclass:: SvgIconEngine

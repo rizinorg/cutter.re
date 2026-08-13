@@ -1,0 +1,4 @@
+AddressableDockWidget
+=====================
+
+.. doxygenclass:: AddressableDockWidget

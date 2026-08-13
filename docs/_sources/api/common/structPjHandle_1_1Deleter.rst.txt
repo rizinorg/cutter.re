@@ -1,0 +1,4 @@
+PjHandle::Deleter
+=================
+
+.. doxygenstruct:: PjHandle::Deleter

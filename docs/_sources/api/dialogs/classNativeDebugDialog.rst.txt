@@ -1,0 +1,4 @@
+NativeDebugDialog
+=================
+
+.. doxygenclass:: NativeDebugDialog

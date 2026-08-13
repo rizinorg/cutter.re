@@ -1,0 +1,4 @@
+AddressableItemModelI
+=====================
+
+.. doxygenclass:: AddressableItemModelI

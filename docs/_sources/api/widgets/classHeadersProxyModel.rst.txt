@@ -1,0 +1,4 @@
+HeadersProxyModel
+=================
+
+.. doxygenclass:: HeadersProxyModel
