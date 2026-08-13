@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DisassemblyHelper::BracketResult &#8212; Cutter 2.5.0 documentation</title>
+    <title>PjHandle &#8212; Cutter 2.5.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
@@ -16,8 +16,8 @@
     <script src="../../_static/cutter.js?v=b9d5d2df"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="DisassemblyHelper::TargetAction" href="structDisassemblyHelper_1_1TargetAction.html" />
-    <link rel="prev" title="Cutter::CutterLayout" href="structCutter_1_1CutterLayout.html" />
+    <link rel="next" title="PointSetMinTree" href="classPointSetMinTree.html" />
+    <link rel="prev" title="MinMaxAccumulateTree" href="classMinMaxAccumulateTree.html" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -33,15 +33,15 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="structDisassemblyHelper_1_1TargetAction.html" title="DisassemblyHelper::TargetAction"
+          <a href="classPointSetMinTree.html" title="PointSetMinTree"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="structCutter_1_1CutterLayout.html" title="Cutter::CutterLayout"
+          <a href="classMinMaxAccumulateTree.html" title="MinMaxAccumulateTree"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Cutter 2.5.0 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../commonlist.html" accesskey="U">Common</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">DisassemblyHelper::BracketResult</a></li> 
+        <li class="nav-item nav-item-this"><a href="">PjHandle</a></li> 
       </ul>
     </div>
 
@@ -51,33 +51,79 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="disassemblyhelper-bracketresult">
-<h1>DisassemblyHelper::BracketResult<a class="headerlink" href="#disassemblyhelper-bracketresult" title="Link to this heading">¶</a></h1>
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13BracketResultE">
-<span id="_CPPv3N17DisassemblyHelper13BracketResultE"></span><span id="_CPPv2N17DisassemblyHelper13BracketResultE"></span><span id="DisassemblyHelper::BracketResult"></span><span class="target" id="structDisassemblyHelper_1_1BracketResult"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BracketResult</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13BracketResultE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Result of bracket detection. </p>
+  <section id="pjhandle">
+<h1>PjHandle<a class="headerlink" href="#pjhandle" title="Link to this heading">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv48PjHandle">
+<span id="_CPPv38PjHandle"></span><span id="_CPPv28PjHandle"></span><span id="PjHandle"></span><span class="target" id="classPjHandle"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PjHandle</span></span></span><a class="headerlink" href="#_CPPv48PjHandle" title="Link to this definition">¶</a><br /></dt>
+<dd><p>RAII handle for a rizin PJ (JSON builder). </p>
+<p>Owns a pj_new() alloc, the destructor calls pj_free() on early return paths before the PJ is drained. <a class="reference internal" href="#classPjHandle_1ab95b5f5fb91833d53fbfb745d3e64348"><span class="std std-ref">drain()</span></a> releases ownership (pj_drain frees the PJ and returns its buffer), so the destructor is a no-op after drain.</p>
+<p>move used, as copying would alias the PJ and do double free.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
+    PjHandle pj;
+    if (!pj) {
+        return;
+    }
+    pj_o(pj.get());
+    pj_ks(pj.get(), &quot;name&quot;, &quot;value&quot;);
+    pj_end(pj.get());
+    char *json = pj.drain();
+    // caller frees json
+}
+</pre></div>
+</div>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13BracketResult5foundE">
-<span id="_CPPv3N17DisassemblyHelper13BracketResult5foundE"></span><span id="_CPPv2N17DisassemblyHelper13BracketResult5foundE"></span><span id="DisassemblyHelper::BracketResult::found__b"></span><span class="target" id="structDisassemblyHelper_1_1BracketResult_1a16df2242721e2092efb53ed55077316d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">found</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13BracketResult5foundE" title="Link to this definition">¶</a><br /></dt>
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandle8PjHandleEv">
+<span id="_CPPv3N8PjHandle8PjHandleEv"></span><span id="_CPPv2N8PjHandle8PjHandleEv"></span><span id="PjHandle::PjHandle"></span><span class="target" id="classPjHandle_1abb307757c95f9ffa01b9e7678686d473"></span><span class="sig-name descname"><span class="n"><span class="pre">PjHandle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8PjHandle8PjHandleEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13BracketResult5startE">
-<span id="_CPPv3N17DisassemblyHelper13BracketResult5startE"></span><span id="_CPPv2N17DisassemblyHelper13BracketResult5startE"></span><span id="DisassemblyHelper::BracketResult::start__i"></span><span class="target" id="structDisassemblyHelper_1_1BracketResult_1a7405a8a575cf124acf695173f1391163"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13BracketResult5startE" title="Link to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandleD0Ev">
+<span id="_CPPv3N8PjHandleD0Ev"></span><span id="_CPPv2N8PjHandleD0Ev"></span><span id="PjHandle::~PjHandle"></span><span class="target" id="classPjHandle_1a65544e6f0bd3368b9327ecec9e5c33b8"></span><span class="sig-name descname"><span class="n"><span class="pre">~PjHandle</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8PjHandleD0Ev" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13BracketResult6lengthE">
-<span id="_CPPv3N17DisassemblyHelper13BracketResult6lengthE"></span><span id="_CPPv2N17DisassemblyHelper13BracketResult6lengthE"></span><span id="DisassemblyHelper::BracketResult::length__i"></span><span class="target" id="structDisassemblyHelper_1_1BracketResult_1a2ef692e4f8faf9045fcc08104690c32a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13BracketResult6lengthE" title="Link to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandle8PjHandleERK8PjHandle">
+<span id="_CPPv3N8PjHandle8PjHandleERK8PjHandle"></span><span id="_CPPv2N8PjHandle8PjHandleERK8PjHandle"></span><span id="PjHandle::PjHandle__PjHandleCR"></span><span class="target" id="classPjHandle_1a80b6a1d39260a02b63ea5142d6629b35"></span><span class="sig-name descname"><span class="n"><span class="pre">PjHandle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8PjHandle8PjHandleERK8PjHandle" title="PjHandle::PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N8PjHandle8PjHandleERK8PjHandle" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N17DisassemblyHelper13BracketResult7contentE">
-<span id="_CPPv3N17DisassemblyHelper13BracketResult7contentE"></span><span id="_CPPv2N17DisassemblyHelper13BracketResult7contentE"></span><span id="DisassemblyHelper::BracketResult::content__QString"></span><span class="target" id="structDisassemblyHelper_1_1BracketResult_1ad8be0b02b73b82556159475e1b93c568"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">content</span></span></span><a class="headerlink" href="#_CPPv4N17DisassemblyHelper13BracketResult7contentE" title="Link to this definition">¶</a><br /></dt>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandleaSERK8PjHandle">
+<span id="_CPPv3N8PjHandleaSERK8PjHandle"></span><span id="_CPPv2N8PjHandleaSERK8PjHandle"></span><span id="PjHandle::assign-operator__PjHandleCR"></span><span class="target" id="classPjHandle_1ac82a4398f868c956b3b39f97e1c35d38"></span><a class="reference internal" href="#_CPPv48PjHandle" title="PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv48PjHandle" title="PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N8PjHandleaSERK8PjHandle" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandle8PjHandleERR8PjHandle">
+<span id="_CPPv3N8PjHandle8PjHandleERR8PjHandle"></span><span id="_CPPv2N8PjHandle8PjHandleERR8PjHandle"></span><span id="PjHandle::PjHandle__PjHandleRR"></span><span class="target" id="classPjHandle_1ac1bc3a4c045a294dfdead6d95c95261e"></span><span class="sig-name descname"><span class="n"><span class="pre">PjHandle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8PjHandle8PjHandleERR8PjHandle" title="PjHandle::PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8PjHandle8PjHandleERR8PjHandle" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandleaSERR8PjHandle">
+<span id="_CPPv3N8PjHandleaSERR8PjHandle"></span><span id="_CPPv2N8PjHandleaSERR8PjHandle"></span><span id="PjHandle::assign-operator__PjHandleRR"></span><span class="target" id="classPjHandle_1a7c181b6069b190cdf0dd1d4f844ef57c"></span><a class="reference internal" href="#_CPPv48PjHandle" title="PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48PjHandle" title="PjHandle"><span class="n"><span class="pre">PjHandle</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8PjHandleaSERR8PjHandle" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8PjHandlecvbEv">
+<span id="_CPPv3NK8PjHandlecvbEv"></span><span id="_CPPv2NK8PjHandlecvbEv"></span><span id="PjHandle::castto-b-operatorC"></span><span class="target" id="classPjHandle_1a94e83ac7b30b43ef24795ab8f153bbc7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8PjHandlecvbEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8PjHandle3getEv">
+<span id="_CPPv3NK8PjHandle3getEv"></span><span id="_CPPv2NK8PjHandle3getEv"></span><span id="PjHandle::getC"></span><span class="target" id="classPjHandle_1ac1ac64330799ffc68ae411dc62b59c38"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">PJ</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8PjHandle3getEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8PjHandle5drainEv">
+<span id="_CPPv3N8PjHandle5drainEv"></span><span id="_CPPv2N8PjHandle5drainEv"></span><span id="PjHandle::drain"></span><span class="target" id="classPjHandle_1ab95b5f5fb91833d53fbfb745d3e64348"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">drain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8PjHandle5drainEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Drain the PJ into its JSON buffer. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>buffer of the drained PJ, or nullptr if already drained. The caller takes ownership and must free() the returned buffer. </p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 </dd></dl>
@@ -130,7 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="classLinkedListPool_1_1ListIterator.html">LinkedListPool::ListIterator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMdHighlighter.html">MdHighlighter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classMinMaxAccumulateTree.html">MinMaxAccumulateTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="classPjHandle.html">PjHandle</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PjHandle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetMinTree.html">PointSetMinTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classPointSetSegmentTree.html">PointSetSegmentTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classRangeAssignMaxTree.html">RangeAssignMaxTree</a></li>
@@ -152,7 +198,7 @@
 <li class="toctree-l3"><a class="reference internal" href="structConfiguration_1_1LangInfo.html">Configuration::LangInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutterInterfaceTheme.html">CutterInterfaceTheme</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structCutter_1_1CutterLayout.html">Cutter::CutterLayout</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">DisassemblyHelper::BracketResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1BracketResult.html">DisassemblyHelper::BracketResult</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetAction.html">DisassemblyHelper::TargetAction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structDisassemblyHelper_1_1TargetContext.html">DisassemblyHelper::TargetContext</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structFallbackSyntaxHighlighter_1_1HighlightingRule.html">FallbackSyntaxHighlighter::HighlightingRule</a></li>
