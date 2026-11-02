@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>RefreshDeferrer &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
@@ -62,8 +62,8 @@
 this-&gt;refreshDeferrer = new RefreshDeferrer(new ReplacingRefreshDeferrerAccumulator(false),
 this); this-&gt;refreshDeferrer-&gt;registerFor(this); connect(this-&gt;refreshDeferrer,
 &amp;RefreshDeferrer::refreshNow, this, [this](MyParam *param) {
-     // We attempted a refresh some time before, but it got deferred.
-     // Now the RefreshDeferrer tells us to do the refresh and gives us the accumulated param.
+// We attempted a refresh some time before, but it got deferred.
+// Now the RefreshDeferrer tells us to do the refresh and gives us the accumulated param.
      this-&gt;doRefresh(*param);
 }
 
@@ -71,13 +71,13 @@ this); this-&gt;refreshDeferrer-&gt;registerFor(this); connect(this-&gt;refreshD
 
 void MyWidget::doRefresh(MyParam param)
 {
-     if (!this-&gt;refreshDeferrer-&gt;attemptRefresh(new MyParam(param))) {
-         // We shouldn&#39;t refresh right now.
-         // The RefreshDeferrer takes over the param we passed it in attemptRefresh()
-         // and gives it to the ReplacingRefreshDeferrerAccumulator.
-         return;
+if (!this-&gt;refreshDeferrer-&gt;attemptRefresh(new MyParam(param))) {
+// We shouldn&#39;t refresh right now.
+// The RefreshDeferrer takes over the param we passed it in attemptRefresh()
+// and gives it to the ReplacingRefreshDeferrerAccumulator.
+return;
      }
-     // do the actual refresh depending on param
+// do the actual refresh depending on param
 }
 </pre></div>
 </div>
@@ -236,7 +236,7 @@ void MyWidget::doRefresh(MyParam param)
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>LinkedListPool &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
@@ -148,28 +148,6 @@
 
 </div>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N14LinkedListPool4ListE">
-<span id="_CPPv3N14LinkedListPool4ListE"></span><span id="_CPPv2N14LinkedListPool4ListE"></span><span id="LinkedListPool::List"></span><span class="target" id="classLinkedListPool_1_1List"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">List</span></span></span><a class="headerlink" href="#_CPPv4N14LinkedListPool4ListE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Single list within <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>. </p>
-<p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> only refers to chain of elements. Copying it doesn’t copy any element. Item data is owned by <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>.</p>
-<p>Use <a class="reference internal" href="#classLinkedListPool_1a19f2b730f498dc04cb6ce407ee709012"><span class="std std-ref">LinkedListPool::makeList</span></a> to create non-empty list. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N14LinkedListPool4List4ListEv">
-<span id="_CPPv3N14LinkedListPool4List4ListEv"></span><span id="_CPPv2N14LinkedListPool4List4ListEv"></span><span id="LinkedListPool::List::List"></span><span class="target" id="classLinkedListPool_1_1List_1a9f7266e6fb26433e1986ec778c17c2d6"></span><span class="sig-name descname"><span class="n"><span class="pre">List</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N14LinkedListPool4List4ListEv" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Create an empty list. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK14LinkedListPool4List7isEmptyEv">
-<span id="_CPPv3NK14LinkedListPool4List7isEmptyEv"></span><span id="_CPPv2NK14LinkedListPool4List7isEmptyEv"></span><span id="LinkedListPool::List::isEmptyC"></span><span class="target" id="classLinkedListPool_1_1List_1a690b383b01beb0852ab9076beb252a7a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14LinkedListPool4List7isEmptyEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N14LinkedListPool12ListIteratorE">
 <span id="_CPPv3N14LinkedListPool12ListIteratorE"></span><span id="_CPPv2N14LinkedListPool12ListIteratorE"></span><span id="LinkedListPool::ListIterator"></span><span class="target" id="classLinkedListPool_1_1ListIterator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ListIterator</span></span></span><a class="headerlink" href="#_CPPv4N14LinkedListPool12ListIteratorE" title="Link to this definition">¶</a><br /></dt>
 <dd><p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> iterator. </p>
@@ -239,6 +217,28 @@
 <span id="_CPPv3NK14LinkedListPool12ListIteratorcvbEv"></span><span id="_CPPv2NK14LinkedListPool12ListIteratorcvbEv"></span><span id="LinkedListPool::ListIterator::castto-b-operatorC"></span><span class="target" id="classLinkedListPool_1_1ListIterator_1a893c82b6b18ab81d5bbd38fc81f00b47"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14LinkedListPool12ListIteratorcvbEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Test if iterator points to valid value. </p>
 </dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N14LinkedListPool4ListE">
+<span id="_CPPv3N14LinkedListPool4ListE"></span><span id="_CPPv2N14LinkedListPool4ListE"></span><span id="LinkedListPool::List"></span><span class="target" id="classLinkedListPool_1_1List"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">List</span></span></span><a class="headerlink" href="#_CPPv4N14LinkedListPool4ListE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Single list within <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>. </p>
+<p><a class="reference internal" href="classLinkedListPool_1_1List.html#classLinkedListPool_1_1List"><span class="std std-ref">List</span></a> only refers to chain of elements. Copying it doesn’t copy any element. Item data is owned by <a class="reference internal" href="#classLinkedListPool"><span class="std std-ref">LinkedListPool</span></a>.</p>
+<p>Use <a class="reference internal" href="#classLinkedListPool_1a19f2b730f498dc04cb6ce407ee709012"><span class="std std-ref">LinkedListPool::makeList</span></a> to create non-empty list. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14LinkedListPool4List4ListEv">
+<span id="_CPPv3N14LinkedListPool4List4ListEv"></span><span id="_CPPv2N14LinkedListPool4List4ListEv"></span><span id="LinkedListPool::List::List"></span><span class="target" id="classLinkedListPool_1_1List_1a9f7266e6fb26433e1986ec778c17c2d6"></span><span class="sig-name descname"><span class="n"><span class="pre">List</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N14LinkedListPool4List4ListEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Create an empty list. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14LinkedListPool4List7isEmptyEv">
+<span id="_CPPv3NK14LinkedListPool4List7isEmptyEv"></span><span id="_CPPv2NK14LinkedListPool4List7isEmptyEv"></span><span id="LinkedListPool::List::isEmptyC"></span><span class="target" id="classLinkedListPool_1_1List_1a690b383b01beb0852ab9076beb252a7a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14LinkedListPool4List7isEmptyEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
@@ -361,7 +361,7 @@
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 

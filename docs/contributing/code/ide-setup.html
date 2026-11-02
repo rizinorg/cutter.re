@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Development environment setup &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
@@ -151,10 +151,10 @@ Shortcuts can be viewed in the <kbd class="kbd docutils literal notranslate">Ctr
 executable by creating a <code class="docutils literal notranslate"><span class="pre">.vscode/launch.json</span></code> configuration. Read the <a class="reference external" href="https://code.visualstudio.com/docs/cpp/launch-json-reference">documentation</a>  for more information. Instead of creating <code class="file docutils literal notranslate"><span class="pre">launch.json</span></code> manually it can be created from template: <kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd>/<span class="menuselection">Debug: Select and Start Debugging ‣ Add configuration.. ‣ C,C++: (gdb) Launch</span>.</p>
 <p>To setup gdb pretty printers for Qt types on Linux, download the scripts from <a class="reference external" href="https://github.com/KDE/kdevelop/tree/master/plugins/gdb/printers">Kdevelop</a>. In the <code class="file docutils literal notranslate"><span class="pre">~/.gdbinit</span></code> file add the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;/path/to/folder/with/pretty_printer_scripts&#39;</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">qt</span> <span class="kn">import</span> <span class="n">register_qt_printers</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qt</span><span class="w"> </span><span class="kn">import</span> <span class="n">register_qt_printers</span>
 <span class="n">register_qt_printers</span> <span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 
 <span class="n">end</span>
@@ -302,7 +302,7 @@ It doesn’t do much for CMake based projects. The biggest benefit is that it au
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 

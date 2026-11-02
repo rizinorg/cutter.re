@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Core &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css?v=f99abf92" />
@@ -391,6 +391,7 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore14getSectionListEv"><code class="docutils literal notranslate"><span class="pre">getSectionList()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore4lockEv"><code class="docutils literal notranslate"><span class="pre">lock()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore4coreEv"><code class="docutils literal notranslate"><span class="pre">core()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString"><code class="docutils literal notranslate"><span class="pre">ansiEscapeToHtml()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16getBBHighlighterEv"><code class="docutils literal notranslate"><span class="pre">getBBHighlighter()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16getBIHighlighterEv"><code class="docutils literal notranslate"><span class="pre">getBIHighlighter()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore10setIOCacheEb"><code class="docutils literal notranslate"><span class="pre">setIOCache()</span></code></a></li>
@@ -451,7 +452,6 @@
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore24sanitizeStringForCommandE7QString"><code class="docutils literal notranslate"><span class="pre">sanitizeStringForCommand()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16hexStringToBytesERK7QString"><code class="docutils literal notranslate"><span class="pre">hexStringToBytes()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16bytesToHexStringERK10QByteArray"><code class="docutils literal notranslate"><span class="pre">bytesToHexString()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString"><code class="docutils literal notranslate"><span class="pre">ansiEscapeToHtml()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore10SeekReturnE"><code class="docutils literal notranslate"><span class="pre">CutterCore::SeekReturn</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore10SeekReturn10SeekReturnE3RVA"><code class="docutils literal notranslate"><span class="pre">SeekReturn()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="core/classCutterCore.html#_CPPv4N10CutterCore10SeekReturnD0Ev"><code class="docutils literal notranslate"><span class="pre">~SeekReturn()</span></code></a></li>
@@ -565,12 +565,17 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="core/classCutterRzIter.html">CutterRzIter</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4I0E12CutterRzIter"><code class="docutils literal notranslate"><span class="pre">CutterRzIter</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIter12CutterRzIterEP10RzIterator"><code class="docutils literal notranslate"><span class="pre">CutterRzIter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIter12CutterRzIterE10RzIterator"><code class="docutils literal notranslate"><span class="pre">CutterRzIter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIterD0Ev"><code class="docutils literal notranslate"><span class="pre">~CutterRzIter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIter12CutterRzIterERR12CutterRzIter"><code class="docutils literal notranslate"><span class="pre">CutterRzIter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIteraSERR12CutterRzIter"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIter12CutterRzIterERK12CutterRzIter"><code class="docutils literal notranslate"><span class="pre">CutterRzIter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIteraSERK12CutterRzIter"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIterppEv"><code class="docutils literal notranslate"><span class="pre">operator++()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzItercvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzItermlEv"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIter3getEv"><code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4N12CutterRzIterptEv"><code class="docutils literal notranslate"><span class="pre">operator-&gt;()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4NK12CutterRzItercvbEv"><code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">bool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4NK12CutterRzItermlEv"><code class="docutils literal notranslate"><span class="pre">operator*()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4NK12CutterRzIter3getEv"><code class="docutils literal notranslate"><span class="pre">get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="core/classCutterRzIter.html#_CPPv4NK12CutterRzIterptEv"><code class="docutils literal notranslate"><span class="pre">operator-&gt;()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1397,7 +1402,7 @@
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>CutterCore &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
@@ -1332,7 +1332,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore11getHeapBinsE4ut64">
 <span id="_CPPv3N10CutterCore11getHeapBinsE4ut64"></span><span id="_CPPv2N10CutterCore11getHeapBinsE4ut64"></span><span id="CutterCore::getHeapBins__ut64"></span><span class="target" id="classCutterCore_1a70517eadbb57e81be46ec5b77970d848"></span><span class="n"><span class="pre">QVector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">RzHeapBin</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeapBins</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ut64</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arena_addr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore11getHeapBinsE4ut64" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Get heap bins of an arena with given base address (including large, small, fast, unsorted, tcache) </p>
+<dd><p>Get heap bins of an arena with given base address (including large, small, fast, unsorted, tcache). </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>arena_addr</strong> – Base address of the arena </p>
@@ -2035,7 +2035,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore6getRegEv">
 <span id="_CPPv3N10CutterCore6getRegEv"></span><span id="_CPPv2N10CutterCore6getRegEv"></span><span id="CutterCore::getReg"></span><span class="target" id="classCutterCore_1a7d3bc3f6b02f2e187335a4d7d3927260"></span><span class="n"><span class="pre">RzReg</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getReg</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore6getRegEv" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Get the right RzReg object based on the cutter state (debugging vs emulating) </p>
+<dd><p>Get the right RzReg object based on the cutter state (debugging vs emulating). </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -2181,6 +2181,11 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore4coreEv">
 <span id="_CPPv3N10CutterCore4coreEv"></span><span id="_CPPv2N10CutterCore4coreEv"></span><span id="CutterCore::core"></span><span class="target" id="classCutterCore_1a13c3fceccbd9a97ef59e2767abc491c2"></span><a class="reference internal" href="classRzCoreLocked.html#_CPPv412RzCoreLocked" title="RzCoreLocked"><span class="n"><span class="pre">RzCoreLocked</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">core</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore4coreEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString">
+<span id="_CPPv3N10CutterCore16ansiEscapeToHtmlERK7QString"></span><span id="_CPPv2N10CutterCore16ansiEscapeToHtmlERK7QString"></span><span id="CutterCore::ansiEscapeToHtml__QStringCR"></span><span class="target" id="classCutterCore_1a4dcba1b91fb53d5287c4d4fe652483f3"></span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ansiEscapeToHtml</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -2566,11 +2571,6 @@
 <span id="_CPPv3N10CutterCore16bytesToHexStringERK10QByteArray"></span><span id="_CPPv2N10CutterCore16bytesToHexStringERK10QByteArray"></span><span id="CutterCore::bytesToHexString__QByteArrayCR"></span><span class="target" id="classCutterCore_1a46158a8b74ccb32e0aef17069ddbf6cc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bytesToHexString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QByteArray</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16bytesToHexStringERK10QByteArray" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString">
-<span id="_CPPv3N10CutterCore16ansiEscapeToHtmlERK7QString"></span><span id="_CPPv2N10CutterCore16ansiEscapeToHtmlERK7QString"></span><span id="CutterCore::ansiEscapeToHtml__QStringCR"></span><span class="target" id="classCutterCore_1a4dcba1b91fb53d5287c4d4fe652483f3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ansiEscapeToHtml</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">QString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10CutterCore16ansiEscapeToHtmlERK7QString" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
 </div>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N10CutterCore10SeekReturnE">
@@ -2713,7 +2713,7 @@
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 

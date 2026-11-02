@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PjHandle &#8212; Cutter 2.5.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8775fe07" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=677a9ea0" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/cutter.css?v=3dc06d89" />
     <link rel="stylesheet" type="text/css" href="../../_static/admonitions.css?v=f99abf92" />
@@ -61,14 +61,14 @@
 <p>move used, as copying would alias the PJ and do double free.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
     PjHandle pj;
-    if (!pj) {
-        return;
+if (!pj) {
+return;
     }
     pj_o(pj.get());
     pj_ks(pj.get(), &quot;name&quot;, &quot;value&quot;);
     pj_end(pj.get());
-    char *json = pj.drain();
-    // caller frees json
+char *json = pj.drain();
+// caller frees json
 }
 </pre></div>
 </div>
@@ -244,7 +244,7 @@
     
     <div class="footer" role="contentinfo">
     &#169; Copyright 2026, The Cutter Developers.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
     </div>
     
 
