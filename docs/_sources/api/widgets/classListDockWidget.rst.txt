@@ -1,0 +1,4 @@
+ListDockWidget
+==============
+
+.. doxygenclass:: ListDockWidget

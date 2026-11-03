@@ -1,0 +1,4 @@
+TypesModel
+==========
+
+.. doxygenclass:: TypesModel

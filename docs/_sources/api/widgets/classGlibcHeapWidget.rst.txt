@@ -1,0 +1,4 @@
+GlibcHeapWidget
+===============
+
+.. doxygenclass:: GlibcHeapWidget

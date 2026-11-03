@@ -1,0 +1,4 @@
+ColorPickerHelpers::ColorPickArea
+=================================
+
+.. doxygenclass:: ColorPickerHelpers::ColorPickArea

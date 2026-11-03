@@ -1,0 +1,7 @@
+Dialogs
+=======
+
+.. toctree::
+   :glob:
+
+   dialogs/*

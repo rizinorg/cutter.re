@@ -1,0 +1,4 @@
+HeapBinsGraphView::GraphHeapChunk
+=================================
+
+.. doxygenstruct:: HeapBinsGraphView::GraphHeapChunk

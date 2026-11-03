@@ -1,0 +1,4 @@
+AddressableFilterProxyModel
+===========================
+
+.. doxygenclass:: AddressableFilterProxyModel

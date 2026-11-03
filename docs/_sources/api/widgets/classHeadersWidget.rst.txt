@@ -1,0 +1,4 @@
+HeadersWidget
+=============
+
+.. doxygenclass:: HeadersWidget

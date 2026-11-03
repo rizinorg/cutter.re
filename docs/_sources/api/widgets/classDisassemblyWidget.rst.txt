@@ -1,0 +1,4 @@
+DisassemblyWidget
+=================
+
+.. doxygenclass:: DisassemblyWidget

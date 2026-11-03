@@ -1,0 +1,4 @@
+AddrRefs
+========
+
+.. doxygenstruct:: AddrRefs

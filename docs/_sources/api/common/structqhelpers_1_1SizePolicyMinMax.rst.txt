@@ -1,0 +1,4 @@
+qhelpers::SizePolicyMinMax
+==========================
+
+.. doxygenstruct:: qhelpers::SizePolicyMinMax

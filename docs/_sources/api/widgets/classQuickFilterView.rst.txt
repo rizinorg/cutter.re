@@ -1,0 +1,4 @@
+QuickFilterView
+===============
+
+.. doxygenclass:: QuickFilterView

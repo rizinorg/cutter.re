@@ -1,0 +1,4 @@
+DisassemblyScrollArea
+=====================
+
+.. doxygenclass:: DisassemblyScrollArea

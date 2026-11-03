@@ -1,0 +1,4 @@
+BasefindCoreStatusDescription
+=============================
+
+.. doxygenstruct:: BasefindCoreStatusDescription

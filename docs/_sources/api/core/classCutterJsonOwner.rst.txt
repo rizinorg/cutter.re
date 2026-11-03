@@ -1,0 +1,4 @@
+CutterJsonOwner
+===============
+
+.. doxygenclass:: CutterJsonOwner

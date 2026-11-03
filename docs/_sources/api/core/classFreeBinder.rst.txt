@@ -1,0 +1,4 @@
+FreeBinder
+==========
+
+.. doxygenclass:: FreeBinder

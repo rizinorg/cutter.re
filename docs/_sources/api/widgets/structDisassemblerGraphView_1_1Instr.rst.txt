@@ -1,0 +1,4 @@
+DisassemblerGraphView::Instr
+============================
+
+.. doxygenstruct:: DisassemblerGraphView::Instr

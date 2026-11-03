@@ -1,0 +1,7 @@
+Menus
+=====
+
+.. toctree::
+   :glob:
+
+   menus/*

@@ -1,0 +1,4 @@
+GlobalsWidget
+=============
+
+.. doxygenclass:: GlobalsWidget

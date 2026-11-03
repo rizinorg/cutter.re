@@ -1,0 +1,4 @@
+SearchKindInfo
+==============
+
+.. doxygenstruct:: SearchKindInfo

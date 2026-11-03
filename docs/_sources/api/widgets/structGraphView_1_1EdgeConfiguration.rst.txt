@@ -1,0 +1,4 @@
+GraphView::EdgeConfiguration
+============================
+
+.. doxygenstruct:: GraphView::EdgeConfiguration

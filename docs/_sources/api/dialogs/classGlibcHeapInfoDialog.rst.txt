@@ -1,0 +1,4 @@
+GlibcHeapInfoDialog
+===================
+
+.. doxygenclass:: GlibcHeapInfoDialog

@@ -1,0 +1,4 @@
+TypesVariablesDialog
+====================
+
+.. doxygenclass:: TypesVariablesDialog

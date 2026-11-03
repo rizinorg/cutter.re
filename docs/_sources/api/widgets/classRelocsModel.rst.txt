@@ -1,0 +1,4 @@
+RelocsModel
+===========
+
+.. doxygenclass:: RelocsModel

@@ -1,0 +1,4 @@
+HeadersModel
+============
+
+.. doxygenclass:: HeadersModel

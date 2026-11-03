@@ -1,0 +1,564 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='The decompiler widget is now responsive than ever! Read about the improvements made possible by Nirmal, a GSoC student'>
+    <meta name="keywords" content="">
+    <!-- Facebook Open Graph -->	
+    <meta content="Cutter" property="og:site_name">
+    <meta property="og:locale" content="en_US" />
+    <meta content="Improving Decompiler Widget - GSoC Project" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="The decompiler widget is now responsive than ever! Read about the improvements made possible by Nirmal, a GSoC student" property="og:description">
+    <meta content="https://cutter.re//improving-decompiler-widget-gsoc" property="og:url">	
+    <meta content="/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png" property="og:image">
+    
+    <meta content="Cutter" property="article:section">
+    <meta content="2020-08-31T00:00:00+00:00" property="article:published_time">	
+    <!-- Twitter cards -->
+    <meta name="twitter:site"    content="@cutter_re">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title"   content="Improving Decompiler Widget - GSoC Project">	
+    <meta name="twitter:description" content="The decompiler widget is now responsive than ever! Read about the improvements made possible by Nirmal, a GSoC student">
+    <meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="https://cutter.re//assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png">
+    <!-- Site Title -->
+    <title> Improving Decompiler Widget - GSoC Project </title>
+    <!--  Add Favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon"/>
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link type="application/atom+xml" rel="alternate" href="https://cutter.re//index.xml" title="Cutter" />
+</head>
+   <body>
+      <main class="main-area">
+
+       
+
+<header class=" bg-color2">
+<div class="container">
+    <div class="header-nav">
+        <div class="row">
+            <div class="col-lg-2">
+             <div class="header-logo">
+    <a href="https://cutter.re/"><img src="/assets/images/cutter-small.svg " alt="Cutter"></a> 
+</div>
+            </div>
+            <div class="col-lg-10">
+              <nav class="cutter-navbar">
+    <ul class="slimmenu main-menu">
+        <li><a href="/blog" class="js-scroll-trigger"><b>Blog</b></a></li>
+        <li>
+            <a href="#">Links</a>
+            <ul>
+                <li><a href="/getting-started"><b>Getting Started</b></a></li>
+                <li><a href="https://github.com/rizinorg/cutter-plugins" target="_blank">Plugins</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="/docs/building.html">Build from source</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </li>
+        <li><a href="/#features" class="js-scroll-trigger">Features</a></li>
+        <li><a href="/docs/" class="js-scroll-trigger">Documentation</a></li>
+        <li><a href="/#community" class="js-scroll-trigger">Community</a></li>
+        <li><a href="https://rizin.re" class="js-scroll-trigger">Rizin</a></li>
+    </ul>
+</nav>
+
+            </div>
+        </div>
+    </div>
+     
+    
+    <div class="header-page-title">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="page-title text-left white-all">
+                <h1 class="big-font1 m-b-30">Improving Decompiler Widget - GSoC Project</h1>
+                
+                <ul class="page-post-date list-inline">
+                    <li class="list-inline-item"><img src="/assets/images/page-avatar-icon.png" alt="icon"/><a href="/authors/nirmal_manoj">Nirmal Manoj</a></li>
+                    <li class="list-inline-item"><img src="/assets/images/page-clock-icon.png" alt="icon"/>31 August 2020</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</header>
+
+       
+        <div class="blog-area bg-color1 p-t-130 p-b-100">
+<div class="container">
+    <div class="blog-wrapper">   
+        <div class="row">
+            <div class="col-md-10 m-auto">
+            
+            <div class="blog-media m-b-30">
+                <img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png" alt="Improving Decompiler Widget - GSoC Project" />
+            </div>
+            
+            <div class="entry-content blog-spacing">
+             <p>My name is Nirmal Manoj. I am a second-year CS undergraduate student at IIIT Hyderabad, India. This summer, I participated in a <a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> project for <a href="https://github.com/radareorg/">radareorg</a>. The main goal of my project is to improve the decompiler interface in Cutter.</p>
+
+<p>As a part of my project, I worked on multiple repositories, including <a href="https://github.com/radareorg/cutter/">Cutter</a>, <a href="https://github.com/radareorg/r2ghidra-dec/">r2ghidra-dec</a>, and <a href="https://github.com/radareorg/radare2/">radare2</a>. I have also sent a couple of patches to the <a href="https://github.com/avast/retdec-r2plugin">retdec-r2plugin</a>. The following sections sum up the important work that I have done and its impacts. Each section will describe specific features or important API that I have worked on. It will also have links to the code and discussions related to that topic.</p>
+
+<h2 id="creating-a-standard-decompiler-interface">Creating a standard decompiler interface</h2>
+
+<p>Cutter’s decompiler didn’t have a good enough decompiler interface for supporting context-sensitive actions. A basic structure named <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> and some useful API functions were already present in r2ghidra-dec for storing the information we get from the Ghidra decompiler.</p>
+
+<p>After discussions in the community, we decided to use <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> as the standard decompiler interface across all the decompilers used in Cutter and Radare2. The related work involved shifting <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> API from r2ghidra-dec to radare2. I also implemented unit tests for API functions related to <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code>.</p>
+
+<p>Currently, Cutter supports three decompilers: <a href="https://github.com/radareorg/r2ghidra-dec">R2Ghidra</a>(plugin for Ghidra), <a href="https://github.com/radareorg/r2dec-js">R2Dec</a>, and <a href="https://github.com/avast/retdec-r2plugin">RetDec-Radare2</a>(plugin for RetDec). The output from all these decompilers was being parsed into a custom structure named <code class="language-plaintext highlighter-rouge">AnnotatedCode</code> to use in Cutter.  Even then, internally, r2ghidra-dec and retdec-radare2 used <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code>. After I shifted <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> to radare2, I sent patches to both r2ghidra-dec and retdec-radare2 to use <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> directly from radare2.</p>
+
+<h3 id="related-prs">Related PRs:</h3>
+
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/16939">PR #16939</a>: Shifting RAnnotatedCode to radare2</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/107">PR #107</a>: Patching r2ghidra-dec after migrating RAnntoatedCode to use radare2</li>
+  <li>retdec-r2plugin <a href="https://github.com/avast/retdec-r2plugin/pull/16">PR #16</a>: Patching retdec-r2plugin after migrating RAnnotatedCode to radare2</li>
+</ol>
+
+<h2 id="allow-cutter-to-use-rannotatedcode-for-the-decompiler">Allow Cutter to use RAnnotatedCode for the decompiler</h2>
+
+<p>This involved refactoring the decompiler widget to use <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> instead of the custom <code class="language-plaintext highlighter-rouge">AnnotatedCode</code> it has been using. Using <code class="language-plaintext highlighter-rouge">RAnnotatedCode</code> will enable Cutter to have more data about the decompiled code that is essential for implementing a dedicated context menu. I also refactored the decompiler plugins (r2dec, r2ghidra-dec, r2retdec) to emit RAnnotatedCode directly to Cutter.</p>
+
+<h3 id="related-prs-1">Related PRs:</h3>
+
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2227">PR #2227</a>: Refactored Decompiler Widget and R2Dec Plugin to use RAnnotatedCode. 
+ The description of this PR contains more precise details on the significant changes.</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/112">PR #112</a>: Emit RAnnotatedCode to Cutter</li>
+  <li>retdec-r2plugin <a href="https://github.com/avast/retdec-r2plugin/pull/17">PR #16</a>: Emit RAnnotatedCode from decompileAt()</li>
+</ol>
+
+<h2 id="implementing-a-skeleton-for-the-decompiler-context-menu">Implementing a skeleton for the decompiler context menu</h2>
+
+<p>This involves me making a context-menu with a single action for the decompiler. I replaced the disassembly context menu completely in the decompiler widget. The only action implemented along with the context menu skeleton was an action to copy selected decompiled code.</p>
+
+<p>GIF that shows the decompiler context menu with just copy action
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/skeleton-copy.gif" alt="skeleton-copy" /></p>
+
+<h3 id="related-pr">Related PR:</h3>
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2256">PR #2256</a>: Dedicated decompiler context menu (skeleton) with an action to copy selected code</li>
+</ol>
+
+<h2 id="implementing-actions-for-debugging">Implementing actions for debugging</h2>
+<p>This involved me implementing actions for toggling breakpoint, accessing the menu for advanced breakpoint definition, and also for two other debugging related actions in the decompiler context menu. Multiple breakpoints could exist in a decompiled code line, as that’s often a more straightforward representation of multiple lines in assembly. The option to choose the breakpoint that a user wants to edit from the breakpoints list was also implemented.</p>
+
+<p>The following GIFs show key functionalities.</p>
+
+<p>Demonstrating toggling of breakpoints
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/toggle-breakpoint.gif" alt="toggle-breakpoint" /></p>
+
+<p>Demonstrating the ability to choose the breakpoint in a line for opening the edit breakpoint menu.
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/edit-advanced-breakpoint.gif" alt="edit-advanced-breakpoint" /></p>
+
+<h3 id="related-pr-1">Related PR</h3>
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2260">PR #2260</a>: Breakpoint Menu and Debug Menu in the Decompiler Context Menu</li>
+</ol>
+
+<h2 id="insertion-and-manipulation-of-comments-in-the-decompiled-code">Insertion and manipulation of comments in the decompiled code</h2>
+<p>This involves implementing offset annotation for comments in r2ghidra-dec and implementing actions to add, edit, and delete comments in the decompiler context menu.</p>
+
+<p>The following GIF demonstrates the actions.
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/comment-display.gif" alt="comment-display" /></p>
+
+<h3 id="related-prs-2">Related PRs</h3>
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2265">PR #2265</a>: Comment-related actions for the Decompiler Context Menu</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/121">PR #121</a>: Implemented offset annotation for comments</li>
+</ol>
+
+<h2 id="implementing-function-name-annotation-and-rename-function-action">Implementing function name annotation and rename function action</h2>
+<p>This involved introducing a new type of annotation for function names in radare2 and implementing an annotator to annotate function names in r2ghidra-dec. I have also implemented a rename function action along with these. Other actions are implemented using this annotation. They will be shown in later sections.</p>
+
+<p>GIF demonstrating rename function action:
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/rename-function-action.gif" alt="rename-function-action" /></p>
+
+<h3 id="related-prs-3">Related PRs</h3>
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17204">PR #17204</a>: Annotation for function name</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/123">PR #123</a>: Function name annotation annotator implemented</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2286">PR #2286</a>: Action to rename functions in the decompiler context menu</li>
+</ol>
+
+<h2 id="implementing-annotations-for-global-variables-constant-variables-and-related-actions">Implementing annotations for global variables, constant variables, and related actions</h2>
+<p>This involved consolidating all references (function names, global variables, and constant variables) under a single structure called a “reference”. Two new annotation types were also introduced to accommodate global variables and constant variables. Also, annotators were implemented for these new types of annotations in r2ghidra-dec.</p>
+
+<p>The decompiled code shown in the decompiler widget represents and refers to specific memory addresses in the binary. The ability to view these addresses in other widgets such as Hexdump or Disassembly can be very handy. For this, I created a “show-in” menu that allows the user to open the address related to the decompiled code under the cursor in other widgets. These other widgets include Hexdump, Graph, and Disassembly. One other related feature that can become useful is opening a reference in another widget. For instance, a function referenced under the cursor can be opened in a new decompiler widget or a graph widget. A targeted show-in menu for references was implemented for this. In this same PR, actions for adding, renaming, and deleting global variable names were implemented. See GIFs below to see the functionality implemented.</p>
+
+<p>Along with these features, actions for copying instruction address and also reference’s address were implemented. The normal copy action was enhanced to copy a highlighted word to the clipboard if there is no text currently selected by the user. In the event where there is no highlighted word or selection, the entire line of code under the cursor will be copied to the clipboard.</p>
+
+<p>Demonstrating show-in menu
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/show-in-disassembly.gif" alt="show-in-disassembly" /></p>
+
+<p>Demonstrating targeted show-in menu. Here, the function referenced under the cursor is opened in a new widget.
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/show-in-new-graph.gif" alt="show-in-new-graph" /></p>
+
+<p>Demonstrating adding, renaming, and deleting global variable names
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/manipulate-global-variable.gif" alt="manipulate-global-variable" /></p>
+
+<p>Demonstrating enhanced copy action
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/copy-actions.gif" alt="copy-actions" /></p>
+
+<h3 id="related-prs-4">Related PRs</h3>
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17281">PR #17281</a>: Annotations for Constant Variables and Global Variables for the decompiler</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/124">PR #124</a>: Annotation for constant and global variables</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2295">PR #2295</a>: Show-in menu for references and add/rename/delete name for global variables</li>
+</ol>
+
+<h2 id="x-refs-action-in-the-decompiler-and-x-refs-for-variables-in-other-widgets">X-Refs action in the decompiler and X-Refs for variables in other widgets</h2>
+<p>This involved making an action to show X-Refs to a reference (functions, global variables, constant variables with an address) in the decompiler. I have also implemented an action to show X-Refs for local variables and arguments in the disassembly context menu. The following GIFs demonstrate these actions:</p>
+
+<p>X-Refs for variables in the disassembly widgets
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/xrefs-for-variables.gif" alt="xrefs-for-variables" /></p>
+
+<p>X-Refs for references in the decompiler context menu
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/xrefs-for-references.gif" alt="xrefs-for-references" /></p>
+
+<h3 id="related-prs-5">Related PRs</h3>
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2297">PR #2297</a>: X-refs for variables</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2352">PR #2352</a>: X-Refs for references</li>
+</ol>
+
+<h2 id="edit-local-variables-and-function-arguments">Edit local variables and function arguments</h2>
+<p>This involved introducing two new types of annotations as well as implementing the required annotators in r2ghidra-dec. In Cutter, actions have been implemented for renaming and editing local variables and function arguments. Only variables that are present in the disassembly will be editable. The following GIF demonstrates the two actions:
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/manipulate-local-variable.gif" alt="manipulate-local-variable" /></p>
+
+<h3 id="related-prs-6">Related PRs</h3>
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17375">PR #17375</a>: Annotation for local variables</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/128">PR #128</a>: Annotator for local variables and function parameters</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2357">PR #2357</a>: Edit/Rename Variables Actions for function variables</li>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17386">PR #17386</a>: API for checking if an annotation is a reference or function variable</li>
+</ol>
+
+<h2 id="documentation-unit-tests-final-clean-up-and-merging-to-master">Documentation, Unit tests, Final clean-up, and Merging to Master</h2>
+<p>A dedicated context-menu has been implemented by the PRs linked in the previous sections. All of these changes from the skeleton of the decompiler context menu were merged into branches named ‘decompiler-refactoring’ in the involved repositories. This was merged to master.</p>
+
+<p>Before merging to master, the new code was documented, and unit tests were made for new annotations and API functions in radare2. The final clean-up removed unnecessary parts after careful observation.</p>
+
+<h3 id="related-prs-7">Related PRs</h3>
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17397">PR #17397</a>: Update docs in annotate code API</li>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17403">PR #17403</a>: Unit tests for annotated code API</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2374">PR #2374</a>: Code Documentation + Final Clean Up</li>
+</ol>
+
+<h4 id="the-following-prs-merge-all-the-changes-to-the-master-branch">The following PRs merge all the changes to the master branch</h4>
+<ol>
+  <li>radare2 <a href="https://github.com/radareorg/radare2/pull/17429">PR #17429</a>: New annotations and API functions for the decompiler</li>
+  <li>r2ghidra-dec <a href="https://github.com/radareorg/r2ghidra-dec/pull/129">PR #129</a>: Annotators for new annotations</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2391">PR #2391</a>: Enhanced Decompiler Widget with new Dedicated Context Menu</li>
+</ol>
+
+<h2 id="synchronized-decompiler-and-enabling-multiple-decompiler-widgets">Synchronized Decompiler and Enabling Multiple Decompiler Widgets</h2>
+<p>The existing auto-refresh mechanism with a refresh button was often confusing to users, particularly when the auto-refresh is disabled. In this case, questions like whether renaming a reference or editing instruction in disassembly should reflect on the decompiler were often asked. Moreover, there were multiple benefits to making the decompiler widget a syncable widget like disassembly or graph. These are explained in the issue <a href="https://github.com/radareorg/cutter/issues/2370">#2370</a>. Allowing multiple decompiler widgets to be opened simultaneously will enable users to compare the output of multiple decompilers that Cutter supports, e.g., Ghidra, RetDec, and R2Dec. This was an existing issue <a href="https://github.com/radareorg/cutter/issues/1766">#1766</a>. I solved these two issues. User documentation to the decompiler was also added.</p>
+
+<p>The following image shows two decompiler widgets with different decompilers side by side.
+<img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/ghidra-vs-r2dec.png" alt="ghidra-vs-r2dec" /></p>
+
+<h3 id="related-prs-8">Related PRs</h3>
+<ol>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2402">PR #2402</a>: Synchronized Decompiler and Enabling Multiple Decompiler Widgets</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2410">PR #2410</a>: Save the layout of the Decompiler Widgets</li>
+  <li>cutter <a href="https://github.com/radareorg/cutter/pull/2394">PR #2394</a>: User documentation for the new decompiler</li>
+</ol>
+
+<h2 id="what-next">What Next?</h2>
+<ol>
+  <li>The context-sensitive annotations have been implemented only for R2Ghidra as of now. I have opened issues in both R2Dec (<a href="https://github.com/radareorg/r2dec-js/issues/220">issue #220</a>) R2RetDec (<a href="https://github.com/avast/retdec-r2plugin/issues/20">issue #20</a>) with details on the annotations that are required by the Cutter. Once all new annotations are available from these decompilers, they will support all the actions currently available for r2ghidra-dec. I have also implemented what’s required from the Cutter’s side to support R2Dec by <a href="https://github.com/radareorg/cutter/pull/2407">PR #2407</a>. This can be merged as soon as R2Dec gets patched to have all annotations.</li>
+</ol>
+
+<p><em>I haven’t mentioned every single PR I have made as part of my project here.</em> All my PRs and issues that I solved as part of my project is available at this GitHub project in the radareorg: <a href="https://github.com/orgs/radareorg/projects/1">Improving Decompiler Widget (GSoC)</a>.</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>I want to thank my mentors Itay Cohen, Kārlis, and Florian Märkl for all their sincere support and guidance. I have come a long way and learned a lot of valuable things in the past three and a half months of GSoC. My GSoC project was the first significant real-world project that I worked on, and I am incredibly happy about the work that I was able to do, and it’s potential. This will not have been possible without the insightful reviews and advice of my mentors. I hope we will continue to work together for Cutter.</p>
+
+
+            </div>
+            <div class="blog-share-tags blog-spacing">
+                <div class="blog-author-tags">
+                    <div class="list-inline">
+                        <div class="list-inline-item">Tags:</div> <a href="/tag/decompiler/" rel="tag">Decompiler</a>, <a href="/tag/gsoc/" rel="tag">GSoC</a>
+                    </div>
+                </div>
+                <div class="blog-author-share">
+                  <ul class="list-inline">
+    <li class="list-inline-item">Share</li>
+    <li class="list-inline-item">
+        <a  href="https://www.facebook.com/sharer/sharer.php?u=https://cutter.re//improving-decompiler-widget-gsoc"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="https://twitter.com/intent/tweet?text=Improving Decompiler Widget - GSoC Project&url=https://cutter.re//improving-decompiler-widget-gsoc"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Twitter" >
+            <i class="fab fa-twitter"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a  href="http://pinterest.com/pin/create/button/?url=&media=https://cutter.re//assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="fab fa-pinterest-p"></i>
+        </a>
+    </li>
+</ul>
+                </div>
+            </div>
+            <div class="blog-author-admin blog-spacing">
+
+    <div class="author-avatar">
+        <a href="/authors/nirmal_manoj"><img class="img-fluid" src="/assets/images/blog/authors/nirmal_manoj.png" alt="Nirmal Manoj"/></a>
+    </div>
+    <div class="author-info">
+        <h5 class="heading-5"><a href="/authors/nirmal_manoj">Nirmal Manoj</a></h5>
+        <p>Nirmal Manoj is a CS undergraduate student at IIIT Hyderabad, India. He was a GSoC 2020 student who worked on improving the decompiler widget.</p>
+        <ul class="social-link list-inline">
+            
+            
+             
+            
+            
+            
+        </ul>
+    </div>
+</div>
+            <nav class="page-pagination d-flex cutter blog-spacing">
+    <ul class="pagination justify-content-between">
+    
+    <li class=" page-item cutter"><a class="page-link prev" href="/cutter-community-survey-2020">Prev</a></li>
+    
+    
+    <li class=" page-item cutter"><a class="page-link next" href="/cutter-2.0">Next</a></li>
+    
+    </ul>
+</nav>
+            <div class="blog-spacing">
+    <div class="latest-slider owl-carousel">
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/shortcut-manager-rsoc/cover.png" alt="Shortcut Manager - RSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/shortcut-manager-rsoc">Shortcut Manager - RSoC Project</a></h6>
+                    <a href="/shortcut-manager-rsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/inetgrating-the-rizin-mark-api-rsoc/cover.png" alt="Integrating the Rizin Mark API - RSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/integrating-the-rizin-mark-api-rsoc">Integrating the Rizin Mark API - RSoC Project</a></h6>
+                    <a href="/integrating-the-rizin-mark-api-rsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/cutter-2.0/cutter-2.png" alt="Cutter 2.0 Release"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/cutter-2.0">Cutter 2.0 Release</a></h6>
+                    <a href="/cutter-2.0" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/improving-decompiler-widget-gsoc/decompiler_cover.png" alt="Improving Decompiler Widget - GSoC Project"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/improving-decompiler-widget-gsoc">Improving Decompiler Widget - GSoC Project</a></h6>
+                    <a href="/improving-decompiler-widget-gsoc" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/survey-2020/survey2020.png" alt="Cutter Community Survey 2020"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/cutter-community-survey-2020">Cutter Community Survey 2020</a></h6>
+                    <a href="/cutter-community-survey-2020" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/5-ways-to-patch-binaries/patch_cover.png" alt="5 Ways to patch binaries with Cutter"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/5-ways-to-patch-binaries-with-cutter">5 Ways to patch binaries with Cutter</a></h6>
+                    <a href="/5-ways-to-patch-binaries-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/ransowmare-cutter-emulation/cover.png" alt="Defeating a Ransomware using Cutter's Emulation"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/defeating-a-ransomware-with-cutter">Defeating a Ransomware using Cutter's Emulation</a></h6>
+                    <a href="/defeating-a-ransomware-with-cutter" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part2.png"" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-2">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 2</a></h6>
+                    <a href="/analyzing-dropshot-part-2" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="item">
+            <div class="blog-latest">
+                
+                 <div class="latest-img"><img src="/assets/images/blog/posts/dropshot-analysis/dropshot_part1.png" alt="Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1"/></div>
+                
+                <div class="latest-content">
+                    <h6 class="heading-6"><a href="/analyzing-dropshot-part-1">Decrypting APT33’s Dropshot Malware with Radare2 and Cutter – Part 1</a></h6>
+                    <a href="/analyzing-dropshot-part-1" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+            <div class="comment-wrapper blog-spacing">
+                <!-- comments -->
+            </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+        
+        <div class="footer-wrapper">
+    <footer class="footer-area bg-color2">
+        <div class="container">
+            <div class="footer-widget-wrraper">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="footer-logo"><img src="/assets/images/cutter-very-small.svg" alt="Cutter" /></a>
+                        <div class="footer-widget">
+                            <p>Cutter is a FREE and open-source reverse-engineering platform. Cutter is created by
+                                reverse
+                                engineers for reverse engineers </p>
+                            <ul class="social-link list-inline">
+                                <li class="list-inline-item"><a href="https://im.rizin.re/"><img src="/assets/images/mattermost_light.svg" height="22" style="margin-top: -5px;" alt="mattermost icon"/></a></li>
+                                <li class="list-inline-item"><a href="https://web.libera.chat/#cutter"><i class="fas fa-comment-dots"></i></a></li>
+                                <li class="list-inline-item"><a href="https://t.me/cutter_re"><i class="fab fa-telegram-plane"></i></a></li>                                
+                                <li class="list-inline-item"><a href="https://www.twitter.com/cutter_re"><img src="/assets/images/twitter_x_light.svg" height="22" style="margin-top: -5px;" alt="twitter-x icon"/></a></li>
+                                <li class="list-inline-item"><a href="https://www.github.com/rizinorg/cutter"><i class="fab fa-github"></i></a></li>
+                                <li class="list-inline-item"><a href="https://fosstodon.org/@rizin"><i class="fab fa-mastodon"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Cutter</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li>
+                                    <a href="/docs/building.html" target="_blank">
+                                        Build From Source
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://cutter.re/docs/contributing.html" target="_blank">
+                                        Contribute
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rizinorg/cutter/issues" target="_blank">
+                                        Report an issue
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/rizinorg/cutter/blob/master/COPYING" target="_blank">
+                                        License
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <div class="widget-title">
+                                <h5 class="heading-5">Resources</h5>
+                            </div>
+                            <ul class="widget-list list-inline">
+                                <li><a href="https://cutter.re/docs/" target="_blank">Documentation</a></li>
+                                <li><a href="https://github.com/rizinorg/cutter-plugins" target="_blank">Plugins</a>
+                                </li>
+                                <li><a href="https://rizin.re" target="_blank">Rizin</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright-wrapper text-center">
+                <p>© 2026 Cutter - a <a href="https://rizin.re/"
+                        target="_blank"><b>rizin.re</b></a> project • Website by <a href="https://www.megabeets.net"
+                        target="_blank"><b>Megabeets</b></a> </p>
+            </div>
+            <a href="#" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+        </div>
+        <ul class="footer-shape list-inline">
+            <li class="left"><img src="/assets/images/footer-shap.png" alt="footer shape" /></li>
+            <li class="right"><img src="/assets/images/footer-shap2.png" alt="footer shape" /></li>
+        </ul>
+    </footer>
+</div>
+      </main>
+      <!-- jQuery -->
+      <script src="/assets/js/vendor.min.js"></script>
+      <script src="/assets/js/app.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.js" integrity="sha512-bvV1V1YSjP1fbfKJjTlNmdnUO2XpsLYUdKwmz5UXBi5U+x40rx9JpA0ooQUMZfpz1MaaBC0ydNLoC6r0sitPUQ==" crossorigin="anonymous"></script>
+   </body>
+</html>

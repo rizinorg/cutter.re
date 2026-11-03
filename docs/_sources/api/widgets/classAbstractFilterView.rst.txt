@@ -1,0 +1,4 @@
+AbstractFilterView
+==================
+
+.. doxygenclass:: AbstractFilterView

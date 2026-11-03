@@ -1,0 +1,4 @@
+XrefFilterProxyModel
+====================
+
+.. doxygenclass:: XrefFilterProxyModel

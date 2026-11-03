@@ -1,0 +1,4 @@
+GraphLayout::GraphEdge
+======================
+
+.. doxygenstruct:: GraphLayout::GraphEdge

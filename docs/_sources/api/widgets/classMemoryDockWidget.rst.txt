@@ -1,0 +1,4 @@
+MemoryDockWidget
+================
+
+.. doxygenclass:: MemoryDockWidget

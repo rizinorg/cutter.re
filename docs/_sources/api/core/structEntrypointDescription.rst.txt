@@ -1,0 +1,4 @@
+EntrypointDescription
+=====================
+
+.. doxygenstruct:: EntrypointDescription

@@ -1,0 +1,4 @@
+DisassemblyHelper::BracketResult
+================================
+
+.. doxygenstruct:: DisassemblyHelper::BracketResult

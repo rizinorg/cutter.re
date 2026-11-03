@@ -1,0 +1,4 @@
+RelocsWidget
+============
+
+.. doxygenclass:: RelocsWidget

@@ -1,0 +1,4 @@
+SegmentTreeBase
+===============
+
+.. doxygenclass:: SegmentTreeBase

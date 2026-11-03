@@ -1,0 +1,4 @@
+XrefModel
+=========
+
+.. doxygenclass:: XrefModel

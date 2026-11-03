@@ -1,0 +1,4 @@
+CutterJson::Iterator
+====================
+
+.. doxygenclass:: CutterJson::Iterator

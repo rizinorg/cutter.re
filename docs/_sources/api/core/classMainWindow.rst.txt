@@ -1,0 +1,4 @@
+MainWindow
+==========
+
+.. doxygenclass:: MainWindow

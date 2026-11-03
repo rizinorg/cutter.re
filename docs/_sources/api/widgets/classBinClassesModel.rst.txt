@@ -1,0 +1,4 @@
+BinClassesModel
+===============
+
+.. doxygenclass:: BinClassesModel

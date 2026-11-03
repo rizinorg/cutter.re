@@ -1,0 +1,4 @@
+ColorOption
+===========
+
+.. doxygenstruct:: ColorOption

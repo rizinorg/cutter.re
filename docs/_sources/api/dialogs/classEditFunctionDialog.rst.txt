@@ -1,0 +1,4 @@
+EditFunctionDialog
+==================
+
+.. doxygenclass:: EditFunctionDialog

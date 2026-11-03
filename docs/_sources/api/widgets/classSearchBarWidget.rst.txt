@@ -1,0 +1,4 @@
+SearchBarWidget
+===============
+
+.. doxygenclass:: SearchBarWidget

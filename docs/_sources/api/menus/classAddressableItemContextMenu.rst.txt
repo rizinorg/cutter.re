@@ -1,0 +1,4 @@
+AddressableItemContextMenu
+==========================
+
+.. doxygenclass:: AddressableItemContextMenu

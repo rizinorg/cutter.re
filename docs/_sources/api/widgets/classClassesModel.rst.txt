@@ -1,0 +1,4 @@
+ClassesModel
+============
+
+.. doxygenclass:: ClassesModel

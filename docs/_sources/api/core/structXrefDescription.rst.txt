@@ -1,0 +1,4 @@
+XrefDescription
+===============
+
+.. doxygenstruct:: XrefDescription

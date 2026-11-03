@@ -1,0 +1,4 @@
+SymbolsWidget
+=============
+
+.. doxygenclass:: SymbolsWidget

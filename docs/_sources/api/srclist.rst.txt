@@ -1,0 +1,7 @@
+Src
+===
+
+.. toctree::
+   :glob:
+
+   src/*
