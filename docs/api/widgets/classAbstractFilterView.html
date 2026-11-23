@@ -81,13 +81,39 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView11clearFilterEv">
-<span id="_CPPv3N18AbstractFilterView11clearFilterEv"></span><span id="_CPPv2N18AbstractFilterView11clearFilterEv"></span><span id="AbstractFilterView::clearFilter"></span><span class="target" id="classAbstractFilterView_1a79d97fcf9c78cab30ccf5eb19781eb25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView11clearFilterEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK18AbstractFilterView11clearFilterEv">
+<span id="_CPPv3NK18AbstractFilterView11clearFilterEv"></span><span id="_CPPv2NK18AbstractFilterView11clearFilterEv"></span><span id="AbstractFilterView::clearFilterC"></span><span class="target" id="classAbstractFilterView_1a0b231ed250cfda542ac621074cf3434c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clearFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK18AbstractFilterView11clearFilterEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView11closeFilterEv">
 <span id="_CPPv3N18AbstractFilterView11closeFilterEv"></span><span id="_CPPv2N18AbstractFilterView11closeFilterEv"></span><span id="AbstractFilterView::closeFilter"></span><span class="target" id="classAbstractFilterView_1a955add83ada9729643c3c48a30b6aa93"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">closeFilter</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView11closeFilterEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18AbstractFilterView8attachToEP17QAbstractItemViewP7QWidget">
+<span id="_CPPv3N18AbstractFilterView8attachToEP17QAbstractItemViewP7QWidget"></span><span id="_CPPv2N18AbstractFilterView8attachToEP17QAbstractItemViewP7QWidget"></span><span id="AbstractFilterView::attachTo__QAbstractItemViewP.QWidgetP"></span><span class="target" id="classAbstractFilterView_1ace1ad96d923ff5a1a53e9b4f9ceedb15"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">attachTo</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">QAbstractItemView</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">list</span></span>, <span class="n"><span class="pre">QWidget</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">scope</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18AbstractFilterView8attachToEP17QAbstractItemViewP7QWidget" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Sets up Find and Esc for this filter bar. </p>
+<p>Find opens the bar, Esc clears it, then closes it. If there’s nothing to clear, Esc is left alone so dialogs can still close.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list</strong> – The view the bar filters; gets focus back when the bar closes. </p></li>
+<li><p><strong>scope</strong> – Where the keys work, besides the bar. Defaults to <code class="docutils literal notranslate"><span class="pre">list</span></code>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK18AbstractFilterView10isClosableEv">
+<span id="_CPPv3NK18AbstractFilterView10isClosableEv"></span><span id="_CPPv2NK18AbstractFilterView10isClosableEv"></span><span id="AbstractFilterView::isClosableC"></span><span class="target" id="classAbstractFilterView_1a80399b379157435af0993f483186da61"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isClosable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK18AbstractFilterView10isClosableEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Whether Esc (or a different shortcut) on an empty bar hides it. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK18AbstractFilterView8lineEditEv">
+<span id="_CPPv3NK18AbstractFilterView8lineEditEv"></span><span id="_CPPv2NK18AbstractFilterView8lineEditEv"></span><span id="AbstractFilterView::lineEditC"></span><span class="target" id="classAbstractFilterView_1a69ba175df9b65f5a446316ad0aabbdf8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classItemCountLineEdit.html#_CPPv417ItemCountLineEdit" title="ItemCountLineEdit"><span class="n"><span class="pre">ItemCountLineEdit</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lineEdit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK18AbstractFilterView8lineEditEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
