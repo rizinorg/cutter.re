@@ -1,0 +1,4 @@
+BacktraceWidget
+===============
+
+.. doxygenclass:: BacktraceWidget

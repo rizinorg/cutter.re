@@ -1,0 +1,4 @@
+BacktraceDescription
+====================
+
+.. doxygenstruct:: BacktraceDescription

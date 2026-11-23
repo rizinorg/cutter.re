@@ -1,0 +1,4 @@
+ItemCountLineEdit
+=================
+
+.. doxygenclass:: ItemCountLineEdit

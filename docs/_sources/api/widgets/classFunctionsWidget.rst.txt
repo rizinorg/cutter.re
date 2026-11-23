@@ -1,0 +1,4 @@
+FunctionsWidget
+===============
+
+.. doxygenclass:: FunctionsWidget

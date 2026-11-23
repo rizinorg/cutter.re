@@ -1,0 +1,4 @@
+CutterDockWidget
+================
+
+.. doxygenclass:: CutterDockWidget

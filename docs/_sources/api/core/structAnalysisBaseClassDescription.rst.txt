@@ -1,0 +1,4 @@
+AnalysisBaseClassDescription
+============================
+
+.. doxygenstruct:: AnalysisBaseClassDescription

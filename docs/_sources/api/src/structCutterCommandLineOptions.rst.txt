@@ -1,0 +1,4 @@
+CutterCommandLineOptions
+========================
+
+.. doxygenstruct:: CutterCommandLineOptions

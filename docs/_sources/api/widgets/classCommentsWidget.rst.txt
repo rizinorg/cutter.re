@@ -1,0 +1,4 @@
+CommentsWidget
+==============
+
+.. doxygenclass:: CommentsWidget

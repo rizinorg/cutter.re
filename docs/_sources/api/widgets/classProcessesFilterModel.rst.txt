@@ -1,0 +1,4 @@
+ProcessesFilterModel
+====================
+
+.. doxygenclass:: ProcessesFilterModel

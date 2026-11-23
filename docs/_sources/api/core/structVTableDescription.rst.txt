@@ -1,0 +1,4 @@
+VTableDescription
+=================
+
+.. doxygenstruct:: VTableDescription

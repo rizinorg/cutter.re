@@ -1,0 +1,4 @@
+StringListDialog
+================
+
+.. doxygenclass:: StringListDialog

@@ -1,0 +1,4 @@
+SectionsWidget
+==============
+
+.. doxygenclass:: SectionsWidget

@@ -1,0 +1,4 @@
+InitialOptionsDialog::AnalysisCommands
+======================================
+
+.. doxygenstruct:: InitialOptionsDialog::AnalysisCommands

@@ -1,0 +1,4 @@
+ComboQuickFilterView
+====================
+
+.. doxygenclass:: ComboQuickFilterView

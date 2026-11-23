@@ -1,0 +1,4 @@
+VariableEntry
+=============
+
+.. doxygenstruct:: VariableEntry

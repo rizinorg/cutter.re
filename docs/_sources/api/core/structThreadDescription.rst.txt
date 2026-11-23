@@ -1,0 +1,4 @@
+ThreadDescription
+=================
+
+.. doxygenstruct:: ThreadDescription

@@ -1,0 +1,4 @@
+RzCoreLocked
+============
+
+.. doxygenclass:: RzCoreLocked

@@ -1,0 +1,4 @@
+PluginManager::PluginTerminator
+===============================
+
+.. doxygenclass:: PluginManager::PluginTerminator

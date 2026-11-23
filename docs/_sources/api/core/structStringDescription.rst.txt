@@ -1,0 +1,4 @@
+StringDescription
+=================
+
+.. doxygenstruct:: StringDescription

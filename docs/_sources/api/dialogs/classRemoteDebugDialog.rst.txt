@@ -1,0 +1,4 @@
+RemoteDebugDialog
+=================
+
+.. doxygenclass:: RemoteDebugDialog

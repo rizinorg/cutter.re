@@ -1,0 +1,4 @@
+GraphWidget
+===========
+
+.. doxygenclass:: GraphWidget

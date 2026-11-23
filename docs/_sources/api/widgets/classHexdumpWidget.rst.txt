@@ -1,0 +1,4 @@
+HexdumpWidget
+=============
+
+.. doxygenclass:: HexdumpWidget

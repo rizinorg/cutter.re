@@ -1,0 +1,4 @@
+RegisterRefModel
+================
+
+.. doxygenclass:: RegisterRefModel

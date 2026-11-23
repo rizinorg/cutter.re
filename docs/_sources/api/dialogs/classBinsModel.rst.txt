@@ -1,0 +1,4 @@
+BinsModel
+=========
+
+.. doxygenclass:: BinsModel

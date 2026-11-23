@@ -1,0 +1,4 @@
+RzAsmPluginDescription
+======================
+
+.. doxygenstruct:: RzAsmPluginDescription

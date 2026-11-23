@@ -1,0 +1,4 @@
+InitialOptions
+==============
+
+.. doxygenstruct:: InitialOptions

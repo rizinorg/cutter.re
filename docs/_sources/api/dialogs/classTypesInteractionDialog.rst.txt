@@ -1,0 +1,4 @@
+TypesInteractionDialog
+======================
+
+.. doxygenclass:: TypesInteractionDialog

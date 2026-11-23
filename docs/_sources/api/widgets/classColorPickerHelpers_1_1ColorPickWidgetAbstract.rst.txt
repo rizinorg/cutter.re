@@ -1,0 +1,4 @@
+ColorPickerHelpers::ColorPickWidgetAbstract
+===========================================
+
+.. doxygenclass:: ColorPickerHelpers::ColorPickWidgetAbstract

@@ -1,0 +1,4 @@
+RefDescription
+==============
+
+.. doxygenstruct:: RefDescription

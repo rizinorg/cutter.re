@@ -1,0 +1,4 @@
+TypesSortFilterProxyModel
+=========================
+
+.. doxygenclass:: TypesSortFilterProxyModel

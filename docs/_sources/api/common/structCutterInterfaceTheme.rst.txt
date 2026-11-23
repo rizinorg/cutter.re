@@ -1,0 +1,4 @@
+CutterInterfaceTheme
+====================
+
+.. doxygenstruct:: CutterInterfaceTheme

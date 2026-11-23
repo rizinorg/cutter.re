@@ -1,0 +1,4 @@
+Configuration::LangInfo
+=======================
+
+.. doxygenstruct:: Configuration::LangInfo

@@ -1,0 +1,4 @@
+VTableSortFilterProxyModel
+==========================
+
+.. doxygenclass:: VTableSortFilterProxyModel
